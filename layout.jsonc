@@ -1,0 +1,3501 @@
+{
+    "$schema": "file:///c:/Other/git/randomprime/schema/randomprime.schema.json",
+    "outputIso": "april-fools.iso",
+    "preferences": {
+        "qolGameBreaking": true,
+        "qolCosmetic": true,
+        "qolPickupScans": true,
+        "qolGeneral": true,
+        "qolCutscenes": "Competitive",
+        "mapDefaultState": "Visible",
+        "artifactHintBehavior": "All",
+        "automaticCrashScreen": true,
+        "forceFusion": true
+    },
+    "gameConfig": {
+        "mainPlazaDoor": true,
+        "backwardsFrigate": true,
+        "backwardsLabs": true,
+        "backwardsUpperMines": true,
+        "backwardsLowerMines": false,
+        "phazonEliteWithoutDynamo": true,
+        "removeVanillaBlastShields": true,
+        "doorOpenMode": "PrimaryBlastShield",
+        "resultsString": "Remember kids, winners don't do drugs",
+        "warpToStart": false,
+        "springBall": false,
+        "nonvariaHeatDamage": true,
+        "staggeredSuitDamage": true,
+        "heatDamagePerSec": 10.0,
+        "autoEnabledElevators": false,
+        "missileStationPbRefill": true,
+        "patchPowerConduits": false,
+        "phazonDamageModifier": "Default",
+        "phazonDamagePerSec": 0.964,
+        "powerBombArboretumSandstone": false,
+        "requiredArtifactCount": 12,
+        "removeHiveMecha": false,
+        "removeMineSecurityStationLocks": false,
+        "skipRidley": false,
+        "warpToStartDelayS": 3,
+        "enableIceTraps": true,
+        "escapeSequenceCountsUp": false,
+        "difficultyBehavior": "NormalOnly",
+        "startingRoom": "Tallon Overworld:Landing Site",
+        "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
+        "startingItems": {
+            "powerBeam": true,
+            "ice": false,
+            "wave": false,
+            "plasma": false,
+            "missiles": 0,
+            "scanVisor": true,
+            "bombs": false,
+            "powerBombs": 0,
+            "flamethrower": false,
+            "thermalVisor": false,
+            "charge": false,
+            "superMissile": false,
+            "grapple": false,
+            "xray": false,
+            "iceSpreader": false,
+            "spaceJump": false,
+            "morphBall": false,
+            "combatVisor": true,
+            "boostBall": false,
+            "spiderBall": false,
+            "gravitySuit": false,
+            "variaSuit": false,
+            "phazonSuit": false,
+            "energyTanks": 0,
+            "wavebuster": false
+        },
+        "etankCapacity": 100,
+        "itemMaxCapacity": {
+            "Energy Tank": 200,
+            "Power Bomb": 99,
+            "Missile": 999
+        },
+        "disableItemLoss": true,
+        "incineratorDroneConfig": {
+            "eyeWaitInitialRandomTime": 0.0,
+            "eyeWaitRandomTime": 0.0,
+            "eyeStayUpRandomTime": 0.0,
+            "resetContraptionRandomTime": 0.0,
+            "eyeWaitInitialMinimumTime": 8.657428036853762,
+            "eyeWaitMinimumTime": 18.771799326918632,
+            "eyeStayUpMinimumTime": 8.609284192392574,
+            "resetContraptionMinimumTime": 4.299550398757779
+        },
+        "mazeSeeds": [
+            2041669472
+        ],
+        "gameBanner": {
+            "gameName": "April Fools [Untitled]",
+            "gameNameFull": "April Fools [Untitled]",
+            "description": "Romhack by toasterparty"
+        },
+        "mainMenuMessage": "April Fools [Untitled] v0.1",
+        "creditsString": "&push;&font=C29C51F1;&main-color=#89D6FF;Major Item Locations&pop;\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Wave Beam&pop;\nPhazon Mines - Metroid Quarantine A\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Ice Beam&pop;\nPhazon Mines - Ventilation Shaft\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Plasma Beam&pop;\nPhazon Mines - Central Dynamo\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Missile Launcher&pop;\nTallon Overworld - Transport Tunnel B\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Grapple Beam&pop;\nTallon Overworld - Landing Site\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Thermal Visor&pop;\nPhendrana Drifts - Ice Ruins East\n\n&push;&font=C29C51F1;&main-color=#33ffd6;X-Ray Visor&pop;\nMagmoor Caverns - Warrior Shrine\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Space Jump Boots&pop;\nTallon Overworld - Frigate Crash Site\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Morph Ball&pop;\nChozo Ruins - Ruined Gallery\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Morph Ball Bomb&pop;\nChozo Ruins - Dynamo\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Boost Ball&pop;\nChozo Ruins - Watery Hall\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Spider Ball&pop;\nChozo Ruins - Ruined Gallery\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Power Bomb&pop;\nMagmoor Caverns - Fiery Shores\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Varia Suit&pop;\nChozo Ruins - Hive Totem\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Gravity Suit&pop;\nChozo Ruins - Ruined Shrine\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Phazon Suit&pop;\nTallon Overworld - Hydro Access Tunnel\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Super Missile&pop;\nPhazon Mines - Phazon Processing Center\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Wavebuster&pop;\nChozo Ruins - Main Plaza\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Ice Spreader&pop;\nChozo Ruins - Tower of Light\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Flamethrower&pop;\nChozo Ruins - Ruined Nursery\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Elder&pop;\nPhendrana Drifts - Research Lab Aether\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Lifegiver&pop;\nMagmoor Caverns - Magmoor Workstation\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Strength&pop;\nChozo Ruins - Crossway\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Truth&pop;\nPhendrana Drifts - Control Tower\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Warrior&pop;\nPhazon Mines - Main Quarry\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Wild&pop;\nPhendrana Drifts - Quarantine Cave",
+        "bossSizes": {},
+        "hallOfTheEldersBombSlotCovers": {
+            "ice": "Ice",
+            "plasma": "Plasma",
+            "wave": "Wave"
+        }
+    },
+    "tweaks": {
+        "grappleBeamSpeed": 0.1,
+        "iceBreakTimeout": 999,
+        "iceBreakJumpCount": 15
+    },
+    "strg": {
+
+    },
+    "levelData": {
+        "Impact Crater": {
+            "transports": {
+                "Crater Entry Point": "Artifact Temple",
+                "Essence Dead Cutscene": "Credits"
+            },
+            "rooms": {
+                "Crater Entry Point": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    },
+                    "extraScans": [
+                        {
+                            "position": [
+                                -19.4009,
+                                41.001,
+                                2.805
+                            ],
+                            "combatVisible": false,
+                            "text": "&push;&main-color=#c300ff;Phazon Suit&pop; is located in &push;&main-color=#89a1ff;Tallon Overworld&pop;.",
+                            "rotation": 45.0,
+                            "isRed": true,
+                            "logbookTitle": "Phazon Suit",
+                            "logbookCategory": 5
+                        }
+                    ]
+                },
+                "Crater Tunnel A": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Phazon Core": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "2": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Crater Missile Station": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Crater Tunnel B": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Phazon Infusion Chamber": {
+                    "pickups": [],
+                    "doors": {
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Subchamber One": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Subchamber Two": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Subchamber Three": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Subchamber Four": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Subchamber Five": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Metroid Prime Lair": {
+                    "pickups": [],
+                    "doors": {}
+                }
+            }
+        },
+        "Phendrana Drifts": {
+            "transports": {
+                "Phendrana Drifts North (Phendrana Shorelines)": "Magmoor Caverns West (Monitor Station)",
+                "Phendrana Drifts South (Quarantine Cave)": "Magmoor Caverns South (Magmoor Workstation, Save Station)"
+            },
+            "rooms": {
+                "Transport to Magmoor Caverns West": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Shoreline Entrance": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Phendrana Shorelines": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        },
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "2": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "5": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Temple Entryway": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Save Station B": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Ruins Entryway": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Plaza Walkway": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Ice Ruins Access": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Chozo Ice Temple": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Ice Ruins West": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "2": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Ice Ruins East": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        },
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Chapel Tunnel": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Courtyard Entryway": {
+                    "pickups": [],
+                    "doors": {
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Canyon Entryway": {
+                    "pickups": [],
+                    "doors": {
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Chapel of the Elders": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Ruined Courtyard": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "2": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "3": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Phendrana Canyon": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {}
+                },
+                "Save Station A": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Specimen Storage": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Quarantine Access": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Research Entrance": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "2": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "North Quarantine Tunnel": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Map Station": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Hydra Lab Entryway": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Quarantine Cave": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Research Lab Hydra": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "South Quarantine Tunnel": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Quarantine Monitor": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {}
+                },
+                "Observatory Access": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Transport to Magmoor Caverns South": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Observatory": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "2": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Transport Access": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "West Tower Entrance": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Save Station D": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Frozen Pike": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "2": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "3": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "West Tower": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Pike Access": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Frost Cave Access": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Hunter Cave Access": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Control Tower": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Research Core": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Frost Cave": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "2": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Hunter Cave": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "2": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "3": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "East Tower": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Research Core Access": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Save Station C": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Upper Edge Tunnel": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Lower Edge Tunnel": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Chamber Access": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Lake Tunnel": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "Missile"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Aether Lab Entryway": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Research Lab Aether": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        },
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Phendrana's Edge": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "2": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Gravity Chamber": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        },
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Storage Cave": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Security Cave": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {}
+                }
+            }
+        },
+        "Frigate Orpheon": {
+            "transports": {
+                "Frigate Escape Cutscene": "Tallon Overworld:Landing Site"
+            },
+            "rooms": {
+                "Exterior Docking Hangar": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Air Lock": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Deck Alpha Access Hall": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Deck Alpha Mech Shaft": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Emergency Evacuation Area": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Connection Elevator to Deck Alpha": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Deck Alpha Umbilical Hall": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Biotech Research Area 2": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Map Facility": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Main Ventilation Shaft Section F": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Connection Elevator to Deck Beta": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Main Ventilation Shaft Section E": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Deck Beta Conduit Hall": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Main Ventilation Shaft Section D": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Biotech Research Area 1": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Main Ventilation Shaft Section C": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Deck Beta Security Hall": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Connection Elevator to Deck Beta (2)": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Subventilation Shaft Section A": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Main Ventilation Shaft Section B": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Biohazard Containment": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Deck Gamma Monitor Hall": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Subventilation Shaft Section B": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Main Ventilation Shaft Section A": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Deck Beta Transit Hall": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Reactor Core": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Cargo Freight Lift to Deck Gamma": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Reactor Core Entrance": {
+                    "pickups": [],
+                    "doors": {}
+                }
+            }
+        },
+        "Magmoor Caverns": {
+            "transports": {
+                "Magmoor Caverns North (Lava Lake)": "Chozo Ruins North (Sun Tower)",
+                "Magmoor Caverns West (Monitor Station)": "Phendrana Drifts North (Phendrana Shorelines)",
+                "Magmoor Caverns East (Twin Fires)": "Tallon Overworld West (Root Cave)",
+                "Magmoor Caverns South (Magmoor Workstation, Debris)": "Phazon Mines West (Phazon Processing Center)",
+                "Magmoor Caverns South (Magmoor Workstation, Save Station)": "Phendrana Drifts South (Quarantine Cave)"
+            },
+            "rooms": {
+                "Transport to Chozo Ruins North": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Burning Trail": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "2": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Lake Tunnel": {
+                    "pickups": [],
+                    "doors": {
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Save Station Magmoor A": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Lava Lake": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Pit Tunnel": {
+                    "pickups": [],
+                    "doors": {
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Triclops Pit": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Monitor Tunnel": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Storage Cavern": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Monitor Station": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "2": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Transport Tunnel A": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {}
+                },
+                "Warrior Shrine": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Shore Tunnel": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Transport to Phendrana Drifts North": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Fiery Shores": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        },
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Transport Tunnel B": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Transport to Tallon Overworld West": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Twin Fires Tunnel": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Twin Fires": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "North Core Tunnel": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Geothermal Core": {
+                    "pickups": [],
+                    "doors": {
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Plasma Processing": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "South Core Tunnel": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Magmoor Workstation": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "2": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Workstation Tunnel": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Transport Tunnel C": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Transport to Phazon Mines West": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Transport to Phendrana Drifts South": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Save Station Magmoor B": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                }
+            }
+        },
+        "Phazon Mines": {
+            "transports": {
+                "Phazon Mines East (Main Quarry)": "Tallon Overworld South (Great Tree Hall, Lower)",
+                "Phazon Mines West (Phazon Processing Center)": "Magmoor Caverns South (Magmoor Workstation, Debris)"
+            },
+            "rooms": {
+                "Transport to Tallon Overworld South": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Quarry Access": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Main Quarry": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "2": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "3": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Waste Disposal": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Save Station Mines A": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Security Access A": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Ore Processing": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "2": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "3": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Mine Security Station": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "2": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Research Access": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Storage Depot B": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Elevator Access A": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Security Access B": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Storage Depot A": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Elite Research": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        },
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Elevator A": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Elite Control Access": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Elite Control": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "2": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Maintenance Tunnel": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Ventilation Shaft": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Phazon Processing Center": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "2": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Omega Research": {
+                    "pickups": [],
+                    "doors": {
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "2": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Transport Access": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Processing Center Access": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Map Station Mines": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Dynamo Access": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Transport to Magmoor Caverns South": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Elite Quarters": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Central Dynamo": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "2": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Elite Quarters Access": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Quarantine Access A": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Save Station Mines B": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Metroid Quarantine B": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "2": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Metroid Quarantine A": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Quarantine Access B": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Save Station Mines C": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Elevator Access B": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Fungal Hall B": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "2": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Elevator B": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Missile Station Mines": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Phazon Mining Tunnel": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Fungal Hall Access": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Fungal Hall A": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                }
+            }
+        },
+        "Tallon Overworld": {
+            "transports": {
+                "Tallon Overworld North (Tallon Canyon)": "Chozo Ruins West (Main Plaza)",
+                "Artifact Temple": "Crater Entry Point",
+                "Tallon Overworld East (Frigate Crash Site)": "Chozo Ruins East (Reflecting Pool, Save Station)",
+                "Tallon Overworld West (Root Cave)": "Magmoor Caverns East (Twin Fires)",
+                "Tallon Overworld South (Great Tree Hall, Upper)": "Chozo Ruins South (Reflecting Pool, Far End)",
+                "Tallon Overworld South (Great Tree Hall, Lower)": "Phazon Mines East (Main Quarry)"
+            },
+            "rooms": {
+                "Landing Site": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "2": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "3": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "4": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    },
+                    "deleteIds": [
+                        611 // cutscene skip
+                    ],
+                    "editObjs": {
+                        "268": { // camera7
+                            "position": [-339.4529, 327.2898, -29.3721]
+                        },
+                        "273": { // camera7's target
+                            "position": [-343.1256, 319.2706, -34.2105]
+                        },
+                        "272": { // camera7's target
+                            "position": [-341.5256, 313.5706, -34.9105]
+                        },
+                        "271": { // camera7's path waypoint
+                            "position": [-339.4529, 327.2898, -29.3721]
+                        },
+                        "293": { // camera10's target
+                            "position": [-321.190186, 319.832001, -34.167301]
+                        },
+                        "294": { // camera10's target
+                            "position": [-321.190186, 319.832001, -34.167301]
+                        },
+                        "292": { // camera10's start position
+                            "position": [-331.0564, 319.9657, -30.7432]
+                        },
+                        "291": { // camera10's end position
+                            "position": [-325.7564, 328.4657, -33.7432]
+                        },
+                        // snap zoom cut
+                        // "position": [-322.3564, 327.1657, -33.4432]
+                        "300": { // target
+                            "position": [-322.3564, 327.1657, -33.4432]
+                        },
+                        "301": { // target
+                            "position": [-322.3564, 327.1657, -33.4432]
+                        },
+                        "305": { // target
+                            "position": [-322.3564, 327.1657, -33.4432]
+                        },
+                        "303": { // target
+                            "position": [-322.3564, 327.1657, -33.4432]
+                        },
+                        "298": { // path
+                            "position": [-324.0, 349.0, -28.0]
+                        },
+                        "307": { // path
+                            "position": [-324.0, 341.4461, -29.9394]
+                        },
+                        "299": { // path
+                            "position": [-324.0, 333.8922, -31.8788]
+                        },
+                        "306": { // path
+                            "position": [-324.0, 333.8922, -32.8788]
+                        },
+                        // circle pan
+                        "318": { // target
+                            "position": [-344.0256, 315.5706, -37.5105]
+                        },
+                        "338": { // target
+                            "position": [-344.0256, 315.5706, -33.8105]
+                        },
+                        // a = [
+                        //     [-374.0199, 377.0998, -21.4233],
+                        //     [-370.6638, 375.1461, -21.5181],
+                        //     [-366.921, 375.0837, -21.5937],
+                        //     [-364.7046, 378.9514, -21.5271],
+                        //     [-365.985, 384.5044, -21.044],
+                        //     [-371.7436, 384.5848, -19.6929],
+                        // ]
+                        // offset = [24.5343, -64.6, -11.03]
+                        // for x in a:
+                        //     adjusted = [x[0]+offset[0], x[1]+offset[1], x[2]+offset[2]]
+                        //     print(adjusted)
+                        "314": {
+                            "position": [-349.4856, 312.49980000000005, -32.4533]
+                        },   
+                        "315": {
+                            "position": [-346.1295, 310.5461, -32.5481]
+                        },   
+                        "316": {
+                            "position": [-342.3867, 310.4837, -32.6237]
+                        },   
+                        "317": {
+                            "position": [-340.1703, 314.3514, -32.5571]
+                        },   
+                        "319": {
+                            "position": [-341.4507, 319.9044, -32.074]
+                        },   
+                        "322": {
+                            "position": [-347.2093, 319.98479999999995, -30.722900000000003]
+                        }
+                    }
+                },
+                "Gully": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Canyon Cavern": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Temple Hall": {
+                    "pickups": [],
+                    "doors": {
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Alcove": {
+                    "pickups": [
+                        {
+                            "type": "Space Jump Boots"
+                        }
+                    ],
+                    "streamedAudios": [
+                        {
+                            "id": 10000000,
+                            "audioFileName": "/audio/rid_r_death_01.dsp|/audio/rid_r_death_01.dsp",
+                            "isMusic": false,
+                            "fadeInTime": 0.02,
+                            "fadeOutTime": 0.1,
+                            "oneshot": 1,
+                            "volume": 100
+                        }
+                    ],
+                    "blocks": [
+                        { // wall
+                            "id": 10000001,
+                            "active": false,
+                            "position": [-332.0, 453.0, -21.0],
+                            "scale": [4.0, 0.1, 4.0],
+                            "texture": "Mine"
+                        },
+                        { // eye
+                            "id": 10000002,
+                            "active": false,
+                            "texture": "Snow",
+                            "position": [-331.0, 453.0, -20.0],
+                            "scale": [0.4, 0.11, 0.4]
+                        },
+                        { // eye
+                            "id": 10000003,
+                            "active": false,
+                            "texture": "Snow",
+                            "position": [-333.0, 453.0, -20.0],
+                            "scale": [0.4, 0.11, 0.4]
+                        },
+                        { // pupil
+                            "id": 10000004,
+                            "active": false,
+                            "texture": "Crater",
+                            "position": [-331.0, 453.0, -20.0],
+                            "scale": [0.2, 0.12, 0.2]
+                        },
+                        { // pupil
+                            "id": 10000005,
+                            "active": false,
+                            "texture": "Crater",
+                            "position": [-333.0, 453.0, -20.0],
+                            "scale": [0.2, 0.12, 0.2]
+                        },
+                        { // mouth
+                            "id": 10000006,
+                            "active": false,
+                            "texture": "Snow",
+                            "position": [-332.0, 453.0, -22.0],
+                            "scale": [2.4, 0.11, 1.0]
+                        },
+                        { // upper tooth
+                            "id": 10000007,
+                            "active": false,
+                            "texture": "Mine",
+                            "position": [-331.2, 453.0, -21.5],
+                            "scale": [0.2, 0.12, 0.3]
+                        },
+                        { // upper tooth
+                            "id": 10000008,
+                            "active": false,
+                            "texture": "Mine",
+                            "position": [-332.0, 453.0, -21.5],
+                            "scale": [0.2, 0.12, 0.3]
+                        },
+                        { // upper tooth
+                            "id": 10000009,
+                            "active": false,
+                            "texture": "Mine",
+                            "position": [-332.8, 453.0, -21.5],
+                            "scale": [0.2, 0.12, 0.3]
+                        },
+                        { // bottom tooth
+                            "id": 10000010,
+                            "active": false,
+                            "texture": "Mine",
+                            "position": [-330.8, 453.0, -22.5],
+                            "scale": [0.2, 0.12, 0.3]
+                        },
+                        { // bottom tooth
+                            "id": 10000011,
+                            "active": false,
+                            "texture": "Mine",
+                            "position": [-331.6, 453.0, -22.5],
+                            "scale": [0.2, 0.12, 0.3]
+                        },
+                        { // bottom tooth
+                            "id": 10000012,
+                            "active": false,
+                            "texture": "Mine",
+                            "position": [-332.4, 453.0, -22.5],
+                            "scale": [0.2, 0.12, 0.3]
+                        },
+                        { // bottom tooth
+                            "id": 10000013,
+                            "active": false,
+                            "texture": "Mine",
+                            "position": [-333.2, 453.0, -22.5],
+                            "scale": [0.2, 0.12, 0.3]
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 262157, // trigger
+                            "state": "ENTERED",
+                            "targetId": 10000000, // jumpscare audio
+                            "message": "PLAY"
+                        },
+                        {
+                            "senderId": 262157, // trigger
+                            "state": "ENTERED",
+                            "targetId": 262151, // space jump
+                            "message": "DEACTIVATE"
+                        },
+                        // face blocks - start
+                        {
+                            "senderId": 262157,
+                            "state": "ENTERED",
+                            "targetId": 10000001,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 262157,
+                            "state": "ENTERED",
+                            "targetId": 10000002,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 262157,
+                            "state": "ENTERED",
+                            "targetId": 10000003,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 262157,
+                            "state": "ENTERED",
+                            "targetId": 10000004,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 262157,
+                            "state": "ENTERED",
+                            "targetId": 10000005,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 262157,
+                            "state": "ENTERED",
+                            "targetId": 10000006,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 262157,
+                            "state": "ENTERED",
+                            "targetId": 10000007,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 262157,
+                            "state": "ENTERED",
+                            "targetId": 10000008,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 262157,
+                            "state": "ENTERED",
+                            "targetId": 10000009,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 262157,
+                            "state": "ENTERED",
+                            "targetId": 10000010,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 262157,
+                            "state": "ENTERED",
+                            "targetId": 10000011,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 262157,
+                            "state": "ENTERED",
+                            "targetId": 10000012,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 262157,
+                            "state": "ENTERED",
+                            "targetId": 10000013,
+                            "message": "ACTIVATE"
+                        },
+                        // face blocks - end
+                        {
+                            "senderId": 262157, // trigger
+                            "state": "ENTERED",
+                            "targetId": 262157, // trigger
+                            "message": "DEACTIVATE"
+                        }
+                    ]
+                },
+                "Waterfall Cavern": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Tallon Canyon": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Temple Security Station": {
+                    "pickups": [],
+                    "doors": {
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Frigate Crash Site": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "2": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Transport Tunnel A": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Root Tunnel": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Temple Lobby": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Frigate Access Tunnel": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Overgrown Cavern": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Transport to Chozo Ruins West": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Root Cave": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "2": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Artifact Temple": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {}
+                },
+                "Main Ventilation Shaft Section C": {
+                    "pickups": [],
+                    "doors": {
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Transport Tunnel C": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Transport Tunnel B": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Arbor Chamber": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Main Ventilation Shaft Section B": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Transport to Chozo Ruins East": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Transport to Magmoor Caverns East": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Main Ventilation Shaft Section A": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Reactor Core": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Reactor Access": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Cargo Freight Lift to Deck Gamma": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {}
+                },
+                "Savestation": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Deck Beta Transit Hall": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Biohazard Containment": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Deck Beta Security Hall": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Biotech Research Area 1": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Deck Beta Conduit Hall": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Connection Elevator to Deck Beta": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Hydro Access Tunnel": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {}
+                },
+                "Great Tree Hall": {
+                    "pickups": [],
+                    "doors": {
+                        "2": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "3": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "4": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Great Tree Chamber": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {}
+                },
+                "Transport Tunnel D": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Life Grove Tunnel": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Transport Tunnel E": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Transport to Chozo Ruins South": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Life Grove": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        },
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {}
+                },
+                "Transport to Phazon Mines East": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                }
+            }
+        },
+        "Chozo Ruins": {
+            "transports": {
+                "Chozo Ruins West (Main Plaza)": "Tallon Overworld North (Tallon Canyon)",
+                "Chozo Ruins North (Sun Tower)": "Magmoor Caverns North (Lava Lake)",
+                "Chozo Ruins East (Reflecting Pool, Save Station)": "Tallon Overworld East (Frigate Crash Site)",
+                "Chozo Ruins South (Reflecting Pool, Far End)": "Tallon Overworld South (Great Tree Hall, Upper)"
+            },
+            "rooms": {
+                "Transport to Tallon Overworld North": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Ruins Entrance": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Main Plaza": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        },
+                        {
+                            "type": "Missile"
+                        },
+                        {
+                            "type": "Missile"
+                        },
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "2": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Ruined Fountain Access": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Ruined Shrine Access": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Nursery Access": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Plaza Access": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Piston Tunnel": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Ruined Fountain": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {}
+                },
+                "Ruined Shrine": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        },
+                        {
+                            "type": "Missile"
+                        },
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Eyon Tunnel": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Vault": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {}
+                },
+                "Training Chamber": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Arboretum Access": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Meditation Fountain": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Tower of Light Access": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Ruined Nursery": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Vault Access": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Training Chamber Access": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Arboretum": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "2": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Magma Pool": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Tower of Light": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Save Station 1": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "North Atrium": {
+                    "pickups": [],
+                    "doors": {
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Transport to Magmoor Caverns North": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Sunchamber Lobby": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Gathering Hall Access": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Tower Chamber": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Ruined Gallery": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        },
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "2": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Sun Tower": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Transport Access North": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Sunchamber Access": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Gathering Hall": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "2": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Totem Access": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Map Station": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Sun Tower Access": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Hive Totem": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Sunchamber": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        },
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Watery Hall Access": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Save Station 2": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "East Atrium": {
+                    "pickups": [],
+                    "doors": {
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Watery Hall": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        },
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Energy Core Access": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Dynamo Access": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Energy Core": {
+                    "pickups": [],
+                    "doors": {
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "2": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Dynamo": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        },
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Burn Dome Access": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "West Furnace Access": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Burn Dome": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        },
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {}
+                },
+                "Furnace": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        },
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "East Furnace Access": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Crossway Access West": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Hall of the Elders": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "2": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "3": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "4": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Crossway": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "2": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Reflecting Pool Access": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Elder Hall Access": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Crossway Access South": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Elder Chamber": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Reflecting Pool": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "3": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Save Station 3": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Transport Access South": {
+                    "pickups": [],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Antechamber": {
+                    "pickups": [
+                        {
+                            "type": "Missile"
+                        }
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Transport to Tallon Overworld East": {
+                    "pickups": [],
+                    "doors": {}
+                },
+                "Transport to Tallon Overworld South": {
+                    "pickups": [],
+                    "doors": {}
+                }
+            }
+        },
+        "End Cinema": {
+            "rooms": {
+                "End Cinema": {
+                    
+                }
+            }
+        }
+    }
+}

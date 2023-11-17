@@ -1,2 +1,3 @@
-# april-fools-2024
+# Untitled Hack
+
 Fanhack due April 1st 2024
