@@ -2055,6 +2055,53 @@
                             "blastShieldType": "None"
                         }
                     },
+                    "triggers": [
+                        {
+                            "id": 11000000,
+                            "position": [-399.861, 393.6213, -17.2384],
+                            "scale": [13, 10, 5],
+                            "deactivateOnEnter": true,
+                            "layer": 3
+                        },
+                        {
+                            "position": [-369.128387, 404.473297, -8.2],
+                            "scale": [13.5, 13.0, 8.5],
+                            "force": [
+                                0,
+                                -400.0,
+                                150.0
+                            ],
+                            "flags": 8193,
+                            "layer": 3
+                        },
+                        {
+                            "id": 11000005,
+                            "position": [-336.9284, 404.1733, -12.6547],
+                            "scale": [18, 9, 9],
+                            "deactivateOnEnter": true,
+                            "layer": 3
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 11000001,
+                            "time": 0.02,
+                            "layer": 3
+                        },
+                        {
+                            "id": 11000006,
+                            "time": 0.02,
+                            "startImmediately": true,
+                            "layer": 3
+                        }
+                    ],
+                    "hudmemos": [
+                        {
+                            "id": 11000004,
+                            "text": "Samus... Would you like to file an insurance claim?",
+                            "messageTime": 12
+                        }
+                    ],
                     "deleteIds": [
                         611 // cutscene skip
                     ],
@@ -2111,10 +2158,12 @@
                         },
                         // circle pan
                         "318": { // target
-                            "position": [-344.0256, 315.5706, -37.5105]
+                            // "position": [-344.0256, 315.5706, -37.5105]
+                            "position": [-342.6856, 311.9993, -36.5549]
                         },
                         "338": { // target
-                            "position": [-344.0256, 315.5706, -33.8105]
+                            // "position": [-344.0256, 315.5706, -33.8105]
+                            "position": [-343.3856, 320.5993, -34.1549]
                         },
                         // a = [
                         //     [-374.0199, 377.0998, -21.4233],
@@ -2128,25 +2177,122 @@
                         // for x in a:
                         //     adjusted = [x[0]+offset[0], x[1]+offset[1], x[2]+offset[2]]
                         //     print(adjusted)
-                        "314": {
+                        "314": { // camera path waypoint
                             "position": [-349.4856, 312.49980000000005, -32.4533]
                         },   
-                        "315": {
+                        "315": { // camera path waypoint
                             "position": [-346.1295, 310.5461, -32.5481]
                         },   
-                        "316": {
+                        "316": { // camera path waypoint
                             "position": [-342.3867, 310.4837, -32.6237]
                         },   
-                        "317": {
+                        "317": { // camera path waypoint
                             "position": [-340.1703, 314.3514, -32.5571]
                         },   
-                        "319": {
+                        "319": { // camera path waypoint
                             "position": [-341.4507, 319.9044, -32.074]
                         },   
-                        "322": {
+                        "322": { // camera path waypoint
                             "position": [-347.2093, 319.98479999999995, -30.722900000000003]
+                        },
+                        "424": { // SJF scan
+                            "position": [-390.9964, 307.4193, -5.3191]
+                        },
+                        "425": { // blue patch scan
+                            "position": [-377.8229, 348.7109, -13.5328],
+                            "layer": 3
+                        },
+                        "467": { // save station trigger
+                            "scale": [5.0, 5.0, 5.0],
+                            "layer": 3
+                        },
+                        "321": { // ship
+                            "layer": 3
+                        },
+                        "463": { // save station beam
+                            "layer": 3
+                        },
+                        "498": { // back from load trigger
+                            "layer": 3
+                        },
+                        "579": { // trigger push up
+                            "layer": 3
+                        },
+                        "464": { // save station energy
+                            "layer": 3
+                        },
+                        "484": { // save station base lights
+                            "layer": 3
+                        },
+                        "489": { // savestation hum
+                            "layer": 3
+                        },
+                        "91": { // ship sound
+                            "layer": 3
+                        },
+                        "573": { // ship sound
+                            "layer": 3
+                        },
+                        "466": { // map station sound
+                            "layer": 3
+                        },
+                        "88": { // ambience left
+                            "layer": 3
+                        },
+                        "557": { // audio fade out
+                            "layer": 3
                         }
-                    }
+                    },
+                    "addConnections": [
+                        {
+                            "senderId": 425,
+                            "state": "SCAN_DONE",
+                            "targetId": 468, // save station spawn point
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 425,
+                            "state": "SCAN_DONE",
+                            "targetId": 467, // save station trigger
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 425,
+                            "state": "SCAN_DONE",
+                            "targetId": 11000001, // custom timer
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 11000001, // custom timer
+                            "state": "ZERO",
+                            "targetId": 467,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 11000000, // trigger near SJF
+                            "state": "ENTERED",
+                            "targetId": 468, // save station spawn point
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 11000005, // trigger near alcove
+                            "state": "ENTERED",
+                            "targetId": 557, // StreamedAudio FadeIn/Out Long
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 11000006, // auto-start layer 3 timer
+                            "state": "ZERO",
+                            "targetId": 11000004, // hudmemo
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 98, // alcove load trigger
+                            "state": "ENTERED",
+                            "targetId": 11000004, // hudmemo
+                            "message": "SET_TO_ZERO"
+                        }
+                    ]
                 },
                 "Gully": {
                     "pickups": [],
@@ -2180,6 +2326,22 @@
                             "fadeOutTime": 0.1,
                             "oneshot": 1,
                             "volume": 100
+                        }
+                    ],
+                    "triggers": [
+                        {
+                            "id": 11000002,
+                            "position": [-331.938507, 451.499695, -19.828421],
+                            "scale": [9.0, 10.0, 9.9],
+                            "deactivateOnEnter": true
+                        }
+                    ],
+                    "specialFunctions": [
+                        {
+                            "id": 11000003,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId":  2414967056,
+                            "layerChangeLayerId": 3
                         }
                     ],
                     "blocks": [
@@ -2277,102 +2439,107 @@
                     ],
                     "addConnections": [
                         {
-                            "senderId": 262157, // trigger
+                            "senderId": 11000002, // trigger
+                            "state": "ENTERED",
+                            "targetId": 262145, // dock
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 11000002, // trigger
+                            "state": "ENTERED",
+                            "targetId": 11000003, // jumpscare audio
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 11000002, // trigger
                             "state": "ENTERED",
                             "targetId": 10000000, // jumpscare audio
                             "message": "PLAY"
                         },
                         {
-                            "senderId": 262157, // trigger
+                            "senderId": 11000002, // trigger
                             "state": "ENTERED",
                             "targetId": 262151, // space jump
                             "message": "DEACTIVATE"
                         },
                         // face blocks - start
                         {
-                            "senderId": 262157,
+                            "senderId": 11000002,
                             "state": "ENTERED",
                             "targetId": 10000001,
                             "message": "ACTIVATE"
                         },
                         {
-                            "senderId": 262157,
+                            "senderId": 11000002,
                             "state": "ENTERED",
                             "targetId": 10000002,
                             "message": "ACTIVATE"
                         },
                         {
-                            "senderId": 262157,
+                            "senderId": 11000002,
                             "state": "ENTERED",
                             "targetId": 10000003,
                             "message": "ACTIVATE"
                         },
                         {
-                            "senderId": 262157,
+                            "senderId": 11000002,
                             "state": "ENTERED",
                             "targetId": 10000004,
                             "message": "ACTIVATE"
                         },
                         {
-                            "senderId": 262157,
+                            "senderId": 11000002,
                             "state": "ENTERED",
                             "targetId": 10000005,
                             "message": "ACTIVATE"
                         },
                         {
-                            "senderId": 262157,
+                            "senderId": 11000002,
                             "state": "ENTERED",
                             "targetId": 10000006,
                             "message": "ACTIVATE"
                         },
                         {
-                            "senderId": 262157,
+                            "senderId": 11000002,
                             "state": "ENTERED",
                             "targetId": 10000007,
                             "message": "ACTIVATE"
                         },
                         {
-                            "senderId": 262157,
+                            "senderId": 11000002,
                             "state": "ENTERED",
                             "targetId": 10000008,
                             "message": "ACTIVATE"
                         },
                         {
-                            "senderId": 262157,
+                            "senderId": 11000002,
                             "state": "ENTERED",
                             "targetId": 10000009,
                             "message": "ACTIVATE"
                         },
                         {
-                            "senderId": 262157,
+                            "senderId": 11000002,
                             "state": "ENTERED",
                             "targetId": 10000010,
                             "message": "ACTIVATE"
                         },
                         {
-                            "senderId": 262157,
+                            "senderId": 11000002,
                             "state": "ENTERED",
                             "targetId": 10000011,
                             "message": "ACTIVATE"
                         },
                         {
-                            "senderId": 262157,
+                            "senderId": 11000002,
                             "state": "ENTERED",
                             "targetId": 10000012,
                             "message": "ACTIVATE"
                         },
                         {
-                            "senderId": 262157,
+                            "senderId": 11000002,
                             "state": "ENTERED",
                             "targetId": 10000013,
                             "message": "ACTIVATE"
-                        },
-                        // face blocks - end
-                        {
-                            "senderId": 262157, // trigger
-                            "state": "ENTERED",
-                            "targetId": 262157, // trigger
-                            "message": "DEACTIVATE"
                         }
                     ]
                 },
