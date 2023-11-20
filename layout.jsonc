@@ -41,7 +41,7 @@
         "enableIceTraps": true,
         "escapeSequenceCountsUp": false,
         "difficultyBehavior": "NormalOnly",
-        "startingRoom": "Tallon Overworld:Canyon Cavern",
+        "startingRoom": "Tallon Overworld:Temple Security Station",
         "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
         "startingItems": {
             "powerBeam": true,
@@ -2291,7 +2291,7 @@
                             "id": 10000001,
                             "active": false,
                             "position": [-332.0, 453.0, -21.0],
-                            "scale": [4.0, 0.1, 4.0],
+                            "scale": [6.8144, 0.17036, 6.8144],
                             "texture": "Mine"
                         },
                         { // eye
@@ -2299,84 +2299,84 @@
                             "active": false,
                             "texture": "Snow",
                             "position": [-331.0, 453.0, -20.0],
-                            "scale": [0.4, 0.11, 0.4]
+                            "scale": [0.68144, 0.187316, 0.68144]
                         },
                         { // eye
                             "id": 10000003,
                             "active": false,
                             "texture": "Snow",
                             "position": [-333.0, 453.0, -20.0],
-                            "scale": [0.4, 0.11, 0.4]
+                            "scale": [0.68144, 0.187316, 0.68144]
                         },
                         { // pupil
                             "id": 10000004,
                             "active": false,
                             "texture": "Crater",
                             "position": [-331.0, 453.0, -20.0],
-                            "scale": [0.2, 0.12, 0.2]
+                            "scale": [0.34072, 0.204192, 0.34072]
                         },
                         { // pupil
                             "id": 10000005,
                             "active": false,
                             "texture": "Crater",
                             "position": [-333.0, 453.0, -20.0],
-                            "scale": [0.2, 0.12, 0.2]
+                            "scale": [0.34072, 0.204192, 0.34072]
                         },
                         { // mouth
                             "id": 10000006,
                             "active": false,
                             "texture": "Snow",
                             "position": [-332.0, 453.0, -22.0],
-                            "scale": [2.4, 0.11, 1.0]
+                            "scale": [4.09984, 0.187316, 1.7036]
                         },
                         { // upper tooth
                             "id": 10000007,
                             "active": false,
                             "texture": "Mine",
                             "position": [-331.2, 453.0, -21.5],
-                            "scale": [0.2, 0.12, 0.3]
+                            "scale": [0.34072, 0.204192, 0.51096]
                         },
                         { // upper tooth
                             "id": 10000008,
                             "active": false,
                             "texture": "Mine",
                             "position": [-332.0, 453.0, -21.5],
-                            "scale": [0.2, 0.12, 0.3]
+                            "scale": [0.34072, 0.204192, 0.51096]
                         },
                         { // upper tooth
                             "id": 10000009,
                             "active": false,
                             "texture": "Mine",
                             "position": [-332.8, 453.0, -21.5],
-                            "scale": [0.2, 0.12, 0.3]
+                            "scale": [0.34072, 0.204192, 0.51096]
                         },
                         { // bottom tooth
                             "id": 10000010,
                             "active": false,
                             "texture": "Mine",
                             "position": [-330.8, 453.0, -22.5],
-                            "scale": [0.2, 0.12, 0.3]
+                            "scale": [0.34072, 0.204192, 0.51096]
                         },
                         { // bottom tooth
                             "id": 10000011,
                             "active": false,
                             "texture": "Mine",
                             "position": [-331.6, 453.0, -22.5],
-                            "scale": [0.2, 0.12, 0.3]
+                            "scale": [0.34072, 0.204192, 0.51096]
                         },
                         { // bottom tooth
                             "id": 10000012,
                             "active": false,
                             "texture": "Mine",
                             "position": [-332.4, 453.0, -22.5],
-                            "scale": [0.2, 0.12, 0.3]
+                            "scale": [0.34072, 0.204192, 0.51096]
                         },
                         { // bottom tooth
                             "id": 10000013,
                             "active": false,
                             "texture": "Mine",
                             "position": [-333.2, 453.0, -22.5],
-                            "scale": [0.2, 0.12, 0.3]
+                            "scale": [0.34072, 0.204192, 0.51096]
                         }
                     ],
                     "addConnections": [
@@ -2536,7 +2536,17 @@
                         }
                     }
                 },
-                "Temple Lobby": {},
+                "Temple Lobby": {
+                    "layers": {
+                        "1": true
+                    },
+                    "blocks": [
+                        {
+                            "position": [-373, 130, -10],
+                            "scale": [10, 1, 9.2]
+                        }
+                    ]
+                },
                 "Frigate Access Tunnel": {
                     "doors": {
                         "0": {
