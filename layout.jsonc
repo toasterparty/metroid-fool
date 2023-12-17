@@ -6,8 +6,8 @@
         "qolCosmetic": true,
         "qolPickupScans": true,
         "qolGeneral": true,
-        "qolCutscenes": "Competitive",
-        "mapDefaultState": "Visible",
+        "qolCutscenes": "SkippableCompetitive",
+        "mapDefaultState": "Visit",
         "artifactHintBehavior": "All",
         "automaticCrashScreen": true,
         "forceFusion": true
@@ -41,7 +41,7 @@
         "enableIceTraps": true,
         "escapeSequenceCountsUp": false,
         "difficultyBehavior": "NormalOnly",
-        "startingRoom": "Tallon Overworld:Temple Security Station",
+        "startingRoom": "Tallon Overworld:Canyon Cavern",
         "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
         "startingItems": {
             "powerBeam": true,
@@ -2112,7 +2112,118 @@
                     ]
                 },
                 "Gully": {},
-                "Canyon Cavern": {},
+                "Canyon Cavern": {
+                    // layer 1 - beetle battle
+                    // layer 2 - qol music
+                    "triggers": [
+                        { // beetle trigger
+                            "id": 131183,
+                            "layer": 1,
+                            "position": [-442, 339, -20],
+                            "scale": [6, 6, 6]
+                        },
+                        { // beetle trigger
+                            "id": 131190,
+                            "layer": 1,
+                            "position": [-442, 339, -20],
+                            "scale": [6, 6, 6]
+                        },
+                        { // beetle trigger (unused)
+                            "id": 131197,
+                            "layer": 1,
+                            "active": true,
+                            "position": [-442, 339, -20],
+                            "scale": [6, 6, 6]
+                        }
+                    ],
+                    "blocks": [
+                        { // stadium wall (tallon canyon)
+                            "id": 10000014,
+                            "layer": 1,
+                            "active": false,
+                            "position": [-454, 333, -22],
+                            "scale": [2, 14, 6]
+                        },
+                        { // stadium wall (landing site)
+                            "id": 10000015,
+                            "layer": 1,
+                            "active": false,
+                            "position": [-423.7084, 367.9, -22],
+                            "scale": [2, 14, 6]
+                        }
+                    ],
+                    "counters": [
+                        {
+                            "id": 10000016,
+                            "layer": 1,
+                            "maxValue": 3
+                        }
+                    ],
+                    "streamedAudios": [
+                        {
+                            "id": 10000017,
+                            "layer": 1,
+                            "audioFileName": "/audio/gen_ShortBattleL.dsp|/audio/gen_ShortBattleR.dsp",
+                            "volume": 90,
+                            "isMusic": true
+                        }
+                    ],
+                    "editObjs": {
+                        "131187": { // beetle
+                            "layer": 1,
+                            "scale": [1.2, 1.2, 1.2],
+                            "speed": 1.2,
+                            "health": 2,
+                            "detectionRange": 2
+                        },
+                        "131201": { // beetle
+                            "layer": 1,
+                            "scale": [1.2, 1.2, 1.2],
+                            "speed": 1.2,
+                            "health": 2,
+                            "detectionRange": 2
+                        },
+                        "131194": { // beetle
+                            "layer": 1,
+                            "scale": [1.2, 1.2, 1.2],
+                            "speed": 1.2,
+                            "health": 2,
+                            "detectionRange": 2
+                        }
+                    },
+                    "addConnections": [
+                        {
+                            "senderId": 131183, // trigger
+                            "state": "ENTERED",
+                            "targetId": 10000014, // wall (tallon canyon)
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 131183, // trigger
+                            "state": "ENTERED",
+                            "targetId": 10000015, // wall (landing site)
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 131183, // trigger
+                            "state": "ENTERED",
+                            "targetId": 10000017, // music
+                            "message": "PLAY"
+                        },
+                        {
+                            "senderId": 131144, // dead beetle generator,
+                            "state": "ZERO",
+                            "targetId": 10000016, // counter
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 10000016, // counter
+                            "state": "MAX_REACHED",
+                            "targetId": 10000014, // wall (tallon canyon)
+                            "message": "DEACTIVATE"
+                        }
+                    ]
+                },
                 "Temple Hall": {
                     "timers": [
                         {
