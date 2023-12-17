@@ -2114,6 +2114,7 @@
                 "Gully": {},
                 "Canyon Cavern": {
                     // layer 1 - beetle battle
+                    // (beetles must stay on default layer or it crashes)
                     // layer 2 - qol music
                     "triggers": [
                         { // beetle trigger
@@ -2170,25 +2171,25 @@
                     ],
                     "editObjs": {
                         "131187": { // beetle
-                            "layer": 1,
                             "scale": [1.2, 1.2, 1.2],
-                            "speed": 1.2,
-                            "health": 2,
-                            "detectionRange": 2
+                            "speed": 1.5,
+                            "health": 2.5,
+                            "attackRange": 2.0,
+                            "detectionRange": 1.2
                         },
                         "131201": { // beetle
-                            "layer": 1,
                             "scale": [1.2, 1.2, 1.2],
-                            "speed": 1.2,
-                            "health": 2,
-                            "detectionRange": 2
+                            "speed": 1.5,
+                            "health": 2.5,
+                            "attackRange": 1.0,
+                            "detectionRange": 1.2
                         },
                         "131194": { // beetle
-                            "layer": 1,
                             "scale": [1.2, 1.2, 1.2],
-                            "speed": 1.2,
-                            "health": 2,
-                            "detectionRange": 2
+                            "speed": 1.5,
+                            "health": 2.5,
+                            "attackRange": 1.5,
+                            "detectionRange": 1.2
                         }
                     },
                     "addConnections": [
@@ -2608,7 +2609,73 @@
                         }
                     }
                 },
-                "Tallon Canyon": {},
+                "Tallon Canyon": {
+                    // swap red geemer with lowest zoomer
+                    "blocks": [
+                        { // tree platform
+                            "position": [-478.345367, 322.526306, -19.9928],
+                            "scale": [1, 5, 0.5]
+                        },
+                        { // right wall
+                            "position": [-478.5154, 339.1963, -18.7928],
+                            "scale": [5, 0.75, 0.1]
+                        },
+                        { // right wall #2
+                            "position": [-487.1154, 336.0963, -17.8],
+                            "scale": [3, 3, 0.1]
+                        },
+                        { // half-pipe wall
+                            "position": [-522.5623, 371.4593, -23.8875],
+                            "scale": [30, 1, 20]
+                        },
+                        { // half-pipe wall walkway
+                            "position": [-514.0969, 367.5477, -14.899],
+                            "scale": [6, 5.9, 1]
+                        }
+                    ],
+                    "editObjs": {
+                        "393289": { // lowest zoomer
+                            "position": [-515.434692, 363.195923, -13.630278] // red geemer spawn
+                        },
+                        "393385": { // red geemer
+                            "position": [-535.5726, 342.13, -21.301], // lowest zoomer spawn
+                            "detectionRange": 10
+                        },
+                        "393371": {"position": [-538.564, 341.9604, -21.6942]},
+                        "393372": {"position": [-536.05, 342.3634, -21.7075]},
+                        "393373": {"position": [-534.8549, 340.0971, -21.8378]},
+                        "393374": {"position": [-536.05, 342.3634, -21.7075]},
+                        "393375": {"position": [-538.564, 341.9604, -21.6942]}
+                    },
+                    "removeConnections": [
+                        {
+                            "senderId": 393289, // lowest zoomer
+                            "state": "PATROL",
+                            "targetId": 393375, // lowest zoomer waypoint
+                            "message": "FOLLOW"
+                        },
+                        {
+                            "senderId": 393385, // red geemer
+                            "state": "PATROL",
+                            "targetId": 393386, // red geemer waypoint
+                            "message": "FOLLOW"
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 393289, // lowest zoomer
+                            "state": "PATROL",
+                            "targetId": 393386, // red geemer waypoint
+                            "message": "FOLLOW"
+                        },
+                        {
+                            "senderId": 393385, // red geemer
+                            "state": "PATROL",
+                            "targetId": 393375, // lowest zoomer waypoint
+                            "message": "FOLLOW"
+                        }
+                    ]
+                },
                 "Temple Security Station": {
                     "doors": {
                         "1": {
