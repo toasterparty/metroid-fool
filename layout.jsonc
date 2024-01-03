@@ -41,7 +41,7 @@
         "enableIceTraps": true,
         "escapeSequenceCountsUp": false,
         "difficultyBehavior": "NormalOnly",
-        "startingRoom": "Tallon Overworld:Canyon Cavern",
+        "startingRoom": "Tallon Overworld:Landing Site",
         "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
         "startingItems": {
             "powerBeam": true,
@@ -2169,27 +2169,39 @@
                             "isMusic": true
                         }
                     ],
+                    "waypoints": [
+                        {
+                            "id": 131185,
+                            "position": [-436.7245, 355.439, -24.1343]
+                        },
+                        {
+                            "id": 131199,
+                            "position": [-437.1775, 373.6154, -23.4985]
+                        },
+                        {
+                            "id": 131192,
+                            "position": [-449.1316, 333.636, -23.3809]
+                        }
+                    ],
                     "editObjs": {
                         "131187": { // beetle
                             "scale": [1.2, 1.2, 1.2],
-                            "speed": 1.5,
+                            "speed": 1.1,
                             "health": 2.5,
-                            "attackRange": 2.0,
-                            "detectionRange": 1.2
+                            "attackRange": 0.01,
+                            "detectionRange": 2.0
                         },
                         "131201": { // beetle
                             "scale": [1.2, 1.2, 1.2],
-                            "speed": 1.5,
+                            "speed": 1.1,
                             "health": 2.5,
-                            "attackRange": 1.0,
-                            "detectionRange": 1.2
+                            "detectionRange": 2.0
                         },
                         "131194": { // beetle
                             "scale": [1.2, 1.2, 1.2],
-                            "speed": 1.5,
+                            "speed": 1.1,
                             "health": 2.5,
-                            "attackRange": 1.5,
-                            "detectionRange": 1.2
+                            "detectionRange": 2.0
                         }
                     },
                     "addConnections": [
@@ -2211,9 +2223,22 @@
                             "targetId": 10000017, // music
                             "message": "PLAY"
                         },
+                        // unlock door
                         {
-                            "senderId": 131144, // dead beetle generator,
-                            "state": "ZERO",
+                            "senderId": 131187,
+                            "state": "DEAD",
+                            "targetId": 10000016, // counter
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 131201,
+                            "state": "DEAD",
+                            "targetId": 10000016, // counter
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 131194,
+                            "state": "DEAD",
                             "targetId": 10000016, // counter
                             "message": "INCREMENT"
                         },
@@ -2610,42 +2635,114 @@
                     }
                 },
                 "Tallon Canyon": {
+                    // layer 1 - beetle battle
                     // swap red geemer with lowest zoomer
                     "blocks": [
+                        { // lowest platform blocker
+                            "position": [-523.4129, 337.9664, -25.7655],
+                            "scale": [10, 12, 6]
+                        },
                         { // tree platform
-                            "position": [-478.345367, 322.526306, -19.9928],
+                            "position": [-478.345367, 321.526306, -19.9928],
                             "scale": [1, 5, 0.5]
                         },
                         { // right wall
                             "position": [-478.5154, 339.1963, -18.7928],
-                            "scale": [5, 0.75, 0.1]
+                            "scale": [7, 1.5, 0.1]
                         },
                         { // right wall #2
-                            "position": [-487.1154, 336.0963, -17.8],
+                            "position": [-487.5154, 334.9963, -16.8],
+                            "scale": [0.5, 5, 0.5]
+                        },
+                        { // left wall #1
+                            "position": [-504.8, 326.9, -19.3],
                             "scale": [3, 3, 0.1]
                         },
+                        { // left wall #2
+                            "position": [-510.5, 331.1, -21.9],
+                            "scale": [3.5, 3.5, 0.1]
+                        },
                         { // half-pipe wall
-                            "position": [-522.5623, 371.4593, -23.8875],
+                            "position": [-521.5, 357.4593, -23.8875],
                             "scale": [30, 1, 20]
                         },
-                        { // half-pipe wall walkway
-                            "position": [-514.0969, 367.5477, -14.899],
-                            "scale": [6, 5.9, 1]
+                        { // door blocker
+                            "id": 10000018,
+                            "position": [-528.7891, 407.831, -21.2737],
+                            "scale": [6, 1, 6],
+                            "active": false
+                        }
+                    ],
+                    "waypoints": [
+                        {
+                            "id": 393386, // lowest zoomer
+                            "position": [-504.4833, 339.2531, -19.1586],
+                            "pause": 9999999999
+                        },
+                        {
+                            "id": 393312, // big beetle spawn point
+                            "position": [-530.9006, 402.7981, -24.0733]
+                        }
+                    ],
+                    "triggers": [
+                        { // beetle trigger
+                            "id": 393310,
+                            "position": [-521.111, 385.2667, -25.5039],
+                            "scale": [34, 45, 7],
+                            "deactivateOnEnter": true
+                        }
+                    ],
+                    "streamedAudios": [
+                        {
+                            "id": 10000019,
+                            "audioFileName": "/audio/gen_ShortBattleL.dsp|/audio/gen_ShortBattleR.dsp",
+                            "volume": 105,
+                            "isMusic": true
+                        }
+                    ],
+                    "counters": [
+                        {
+                            "id": 10000020,
+                            "maxValue": 2
                         }
                     ],
                     "editObjs": {
+                        "393221": { // default spawn
+                            "position": [-523.6407, 339.142, -24.256]
+                        },
                         "393289": { // lowest zoomer
-                            "position": [-515.434692, 363.195923, -13.630278] // red geemer spawn
+                            "position": [-504.4833, 339.2531, -19.1586], // under bridge
+                            "vulnerability": "Missile"
                         },
                         "393385": { // red geemer
                             "position": [-535.5726, 342.13, -21.301], // lowest zoomer spawn
                             "detectionRange": 10
                         },
+                        // red geemer waypoints
                         "393371": {"position": [-538.564, 341.9604, -21.6942]},
                         "393372": {"position": [-536.05, 342.3634, -21.7075]},
                         "393373": {"position": [-534.8549, 340.0971, -21.8378]},
                         "393374": {"position": [-536.05, 342.3634, -21.7075]},
-                        "393375": {"position": [-538.564, 341.9604, -21.6942]}
+                        "393375": {"position": [-538.564, 341.9604, -21.6942]},
+                        "393342": { // water
+                            "position": [-507.974, 351.7842, -27.2099],
+                            "scale": [80.0, 100.0, 3.0]
+                        },
+                        "393297": { // small beetle
+                            "scale": [0.2, 0.2, 0.2],
+                            "damage": 0.3,
+                            "speed": 2.0,
+                            "health": 0.5,
+                            "attackRange": 0.01,
+                            "detectionRange": 1.8
+                        },
+                        "393315": { // chonky beetle
+                            "scale": [5.5, 6.5, 3.0],
+                            "damage": 5.0,
+                            "speed": 0.15,
+                            "health": 13.0,
+                            "attackRange": 0.01
+                        }
                     },
                     "removeConnections": [
                         {
@@ -2662,6 +2759,7 @@
                         }
                     ],
                     "addConnections": [
+                        // move zoomers
                         {
                             "senderId": 393289, // lowest zoomer
                             "state": "PATROL",
@@ -2673,8 +2771,46 @@
                             "state": "PATROL",
                             "targetId": 393375, // lowest zoomer waypoint
                             "message": "FOLLOW"
+                        },
+                        // lock door
+                        {
+                            "senderId": 393310, // beetle trigger
+                            "state": "ENTERED",
+                            "targetId": 10000018,
+                            "message": "ACTIVATE"
+                        },
+                        // play battle music
+                        {
+                            "senderId": 393310, // trigger
+                            "state": "ENTERED",
+                            "targetId": 10000019, // music
+                            "message": "PLAY"
+                        },
+                        // unlock door
+                        {
+                            "senderId": 393297, // beetle
+                            "state": "DEAD",
+                            "targetId": 10000020, // counter
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 393315, // beetle
+                            "state": "DEAD",
+                            "targetId": 10000020, // counter
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 10000020, // counter
+                            "state": "MAX_REACHED",
+                            "targetId": 10000018, // wall - door blocker
+                            "message": "DEACTIVATE"
                         }
-                    ]
+                    ],
+                    "doors": {
+                        "3": {
+                            "shieldType": "Ice Beam"
+                        }
+                    }
                 },
                 "Temple Security Station": {
                     "doors": {
