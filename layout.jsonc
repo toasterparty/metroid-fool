@@ -41,7 +41,7 @@
         "enableIceTraps": true,
         "escapeSequenceCountsUp": false,
         "difficultyBehavior": "NormalOnly",
-        "startingRoom": "Tallon Overworld:Landing Site",
+        "startingRoom": "Tallon Overworld:Transport Tunnel A",
         "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
         "startingItems": {
             "powerBeam": true,
@@ -2841,7 +2841,46 @@
                         }
                     }
                 },
-                "Transport Tunnel A": {},
+                "Transport Tunnel A": {
+                    "editObjs": {
+                        "589855": { // zoomer
+                            "speed": 3.0,
+                            "health": 100.0
+                        },
+                        // the first waypoint's position is fine
+                        // waypoints 2-5 are moved to make the new path
+                        "589849": { // waypoint 2
+                            "position": [-532.931, 436.6862, -21.8061]
+                        },
+                        "589850": { // waypoint 3
+                            "position": [-529.8364, 416.8885, -23.3469]
+                        },
+                        "589851": { //  waypoint 4
+                            "position": [-528.7558, 409.8252, -23.2085]
+                        },
+                        "589852": { // waypoint 5
+                            "position": [-532.6008, 434.9797, -21.8538]
+                        }
+                    },
+                    // waypoints 6+ aren't needed, so break the waypoint loop
+                    // early and re-connect to waypoint 1
+                    "removeConnections": [
+                        {
+                            "senderId": 589852, // waypoint 5
+                            "state": "ARRIVED",
+                            "targetId": 589853, // waupoint 6
+                            "message": "NEXT"
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 589852, // waypoint 5
+                            "state": "ARRIVED",
+                            "targetId": 589856, // waupoint 1
+                            "message": "NEXT"
+                        }
+                    ]
+                },
                 "Root Tunnel": {
                     "doors": {
                         "0": {
