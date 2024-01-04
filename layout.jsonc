@@ -41,7 +41,7 @@
         "enableIceTraps": true,
         "escapeSequenceCountsUp": false,
         "difficultyBehavior": "NormalOnly",
-        "startingRoom": "Chozo Ruins:Ruins Entrance",
+        "startingRoom": "Chozo Ruins:Transport to Tallon Overworld North",
         "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
         "startingItems": {
             "powerBeam": true,
@@ -3181,7 +3181,58 @@
                 "Chozo Ruins South (Reflecting Pool, Far End)": "Tallon Overworld South (Great Tree Hall, Upper)"
             },
             "rooms": {
-                "Transport to Tallon Overworld North": {},
+                "Transport to Tallon Overworld North": {
+                    "editObjs": {
+                        "108": { // player actor arriving
+                            "rotation": [0, 0, 180]
+                        },
+                        "122": { // spawn point
+                            "rotation": [0, 0, 180]
+                        },
+                        "141": { // player actor leaving
+                            "rotation": [0, 0, 180]
+                        }
+                    },
+                    "extraScans": [
+                        {
+                            "id": 10000024,
+                            "position": [88.4973, -167.7, 5],
+                            "rotation": 90,
+                            "text": "Save Game",
+                            "combatVisible": true,
+                            "isRed": true
+                        }
+                    ],
+                    "timers": [
+                        // Queue the save request with a timer to make it easier on the eyes
+                        {
+                            "id": 10000025,
+                            "time": 0.5
+                        }
+                    ],
+                    "specialFunctions": [
+                        {
+                            "id": 10000026,
+                            "type": "SaveStation"
+                        }
+                    ],
+                    "addConnections": [
+                        // When the player scans the point, start the timer
+                        {
+                            "senderId": 10000024,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000025,
+                            "message": "RESET_AND_START"
+                        },
+                        // When the timer elapses, initiate a save
+                        {
+                            "senderId": 10000025,
+                            "state": "ZERO",
+                            "targetId": 10000026,
+                            "message": "ACTION"
+                        }
+                    ]
+                },
                 "Ruins Entrance": {
                     "boundingBoxScale": [1, 1, 5],
                     "boundingBoxOffset": [0, 0, 30],
