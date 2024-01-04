@@ -41,7 +41,7 @@
         "enableIceTraps": true,
         "escapeSequenceCountsUp": false,
         "difficultyBehavior": "NormalOnly",
-        "startingRoom": "Tallon Overworld:Transport Tunnel A",
+        "startingRoom": "Chozo Ruins:Ruins Entrance",
         "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
         "startingItems": {
             "powerBeam": true,
@@ -3182,7 +3182,65 @@
             },
             "rooms": {
                 "Transport to Tallon Overworld North": {},
-                "Ruins Entrance": {},
+                "Ruins Entrance": {
+                    "boundingBoxScale": [1, 1, 5],
+                    "boundingBoxOffset": [0, 0, 30],
+                    "triggers": [
+                        {
+                            "position": [97.4259, -86.2602, 1],
+                            "scale": [40, 40, 5],
+                            "flags": 2050 // detect AI, kill on enter
+                        }
+                    ],
+                    "timers": [
+                        {
+                            // activate every 1-7 seconds
+                            "id": 10000022,
+                            "time": 1,
+                            "maxRandomAdd": 6,
+                            "startImmediately": true,
+                            "looping": true
+                        },
+                        {
+                            // activate every 2-5 seconds
+                            "id": 10000023,
+                            "time": 2,
+                            "maxRandomAdd": 3,
+                            "startImmediately": true,
+                            "looping": true
+                        }
+                    ],
+                    "editObjs": {
+                        "65559": { // beetle spawn point
+                            "position": [96, -83, 85]
+                        },
+                        "65554": { // beetle spawn point
+                            "position": [92, -97, 85]
+                        }
+                    },
+                    "addConnections": [
+                        // create beetle when each respective timer
+                        {
+                            "senderId": 10000022,
+                            "state": "ZERO",
+                            "targetId": 65553, // beetle generator
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000023,
+                            "state": "ZERO",
+                            "targetId": 65558, // beetle generator
+                            "message": "SET_TO_ZERO"
+                        }
+                    ],
+                    "deleteIds": [
+                        // Don't trigger beetles normally
+                        65552,
+                        65555,
+                        65557,
+                        65560
+                    ]
+                },
                 "Main Plaza": {
                     "pickups": [
                         {
