@@ -2120,19 +2120,19 @@
                     "triggers": [
                         { // beetle trigger
                             "id": 131183,
-                            "layer": 1,
+                            "layer": 3,
                             "position": [-442, 339, -20],
                             "scale": [6, 6, 6]
                         },
                         { // beetle trigger
                             "id": 131190,
-                            "layer": 1,
+                            "layer": 3,
                             "position": [-442, 339, -20],
                             "scale": [6, 6, 6]
                         },
                         { // beetle trigger (unused)
                             "id": 131197,
-                            "layer": 1,
+                            "layer": 3,
                             "active": true,
                             "position": [-442, 339, -20],
                             "scale": [6, 6, 6]
@@ -2621,6 +2621,11 @@
                             "targetId": 10000013,
                             "message": "ACTIVATE"
                         }
+                    ],
+                    "deleteIds": [
+                        // undo music qol
+                        262159,
+                        262160
                     ]
                 },
                 "Waterfall Cavern": {
@@ -2659,7 +2664,7 @@
                         },
                         { // left wall #1
                             "position": [-504.8, 326.9, -19.3],
-                            "scale": [3, 3, 0.1]
+                            "scale": [4, 4, 0.1]
                         },
                         { // left wall #2
                             "position": [-510.5, 331.1, -21.9],
