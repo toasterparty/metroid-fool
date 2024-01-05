@@ -2113,9 +2113,10 @@
                 },
                 "Gully": {},
                 "Canyon Cavern": {
-                    // layer 1 - beetle battle
+                    // layer 1 - qol
+                    // layer 2 - qol
+                    // layer 3 - beetle battle
                     // (beetles must stay on default layer or it crashes)
-                    // layer 2 - qol music
                     "triggers": [
                         { // beetle trigger
                             "id": 131183,
@@ -2140,14 +2141,14 @@
                     "blocks": [
                         { // stadium wall (tallon canyon)
                             "id": 10000014,
-                            "layer": 1,
+                            "layer": 3,
                             "active": false,
                             "position": [-454, 333, -22],
                             "scale": [2, 14, 6]
                         },
                         { // stadium wall (landing site)
                             "id": 10000015,
-                            "layer": 1,
+                            "layer": 3,
                             "active": false,
                             "position": [-423.7084, 367.9, -22],
                             "scale": [2, 14, 6]
@@ -2156,14 +2157,14 @@
                     "counters": [
                         {
                             "id": 10000016,
-                            "layer": 1,
+                            "layer": 3,
                             "maxValue": 3
                         }
                     ],
                     "streamedAudios": [
                         {
                             "id": 10000017,
-                            "layer": 1,
+                            "layer": 3,
                             "audioFileName": "/audio/gen_ShortBattleL.dsp|/audio/gen_ShortBattleR.dsp",
                             "volume": 90,
                             "isMusic": true
@@ -2635,7 +2636,9 @@
                     }
                 },
                 "Tallon Canyon": {
-                    // layer 1 - beetle battle
+                    // layer 1 - qol
+                    // layer 2 - qol
+                    // layer 3 - beetle battle
                     // swap red geemer with lowest zoomer
                     "blocks": [
                         { // lowest platform blocker
@@ -2663,11 +2666,13 @@
                             "scale": [3.5, 3.5, 0.1]
                         },
                         { // half-pipe wall
+                            "layer": 3,
                             "position": [-521.5, 357.4593, -23.8875],
                             "scale": [30, 1, 20]
                         },
                         { // door blocker
                             "id": 10000018,
+                            "layer": 3,
                             "position": [-528.7891, 407.831, -21.2737],
                             "scale": [6, 1, 6],
                             "active": false
@@ -2687,6 +2692,14 @@
                     "triggers": [
                         { // beetle trigger
                             "id": 393310,
+                            "layer": 3,
+                            "position": [-521.111, 385.2667, -25.5039],
+                            "scale": [34, 45, 7],
+                            "deactivateOnEnter": true
+                        },
+                        { // beetle trigger
+                            "id": 393285,
+                            "layer": 3,
                             "position": [-521.111, 385.2667, -25.5039],
                             "scale": [34, 45, 7],
                             "deactivateOnEnter": true
@@ -2695,6 +2708,7 @@
                     "streamedAudios": [
                         {
                             "id": 10000019,
+                            "layer": 3,
                             "audioFileName": "/audio/gen_ShortBattleL.dsp|/audio/gen_ShortBattleR.dsp",
                             "volume": 105,
                             "isMusic": true
@@ -2703,6 +2717,7 @@
                     "counters": [
                         {
                             "id": 10000020,
+                            "layer": 3,
                             "maxValue": 2
                         }
                     ],
@@ -3234,10 +3249,14 @@
                     ]
                 },
                 "Ruins Entrance": {
+                    // layer 3 - qol
+                    // layer 4 - qol
+                    // layer 5 - beetles
                     "boundingBoxScale": [1, 1, 5],
                     "boundingBoxOffset": [0, 0, 30],
                     "triggers": [
                         {
+                            "layer": 5,
                             "position": [97.4259, -86.2602, 1],
                             "scale": [40, 40, 5],
                             "flags": 2050 // detect AI, kill on enter
@@ -3247,6 +3266,7 @@
                         {
                             // activate every 1-7 seconds
                             "id": 10000022,
+                            "layer": 5,
                             "time": 1,
                             "maxRandomAdd": 6,
                             "startImmediately": true,
@@ -3255,6 +3275,7 @@
                         {
                             // activate every 2-5 seconds
                             "id": 10000023,
+                            "layer": 5,
                             "time": 2,
                             "maxRandomAdd": 3,
                             "startImmediately": true,
@@ -3293,6 +3314,9 @@
                     ]
                 },
                 "Main Plaza": {
+                    // layer 5 - qol
+                    // layer 6 - qol
+                    // layer 7 - beetles
                     "pickups": [
                         { // Half-Pipe
                             "type": "Nothing",
@@ -3301,6 +3325,7 @@
                             "hudmemoText": "The path Ruined Shrine has been opened",
                             "position": [115.3, 65.7, 11.3],
                             "respawn": true
+                            // on layer 5, but removed by a timer
                         },
                         { // Grapple Ledge (Deleted)
                             "type": "Missile"
@@ -3371,22 +3396,27 @@
                         },
                         // Triggers
                         "131389": {
+                            "layer": 7,
                             "position": [100, 0, 1.8],
                             "scale": [70, 100, 1]
                         },
                         "131402": {
+                            "layer": 7,
                             "position": [100, 0, 1.8],
                             "scale": [70, 100, 1]
                         },
                         "131117": {
+                            "layer": 7,
                             "position": [100, 0, 1.8],
                             "scale": [70, 100, 1]
                         },
                         "131244": {
+                            "layer": 7,
                             "position": [100, 0, 1.8],
                             "scale": [70, 100, 1]
                         },
                         "131107": {
+                            "layer": 7,
                             "position": [100, 0, 1.8],
                             "scale": [70, 100, 1]
                         },
@@ -3451,6 +3481,7 @@
                         // Ruined Shrine Blocker
                         {
                             "id": 10000027,
+                            "layer": 7,
                             "position": [74.9579, 2.4026, 2.505],
                             "scale": [1, 6, 5],
                             "texture": "Sandstone"
@@ -3508,18 +3539,21 @@
                     "triggers": [
                         // Push triggers to prevent cheese
                         {
+                            "layer": 7,
                             "position": [97, 17, 2],
                             "scale": [5, 3, 3],
                             "flags": 8193, // Detect Player | Apply Force
                             "force": [0, -1000, 0]
                         },
                         {
+                            "layer": 7,
                             "position": [101.1, 29.0, 4.4],
                             "scale": [5, 20, 3],
                             "flags": 8193, // Detect Player | Apply Force
                             "force": [1000, 0, -500]
                         },
                         {
+                            "layer": 7,
                             "position": [120, 29, 4.4],
                             "scale": [5, 20, 3],
                             "flags": 8193, // Detect Player | Apply Force
@@ -3528,24 +3562,28 @@
                         // Resize and activate upper beetle triggers
                         {
                             "id": 131113,
+                            "layer": 7,
                             "active": true,
                             "position": [115.3, 65.7, 11.3],
                             "scale": [10, 10, 10]
                         },
                         {
                             "id": 131128,
+                            "layer": 7,
                             "active": true,
                             "position": [115.3, 65.7, 11.3],
                             "scale": [10, 10, 10]
                         },
                         {
                             "id": 131141,
+                            "layer": 7,
                             "active": true,
                             "position": [115.3, 65.7, 11.3],
                             "scale": [10, 10, 10]
                         },
                         {
                             "id": 131342,
+                            "layer": 7,
                             "active": true,
                             "position": [115.3, 65.7, 11.3],
                             "scale": [10, 10, 10]
@@ -3556,11 +3594,40 @@
                             "position": [69.7979, -35.6246, 20.9285]
                         }
                     ],
+                    "timers": [
+                        // For removing pickup when layer 5 is deactivated
+                        {
+                            "id": 10000034,
+                            "layer": 7,
+                            "time": 1,
+                            "startImmediately": true
+                        },
+                        {
+                            "id": 10000035,
+                            "time": 1.1,
+                            "startImmediately": true
+                        }
+                    ],
                     "addConnections": [
+                        // Unblock ruined shrine
                         {
                             "senderId": 131742, // Half-Pipe Pickup Relay
                             "state": "ZERO",
                             "targetId": 10000027, // Ruined Shrine Blocker
+                            "message": "DEACTIVATE"
+                        },
+                        // Auto-despawn pickup after 1.1s
+                        {
+                            "senderId": 10000035, // timer
+                            "state": "ZERO",
+                            "targetId": 131372, // half-pipe pickup
+                            "message": "DEACTIVATE"
+                        },
+                        // Cancel auto-despawn after 1.0s if layer 5 is active
+                        {
+                            "senderId": 10000034, // timer
+                            "state": "ZERO",
+                            "targetId": 10000035, // timer
                             "message": "DEACTIVATE"
                         }
                     ],
@@ -3716,6 +3783,32 @@
                             "health": 0.4
                         }
                     },
+                    "specialFunctions": [
+                        {
+                            "id": 10000030,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId":  3584142012, // Canyon Cavern
+                            "layerChangeLayerId": 3
+                        },
+                        {
+                            "id": 10000031,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId":  213865706, // Tallon Canyon
+                            "layerChangeLayerId": 3
+                        },
+                        {
+                            "id": 10000032,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId":  944775450, // Ruins Entrance
+                            "layerChangeLayerId": 5
+                        },
+                        {
+                            "id": 10000033,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId":  1716955838, // Main Plaza
+                            "layerChangeLayerId": 7
+                        }
+                    ],
                     "addConnections": [
                         // Start beetle spam on fight start trigger
                         {
@@ -3737,6 +3830,31 @@
                             "state": "ZERO",
                             "targetId": 590110, // Beetle Initial VariableTimer05 
                             "message": "RESET_AND_START"
+                        },
+                        // End beetle meme by deactivating layers
+                        {
+                            "senderId": 589860, // morph ball pickup
+                            "state": "ARRIVED",
+                            "targetId": 10000030,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 589860, // morph ball pickup
+                            "state": "ARRIVED",
+                            "targetId": 10000031,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 589860, // morph ball pickup
+                            "state": "ARRIVED",
+                            "targetId": 10000032,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 589860, // morph ball pickup
+                            "state": "ARRIVED",
+                            "targetId": 10000033,
+                            "message": "DECREMENT"
                         }
                     ],
                     "deleteIds": [
