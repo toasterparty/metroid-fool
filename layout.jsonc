@@ -41,7 +41,7 @@
         "enableIceTraps": true,
         "escapeSequenceCountsUp": false,
         "difficultyBehavior": "NormalOnly",
-        "startingRoom": "Chozo Ruins:Ruined Fountain Access",
+        "startingRoom": "Tallon Overworld:Landing Site",
         "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
         "startingItems": {
             "powerBeam": true,
@@ -3602,7 +3602,8 @@
                 "Ruined Shrine": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Morph Ball",
+                            "scanText": "w H a T   i S   t H i S,\nv A n i l L a ??$?!?!?1!"
                         },
                         {
                             "type": "Missile"
@@ -3620,7 +3621,134 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "triggers": [
+                        // Prevent trigger sequence break
+                        {
+                            "id": 590101,
+                            "position": [-58.0609, 2.3786, 3.0378],
+                            "scale": [10, 40, 50],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, 0, -600],
+                            "deactivateOnEnter": false
+                        },
+                        // Prevent standable cheese
+                        {
+                            "position": [-79.3, -15, 5.1],
+                            "scale": [3, 2, 3],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, 500, -500]
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 10000028,
+                            "time": 0.8,
+                            "looping": true,
+                            "startImmediately": true,
+                            "active": false
+                        }
+                    ],
+                    "counters": [
+                        // Increase number of enemies to spawn
+                        {
+                            "id": 589867,
+                            "maxValue": 50
+                        },
+                        // Spawn plated beetle early
+                        {
+                            "id": 589925,
+                            "maxValue": 50
+                        }
+                    ],
+                    "editObjs": {
+                        // Beetles
+                        "590136": {
+                            "scale": [3, 3, 3],
+                            "speed": 0.3,
+                            "detectionRange": 2,
+                            "health": 5
+                        },
+                        "590086": {
+                            "scale": [3, 3, 3],
+                            "speed": 0.3,
+                            "detectionRange": 2,
+                            "health": 5
+                        },
+                        "590138": {
+                            "scale": [0.3, 0.3, 0.3],
+                            "speed": 10,
+                            "damage": 0.3,
+                            "detectionRange": 2,
+                            "attackRange": 0.01,
+                            "health": 0.4
+                        },
+                        "590139": {
+                            "scale": [0.3, 0.3, 0.3],
+                            "speed": 10,
+                            "damage": 0.3,
+                            "detectionRange": 2,
+                            "attackRange": 0.01,
+                            "health": 0.4
+                        },
+                        "590140": { // This is the one that gets spawned a bunch
+                            "scale": [0.3, 0.3, 0.3],
+                            "speed": 10,
+                            "damage": 0.3,
+                            "detectionRange": 2,
+                            "attackRange": 0.01,
+                            "health": 0.4
+                        },
+                        "590141": {
+                            "scale": [0.3, 0.3, 0.3],
+                            "speed": 10,
+                            "damage": 0.3,
+                            "detectionRange": 2,
+                            "attackRange": 0.01,
+                            "health": 0.4
+                        },
+                        "590144": {
+                            "scale": [0.3, 0.3, 0.3],
+                            "speed": 10,
+                            "damage": 0.3,
+                            "detectionRange": 2,
+                            "attackRange": 0.01,
+                            "health": 0.4
+                        }
+                    },
+                    "addConnections": [
+                        // Start beetle spam on fight start trigger
+                        {
+                            "senderId": 590101, // fight start trigger
+                            "state": "ENTERED",
+                            "targetId": 10000028, // beetle spam timer
+                            "message": "ACTIVATE"
+                        },
+                        // Deactivate push trigger for blocking sequence break
+                        {
+                            "senderId": 10000028, // beetle spam timer
+                            "state": "ZERO",
+                            "targetId": 590101, // fight start trigger
+                            "message": "DEACTIVATE"
+                        },
+                        // Spam beetles
+                        {
+                            "senderId": 10000028, // beetle spam timer
+                            "state": "ZERO",
+                            "targetId": 590110, // Beetle Initial VariableTimer05 
+                            "message": "RESET_AND_START"
+                        }
+                    ],
+                    "deleteIds": [
+                        // Remove beetle teamwork to make things more chaotic
+                        590165,
+                        // Remove cutscenes
+                        600262,
+                        589879,
+                        600187,
+                        // Stop "mini-boss" beetles from regenerating
+                        590125, 589868, 589870, 589866, 589882, 589872, 589884
+                    ]
                 },
                 "Eyon Tunnel": {},
                 "Vault": {
