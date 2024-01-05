@@ -13,7 +13,7 @@
         "forceFusion": true
     },
     "gameConfig": {
-        "mainPlazaDoor": true,
+        "mainPlazaDoor": false,
         "backwardsFrigate": true,
         "backwardsLabs": true,
         "backwardsUpperMines": true,
@@ -41,7 +41,7 @@
         "enableIceTraps": true,
         "escapeSequenceCountsUp": false,
         "difficultyBehavior": "NormalOnly",
-        "startingRoom": "Chozo Ruins:Transport to Tallon Overworld North",
+        "startingRoom": "Chozo Ruins:Ruined Fountain Access",
         "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
         "startingItems": {
             "powerBeam": true,
@@ -3294,29 +3294,284 @@
                 },
                 "Main Plaza": {
                     "pickups": [
-                        {
+                        { // Half-Pipe
+                            "type": "Nothing",
+                            "model": "Nothing",
+                            "scanText": "Key to Ruined Shrine\n\nSeismic activity detected",
+                            "hudmemoText": "The path Ruined Shrine has been opened",
+                            "position": [115.3, 65.7, 11.3],
+                            "respawn": true
+                        },
+                        { // Grapple Ledge (Deleted)
                             "type": "Missile"
                         },
-                        {
+                        { // Tree
                             "type": "Missile"
                         },
-                        {
-                            "type": "Missile"
-                        },
-                        {
+                        { // Vault Ledge
                             "type": "Missile"
                         }
                     ],
                     "doors": {
                         "0": {
-                            "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "shieldType": "Ice Beam"
+                        },
+                        "1": {
+                            "shieldType": "Blue"
                         },
                         "2": {
-                            "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "shieldType": "Blue"
+                        },
+                        "3": {
+                            "shieldType": "Ice Beam"
                         }
-                    }
+                    },
+                    "editObjs": {
+                        /* Lower Beetles */
+                        // Beetles
+                        "131396": {
+                            "scale": [2, 2, 2],
+                            "attackRange": 0.001,
+                            "detectionRange": 3,
+                            "speed": 4,
+                            "damage": 1000,
+                            "vulnerability": "Flamethrower"
+                        },
+                        "131406": {
+                            "scale": [5, 5, 5],
+                            "attackRange": 0.001,
+                            "detectionRange": 3,
+                            "speed": 1,
+                            "damage": 1000,
+                            "vulnerability": "Flamethrower"
+                        },
+                        "131134": {
+                            "scale": [2, 2, 2],
+                            "attackRange": 0.001,
+                            "detectionRange": 3,
+                            "speed": 4,
+                            "damage": 1000,
+                            "vulnerability": "Flamethrower"
+                        },
+                        "131442": {
+                            "scale": [2, 2, 2],
+                            "attackRange": 0.001,
+                            "detectionRange": 3,
+                            "speed": 2,
+                            "damage": 1000,
+                            "vulnerability": "Flamethrower"
+                        },
+                        "131111": {
+                            "scale": [2, 2, 2],
+                            "attackRange": 0.001,
+                            "detectionRange": 3,
+                            "speed": 5,
+                            "damage": 1000,
+                            "vulnerability": "Flamethrower"
+                        },
+                        // Triggers
+                        "131389": {
+                            "position": [100, 0, 1.8],
+                            "scale": [70, 100, 1]
+                        },
+                        "131402": {
+                            "position": [100, 0, 1.8],
+                            "scale": [70, 100, 1]
+                        },
+                        "131117": {
+                            "position": [100, 0, 1.8],
+                            "scale": [70, 100, 1]
+                        },
+                        "131244": {
+                            "position": [100, 0, 1.8],
+                            "scale": [70, 100, 1]
+                        },
+                        "131107": {
+                            "position": [100, 0, 1.8],
+                            "scale": [70, 100, 1]
+                        },
+                        // Spawn Points
+                        "131394": {
+                            "position": [80, -17, 0]
+                        },
+                        "131404": {
+                            "position": [98, -17, 0]
+                        },
+                        "131131": {
+                            "position": [95, 3, 0]
+                        },
+                        "131248": {
+                            "position": [112, 8, 0.3]
+                        },
+                        "131109": {
+                            "position": [110, 26, 1.1]
+                        },
+
+                        /* Upper Beetles */
+                        // Beetles
+                        "131121": {
+                            "scale": [2, 2, 2],
+                            "attackRange": 0.001,
+                            "detectionRange": 3,
+                            "speed": 1.1,
+                            "damage": 1000,
+                            "vulnerability": "Flamethrower"
+                        },
+                        "131138": {
+                            "scale": [2, 2, 2],
+                            "attackRange": 0.001,
+                            "detectionRange": 3,
+                            "speed": 1,
+                            "damage": 1000,
+                            "vulnerability": "Flamethrower"
+                        },
+                        "131340": {
+                            "scale": [3, 3, 3],
+                            "attackRange": 0.001,
+                            "detectionRange": 3,
+                            "speed": 0.9,
+                            "damage": 1000,
+                            "vulnerability": "Flamethrower"
+                        },
+                        "131401": {
+                            "scale": [3, 3, 3],
+                            "attackRange": 0.001,
+                            "detectionRange": 3,
+                            "speed": 0.8,
+                            "damage": 1000,
+                            "vulnerability": "Flamethrower"
+                        },
+                        // Spawn Points
+                        "131344": {"position": [130, 53, 10.1]},
+                        "131132": {"position": [127, 77, 10]},
+                        "131338": {"position": [100, 75, 10.1]},
+                        "131118": {"position": [100, 57.5, 9.9]}
+                    },
+                    "blocks": [
+                        // Ruined Shrine Blocker
+                        {
+                            "id": 10000027,
+                            "position": [74.9579, 2.4026, 2.505],
+                            "scale": [1, 6, 5],
+                            "texture": "Sandstone"
+                        },
+                        // Floor posts
+                        {
+                            "position": [101, -23, 1],
+                            "scale": [0.5, 0.5, 3],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [93, -12, 1],
+                            "scale": [0.5, 0.5, 3],
+                            "texture": "Sandstone"
+                        },
+                        // Half-Pipe Dash Platforms
+                        {
+                            "position": [92.3, 17.1, 7.5],
+                            "scale": [10, 2, 0.5],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [122.7, 12.7, 4.5],
+                            "scale": [2, 10, 0.5],
+                            "texture": "Sandstone"
+                        },
+                        // Climb to Tree Knott
+                        {
+                            "position": [116.1, 2.5, 5.2],
+                            "scale": [0.5, 0.5, 0.5],
+                            "texture": "Snow"
+                        },
+                        {
+                            "position": [110.7, -6.9, 7.0],
+                            "scale": [0.5, 0.5, 0.5],
+                            "texture": "Snow"
+                        },
+                        // Bridge to Ruinted Fountain door
+                        {
+                            "position": [99, 10.8, 14.5],
+                            "scale": [5, 0.5, 0.5],
+                            "texture": "Snow"
+                        },
+                        {
+                            "position": [107, 5.5, 16.5],
+                            "scale": [5, 0.5, 0.5],
+                            "texture": "Snow"
+                        },
+                        {
+                            "position": [116.2, -0.8, 18.2],
+                            "scale": [5, 0.5, 0.5],
+                            "texture": "Snow"
+                        }
+                    ],
+                    "triggers": [
+                        // Push triggers to prevent cheese
+                        {
+                            "position": [97, 17, 2],
+                            "scale": [5, 3, 3],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, -1000, 0]
+                        },
+                        {
+                            "position": [101.1, 29.0, 4.4],
+                            "scale": [5, 20, 3],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [1000, 0, -500]
+                        },
+                        {
+                            "position": [120, 29, 4.4],
+                            "scale": [5, 20, 3],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [-1000, 0, -500]
+                        },
+                        // Resize and activate upper beetle triggers
+                        {
+                            "id": 131113,
+                            "active": true,
+                            "position": [115.3, 65.7, 11.3],
+                            "scale": [10, 10, 10]
+                        },
+                        {
+                            "id": 131128,
+                            "active": true,
+                            "position": [115.3, 65.7, 11.3],
+                            "scale": [10, 10, 10]
+                        },
+                        {
+                            "id": 131141,
+                            "active": true,
+                            "position": [115.3, 65.7, 11.3],
+                            "scale": [10, 10, 10]
+                        },
+                        {
+                            "id": 131342,
+                            "active": true,
+                            "position": [115.3, 65.7, 11.3],
+                            "scale": [10, 10, 10]
+                        }
+                    ],
+                    "lockOnPoints": [
+                        {
+                            "position": [69.7979, -35.6246, 20.9285]
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 131742, // Half-Pipe Pickup Relay
+                            "state": "ZERO",
+                            "targetId": 10000027, // Ruined Shrine Blocker
+                            "message": "DEACTIVATE"
+                        }
+                    ],
+                    "deleteIds": [
+                        // Delete the beetles' AI manager so they are more aggressive
+                        131387,
+                        // Delete the grapple ledge pickup
+                        131377,
+                        // Upper Beetle Battle always active
+                        131397, 131398
+                    ]
                 },
                 "Ruined Fountain Access": {
                     "doors": {
