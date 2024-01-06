@@ -2825,12 +2825,7 @@
                             "targetId": 10000018, // wall - door blocker
                             "message": "DEACTIVATE"
                         }
-                    ],
-                    "doors": {
-                        "3": {
-                            "shieldType": "Ice Beam"
-                        }
-                    }
+                    ]
                 },
                 "Temple Security Station": {
                     "doors": {
@@ -2905,7 +2900,20 @@
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "blastShieldType": "Missile"
+                        }
+                    },
+                    "editObjs": {
+                        "665527": { // bloodflower
+                            "position": [-576.0298, 344.1932, -5.4078],
+                            "rotation": [-95, 0, -180],
+                            "speed": 5.0,
+                            "scale": [0.5, 0.5, 0.5],
+                            "size": 0.7,
+                            "health": 100
+                        },
+                        "665530": { // bloodflower poison box
+                            "position": [-569.7404, 341.4416, -7.2687]
                         }
                     }
                 },
@@ -2955,7 +2963,7 @@
                         // Side A
                         {
                             "hudmemoText": "Thank you for supporting the local economy",
-                            "scanText": "Zoomer Ride - Two Dollas",
+                            "scanText": "Zoomer Ride - Two Dolla",
                             "type": "Missile",
                             "model": "Nothing",
                             "currIncrease": 0,
@@ -2967,7 +2975,7 @@
                         {
                             "id": 10000045,
                             "hudmemoText": "Thank you for supporting the local economy",
-                            "scanText": "Zoomer Ride - Two Dollas",
+                            "scanText": "Geemer Ride - Two Dolla",
                             "type": "Missile",
                             "model": "Nothing",
                             "currIncrease": 0,
@@ -2994,7 +3002,7 @@
                             "scale": [15, 60, 5],
                             "active": false
                         },
-                        // Climb out of Side A,
+                        // Climb out of Side A
                         {
                             "position": [-645.2, 330.2, -24.0],
                             "scale": [3, 0.5, 0.5]
@@ -3007,7 +3015,7 @@
                             "position": [-648.3, 324.1, -18.8],
                             "scale": [0.5, 3, 0.5]
                         },
-                        // Climb out of Side B,
+                        // Climb out of Side B
                         {
                             "position": [-661.6, 327.3, -30.7],
                             "scale": [3, 0.5, 0.5]
