@@ -2953,24 +2953,202 @@
                 "Root Cave": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "hudmemoText": "Thank you for supporting the local economy",
+                            "scanText": "Zoomer Rides - One Dolla",
+                            "type": "Missile",
+                            "model": "Nothing",
+                            "currIncrease": 0,
+                            "maxIncrease": -1,
+                            "position": [-639, 332.7, -46.0]
+                        },
+                        {
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "position": [-681.6, 326.2, 14.1]
                         }
                     ],
-                    "doors": {
-                        "1": {
-                            "shieldType": "Blue",
-                            "blastShieldType": "None"
-                        },
-                        "2": {
-                            "shieldType": "Blue",
-                            "blastShieldType": "None"
+                    "blocks": [
+                        {
+                            "position": [-655.2, 340.6, -16.6],
+                            "scale": [3, 70, 70]
                         }
-                    }
+                    ],
+                    "timers": [
+                        {
+                            "id": 10000037,
+                            "time": 0.02,
+                            "startImmediately": true
+                        }
+                    ],
+                    "specialFunctions": [
+                        {
+                            "id": 10000038,
+                            "type": "PlayerFollowLocator",
+                            "unknown1": "Ball_SDK",
+                            "active": false
+                        }
+                    ],
+                    "spawnPoints": [
+                        { // force morph spawn point
+                            "id": 10000041,
+                            "rotation": [0, 0, -90],
+                            "position": [-639, 332.7, -46.0],
+                            "morphed": true
+                        },
+                        { // end trip spawn point
+                            "id": 10000040,
+                            "rotation": [0, 0, -90],
+                            "position": [-666.6, 366.9, 21.5],
+                            "morphed": true
+                        }
+                    ],
+                    "waypoints": [
+                        {
+                            "id": 983221,
+                            "active": false,
+                            "position": [-639.1, 346.0, -41.5]
+                        },
+                        {
+                            "id": 983222,
+                            "position": [-648.4, 330.8, -45.0]
+                        },
+                        {
+                            "id": 983223,
+                            "position": [-647.8, 333.6, -34.7]
+                        },
+                        {
+                            "id": 983224,
+                            "position": [-635.9, 340.7, -32.4]
+                        },
+                        {
+                            "id": 983225,
+                            "position": [-634.4, 354.2, -10.8]
+                        },
+                        {
+                            "id": 983226,
+                            "position": [-642.2, 362.8, 25.6]
+                        },
+                        {
+                            "id": 983227,
+                            "position": [-666.6, 366.7, 21.5]
+                        },
+                        {
+                            "id": 983228
+                        }
+                    ],
+                    "triggers": [
+                        { // End trip trigger
+                            "id": 10000042,
+                            "active": false,
+                            "position": [-666.6, 366.7, 21.5],
+                            "scale": [3, 3, 3],
+                            "deactivateOnEnter": true
+                        }
+                    ],
+                    "hudmemos": [
+                        {
+                            "id": 10000043,
+                            "text": "&just=center;Come back soon!"
+                        }
+                    ],
+                    "editObjs": {
+                        "983053": { // default spawn
+                            "position": [-645, 332.7, -44.0],
+                            "rotation": [0, 0, -90]
+                        },
+                        "983220": { // Zoomer
+                            "position": [-636.7, 333.3, -47.1],
+                            "damage": 0.0001,
+                            "vulnerability": "Phazon",
+                            "speed": 1,
+                            "health": 0.01
+                        }
+                    },
+                    "addConnections": [
+                        // Setup zoomer carry
+                        {
+                            "senderId": 10000038, // special function
+                            "state": "PLAY",
+                            "targetId": 983220, // zoomer
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000037, // Auto-start timer
+                            "state": "ZERO",
+                            "message": "DEACTIVATE",
+                            "targetId": 983220 // zoomer
+                        },
+                        // Activate zoomer ride
+                        {
+                            "senderId": 983090, // pickup
+                            "state": "ARRIVED",
+                            "targetId": 983221, // waypoint
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 983090, // pickup
+                            "state": "ARRIVED",
+                            "targetId": 983220, // zoomer
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 983090, // pickup
+                            "state": "ARRIVED",
+                            "targetId": 983228, // waypoint
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 983090, // pickup
+                            "state": "ARRIVED",
+                            "targetId": 10000041, // spawn point
+                            "message": "SET_TO_ZERO" // morph the player
+                        },
+                        {
+                            "senderId": 983090, // pickup
+                            "state": "ARRIVED",
+                            "targetId": 10000038, // PlayerFollowLocator
+                            "message": "ACTIVATE" // start carrying
+                        },
+                        {
+                            "senderId": 983090, // pickup
+                            "state": "ARRIVED",
+                            "targetId": 10000042, // end trip trigger
+                            "message": "ACTIVATE"
+                        },
+                        // End Ride
+                        {
+                            "senderId": 10000042, // End Trip Trigger
+                            "state": "ENTERED",
+                            "targetId": 10000043, // hudmemo
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000042, // End Trip Trigger
+                            "state": "ENTERED",
+                            "targetId": 10000038, // PlayerFollowLocator
+                            "message": "DEACTIVATE" // stop carrying
+                        },
+                        {
+                            "senderId": 10000042, // End Trip Trigger
+                            "state": "ENTERED",
+                            "targetId": 10000040, // spawn point
+                            "message": "SET_TO_ZERO" // reposition
+                        }
+                    ],
+                    "deleteIds": [
+                        // Beetles
+                        983127, 983128, 983129, 983130, 983131, 983145, 983199, 983274, 983273,
+                        // Bloodflower
+                        983474, 983477,
+                        // Geemer
+                        983271
+                    ]
                 },
                 "Artifact Temple": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Energy Tank"
                         }
                     ]
                 },
