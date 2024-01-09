@@ -2,15 +2,14 @@
 
 ## Elevators
 
-Tallon Canyon -> Main Plaza
-Root Cave -> Workstation [Mid Game]
-Sun Tower -> PPC [Late Game]
-Frigate Crash Site -> Lava Lake
-Monitor Station -> Phendrana Shorelines
-Quarantine Cave -> Twin Fires
-Workstation -> Main Quarry
-
-GTH -> Reflecting Pool (x2)
+- Tallon Canyon -> Main Plaza
+- Root Cave -> Workstation [Mid Game]
+- Sun Tower -> PPC [Late Game]
+- Frigate Crash Site -> Lava Lake
+- Monitor Station -> Phendrana Shorelines
+- Quarantine Cave -> Twin Fires
+- Workstation -> Main Quarry
+- GTH -> Reflecting Pool (x2)
 
 ## Route
 
@@ -21,73 +20,72 @@ Every time an artifact is stolen, something weird happens.
 
 ### Start
 
-SJF Jumpscare
-Tallon -> Chozo
-Beetle Battles
-**Ruined Shrine - Morph Ball**
+- SJF Jumpscare
+- Tallon -> Chozo
+- Beetle Battles
+- **Ruined Shrine - Morph Ball**
 
 ### Explore Early Game
 
-Upper Ruined Shrine - ???
-**Tower Chamber - Lifegiver**
-Artifact Temple - Energy Tank
+- Upper Ruined Shrine - ???
+- **Tower Chamber - Lifegiver**
+- Artifact Temple - Energy Tank
     - Hints are blocked by the ridley fight forcefield
-FCS - ???
-Landing Site - ???
-Water Pool Track
-**Water Pool - Missile Launcher**
-Ruined Gallery (Wall) - ???
-Unlock Hive Totem fight (unwinnable without grapple)
-Root Cave - Energy Tank
+- FCS - ???
+- Landing Site - ???
+- Water Pool Track
+- **Water Pool - Missile Launcher**
+- Ruined Gallery (Wall) - ???
+- Unlock Hive Totem fight (unwinnable without grapple)
+- Root Cave - Energy Tank
     - Magmoor Workstation is too hot
-Transport Tunnel B - Missile Expansion (5)
-Overgrown Cavern - Missile Expansion (5)
+- Transport Tunnel B - Missile Expansion (5)
+- Overgrown Cavern - Missile Expansion (5)
 
 ### Fight Requirements
 
 #### Grapple
 
-FCS -> Lava Lake
-Lake Tunnel heat run "against wind"
-
-**Lake Tunnel - Grapple Beam**
-FCS - Missile Expansion (5)
-Hive Mecha fight
-**Hive Totem - Energy Tank**
-Sun Tower -> PPC
+- FCS -> Lava Lake
+- Lake Tunnel heat run "against wind"
+- **Lake Tunnel - Grapple Beam**
+- FCS - Missile Expansion (5)
+- Hive Mecha fight
+- **Hive Totem - Energy Tank**
+- Sun Tower -> PPC
     - Save station
     - Deadly Phazon
 
 #### Bombs
 
-Arboretum Scan Puzzle
-Gathering Hall Scan Puzzle
-Watery Hall Scan Puzzle
-**Dynamo - Morph Ball Bomb**
-Energy Core Access - Energy Tank (inside tunnel)
-Energy Core blocked
+- Arboretum Scan Puzzle
+- Gathering Hall Scan Puzzle
+- Watery Hall Scan Puzzle
+- **Dynamo - Morph Ball Bomb**
+- Energy Core Access - Energy Tank (inside tunnel)
+- Energy Core blocked
 
 ### Flaahgra
 
-Sun Tower Bomb Jump Puzzle
-Flaahgra fight
-**Sunchamber - Varia Suit**
-Early Wild
-**Sunchamber - Wild** (But there are no ghosts)
+- Sun Tower Bomb Jump Puzzle
+- Flaahgra fight
+- **Sunchamber - Varia Suit**
+- Early Wild
+- **Sunchamber - Wild** (But there are no ghosts)
 
 ### Journey to Phendrana
 
-FCS -> Lava Lake
+- FCS -> Lava Lake
     - Lava Lake item is "missing"
     - Storage Cavern blocked by beam combo
-Triclops Pit "windy grapple" climb
-**Triclops Pit - Nature**
-Monitor Station windy climb
+- Triclops Pit "windy grapple" climb
+- **Triclops Pit - Nature**
+- Monitor Station windy climb
 
 ### Early Phen
 
-Monitor Station -> Phendrana Shorelines
-Elevator Save Station
+- Monitor Station -> Phendrana Shorelines
+- Elevator Save Station
     - Early phen is all fucked up and confusing full of PoNR and room rando connections. Might even mix some far phen in there if I feel like it
     - Water level in shorelines is raised to prevent access to any door except for save station
     - Middle Shorelines Door Lock doesn't release on scan, instead it hints that the scan is found elsewhere
@@ -139,17 +137,17 @@ Phendrana's Edge (False Wall) -> Security Cave
 
 ### Labs False Start
 
-Phendrana's Edge (Hidden Door) -> Courtyard Entryway -> Ruined Courtyard (Lower)
-Ruined Courtyard Puzzle
-Ruined Courtyard (Labs Door) -> Save Station B
-Ruined Courtyard (Quarantine Door) -> Specimen Storage
+- Phendrana's Edge (Hidden Door) -> Courtyard Entryway -> Ruined Courtyard (Lower)
+- Ruined Courtyard Puzzle
+- Ruined Courtyard (Labs Door) -> Save Station B
+- Ruined Courtyard (Quarantine Door) -> Specimen Storage
     - Need Supers and Wave to proceed
 
 ### Backtrack
 
-**??? - Gravity Suit**
-**Tallon Canyon - Super Missile**
-**??? - Wave Beam**
+- **??? - Gravity Suit**
+- **Tallon Canyon - Super Missile**
+- **??? - Wave Beam**
 
 ### Labs
 
@@ -157,8 +155,8 @@ Ruined Courtyard (Quarantine Door) -> Specimen Storage
 
 ### Thardus
 
-**Quarantine Cave - Spider**
-Spider track from hell
+- **Quarantine Cave - Spider**
+- Spider track from hell
 
 ### Mines / Late Chozo
 
@@ -166,33 +164,33 @@ Spider track from hell
 
 ### Undecided
 
-Space Jump
-Ice Beam
-Plasma Beam
-Power Bombs
-Wavebuster
-Ice Spreader
-Flamethrower
+- Space Jump
+- Ice Beam
+- Plasma Beam
+- Power Bombs
+- Wavebuster
+- Ice Spreader
+- Flamethrower
 
 ### Phazon Frigate
 
-Crashed Frigate Phazon "heatrun"
-**Reactor Core - Glorgsmire Gumpybottom's Keyring**
+- Crashed Frigate Phazon "heatrun"
+- **Reactor Core - Glorgsmire Gumpybottom's Keyring**
 
 ### Farce Reveal
 
-**Artifact Temple - Phazon Suit**
-Gimmick revealed plainly - The player must return any and all artifacts
+- **Artifact Temple - Phazon Suit**
+- Gimmick revealed plainly - The player must return any and all artifacts
 
 ### Bosses
 
-**Phazon Core - Thermal Visor**
-**Phazon Core - X-Ray Visor**
-Exo
-Essence
-Escape Sequence
-Ridley
-Credits
+- **Phazon Core - Thermal Visor**
+- **Phazon Core - X-Ray Visor**
+- Exo
+- Essence
+- Escape Sequence
+- Ridley
+- Credits
 
 ## Lore
 
@@ -206,4 +204,4 @@ Credits
 
 ### Artifact Temple
 
-*TBD - Something that foreshadows that the ghosts are happy with where the artifact locations.*
+*TBD - Something that foreshadows that the ghosts are happy with where the artifacts are located and they don't need collecting.*
