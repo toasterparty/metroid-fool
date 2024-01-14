@@ -95,7 +95,7 @@ Every time an artifact is stolen, something weird happens.
 Elevator -> Shorelines Entrance -> Shorelines (Entrance)
 Shorelines (Lower) -> Quarantine Access -> IRW (North)
 IRW (West) -> Plaza Walkway -> IRE (Lower) -> Ice Ruins Access -> Hunter Cave (Lower)
-Hunter Cave (Lower) -> Lower Edge Tunnel -> Gravity Chamber (Upper) -> Canyon Entryway -> Phendrana's Edge (Tunnel)
+Hunter Cave (Lower) -> Upper Edge Tunnel -> Gravity Chamber (Upper) -> Canyon Entryway -> Phendrana's Edge (Tunnel)
 Phendrana's Edge (Bottom) -> Frost Cave Access -> Phendrana Canyon
 ```
 
@@ -103,8 +103,8 @@ Phendrana's Edge (Bottom) -> Frost Cave Access -> Phendrana Canyon
 
 ```
 Phendrana's Edge (Middle) -> Lake Tunnel -> Hunter Cave (Upper)
-Hunter Cave (Upper) -> Upper Edge Tunnel -> Frost Cave (Lower)
-Frost Cave (Save) -> Chapel Tunnel -> Chozo Ice Temple (East)
+Hunter Cave (Upper) -> Temple Entryway -> Frost Cave (Lower)
+Frost Cave (Save) -> Lower Edge Tunnel -> Chozo Ice Temple (East)
 ```
 
 **Chozo Ice Temple - Bomb Slot Activated**
@@ -112,23 +112,20 @@ Frost Cave (Save) -> Chapel Tunnel -> Chozo Ice Temple (East)
 Shortcut Opened:
 
 ```
-IRW (South) -> Temple Entryway -> Chozo Ice Temple (West) -> Chapel Tunnel -> Frost Cave (Save)
+IRW (South) -> Chapel Tunnel -> Chozo Ice Temple (West) -> Lower Edge Tunnel -> Frost Cave (Save)
 ```
 
 ```
 Frost Cave (Upper) -> Hunter Cave Access -> Shorelines (Upper)
 Shorelines (Upper) -> Save Station C
-Shorelines (Temple) -> Storage Cave
+Shorelines (Temple) -> Security Cave
 ```
 
-**Storage Cave - Shoreline Door Unlocked**
+**Security Cave - Shoreline Door Unlocked**
 
 ```
 Shorelines (Locked) -> Chamber Access -> North Quarantine Tunnel -> Chapel of the Elders
 ```
-
-#### UNUSED
-Phendrana's Edge (False Wall) -> Security Cave
 
 ### Sheegoth Fight
     - Force morphed for the whole fight
@@ -137,21 +134,38 @@ Phendrana's Edge (False Wall) -> Security Cave
 
 ### Labs False Start
 
-- Phendrana's Edge (Hidden Door) -> Courtyard Entryway -> Ruined Courtyard (Lower)
-- Ruined Courtyard Puzzle
-- Ruined Courtyard (Labs Door) -> Save Station B
-- Ruined Courtyard (Quarantine Door) -> Specimen Storage
-    - Need Supers and Wave to proceed
+```
+Phendrana's Edge (Hidden Door) -> Courtyard Entryway -> Ruined Courtyard (Lower)
+```
+
+Ruined Courtyard puzzle but the water levels are inverted and the labs door is unpowered instead of Quarantine Access
+**Ruined Courtyard - E-Tank**
+
+```
+Ruined Courtyard (Quarantine Door) -> Save Station B
+Ruined Courtyard (Labs) -> Specimen Storage
+```
+
+*Need Supers and Wave to proceed into labs*
 
 ### Backtrack
 
 - **??? - Gravity Suit**
-- **Tallon Canyon - Super Missile**
+- **??? - Super Missile**
 - **??? - Wave Beam**
 
 ### Labs
 
+*All door connections in labs is 100% vanlla*
+
 ???
+
+### Labs -> Thardus
+
+Frozen Pike (Hunter) -> Storage Cave
+**Storage Cave - Spirit**
+Frozen Pike (Frost) -> Security Cave
+Quarantine Cave Elevator - Save Station
 
 ### Thardus
 

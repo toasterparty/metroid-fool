@@ -105,9 +105,9 @@
         }
     },
     "tweaks": {
-        "grappleBeamSpeed": 0.1,
+        "grappleBeamSpeed": 1.2,
         "iceBreakTimeout": 999,
-        "iceBreakJumpCount": 15
+        "iceBreakJumpCount": 20
     },
     "strg": {
         "3230660781": ["Water Pool"]
@@ -224,13 +224,37 @@
                         }
                     ],
                     "doors": {
+                        "1": {
+                            "destination": {
+                                "roomName": "Security Cave",
+                                "dockNum": 0
+                            }
+                        },
                         "2": {
+                            "blastShieldType": "Missile",
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "destination": {
+                                "roomName": "Quarantine Access",
+                                "dockNum": 0
+                            }
+                        },
+                        "3": {
+                            "destination": {
+                                "roomName": "Save Station C",
+                                "dockNum": 0
+                            }
+                        },
+                        "4": {
+                            "destination": {
+                                "roomName": "Hunter Cave Access",
+                                "dockNum": 1
+                            }
                         },
                         "5": {
-                            "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "destination": {
+                                "roomName": "Chamber Access",
+                                "dockNum": 1
+                            }
                         }
                     }
                 },
@@ -238,7 +262,19 @@
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "blastShieldType": "None",
+                            "destination": {
+                                "roomName": "Hunter Cave",
+                                "dockNum": 0
+                            }
+                        },
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None",
+                            "destination": {
+                                "roomName": "Frost Cave",
+                                "dockNum": 2
+                            }
                         }
                     }
                 },
@@ -246,21 +282,48 @@
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "blastShieldType": "None",
+                            "destination": {
+                                "roomName": "Ruined Courtyard",
+                                "dockNum": 3
+                            }
                         }
                     }
                 },
                 "Ruins Entryway": {},
-                "Plaza Walkway": {},
+                "Plaza Walkway": {
+                    "layers": {
+                        "1": true, // drones
+                        "4": true // unused animation
+                    },
+                    "doors": {
+                        "0": {
+                            "destination": {
+                                "roomName": "Ice Ruins East",
+                                "dockNum": 0
+                            }
+                        },
+                        "1": {
+                            "destination": {
+                                "roomName": "Ice Ruins West",
+                                "dockNum": 2
+                            }
+                        }
+                    }
+                },
                 "Ice Ruins Access": {
                     "doors": {
                         "0": {
-                            "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "destination": {
+                                "roomName": "Hunter Cave",
+                                "dockNum": 1
+                            }
                         },
                         "1": {
-                            "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "destination": {
+                                "roomName": "Ice Ruins East",
+                                "dockNum": 1
+                            }
                         }
                     }
                 },
@@ -272,29 +335,44 @@
                     ],
                     "doors": {
                         "0": {
-                            "shieldType": "Blue",
-                            "blastShieldType": "None"
-                        },
-                        "1": {
-                            "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "destination": {
+                                "roomName": "Lower Edge Tunnel",
+                                "dockNum": 0
+                            }
                         }
+                        // Top door is vanilla
                     }
                 },
                 "Ice Ruins West": {
+                    "layers": {
+                        "1": true // adult sheegoth
+                    },
                     "pickups": [
                         {
                             "type": "Missile"
                         }
                     ],
                     "doors": {
+                        "0": {
+                            "destination": {
+                                "roomName": "Quarantine Access",
+                                "dockNum": 1
+                            }
+                        },
                         "1": {
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "destination": {
+                                "roomName": "Chapel Tunnel",
+                                "dockNum": 0
+                            }
                         },
                         "2": {
+                            "blastShieldType": "None",
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "destination": {
+                                "roomName": "Plaza Walkway",
+                                "dockNum": 1
+                            }
                         }
                     }
                 },
@@ -309,8 +387,16 @@
                     ],
                     "doors": {
                         "0": {
-                            "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "destination": {
+                                "roomName": "Plaza Walkway",
+                                "dockNum": 0
+                            }
+                        },
+                        "1": {
+                            "destination": {
+                                "roomName": "Ice Ruins Access",
+                                "dockNum": 1
+                            }
                         }
                     }
                 },
@@ -318,27 +404,44 @@
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
-                        },
-                        "1": {
-                            "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "blastShieldType": "None",
+                            "destination": {
+                                "roomName": "Ice Ruins West",
+                                "dockNum": 1
+                            }
                         }
+                        // Vanilla connection to Chozo Ice Temple
                     }
                 },
                 "Courtyard Entryway": {
                     "doors": {
                         "1": {
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "blastShieldType": "None",
+                            "destination": {
+                                "roomName": "Phendrana's Edge",
+                                "dockNum": 2
+                            }
                         }
                     }
                 },
                 "Canyon Entryway": {
                     "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None",
+                            "destination": {
+                                "roomName": "Phendrana's Edge",
+                                "dockNum": 3
+                            }
+                        },
                         "1": {
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "blastShieldType": "None",
+                            "destination": {
+                                "roomName": "Gravity Chamber",
+                                "dockNum": 0
+                            }
                         }
                     }
                 },
@@ -351,7 +454,11 @@
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "blastShieldType": "None",
+                            "destination": {
+                                "roomName": "North Quarantine Tunnel",
+                                "dockNum": 1
+                            }
                         }
                     }
                 },
@@ -376,7 +483,11 @@
                         },
                         "3": {
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "blastShieldType": "None",
+                            "destination": {
+                                "roomName": "Save Station B",
+                                "dockNum": 0
+                            }
                         }
                     }
                 },
@@ -385,7 +496,15 @@
                         {
                             "type": "Missile"
                         }
-                    ]
+                    ],
+                    "doors": {
+                        "0": {
+                            "destination": {
+                                "roomName": "Frost Cave Access",
+                                "dockNum": 1
+                            }
+                        }
+                    }
                 },
                 "Save Station A": {
                     "doors": {
@@ -408,10 +527,21 @@
                     }
                 },
                 "Quarantine Access": {
+                    "layers": {
+                        "2": true // drones
+                    },
                     "doors": {
                         "0": {
-                            "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "destination": {
+                                "roomName": "Phendrana Shorelines",
+                                "dockNum": 2
+                            }
+                        },
+                        "1": {
+                            "destination": {
+                                "roomName": "Ice Ruins West",
+                                "dockNum": 0
+                            }
                         }
                     }
                 },
@@ -431,11 +561,19 @@
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "blastShieldType": "None",
+                            "destination": {
+                                "roomName": "Chamber Access",
+                                "dockNum": 0
+                            }
                         },
                         "1": {
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "blastShieldType": "None",
+                            "destination": {
+                                "roomName": "Chapel of the Elders",
+                                "dockNum": 0
+                            }
                         }
                     }
                 },
@@ -591,12 +729,16 @@
                             "blastShieldType": "None"
                         },
                         "2": {
-                            "shieldType": "Blue",
+                            "shieldType": "Disabled",
                             "blastShieldType": "None"
                         },
                         "3": {
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "blastShieldType": "None",
+                            "destination": {
+                                "roomName": "Storage Cave",
+                                "dockNum": 0
+                            }
                         }
                     }
                 },
@@ -628,11 +770,19 @@
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "blastShieldType": "None",
+                            "destination": {
+                                "roomName": "Phendrana's Edge",
+                                "dockNum": 0
+                            }
                         },
                         "1": {
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "blastShieldType": "None",
+                            "destination": {
+                                "roomName": "Phendrana Canyon",
+                                "dockNum": 0
+                            }
                         }
                     }
                 },
@@ -640,11 +790,19 @@
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "blastShieldType": "None",
+                            "destination": {
+                                "roomName": "Frost Cave",
+                                "dockNum": 1
+                            }
                         },
                         "1": {
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "blastShieldType": "None",
+                            "destination": {
+                                "roomName": "Phendrana Shorelines",
+                                "dockNum": 4
+                            }
                         }
                     }
                 },
@@ -691,15 +849,27 @@
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "blastShieldType": "None",
+                            "destination": {
+                                "roomName": "Lower Edge Tunnel",
+                                "dockNum": 1
+                            }
                         },
                         "1": {
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "blastShieldType": "None",
+                            "destination": {
+                                "roomName": "Hunter Cave Access",
+                                "dockNum": 0
+                            }
                         },
                         "2": {
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "blastShieldType": "None",
+                            "destination": {
+                                "roomName": "Temple Entryway",
+                                "dockNum": 1
+                            }
                         }
                     }
                 },
@@ -707,19 +877,35 @@
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "blastShieldType": "None",
+                            "destination": {
+                                "roomName": "Temple Entryway",
+                                "dockNum": 0
+                            }
                         },
                         "1": {
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "blastShieldType": "None",
+                            "destination": {
+                                "roomName": "Ice Ruins Access",
+                                "dockNum": 0
+                            }
                         },
                         "2": {
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "blastShieldType": "None",
+                            "destination": {
+                                "roomName": "Lake Tunnel",
+                                "dockNum": 1
+                            }
                         },
                         "3": {
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "blastShieldType": "None",
+                            "destination": {
+                                "roomName": "Upper Edge Tunnel",
+                                "dockNum": 0
+                            }
                         }
                     }
                 },
@@ -751,7 +937,31 @@
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "blastShieldType": "None",
+                            "destination": {
+                                "roomName": "Phendrana Shorelines",
+                                "dockNum": 3
+                            }
+                        }
+                    }
+                },
+                "Lower Edge Tunnel": {
+                    "doors": {
+                        "0": {
+                            "blastShieldType": "None",
+                            "shieldType": "Blue",
+                            "destination": {
+                                "roomName": "Chozo Ice Temple",
+                                "dockNum": 0
+                            }
+                        },
+                        "1": {
+                            "blastShieldType": "None",
+                            "shieldType": "Blue",
+                            "destination": {
+                                "roomName": "Frost Cave",
+                                "dockNum": 0
+                            }
                         }
                     }
                 },
@@ -759,23 +969,19 @@
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "blastShieldType": "None",
+                            "destination": {
+                                "roomName": "Hunter Cave",
+                                "dockNum": 3
+                            }
                         },
                         "1": {
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
-                        }
-                    }
-                },
-                "Lower Edge Tunnel": {
-                    "doors": {
-                        "0": {
-                            "shieldType": "Blue",
-                            "blastShieldType": "None"
-                        },
-                        "1": {
-                            "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "blastShieldType": "None",
+                            "destination": {
+                                "roomName": "Gravity Chamber",
+                                "dockNum": 1
+                            }
                         }
                     }
                 },
@@ -783,11 +989,19 @@
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "blastShieldType": "None",
+                            "destination": {
+                                "roomName": "North Quarantine Tunnel",
+                                "dockNum": 0
+                            }
                         },
                         "1": {
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "blastShieldType": "None",
+                            "destination": {
+                                "roomName": "Phendrana Shorelines",
+                                "dockNum": 5
+                            }
                         }
                     }
                 },
@@ -795,11 +1009,19 @@
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
-                            "blastShieldType": "Missile"
+                            "blastShieldType": "None",
+                            "destination": {
+                                "roomName": "Phendrana's Edge",
+                                "dockNum": 1
+                            }
                         },
                         "1": {
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "blastShieldType": "None",
+                            "destination": {
+                                "roomName": "Hunter Cave",
+                                "dockNum": 2
+                            }
                         }
                     }
                 },
@@ -839,17 +1061,67 @@
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "blastShieldType": "None",
+                            "destination": {
+                                "roomName": "Frost Cave Access",
+                                "dockNum": 0
+                            }
                         },
                         "1": {
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "blastShieldType": "None",
+                            "destination": {
+                                "roomName": "Lake Tunnel",
+                                "dockNum": 0
+                            }
                         },
                         "2": {
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "blastShieldType": "None",
+                            "destination": {
+                                "roomName": "Courtyard Entryway",
+                                "dockNum": 1
                         }
-                    }
+                        },
+                        "3": {
+                            "destination": {
+                                "roomName": "Canyon Entryway",
+                                "dockNum": 0
+                            }
+                        }
+                    },
+                    "triggers": [
+                        {
+                            "id": 10000055,
+                            "position": [162, -1437, 86],
+                            "scale": [7, 23, 3],
+                            "flags": 12289, // Detect Player | Detect Morphed Player | Apply Force
+                            "force": [0, 150, 0],
+                            "deactivateOnExit": true
+                        },
+                        {
+                            "id": 10000056,
+                            "position": [161, -1414, 88],
+                            "scale": [20, 20, 5],
+                            "flags": 4097 //  Detect Player | Detect Morphed Player
+                        }
+                    ],
+                    "editObjs": {
+                        "3407923": {
+                            "position": [168, -1408, 49]
+                        },
+                        "3407928": {
+                            "position": [166, -1386, 96]
+                        }
+                    },
+                    "addConnections": [
+                        {
+                            "senderId": 10000056,
+                            "state": "ENTERED",
+                            "targetId": 10000055,
+                            "message": "DEACTIVATE"
+                        }
+                    ]
                 },
                 "Gravity Chamber": {
                     "pickups": [
@@ -863,11 +1135,19 @@
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "blastShieldType": "None",
+                            "destination": {
+                                "roomName": "Canyon Entryway",
+                                "dockNum": 1
+                            }
                         },
                         "1": {
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "blastShieldType": "None",
+                            "destination": {
+                                "roomName": "Upper Edge Tunnel",
+                                "dockNum": 1
+                            }
                         }
                     }
                 },
@@ -880,7 +1160,11 @@
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "blastShieldType": "None",
+                            "destination": {
+                                "roomName": "Frozen Pike",
+                                "dockNum": 3
+                            }
                         }
                     }
                 },
@@ -889,7 +1173,15 @@
                         {
                             "type": "Missile"
                         }
-                    ]
+                    ],
+                    "doors": {
+                        "0": {
+                            "destination": {
+                                "roomName": "Phendrana Shorelines",
+                                "dockNum": 1
+                            }
+                        }
+                    }
                 }
             }
         },
