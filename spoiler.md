@@ -56,6 +56,8 @@ Every time an artifact is stolen, something weird happens.
     - Save station
     - Deadly Phazon
 
+*Passing through vault requires boost*
+
 #### Bombs
 
 - Arboretum Scan Puzzle
@@ -150,13 +152,14 @@ Ruined Courtyard (Labs) -> Specimen Storage
 
 ### Backtrack
 
-- **??? - Gravity Suit**
-- **??? - Super Missile**
-- **??? - Wave Beam**
+- **Geothermal Core - Wave Beam**
+*Plasma Processing requires Spider*
+Vault Puzzle
+- **Main Plaza (Vault Ledge) - Super Missile**
 
 ### Labs
 
-*All door connections in labs is 100% vanlla*
+*Room connectivity is vanlla for all of labs*
 
 ???
 

@@ -217,10 +217,10 @@
                 "Phendrana Shorelines": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         },
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -330,7 +330,7 @@
                 "Chozo Ice Temple": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -349,7 +349,7 @@
                     },
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -379,10 +379,10 @@
                 "Ice Ruins East": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         },
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -448,7 +448,7 @@
                 "Chapel of the Elders": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -465,7 +465,7 @@
                 "Ruined Courtyard": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -494,7 +494,7 @@
                 "Phendrana Canyon": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -593,7 +593,7 @@
                 "Quarantine Cave": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -610,7 +610,7 @@
                 "Research Lab Hydra": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -639,7 +639,7 @@
                 "Quarantine Monitor": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ]
                 },
@@ -670,7 +670,7 @@
                 "Observatory": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -691,7 +691,7 @@
                 "Transport Access": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -809,7 +809,7 @@
                 "Control Tower": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -826,7 +826,7 @@
                 "Research Core": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -843,7 +843,7 @@
                 "Frost Cave": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -1040,10 +1040,10 @@
                 "Research Lab Aether": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         },
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -1126,10 +1126,10 @@
                 "Gravity Chamber": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         },
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -1154,7 +1154,7 @@
                 "Storage Cave": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -1171,7 +1171,7 @@
                 "Security Cave": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -1261,7 +1261,7 @@
                 "Lava Lake": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -1282,7 +1282,7 @@
                 "Triclops Pit": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -1311,7 +1311,7 @@
                 "Storage Cavern": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -1336,14 +1336,14 @@
                 "Transport Tunnel A": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ]
                 },
                 "Warrior Shrine": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -1356,7 +1356,7 @@
                 "Shore Tunnel": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -1370,10 +1370,10 @@
                 "Fiery Shores": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         },
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -1417,7 +1417,7 @@
                 "Plasma Processing": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -1442,7 +1442,7 @@
                 "Magmoor Workstation": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -1539,7 +1539,7 @@
                 "Main Quarry": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -1584,7 +1584,7 @@
                 "Security Access A": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -1649,7 +1649,7 @@
                 "Storage Depot B": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -1686,7 +1686,7 @@
                 "Storage Depot A": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -1699,10 +1699,10 @@
                 "Elite Research": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         },
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -1731,7 +1731,7 @@
                 "Elite Control Access": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -1776,7 +1776,7 @@
                 "Ventilation Shaft": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -1793,7 +1793,7 @@
                 "Phazon Processing Center": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -1838,7 +1838,7 @@
                 "Processing Center Access": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -1876,7 +1876,7 @@
                 "Elite Quarters": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -1893,7 +1893,7 @@
                 "Central Dynamo": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -1946,7 +1946,7 @@
                 "Metroid Quarantine B": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -1967,7 +1967,7 @@
                 "Metroid Quarantine A": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -2016,7 +2016,7 @@
                 "Fungal Hall B": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -2057,7 +2057,7 @@
                 "Phazon Mining Tunnel": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -2074,7 +2074,7 @@
                 "Fungal Hall Access": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -2111,7 +2111,7 @@
                 "Landing Site": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -3130,7 +3130,7 @@
                 "Frigate Crash Site": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -3235,7 +3235,7 @@
                 "Overgrown Cavern": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -3635,7 +3635,7 @@
                 "Transport Tunnel B": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -3648,7 +3648,7 @@
                 "Arbor Chamber": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -3681,7 +3681,7 @@
                 "Cargo Freight Lift to Deck Gamma": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ]
                 },
@@ -3690,7 +3690,7 @@
                 "Biohazard Containment": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -3739,7 +3739,7 @@
                 "Hydro Access Tunnel": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ]
                 },
@@ -3762,7 +3762,7 @@
                 "Great Tree Chamber": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ]
                 },
@@ -3781,7 +3781,7 @@
                 "Life Grove Tunnel": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -3814,10 +3814,10 @@
                 "Life Grove": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         },
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ]
                 },
@@ -3988,10 +3988,17 @@
                             "shieldType": "Blue"
                         },
                         "3": {
-                            "shieldType": "Missile"
+                            "shieldType": "Blue",
+                            "blastShieldType": "Missile"
                         }
                     },
                     "editObjs": {
+                        "131877": { // door open trigger
+                            "scale": [25, 15, 10]
+                        },
+                        "131208": { // ruined shrine load
+                            "scale": [40, 35, 30]
+                        },
                         /* Lower Beetles */
                         // Beetles
                         "131396": {
@@ -4083,7 +4090,7 @@
                             "scale": [2, 2, 2],
                             "attackRange": 0.001,
                             "detectionRange": 3,
-                            "speed": 1.1,
+                            "speed": 1.4,
                             "damage": 1000,
                             "vulnerability": "Flamethrower"
                         },
@@ -4091,7 +4098,7 @@
                             "scale": [2, 2, 2],
                             "attackRange": 0.001,
                             "detectionRange": 3,
-                            "speed": 1,
+                            "speed": 1.3,
                             "damage": 1000,
                             "vulnerability": "Flamethrower"
                         },
@@ -4099,7 +4106,7 @@
                             "scale": [3, 3, 3],
                             "attackRange": 0.001,
                             "detectionRange": 3,
-                            "speed": 0.9,
+                            "speed": 1.1,
                             "damage": 1000,
                             "vulnerability": "Flamethrower"
                         },
@@ -4107,7 +4114,7 @@
                             "scale": [3, 3, 3],
                             "attackRange": 0.001,
                             "detectionRange": 3,
-                            "speed": 0.8,
+                            "speed": 1.2,
                             "damage": 1000,
                             "vulnerability": "Flamethrower"
                         },
@@ -4125,6 +4132,32 @@
                             "position": [74.9579, 2.4026, 2.505],
                             "scale": [1, 6, 5],
                             "texture": "Sandstone"
+                        },
+                        // Half-pipe steps blockers
+                        {
+                            "position": [110.5, 39.3, 9.8],
+                            "scale": [11, 0.5, 0.5]
+                        },
+                        {
+                            "position": [110.5, 39.3, 7.55],
+                            "scale": [11, 0.5, 0.5]
+                        },
+                        {
+                            "position": [110.5, 39.3, 5.3],
+                            "scale": [11, 0.5, 0.5]
+                        },                        
+                        // Upper steps blockers
+                        {
+                            "position": [98.7, 84.1, 21],
+                            "scale": [0.5, 15, 0.5]
+                        },
+                        {
+                            "position": [98.7, 84.1, 23.5],
+                            "scale": [0.5, 15, 0.5]
+                        },
+                        {
+                            "position": [98.7, 84.1, 26],
+                            "scale": [0.5, 15, 0.5]
                         },
                         // Floor posts
                         {
@@ -4292,7 +4325,7 @@
                 "Ruined Fountain": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ]
                 },
@@ -4303,10 +4336,10 @@
                             "scanText": "w H a T   i S   t H i S,\nv A n i l L a ??$?!?!?1!"
                         },
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         },
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -4502,14 +4535,14 @@
                 "Vault": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ]
                 },
                 "Training Chamber": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -4544,7 +4577,7 @@
                 "Ruined Nursery": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "deleteIds": [
@@ -4556,7 +4589,7 @@
                 "Training Chamber Access": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -4686,7 +4719,7 @@
                 "Tower of Light": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -4740,7 +4773,7 @@
                 "Tower Chamber": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -4753,10 +4786,10 @@
                 "Ruined Gallery": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         },
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -4778,7 +4811,7 @@
                 "Transport Access North": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -4803,7 +4836,7 @@
                 "Gathering Hall": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -4845,7 +4878,7 @@
                 "Hive Totem": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -4862,10 +4895,10 @@
                 "Sunchamber": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         },
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -4878,7 +4911,7 @@
                 "Watery Hall Access": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -4904,10 +4937,10 @@
                 "Watery Hall": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         },
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -4960,10 +4993,10 @@
                 "Dynamo": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         },
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -4985,20 +5018,20 @@
                 "Burn Dome": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         },
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ]
                 },
                 "Furnace": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         },
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -5031,7 +5064,7 @@
                 "Hall of the Elders": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -5056,7 +5089,7 @@
                 "Crossway": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -5094,7 +5127,7 @@
                 "Elder Chamber": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
@@ -5139,7 +5172,7 @@
                 "Antechamber": {
                     "pickups": [
                         {
-                            "type": "Missile"
+                            "type": "Nothing"
                         }
                     ],
                     "doors": {
