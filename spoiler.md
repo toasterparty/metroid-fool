@@ -49,7 +49,8 @@ Every time an artifact is stolen, something weird happens.
 - FCS -> Lava Lake
 - Lake Tunnel heat run "against wind"
 - **Lake Tunnel - Grapple Beam**
-- FCS - Missile Expansion (5)
+- Main Plaza (Piston Tunnel Ledge) - Missile Expansion (3)
+    - Piston Tunnel requires bombs and boost to pass
 - Hive Mecha fight
 - **Hive Totem - Energy Tank**
 - Sun Tower -> PPC
@@ -153,15 +154,14 @@ Ruined Courtyard (Labs) -> Specimen Storage
 ### Backtrack
 
 - **Geothermal Core - Wave Beam**
-*Plasma Processing requires Spider*
-Vault Puzzle
-- **Main Plaza (Vault Ledge) - Super Missile**
+Reverse Piston Tunnel/Training Chamber
+- **Training Chamber Access - Super Missiles**
 
 ### Labs
 
 *Room connectivity is vanlla for all of labs*
 
-???
+
 
 ### Labs -> Thardus
 

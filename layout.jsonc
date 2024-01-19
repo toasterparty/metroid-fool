@@ -546,6 +546,11 @@
                     }
                 },
                 "Research Entrance": {
+                    "layers": {
+                        "3": true, // Shadow Pirates
+                        "4": true, // Elite Pirates
+                        "5": true // fog
+                    },
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
@@ -555,7 +560,75 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "triggers": [
+                        {
+                            "position": [0, -638, 68],
+                            "scale": [80, 120, 50],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, 0, 90]
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 10000057,
+                            "startImmediately": true,
+                            "time": 0.02
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 10000057, // timer
+                            "state": "ZERO",
+                            "targetId": 1311308, // elite pirate
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000057, // timer
+                            "state": "ZERO",
+                            "targetId": 1311298, // shadow pirate
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000057, // timer
+                            "state": "ZERO",
+                            "targetId": 1311297, // shadow pirate
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000057, // timer
+                            "state": "ZERO",
+                            "targetId": 1310901, // turret
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 1311177, // fight start trigger
+                            "state": "ENTERED",
+                            "targetId": 1311308, // elite pirate
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1311177, // fight start trigger
+                            "state": "ENTERED",
+                            "targetId": 1311298, // shadow pirate
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1311177, // fight start trigger
+                            "state": "ENTERED",
+                            "targetId": 1311297, // shadow pirate
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1311177, // fight start trigger
+                            "state": "ENTERED",
+                            "targetId": 1310901, // turret
+                            "message": "ACTIVATE"
+                        }
+                    ],
+                    "deleteIds": [
+                        1310723 // skippable cutscene qol special function
+                    ]
                 },
                 "North Quarantine Tunnel": {
                     "doors": {
