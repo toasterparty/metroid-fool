@@ -13,10 +13,10 @@
 
 ## Route
 
-In general, the harder it is to reach a missile, the more rewarding it is.
-Beetles are never encountered *after* the Ruined Shrine fight.
-Ghosts are never encoutnered *before* the Artifact farce is revealed.
-Every time an artifact is stolen, something weird happens.
+In general:
+- The harder it is to reach a missile, the more rewarding it is
+- Beetles are never encountered *after* the Ruined Shrine fight
+- Ghosts are never encoutnered *before* the Artifact farce is revealed
 
 ### Start
 
@@ -196,7 +196,8 @@ Ruined Courtyard (Labs) -> Specimen Storage
 Waste Disposal maze (portals)
 **Central Dynamo - Power Bombs**
 *QAA locked by Plasma*
-**Ore Processing - Warrior**
+*Phazon Elite is missing. The Artifact sits plainly.*
+**Elite Research - Warrior**
 
 ### Plasma
 
@@ -207,6 +208,7 @@ Waste Disposal maze (portals)
     - Falling back down the room is blocked by a shallow pool of magma. If the player does this, they can hop their way back to the start of the morph track.
     - Completing the track and collecting a nothing item removes the floor and allows the player to leave
 - **Gully - Gravity Suit**
+- **Chozo Ice Temple - Sun**
 
 ### Late Mines
 
@@ -214,6 +216,7 @@ Waste Disposal maze (portals)
 - Omega Pirate fight
     - Try goomba stacking again idk?
 - **Elite Quarters - Space Jump**
+- **Phazon Mining Tunnel - Newborn**
 
 ### Cleanup
 
@@ -223,10 +226,12 @@ Waste Disposal maze (portals)
 - Plasma Door
 - **Burn Dome - Flamethrower**
 - Required SJ
+- **Elder Chamber - Spirit**
 - Reflecting Pool -> GTH
 - Required Gravity
 - **Life Grove - Ice Spreader**
 - **Life Grove - Drain Water**
+- **Life Grove - Chozo**
 
 ### Phazon Frigate
 
@@ -238,13 +243,18 @@ Waste Disposal maze (portals)
 ### Farce Reveal
 
 - **Artifact Temple - Phazon Suit**
-- Gimmick revealed plainly - The player must return any and all artifacts to enter the crater
-- Ruined Shrine Ghost Fight
-- Sunchamber Ghost Fight
-- Invincible flying pirates in Triclops Pit puzzle
-- Control Tower is harder because gravity was turned back on
-- World ghost fight
-- Warrior the artifact return spot way up high in the room
+- Gimmick revealed plainly - The player must return any and all artifacts to enter the crater, and the ghosts are angry about it
+    - Chozo: Life Grove ghost fight
+    - Lifegiver: Ruined Shrine ghost fight
+    - World: HoTE ghost fight
+    - Wild: Sunchamber ghost fight
+    - Nature: Invincible flying pirates in Triclops Pit puzzle
+    - Strength: Warrior Shrine but it's up high
+    - Control Tower: Same puzzle but harder because gravity is turned on
+    - Sun: The sheegoth and bombus are in the artifact room
+    - Spirit: Nothing
+    - Warrior: Phazon Elite active
+    - Newborn: Blocks require power bombs
 
 ### Bosses
 
