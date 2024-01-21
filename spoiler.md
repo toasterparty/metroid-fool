@@ -27,15 +27,11 @@ Every time an artifact is stolen, something weird happens.
 
 ### Explore Early Game
 
-- Upper Ruined Shrine - ???
 - **Tower Chamber - Lifegiver**
 - Artifact Temple - Energy Tank
     - Hints are blocked by the ridley fight forcefield
-- FCS - ???
-- Landing Site - ???
 - Water Pool Track
 - **Water Pool - Missile Launcher**
-- Ruined Gallery (Wall) - ???
 - Unlock Hive Totem fight (unwinnable without grapple)
 - Root Cave - Energy Tank
     - Magmoor Workstation is too hot
@@ -130,10 +126,10 @@ Shorelines (Temple) -> Security Cave
 Shorelines (Locked) -> Chamber Access -> North Quarantine Tunnel -> Chapel of the Elders
 ```
 
-### Sheegoth Fight
+### Sheegoth Fight 
     - Force morphed for the whole fight
     - Sheegoths spawn on pyramid-shaped turrets and you have to climb them to bomb them to death without unmorphing
-**Chapel of the Elders - Boost Ball**
+- **Chapel of the Elders - Boost Ball**
 
 ### Labs False Start
 
@@ -153,38 +149,77 @@ Ruined Courtyard (Labs) -> Specimen Storage
 
 ### Backtrack
 
+- Unlock Geothermal Core ceiling with the help of Grapple. Wave Beam extends out with the piston.
 - **Geothermal Core - Wave Beam**
-Reverse Piston Tunnel/Training Chamber
+- Reverse Piston Tunnel/Training Chamber
 - **Training Chamber Access - Super Missiles**
 
 ### Labs
 
-*Room connectivity is vanlla for all of labs*
-
-
+- Research Entrance through Research Core has the following:
+    - Vanilla room connections
+    - Low gravity
+    - Increased combat levels
+- Low gravity vertical puzzle in control tower. Must be possible NSJ/low-grav AND SJ/normal-grav
+- **Control Tower - Elder**
+- *Pike Access requires normal gravity to proceed*
+- **Research Core - Restore Gravity**
 
 ### Labs -> Thardus
 
-Frozen Pike (Hunter) -> Storage Cave
-**Storage Cave - Spirit**
-Frozen Pike (Frost) -> Security Cave
-Quarantine Cave Elevator - Save Station
+- Frozen Pike (Hunter) -> Storage Cave
+- **Storage Cave - Spirit**
+- Frozen Pike (Frost) -> Security Cave
+- Quarantine Cave Elevator - Save Station
+- *Elevator platform goes up instead of down and requires Spider Ball to reach*
 
 ### Thardus
 
+- *Fight activates after grabbing spider instead of before*
 - **Quarantine Cave - Spider**
-- Spider track from hell
+- Thardus fight:
+    - Still brainstorming. I'd like to try putting him in jail and then blocking his weak points with blocks. You'd have to do spider track horse shit to unlock them all. Could even split up the fight into two phases - one with normal tracks and then one with low-grav tracks.
 
-### Mines / Late Chozo
+### Late Magmoor
 
-???
+- *Early-Magmoor access is blocked*
+- *Pass through one-way ice door when entering Geothermal Core*
+- *Plasma Processing door is Power Bomb locked*
+- *Mines Elevator Ice locked*
+- **Ruined Shrine (Spider Track) - Ice Beam**
+
+### Early Mines
+
+*Quarry Access Ice locked*
+*Required secret boxes*
+Waste Disposal maze (portals)
+**Central Dynamo - Power Bombs**
+*QAA locked by Plasma*
+**Ore Processing - Warrior**
+
+### Plasma
+
+- Geothermal Core Spider Track
+- **Plasma Processing - Plasma Beam**
+    - Grabbing Plasma changes the Geothermal Core layer and reloads the room
+- Reggie's Geothermal Core morph ball track from hell
+    - Falling back down the room is blocked by a shallow pool of magma. If the player does this, they can hop their way back to the start of the morph track.
+    - Completing the track and collecting a nothing item removes the floor and allows the player to leave
+
+### Late Mines
+
+- *If the player wants to fuck off all the way back to Landing Site, they can open a plasma door and get Gravity Suit in Gully which does fuck all. Do you want a cookie too?*
+- *Everything from QAA to EQA has had all of the enemies removed. Instead of combat, these rooms focus on challenging NSJ platforming sections. The ambient light level has be raised too. Phazon isn't an issue.*
+- Omega Pirate fight
+    - Try goomba stacking again idk?
+- **Elite Quarters - Space Jump**
+
+### Late Chozo
+
+- 
 
 ### Undecided
 
-- Space Jump
-- Ice Beam
-- Plasma Beam
-- Power Bombs
 - Wavebuster
 - Ice Spreader
 - Flamethrower
@@ -197,7 +232,13 @@ Quarantine Cave Elevator - Save Station
 ### Farce Reveal
 
 - **Artifact Temple - Phazon Suit**
-- Gimmick revealed plainly - The player must return any and all artifacts
+- Gimmick revealed plainly - The player must return any and all artifacts to enter the crater
+- Ruined Shrine Ghost Fight
+- Sunchamber Ghost Fight
+- Invincible flying pirates in Triclops Pit puzzle
+- Control Tower is harder because gravity was turned back on
+- World ghost fight
+- Warrior the artifact return spot way up high in the room
 
 ### Bosses
 
