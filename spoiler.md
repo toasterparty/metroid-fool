@@ -50,8 +50,9 @@ Every time an artifact is stolen, something weird happens.
 - Hive Mecha fight
 - **Hive Totem - Energy Tank**
 - Sun Tower -> PPC
-    - Save station
-    - Deadly Phazon
+    - Save station in elevator
+    - PCA blocked by normal bars
+    - Ice Spreader blast shield blocks maintenance tunnel
 
 *Passing through vault requires boost*
 
@@ -205,27 +206,32 @@ Waste Disposal maze (portals)
 - Reggie's Geothermal Core morph ball track from hell
     - Falling back down the room is blocked by a shallow pool of magma. If the player does this, they can hop their way back to the start of the morph track.
     - Completing the track and collecting a nothing item removes the floor and allows the player to leave
+- **Gully - Gravity Suit**
 
 ### Late Mines
 
-- *If the player wants to fuck off all the way back to Landing Site, they can open a plasma door and get Gravity Suit in Gully which does fuck all. Do you want a cookie too?*
 - *Everything from QAA to EQA has had all of the enemies removed. Instead of combat, these rooms focus on challenging NSJ platforming sections. The ambient light level has be raised too. Phazon isn't an issue.*
 - Omega Pirate fight
     - Try goomba stacking again idk?
 - **Elite Quarters - Space Jump**
 
-### Late Chozo
+### Cleanup
 
-- 
-
-### Undecided
-
-- Wavebuster
-- Ice Spreader
-- Flamethrower
+- *Kaizo block makes you have to ride the zoomer again*
+- Wave Door
+- **Arbor Chamber - Wavebuster**
+- Plasma Door
+- **Burn Dome - Flamethrower**
+- Required SJ
+- Reflecting Pool -> GTH
+- Required Gravity
+- **Life Grove - Ice Spreader**
+- **Life Grove - Drain Water**
 
 ### Phazon Frigate
 
+- HAT Wavebuster Shield
+- HAT Flamethrower Shield (drained water only)
 - Crashed Frigate Phazon "heatrun"
 - **Reactor Core - Glorgsmire Gumpybottom's Keyring**
 
