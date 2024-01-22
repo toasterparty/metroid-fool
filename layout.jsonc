@@ -3679,7 +3679,30 @@
                 "Artifact Temple": {
                     "pickups": [
                         {
-                            "type": "Energy Tank"
+                            // id: 1049044
+                            "type": "Phazon Suit"
+                        }
+                    ],
+                    "specialFunctions": [
+                        {
+                            "id": 12000005,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 1378219704,
+                            "layerChangeLayerId": 2
+                        }
+                    ],
+                    "editObjs": {
+                        "1048578": { // default spawn
+                            "position": [-374, 78.3, -38.9]
+                        }
+                    },
+                    "addConnections": [
+                        // When the pickup is collected, remove all remaining artifacts and spawn return pickups for those already collected
+                        {
+                            "senderId": 1049044,
+                            "state": "ARRIVED",
+                            "targetId": 12000005,
+                            "message": "INCREMENT"
                         }
                     ]
                 },
@@ -4842,17 +4865,104 @@
                     }
                 },
                 "Tower Chamber": {
-                    "pickups": [
-                        {
-                            "type": "Nothing"
-                        }
-                    ],
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "layers": {
+                        "1": false,
+                        "2": false
+                    },
+                    "pickups": [
+                        { // Take Pickup
+                            // id: 1769497
+                            "type": "Nothing",
+                            "model": "Artifact of Lifegiver",
+                            "scanText": "Artifact of Lifegiver",
+                            "hudmemoText": "Artifact of Lifegiver Acquired!"
+                        },
+                        { // Return Pickup
+                            "id": 12000000,
+                            "position": [-144.5194, -103.5357, 24.1891],
+                            "type": "Nothing",
+                            "model": "Nothing",
+                            "scanText": "Return Artifact of Lifegiver",
+                            "hudmemoText": "Artifact of Lifegiver returned. Peace has been restoed.",
+                            "modalHudmemo": true
+                        }
+                    ],
+                    "specialFunctions": [
+                        {
+                            "id": 12000001,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3442151074, // Artifact Temple
+                            "layerChangeLayerId": 5
+                        },
+                        {
+                            "id": 12000002,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 1378219704, // Tower Chamber
+                            "layerChangeLayerId": 1
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 12000003,
+                            "time": 0.5,
+                            "startImmediately": true
+                        },
+                        {
+                            "id": 12000004,
+                            "layer": 2,
+                            "time": 0.1,
+                            "startImmediately": true
+                        }
+                    ],
+                    "editObjs": {
+                        "12000000": {
+                            "layer": 1
+                        }
+                    },
+                    "addConnections": [
+                        { // Taking the artifact deactivates the totem
+                            "senderId": 1769497,
+                            "state": "ARRIVED",
+                            "targetId": 12000001,
+                            "message": "DECREMENT"
+                        },
+                        { // Returning the artifact deactivates the totem
+                            "senderId": 12000000,
+                            "state": "ARRIVED",
+                            "targetId": 12000001,
+                            "message": "INCREMENT"
+                        },
+                        { // Taking the artifact activates the return item in this room (hidden until temple is activated)
+                            "senderId": 1769497,
+                            "state": "ARRIVED",
+                            "targetId": 12000002,
+                            "message": "INCREMENT"
+                        },
+                        { // Deactivate the return pickup 0.1s after room load
+                            "senderId": 12000003,
+                            "state": "ZERO",
+                            "targetId": 12000000,
+                            "message": "DEACTIVATE"
+                        },
+                        { // Deactivate the take pickup 0.02s after room load (only if temple activated)
+                            "senderId": 12000004,
+                            "state": "ZERO",
+                            "targetId": 1769497,
+                            "message": "DEACTIVATE"
+                        },
+                        { // Cancel the despawning of the return pickup (only if temple activated)
+                            "senderId": 12000004,
+                            "state": "ZERO",
+                            "targetId": 12000003,
+                            "message": "DEACTIVATE"
+                        }
+                    ]
                 },
                 "Ruined Gallery": {
                     "pickups": [

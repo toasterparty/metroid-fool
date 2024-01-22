@@ -250,7 +250,7 @@ Waste Disposal maze (portals)
     - Wild: Sunchamber ghost fight
     - Nature: Invincible flying pirates in Triclops Pit puzzle
     - Strength: Warrior Shrine but it's up high
-    - Control Tower: Same puzzle but harder because gravity is turned on
+    - Elder: Control Tower puzzle but harder because gravity is turned on
     - Sun: The sheegoth and bombus are in the artifact room
     - Spirit: Nothing
     - Warrior: Phazon Elite active
