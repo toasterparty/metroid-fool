@@ -102,6 +102,19 @@
             "ice": "Ice",
             "plasma": "Plasma",
             "wave": "Wave"
+        },
+        "artifactHints": {
+            "Artifact of Chozo": "Illegal possesion of &push;&main-color=#43CD80;Artifact of Chozo&pop; detected. You must return this item or suffer consequences.",
+            "Artifact of Elder": "Didn't your mother teach you better than to steal things like the &push;&main-color=#43CD80;Artifact of Elder&pop;? Put it back and I *might* forgive you.",
+            "Artifact of Lifegiver": "Return the &push;&main-color=#43CD80;Artifact of Lifegiver&pop; and I won't key your truck.",
+            "Artifact of Nature": "&push;&main-color=#43CD80;Artifact of Nature&pop;",
+            "Artifact of Newborn": "You won't like me when I'm angry. Put the &push;&main-color=#43CD80;Artifact of Newborn&pop; back where you found it now.",
+            "Artifact of Spirit": "grrr arrrr grrrrrrrrawrrrr. &push;&main-color=#43CD80;Artifact of Spirit&pop; stolen make me ANGRY",
+            "Artifact of Strength": "I would not put a theif in my mouth to steal my &push;&main-color=#43CD80;Artifact of Strength&pop;\n - William Shakespeare",
+            "Artifact of Sun": "I'm not helping you until you return the &push;&main-color=#43CD80;Artifact of Sun&pop; back where you found it.",
+            "Artifact of Warrior": "What kind of person even steals something like &push;&main-color=#43CD80;Artifact of Warrior&pop;? Was it fun? I hope you die.",
+            "Artifact of Wild": "Descrated this sacred place with your sticky hands. &push;&main-color=#43CD80;Artifact of Wild&pop; must find peace for cradle unfurl.",
+            "Artifact of World": "Return the &push;&main-color=#43CD80;Artifact of World&pop;, then eat a bag of dicks."
         }
     },
     "tweaks": {
@@ -110,7 +123,69 @@
         "iceBreakJumpCount": 20
     },
     "strg": {
-        "3230660781": ["Water Pool"]
+        "3230660781": ["Water Pool"],
+        "1487098604": [
+            "The Artifact of Lifegiver is where it belongs.",
+            " ",
+            "This Chozo Totem is not inhibiting your progress."
+        ],
+        "3829219634": [
+            "The Artifact of Nature is where it belongs.",
+            " ",
+            "This Chozo Totem is not inhibiting your progress."
+        ],
+        "3274838266": [
+            "The Artifact of Truth is where it belongs.",
+            " ",
+            "This Chozo Totem is not inhibiting your progress."
+        ],
+        "359396327": [
+            "The Artifact of Chozo is where it belongs.",
+            " ",
+            "This Chozo Totem is not inhibiting your progress."
+        ],
+        "3728154690": [
+            "The Artifact of Warrior is where it belongs.",
+            " ",
+            "This Chozo Totem is not inhibiting your progress."
+        ],
+        "2482995529": [
+            "The Artifact of Wild is where it belongs.",
+            " ",
+            "This Chozo Totem is not inhibiting your progress."
+        ],
+        "794923671": [
+            "The Artifact of Sun is where it belongs.",
+            " ",
+            "This Chozo Totem is not inhibiting your progress."
+        ],
+        "2483402348": [
+            "The Artifact of Newborn is where it belongs.",
+            " ",
+            "This Chozo Totem is not inhibiting your progress.",
+            "Binding",
+            "The Chozo Cipher, the congregation of Artifacts that held the Great Poison at bay, is broken now. Fearful of the potential within the small statues, the invaders known as Space Pirates tried to destroy them, only to fail in every attempt. Instead, they have scattered what they could not break across the planet, hiding the Artifacts far from one another, knowing that their reunion could spell disaster for their dark designs. They are right to fear them. Great power sleeps inside these tokens; we Chozo built our temple, the Cradle, to draw its strength from their communal energy. If they could be gathered together once again and replaced in the Cradle, then hope might bloom again in this suffocating land."
+        ],
+        "311542978": [
+            "The Artifact of Spirit is where it belongs.",
+            " ",
+            "This Chozo Totem is not inhibiting your progress."
+        ],
+        "1168532052": [
+            "The Artifact of Strength is where it belongs.",
+            " ",
+            "This Chozo Totem is not inhibiting your progress."
+        ],
+        "3654096743": [
+            "The Artifact of World is where it belongs.",
+            " ",
+            "This Chozo Totem is not inhibiting your progress."
+        ],
+        "2398794225": [
+            "The Artifact of Elder is where it belongs.",
+            " ",
+            "This Chozo Totem is not inhibiting your progress."
+        ]
     },
     "levelData": {
         "Impact Crater": {
@@ -4932,7 +5007,7 @@
                             "targetId": 12000001,
                             "message": "DECREMENT"
                         },
-                        { // Returning the artifact deactivates the totem
+                        { // Returning the artifact reactivates the totem
                             "senderId": 12000000,
                             "state": "ARRIVED",
                             "targetId": 12000001,
