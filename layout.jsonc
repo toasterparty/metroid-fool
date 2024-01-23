@@ -41,8 +41,8 @@
         "enableIceTraps": true,
         "escapeSequenceCountsUp": false,
         "difficultyBehavior": "NormalOnly",
-        "startingRoom": "Tallon Overworld:Landing Site",
-        "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
+        // TODO: Debug
+        // "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
         "startingItems": {
             "powerBeam": true,
             "ice": false,
@@ -191,7 +191,7 @@
         "Impact Crater": {
             "transports": {
                 "Crater Entry Point": "Artifact Temple",
-                "Essence Dead Cutscene": "Credits"
+                "Essence Dead Cutscene": "Impact Crater:Metroid Prime Lair"
             },
             "rooms": {
                 "Crater Entry Point": {
@@ -277,8 +277,219 @@
                 "Subchamber Two": {},
                 "Subchamber Three": {},
                 "Subchamber Four": {},
-                "Subchamber Five": {},
-                "Metroid Prime Lair": {}
+                "Subchamber Five": {
+                    "layers": {
+                        "2": false // escape sequence
+                    },
+                    "timers": [
+                        {
+                            "id": 10000064,
+                            "layer": 2,
+                            "time": 0.2,
+                            "startImmediately": true
+                        }
+                    ],
+                    "spawnPoints": [
+                        {
+                            "id": 10000065,
+                            "position": [42.9551, -287.1726, -238]
+                        }
+                    ],
+                    "triggers": [
+                        {
+                            "id": 10000068,
+                            "layer": 2,
+                            "position": [43, -287, -192.6],
+                            "scale": [45, 45, 110],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, 0, 200]
+                        }
+                    ],
+                    "blocks": [
+                        { // add floor to the hole
+                            "layer": 2,
+                            "position": [42.9551, -287.1726, -240.7044],
+                            "scale": [45, 45, 2]
+                        }
+                    ],
+                    "addConnections": [
+                        // When this room loads after essence is dead, warp the player to the bottom
+                        // to bypass the invisible ceiling
+                        {
+                            "senderId": 10000064,
+                            "state": "ZERO",
+                            "targetId": 10000065,
+                            "message": "SET_TO_ZERO"
+                        },
+                        // ...also unload lair
+                        {
+                            "senderId": 10000064,
+                            "state": "ZERO",
+                            "targetId": 655362,
+                            "message": "SET_TO_ZERO"
+                        },
+                        // ...and load sub 4
+                        {
+                            "senderId": 10000064,
+                            "state": "ZERO",
+                            "targetId": 655361,
+                            "message": "SET_TO_MAX"
+                        },
+                        // ...and de-secretize sub 4
+                        {
+                            "senderId": 10000068,
+                            "state": "INSIDE",
+                            "targetId": 655361,
+                            "message": "INCREMENT"
+                        },
+                        // ...and deactivate the cutscene trigger
+                        {
+                            "senderId": 10000064,
+                            "state": "ZERO",
+                            "targetId": 655383,
+                            "message": "DEACTIVATE"
+                        }
+                    ],
+                    "deleteIds": [
+                        // TODO: Commented out for debug
+                        // 655396 // disable cutscene skip
+                    ]
+                },
+                "Metroid Prime Lair": {
+                    "hudmemos": [
+                        {
+                            "id": 10000060,
+                            "text": "&just=center;&main-color=#FF3333;Crater collapse imminent.\nEvacuate immediately!",
+                            "messageTime": 10
+                        }
+                    ],
+                    "specialFunctions": [
+                        {
+                            "id": 10000061,
+                            "type": "EscapeSequence",
+                            "unknown2": 600 // Time (Seconds)
+                        },
+                        {
+                            "id": 10000066,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3309590160, // subchamber 5
+                            "layerChangeLayerId": 1 // 2nd pass cutscene
+                        },
+                        {
+                            "id": 10000067,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3309590160, // subchamber 5
+                            "layerChangeLayerId": 2 // climbable stuff
+                        }
+                    ],
+                    "streamedAudios": [
+                        {
+                            "id": 10000062,
+                            "audioFileName": "/audio/int_escapeL.dsp|/audio/int_escapeR.dsp",
+                            "volume": 105,
+                            "isMusic": true
+                        }
+                    ],
+                    "triggers": [
+                        { // TODO: remove debug
+                            "position": [47, -288, -304],
+                            "scale": [5, 5, 300],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, 0, 200]
+                        },
+                        {
+                            "id": 10000063,
+                            "position": [44, -286, -287],
+                            "scale": [80, 80, 10]
+                        }
+                    ],
+                    "liquids": [
+                        { // TODO: remove debug
+                            "position": [44, -266, -375],
+                            "scale": [1, 1, 1],
+                            "type": "Phazon"
+                        }
+                    ],
+                    "blocks": [
+                        { // TODO: remove debug
+                            "position": [47, -288, -374],
+                            "scale": [5, 5, 2],
+                            "texture": "Crater"
+                        }
+                    ],
+                    "addConnections": [
+                        /* When the essence cutscene ends, cleanup the cutscene objects
+                           and start an escape sequence */
+                        {
+                            "senderId": 721283, // End of cutscene timer
+                            "state": "ZERO",
+                            "targetId": 10000060, // Hudmemo
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 721283, // End of cutscene timer
+                            "state": "ZERO",
+                            "targetId": 10000061, // escape sequence
+                            "message": "ACTION"
+                        },
+                        {
+                            "senderId": 721283, // End of cutscene timer
+                            "state": "ZERO",
+                            "targetId": 10000062, // Music
+                            "message": "PLAY"
+                        },
+                        {
+                            "senderId": 721283, // End of cutscene timer
+                            "state": "ZERO",
+                            "targetId": 721301, // essence actor
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 721283, // End of cutscene timer
+                            "state": "ZERO",
+                            "targetId": 721274, // samus actor
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 721283, // End of cutscene timer
+                            "state": "ZERO",
+                            "targetId": 721219, // samus actor
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 721283, // End of cutscene timer
+                            "state": "ZERO",
+                            "targetId": 721306, // light beam effect
+                            "message": "DEACTIVATE"
+                        },
+                        /* When the player reaches the top of Lair, load sunchamber 5 and stop the special subchamber 5 cutscene from playing */
+                        {
+                            "senderId": 10000063, // trigger
+                            "state": "ENTERED",
+                            "targetId": 721267, // dock
+                            "message": "SET_TO_MAX"
+                        },
+                        {
+                            "senderId": 10000063, // trigger
+                            "state": "ENTERED",
+                            "targetId": 10000066, // special function
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000063, // trigger
+                            "state": "ENTERED",
+                            "targetId": 10000067, // special function
+                            "message": "INCREMENT"
+                        }
+                    ],
+                    "deleteIds": [
+                        721282, // world teleporter
+                        721369, // "nothingness" camera
+                        721238, 721240, // white screen fade-out
+                        720903, // disable cutscene skip (end only)
+                        720915 // Anti-softlock reposition trigger
+                    ]
+                }
             }
         },
         "Phendrana Drifts": {
