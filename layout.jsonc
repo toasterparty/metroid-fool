@@ -37,7 +37,7 @@
         "removeHiveMecha": false,
         "removeMineSecurityStationLocks": false,
         "skipRidley": false,
-        "warpToStartDelayS": 3,
+        "warpToStartDelayS": 1,
         "enableIceTraps": true,
         "escapeSequenceCountsUp": false,
         "difficultyBehavior": "NormalOnly",
@@ -226,7 +226,7 @@
                         "1": {
                             "shieldType": "Blue",
                             "blastShieldType": "None"
-                    }
+                        }
                     },
                     "deleteIds": [
                         65540 // no qol music
@@ -245,7 +245,7 @@
                         "2": {
                             "shieldType": "Blue",
                             "blastShieldType": "None"
-                    }
+                        }
                     },
                     "deleteIds": [
                         131079 // no qol music
@@ -256,7 +256,7 @@
                         "0": {
                             "shieldType": "Blue",
                             "blastShieldType": "None"
-                    }
+                        }
                     },
                     "deleteIds": [
                         196647 // no qol music
@@ -271,7 +271,7 @@
                         "1": {
                             "shieldType": "Blue",
                             "blastShieldType": "None"
-                    }
+                        }
                     },
                     "deleteIds": [
                         262174 // no qol music
@@ -523,6 +523,12 @@
                             "type": "ScriptLayerController",
                             "layerChangeRoomId": 3858868330, // Phazon Infusion Chamber
                             "layerChangeLayerId": 2 // escape sequence
+                        },
+                        {
+                            "id": 10000078,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3442151074, // Artifact Temple
+                            "layerChangeLayerId": 24 // ridley
                         }
                     ],
                     "streamedAudios": [
@@ -605,6 +611,50 @@
                             "targetId": 721306, // light beam effect
                             "message": "DEACTIVATE"
                         },
+                        /* Also, enable the escape sequence layers for all of impact crater */
+                        {
+                            "senderId": 721283, // End of cutscene timer
+                            "state": "ZERO",
+                            "targetId": 10000067, // special function
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 721283, // End of cutscene timer
+                            "state": "ZERO",
+                            "targetId": 10000069, // special function
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 721283, // End of cutscene timer
+                            "state": "ZERO",
+                            "targetId": 10000070, // special function
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 721283, // End of cutscene timer
+                            "state": "ZERO",
+                            "targetId": 10000071, // special function
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 721283, // End of cutscene timer
+                            "state": "ZERO",
+                            "targetId": 10000072, // special function
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 721283, // End of cutscene timer
+                            "state": "ZERO",
+                            "targetId": 10000073, // special function
+                            "message": "INCREMENT"
+                        },
+                        /* also enable the ridley fight in temple */
+                        {
+                            "senderId": 721283, // End of cutscene timer
+                            "state": "ZERO",
+                            "targetId": 10000078,
+                            "message": "INCREMENT"
+                        },
                         /* When the player reaches the top of Lair, load sunchamber 5 and stop the special subchamber 5 cutscene from playing */
                         {
                             "senderId": 10000063, // trigger
@@ -617,43 +667,6 @@
                             "state": "ENTERED",
                             "targetId": 10000066, // special function
                             "message": "DECREMENT"
-                        },
-                        /* Also, enable the escape sequence layers for all of impact crater */
-                        {
-                            "senderId": 10000063, // trigger
-                            "state": "ENTERED",
-                            "targetId": 10000067, // special function
-                            "message": "INCREMENT"
-                        },
-                        {
-                            "senderId": 10000063, // trigger
-                            "state": "ENTERED",
-                            "targetId": 10000069, // special function
-                            "message": "INCREMENT"
-                        },
-                        {
-                            "senderId": 10000063, // trigger
-                            "state": "ENTERED",
-                            "targetId": 10000070, // special function
-                            "message": "INCREMENT"
-                        },
-                        {
-                            "senderId": 10000063, // trigger
-                            "state": "ENTERED",
-                            "targetId": 10000071, // special function
-                            "message": "INCREMENT"
-                        },
-                        {
-                            "senderId": 10000063, // trigger
-                            "state": "ENTERED",
-                            "targetId": 10000072, // special function
-                            "message": "INCREMENT"
-                        },
-                        {
-                            "senderId": 10000063, // trigger
-                            "state": "ENTERED",
-                            "targetId": 10000073, // special function
-                            "message": "INCREMENT"
                         }
                     ],
                     "deleteIds": [
@@ -4137,10 +4150,19 @@
                     ]
                 },
                 "Artifact Temple": {
+                    "layers": {
+                        "24": false // ridley
+                    },
                     "pickups": [
                         {
                             // id: 1049044
                             "type": "Phazon Suit"
+                        },
+                        {
+                            "id": 11000082,
+                            "type": "Nothing",
+                            "position": [300, 0, -500],
+                            "destination": "End Cinema:End Cinema"
                         }
                     ],
                     "specialFunctions": [
@@ -4151,9 +4173,42 @@
                             "layerChangeLayerId": 2
                         }
                     ],
+                    "relays": [
+                        {
+                            "id": 9999999,
+                            "layer": 24
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 11000080,
+                            "layer": 24,
+                            "time": 4
+                        }
+                    ],
+                    "spawnPoints": [
+                        {
+                            "id": 11000081,
+                            "position": [300, 0, -500]
+                        }
+                    ],
                     "editObjs": {
                         "1048578": { // default spawn
                             "position": [-374, 78.3, -38.9]
+                        },
+                        /* Move Ridley to Layer 24 */
+                        "1048833": { // ridley
+                            "layer": 24
+                        },
+                        "1049731": { // Relay - Start Ridley Music
+                            "layer": 24
+                        },
+                        "1049095": { // Camera Intro 2
+                            "layer": 24
+                        },
+                        /* Move credits pickup to Layer 24 */
+                        "11000082": {
+                            "layer": 24
                         }
                     },
                     "addConnections": [
@@ -4163,7 +4218,143 @@
                             "state": "ARRIVED",
                             "targetId": 12000005,
                             "message": "INCREMENT"
+                        },
+                        // When the fake-out cutscene ends, remove black bars
+                        {
+                            "senderId": 1049090, // Camera Intro 1
+                            "state": "INACTIVE",
+                            "targetId": 1049088, // cinema bars
+                            "message": "DECREMENT"
+                        },
+                        // When the fake-out cutscene ends, activate the teleporter
+                        {
+                            "senderId": 1049090, // Camera Intro 1
+                            "state": "INACTIVE",
+                            "targetId": 1049298, // Memory Relay - Activate Teleporter
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1049090, // Camera Intro 1
+                            "state": "INACTIVE",
+                            "targetId": 1049921, // Relay- End  of Cinema
+                            "message": "SET_TO_ZERO"
+                        },
+                        // Teleporter memory relay implies no more progress/fakeout cutscene
+                        {
+                            "senderId": 1049298, // Memory Relay - Activate Teleporter
+                            "state": "ACTIVE",
+                            "targetId": 1049356, // Memory Relay Artifact 1 Picked up
+                            "message": "DEACTIVATE"
+                        },
+                        // When the player finishes arriving after essence is dead, start a timer
+                        {
+                            "senderId": 1049272, // camera
+                            "state": "INACTIVE",
+                            "targetId": 11000080, // timer
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 1048597, // Arriving Cutscene Skip
+                            "state": "ZERO",
+                            "targetId": 11000080, // timer
+                            "message": "RESET_AND_START"
+                        },
+                        // when that timer elapses, deactivate the teleporter
+                        {
+                            "senderId": 11000080,
+                            "state": "ZERO",
+                            "targetId": 1049304, // Trigger - Start Leaving Sequence
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 11000080,
+                            "state": "ZERO",
+                            "targetId": 1049303, // Trigger - Activate Leaving Elevator When exit
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 11000080,
+                            "state": "ZERO",
+                            "targetId": 1049298, // Memory Relay - Activate Teleporter
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 11000080,
+                            "state": "ZERO",
+                            "targetId": 1049499, // Actor
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 11000080,
+                            "state": "ZERO",
+                            "targetId": 1049876, // Effect
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 11000080,
+                            "state": "ZERO",
+                            "targetId": 1049497, // Effect
+                            "message": "DEACTIVATE"
+                        },
+                        // {
+                        //     "senderId": 11000080,
+                        //     "state": "ZERO",
+                        //     "targetId": 1049422, // Sound
+                        //     "message": "STOP"
+                        // },
+                        // {
+                        //     "senderId": 11000080,
+                        //     "state": "ZERO",
+                        //     "targetId": 1049412, // Sound
+                        //     "message": "STOP"
+                        // },
+                        {
+                            "senderId": 11000080,
+                            "state": "ZERO",
+                            "targetId": 1049958, // Sound [actually the one]
+                            "message": "STOP"
+                        },
+                        {
+                            "senderId": 11000080,
+                            "state": "ZERO",
+                            "targetId": 1049287, // leaving cinema relay
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 11000080,
+                            "state": "ZERO",
+                            "targetId": 1049305, // leaving teleport timer
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 11000080,
+                            "state": "ZERO",
+                            "targetId": 1049644, // teleport music change
+                            "message": "DEACTIVATE"
+                        },
+                        // when that timer expires, also trigger the now complete ridley cutscene
+                        {
+                            "senderId": 11000080,
+                            "state": "ZERO",
+                            "targetId": 1049090, // Camera
+                            "message": "ACTIVATE"
+                        },
+                        // When ridley falls into the crater, end the cutscene short by warping to credits
+                        {
+                            "senderId": 1049922, // camera 12
+                            "state": "INACTIVE",
+                            "targetId": 11000081, // spawn point
+                            "message": "SET_TO_ZERO"
                         }
+                    ],
+                    "deleteIds": [
+                        1049977, // ridley cutscene skip
+                        1048614, // progress + ridley combined cutscene skip
+                        1048595, // leaving cutscene skip
+                        1048597, // arriving cutscene skip
+                        1048594, // Burn wings cutscene skip
+                        1048588, // ridley death cutscene skip
+                        1049765, 1049866, 1049231 // post-ridley death cutscene (ghost sequence)
                     ]
                 },
                 "Main Ventilation Shaft Section C": {
