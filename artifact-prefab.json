@@ -1,0 +1,101 @@
+{
+    "layers": {
+        "RETURN_PICKUP_LAYER_ID": false, // True if artifact taken
+        "TEMPLE_ACTIVATED_LAYER_ID": false  // True if temple activated
+    },
+    "pickups": [
+        { // Take Pickup
+            // id: VANILLA_PICKUP_ID
+            "type": "Nothing",
+            "model": "Artifact of XXX",
+            "scanText": "Artifact of XXX",
+            "hudmemoText": "Artifact of XXX Acquired!"
+        },
+        { // Return Pickup
+            "id": RETURN_PICKUP_ID,
+            "position": POSITION,
+            "type": "Nothing",
+            "model": "Nothing",
+            "scanText": "Return Artifact of XXX",
+            "hudmemoText": "Artifact of XXX returned.\nPeace has been restored.",
+            "modalHudmemo": true,
+            "respawn": false
+        }
+    ],
+    "specialFunctions": [
+        {
+            "id": SF_ID_ONE,
+            "type": "ScriptLayerController",
+            "layerChangeRoomId": 3442151074, // Artifact Temple
+            "layerChangeLayerId": TEMPLE_LAYER_ID
+        },
+        {
+            "id": SF_ID_TWO,
+            "type": "ScriptLayerController",
+            "layerChangeRoomId": ROOM_ID, // This room
+            "layerChangeLayerId": RETURN_PICKUP_LAYER_ID
+        }
+    ],
+    "timers": [
+        {
+            "id": TIMER_ID_ONE,
+            "time": 0.5,
+            "startImmediately": true
+        },
+        {
+            "id": TIMER_ID_TWO,
+            "layer": TEMPLE_ACTIVATED_LAYER_ID,
+            "time": 0.1,
+            "startImmediately": true
+        }
+    ],
+    "editObjs": {
+        "RETURN_PICKUP_ID": { // Move return pickup to it's own layer
+            "layer": RETURN_PICKUP_LAYER_ID
+        }
+    },
+    "addConnections": [
+        { // Taking the artifact deactivates the totem
+            "senderId": VANILLA_PICKUP_ID,
+            "state": "ARRIVED",
+            "targetId": SF_ID_ONE,
+            "message": "DECREMENT"
+        },
+        { // Returning the artifact reactivates the totem
+            "senderId": RETURN_PICKUP_ID,
+            "state": "ARRIVED",
+            "targetId": SF_ID_ONE,
+            "message": "INCREMENT"
+        },
+        { // Taking the artifact activates the return pickup in this room (hidden until temple is activated)
+            "senderId": VANILLA_PICKUP_ID,
+            "state": "ARRIVED",
+            "targetId": SF_ID_TWO,
+            "message": "INCREMENT"
+        },
+        { // Returning the artifact disables the layer for the return pickup 
+            "senderId": RETURN_PICKUP_ID,
+            "state": "ARRIVED",
+            "targetId": SF_ID_TWO,
+            "message": "DECREMENT"
+        },
+        { // Deactivate the return pickup 0.1s after room load
+            "senderId": TIMER_ID_ONE,
+            "state": "ZERO",
+            "targetId": RETURN_PICKUP_ID,
+            "message": "DEACTIVATE"
+        },
+        { // Deactivate the take pickup 0.02s after room load (only if temple activated)
+            "senderId": TIMER_ID_TWO,
+            "state": "ZERO",
+            "targetId": VANILLA_PICKUP_ID,
+            "message": "DEACTIVATE"
+        },
+        { // Cancel the despawning of the return pickup (only if temple activated)
+            "senderId": TIMER_ID_TWO,
+            "state": "ZERO",
+            "targetId": TIMER_ID_ONE,
+            "message": "DEACTIVATE"
+        }
+    ]
+}

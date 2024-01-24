@@ -2431,17 +2431,111 @@
                     ]
                 },
                 "Warrior Shrine": {
-                    "pickups": [
-                        {
-                            "type": "Nothing"
-                        }
-                    ],
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "layers": {
+                        "1": false, // True if artifact taken
+                        "2": false  // True if temple activated
+                    },
+                    "pickups": [
+                        { // Take Pickup
+                            // id: 720951
+                            "type": "Nothing",
+                            "model": "Artifact of Strength",
+                            "scanText": "Artifact of Strength",
+                            "hudmemoText": "Artifact of Strength Acquired!"
+                        },
+                        { // Return Pickup
+                            "id": 12000007,
+                            "position": [309.4821, -286.584, 85.4937],
+                            "type": "Nothing",
+                            "model": "Nothing",
+                            "scanText": "Return Artifact of Strength",
+                            "hudmemoText": "Artifact of Strength returned.\nPeace has been restored.",
+                            "modalHudmemo": true,
+                            "respawn": false
+                        }
+                    ],
+                    "specialFunctions": [
+                        {
+                            "id": 12000008,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3442151074, // Artifact Temple
+                            "layerChangeLayerId": 2
+                        },
+                        {
+                            "id": 12000009,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 712154651, // This room
+                            "layerChangeLayerId": 1
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 12000019,
+                            "time": 0.5,
+                            "startImmediately": true
+                        },
+                        {
+                            "id": 12000020,
+                            "layer": 2,
+                            "time": 0.1,
+                            "startImmediately": true
+                        }
+                    ],
+                    "editObjs": {
+                        "12000007": { // Move return pickup to it's own layer
+                            "layer": 1
+                        }
+                    },
+                    "addConnections": [
+                        { // Taking the artifact deactivates the totem
+                            "senderId": 720951,
+                            "state": "ARRIVED",
+                            "targetId": 12000008,
+                            "message": "DECREMENT"
+                        },
+                        { // Returning the artifact reactivates the totem
+                            "senderId": 12000007,
+                            "state": "ARRIVED",
+                            "targetId": 12000008,
+                            "message": "INCREMENT"
+                        },
+                        { // Taking the artifact activates the return pickup in this room (hidden until temple is activated)
+                            "senderId": 720951,
+                            "state": "ARRIVED",
+                            "targetId": 12000009,
+                            "message": "INCREMENT"
+                        },
+                        { // Returning the artifact disables the layer for the return pickup 
+                            "senderId": 12000007,
+                            "state": "ARRIVED",
+                            "targetId": 12000009,
+                            "message": "DECREMENT"
+                        },
+                        { // Deactivate the return pickup 0.1s after room load
+                            "senderId": 12000019,
+                            "state": "ZERO",
+                            "targetId": 12000007,
+                            "message": "DEACTIVATE"
+                        },
+                        { // Deactivate the take pickup 0.02s after room load (only if temple activated)
+                            "senderId": 12000020,
+                            "state": "ZERO",
+                            "targetId": 720951,
+                            "message": "DEACTIVATE"
+                        },
+                        { // Cancel the despawning of the return pickup (only if temple activated)
+                            "senderId": 12000020,
+                            "state": "ZERO",
+                            "targetId": 12000019,
+                            "message": "DEACTIVATE"
+                        }
+                    ]
                 },
                 "Shore Tunnel": {
                     "pickups": [
@@ -4713,8 +4807,68 @@
                         {
                             "id": 12000005,
                             "type": "ScriptLayerController",
-                            "layerChangeRoomId": 1378219704,
-                            "layerChangeLayerId": 2
+                            "layerChangeRoomId": 1378219704, // Tower chamber
+                            "layerChangeLayerId": 2 // temple activated
+                        },
+                        {
+                            "id": 10000114,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3858019950, // Control Tower
+                            "layerChangeLayerId": 9 // temple activated
+                        },
+                        {
+                            "id": 10000115,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 4066558442, // Sunchamber
+                            "layerChangeLayerId": 9 // temple activated
+                        },
+                        {
+                            "id": 10000116,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3544419546, // Elite Research
+                            "layerChangeLayerId": 7 // temple activated
+                        },
+                        {
+                            "id": 10000117,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3748365169, // Life Grove
+                            "layerChangeLayerId": 4 // temple activated
+                        },
+                        {
+                            "id": 10000118,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 2429866667, // Triclops Pit
+                            "layerChangeLayerId": 5 // temple activated
+                        },
+                        {
+                            "id": 10000119,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 70907119,   // Elder Chamber
+                            "layerChangeLayerId": 2 // temple activated
+                        },
+                        {
+                            "id": 10000120,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3233873364, // Storage Cave
+                            "layerChangeLayerId": 2 // temple activated
+                        },
+                        {
+                            "id": 10000121,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 259865162,  // Phazon Mining Tunnel
+                            "layerChangeLayerId": 2 // temple activated
+                        },
+                        {
+                            "id": 10000122,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 712154651,  // Warrior Shrine
+                            "layerChangeLayerId": 2 // temple activated
+                        },
+                        {
+                            "id": 10000123,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3408755424,  // Chozo Ice Temple
+                            "layerChangeLayerId": 5 // temple activated
                         }
                     ],
                     "relays": [
@@ -4761,6 +4915,66 @@
                             "senderId": 1049044,
                             "state": "ARRIVED",
                             "targetId": 12000005,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1049044,
+                            "state": "ARRIVED",
+                            "targetId": 10000114,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1049044,
+                            "state": "ARRIVED",
+                            "targetId": 10000115,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1049044,
+                            "state": "ARRIVED",
+                            "targetId": 10000116,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1049044,
+                            "state": "ARRIVED",
+                            "targetId": 10000117,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1049044,
+                            "state": "ARRIVED",
+                            "targetId": 10000118,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1049044,
+                            "state": "ARRIVED",
+                            "targetId": 10000119,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1049044,
+                            "state": "ARRIVED",
+                            "targetId": 10000120,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1049044,
+                            "state": "ARRIVED",
+                            "targetId": 10000121,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1049044,
+                            "state": "ARRIVED",
+                            "targetId": 10000122,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1049044,
+                            "state": "ARRIVED",
+                            "targetId": 10000123,
                             "message": "INCREMENT"
                         },
                         // When the fake-out cutscene ends, remove black bars
@@ -6055,8 +6269,8 @@
                         }
                     },
                     "layers": {
-                        "1": false,
-                        "2": false
+                        "1": false, // True if artifact taken
+                        "2": false  // True if temple activated
                     },
                     "pickups": [
                         { // Take Pickup
@@ -6072,8 +6286,9 @@
                             "type": "Nothing",
                             "model": "Nothing",
                             "scanText": "Return Artifact of Lifegiver",
-                            "hudmemoText": "Artifact of Lifegiver returned. Peace has been restoed.",
-                            "modalHudmemo": true
+                            "hudmemoText": "Artifact of Lifegiver returned.\nPeace has been restored.",
+                            "modalHudmemo": true,
+                            "respawn": true
                         }
                     ],
                     "specialFunctions": [
@@ -6126,6 +6341,12 @@
                             "state": "ARRIVED",
                             "targetId": 12000002,
                             "message": "INCREMENT"
+                        },
+                        { // Returning the artifact disables the layer for the return pickup 
+                            "senderId": 12000000,
+                            "state": "ARRIVED",
+                            "targetId": 12000002,
+                            "message": "DECREMENT"
                         },
                         { // Deactivate the return pickup 0.1s after room load
                             "senderId": 12000003,
