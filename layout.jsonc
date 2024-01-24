@@ -195,29 +195,70 @@
             },
             "rooms": {
                 "Crater Entry Point": {
+                    "layers": {
+                        "1": false
+                    },
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
                     },
-                    "extraScans": [
+                    "timers": [
                         {
-                            "position": [
-                                -19.4009,
-                                41.001,
-                                2.805
+                            "id": 10000103,
+                            "layer": 1,
+                            "time": 0.02,
+                            "startImmediately": true
+                        }
+                    ],
+                    "distanceFogs": [
+                        {
+                            "id": 10000104,
+                            "layer": 1,
+                            "explicit": false,
+                            "color": [
+                                0.333333,
+                                0.352941,
+                                0.615686,
+                                0
                             ],
-                            "combatVisible": false,
-                            "text": "&push;&main-color=#c300ff;Phazon Suit&pop; is located in &push;&main-color=#89a1ff;Tallon Overworld&pop;.",
-                            "rotation": 45.0,
-                            "isRed": true,
-                            "logbookTitle": "Phazon Suit",
-                            "logbookCategory": 5
+                            "range": [
+                                30,
+                                100
+                            ],
+                            "colorDelta": 0.2,
+                            "rangeDelta": [
+                                200,
+                                100
+                            ]
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 10000103,
+                            "state": "ZERO",
+                            "targetId": 10000104,
+                            "message": "ACTION"
+                        },
+                        {
+                            "senderId": 10000103,
+                            "state": "ZERO",
+                            "targetId": 173, // StreamedAudio - Crater Main SW
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000103,
+                            "state": "ZERO",
+                            "targetId": 169, // StreamedAudio General InterWorld Elevator SW
+                            "message": "DEACTIVATE"
                         }
                     ]
                 },
                 "Crater Tunnel A": {
+                    "layers": {
+                        "1": false
+                    },
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
@@ -228,11 +269,52 @@
                             "blastShieldType": "None"
                         }
                     },
+                    "timers": [
+                        {
+                            "id": 10000105,
+                            "layer": 1,
+                            "time": 0.02,
+                            "startImmediately": true
+                        }
+                    ],
+                    "distanceFogs": [
+                        {
+                            "id": 10000106,
+                            "layer": 1,
+                            "explicit": false,
+                            "color": [
+                                0.333333,
+                                0.352941,
+                                0.615686,
+                                0
+                            ],
+                            "range": [
+                                30,
+                                100
+                            ],
+                            "colorDelta": 0.2,
+                            "rangeDelta": [
+                                200,
+                                100
+                            ]
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 10000105,
+                            "state": "ZERO",
+                            "targetId": 10000106,
+                            "message": "ACTION"
+                        }
+                    ],
                     "deleteIds": [
                         65540 // no qol music
                     ]
                 },
                 "Phazon Core": {
+                    "layers": {
+                        "1": false
+                    },
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
@@ -247,22 +329,126 @@
                             "blastShieldType": "None"
                         }
                     },
+                    "timers": [
+                        {
+                            "id": 10000107,
+                            "layer": 1,
+                            "time": 0.02,
+                            "startImmediately": true
+                        }
+                    ],
+                    "distanceFogs": [
+                        {
+                            "id": 10000108,
+                            "layer": 1,
+                            "explicit": false,
+                            "color": [
+                                0.333333,
+                                0.352941,
+                                0.615686,
+                                0
+                            ],
+                            "range": [
+                                30,
+                                100
+                            ],
+                            "colorDelta": 0.2,
+                            "rangeDelta": [
+                                200,
+                                100
+                            ]
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 10000107,
+                            "state": "ZERO",
+                            "targetId": 10000108,
+                            "message": "ACTION"
+                        }
+                    ],
                     "deleteIds": [
                         131079 // no qol music
                     ]
                 },
                 "Crater Missile Station": {
+                    "layers": {
+                        "1": false
+                    },
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
                     },
+                    "timers": [
+                        {
+                            "id": 10000109,
+                            "layer": 1,
+                            "time": 0.02,
+                            "startImmediately": true
+                        }
+                    ],
+                    "distanceFogs": [
+                        {
+                            "id": 10000110,
+                            "layer": 1,
+                            "explicit": false,
+                            "color": [
+                                0.333333,
+                                0.352941,
+                                0.615686,
+                                0
+                            ],
+                            "range": [
+                                30,
+                                100
+                            ],
+                            "colorDelta": 0.2,
+                            "rangeDelta": [
+                                200,
+                                100
+                            ]
+                        }
+                    ],
+                    "streamedAudios": [
+                        {
+                            "id": 10000113,
+                            "layer": 1,
+                            "audioFileName": "/audio/int_escapeL.dsp|/audio/int_escapeR.dsp",
+                            "volume": 105,
+                            "isMusic": true
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 10000109,
+                            "state": "ZERO",
+                            "targetId": 10000110,
+                            "message": "ACTION"
+                        },
+                        // Swap the crater music for panic music
+                        {
+                            "senderId": 10000109,
+                            "state": "ZERO",
+                            "targetId": 196742, // StreamedAudio - Crater Main SW
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 196719, // Trigger - Play Music 1
+                            "state": "ENTERED",
+                            "targetId": 10000113,
+                            "message": "PLAY"
+                        }
+                    ],
                     "deleteIds": [
                         196647 // no qol music
                     ]
                 },
                 "Crater Tunnel B": {
+                    "layers": {
+                        "1": false
+                    },
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
@@ -273,15 +459,77 @@
                             "blastShieldType": "None"
                         }
                     },
+                    "timers": [
+                        {
+                            "id": 10000111,
+                            "layer": 1,
+                            "time": 0.02,
+                            "startImmediately": true
+                        }
+                    ],
+                    "distanceFogs": [
+                        {
+                            "id": 10000112,
+                            "layer": 1,
+                            "explicit": false,
+                            "color": [
+                                0.333333,
+                                0.352941,
+                                0.615686,
+                                0
+                            ],
+                            "range": [
+                                30,
+                                100
+                            ],
+                            "colorDelta": 0.2,
+                            "rangeDelta": [
+                                200,
+                                100
+                            ]
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 10000111,
+                            "state": "ZERO",
+                            "targetId": 10000112,
+                            "message": "ACTION"
+                        }
+                    ],
                     "deleteIds": [
                         262174 // no qol music
                     ]
                 },
                 "Phazon Infusion Chamber": {
                     "layers": {
-                        "1": false // TODO: Debug
-                        // "2": false
+                        "1": false, // TODO: Debug
+                        "2": false
                     },
+                    "distanceFogs": [
+                        {
+                            "id": 327684,
+                            "layer": 1
+                        },
+                        {
+                            "layer": 2,
+                            "color": [
+                                0.333333,
+                                0.352941,
+                                0.615686,
+                                0
+                            ],
+                            "range": [
+                                30,
+                                100
+                            ],
+                            "colorDelta": 0.2,
+                            "rangeDelta": [
+                                200,
+                                100
+                            ]
+                        }
+                    ],
                     "doors": {
                         "1": {
                             "shieldType": "Blue",
@@ -294,6 +542,30 @@
                         "1": false, // TODO: Debug
                         "2": false
                     },
+                    "distanceFogs": [
+                        {
+                            "id": 458755,
+                            "layer": 1
+                        },
+                        {
+                            "layer": 2,
+                            "color": [
+                                0.333333,
+                                0.352941,
+                                0.615686,
+                                0
+                            ],
+                            "range": [
+                                30,
+                                100
+                            ],
+                            "colorDelta": 0.2,
+                            "rangeDelta": [
+                                200,
+                                100
+                            ]
+                        }
+                    ],
                     "triggers": [
                         {
                             "id": 10000077,
@@ -316,6 +588,30 @@
                         "1": false, // TODO: Debug
                         "3": false
                     },
+                    "distanceFogs": [
+                        {
+                            "id": 589866,
+                            "layer": 1
+                        },
+                        {
+                            "layer": 3,
+                            "color": [
+                                0.333333,
+                                0.352941,
+                                0.615686,
+                                0
+                            ],
+                            "range": [
+                                30,
+                                100
+                            ],
+                            "colorDelta": 0.2,
+                            "rangeDelta": [
+                                200,
+                                100
+                            ]
+                        }
+                    ],
                     "triggers": [
                         {
                             "id": 10000076,
@@ -338,6 +634,30 @@
                         "1": false, // TODO: Debug
                         "2": false
                     },
+                    "distanceFogs": [
+                        {
+                            "id": 524292,
+                            "layer": 1
+                        },
+                        {
+                            "layer": 2,
+                            "color": [
+                                0.333333,
+                                0.352941,
+                                0.615686,
+                                0
+                            ],
+                            "range": [
+                                30,
+                                100
+                            ],
+                            "colorDelta": 0.2,
+                            "rangeDelta": [
+                                200,
+                                100
+                            ]
+                        }
+                    ],
                     "triggers": [
                         {
                             "id": 10000075,
@@ -381,6 +701,30 @@
                             "scale": [120, 50, 25]
                         }
                     ],
+                    "distanceFogs": [
+                        {
+                            "id": 589866,
+                            "layer": 1
+                        },
+                        {
+                            "layer": 2,
+                            "color": [
+                                0.333333,
+                                0.352941,
+                                0.615686,
+                                0
+                            ],
+                            "range": [
+                                30,
+                                100
+                            ],
+                            "colorDelta": 0.2,
+                            "rangeDelta": [
+                                200,
+                                100
+                            ]
+                        }
+                    ],
                     "addConnections": [
                         {
                             "senderId": 10000074,
@@ -394,6 +738,28 @@
                     "layers": {
                         "2": false // escape sequence
                     },
+                    "distanceFogs": [
+                        {
+                            "id": 10000081,
+                            "layer": 2,
+                            "explicit": false,
+                            "color": [
+                                0.333333,
+                                0.352941,
+                                0.615686,
+                                0
+                            ],
+                            "range": [
+                                30,
+                                100
+                            ],
+                            "colorDelta": 0.2,
+                            "rangeDelta": [
+                                200,
+                                100
+                            ]
+                        }
+                    ],
                     "timers": [
                         {
                             "id": 10000064,
@@ -448,19 +814,26 @@
                             "targetId": 655361,
                             "message": "SET_TO_MAX"
                         },
-                        // ...and de-secretize sub 4
-                        {
-                            "senderId": 10000068,
-                            "state": "INSIDE",
-                            "targetId": 655361,
-                            "message": "INCREMENT"
-                        },
                         // ...and deactivate the cutscene trigger
                         {
                             "senderId": 10000064,
                             "state": "ZERO",
                             "targetId": 655383,
                             "message": "DEACTIVATE"
+                        },
+                        // ...and activate the phazon fog
+                        {
+                            "senderId": 10000064,
+                            "state": "ZERO",
+                            "targetId": 10000081,
+                            "message": "ACTION"
+                        },
+                        // De-secretize sub 4 while the player is in a big trigger around this room
+                        {
+                            "senderId": 10000068,
+                            "state": "INSIDE",
+                            "targetId": 655361,
+                            "message": "INCREMENT"
                         }
                     ],
                     "deleteIds": [
@@ -525,26 +898,56 @@
                             "layerChangeLayerId": 2 // escape sequence
                         },
                         {
+                            "id": 10000082,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3368368303, // Crater Tunnel B
+                            "layerChangeLayerId": 1 // escape sequence
+                        },
+                        {
+                            "id": 10000083,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 1727512802, // Phazon Core
+                            "layerChangeLayerId": 1 // escape sequence
+                        },
+                        {
+                            "id": 10000084,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 739584666,  // Crater Missile Station
+                            "layerChangeLayerId": 1 // escape sequence
+                        },
+                        {
+                            "id": 10000085,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3036113310, // Crater Tunnel A
+                            "layerChangeLayerId": 1 // escape sequence
+                        },
+                        {
+                            "id": 10000086,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 730304376,  // Crater Entry Point
+                            "layerChangeLayerId": 1 // escape sequence
+                        },
+                        {
                             "id": 10000078,
                             "type": "ScriptLayerController",
                             "layerChangeRoomId": 3442151074, // Artifact Temple
                             "layerChangeLayerId": 24 // ridley
                         },
                         {
-                            "id": 10000085,
+                            "id": 10000087,
                             "type": "SaveStation"
                         }
                     ],
                     "pickups": [
                         {
-                            "id": 10000086,
+                            "id": 10000100,
                             "type": "Boost Ball",
                             "hudmemoText": "",
                             "position": [47.79, -248.01, -375],
                             "maxIncrease": -1
                         },
                         {
-                            "id": 10000087,
+                            "id": 10000101,
                             "type": "Phazon Suit",
                             "hudmemoText": "",
                             "position": [47.79, -248.01, -375],
@@ -564,8 +967,8 @@
                             "startImmediately": true
                         },
                         { // start escape sequence
-                            "id": 10000084,
-                            "time": 2
+                            "id": 10000102,
+                            "time": 1.5
                         }
                     ],
                     "streamedAudios": [
@@ -603,7 +1006,7 @@
                             "texture": "Crater"
                         },
                         {
-                            // Block
+                            // Block randomprime's essence teleporter
                             "id": 10000089,
                             "position": [52.0, -298.0, -373.0],
                             "scale": [3.5, 3.5, 6.5]
@@ -614,13 +1017,13 @@
                         {
                             "senderId": 10000088, // timer
                             "state": "ZERO",
-                            "targetId": 10000086, // anti-boost ball
+                            "targetId": 10000100, // anti-boost ball
                             "message": "DEACTIVATE"
                         },
                         {
                             "senderId": 10000088, // timer
                             "state": "ZERO",
-                            "targetId": 10000087, // anti-phazon suit
+                            "targetId": 10000101, // anti-phazon suit
                             "message": "DEACTIVATE"
                         },
                         // also remove the block that stops the randomprime essence teleporter if it doesn't exist
@@ -674,6 +1077,36 @@
                             "targetId": 10000073, // special function
                             "message": "INCREMENT"
                         },
+                        {
+                            "senderId": 721132, // Relay-start of cinema
+                            "state": "ZERO",
+                            "targetId": 10000082, // special function
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 721132, // Relay-start of cinema
+                            "state": "ZERO",
+                            "targetId": 10000083, // special function
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 721132, // Relay-start of cinema
+                            "state": "ZERO",
+                            "targetId": 10000084, // special function
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 721132, // Relay-start of cinema
+                            "state": "ZERO",
+                            "targetId": 10000085, // special function
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 721132, // Relay-start of cinema
+                            "state": "ZERO",
+                            "targetId": 10000086, // special function
+                            "message": "INCREMENT"
+                        },
                         /* ...also enable the ridley fight in temple */
                         {
                             "senderId": 721132, // Relay-start of cinema
@@ -691,13 +1124,13 @@
                         {
                             "senderId": 721132, // Relay-start of cinema
                             "state": "ZERO",
-                            "targetId": 10000086, // anti-boost ball
+                            "targetId": 10000100, // anti-boost ball
                             "message": "ACTIVATE"
                         },
                         {
                             "senderId": 721132, // Relay-start of cinema
                             "state": "ZERO",
-                            "targetId": 10000087, // anti-phazon suit
+                            "targetId": 10000101, // anti-phazon suit
                             "message": "ACTIVATE"
                         },
                         /* Fix part of the cutscene? */
@@ -724,38 +1157,44 @@
                         {
                             "senderId": 721283, // End of cutscene timer
                             "state": "ZERO",
-                            "targetId": 10000085, // save station
+                            "targetId": 10000087, // save station
                             "message": "ACTION"
                         },
                         /* ...and finally start the escape sequence */
                         {
                             "senderId": 721283, // End of cutscene timer
                             "state": "ZERO",
-                            "targetId": 10000084, // timer - start escape sequence
+                            "targetId": 10000102, // timer - start escape sequence
                             "message": "RESET_AND_START"
                         },
                         /* Start the escape sequence if the player is coming back from a death */
                         {
                             "senderId": 10000090, // timer
                             "state": "ZERO",
-                            "targetId": 10000084, // timer - start escape sequence
+                            "targetId": 10000102, // timer - start escape sequence
                             "message": "RESET_AND_START"
                         },
-                        /* Implement the relay to start the escape sequence */
                         {
-                            "senderId": 10000084, // relay - start escape sequence
+                            "senderId": 10000090, // timer
+                            "state": "ZERO",
+                            "targetId": 721290, // Distance Fog
+                            "message": "ACTION"
+                        },
+                        /* Implement the timer to start the escape sequence */
+                        {
+                            "senderId": 10000102, // timer - start escape sequence
                             "state": "ZERO",
                             "targetId": 10000060, // Hudmemo
                             "message": "SET_TO_ZERO"
                         },
                         {
-                            "senderId": 10000084, // relay - start escape sequence
+                            "senderId": 10000102, // relay - start escape sequence
                             "state": "ZERO",
                             "targetId": 10000061, // escape sequence
                             "message": "ACTION"
                         },
                         {
-                            "senderId": 10000084, // relay - start escape sequence
+                            "senderId": 10000102, // relay - start escape sequence
                             "state": "ZERO",
                             "targetId": 10000062, // Music
                             "message": "PLAY"
