@@ -19,7 +19,7 @@
             "scanText": "Return Artifact of XXX",
             "hudmemoText": "Artifact of XXX returned.\nPeace has been restored.",
             "modalHudmemo": true,
-            "respawn": false
+            "respawn": true
         }
     ],
     "specialFunctions": [

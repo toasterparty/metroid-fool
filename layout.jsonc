@@ -1897,11 +1897,6 @@
                     }
                 },
                 "Control Tower": {
-                    "pickups": [
-                        {
-                            "type": "Nothing"
-                        }
-                    ],
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
@@ -1911,7 +1906,106 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "layers": {
+                        "8": false, // True if artifact taken
+                        "9": false  // True if temple activated
+                    },
+                    "pickups": [
+                        { // Take Pickup
+                            // id: 2557135
+                            "type": "Nothing",
+                            "model": "Artifact of Elder",
+                            "scanText": "Artifact of Elder",
+                            "hudmemoText": "Artifact of Elder Acquired!"
+                        },
+                        { // Return Pickup
+                            "id": 12000021,
+                            "position": [23.0583, -814.2377, 159.0728],
+                            "type": "Nothing",
+                            "model": "Nothing",
+                            "scanText": "Return Artifact of Elder",
+                            "hudmemoText": "Artifact of Elder returned.\nPeace has been restored.",
+                            "modalHudmemo": true,
+                            "respawn": true
+                        }
+                    ],
+                    "specialFunctions": [
+                        {
+                            "id": 12000022,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3442151074, // Artifact Temple
+                            "layerChangeLayerId": 3
+                        },
+                        {
+                            "id": 12000023,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3858019950, // This room
+                            "layerChangeLayerId": 8
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 12000024,
+                            "time": 0.5,
+                            "startImmediately": true
+                        },
+                        {
+                            "id": 12000025,
+                            "layer": 9,
+                            "time": 0.1,
+                            "startImmediately": true
+                        }
+                    ],
+                    "editObjs": {
+                        "12000021": { // Move return pickup to it's own layer
+                            "layer": 8
+                        }
+                    },
+                    "addConnections": [
+                        { // Taking the artifact deactivates the totem
+                            "senderId": 2557135,
+                            "state": "ARRIVED",
+                            "targetId": 12000022,
+                            "message": "DECREMENT"
+                        },
+                        { // Returning the artifact reactivates the totem
+                            "senderId": 12000021,
+                            "state": "ARRIVED",
+                            "targetId": 12000022,
+                            "message": "INCREMENT"
+                        },
+                        { // Taking the artifact activates the return pickup in this room (hidden until temple is activated)
+                            "senderId": 2557135,
+                            "state": "ARRIVED",
+                            "targetId": 12000023,
+                            "message": "INCREMENT"
+                        },
+                        { // Returning the artifact disables the layer for the return pickup 
+                            "senderId": 12000021,
+                            "state": "ARRIVED",
+                            "targetId": 12000023,
+                            "message": "DECREMENT"
+                        },
+                        { // Deactivate the return pickup 0.1s after room load
+                            "senderId": 12000024,
+                            "state": "ZERO",
+                            "targetId": 12000021,
+                            "message": "DEACTIVATE"
+                        },
+                        { // Deactivate the take pickup 0.02s after room load (only if temple activated)
+                            "senderId": 12000025,
+                            "state": "ZERO",
+                            "targetId": 2557135,
+                            "message": "DEACTIVATE"
+                        },
+                        { // Cancel the despawning of the return pickup (only if temple activated)
+                            "senderId": 12000025,
+                            "state": "ZERO",
+                            "targetId": 12000024,
+                            "message": "DEACTIVATE"
+                        }
+                    ]
                 },
                 "Research Core": {
                     "pickups": [
@@ -2457,7 +2551,7 @@
                             "scanText": "Return Artifact of Strength",
                             "hudmemoText": "Artifact of Strength returned.\nPeace has been restored.",
                             "modalHudmemo": true,
-                            "respawn": false
+                            "respawn": true
                         }
                     ],
                     "specialFunctions": [
@@ -6478,20 +6572,149 @@
                     }
                 },
                 "Sunchamber": {
-                    "pickups": [
-                        {
-                            "type": "Nothing"
-                        },
-                        {
-                            "type": "Nothing"
-                        }
-                    ],
                     "doors": {
                         "1": {
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "layers": {
+                        "8": false, // True if artifact taken
+                        "9": false  // True if temple activated
+                    },
+                    "pickups": [
+                        {
+                            "type": "Varia Suit"
+                        },
+                        { // Return Pickup
+                            // id: 2436989
+                            "type": "Nothing",
+                            "model": "Nothing",
+                            "scanText": "Return Artifact of Wild",
+                            "hudmemoText": "Artifact of Wild returned.\nPeace has been restored.",
+                            "modalHudmemo": true
+                        },
+                        { // Take Pickup
+                            "id": 12000026,
+                            "position": [284.2429, 137.1596, 79.6488],
+                            "type": "Nothing",
+                            "model": "Artifact of Wild",
+                            "scanText": "Artifact of Wild",
+                            "hudmemoText": "Artifact of Wild Acquired!",
+                            "respawn": true
+                        }
+                    ],
+                    "specialFunctions": [
+                        {
+                            "id": 12000027,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3442151074, // Artifact Temple
+                            "layerChangeLayerId": 4
+                        },
+                        {
+                            "id": 12000028,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 4066558442, // This room
+                            "layerChangeLayerId": 8
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 12000029,
+                            "time": 0.5,
+                            "startImmediately": true
+                        },
+                        {
+                            "id": 12000031,
+                            "layer": 8,
+                            "time": 0.02,
+                            "startImmediately": true
+                        },
+                        {
+                            "id": 12000030,
+                            "layer": 9,
+                            "time": 0.1,
+                            "startImmediately": true
+                        }
+                    ],
+                    "editObjs": {
+                        "12000026": { // Move the take pickup to the ghosts layer
+                            "layer": 6
+                        },
+                        "2435190": { // Move the ghost fight trigger to it's own layer
+                            "layer": 8
+                        },
+                        "2435153": { // ...and the black smoke
+                            "layer": 8
+                        },
+                        // ...and ghost sounds
+                        "2435994": {"layer": 8},
+                        "2435995": {"layer": 8},
+                        "2435996": {"layer": 8},
+                        "2435997": {"layer": 8}
+                    },
+                    "addConnections": [
+                        { // Taking the artifact deactivates the totem
+                            "senderId": 12000026,
+                            "state": "ARRIVED",
+                            "targetId": 12000027,
+                            "message": "DECREMENT"
+                        },
+                        { // Returning the artifact reactivates the totem
+                            "senderId": 2436989,
+                            "state": "ARRIVED",
+                            "targetId": 12000027,
+                            "message": "INCREMENT"
+                        },
+                        { // Taking the artifact activates the ghost fight trigger in this room (hidden until temple is activated)
+                            "senderId": 12000026,
+                            "state": "ARRIVED",
+                            "targetId": 12000028,
+                            "message": "INCREMENT"
+                        },
+                        { // Returning the artifact disables the layer for the ghost fight trigger
+                            "senderId": 2436989,
+                            "state": "ARRIVED",
+                            "targetId": 12000028,
+                            "message": "DECREMENT"
+                        },
+                        { // Deactivate the ghost fight trigger 0.1s after room load
+                            "senderId": 12000029,
+                            "state": "ZERO",
+                            "targetId": 2435190,
+                            "message": "DEACTIVATE"
+                        },
+                        { // ...and ambient ghost noises
+                            "senderId": 12000029,
+                            "state": "ZERO",
+                            "targetId": 2436002, // relay
+                            "message": "SET_TO_MAX"
+                        },
+                        { // ...and the black smoke
+                            "senderId": 12000029,
+                            "state": "ZERO",
+                            "targetId": 2435153,
+                            "message": "DEACTIVATE"
+                        },
+                        { // Deactivate the take pickup 0.02s after room load (only if temple activated)
+                            "senderId": 12000030,
+                            "state": "ZERO",
+                            "targetId": 12000026,
+                            "message": "DEACTIVATE"
+                        },
+                        { // Cancel the deactivation of the ghost fight trigger (only if temple activated)
+                            "senderId": 12000030,
+                            "state": "ZERO",
+                            "targetId": 12000029,
+                            "message": "DEACTIVATE"
+                        },
+                        { // Deactivate the take pickup after room load if it's been collected and temple hasn't been activated yet
+                            "senderId": 12000031,
+                            "state": "ZERO",
+                            "targetId": 12000026,
+                            "message": "DEACTIVATE"
+                        }
+                    ]
                 },
                 "Watery Hall Access": {
                     "pickups": [
