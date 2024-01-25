@@ -3040,6 +3040,10 @@
                             "layer": 7,
                             "time": 0.1,
                             "startImmediately": true
+                        },
+                        {
+                            "id": 853227,
+                            "time": 0.02 // alert the phazon elite faster
                         }
                     ],
                     "editObjs": {
@@ -3052,8 +3056,11 @@
                         "852953": { // POI_03_Mines Elite Pirate Scan.scan
                             "layer": 6
                         },
-                        "852459": { // Effect
+                        "852393": { // Breakout timer
                             "layer": 6
+                        },
+                        "852388": { // Phazon Elite
+                            "speed": 1.8
                         }
                     },
                     "addConnections": [
@@ -3109,9 +3116,11 @@
                         {
                             "senderId": 12000035,
                             "state": "ZERO",
-                            "targetId": 852459,
+                            "targetId": 852393,
                             "message": "DEACTIVATE"
                         },
+                        
+
                         { // Deactivate the take pickup 0.02s after room load (only if temple activated)
                             "senderId": 12000036,
                             "state": "ZERO",
@@ -3129,7 +3138,32 @@
                             "state": "ZERO",
                             "targetId": 12000032,
                             "message": "DEACTIVATE"
+                        },
+
+                        /* Re-use metroid triggers to break out phazon elite */
+                        {
+                            "senderId": 852782,
+                            "state": "ENTERED",
+                            "targetId": 852393,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 852781,
+                            "state": "ENTERED",
+                            "targetId": 852393,
+                            "message": "RESET_AND_START"
+                        },
+
+                        // Make the elite pirate fight a one-time deal
+                        {
+                            "senderId": 852418,
+                            "state": "ZERO",
+                            "targetId": 852393,
+                            "message": "DEACTIVATE"
                         }
+                    ],
+                    "deleteIds": [
+                        853192, 852459, 852507 // Don't actually play the cutscene for elite pirate breakout, just do it 
                     ]
                 },
                 "Elevator A": {
@@ -3324,8 +3358,11 @@
                         "2": {
                             "shieldType": "Blue",
                             "blastShieldType": "None"
-                        }
                     }
+                    },
+                    "deleteIds": [
+                        1770787 // Don't disable ninjas in Elite Research
+                    ]
                 },
                 "Elite Quarters Access": {
                     "doors": {
@@ -5063,6 +5100,12 @@
                             "layerChangeLayerId": 7 // temple activated
                         },
                         {
+                            "id": 10000124,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3544419546, // Elite Research
+                            "layerChangeLayerId": 4 // Metroids
+                        },
+                        {
                             "id": 10000117,
                             "type": "ScriptLayerController",
                             "layerChangeRoomId": 3748365169, // Life Grove
@@ -5167,6 +5210,12 @@
                             "senderId": 1049044,
                             "state": "ARRIVED",
                             "targetId": 10000116,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1049044,
+                            "state": "ARRIVED",
+                            "targetId": 10000124,
                             "message": "INCREMENT"
                         },
                         {
