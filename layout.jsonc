@@ -107,7 +107,7 @@
             "Artifact of Chozo": "Illegal possesion of &push;&main-color=#43CD80;Artifact of Chozo&pop; detected. You must return this item or suffer consequences.",
             "Artifact of Elder": "Didn't your mother teach you better than to steal things like the &push;&main-color=#43CD80;Artifact of Elder&pop;? Put it back and I *might* forgive you.",
             "Artifact of Lifegiver": "Return the &push;&main-color=#43CD80;Artifact of Lifegiver&pop; and I won't key your truck.",
-            "Artifact of Nature": "&push;&main-color=#43CD80;Artifact of Nature&pop;",
+            "Artifact of Nature": "The &push;&main-color=#43CD80;Artifact of Nature&pop; was a vitally important spiritual conduit of the populations indiginous to Magmoor...\nuntil you took it. Please return it immediately to BEGIN to reconcile this cultural atrocity.",
             "Artifact of Newborn": "You won't like me when I'm angry. Put the &push;&main-color=#43CD80;Artifact of Newborn&pop; back where you found it now.",
             "Artifact of Spirit": "grrr arrrr grrrrrrrrawrrrr. &push;&main-color=#43CD80;Artifact of Spirit&pop; stolen make me ANGRY",
             "Artifact of Strength": "I would not put a theif in my mouth to steal my &push;&main-color=#43CD80;Artifact of Strength&pop;\n - William Shakespeare",
@@ -2005,6 +2005,9 @@
                             "targetId": 12000024,
                             "message": "DEACTIVATE"
                         }
+                    ],
+                    "deleteIds": [
+                        2556606 // Don't activate flying pirates in triclops pit (that's reserved for artifact farce)
                     ]
                 },
                 "Research Core": {
@@ -2464,11 +2467,6 @@
                     }
                 },
                 "Triclops Pit": {
-                    "pickups": [
-                        {
-                            "type": "Nothing"
-                        }
-                    ],
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
@@ -2478,7 +2476,123 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "layers": {
+                        "1": true, // Flyind Pirates (minus the pirates)
+                        "4": false, // True if artifact taken
+                        "5": false  // True if temple activated
+                    },
+                    "pickups": [
+                        {
+                            "type": "Nothing"
+                        },
+                        { // Take Pickup
+                            "id": 12000044,
+                            "position": [89.0889, -148.4783, 47.1211],
+                            "type": "Nothing",
+                            "model": "Artifact of Nature",
+                            "scanText": "Artifact of Nature",
+                            "hudmemoText": "Artifact of Nature Acquired!"
+                        },
+                        { // Return Pickup
+                            "id": 12000045,
+                            "position": [89.0889, -148.4783, 47.1211],
+                            "type": "Nothing",
+                            "model": "Nothing",
+                            "scanText": "Return Artifact of Nature",
+                            "hudmemoText": "Artifact of Nature returned.\nPeace has been restored.",
+                            "modalHudmemo": true,
+                            "respawn": true
+                        }
+                    ],
+                    "specialFunctions": [
+                        {
+                            "id": 12000046,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3442151074, // Artifact Temple
+                            "layerChangeLayerId": 8
+                        },
+                        {
+                            "id": 12000047,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 2429866667, // This room
+                            "layerChangeLayerId": 4
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 12000048,
+                            "time": 0.5,
+                            "startImmediately": true
+                        },
+                        {
+                            "id": 12000049,
+                            "layer": 5,
+                            "time": 0.1,
+                            "startImmediately": true
+                        }
+                    ],
+                    "editObjs": {
+                        "12000045": { // Move return pickup to it's own layer
+                            "layer": 4
+                        },
+                        "393329": { // flying pirate
+                            "layer": 5,
+                            "vulnerability": "Phazon"
+                        },
+                        "393330": { // flying pirate
+                            "layer": 5,
+                            "vulnerability": "Phazon"
+                        },
+                        "393446": { // TODO: Debug platform
+                            "speed": 10.0,
+                            "position": [76.0138, -140.0701, 42.6285]
+                        }
+                    },
+                    "addConnections": [
+                        { // Taking the artifact deactivates the totem
+                            "senderId": 12000044,
+                            "state": "ARRIVED",
+                            "targetId": 12000046,
+                            "message": "DECREMENT"
+                        },
+                        { // Returning the artifact reactivates the totem
+                            "senderId": 12000045,
+                            "state": "ARRIVED",
+                            "targetId": 12000046,
+                            "message": "INCREMENT"
+                        },
+                        { // Taking the artifact activates the return pickup in this room (hidden until temple is activated)
+                            "senderId": 12000044,
+                            "state": "ARRIVED",
+                            "targetId": 12000047,
+                            "message": "INCREMENT"
+                        },
+                        { // Returning the artifact disables the layer for the return pickup 
+                            "senderId": 12000045,
+                            "state": "ARRIVED",
+                            "targetId": 12000047,
+                            "message": "DECREMENT"
+                        },
+                        { // Deactivate the return pickup 0.1s after room load
+                            "senderId": 12000048,
+                            "state": "ZERO",
+                            "targetId": 12000045,
+                            "message": "DEACTIVATE"
+                        },
+                        { // Deactivate the take pickup 0.02s after room load (only if temple activated)
+                            "senderId": 12000049,
+                            "state": "ZERO",
+                            "targetId": 12000044,
+                            "message": "DEACTIVATE"
+                        },
+                        { // Cancel the despawning of the return pickup (only if temple activated)
+                            "senderId": 12000049,
+                            "state": "ZERO",
+                            "targetId": 12000048,
+                            "message": "DEACTIVATE"
+                        }
+                    ]
                 },
                 "Monitor Tunnel": {
                     "doors": {
