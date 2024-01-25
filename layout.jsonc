@@ -2973,14 +2973,6 @@
                     }
                 },
                 "Elite Research": {
-                    "pickups": [
-                        {
-                            "type": "Nothing"
-                        },
-                        {
-                            "type": "Nothing"
-                        }
-                    ],
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
@@ -2990,7 +2982,155 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "layers": {
+                        "6": false, // True if artifact taken
+                        "7": false  // True if temple activated
+                    },
+                    "pickups": [
+                        { // Return Pickup
+                            // id: 852800
+                            "type": "Nothing",
+                            "model": "Nothing",
+                            "scanText": "Return Artifact of Warrior",
+                            "hudmemoText": "Artifact of Warrior returned.\nPeace has been restored.",
+                            "modalHudmemo": true
+                        },
+                        { // Hidden wall item
+                            "type": "Nothing"
+                        },
+                        { // Take Pickup
+                            "id": 12000032,
+                            "position": [-25.6364, 166.7252, 24.7745],
+                            "type": "Nothing",
+                            "model": "Artifact of Warrior",
+                            "scanText": "Artifact of Warrior",
+                            "hudmemoText": "Artifact of Warrior Acquired!",
+                            "respawn": true
+                        }
+                    ],
+                    "specialFunctions": [
+                        {
+                            "id": 12000033,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3442151074, // Artifact Temple
+                            "layerChangeLayerId": 6
+                        },
+                        {
+                            "id": 12000034,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3544419546, // This room
+                            "layerChangeLayerId": 6
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 12000035,
+                            "time": 0.5,
+                            "startImmediately": true
+                        },
+                        {
+                            "id": 12000037,
+                            "layer": 6,
+                            "time": 0.02,
+                            "startImmediately": true
+                        },
+                        {
+                            "id": 12000036,
+                            "layer": 7,
+                            "time": 0.1,
+                            "startImmediately": true
+                        }
+                    ],
+                    "editObjs": {
+                        "852214": { // Platform_holding Tank
+                            "layer": 6
+                        },
+                        "852391": { // Actor Dummy Pirate Bustout
+                            "layer": 6
+                        },
+                        "852953": { // POI_03_Mines Elite Pirate Scan.scan
+                            "layer": 6
+                        },
+                        "852459": { // Effect
+                            "layer": 6
+                        }
+                    },
+                    "addConnections": [
+                        { // Taking the artifact deactivates the totem
+                            "senderId": 12000032,
+                            "state": "ARRIVED",
+                            "targetId": 12000033,
+                            "message": "DECREMENT"
+                        },
+                        { // Returning the artifact reactivates the totem
+                            "senderId": 852800,
+                            "state": "ARRIVED",
+                            "targetId": 12000033,
+                            "message": "INCREMENT"
+                        },
+                        { // Taking the artifact activates the return pickup in this room (hidden until temple is activated)
+                            "senderId": 12000032,
+                            "state": "ARRIVED",
+                            "targetId": 12000034,
+                            "message": "INCREMENT"
+                        },
+                        { // Returning the artifact disables the layer for the return pickup 
+                            "senderId": 852800,
+                            "state": "ARRIVED",
+                            "targetId": 12000034,
+                            "message": "DECREMENT"
+                        },
+                        { // Deactivate the return pickup 0.1s after room load
+                            "senderId": 12000035,
+                            "state": "ZERO",
+                            "targetId": 852800,
+                            "message": "DEACTIVATE"
+                        },
+                        // ...and the elite pirate fight
+                        {
+                            "senderId": 12000035,
+                            "state": "ZERO",
+                            "targetId": 852214,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 12000035,
+                            "state": "ZERO",
+                            "targetId": 852391,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 12000035,
+                            "state": "ZERO",
+                            "targetId": 852953,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 12000035,
+                            "state": "ZERO",
+                            "targetId": 852459,
+                            "message": "DEACTIVATE"
+                        },
+                        { // Deactivate the take pickup 0.02s after room load (only if temple activated)
+                            "senderId": 12000036,
+                            "state": "ZERO",
+                            "targetId": 12000032,
+                            "message": "DEACTIVATE"
+                        },
+                        { // Cancel the despawning of the return pickup (only if temple activated)
+                            "senderId": 12000036,
+                            "state": "ZERO",
+                            "targetId": 12000035,
+                            "message": "DEACTIVATE"
+                        },
+                        { // Deactivate the take pickup after room load if it's been collected and temple hasn't been activated yet
+                            "senderId": 12000037,
+                            "state": "ZERO",
+                            "targetId": 12000032,
+                            "message": "DEACTIVATE"
+                        }
+                    ]
                 },
                 "Elevator A": {
                     "doors": {
