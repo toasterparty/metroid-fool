@@ -5586,13 +5586,159 @@
                     }
                 },
                 "Life Grove": {
+                    "layers": {
+                        "3": false, // True if artifact taken
+                        "4": false  // True if temple activated
+                    },
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Ice Spreader"
+                        },
+                        { // Take Pickup
+                            // id: 2753076
+                            "type": "Nothing",
+                            "model": "Artifact of Chozo",
+                            "scanText": "Artifact of Chozo",
+                            "hudmemoText": "Artifact of Chozo Acquired!"
+                        },
+                        { // Return Pickup
+                            "id": 12000038,
+                            "position": [17.6962, 25.8975, 30.343],
+                            "type": "Nothing",
+                            "model": "Nothing",
+                            "scanText": "Return Artifact of Chozo",
+                            "hudmemoText": "Artifact of Chozo returned.\nPeace has been restored.",
+                            "modalHudmemo": true,
+                            "respawn": true
+                        }
+                    ],
+                    "specialFunctions": [
+                        {
+                            "id": 12000039,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3442151074, // Artifact Temple
+                            "layerChangeLayerId": 7
                         },
                         {
-                            "type": "Nothing"
+                            "id": 12000040,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3748365169, // This room
+                            "layerChangeLayerId": 3
                         }
+                    ],
+                    "timers": [
+                        {
+                            "id": 12000041,
+                            "time": 0.5,
+                            "startImmediately": true
+                        },
+                        {
+                            "id": 12000042,
+                            "layer": 4,
+                            "time": 0.1,
+                            "startImmediately": true
+                        }
+                    ],
+                    "blocks": [
+                        { // block exit until the player returns the artifact
+                            "id": 12000043,
+                            "active": false,
+                            "position": [17.6337, 53.5768, 21.6322],
+                            "scale": [6, 3, 6]
+                        }
+                    ],
+                    "editObjs": {
+                        "12000038": { // Move return pickup to it's own layer
+                            "layer": 3
+                        },
+                        "2752574": { // Ghost trigger
+                            "layer": 3,
+                            "position": [17, -45, 27],
+                            "scale": [80, 20, 50]
+                        },
+                        /* Make the ghosts annoying */
+                        "2752706": {"speed": 1.2},
+                        "2752722": {"speed": 1.6},
+                        "2752729": {"speed": 2.0}
+                    },
+                    "addConnections": [
+                        { // Taking the artifact deactivates the totem
+                            "senderId": 2753076,
+                            "state": "ARRIVED",
+                            "targetId": 12000039,
+                            "message": "DECREMENT"
+                        },
+                        { // Returning the artifact reactivates the totem
+                            "senderId": 12000038,
+                            "state": "ARRIVED",
+                            "targetId": 12000039,
+                            "message": "INCREMENT"
+                        },
+                        { // Returning the artifact unlocks the dock
+                            "senderId": 12000038,
+                            "state": "ARRIVED",
+                            "targetId": 12000043,
+                            "message": "DEACTIVATE"
+                        },
+                        { // Taking the artifact activates the return pickup in this room (hidden until temple is activated)
+                            "senderId": 2753076,
+                            "state": "ARRIVED",
+                            "targetId": 12000040,
+                            "message": "INCREMENT"
+                        },
+                        { // Returning the artifact disables the layer for the return pickup 
+                            "senderId": 12000038,
+                            "state": "ARRIVED",
+                            "targetId": 12000040,
+                            "message": "DECREMENT"
+                        },
+                        { // Deactivate the return pickup 0.1s after room load
+                            "senderId": 12000041,
+                            "state": "ZERO",
+                            "targetId": 12000038,
+                            "message": "DEACTIVATE"
+                        },
+                        { // ..also deactivate the ghost trigger
+                            "senderId": 12000041,
+                            "state": "ZERO",
+                            "targetId": 2752574,
+                            "message": "DEACTIVATE"
+                        },
+                        { // Deactivate the take pickup 0.02s after room load (only if temple activated)
+                            "senderId": 12000042,
+                            "state": "ZERO",
+                            "targetId": 2753076,
+                            "message": "DEACTIVATE"
+                        },
+                        { // Cancel the despawning of the return pickup (only if temple activated)
+                            "senderId": 12000042,
+                            "state": "ZERO",
+                            "targetId": 12000041,
+                            "message": "DEACTIVATE"
+                        },
+                        { // Deactivate it anyways
+                            "senderId": 12000042,
+                            "state": "ZERO",
+                            "targetId": 12000038,
+                            "message": "DEACTIVATE"
+                        },
+                        { // When the ghosts die, spawn the return pickup
+                            "senderId": 2752938,
+                            "state": "ZERO",
+                            "targetId": 12000038,
+                            "message": "ACTIVATE"
+                        },
+                        { // When the ghosts die, lock the dock
+                            "senderId": 2752938,
+                            "state": "ZERO",
+                            "targetId": 12000043,
+                            "message": "ACTIVATE"
+                        }
+                    ],
+                    "deleteIds": [
+                        2753267, // remove extra ghost trigger
+                        2752841, 2753268, // remove ghost cutscene reposition
+                        2752526, 2752529 // remove randomprime cutscene skips for ghosts
                     ]
                 },
                 "Transport to Phazon Mines East": {
@@ -5751,7 +5897,10 @@
                             "type": "Missile"
                         },
                         { // Vault Ledge
-                            "type": "Missile"
+                            "type": "Ice Trap",
+                            "model": "Space Jump Boots",
+                            "scanText": "Space Jump boots",
+                            "hudmemoText": "Goteeeem"
                         }
                     ],
                     "doors": {
