@@ -2485,11 +2485,6 @@
                     }
                 },
                 "Storage Cave": {
-                    "pickups": [
-                        {
-                            "type": "Nothing"
-                        }
-                    ],
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
@@ -2499,7 +2494,106 @@
                                 "dockNum": 3
                             }
                         }
-                    }
+                    },
+                    "layers": {
+                        "1": false, // True if artifact taken
+                        "2": false  // True if temple activated
+                    },
+                    "pickups": [
+                        { // Take Pickup
+                            // id: 3539113
+                            "type": "Nothing",
+                            "model": "Artifact of Spirit",
+                            "scanText": "Artifact of Spirit",
+                            "hudmemoText": "Artifact of Spirit Acquired!"
+                        },
+                        { // Return Pickup
+                            "id": 12000067,
+                            "position": [214.0319, -1400.9252, 79.1557],
+                            "type": "Nothing",
+                            "model": "Nothing",
+                            "scanText": "Return Artifact of Spirit",
+                            "hudmemoText": "Artifact of Spirit returned.\nPeace has been restored.",
+                            "modalHudmemo": true,
+                            "respawn": true
+                        }
+                    ],
+                    "specialFunctions": [
+                        {
+                            "id": 12000068,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3442151074, // Artifact Temple
+                            "layerChangeLayerId": 11
+                        },
+                        {
+                            "id": 12000069,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3233873364, // This room
+                            "layerChangeLayerId": 1
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 12000070,
+                            "time": 0.5,
+                            "startImmediately": true
+                        },
+                        {
+                            "id": 12000071,
+                            "layer": 2,
+                            "time": 0.1,
+                            "startImmediately": true
+                        }
+                    ],
+                    "editObjs": {
+                        "12000067": { // Move return pickup to it's own layer
+                            "layer": 1
+                        }
+                    },
+                    "addConnections": [
+                        { // Taking the artifact deactivates the totem
+                            "senderId": 3539113,
+                            "state": "ARRIVED",
+                            "targetId": 12000068,
+                            "message": "DECREMENT"
+                        },
+                        { // Returning the artifact reactivates the totem
+                            "senderId": 12000067,
+                            "state": "ARRIVED",
+                            "targetId": 12000068,
+                            "message": "INCREMENT"
+                        },
+                        { // Taking the artifact activates the return pickup in this room (hidden until temple is activated)
+                            "senderId": 3539113,
+                            "state": "ARRIVED",
+                            "targetId": 12000069,
+                            "message": "INCREMENT"
+                        },
+                        { // Returning the artifact disables the layer for the return pickup 
+                            "senderId": 12000067,
+                            "state": "ARRIVED",
+                            "targetId": 12000069,
+                            "message": "DECREMENT"
+                        },
+                        { // Deactivate the return pickup 0.1s after room load
+                            "senderId": 12000070,
+                            "state": "ZERO",
+                            "targetId": 12000067,
+                            "message": "DEACTIVATE"
+                        },
+                        { // Deactivate the take pickup 0.02s after room load (only if temple activated)
+                            "senderId": 12000071,
+                            "state": "ZERO",
+                            "targetId": 3539113,
+                            "message": "DEACTIVATE"
+                        },
+                        { // Cancel the despawning of the return pickup (only if temple activated)
+                            "senderId": 12000071,
+                            "state": "ZERO",
+                            "targetId": 12000070,
+                            "message": "DEACTIVATE"
+                        }
+                    ]
                 },
                 "Security Cave": {
                     "pickups": [
