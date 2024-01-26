@@ -111,7 +111,7 @@
             "Artifact of Newborn": "You won't like me when I'm angry. Put the &push;&main-color=#43CD80;Artifact of Newborn&pop; back where you found it now.",
             "Artifact of Spirit": "grrr arrrr grrrrrrrrawrrrr. &push;&main-color=#43CD80;Artifact of Spirit&pop; stolen make me ANGRY",
             "Artifact of Strength": "I would not put a theif in my mouth to steal my &push;&main-color=#43CD80;Artifact of Strength&pop;\n - William Shakespeare",
-            "Artifact of Sun": "I'm not helping you until you return the &push;&main-color=#43CD80;Artifact of Sun&pop; back where you found it.",
+            "Artifact of Sun": "We aren't on speaking terms right now. Not until you return the &push;&main-color=#43CD80;Artifact of Sun&pop; to where you stole it.",
             "Artifact of Warrior": "What kind of person even steals something like &push;&main-color=#43CD80;Artifact of Warrior&pop;? Was it fun? I hope you die.",
             "Artifact of Wild": "Descrated this sacred place with your sticky hands. &push;&main-color=#43CD80;Artifact of Wild&pop; must find peace for cradle unfurl.",
             "Artifact of World": "Return the &push;&main-color=#43CD80;Artifact of World&pop;, then eat a bag of dicks."
@@ -1345,11 +1345,6 @@
                     }
                 },
                 "Chozo Ice Temple": {
-                    "pickups": [
-                        {
-                            "type": "Nothing"
-                        }
-                    ],
                     "doors": {
                         "0": {
                             "destination": {
@@ -1358,7 +1353,155 @@
                             }
                         }
                         // Top door is vanilla
-                    }
+                    },
+                    "layers": {
+                        "3": true, // Bombus (minus the bombus)
+                        "4": false, // True if artifact taken
+                        "5": false  // True if temple activated
+                    },
+                    "pickups": [
+                        { // Take Pickup
+                            // id: 524887
+                            "type": "Nothing",
+                            "model": "Artifact of Sun",
+                            "scanText": "Artifact of Sun",
+                            "hudmemoText": "Artifact of Sun Acquired!"
+                        },
+                        { // Return Pickup
+                            "id": 12000050,
+                            "position": [-239.7344, -204.5509, 41.4993],
+                            "type": "Nothing",
+                            "model": "Nothing",
+                            "scanText": "Return Artifact of Sun",
+                            "hudmemoText": "Artifact of Sun returned.\nPeace has been restored.",
+                            "modalHudmemo": true,
+                            "respawn": true
+                        }
+                    ],
+                    "specialFunctions": [
+                        {
+                            "id": 12000051,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3442151074, // Artifact Temple
+                            "layerChangeLayerId": 9
+                        },
+                        {
+                            "id": 12000052,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3408755424, // This room
+                            "layerChangeLayerId": 4
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 12000053,
+                            "time": 0.5,
+                            "startImmediately": true
+                        },
+                        {
+                            "id": 12000054,
+                            "layer": 5,
+                            "time": 0.1,
+                            "startImmediately": true
+                        }
+                    ],
+                    "waypoints": [
+                        // Bombu waypoints
+                        {
+                            "id": 524708,
+                            "pause": 9999999999,
+                            "position": [-236.6068, -201.2301, 42.0458]
+                        },
+                        {
+                            "id": 524713,
+                            "pause": 9999999999,
+                            "position": [-243.0068, -202.9301, 42.0458]
+                        },
+                        {
+                            "id": 524716,
+                            "pause": 9999999999,
+                            "position": [-239.8068, -201.2301, 44.0458]
+                        },
+                        {
+                            "id": 524717,
+                            "pause": 9999999999,
+                            "position": [-239.8068, -201.2301, 44.0458]
+                        }
+                    ],
+                    "editObjs": {
+                        "12000050": { // Move return pickup to it's own layer
+                            "layer": 4
+                        },
+                        "524570": { // Mound-Before
+                            "layer": 5,
+                            "position": [-239.4064, -200.7415, 38.279]
+                        },
+                        "524571": { // Mound-After
+                            "layer": 5,
+                            "position": [-239.4064, -200.7415, 38.279]
+                        },
+                        "524569": { // Babygoth
+                            "layer": 5,
+                            "position": [-239.4064, -200.7415, 38.479],
+                            "detectionRange": 0.6
+                        },
+                        "524707": {
+                            "layer": 5,
+                            "position": [-239.8068, -201.2301, 44.0458]
+                        },
+                        "524723": {
+                            "layer": 5,
+                            "position": [-243.0068, -202.9301, 42.0458]
+                        },
+                        "524724": {
+                            "layer": 5,
+                            "position": [-236.6068, -201.2301, 42.0458]
+                        }
+                    },
+                    "addConnections": [
+                        { // Taking the artifact deactivates the totem
+                            "senderId": 524887,
+                            "state": "ARRIVED",
+                            "targetId": 12000051,
+                            "message": "DECREMENT"
+                        },
+                        { // Returning the artifact reactivates the totem
+                            "senderId": 12000050,
+                            "state": "ARRIVED",
+                            "targetId": 12000051,
+                            "message": "INCREMENT"
+                        },
+                        { // Taking the artifact activates the return pickup in this room (hidden until temple is activated)
+                            "senderId": 524887,
+                            "state": "ARRIVED",
+                            "targetId": 12000052,
+                            "message": "INCREMENT"
+                        },
+                        { // Returning the artifact disables the layer for the return pickup 
+                            "senderId": 12000050,
+                            "state": "ARRIVED",
+                            "targetId": 12000052,
+                            "message": "DECREMENT"
+                        },
+                        { // Deactivate the return pickup 0.1s after room load
+                            "senderId": 12000053,
+                            "state": "ZERO",
+                            "targetId": 12000050,
+                            "message": "DEACTIVATE"
+                        },
+                        { // Deactivate the take pickup 0.02s after room load (only if temple activated)
+                            "senderId": 12000054,
+                            "state": "ZERO",
+                            "targetId": 524887,
+                            "message": "DEACTIVATE"
+                        },
+                        { // Cancel the despawning of the return pickup (only if temple activated)
+                            "senderId": 12000054,
+                            "state": "ZERO",
+                            "targetId": 12000053,
+                            "message": "DEACTIVATE"
+                        }
+                    ]
                 },
                 "Ice Ruins West": {
                     "layers": {
@@ -1475,9 +1618,12 @@
                             "destination": {
                                 "roomName": "North Quarantine Tunnel",
                                 "dockNum": 1
-                            }
                         }
                     }
+                    },
+                    "deleteIds": [
+                        917703, 917704 // don't change layers in chozo ice temple
+                    ]
                 },
                 "Ruined Courtyard": {
                     "pickups": [
