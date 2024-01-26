@@ -3862,11 +3862,6 @@
                     }
                 },
                 "Phazon Mining Tunnel": {
-                    "pickups": [
-                        {
-                            "type": "Nothing"
-                        }
-                    ],
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
@@ -3876,7 +3871,159 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "layers": {
+                        "1": false, // True if artifact taken
+                        "2": false  // True if temple activated
+                    },
+                    "pickups": [
+                        { // Take Pickup
+                            // id: 2556031
+                            "type": "Nothing",
+                            "model": "Artifact of Newborn",
+                            "scanText": "Artifact of Newborn",
+                            "hudmemoText": "Artifact of Newborn Acquired!"
+                        },
+                        { // Return Pickup
+                            "id": 12000072,
+                            "position": [120.1356, 147.1605, -159.647],
+                            "type": "Nothing",
+                            "model": "Nothing",
+                            "scanText": "Return Artifact of Newborn",
+                            "hudmemoText": "Artifact of Newborn returned.\nPeace has been restored.",
+                            "modalHudmemo": true,
+                            "respawn": true
+                        }
+                    ],
+                    "specialFunctions": [
+                        {
+                            "id": 12000073,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3442151074, // Artifact Temple
+                            "layerChangeLayerId": 12
+                        },
+                        {
+                            "id": 12000074,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 259865162, // This room
+                            "layerChangeLayerId": 1
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 12000075,
+                            "time": 0.5,
+                            "startImmediately": true
+                        },
+                        {
+                            "id": 12000076,
+                            "layer": 2,
+                            "time": 0.1,
+                            "startImmediately": true
+                        }
+                    ],
+                    "editObjs": {
+                        "12000072": { // Move return pickup to it's own layer
+                            "layer": 1
+                        },
+                        // Move the bomb DTs to the post-artifact temple layer and change their vulnerability
+                        // to power bomb because that's funny
+                        "2555998": {
+                            "layer": 2,
+                            "vulnerability": "Power Bomb"
+                        },
+                        "2556047": {
+                            "layer": 2,
+                            "vulnerability": "Power Bomb"
+                        },
+                        "2556050": {
+                            "layer": 2,
+                            "vulnerability": "Power Bomb"
+                        },
+                        "2556053": {
+                            "layer": 2,
+                            "vulnerability": "Power Bomb"
+                        },
+                        "2556056": {
+                            "layer": 2,
+                            "vulnerability": "Power Bomb"
+                        },
+                        "2556059": {
+                            "layer": 2,
+                            "vulnerability": "Power Bomb"
+                        },
+                        "2556065": {
+                            "layer": 2,
+                            "vulnerability": "Power Bomb"
+                        },
+                        "2556068": {
+                            "layer": 2,
+                            "vulnerability": "Power Bomb"
+                        },
+                        "2556077": {
+                            "layer": 2,
+                            "vulnerability": "Power Bomb"
+                        },
+                        "2556062": {
+                            "layer": 2,
+                            "vulnerability": "Power Bomb"
+                        },
+                        // Also move all the rocks
+                        "2556054": {"layer": 2},
+                        "2556075": {"layer": 2},
+                        "2556066": {"layer": 2},
+                        "2556048": {"layer": 2},
+                        "2556045": {"layer": 2},
+                        "2556060": {"layer": 2},
+                        "2556051": {"layer": 2},
+                        "2556063": {"layer": 2},
+                        "2556057": {"layer": 2},
+                        "2555994": {"layer": 2}
+                    },
+                    "addConnections": [
+                        { // Taking the artifact deactivates the totem
+                            "senderId": 2556031,
+                            "state": "ARRIVED",
+                            "targetId": 12000073,
+                            "message": "DECREMENT"
+                        },
+                        { // Returning the artifact reactivates the totem
+                            "senderId": 12000072,
+                            "state": "ARRIVED",
+                            "targetId": 12000073,
+                            "message": "INCREMENT"
+                        },
+                        { // Taking the artifact activates the return pickup in this room (hidden until temple is activated)
+                            "senderId": 2556031,
+                            "state": "ARRIVED",
+                            "targetId": 12000074,
+                            "message": "INCREMENT"
+                        },
+                        { // Returning the artifact disables the layer for the return pickup 
+                            "senderId": 12000072,
+                            "state": "ARRIVED",
+                            "targetId": 12000074,
+                            "message": "DECREMENT"
+                        },
+                        { // Deactivate the return pickup 0.1s after room load
+                            "senderId": 12000075,
+                            "state": "ZERO",
+                            "targetId": 12000072,
+                            "message": "DEACTIVATE"
+                        },
+                        { // Deactivate the take pickup 0.02s after room load (only if temple activated)
+                            "senderId": 12000076,
+                            "state": "ZERO",
+                            "targetId": 2556031,
+                            "message": "DEACTIVATE"
+                        },
+                        { // Cancel the despawning of the return pickup (only if temple activated)
+                            "senderId": 12000076,
+                            "state": "ZERO",
+                            "targetId": 12000075,
+                            "message": "DEACTIVATE"
+                        }
+                    ]
                 },
                 "Fungal Hall Access": {
                     "pickups": [
