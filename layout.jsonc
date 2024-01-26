@@ -5406,6 +5406,12 @@
                             "type": "ScriptLayerController",
                             "layerChangeRoomId": 3408755424,  // Chozo Ice Temple
                             "layerChangeLayerId": 5 // temple activated
+                        },
+                        {
+                            "id": 10000125,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3573019852,  // Hall of the Elders
+                            "layerChangeLayerId": 7 // temple activated
                         }
                     ],
                     "relays": [
@@ -5518,6 +5524,12 @@
                             "senderId": 1049044,
                             "state": "ARRIVED",
                             "targetId": 10000123,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1049044,
+                            "state": "ARRIVED",
+                            "targetId": 10000125,
                             "message": "INCREMENT"
                         },
                         // When the fake-out cutscene ends, remove black bars
@@ -7468,6 +7480,12 @@
                     }
                 },
                 "Hall of the Elders": {
+                    "layers": {
+                        "1": true, // Pre-enable the tripple-ghost fight, just missing the fight trigger
+                        "2": false, // delete the single-ghost fight
+                        "6": false, // True if World is acquired
+                        "7": false // True if Temple is activated
+                    },
                     "pickups": [
                         {
                             "type": "Nothing"
@@ -7490,7 +7508,98 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "triggers": [
+                        {
+                            "id": 3408399, // Trigger - Chozo Ghost No Kaishi
+                            "layer": 7,
+                            "active": false,
+                            "position": [777.825134, -183.715729, 62.534618],
+                            "scale": [25.779053, 67.408012, 29.385002]
+                        }
+                    ],
+                    "relays": [
+                        {
+                            "id": 12000063,
+                            "layer": 7
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 12000060,
+                            "layer": 6,
+                            "time": 0.02,
+                            "startImmediately": true
+                        },
+                        {
+                            "id": 12000064,
+                            "time": 0.02,
+                            "startImmediately": true
+                        }
+                    ],
+                    "editObjs": {
+                        "3408371": { // Chozo Ghost
+                            "speed": 0.25,
+                            "health": 4.0,
+                            "scale": [4.0, 4.0, 4.0]
+                        },
+                        "3408379": { // Chozo Ghost
+                            "speed": 0.5,
+                            "health": 2.0,
+                            "scale": [2.0, 2.0, 2.0]
+                        },
+                        "3408387": { // Chozo Ghost
+                            "speed": 0.005,
+                            "health": 5.0,
+                            "scale": [6.0, 6.0, 6.0]
+                        }
+                    },
+                    "blocks": [
+                        {
+                            "id": 12000066,
+                            "position": [778.8168, -215.0895, 68.3945],
+                            "scale": [2.5, 2.5, 2.5],
+                            "texture": "Sandstone",
+                            "active": false
+                        }
+                    ],
+                    "addConnections": [
+                        // Hands start active
+                        {
+                            "senderId": 12000064,
+                            "state": "ZERO",
+                            "targetId": 3408466, // Relay - turn on boling hands after defeating ghosts
+                            "message": "SET_TO_ZERO"
+                        },
+                        // Activate the trigger, only if layers 6 and 7 are active
+                        {
+                            "senderId": 12000060,
+                            "state": "ZERO",
+                            "targetId": 3408399, // Trigger - Chozo Ghost No Kaishi
+                            "message": "ACTIVATE"
+                        },
+                        // Completely disable ghost ambience
+                        {
+                            "senderId": 12000064,
+                            "state": "ZERO",
+                            "targetId": 3408750,
+                            "message": "ACTIVATE"
+                        },
+                        // Triple-ghost fight locks the plasma slot
+                        {
+                            "senderId": 3408399, // Trigger - Chozo Ghost No Kaishi
+                            "state": "ENTERED",
+                            "targetId": 12000066, // block
+                            "message": "ACTIVATE"
+                        },
+                        // Unlock the plasma slot when all ghosts are dead
+                        {
+                            "senderId": 3408401, // Counter
+                            "state": "MAX_REACHED",
+                            "targetId": 12000066, // block
+                            "message": "DEACTIVATE"
+                        }
+                    ]
                 },
                 "Crossway": {
                     "pickups": [
@@ -7531,17 +7640,129 @@
                     }
                 },
                 "Elder Chamber": {
-                    "pickups": [
-                        {
-                            "type": "Nothing"
-                        }
-                    ],
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "layers": {
+                        "1": false, // True if artifact taken
+                        "2": false  // True if temple activated
+                    },
+                    "pickups": [
+                        { // Take Pickup
+                            // id: 3735555
+                            "type": "Nothing",
+                            "model": "Artifact of World",
+                            "scanText": "Artifact of World",
+                            "hudmemoText": "Artifact of World Acquired!"
+                        },
+                        { // Return Pickup
+                            "id": 12000055,
+                            "position": [801.4403, -199.6511, 39.2693],
+                            "type": "Nothing",
+                            "model": "Nothing",
+                            "scanText": "Return Artifact of World",
+                            "hudmemoText": "Artifact of World returned.\nPeace has been restored.",
+                            "modalHudmemo": true,
+                            "respawn": true
+                        }
+                    ],
+                    "specialFunctions": [
+                        {
+                            "id": 12000056,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3442151074, // Artifact Temple
+                            "layerChangeLayerId": 10
+                        },
+                        {
+                            "id": 12000057,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 70907119, // This room
+                            "layerChangeLayerId": 1
+                        },
+                        {
+                            "id": 12000061,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3573019852,  // Hall of the Elders
+                            "layerChangeLayerId": 6 // artifact taken
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 12000058,
+                            "time": 0.5,
+                            "startImmediately": true
+                        },
+                        {
+                            "id": 12000059,
+                            "layer": 2,
+                            "time": 0.1,
+                            "startImmediately": true
+                        }
+                    ],
+                    "editObjs": {
+                        "12000055": { // Move return pickup to it's own layer
+                            "layer": 1
+                        }
+                    },
+                    "addConnections": [
+                        { // Taking the artifact deactivates the totem
+                            "senderId": 3735555,
+                            "state": "ARRIVED",
+                            "targetId": 12000056,
+                            "message": "DECREMENT"
+                        },
+                        { // Returning the artifact reactivates the totem
+                            "senderId": 12000055,
+                            "state": "ARRIVED",
+                            "targetId": 12000056,
+                            "message": "INCREMENT"
+                        },
+                        { // Taking the artifact activates the return pickup in this room (hidden until temple is activated)
+                            "senderId": 3735555,
+                            "state": "ARRIVED",
+                            "targetId": 12000057,
+                            "message": "INCREMENT"
+                        },
+                        { // Taking the artifact enables part 1 of 2 for ghosts in HoTE
+                            "senderId": 3735555,
+                            "state": "ARRIVED",
+                            "targetId": 12000061,
+                            "message": "INCREMENT"
+                        },
+                        { // Returning the artifact disables the layer for the return pickup 
+                            "senderId": 12000055,
+                            "state": "ARRIVED",
+                            "targetId": 12000057,
+                            "message": "DECREMENT"
+                        },
+                        { // Returning the artifact disables triple-ghost fight
+                            "senderId": 12000055,
+                            "state": "ARRIVED",
+                            "targetId": 12000061,
+                            "message": "DECREMENT"
+                        },
+                        { // Deactivate the return pickup 0.1s after room load
+                            "senderId": 12000058,
+                            "state": "ZERO",
+                            "targetId": 12000055,
+                            "message": "DEACTIVATE"
+                        },
+                        { // Deactivate the take pickup 0.02s after room load (only if temple activated)
+                            "senderId": 12000059,
+                            "state": "ZERO",
+                            "targetId": 3735555,
+                            "message": "DEACTIVATE"
+                        },
+                        { // Cancel the despawning of the return pickup (only if temple activated)
+                            "senderId": 12000059,
+                            "state": "ZERO",
+                            "targetId": 12000058,
+                            "message": "DEACTIVATE"
+                        }
+                    ]
                 },
                 "Reflecting Pool": {
                     "doors": {
