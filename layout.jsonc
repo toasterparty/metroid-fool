@@ -2899,7 +2899,7 @@
                         },
                         { // Return Pickup
                             "id": 12000007,
-                            "position": [309.4821, -286.584, 85.4937],
+                            "position": [296.47, -313.72, 79.3],
                             "type": "Nothing",
                             "model": "Nothing",
                             "scanText": "Return Artifact of Strength",
@@ -2920,6 +2920,11 @@
                             "type": "ScriptLayerController",
                             "layerChangeRoomId": 712154651, // This room
                             "layerChangeLayerId": 1
+                        },
+                        {
+                            "id": 12000077,
+                            "layer": 1,
+                            "type": "PlayerInAreaRelay"
                         }
                     ],
                     "timers": [
@@ -2935,12 +2940,56 @@
                             "startImmediately": true
                         }
                     ],
+                    "blocks": [
+                        {
+                            "id": 12000078,
+                            "layer": 2,
+                            "active": false,
+                            "position": [269.8629, -289.3835, 59.6116],
+                            "scale": [2, 5, 5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 12000079,
+                            "layer": 2,
+                            "active": false,
+                            "position": [305.7473, -289.2141, 57.1872],
+                            "scale": [3, 3, 3],
+                            "texture": "Mine"
+                        }
+                    ],
                     "editObjs": {
                         "12000007": { // Move return pickup to it's own layer
                             "layer": 1
                         }
                     },
                     "addConnections": [
+                        // Entering this room locks both exits, but only if the artifact is taken and temple is activated
+                        {
+                            "senderId": 12000077,
+                            "state": "ENTERED",
+                            "targetId": 12000078,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 12000077,
+                            "state": "ENTERED",
+                            "targetId": 12000079,
+                            "message": "ACTIVATE"
+                        },
+                        // Returning the artifact unlocks the room
+                        {
+                            "senderId": 12000007,
+                            "state": "ARRIVED",
+                            "targetId": 12000078,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 12000007,
+                            "state": "ARRIVED",
+                            "targetId": 12000079,
+                            "message": "DEACTIVATE"
+                        },
                         { // Taking the artifact deactivates the totem
                             "senderId": 720951,
                             "state": "ARRIVED",
@@ -2952,6 +3001,12 @@
                             "state": "ARRIVED",
                             "targetId": 12000008,
                             "message": "INCREMENT"
+                        },
+                        { // Returning the artifact stops locking this room
+                            "senderId": 12000007,
+                            "state": "ARRIVED",
+                            "targetId": 12000009,
+                            "message": "DECREMENT"
                         },
                         { // Taking the artifact activates the return pickup in this room (hidden until temple is activated)
                             "senderId": 720951,
