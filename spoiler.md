@@ -151,6 +151,7 @@ Ruined Courtyard (Labs) -> Specimen Storage
 ### Backtrack
 
 - Unlock Geothermal Core ceiling with the help of Grapple. Wave Beam extends out with the piston.
+    - TODO: Grapple Beam R-Tech skill check is needed before this point, otherwise it's too punishing
 - **Geothermal Core - Wave Beam**
 - Reverse Piston Tunnel/Training Chamber
 - **Training Chamber Access - Super Missiles**

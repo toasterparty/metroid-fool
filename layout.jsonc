@@ -3093,10 +3093,11 @@
                 },
                 "Geothermal Core": {
                     "layers": {
-                        "6": false // Unused puffers
-                        // Layer 7 - Wave Beam
-                        // Layer 8 - Blast Shield
-                        // "7": false // Morph Ball Escape Puzzle
+                        // "3": false, // TODO: remove this debug
+                        // "4": true,  // TODO: remove this debug
+                        "6": false, // Unused puffers
+                        "7": false, // Morph Ball Escape Puzzle
+                        "8": true // Grapple/Dash Points
                     },
                     "doors": {
                         "1": {
@@ -3125,6 +3126,52 @@
                             "position": [407.2, -866.3, 60.6],
                             "scale": [3, 3, 3],
                             "texture": "Mine"
+                        },
+                        // Steps back up to start platform
+                        {
+                            "layer": 7,
+                            "position": [380.4, -811.9, 83.0],
+                            "scale": [4, 4, 1],
+                            "texture": "Snow"
+                        },
+                        {
+                            "layer": 7,
+                            "position": [374.7, -811.0, 86.7],
+                            "scale": [4, 4, 1],
+                            "texture": "Snow"
+                        },
+                        // Floor cover
+                        {
+                            "layer": 7,
+                            "id": 10000130,
+                            "position": [385.92, -847.80, 72],
+                            "scale": [99.11, 69.49, 0.7]
+                        },
+                        // Unmorph Check
+                        {
+                            "layer": 7,
+                            "position": [367.7, -817, 95.1],
+                            "scale": [20, 0.5, 5]
+                        },
+                        // TODO: MORPH BALL MAZE
+                        {
+                            "layer": 7,
+                            "position": [367.6, -831.8, 89.77],
+                            "scale": [5, 35, 0.5]
+                        },
+                        {
+                            "layer": 7,
+                            "position": [394.2, -847.1, 89.76],
+                            "scale": [60, 5, 0.5]
+                        }
+                    ],
+                    "liquids": [
+                        {
+                            "id": 10000131,
+                            "layer": 7,
+                            "type": "Lava",
+                            "position": [385.92, -847.80, 47.7],
+                            "scale": [99.11, 69.49, 50]
                         }
                     ],
                     "platforms": [
@@ -3138,13 +3185,55 @@
                             "id": 10000129,
                             "position": [409, -844, 61],
                             "scale": [6, 6, 2]
+                        },
+                        {
+                            "id": 10000139,
+                            "layer": 7,
+                            "position": [385, -849, 100],
+                            "scale": [109, 73.1, 29.85]
+                        },
+                        {
+                            "id": 10000141,
+                            "layer": 7,
+                            "position": [367, -813.8, 92],
+                            "scale": [10, 10, 5],
+                            "deactivateOnEnter": true
+                        }
+                    ],
+                    "playerHints": [
+                        {
+                            "id": 10000140,
+                            "layer": 7,
+                            "disableUnmorph": true
+                        }
+                    ],
+                    "cameraHints": [
+                        {
+                            "layer": 7,
+                            "behavior": 4,
+                            "triggerPos": [385.02, -846.8, 107.9],
+                            "triggerScale": [116.60, 75.15, 50],
+                            "cameraPos": [387.74, -833.06, 102.66],
+                            "cameraRot": [0, 0, 0]
+                        }
+                    ],
+                    "streamedAudios": [
+                        {
+                            "id": 10000142,
+                            "volume": 90,
+                            "audioFileName": "/audio/gen_puzzleL.dsp|/audio/gen_puzzleR.dsp",
+                            "isMusic": true
                         }
                     ],
                     "lockOnPoints": [
                         {
+                            "id1": 10000134,
+                            "id2": 10000135,
                             "position": [413.4, -835.4, 82]
                         },
                         {
+                            "id1": 10000136,
+                            "id2": 10000137,
                             "position": [368.9, -836.9, 82],
                             "isGrapple": true
                         }
@@ -3154,8 +3243,24 @@
                             "id": 10000127,
                             "type": "Wave Beam",
                             "position": [388.1364, -811.821, 82.2]
+                        },
+                        {
+                            "id": 10000132,
+                            "type": "Nothing",
+                            "scanText": "Drain Lava",
+                            "hudmemoText": "Lava Drained!",
+                            "position": [434.7, -847.9, 84.0]
                         }
                     ],
+                    "editObjs": {
+                        // Grapple/Dash Points
+                        "10000134": {"layer": 8},
+                        "10000135": {"layer": 8},
+                        "10000136": {"layer": 8},
+                        "10000137": {"layer": 8},
+                        // Unlock Floor Pickup
+                        "10000132": {"layer": 7}
+                    },
                     "addConnections": [
                         // Platform is just straight up a trap
                         {
@@ -3170,10 +3275,44 @@
                             "state": "PLAY",
                             "targetId": 10000127,
                             "message": "ACTIVATE"
+                        },
+                        // Key unlocks floor
+                        {
+                            "senderId": 10000132,
+                            "state": "ARRIVED",
+                            "targetId": 10000130,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000132,
+                            "state": "ARRIVED",
+                            "targetId": 10000131,
+                            "message": "DEACTIVATE"
+                        },
+                        // Disable Unmorph for Puzzle
+                        {
+                            "senderId": 10000139,
+                            "state": "ENTERED",
+                            "targetId": 10000140,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 10000139,
+                            "state": "EXITED",
+                            "targetId": 10000140,
+                            "message": "DECREMENT"
+                        },
+                        // Start music
+                        {
+                            "senderId": 10000141,
+                            "state": "ENTERED",
+                            "targetId": 10000142,
+                            "message": "PLAY"
                         }
                     ],
                     "deleteIds": [
                         1310750, // Remove randomprime cutscene skip
+                        1310783, // remove randomprime music qol
                         1310737, 1311294 // Remove 2nd to last platform
                     ]
                 },
@@ -3184,13 +3323,33 @@
                             "type": "Plasma Beam"
                         }
                     ],
+                    "specialFunctions": [
+                        {
+                            "id": 10000133,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 1498886242,
+                            "layerChangeLayerId": 7
+                        },
+                        {
+                            "id": 10000138,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 1498886242,
+                            "layerChangeLayerId": 8
+                        }
+                    ],
                     "addConnections": [
-                        // Change Geothermal Core layer
+                        // Change Geothermal Core layers
                         {
                             "senderId": 1376287,
                             "state": "ARRIVED",
-                            "targetId": 1376257,
-                            "message": "SET_TO_ZERO"
+                            "targetId": 10000133,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1376287,
+                            "state": "ARRIVED",
+                            "targetId": 10000138,
+                            "message": "DECREMENT"
                         },
                         // Reload Geothermal Core
                         {
