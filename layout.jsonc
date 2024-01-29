@@ -7742,11 +7742,17 @@
                         }
                     ],
                     "blocks": [
-                        {
+                        { // door blocker
                             "id": 10000143,
                             "active": false,
                             "position": [51.5, 287.8, -0.5],
                             "scale": [0.5, 8, 8]
+                        },
+                        { // door blocker (TAN)
+                            "id": 10000152,
+                            "active": false,
+                            "position": [94.6, 330.3, -2.2],
+                            "scale": [7, 1, 7]
                         },
                         { // left blocker
                             "id": 10000144,
@@ -7790,6 +7796,21 @@
                             "scale": [18, 21, 7],
                             "damageType": "PoisonWater",
                             "damageAmount": 0.11
+                        },
+                        {
+                            "id": 10000151,
+                            "position": [113, 282, 0.5],
+                            "scale": [35, 40, 25]
+                        }
+                    ],
+                    "relays": [
+                        {
+                            "id": 10000149,
+                            "active": true
+                        },
+                        {
+                            "id": 10000150,
+                            "active": false
                         }
                     ],
                     "editObjs": {
@@ -7823,11 +7844,17 @@
                         }
                     },
                     "addConnections": [
-                        // Block backtrack during fight
+                        // Block escape during fight
                         {
                             "senderId": 2359616, // Trigger_startcinema
                             "state": "ENTERED",
                             "targetId": 10000143,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 2359616, // Trigger_startcinema
+                            "state": "ENTERED",
+                            "targetId": 10000152,
                             "message": "ACTIVATE"
                         },
                         // Unlock after
@@ -7835,6 +7862,12 @@
                             "senderId": 2359405,
                             "state": "ZERO",
                             "targetId": 10000143,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 2359405,
+                            "state": "ZERO",
+                            "targetId": 10000152,
                             "message": "DEACTIVATE"
                         },
                         // Do the same for an anit-cheese damage trigger
@@ -7887,14 +7920,57 @@
                             "targetId": 10000147, // trigger (ouch)
                             "message": "DEACTIVATE"
                         },
-                        // Make harder on stage 2/3
-                        // TODO: Spawn whichever block the player is closer to on stage 2
+                        // As the player moves around, pre-determine which wall should spawn at stage 2
+                        {
+                            "senderId": 10000151, // trigger
+                            "state": "ENTERED",
+                            "targetId": 10000149, // relay (left)
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000151, // trigger
+                            "state": "ENTERED",
+                            "targetId": 10000150, // relay (right)
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000151, // trigger
+                            "state": "EXITED",
+                            "targetId": 10000149, // relay (left)
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000151, // trigger
+                            "state": "EXITED",
+                            "targetId": 10000150, // relay (right)
+                            "message": "DEACTIVATE"
+                        },
+                        // When stage 2 starts, activate the wall closest to the player
                         {
                             "senderId": 2359402, // stage 2
                             "state": "ZERO",
-                            "targetId": 10000145,
+                            "targetId": 10000149, // relay (left)
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 2359402, // stage 2
+                            "state": "ZERO",
+                            "targetId": 10000150, // relay (right)
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000149, // relay (left)
+                            "state": "ZERO",
+                            "targetId": 10000144, // block (left)
                             "message": "ACTIVATE"
                         },
+                        {
+                            "senderId": 10000150, // relay (right)
+                            "state": "ZERO",
+                            "targetId": 10000145,  // block (right)
+                            "message": "ACTIVATE"
+                        },
+                        // When stage 3 starts, ensure both walls are active
                         {
                             "senderId": 2359403, // stage 3
                             "state": "ZERO",
