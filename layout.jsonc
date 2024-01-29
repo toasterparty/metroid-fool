@@ -10,7 +10,8 @@
         "mapDefaultState": "Visit",
         "artifactHintBehavior": "All",
         "automaticCrashScreen": true,
-        "forceFusion": true
+        "forceFusion": true,
+        "doorDestinationScans": false
     },
     "gameConfig": {
         "mainPlazaDoor": false,
@@ -41,6 +42,7 @@
         "enableIceTraps": true,
         "escapeSequenceCountsUp": false,
         "difficultyBehavior": "NormalOnly",
+        "shootInGrapple": true,
         // TODO: Debug
         // "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
         "startingItems": {
@@ -121,6 +123,7 @@
         "grappleBeamSpeed": 1.2,
         "iceBreakTimeout": 999,
         "iceBreakJumpCount": 20
+        // "gunDamage": 100
     },
     "strg": {
         "3230660781": ["Water Pool"],
@@ -1618,8 +1621,8 @@
                             "destination": {
                                 "roomName": "North Quarantine Tunnel",
                                 "dockNum": 1
+                            }
                         }
-                    }
                     },
                     "deleteIds": [
                         917703, 917704 // don't change layers in chozo ice temple
@@ -4015,7 +4018,7 @@
                         "2": {
                             "shieldType": "Blue",
                             "blastShieldType": "None"
-                    }
+                        }
                     },
                     "deleteIds": [
                         1770787 // Don't disable ninjas in Elite Research
@@ -5956,7 +5959,7 @@
                             "type": "ScriptLayerController",
                             "layerChangeRoomId": 3573019852,  // Hall of the Elders
                             "layerChangeLayerId": 7 // temple activated
-                        }
+                        }   
                     ],
                     "relays": [
                         {
@@ -7711,7 +7714,7 @@
                 "Hive Totem": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Energy Tank"
                         }
                     ],
                     "doors": {
@@ -7723,7 +7726,191 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "lockOnPoints": [
+                        {
+                            "position": [78, 282, 12.5],
+                            "isGrapple": true
+                        },
+                        {
+                            "position": [113, 282, 12.5],
+                            "isGrapple": true
+                        },
+                        {
+                            "position": [94, 267, 12.5],
+                            "isGrapple": true
+                        }
+                    ],
+                    "blocks": [
+                        {
+                            "id": 10000143,
+                            "active": false,
+                            "position": [51.5, 287.8, -0.5],
+                            "scale": [0.5, 8, 8]
+                        },
+                        { // left blocker
+                            "id": 10000144,
+                            "active": false,
+                            "position": [81.0, 297.1, 10],
+                            "scale": [8, 1, 10]
+                        },
+                        { // right blocker
+                            "id": 10000145,
+                            "active": false,
+                            "position": [107, 297.1, 10],
+                            "scale": [8, 1, 10]
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 2359381, // Mouth close delay
+                            "time": 6, // increase from 4 seconds
+                            "maxRandomAdd": 5
+                        },
+                        {
+                            "id": 2359381, // Target Disappear Delay
+                            "time": 7 // increase from 4 seconds
+                        },
+                        {
+                            "id": 10000148, // Loiter punish timer
+                            "time": 10
+                        }
+                    ],
+                    "triggers": [
+                        {
+                            "id": 10000146,
+                            "active": false,
+                            "position": [94.7, 278.2, 3.3],
+                            "scale": [18, 21, 7]
+                        },
+                        {
+                            "id": 10000147,
+                            "active": false,
+                            "position": [94.7, 278.2, 3.3],
+                            "scale": [18, 21, 7],
+                            "damageType": "PoisonWater",
+                            "damageAmount": 0.11
+                        }
+                    ],
+                    "editObjs": {
+                        "2359616": { // Trigger_startcinema
+                            "position": [94.4711, 306.916, 0.9449],
+                            "scale": [20, 10, 15]
+                        },
+                        "2359753": { // Water Morph Dest
+                            "position": [85.6195, 282.3981, -11.6]
+                        },
+                        // Hit Trigger
+                        "2359387": {
+                            "scale": [4, 2.5, 4],
+                            "health": 0.7
+                        },
+                        // Wasps
+                        "2359356": {
+                            "speed": 0.25
+                        },
+                        "2359322": {
+                            "speed": 0.25
+                        },
+                        "2359358": {
+                            "speed": 0.25
+                        },
+                        "2359591": {
+                            "speed": 0.25
+                        },
+                        "2359594": {
+                            "speed": 0.25
+                        }
+                    },
+                    "addConnections": [
+                        // Block backtrack during fight
+                        {
+                            "senderId": 2359616, // Trigger_startcinema
+                            "state": "ENTERED",
+                            "targetId": 10000143,
+                            "message": "ACTIVATE"
+                        },
+                        // Unlock after
+                        {
+                            "senderId": 2359405,
+                            "state": "ZERO",
+                            "targetId": 10000143,
+                            "message": "DEACTIVATE"
+                        },
+                        // Do the same for an anit-cheese damage trigger
+                        {
+                            "senderId": 2359639, // Last camera
+                            "state": "INACTIVE",
+                            "targetId": 10000146, // trigger
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 2359405,
+                            "state": "ZERO",
+                            "targetId": 10000146, // trigger
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 2359405,
+                            "state": "ZERO",
+                            "targetId": 10000147, // trigger (ouch)
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 2359405,
+                            "state": "ZERO",
+                            "targetId": 10000148, // timer
+                            "message": "STOP_AND_RESET"
+                        },
+                        // Make it so that if the player lingers on the platform without attempting to leave using grapple, they take damage
+                        {
+                            "senderId": 10000146, // trigger
+                            "state": "ENTERED",
+                            "targetId": 10000148, // timer
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000146, // trigger
+                            "state": "EXITED",
+                            "targetId": 10000148, // timer
+                            "message": "STOP_AND_RESET"
+                        },
+                        {
+                            "senderId": 10000148, // timer
+                            "state": "ZERO",
+                            "targetId": 10000147, // trigger (ouch)
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000146, // trigger
+                            "state": "EXITED",
+                            "targetId": 10000147, // trigger (ouch)
+                            "message": "DEACTIVATE"
+                        },
+                        // Make harder on stage 2/3
+                        // TODO: Spawn whichever block the player is closer to on stage 2
+                        {
+                            "senderId": 2359402, // stage 2
+                            "state": "ZERO",
+                            "targetId": 10000145,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 2359403, // stage 3
+                            "state": "ZERO",
+                            "targetId": 10000144,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 2359403, // stage 3
+                            "state": "ZERO",
+                            "targetId": 10000145,
+                            "message": "ACTIVATE"
+                        }
+                    ],
+                    "deleteIds": [
+                        2359300 // randomprime cutscene skip
+                    ]
                 },
                 "Sunchamber": {
                     "doors": {
