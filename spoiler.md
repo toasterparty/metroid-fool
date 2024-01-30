@@ -269,14 +269,6 @@ Waste Disposal maze (portals)
 
 ## Lore
 
-### Temple Security Station
-
-> Log Entry 3024-04-01
-> Dear diary,
-> Today the commander ordered me to hike all the way out to the middle of f'ing nowhere to secure an objective. It was a pain in the ass to carry all my equipment underneath that gap in the rock just ahead. I completed the task by installing a FD39 MKII Laser Defense Barrier and calling it a day. It's very peaceful out here compared to the mines. I think I'll camp out here tonight and leave in the morning. Hopefully a Zebian-class research facility doesn't crash on my head on the journey back.
-> Love,
-> Space Private Glorgsmire Gumpybottom First Class
-
 ### Artifact Temple
 
 *TBD - Something that foreshadows that the ghosts are happy with where the artifacts are located and they don't need collecting.*

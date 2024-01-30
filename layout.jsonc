@@ -2683,6 +2683,29 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
+                    },
+                    "pickups": [
+                        {
+                            "type": "Grapple Beam",
+                            "position": [-93.1123, 76.4873, 7.3116]
+                        }
+                    ],
+                    "triggers": [
+                        {
+                            "position": [-90.6, 85.5, 10.3],
+                            "scale": [40, 71, 20],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, 885, 0]
+                        }
+                    ],
+                    "editObjs": {
+                        // grizbies
+                        "131185": {
+                            "vulnerability": "Phazon"
+                        },
+                        "131186": {
+                            "vulnerability": "Phazon"
+                        }
                     }
                 },
                 "Save Station Magmoor A": {
@@ -3080,6 +3103,7 @@
                 "Transport to Tallon Overworld West": {},
                 "Twin Fires Tunnel": {},
                 "Twin Fires": {
+                    "superheated": true,
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
@@ -3088,6 +3112,7 @@
                     }
                 },
                 "North Core Tunnel": {
+                    "superheated": true,
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
@@ -3100,6 +3125,7 @@
                     }
                 },
                 "Geothermal Core": {
+                    "superheated": true,
                     "layers": {
                         // "3": false, // TODO: remove this debug
                         // "4": true,  // TODO: remove this debug
@@ -3325,6 +3351,7 @@
                     ]
                 },
                 "Plasma Processing": {
+                    "superheated": true,
                     "pickups": [
                         {
                             // id: 1376287
@@ -3369,6 +3396,7 @@
                     ]
                 },
                 "South Core Tunnel": {
+                    "superheated": true,
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
@@ -3381,6 +3409,7 @@
                     }
                 },
                 "Magmoor Workstation": {
+                    "superheated": true,
                     "pickups": [
                         {
                             "type": "Nothing"
@@ -5193,7 +5222,7 @@
                         },
                         "1": {
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "blastShieldType": "Missile"
                         }
                     }
                 },
@@ -5500,7 +5529,9 @@
                 "Overgrown Cavern": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!"
                         }
                     ],
                     "doors": {
@@ -6253,7 +6284,9 @@
                 "Transport Tunnel B": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!"
                         }
                     ],
                     "doors": {
@@ -7350,7 +7383,8 @@
                 "Arboretum Access": {
                     "doors": {
                         "0": {
-                            "shieldType": "Ice Beam"
+                            "shieldType": "Blue",
+                            "blastShieldType": "Missile"
                         }
                     }
                 },
@@ -7370,6 +7404,12 @@
                     }
                 },
                 "Ruined Nursery": {
+                    "doors": {
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "Missile"
+                        }
+                    },
                     "pickups": [
                         {
                             "type": "Nothing"
