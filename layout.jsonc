@@ -3946,8 +3946,8 @@
                             "blastShieldType": "None"
                         },
                         "1": {
-                            "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "shieldType": "Ice Spreader",
+                            "blastShieldType": "Ice Spreader"
                         },
                         "2": {
                             "shieldType": "Blue",
@@ -4015,7 +4015,57 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "editObjs": {
+                        "1638423": { // player actor arriving
+                            "rotation": [0, 0, 0]
+                        },
+                        "1638444": { // spawn point
+                            "rotation": [0, 0, 0]
+                        },
+                        "1638408": { // player actor leaving
+                            "rotation": [0, 0, 0]
+                        }
+                    },
+                    "extraScans": [
+                        {
+                            "id": 10000156,
+                            "position": [-123.6889, 222.6745, -16.4065],
+                            "rotation": 90,
+                            "text": "Save Game",
+                            "combatVisible": true,
+                            "isRed": true
+                        }
+                    ],
+                    "timers": [
+                        // Queue the save request with a timer to make it easier on the eyes
+                        {
+                            "id": 10000157,
+                            "time": 0.5
+                        }
+                    ],
+                    "specialFunctions": [
+                        {
+                            "id": 10000158,
+                            "type": "SaveStation"
+                        }
+                    ],
+                    "addConnections": [
+                        // When the player scans the point, start the timer
+                        {
+                            "senderId": 10000156,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000157,
+                            "message": "RESET_AND_START"
+                        },
+                        // When the timer elapses, initiate a save
+                        {
+                            "senderId": 10000157,
+                            "state": "ZERO",
+                            "targetId": 10000158,
+                            "message": "ACTION"
+                        }
+                    ]
                 },
                 "Elite Quarters": {
                     "pickups": [
@@ -6659,8 +6709,8 @@
         "Chozo Ruins": {
             "transports": {
                 "Chozo Ruins West (Main Plaza)": "Tallon Overworld North (Tallon Canyon)",
-                "Chozo Ruins North (Sun Tower)": "Magmoor Caverns North (Lava Lake)",
-                "Chozo Ruins East (Reflecting Pool, Save Station)": "Tallon Overworld East (Frigate Crash Site)",
+                "Chozo Ruins North (Sun Tower)": "Phazon Mines West (Phazon Processing Center)",
+                "Chozo Ruins East (Reflecting Pool, Save Station)": "Tallon Overworld South (Great Tree Hall, Lower)",
                 "Chozo Ruins South (Reflecting Pool, Far End)": "Tallon Overworld South (Great Tree Hall, Upper)"
             },
             "rooms": {
@@ -6795,11 +6845,15 @@
                             "respawn": true
                             // on layer 5, but removed by a timer
                         },
-                        { // Grapple Ledge (Deleted)
-                            "type": "Missile"
+                        { // Grapple Ledge
+                            "type": "Missile",
+                            "position": [120.6297, -34.3086, 21.643],
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 3
                         },
                         { // Tree
-                            "type": "Missile"
+                            "type": "Nothing"
                         },
                         { // Vault Ledge
                             "type": "Ice Trap",
@@ -7135,8 +7189,6 @@
                     "deleteIds": [
                         // Delete the beetles' AI manager so they are more aggressive
                         131387,
-                        // Delete the grapple ledge pickup
-                        131377,
                         // Upper Beetle Battle always active
                         131397, 131398
                     ]
@@ -7149,7 +7201,86 @@
                 },
                 "Nursery Access": {},
                 "Plaza Access": {},
-                "Piston Tunnel": {},
+                "Piston Tunnel": {
+                    "editObjs": {
+                        /* Piston #1 */
+                        "458833": { // waypoint (upper)
+                            "speed": 0.05
+                        },
+                        "458832": { // waypoint (lower)
+                            "speed": 0.05
+                        },
+                        /* Piston #2 */
+                        "458814": { // waypoint (lower)
+                            "speed": 10
+                        },
+                        "458815": { // waypoint (upper)
+                            "speed": 10
+                        },
+                        /* Piston 5 */
+                        "458819": { // piston
+                            "position": [124.3264, -74.9285, 31.861],
+                            "rotation": [90, 0, 180]
+                        },
+                        "458821": { // waypoint (back)
+                            "position": [124.3264, -89.7285, 31.861],
+                            "speed": 5
+                        },
+                        "458820": { // waypoint (front)
+                            "position": [124.3264, -77.1, 31.861],
+                            "speed": 5
+                        },
+                        "458824": { // knockback trigger
+                            "position": [124.3264, -72.3285, 31.7869],
+                            "scale": [2, 3.5, 2]
+                        }
+                    },
+                    "timers": [
+                        /* Piston #2 */
+                        { // lower pause
+                            "id": 458816,
+                            "time": 0.2,
+                            "maxRandomAdd": 0.8
+                        },
+                        { // upper pause
+                            "id": 458817,
+                            "time": 0.1,
+                            "maxRandomAdd": 0.8
+                        },
+                        /* Piston #3 */
+                        { // lower pause
+                            "id": 458840,
+                            "time": 999999999
+                        },
+                        /* Piston #5 */
+                        { // front pause
+                            "id": 458822,
+                            "time": 0.1
+                        },
+                        { // back pause
+                            "id": 458823,
+                            "time": 0.3,
+                            "maxRandomAdd": 0.3
+                        }
+                    ],
+                    "removeConnections": [
+                        { // Piston #5 shouldn't ever turn off it's hurt trigger
+                            "senderId": 458820, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 458824, // trigger
+                            "message": "DEACTIVATE"
+                        }
+                    ],
+                    "platforms": [
+                        {
+                            "position": [124.3286, -69.9459, 24.8536],
+                            "type": "BombBox"
+                        }
+                    ],
+                    "deleteIds": [
+                        458801, 458875, 458802, 458803 // remove a piston
+                    ]
+                },
                 "Ruined Fountain": {
                     "pickups": [
                         {
@@ -7368,6 +7499,9 @@
                     ]
                 },
                 "Training Chamber": {
+                    "layers": {
+                        "1": false // no ghosts ever
+                    },
                     "pickups": [
                         {
                             "type": "Nothing"
@@ -7377,8 +7511,26 @@
                         "0": {
                             "shieldType": "Blue",
                             "blastShieldType": "None"
-                        }
                     }
+                    },
+                    "timers": [
+                        {
+                            "id": 10000159,
+                            "time": 0.02,
+                            "startImmediately": true
+                        }
+                    ],
+                    "addConnections": [
+                        { // make ghosts stop making soudn
+                            "senderId": 10000159,
+                            "state": "ZERO",
+                            "targetId": 786879, // relay ghosts shut up
+                            "message": "SET_TO_ZERO"
+                        }
+                    ],
+                    "deleteIds": [
+                        786733 // Allow backtrack from the start
+                    ]
                 },
                 "Arboretum Access": {
                     "doors": {

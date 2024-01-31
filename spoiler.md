@@ -28,12 +28,11 @@ In general:
 ### Explore Early Game
 
 - **Tower Chamber - Lifegiver**
-- Artifact Temple - Energy Tank
-    - Hints are blocked by the ridley fight forcefield
+- Artifact Temple hints are blocked by Glorgie's shield
 - Water Pool Track
 - **Water Pool - Missile Launcher**
 - Unlock Hive Totem fight (unwinnable without grapple)
-- Root Cave - Energy Tank
+- Root Cave -> Workstation
     - Magmoor Workstation is too hot
 - Transport Tunnel B - Missile Expansion (5)
 - Overgrown Cavern - Missile Expansion (5)
@@ -54,7 +53,7 @@ In general:
     - PCA blocked by normal bars
     - Ice Spreader blast shield blocks maintenance tunnel
 
-*Passing through vault requires boost*
+*Passing through vault requires ???*
 
 #### Bombs
 
