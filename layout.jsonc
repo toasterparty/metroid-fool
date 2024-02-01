@@ -11,7 +11,8 @@
         "artifactHintBehavior": "All",
         "automaticCrashScreen": true,
         "forceFusion": true,
-        "doorDestinationScans": false
+        "doorDestinationScans": false,
+        "skipSplashScreens": true // TODO: Just for testing
     },
     "gameConfig": {
         "mainPlazaDoor": false,
@@ -7200,7 +7201,11 @@
 
                 },
                 "Nursery Access": {},
-                "Plaza Access": {},
+                "Plaza Access": {
+                    "deleteIds": [
+                        393307, 393315, 393359, 393346, 393348 // no beetles
+                    ]
+                },
                 "Piston Tunnel": {
                     "editObjs": {
                         /* Piston #1 */
@@ -7631,7 +7636,7 @@
                     ],
                     "blocks": [
                         {
-                            "position": [181.55, -154, 26.5],
+                            "position": [181.55, -154, 25.5],
                             "scale": [30, 1, 12],
                             "texture": "Sandstone"
                         },
@@ -7642,9 +7647,96 @@
                             "texture": "Sandstone"
                         },
                         {
-                            "position": [177.5, -158, 17.6908],
-                            "scale": [8, 1.5, 0.5],
+                            "position": [177, -158, 17.6908],
+                            "scale": [8.5, 1.5, 0.5],
                             "texture": "Sandstone"
+                        },
+                        {
+                            "position": [173.5, -166.0, 17.6907],
+                            "scale": [1.5, 17.5, 0.5],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [178.7, -174.1, 17.6906],
+                            "scale": [12.0, 1.5, 0.5],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [184.0, -168.0, 17.6905],
+                            "scale": [1.5, 13.6, 0.5],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [190.6, -168.0, 19.7904],
+                            "scale": [1.5, 13.6, 0.5],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [186.6, -174.1, 19.7903],
+                            "scale": [9.5, 1.5, 0.5],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [182.5, -179.0, 19.7902],
+                            "scale": [1.25, 11.3, 0.5],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [180.15, -184.1, 19.7901],
+                            "scale": [6, 1, 0.5],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [177.6, -187.6, 19.7900],
+                            "scale": [0.8, 8, 0.5],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [177.6, -191.6, 19.7900],
+                            "scale": [0.9, 0.2, 0.7],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [177.6, -196.1, 19.7900],
+                            "scale": [0.8, 8, 0.5],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [177.6, -200.1, 19.7900],
+                            "scale": [0.9, 0.2, 0.7],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [177.6, -204.6, 19.7900],
+                            "scale": [0.7, 8, 0.5],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [177.6, -208.6, 19.7900],
+                            "scale": [0.8, 0.2, 0.7],
+                            "texture": "Sandstone"
+                        },
+                        // fakeys
+                        {
+                            "position": [176.7, -180.1, 17.6905],
+                            "scale": [1.5, 13.6, 0.5],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [183.4, -186.1, 17.6904],
+                            "scale": [15.0, 1.5, 0.5],
+                            "texture": "Sandstone"
+                        },
+                        {   "id": 16000000, // bye-bye bar
+                            "position": [190.4, -201.3, 17.6903],
+                            "scale": [1.0, 32.0, 0.5],
+                            "texture": "Sandstone"
+                        },
+                        {   "id": 16000002, // short bar
+                            "position": [190.4, -197.3, 17.6903],
+                            "scale": [1.0, 24.0, 0.5],
+                            "texture": "Sandstone",
+                            "active": false
                         }
                     ],
                     "timers": [
@@ -7657,8 +7749,13 @@
                     "triggers": [
                         {
                             "id": 10000052,
-                            "position": [185, -182, 22],
-                            "scale": [44, 55, 8]
+                            "position": [185, -182.9, 22],
+                            "scale": [44, 57, 8]
+                        },
+                        {
+                            "id": 16000001,
+                            "position": [190.4, -211.1, 18.8908],
+                            "scale": [2, 2, 2]
                         }
                     ],
                     "playerHints": [
@@ -7669,7 +7766,32 @@
                     ],
                     "editObjs": {
                         "1310724": { // poison water
-                            "damage": 0.1
+                            "damage": 0.25
+                        },
+                        "1310800": {
+                            "speed": 3
+                        },
+                        "1310924": {
+                            "position": [185.5, -162.5, 18.4],
+                            "rotation": [-180, -35, 0]
+                        },
+                        "1310875": {
+                            "position": [186.9, -162.5, 19.3],
+                            "rotation": [-180, -35, 0]
+                        },
+                        "1310849": {
+                            "position": [188.3, -162.5, 20.2],
+                            "rotation": [-180, -35, 0]
+                        },
+                        "1310926": {
+                            "position": [188.3, -149.3, 17.98],
+                            "rotation": [0, 0, -15]
+                        },
+                        "1310928": {
+                            "position": [185.3, -149.5, 17.98]
+                        },
+                        "1311001": {
+                            "position": [194.1, -162.2, -162.2]
                         }
                     },
                     "addConnections": [
@@ -7690,6 +7812,18 @@
                             "state": "EXITED",
                             "targetId": 10000053, // player hint
                             "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 16000001, // trigger
+                            "state": "ENTERED",
+                            "targetId": 16000000, // bye-bye bar
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 16000001, // trigger
+                            "state": "ENTERED",
+                            "targetId": 16000002, // bye-bye bar
+                            "message": "ACTIVATE"
                         }
                     ],
                     "deleteIds": [
