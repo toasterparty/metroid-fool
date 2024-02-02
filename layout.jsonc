@@ -100,7 +100,9 @@
         },
         "mainMenuMessage": "April Fools [Untitled] v0.1",
         "creditsString": "&push;&font=C29C51F1;&main-color=#89D6FF;Major Item Locations&pop;\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Wave Beam&pop;\nPhazon Mines - Metroid Quarantine A\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Ice Beam&pop;\nPhazon Mines - Ventilation Shaft\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Plasma Beam&pop;\nPhazon Mines - Central Dynamo\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Missile Launcher&pop;\nTallon Overworld - Transport Tunnel B\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Grapple Beam&pop;\nTallon Overworld - Landing Site\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Thermal Visor&pop;\nPhendrana Drifts - Ice Ruins East\n\n&push;&font=C29C51F1;&main-color=#33ffd6;X-Ray Visor&pop;\nMagmoor Caverns - Warrior Shrine\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Space Jump Boots&pop;\nTallon Overworld - Frigate Crash Site\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Morph Ball&pop;\nChozo Ruins - Ruined Gallery\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Morph Ball Bomb&pop;\nChozo Ruins - Dynamo\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Boost Ball&pop;\nChozo Ruins - Watery Hall\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Spider Ball&pop;\nChozo Ruins - Ruined Gallery\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Power Bomb&pop;\nMagmoor Caverns - Fiery Shores\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Varia Suit&pop;\nChozo Ruins - Hive Totem\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Gravity Suit&pop;\nChozo Ruins - Ruined Shrine\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Phazon Suit&pop;\nTallon Overworld - Hydro Access Tunnel\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Super Missile&pop;\nPhazon Mines - Phazon Processing Center\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Wavebuster&pop;\nChozo Ruins - Main Plaza\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Ice Spreader&pop;\nChozo Ruins - Tower of Light\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Flamethrower&pop;\nChozo Ruins - Ruined Nursery\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Elder&pop;\nPhendrana Drifts - Research Lab Aether\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Lifegiver&pop;\nMagmoor Caverns - Magmoor Workstation\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Strength&pop;\nChozo Ruins - Crossway\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Truth&pop;\nPhendrana Drifts - Control Tower\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Warrior&pop;\nPhazon Mines - Main Quarry\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Wild&pop;\nPhendrana Drifts - Quarantine Cave",
-        "bossSizes": {},
+        "bossSizes": {
+            "flaahgra": 1.3
+        },
         "hallOfTheEldersBombSlotCovers": {
             "ice": "Ice",
             "plasma": "Plasma",
@@ -2691,12 +2693,34 @@
                             "position": [-93.1123, 76.4873, 7.3116]
                         }
                     ],
+                    "blocks": [
+                        {
+                            "position": [-97.4, 103.9, 5.13],
+                            "scale": [0.1, 10, 0.5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [-92.6, 97.4, 5.13],
+                            "scale": [10, 0.1, 0.5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [-87.7, 93.2, 5.13],
+                            "scale": [0.1, 10, 0.5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [-87.7, 82.5, 5.13],
+                            "scale": [0.1, 10, 0.5],
+                            "texture": "Mine"
+                        }
+                    ],
                     "triggers": [
                         {
                             "position": [-90.6, 85.5, 10.3],
                             "scale": [40, 71, 20],
                             "flags": 8193, // Detect Player | Apply Force
-                            "force": [0, 885, 0]
+                            "force": [0, 0, -500]
                         }
                     ],
                     "editObjs": {
@@ -8022,11 +8046,239 @@
                         }
                     }
                 },
-                "Sun Tower": {},
+                "Sun Tower": {
+                    "boundingBoxScale": [1, 1, 1.5],
+                    "blocks": [
+                        {
+                            "position": [248.1, 345.4, 23.3],
+                            "scale": [4, 15, 0.5],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [231.0, 344.7, 38.3],
+                            "scale": [3, 0.2, 0.2],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [231.0, 346.1, 38.3],
+                            "scale": [3, 0.2, 0.2],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [248.1, 345.4, 54.4],
+                            "scale": [4, 15, 0.5],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [233.1, 345.4, 56],
+                            "scale": [4, 15, 0.5],
+                            "texture": "Sandstone"
+                        }
+                    ],
+                    "bombSlots": [
+                        {
+                            "damageableTriggerId": 10000160,
+                            "activateSlotId": 10000161,
+                            "position": [240.1471, 345.3877, 5.8],
+                            "rotation": [-90, 0, 0],
+                            "releaseBallDelayS": 2
+                        },
+                        {
+                            "damageableTriggerId": 10000164,
+                            "activateSlotId": 10000165,
+                            "position": [248.3, 345.4, 23.9],
+                            "rotation": [-45, 0, -90],
+                            "releaseBallDelayS": 2
+                        },
+                        {
+                            "damageableTriggerId": 10000167,
+                            "activateSlotId": 10000168,
+                            "position": [233.0, 342.9, 42],
+                            "rotation": [-45, 0, 120],
+                            "releaseBallDelayS": 2
+                        },
+                        {
+                            "damageableTriggerId": 10000170,
+                            "activateSlotId": 10000171,
+                            "position": [231.0, 345.5, 62.7],
+                            "rotation": [-65, 0, 90],
+                            "releaseBallDelayS": 2
+                        }
+                    ],
+                    "triggers": [
+                        {
+                            "id": 10000163,
+                            "active": false,
+                            "position": [240.1471, 345.3877, 5.8],
+                            "scale": [3, 3, 8],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, 0, 1650]
+                        },
+                        {
+                            "id": 10000166,
+                            "active": false,
+                            "position": [248.3, 345.4, 23.9],
+                            "scale": [3, 3, 8],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [-500, 0, 1500]
+                        },
+                        {
+                            "id": 10000169,
+                            "active": false,
+                            "position": [233.0, 342.9, 42],
+                            "scale": [3, 3, 8],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [500, 200, 1250]
+                        },
+                        {
+                            "id": 10000172,
+                            "active": false,
+                            "position": [231.0, 345.5, 62.7],
+                            "scale": [3, 3, 8],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [300, 0, 2800]
+                        }
+                    ],
+                    "spawnPoints": [
+                        { // move default spawn
+                            "id": 1900872,
+                            "position": [216.2804, 345.6185, 6.3146],
+                            "rotation": [0, 0, -90]
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 10000162,
+                            "time": 2.5
+                        }
+                    ],
+                    "editObjs": {
+                        // Player can't destroy hives on 1st pass
+                        "1900579": {"vulnerability": "Super Missile"},
+                        "1900597": {"vulnerability": "Super Missile"},
+                        "1900643": {"vulnerability": "Super Missile"},
+                        "1900635": {"vulnerability": "Super Missile"}
+                    },
+                    "addConnections": [
+                        /* Slot 1 */
+                        { // Start a timer when the bomb slot is activated
+                            "senderId": 10000160,
+                            "state": "DEAD",
+                            "targetId": 10000162,
+                            "message": "RESET_AND_START"
+                        },
+                        { // ...and enable the force trigger
+                            "senderId": 10000160,
+                            "state": "DEAD",
+                            "targetId": 10000163,
+                            "message": "ACTIVATE"
+                        },
+                        { // When the timer elapses, re-enable the bomb slot
+                            "senderId": 10000162,
+                            "state": "ZERO",
+                            "targetId": 10000161,
+                            "message": "SET_TO_ZERO"
+                        },
+                        { // ...and disable the force trigger
+                            "senderId": 10000162,
+                            "state": "ZERO",
+                            "targetId": 10000163,
+                            "message": "DEACTIVATE"
+                        },
+                        /* Slot 2 */
+                        { // Start a timer when the bomb slot is activated
+                            "senderId": 10000164,
+                            "state": "DEAD",
+                            "targetId": 10000162,
+                            "message": "RESET_AND_START"
+                        },
+                        { // ...and spawn some wasps
+                            "senderId": 10000164,
+                            "state": "DEAD",
+                            "targetId": 1900618,
+                            "message": "RESET_AND_START"
+                        },
+                        { // ...and enable the force trigger
+                            "senderId": 10000164,
+                            "state": "DEAD",
+                            "targetId": 10000166,
+                            "message": "ACTIVATE"
+                        },
+                        { // When the timer elapses, re-enable the bomb slot
+                            "senderId": 10000162,
+                            "state": "ZERO",
+                            "targetId": 10000165,
+                            "message": "SET_TO_ZERO"
+                        },
+                        { // ...and disable the force trigger
+                            "senderId": 10000162,
+                            "state": "ZERO",
+                            "targetId": 10000166,
+                            "message": "DEACTIVATE"
+                        },
+                        /* Slot 3 */
+                        { // Start a timer when the bomb slot is activated
+                            "senderId": 10000167,
+                            "state": "DEAD",
+                            "targetId": 10000162,
+                            "message": "RESET_AND_START"
+                        },
+                        { // ...and enable the force trigger
+                            "senderId": 10000167,
+                            "state": "DEAD",
+                            "targetId": 10000169,
+                            "message": "ACTIVATE"
+                        },
+                        { // When the timer elapses, re-enable the bomb slot
+                            "senderId": 10000162,
+                            "state": "ZERO",
+                            "targetId": 10000168,
+                            "message": "SET_TO_ZERO"
+                        },
+                        { // ...and disable the force trigger
+                            "senderId": 10000162,
+                            "state": "ZERO",
+                            "targetId": 10000169,
+                            "message": "DEACTIVATE"
+                        },
+                        /* Final Slot */
+                        { // Start a timer when the bomb slot is activated
+                            "senderId": 10000170,
+                            "state": "DEAD",
+                            "targetId": 10000162,
+                            "message": "RESET_AND_START"
+                        },
+                        { // ...and enable the force trigger
+                            "senderId": 10000170,
+                            "state": "DEAD",
+                            "targetId": 10000172,
+                            "message": "ACTIVATE"
+                        },
+                        { // When the timer elapses, re-enable the bomb slot
+                            "senderId": 10000162,
+                            "state": "ZERO",
+                            "targetId": 10000171,
+                            "message": "SET_TO_ZERO"
+                        },
+                        { // ...and disable the force trigger
+                            "senderId": 10000162,
+                            "state": "ZERO",
+                            "targetId": 10000172,
+                            "message": "DEACTIVATE"
+                        }
+
+                    ],
+                    "deleteIds": [
+                        1900617, // Remove Wasp Trigger
+                        1900813, 1900749, 1900856, 1900863, 1900861, 1900862, 1900792, 1900801, 1900864, 1900844, 1900849, 1900865, 1900818, 1900789 // clean up spider track
+                    ]
+                },
                 "Transport Access North": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "maxIncrease": 3,
+                            "position": [136.5, 345.34, 0.14]
                         }
                     ],
                     "doors": {
@@ -8034,7 +8286,62 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "blocks": [
+                        {
+                            "position": [132.2477, 345.3486, 0.9151],
+                            "scale": [6, 4, 2],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [116.0477, 346.1486, 8.4],
+                            "scale": [3, 4, 1.2],
+                            "texture": "Sandstone"
+                        }
+                    ],
+                    "triggers": [
+                        {
+                            "id": 1966410,
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, 0, 100],
+                            "position": [128.3374, 346.0035, 2.7186],
+                            "scale": [2, 2, 1.45]
+                        }
+                    ],
+                    "editObjs": {
+                        "1966126": { // piston 1
+                            "rotation": [0, 90, 0],
+                            "position": [126.9388, 345.7409, -1.2677]
+                        },
+                        "1966128": { // piston 1 top
+                            "position": [141.5, 345.7409, -1.2677],
+                            "speed": 1
+                        },
+                        "1966127": { // piston 1 bottom
+                            "position": [129.2388, 345.7409, -1.2677],
+                            "speed": 10
+                        },
+                        "1966129": { // piston 3
+                            "position": [126.29, 345.9313, 3.2386]
+                        }
+                    },
+                    "timers": [
+                        // Piston 1
+                        {
+                            "id": 1966417,
+                            "time": 2.5
+                        }
+                    ],
+                    "platforms": [
+                        {
+                            "type": "BombBox",
+                            "position": [128.3374, 346.0035, 2.7186]
+                        }
+                    ],
+                    "deleteIds": [
+                        1966322, 1966130, 1966415, 1966323, 1966324, 1966131, // piston 3 doesn't move
+                        1966274 // delete first block (replace with metal box)
+                    ]
                 },
                 "Sunchamber Access": {
                     "doors": {
