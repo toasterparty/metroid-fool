@@ -29,6 +29,7 @@ In general:
 
 - **Tower Chamber - Lifegiver**
 - Artifact Temple hints are blocked by Glorgie's shield
+- ??? - Energy Tank
 - Water Pool Track
 - **Water Pool - Missile Launcher**
 - Unlock Hive Totem fight (unwinnable without grapple)

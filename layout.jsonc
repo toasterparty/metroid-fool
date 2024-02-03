@@ -8159,7 +8159,7 @@
                     }
                 },
                 "Sun Tower": {
-                    "boundingBoxScale": [1, 1, 1.5],
+                    "boundingBoxScale": [1, 1, 1.2],
                     "blocks": [
                         {
                             "position": [248.1, 345.4, 23.3],
@@ -8248,7 +8248,7 @@
                             "position": [231.0, 345.5, 62.7],
                             "scale": [3, 3, 8],
                             "flags": 8193, // Detect Player | Apply Force
-                            "force": [300, 0, 2800]
+                            "force": [300, 0, 2500]
                         }
                     ],
                     "spawnPoints": [
@@ -8269,7 +8269,13 @@
                         "1900579": {"vulnerability": "Super Missile"},
                         "1900597": {"vulnerability": "Super Missile"},
                         "1900643": {"vulnerability": "Super Missile"},
-                        "1900635": {"vulnerability": "Super Missile"}
+                        "1900635": {"vulnerability": "Super Missile"},
+
+                        // Spindle Camera only for parts where it looks good
+                        "1900873": {
+                            "position": [240.2, 345.2, 34.3],
+                            "scale": [24, 21, 40]
+                        }
                     },
                     "addConnections": [
                         /* Slot 1 */
@@ -8382,7 +8388,7 @@
                     ],
                     "deleteIds": [
                         1900617, // Remove Wasp Trigger
-                        1900813, 1900749, 1900856, 1900863, 1900861, 1900862, 1900792, 1900801, 1900864, 1900844, 1900849, 1900865, 1900818, 1900789 // clean up spider track
+                        1900813, 1900749, 1900856, 1900863, 1900861, 1900862, 1900792, 1900801, 1900864, 1900844, 1900849, 1900865, 1900818, 1900789, 1900877 // clean up spider track
                     ]
                 },
                 "Transport Access North": {
@@ -8508,7 +8514,27 @@
                         }
                     }
                 },
-                "Sun Tower Access": {},
+                "Sun Tower Access": {
+                    "layers": {
+                        "5": true,
+                        "6": false
+                    },
+                    "liquids": [
+                        {
+                            "type": "Poison",
+                            "layer": 5,
+                            "position": [289.8762, 240.9976, 71.1459],
+                            "scale": [22, 30.6, 7.5]
+                        },
+                        {
+                            "id": 2293763,
+                            "type": "Water",
+                            "layer": 6,
+                            "position": [289.8762, 240.9976, 71.1459],
+                            "scale": [22, 30.6, 7.5]
+                        }
+                    ]
+                },
                 "Hive Totem": {
                     "pickups": [
                         {
@@ -8831,6 +8857,18 @@
                             "type": "ScriptLayerController",
                             "layerChangeRoomId": 4066558442, // This room
                             "layerChangeLayerId": 8
+                        },
+                        {
+                            "id": 10000243,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 665041921, // Sun Tower Access
+                            "layerChangeLayerId": 5 // poison water
+                        },
+                        {
+                            "id": 10000244,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 665041921, // Sun Tower Access
+                            "layerChangeLayerId": 6 // Normal water
                         }
                     ],
                     "timers": [
@@ -8994,31 +9032,31 @@
                         {
                             "id": 10000175,
                             "position": [284.1, 181.9, 68],
-                            "speed": 4,
+                            "speed": 3,
                             "active": false
                         },
                         {
                             "id": 10000176,
                             "position": [317.6526, 167.9876, 68],
-                            "speed": 4,
+                            "speed": 3,
                             "active": false
                         },
                         {
                             "id": 10000177,
                             "position": [329.5184, 137.3721, 68],
-                            "speed": 4,
+                            "speed": 3,
                             "active": false
                         },
                         {
                             "id": 10000178,
                             "position": [316.841, 104.5475, 68],
-                            "speed": 4,
+                            "speed": 3,
                             "active": false
                         },
                         {
                             "id": 10000179,
                             "position": [284.3382, 92.5299, 68],
-                            "speed": 4,
+                            "speed": 3,
                             "active": false
                         },
                         {
@@ -9030,111 +9068,111 @@
                         {
                             "id": 10000181,
                             "position": [238.9184, 137.4721, 68],
-                            "speed": 4,
+                            "speed": 3,
                             "active": false
                         },
                         {
                             "id": 10000182,
                             "position": [251.0054, 170.3811, 68],
-                            "speed": 4,
+                            "speed": 3,
                             "active": false
                         },
                         // Level 2 (Counter-Clockwise)
                         {
                             "id": 10000184,
                             "position": [284.1, 181.9, 71],
-                            "speed": 6,
+                            "speed": 4.5,
                             "active": false
                         },
                         {
                             "id": 10000185,
                             "position": [317.6526, 167.9876, 71],
-                            "speed": 6,
+                            "speed": 4.5,
                             "active": false
                         },
                         {
                             "id": 10000186,
                             "position": [329.5184, 137.3721, 71],
-                            "speed": 6,
+                            "speed": 4.5,
                             "active": false
                         },
                         {
                             "id": 10000187,
                             "position": [316.841, 104.5475, 71],
-                            "speed": 6,
+                            "speed": 4.5,
                             "active": false
                         },
                         {
                             "id": 10000188,
                             "position": [284.3382, 92.5299, 71],
-                            "speed": 6,
+                            "speed": 4.5,
                             "active": false
                         },
                         {
                             "id": 10000189,
                             "position": [251.7034, 105.3231, 71],
-                            "speed": 6,
+                            "speed": 4.5,
                             "active": false
                         },
                         {
                             "id": 10000190,
                             "position": [238.9184, 137.4721, 71],
-                            "speed": 6,
+                            "speed": 4.5,
                             "active": false
                         },
                         {
                             "id": 10000191,
                             "position": [251.0054, 170.3811, 71],
-                            "speed": 6,
+                            "speed": 4.5,
                             "active": false
                         },
                         // Level 3 (Clockwise)
                         {
                             "id": 10000196,
                             "position": [284.1, 181.9, 74],
-                            "speed": 8,
+                            "speed": 6,
                             "active": false
                         },
                         {
                             "id": 10000197,
                             "position": [317.6526, 167.9876, 74],
-                            "speed": 8,
+                            "speed": 6,
                             "active": false
                         },
                         {
                             "id": 10000198,
                             "position": [329.5184, 137.3721, 74],
-                            "speed": 8,
+                            "speed": 6,
                             "active": false
                         },
                         {
                             "id": 10000199,
                             "position": [316.841, 104.5475, 74],
-                            "speed": 8,
+                            "speed": 6,
                             "active": false
                         },
                         {
                             "id": 10000200,
                             "position": [284.3382, 92.5299, 74],
-                            "speed": 8,
+                            "speed": 6,
                             "active": false
                         },
                         {
                             "id": 10000201,
                             "position": [251.7034, 105.3231, 74],
-                            "speed": 8,
+                            "speed": 6,
                             "active": false
                         },
                         {
                             "id": 10000202,
                             "position": [238.9184, 137.4721, 74],
-                            "speed": 8,
+                            "speed": 6,
                             "active": false
                         },
                         {
                             "id": 10000203,
                             "position": [251.0054, 170.3811, 74],
-                            "speed": 8,
+                            "speed": 6,
                             "active": false
                         }
                     ],
@@ -9142,8 +9180,6 @@
                         {
                             "id": 2424932, // Fight start trigger
                             "active": false,
-                            // "position": [284.418, 194.6858, 75.4367],
-                            // "scale": [20, 2, 20]
                             "position": [279, 136, 70],
                             "scale": [120, 120, 30]
                         },
@@ -9165,6 +9201,19 @@
                             "active": false,
                             "damageType": "PoisonWater",
                             "damageAmount": 0.03
+                        },
+                        {
+                            "id": 10000241,
+                            "position": [284, 137.4, 68.2],
+                            "scale": [25, 25, 4],
+                            "flags": 12288,
+                            "force": [0, 900, 200]
+                        }
+                    ],
+                    "hudmemos": [
+                        {
+                            "id": 10000242,
+                            "text": "&just=center;&main-color=#FF3333;No."
                         }
                     ],
                     "relays": [
@@ -9235,6 +9284,14 @@
                         "2435997": {"layer": 8}
                     },
                     "addConnections": [
+                        // Sleepy Meme
+                        {
+                            "senderId": 10000241,
+                            "state": "ENTERED",
+                            "targetId": 10000242,
+                            "message": "SET_TO_ZERO"
+                        },
+
                         // The fight start trigger raises the water level
                         {
                             "senderId": 2424932, // Trigger, start fight
@@ -9272,11 +9329,26 @@
                             "targetId": 10000226, // poison hurt trgger
                             "message": "ACTIVATE"
                         },
-                        { // Killing flaahgra cleans the water
+
+                        // Killing flaahgra cleans the water
+                        {
                             "senderId": 2425044, // Flaahgra Dead Faulty Relay
                             "state": "ZERO",
                             "targetId": 10000226, // poison hurt trgger
                             "message": "DEACTIVATE"
+                        },
+                        // ...and in sun tower access
+                        {
+                            "senderId": 2425044, // Flaahgra Dead Faulty Relay
+                            "state": "ZERO",
+                            "targetId": 10000243, // layer change
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 2425044, // Flaahgra Dead Faulty Relay
+                            "state": "ZERO",
+                            "targetId": 10000244, // layer change
+                            "message": "INCREMENT"
                         },
 
                         // The fight start trigger enables the bomb slots
@@ -9884,6 +9956,32 @@
                             "message": "DEACTIVATE"
                         },
 
+                        // Power beam instantly flips panels
+                        {
+                            "senderId": 2425148,
+                            "state": "DAMAGE",
+                            "targetId": 2425149,
+                            "message": "SET_TO_MAX"
+                        },
+                        {
+                            "senderId": 2424848,
+                            "state": "DAMAGE",
+                            "targetId": 2424849,
+                            "message": "SET_TO_MAX"
+                        },
+                        {
+                            "senderId": 2425161,
+                            "state": "DAMAGE",
+                            "targetId": 2425162,
+                            "message": "SET_TO_MAX"
+                        },
+                        {
+                            "senderId": 2425174,
+                            "state": "DAMAGE",
+                            "targetId": 2425175,
+                            "message": "SET_TO_MAX"
+                        },
+
                         /* Ghosts Layer */
                         { // Taking the artifact deactivates the totem
                             "senderId": 12000026,
@@ -9984,6 +10082,31 @@
                             "senderId": 2437274, // Relay Start Intro Cinematic
                             "state": "ZERO",
                             "targetId": 2434868, // cinema bars
+                            "message": "INCREMENT"
+                        },
+                        // Power beam instantly flips panels instead of this
+                        {
+                            "senderId": 2425148,
+                            "state": "DAMAGE",
+                            "targetId": 2425149,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 2424848,
+                            "state": "DAMAGE",
+                            "targetId": 2424849,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 2425161,
+                            "state": "DAMAGE",
+                            "targetId": 2425162,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 2425174,
+                            "state": "DAMAGE",
+                            "targetId": 2425175,
                             "message": "INCREMENT"
                         }
                     ],
