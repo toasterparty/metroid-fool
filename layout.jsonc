@@ -101,7 +101,7 @@
         "mainMenuMessage": "April Fools [Untitled] v0.1",
         "creditsString": "&push;&font=C29C51F1;&main-color=#89D6FF;Major Item Locations&pop;\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Wave Beam&pop;\nPhazon Mines - Metroid Quarantine A\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Ice Beam&pop;\nPhazon Mines - Ventilation Shaft\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Plasma Beam&pop;\nPhazon Mines - Central Dynamo\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Missile Launcher&pop;\nTallon Overworld - Transport Tunnel B\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Grapple Beam&pop;\nTallon Overworld - Landing Site\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Thermal Visor&pop;\nPhendrana Drifts - Ice Ruins East\n\n&push;&font=C29C51F1;&main-color=#33ffd6;X-Ray Visor&pop;\nMagmoor Caverns - Warrior Shrine\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Space Jump Boots&pop;\nTallon Overworld - Frigate Crash Site\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Morph Ball&pop;\nChozo Ruins - Ruined Gallery\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Morph Ball Bomb&pop;\nChozo Ruins - Dynamo\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Boost Ball&pop;\nChozo Ruins - Watery Hall\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Spider Ball&pop;\nChozo Ruins - Ruined Gallery\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Power Bomb&pop;\nMagmoor Caverns - Fiery Shores\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Varia Suit&pop;\nChozo Ruins - Hive Totem\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Gravity Suit&pop;\nChozo Ruins - Ruined Shrine\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Phazon Suit&pop;\nTallon Overworld - Hydro Access Tunnel\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Super Missile&pop;\nPhazon Mines - Phazon Processing Center\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Wavebuster&pop;\nChozo Ruins - Main Plaza\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Ice Spreader&pop;\nChozo Ruins - Tower of Light\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Flamethrower&pop;\nChozo Ruins - Ruined Nursery\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Elder&pop;\nPhendrana Drifts - Research Lab Aether\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Lifegiver&pop;\nMagmoor Caverns - Magmoor Workstation\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Strength&pop;\nChozo Ruins - Crossway\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Truth&pop;\nPhendrana Drifts - Control Tower\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Warrior&pop;\nPhazon Mines - Main Quarry\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Wild&pop;\nPhendrana Drifts - Quarantine Cave",
         "bossSizes": {
-            "flaahgra": 1.3
+            "flaahgra": 1.15
         },
         "hallOfTheEldersBombSlotCovers": {
             "ice": "Ice",
@@ -129,6 +129,118 @@
         // "gunDamage": 100
     },
     "strg": {
+        "89302102": [
+            "Combat Visor",
+            "Scan Visor",
+            "X-Ray Visor",
+            "Thermal Visor",
+            "Power Beam",
+            "Ice Beam",
+            "Wave Beam",
+            "Plasma Beam",
+            "Phazon Beam",
+            "Energy Low",
+            "Warning",
+            "Damage",
+            "Missiles\nLow",
+            "Depleted",
+            "Scanning…",
+            "Scan complete.",
+            "Object out of scanning range.",
+            "Press &image=SI,0.70,0.68,05AF9CAA; to continue.",
+            "&just=center;Thermal Visor overloaded.\nReturn to Combat Visor.",
+            "&just=center;You have been frozen. Tap &image=SI,0.70,0.68,833BEE04; rapidly to break free.",
+            "&just=center;You have been frozen. Drop Bombs to break free.",
+            "&just=center;Hyper-mode",
+            "Yes",
+            "No",
+            "Quit Game?",
+            "Continue from last save?",
+            "Save your progress to the Memory Card in Slot A? Previous data will be overwritten.",
+            "Quit Metroid? Progress since the last save will be lost.",
+            "Continue playing?",
+            "A new&main-color=#FF3333; [",
+            "] &main-color=#89D6FF;entry has been downloaded to your Log Book.",
+            "Pirate Data",
+            "Chozo Lore",
+            "Creatures",
+            "Research",
+            "Artifacts",
+            "[New Game]",
+            "Metroid Fusion Connection Bonuses",
+            "Erase",
+            "[Samus A]",
+            "[Samus B]",
+            "[Samus C]",
+            "&image=SI,1.0,0.68,6CBE6EF2;\nExit",
+            "&image=SI,1.0,0.68,EA2A1C5C;  Key/Legend",
+            "World \nMap",
+            "Level\nMap",
+            "Rotate     ",
+            "Move      ",
+            " Zoom ",
+            "&line-extra-space=4;&image=SI, 0.6875,0.6875,FE2235F5; - Any Beam\n&image=SI, 0.6875,0.6875,41031B9B; - Wave Beam\n&image=SI, 0.6875,0.6875,40074106; - Ice Beam\n&image=SI, 0.6875,0.6875,A9D17D44; - Plasma Beam\n&image=SI, 0.6875,0.6875,95401DA9; - Missile\n&image=SI, 0.6875,0.6875,81DFB050; - Opened\n&image=SI, 0.6875,0.6875,8A78A5BF; - Elevator\n&image=SI, 0.6875,0.6875,39C0091E; - Missile Recharge\n&image=SI, 0.6875,0.6875,C6FA23D1; - Save Station\n&image=SI, 0.6875,0.6875,CB91BD62; - Hint\n",
+            "Okay to erase?",
+            "    -- -- -- -- -- --",
+            " --:--",
+            " -- -- --",
+            "Elapsed",
+            "Legend",
+            "Browse",
+            "Pan",
+            "Zoom",
+            "Auto",
+            "Reset View",
+            "Exit",
+            "Exit",
+            "Metroid Fusion Suit",
+            "Enabled",
+            "Disabled",
+            "Play NES Metroid",
+            "Start",
+            "Connect the Game Boy Advance to Socket\n2, 3, or 4 on the Nintendo GameCube.",
+            "Data link failed. Retry?",
+            "Data link complete. Please turn off your Game Boy Advance. Do not remove the Memory Card.",
+            "Data link complete. Please turn off\nyour Game Boy Advance.",
+            "Linking...do not touch the Nintendo GameCube Game Boy Advance cable, Memory Card, or POWER Button.",
+            "Insert a Metroid Fusion Game Pak\ninto the Game Boy Advance.",
+            "On the Game Boy Advance, press and hold\nSTART and SELECT then turn the power ON.",
+            "Begin data link to the Game Boy Advance?",
+            "Turn off the Game Boy Advance.",
+            "To play NES Metroid on your\nNintendo GameCube:\n\nComplete Metroid Fusion for the Game Boy® Advance and connect Metroid Fusion to Metroid Prime.",
+            "To enable Samus's Fusion Suit \nin Metroid Prime:\n\nComplete Metroid Prime and connect Metroid Fusion for the Game Boy® Advance to Metroid Prime.",
+            "You have not completed Metroid Fusion. You must complete Metroid Fusion to unlock NES Metroid.",
+            "You have not completed Metroid Prime. You must complete Metroid Prime to unlock Samus's Fusion Suit in Metroid Prime.",
+            "&image=SI,0.70,0.68,05AF9CAA; Okay",
+            "&image=SI,0.70,0.68,833BEE04; Back",
+            "&image=SI,0.70,0.68,05AF9CAA; Proceed",
+            "&image=SI,0.70,0.68,05AF9CAA; Retry",
+            "&image=SI,0.70,0.68,05AF9CAA; Select",
+            "Parasite Queen",
+            "Foie Gras",
+            "Thardus",
+            "Omega Pirate",
+            "Meta Ridley",
+            "Metroid Prime",
+            " ",
+            " ",
+            "Options",
+            "Cancel",
+            "Image Gallery",
+            "MAIN MENU",
+            "MAIN MENU",
+            "OPTIONS",
+            "METROID FUSION CONNECTION BONUSES",
+            "Normal Mode",
+            "Hard Mode",
+            "Press &image=SA,3.0,1.0,1.0,46434ED3,34E79314; to quit.",
+            "&just=center;Use the Morph Ball Boost to get out of the way.",
+            "&just=center;Artifact acquired.",
+            "[Hard A]",
+            "[Hard B]",
+            "[Hard C]",
+            "&just=center;Power Bomb ammunition acquired"
+        ],
         "3230660781": ["Water Pool"],
         "1487098604": [
             "The Artifact of Lifegiver is where it belongs.",
@@ -8723,6 +8835,19 @@
                     ],
                     "timers": [
                         {
+                            "id": 10000173,
+                            "time": 15
+                        },
+                        {
+                            "id": 10000225,
+                            "time": 5
+                        },
+                        {
+                            "id": 10000221,
+                            "time": 0.02,
+                            "startImmediately": true
+                        },
+                        {
                             "id": 12000029,
                             "time": 0.5,
                             "startImmediately": true
@@ -8740,7 +8865,360 @@
                             "startImmediately": true
                         }
                     ],
+                    "platforms": [
+                        // Level 1
+                        {
+                            "id": 10000174,
+                            "position": [284.1, 181.9, 68]
+                        },
+                        {
+                            "id": 10000183,
+                            "position": [284.3382, 92.5299, 68]
+                        },
+                        {
+                            "id": 10000235,
+                            "position": [329.5184, 137.3721, 68]
+                        },
+                        {
+                            "id": 10000236,
+                            "position": [238.9184, 137.4721, 68]
+                        },
+                        // Level 2
+                        {
+                            "id": 10000192,
+                            "position": [317.6526, 167.9876, 71],
+                            "type": "HalfBlock"
+                        },
+                        {
+                            "id": 10000193,
+                            "position": [316.841, 104.5475, 71],
+                            "type": "HalfBlock"
+                        },
+                        {
+                            "id": 10000194,
+                            "position": [251.7034, 105.3231, 71],
+                            "type": "HalfBlock"
+                        },
+                        {
+                            "id": 10000195,
+                            "position": [251.0054, 170.3811, 71],
+                            "type": "HalfBlock"
+                        },
+                        {
+                            "id": 10000208,
+                            "position": [329.5184, 137.3721, 71],
+                            "type": "Empty"
+                        },
+                        {
+                            "id": 10000209,
+                            "position": [238.9184, 137.4721, 71],
+                            "type": "Empty"
+                        },
+                        {
+                            "id": 10000214,
+                            "position": [284.3382, 92.5299, 71],
+                            "type": "Empty"
+                        },
+                        {
+                            "id": 10000215,
+                            "position": [284.1, 181.9, 71],
+                            "type": "Empty"
+                        },
+                        
+                        // Level 3
+                        {
+                            "id": 10000204,
+                            "position": [317.6526, 167.9876, 74],
+                            "type": "HalfBlock"
+                        },
+                        {
+                            "id": 10000205,
+                            "position": [316.841, 104.5475, 74],
+                            "type": "HalfBlock"
+                        },
+                        {
+                            "id": 10000206,
+                            "position": [251.7034, 105.3231, 74],
+                            "type": "HalfBlock"
+                        },
+                        {
+                            "id": 10000207,
+                            "position": [251.0054, 170.3811, 74],
+                            "type": "HalfBlock"
+                        }
+                    ],
+                    "bombSlots": [
+                        {
+                            "damageableTriggerId": 10000210,
+                            "actorId": 10000211,
+                            "platformId": 10000212,
+                            "ballTriggerId": 10000213,
+                            "position": [329.5184, 137.3721, 79.5],
+                            "rotation": [90, 0, 0],
+                            "active": false,
+                            "activateSlotId": 10000237
+                        },
+                        {
+                            "damageableTriggerId": 10000216,
+                            "actorId": 10000217,
+                            "platformId": 10000218,
+                            "ballTriggerId": 10000219,
+                            "position": [238.9184, 137.4721, 79.5],
+                            "rotation": [90, 0, 0],
+                            "active": false,
+                            "activateSlotId": 10000238
+                        },
+                        {
+                            "damageableTriggerId": 10000227,
+                            "actorId": 10000228,
+                            "platformId": 10000229,
+                            "ballTriggerId": 10000230,
+                            "position": [284.1, 181.9, 79.5],
+                            "rotation": [90, 0, 0],
+                            "active": false,
+                            "activateSlotId": 10000239
+                        },
+                        {
+                            "damageableTriggerId": 10000231,
+                            "actorId": 10000232,
+                            "platformId": 10000233,
+                            "ballTriggerId": 10000234,
+                            "position": [284.3382, 92.5299, 79.5],
+                            "rotation": [90, 0, 0],
+                            "active": false,
+                            "activateSlotId": 10000240
+                        }
+                    ],
+                    "waypoints": [
+                        // Level 1 (Clockwise)
+                        {
+                            "id": 10000175,
+                            "position": [284.1, 181.9, 68],
+                            "speed": 4,
+                            "active": false
+                        },
+                        {
+                            "id": 10000176,
+                            "position": [317.6526, 167.9876, 68],
+                            "speed": 4,
+                            "active": false
+                        },
+                        {
+                            "id": 10000177,
+                            "position": [329.5184, 137.3721, 68],
+                            "speed": 4,
+                            "active": false
+                        },
+                        {
+                            "id": 10000178,
+                            "position": [316.841, 104.5475, 68],
+                            "speed": 4,
+                            "active": false
+                        },
+                        {
+                            "id": 10000179,
+                            "position": [284.3382, 92.5299, 68],
+                            "speed": 4,
+                            "active": false
+                        },
+                        {
+                            "id": 10000180,
+                            "position": [251.7034, 105.3231, 68],
+                            "speed": 4,
+                            "active": false
+                        },
+                        {
+                            "id": 10000181,
+                            "position": [238.9184, 137.4721, 68],
+                            "speed": 4,
+                            "active": false
+                        },
+                        {
+                            "id": 10000182,
+                            "position": [251.0054, 170.3811, 68],
+                            "speed": 4,
+                            "active": false
+                        },
+                        // Level 2 (Counter-Clockwise)
+                        {
+                            "id": 10000184,
+                            "position": [284.1, 181.9, 71],
+                            "speed": 6,
+                            "active": false
+                        },
+                        {
+                            "id": 10000185,
+                            "position": [317.6526, 167.9876, 71],
+                            "speed": 6,
+                            "active": false
+                        },
+                        {
+                            "id": 10000186,
+                            "position": [329.5184, 137.3721, 71],
+                            "speed": 6,
+                            "active": false
+                        },
+                        {
+                            "id": 10000187,
+                            "position": [316.841, 104.5475, 71],
+                            "speed": 6,
+                            "active": false
+                        },
+                        {
+                            "id": 10000188,
+                            "position": [284.3382, 92.5299, 71],
+                            "speed": 6,
+                            "active": false
+                        },
+                        {
+                            "id": 10000189,
+                            "position": [251.7034, 105.3231, 71],
+                            "speed": 6,
+                            "active": false
+                        },
+                        {
+                            "id": 10000190,
+                            "position": [238.9184, 137.4721, 71],
+                            "speed": 6,
+                            "active": false
+                        },
+                        {
+                            "id": 10000191,
+                            "position": [251.0054, 170.3811, 71],
+                            "speed": 6,
+                            "active": false
+                        },
+                        // Level 3 (Clockwise)
+                        {
+                            "id": 10000196,
+                            "position": [284.1, 181.9, 74],
+                            "speed": 8,
+                            "active": false
+                        },
+                        {
+                            "id": 10000197,
+                            "position": [317.6526, 167.9876, 74],
+                            "speed": 8,
+                            "active": false
+                        },
+                        {
+                            "id": 10000198,
+                            "position": [329.5184, 137.3721, 74],
+                            "speed": 8,
+                            "active": false
+                        },
+                        {
+                            "id": 10000199,
+                            "position": [316.841, 104.5475, 74],
+                            "speed": 8,
+                            "active": false
+                        },
+                        {
+                            "id": 10000200,
+                            "position": [284.3382, 92.5299, 74],
+                            "speed": 8,
+                            "active": false
+                        },
+                        {
+                            "id": 10000201,
+                            "position": [251.7034, 105.3231, 74],
+                            "speed": 8,
+                            "active": false
+                        },
+                        {
+                            "id": 10000202,
+                            "position": [238.9184, 137.4721, 74],
+                            "speed": 8,
+                            "active": false
+                        },
+                        {
+                            "id": 10000203,
+                            "position": [251.0054, 170.3811, 74],
+                            "speed": 8,
+                            "active": false
+                        }
+                    ],
+                    "triggers": [
+                        {
+                            "id": 2424932, // Fight start trigger
+                            "active": false,
+                            // "position": [284.418, 194.6858, 75.4367],
+                            // "scale": [20, 2, 20]
+                            "position": [279, 136, 70],
+                            "scale": [120, 120, 30]
+                        },
+                        {
+                            "id": 10000220,
+                            "position": [284.418, 194.6858, 75.4367],
+                            "scale": [20, 2, 20],
+                            "deactivateOnEnter": true
+                        },
+                        { // water destination
+                            "id": 10000224,
+                            "position": [284.1184, 137.3721, 59.2792],
+                            "scale": [120, 120, 16]
+                        },
+                        { // water destination (damage)
+                            "id": 10000226,
+                            "position": [284.1184, 137.3721, 59.2792],
+                            "scale": [120, 120, 16],
+                            "active": false,
+                            "damageType": "PoisonWater",
+                            "damageAmount": 0.03
+                        }
+                    ],
+                    "relays": [
+                        { // fight start relay (oneshot)
+                            "id": 10000222 
+                        },
+                        { // deactivate mirrors relay
+                            "id": 10000223
+                        }
+                    ],
                     "editObjs": {
+                        "2424843": { // spawn point
+                            "position": [284.1292, 204.553, 76.0172],
+                            "rotation": [0, 0, 180]
+                        },
+                        "2424862": { // Flaahgra
+                            "speed": 0.9
+                        },
+                        "2425129": { // Clean water
+                            "scale": [120, 120, 16]
+                        },
+                        // bomb slot damageable triggers
+                        "2424916": { // damageable trigger (south)
+                            "position": [329.5184, 137.3721, 79.5]
+                        },
+                        "2424922": { // damageable trigger (north)
+                            "position": [238.9184, 137.4721, 79.5]
+                        },
+                        "2424873": { // damageable trigger (east)
+                            "position": [284.1, 181.9, 79.5]
+                        },
+                        "2424921": { // damageable trigger (west)
+                            "position": [284.3382, 92.5299, 79.5]
+                        },
+
+                        // Tentacles
+                        "2424923": { // Tentacle ()
+                            "rotation": [18, 0, -90],
+                            "scale": [4, 4, 4]
+                        },
+                        "2424930": { // Tentacle (South)
+                            "rotation": [18, 0, 0],
+                            "scale": [4, 4, 4]
+                        },
+                        "2424882": { // Tentacle ()
+                            "rotation": [18, 0, 90],
+                            "scale": [4, 4, 4]
+                        },
+                        "2424919": { // Tentacle ()
+                            "rotation": [18, 0, 180],
+                            "scale": [4, 4, 4]
+                        },
+
+                        /* Ghosts Layer */
                         "12000026": { // Move the take pickup to the ghosts layer
                             "layer": 6
                         },
@@ -8757,6 +9235,656 @@
                         "2435997": {"layer": 8}
                     },
                     "addConnections": [
+                        // The fight start trigger raises the water level
+                        {
+                            "senderId": 2424932, // Trigger, start fight
+                            "state": "ENTERED",
+                            "targetId": 2424902, // Water
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 2424902, // Water
+                            "state": "PLAY",
+                            "targetId": 10000224, // Trigger (Water Destination)
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 2424932, // Trigger, start fight
+                            "state": "ENTERED",
+                            "targetId": 2437123, // Water sound
+                            "message": "PLAY"
+                        },
+                        {
+                            "senderId": 2424932, // Trigger, start fight
+                            "state": "ENTERED",
+                            "targetId": 10000225, // stop water sound timer
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000225, // stop water sound timer
+                            "state": "ZERO",
+                            "targetId": 2437123, // water sound
+                            "message": "STOP"
+                        },
+                        { // for whatever reason, the water stops hurting your when it reaches the end. To compensate, use a hurt trigger
+                            "senderId": 10000225, // stop water sound timer
+                            "state": "ZERO",
+                            "targetId": 10000226, // poison hurt trgger
+                            "message": "ACTIVATE"
+                        },
+                        { // Killing flaahgra cleans the water
+                            "senderId": 2425044, // Flaahgra Dead Faulty Relay
+                            "state": "ZERO",
+                            "targetId": 10000226, // poison hurt trgger
+                            "message": "DEACTIVATE"
+                        },
+
+                        // The fight start trigger enables the bomb slots
+                        {
+                            "senderId": 2424932, // Trigger, start fight
+                            "state": "ENTERED",
+                            "targetId": 10000237, // Bomb Slot Relay
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 2424932, // Trigger, start fight
+                            "state": "ENTERED",
+                            "targetId": 10000238, // Bomb Slot Relay
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 2424932, // Trigger, start fight
+                            "state": "ENTERED",
+                            "targetId": 10000239, // Bomb Slot Relay
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 2424932, // Trigger, start fight
+                            "state": "ENTERED",
+                            "targetId": 10000240, // Bomb Slot Relay
+                            "message": "SET_TO_ZERO"
+                        },
+
+                        // Shoot all dishes relay
+                        { // remotely "shoot" this dish
+                            "senderId": 10000223, // relay
+                            "state": "ZERO",
+                            "targetId": 2424849, // SpecialFunction - Shot Spinner Controller
+                            "message": "SET_TO_MAX"
+                        },
+                        { // remotely "shoot" this dish
+                            "senderId": 10000223, // relay
+                            "state": "ZERO",
+                            "targetId": 2425149, // SpecialFunction - Shot Spinner Controller
+                            "message": "SET_TO_MAX"
+                        },
+                        { // remotely "shoot" this dish
+                            "senderId": 10000223, // relay
+                            "state": "ZERO",
+                            "targetId": 2425162, // SpecialFunction - Shot Spinner Controller
+                            "message": "SET_TO_MAX"
+                        },
+                        { // remotely "shoot" this dish
+                            "senderId": 10000223, // relay
+                            "state": "ZERO",
+                            "targetId": 2425175, // SpecialFunction - Shot Spinner Controller
+                            "message": "SET_TO_MAX"
+                        },
+                        { // enable the first dish as the player walks in
+                            "senderId": 10000220, // Trigger (back entrance)
+                            "state": "ENTERED",
+                            "targetId": 2425054, // Activate Mirror Not-So-Faulty Relay
+                            "message": "SET_TO_ZERO"
+                        },
+                        { // block the escape with vines as the player walks in
+                            "senderId": 10000220, // Trigger (back entrance)
+                            "state": "ENTERED",
+                            "targetId": 2435320, // Memory Relay - [IN] Turn On Vines
+                            "message": "ACTIVATE"
+                        },
+                        { // When the dish is hit, activate a relay...
+                            "senderId": 2424889, // OUT - Faulty Relay - Mirror Deactivated
+                            "state": "ZERO",
+                            "targetId": 10000222, // relay
+                            "message": "SET_TO_ZERO"
+                        },
+                        { // ...which wakes up flaahgra
+                            "senderId": 10000222, // relay
+                            "state": "ZERO",
+                            "targetId": 2424932, // Trigger, start fight
+                            "message": "ACTIVATE"
+                        },
+                        { // ...and starts a timer to activate moving platforms
+                            "senderId": 10000222, // relay
+                            "state": "ZERO",
+                            "targetId": 10000173, // timer - start moving platforms
+                            "message": "RESET_AND_START"
+                        },
+                        { // The fight start trigger disables the relay, making it a oneshot
+                            "senderId": 2424932, // Trigger, start fight
+                            "state": "ENTERED",
+                            "targetId": 10000222, // relay
+                            "message": "DEACTIVATE"
+                        },
+
+                        // activate waypoints when fight starts
+                        {"senderId": 10000173, "state": "ZERO", "targetId": 10000175, "message": "ACTIVATE"},
+                        {"senderId": 10000173, "state": "ZERO", "targetId": 10000176, "message": "ACTIVATE"},
+                        {"senderId": 10000173, "state": "ZERO", "targetId": 10000177, "message": "ACTIVATE"},
+                        {"senderId": 10000173, "state": "ZERO", "targetId": 10000178, "message": "ACTIVATE"},
+                        {"senderId": 10000173, "state": "ZERO", "targetId": 10000179, "message": "ACTIVATE"},
+                        {"senderId": 10000173, "state": "ZERO", "targetId": 10000180, "message": "ACTIVATE"},
+                        {"senderId": 10000173, "state": "ZERO", "targetId": 10000181, "message": "ACTIVATE"},
+                        {"senderId": 10000173, "state": "ZERO", "targetId": 10000182, "message": "ACTIVATE"},
+                        {"senderId": 10000173, "state": "ZERO", "targetId": 10000184, "message": "ACTIVATE"},
+                        {"senderId": 10000173, "state": "ZERO", "targetId": 10000185, "message": "ACTIVATE"},
+                        {"senderId": 10000173, "state": "ZERO", "targetId": 10000186, "message": "ACTIVATE"},
+                        {"senderId": 10000173, "state": "ZERO", "targetId": 10000187, "message": "ACTIVATE"},
+                        {"senderId": 10000173, "state": "ZERO", "targetId": 10000188, "message": "ACTIVATE"},
+                        {"senderId": 10000173, "state": "ZERO", "targetId": 10000189, "message": "ACTIVATE"},
+                        {"senderId": 10000173, "state": "ZERO", "targetId": 10000190, "message": "ACTIVATE"},
+                        {"senderId": 10000173, "state": "ZERO", "targetId": 10000191, "message": "ACTIVATE"},
+                        {"senderId": 10000173, "state": "ZERO", "targetId": 10000196, "message": "ACTIVATE"},
+                        {"senderId": 10000173, "state": "ZERO", "targetId": 10000197, "message": "ACTIVATE"},
+                        {"senderId": 10000173, "state": "ZERO", "targetId": 10000198, "message": "ACTIVATE"},
+                        {"senderId": 10000173, "state": "ZERO", "targetId": 10000199, "message": "ACTIVATE"},
+                        {"senderId": 10000173, "state": "ZERO", "targetId": 10000200, "message": "ACTIVATE"},
+                        {"senderId": 10000173, "state": "ZERO", "targetId": 10000201, "message": "ACTIVATE"},
+                        {"senderId": 10000173, "state": "ZERO", "targetId": 10000202, "message": "ACTIVATE"},
+                        {"senderId": 10000173, "state": "ZERO", "targetId": 10000203, "message": "ACTIVATE"},
+
+                        // Level 1 waypoints
+                        {
+                            "senderId": 10000175, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000176, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000176, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000177, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000177, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000178, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000178, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000179, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000179, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000180, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000180, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000181, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000181, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000182, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000182, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000175, // waypoint
+                            "message": "NEXT"
+                        },
+                        // Level 2 waypoints
+                        {
+                            "senderId": 10000191, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000190, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000190, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000189, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000189, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000188, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000188, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000187, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000187, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000186, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000186, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000185, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000185, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000184, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000184, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000191, // waypoint
+                            "message": "NEXT"
+                        },
+                        // Level 3 waypoints
+                        {
+                            "senderId": 10000196, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000197, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000197, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000198, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000198, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000199, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000199, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000200, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000200, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000201, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000201, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000202, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000202, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000203, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000203, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000196, // waypoint
+                            "message": "NEXT"
+                        },
+                        // Level 1 - Platforms (Clockwise)
+                        {
+                            "senderId": 10000174, // platform
+                            "state": "PLAY",
+                            "targetId": 10000175, // waypoint
+                            "message": "FOLLOW"
+                        },
+                        {
+                            "senderId": 10000183, // platform
+                            "state": "PLAY",
+                            "targetId": 10000179, // waypoint
+                            "message": "FOLLOW"
+                        },
+                        {
+                            "senderId": 10000235, // platform
+                            "state": "PLAY",
+                            "targetId": 10000177, // waypoint
+                            "message": "FOLLOW"
+                        },
+                        {
+                            "senderId": 10000236, // platform
+                            "state": "PLAY",
+                            "targetId": 10000181, // waypoint
+                            "message": "FOLLOW"
+                        },
+                        // Level 2 - Platforms (Counter-Clockwise)
+                        {
+                            "senderId": 10000192, // platform
+                            "state": "PLAY",
+                            "targetId": 10000185, // waypoint
+                            "message": "FOLLOW"
+                        },
+                        {
+                            "senderId": 10000193, // platform
+                            "state": "PLAY",
+                            "targetId": 10000187, // waypoint
+                            "message": "FOLLOW"
+                        },
+                        {
+                            "senderId": 10000194, // platform
+                            "state": "PLAY",
+                            "targetId": 10000189, // waypoint
+                            "message": "FOLLOW"
+                        },
+                        {
+                            "senderId": 10000195, // platform
+                            "state": "PLAY",
+                            "targetId": 10000191, // waypoint
+                            "message": "FOLLOW"
+                        },
+                        {
+                            "senderId": 10000208, // platform
+                            "state": "PLAY",
+                            "targetId": 10000186, // waypoint
+                            "message": "FOLLOW"
+                        },
+                        {
+                            "senderId": 10000209, // platform
+                            "state": "PLAY",
+                            "targetId": 10000190, // waypoint
+                            "message": "FOLLOW"
+                        },
+                        {
+                            "senderId": 10000214, // platform
+                            "state": "PLAY",
+                            "targetId": 10000188, // waypoint
+                            "message": "FOLLOW"
+                        },
+                        {
+                            "senderId": 10000215, // platform
+                            "state": "PLAY",
+                            "targetId": 10000184, // waypoint
+                            "message": "FOLLOW"
+                        },
+                        {
+                            "senderId": 10000204, // platform
+                            "state": "PLAY",
+                            "targetId": 10000197, // waypoint
+                            "message": "FOLLOW"
+                        },
+                        {
+                            "senderId": 10000205, // platform
+                            "state": "PLAY",
+                            "targetId": 10000199, // waypoint
+                            "message": "FOLLOW"
+                        },
+                        {
+                            "senderId": 10000206, // platform
+                            "state": "PLAY",
+                            "targetId": 10000201, // waypoint
+                            "message": "FOLLOW"
+                        },
+                        {
+                            "senderId": 10000207, // platform
+                            "state": "PLAY",
+                            "targetId": 10000203, // waypoint
+                            "message": "FOLLOW"
+                        },
+                        // Level 4 - Bomb Slots //
+                        // Slot #1
+                        {
+                            "senderId": 10000221, // instant-start timer
+                            "state": "ZERO",
+                            "targetId": 2424916, // damageable trigger (flaahgra south)
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000208, // platform (empty)
+                            "state": "PLAY",
+                            "targetId": 2424916, // damageable trigger (flaahgra south)
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000208, // platform (empty)
+                            "state": "PLAY",
+                            "targetId": 10000210, // damageable trigger (bomb slot)
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000208, // platform (empty)
+                            "state": "PLAY",
+                            "targetId": 10000211, // glow ring actor
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000208, // platform (empty)
+                            "state": "PLAY",
+                            "targetId": 10000212, // bomb slot platform
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000208, // platform (empty)
+                            "state": "PLAY",
+                            "targetId": 10000213, // ball trigger
+                            "message": "ACTIVATE"
+                        },
+                        { // Stop moving when the player goes in
+                            "senderId": 10000213, // ball trigger
+                            "state": "ENTERED",
+                            "targetId": 10000208,
+                            "message": "DEACTIVATE"
+                        },
+                        { // Activate flaahgra trigger when the player goes in
+                            "senderId": 10000213, // ball trigger
+                            "state": "ENTERED",
+                            "targetId": 2424916, // damageable trigger (flaahgra south)
+                            "message": "ACTIVATE"
+                        },
+                        { // Shoot all mirrors when the player goes in
+                            "senderId": 10000213, // ball trigger
+                            "state": "ENTERED",
+                            "targetId": 10000223, // Relay - Shoot all mirrors
+                            "message": "SET_TO_ZERO"
+                        },
+                        { // Delete bomb slot as part of the cutscene
+                            "senderId": 2424966, // Begin Cinematic Faulty Relay
+                            "state": "ZERO",
+                            "targetId": 10000212, // bomb slot platform
+                            "message": "DEACTIVATE"
+                        },
+                        // Slot #2
+                        {
+                            "senderId": 10000221, // instant-start timer
+                            "state": "ZERO",
+                            "targetId": 2424922, // damageable trigger (flaahgra north)
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000209, // platform (empty)
+                            "state": "PLAY",
+                            "targetId": 2424922, // damageable trigger (flaahgra north)
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000209, // platform (empty)
+                            "state": "PLAY",
+                            "targetId": 10000216, // damageable trigger (bomb slot)
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000209, // platform (empty)
+                            "state": "PLAY",
+                            "targetId": 10000217, // glow ring actor
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000209, // platform (empty)
+                            "state": "PLAY",
+                            "targetId": 10000218, // bomb slot platform
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000209, // platform (empty)
+                            "state": "PLAY",
+                            "targetId": 10000219, // ball trigger
+                            "message": "ACTIVATE"
+                        },
+                        { // Stop moving when the player goes in
+                            "senderId": 10000219, // ball trigger
+                            "state": "ENTERED",
+                            "targetId": 10000209, // platform (empty)
+                            "message": "DEACTIVATE"
+                        },
+                        { // Activate flaahgra trigger when the player goes in
+                            "senderId": 10000219, // ball trigger
+                            "state": "ENTERED",
+                            "targetId": 2424922, // damageable trigger (flaahgra north)
+                            "message": "ACTIVATE"
+                        },
+                        { // Shoot all mirrors when the player goes in
+                            "senderId": 10000219, // ball trigger
+                            "state": "ENTERED",
+                            "targetId": 10000223, // Relay - Shoot all mirrors
+                            "message": "SET_TO_ZERO"
+                        },
+                        { // Delete bomb slot as part of the cutscene
+                            "senderId": 2424973, // Begin Cinematic Faulty Relay
+                            "state": "ZERO",
+                            "targetId": 10000218, // bomb slot platform
+                            "message": "DEACTIVATE"
+                        },
+                        // Slot #3
+                        {
+                            "senderId": 10000221, // instant-start timer
+                            "state": "ZERO",
+                            "targetId": 2424873, // damageable trigger (flaahgra east)
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000215, // platform (empty)
+                            "state": "PLAY",
+                            "targetId": 2424873, // damageable trigger (flaahgra east)
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000215, // platform (empty)
+                            "state": "PLAY",
+                            "targetId": 10000227, // damageable trigger (bomb slot)
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000215, // platform (empty)
+                            "state": "PLAY",
+                            "targetId": 10000228, // glow ring actor
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000215, // platform (empty)
+                            "state": "PLAY",
+                            "targetId": 10000229, // bomb slot platform
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000215, // platform (empty)
+                            "state": "PLAY",
+                            "targetId": 10000230, // ball trigger
+                            "message": "ACTIVATE"
+                        },
+                        { // Stop moving when the player goes in
+                            "senderId": 10000230, // ball trigger
+                            "state": "ENTERED",
+                            "targetId": 10000215, // platform (empty)
+                            "message": "DEACTIVATE"
+                        },
+                        { // Activate flaahgra trigger when the player goes in
+                            "senderId": 10000230, // ball trigger
+                            "state": "ENTERED",
+                            "targetId": 2424873, // damageable trigger (flaahgra east)
+                            "message": "ACTIVATE"
+                        },
+                        { // Shoot all mirrors when the player goes in
+                            "senderId": 10000230, // ball trigger
+                            "state": "ENTERED",
+                            "targetId": 10000223, // Relay - Shoot all mirrors
+                            "message": "SET_TO_ZERO"
+                        },
+                        { // Delete bomb slot as part of the cutscene
+                            "senderId": 2424881, // Begin Cinematic Faulty Relay
+                            "state": "ZERO",
+                            "targetId": 10000229, // bomb slot platform
+                            "message": "DEACTIVATE"
+                        },
+                        // Slot #4
+                        {
+                            "senderId": 10000221, // instant-start timer
+                            "state": "ZERO",
+                            "targetId": 2424921, // damageable trigger (flaahgra west)
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000214, // platform (empty)
+                            "state": "PLAY",
+                            "targetId": 2424921, // damageable trigger (flaahgra west)
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000214, // platform (empty)
+                            "state": "PLAY",
+                            "targetId": 10000231, // damageable trigger (bomb slot)
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000214, // platform (empty)
+                            "state": "PLAY",
+                            "targetId": 10000232, // glow ring actor
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000214, // platform (empty)
+                            "state": "PLAY",
+                            "targetId": 10000233, // bomb slot platform
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000214, // platform (empty)
+                            "state": "PLAY",
+                            "targetId": 10000234, // ball trigger
+                            "message": "ACTIVATE"
+                        },
+                        { // Stop moving when the player goes in
+                            "senderId": 10000234, // ball trigger
+                            "state": "ENTERED",
+                            "targetId": 10000214, // platform (empty)
+                            "message": "DEACTIVATE"
+                        },
+                        { // Activate flaahgra trigger when the player goes in
+                            "senderId": 10000234, // ball trigger
+                            "state": "ENTERED",
+                            "targetId": 2424921, // damageable trigger (flaahgra west)
+                            "message": "ACTIVATE"
+                        },
+                        { // Shoot all mirrors when the player goes in
+                            "senderId": 10000234, // ball trigger
+                            "state": "ENTERED",
+                            "targetId": 10000223, // Relay - Shoot all mirrors
+                            "message": "SET_TO_ZERO"
+                        },
+                        { // Delete bomb slot as part of the cutscene
+                            "senderId": 2424970, // Begin Cinematic Faulty Relay
+                            "state": "ZERO",
+                            "targetId": 10000233, // bomb slot platform
+                            "message": "DEACTIVATE"
+                        },
+
+                        /* Ghosts Layer */
                         { // Taking the artifact deactivates the totem
                             "senderId": 12000026,
                             "state": "ARRIVED",
@@ -8817,6 +9945,73 @@
                             "targetId": 12000026,
                             "message": "DEACTIVATE"
                         }
+                    ],
+                    "removeConnections": [
+                        // No reposition at fight start
+                        {
+                            "senderId": 2437274,
+                            "state": "ZERO",
+                            "targetId": 2424843,
+                            "message": "SET_TO_ZERO"
+                        },
+                        // Keep damageable triggers disabled (until player enters bomb slot)
+                        {
+                            "senderId": 2424862, // flaahgra
+                            "state": "ENTERED",
+                            "targetId": 2424916, // damageable trigger (south)
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 2424862, // flaahgra
+                            "state": "ENTERED",
+                            "targetId": 2424922, // damageable trigger (north)
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 2424862, // flaahgra
+                            "state": "ENTERED",
+                            "targetId": 2424921, // damageable trigger (west)
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 2424862, // flaahgra
+                            "state": "ENTERED",
+                            "targetId": 2424873, // damageable trigger (east)
+                            "message": "ACTIVATE"
+                        },
+                        // No camerawork for fight start cutscene
+                        {
+                            "senderId": 2437274, // Relay Start Intro Cinematic
+                            "state": "ZERO",
+                            "targetId": 2434868, // cinema bars
+                            "message": "INCREMENT"
+                        }
+                    ],
+                    "deleteIds": [
+                        2434899, // Camera Hint
+                        2437056, // Death cutscene spawn point
+                        // 2424851, // Varia suit raised platform
+
+                        // Randomprime skippable cutscenes
+                        // 2424840, 2424865, 2424866, 3424929,
+
+                        // No camerawork for fight start cutscene
+                        2425039, 2437276, 2425034, 2437092, 2434840,
+
+                        // Show 1st bomb slot cutscene
+                        2425042, 2425043,
+
+                        // South Tunnel
+                        2425087, 2436921, 2425279, 2424918, 2424898, 2425053, 2425077, 2425075, 2424858, 2437289, 2436940, 2424968,
+                        
+                        // North Tunnel
+                        2424896, 2425052, 2425093, 2436922, 2425282, 2436949, 2424974, 2424924, 2425072, 2436942, 2424856, 2437287, 2425080,
+
+                        // East Tunnel
+                        2425083, 2425278, 2436924, 2424894, 2425047, 2424883, 2425076, 2424911, 2436939, 2424854, 2437288, 2424936,
+
+                        // West Tunnel
+                        2425090, 2424971, 2425051, 2436923, 2424897, 2425280, 2425078, 2424925, 2424857, 2437286, 2436941, 2425079, 2435072
                     ]
                 },
                 "Watery Hall Access": {
