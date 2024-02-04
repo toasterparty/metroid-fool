@@ -29,14 +29,12 @@ In general:
 
 - **Tower Chamber - Lifegiver**
 - Artifact Temple hints are blocked by Glorgie's shield
-- ??? - Energy Tank
+- FCS - Energy Tank
 - Water Pool Track
 - **Water Pool - Missile Launcher**
 - Unlock Hive Totem fight (unwinnable without grapple)
 - Root Cave -> Workstation
     - Magmoor Workstation is too hot
-- Transport Tunnel B - Missile Expansion (5)
-- Overgrown Cavern - Missile Expansion (5)
 
 ### Fight Requirements
 
@@ -45,8 +43,7 @@ In general:
 - FCS -> Lava Lake
 - Lake Tunnel heat run "against wind"
 - **Lake Tunnel - Grapple Beam**
-- Main Plaza (Piston Tunnel Ledge) - Missile Expansion (3)
-    - Piston Tunnel requires bombs and boost to pass
+- Piston Tunnel requires bombs and boost to pass
 - Hive Mecha fight
 - **Hive Totem - Energy Tank**
 - Sun Tower -> PPC
@@ -78,9 +75,8 @@ In general:
 - FCS -> Lava Lake
     - Lava Lake item is "missing"
     - Storage Cavern blocked by beam combo
-- Triclops Pit "windy grapple" climb
+- Triclops Pit climb
 - **Triclops Pit - Nature**
-- Monitor Station windy climb
 
 ### Early Phen
 
@@ -266,9 +262,3 @@ Waste Disposal maze (portals)
 - Escape Sequence
 - Ridley
 - Credits
-
-## Lore
-
-### Artifact Temple
-
-*TBD - Something that foreshadows that the ghosts are happy with where the artifacts are located and they don't need collecting.*
