@@ -44,6 +44,7 @@
         "escapeSequenceCountsUp": false,
         "difficultyBehavior": "NormalOnly",
         "shootInGrapple": true,
+        "patchWallcrawling": true,
         // TODO: Debug
         // "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
         "startingItems": {
@@ -2790,7 +2791,17 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "waypoints": [
+                        {"id": 65562, "speed": 0.5},
+                        {"id": 65561, "speed": 0.5},
+                        {"id": 65559, "speed": 0.5},
+                        {"id": 65558, "speed": 0.5},
+                        {"id": 65556, "speed": 0.5},
+                        {"id": 65555, "speed": 0.5},
+                        {"id": 65553, "speed": 0.5},
+                        {"id": 65552, "speed": 0.5}
+                    ]
                 },
                 "Lake Tunnel": {
                     "doors": {
@@ -2801,6 +2812,7 @@
                     },
                     "pickups": [
                         {
+                            "id": 10000256,
                             "type": "Grapple Beam",
                             "position": [-93.1123, 76.4873, 7.3116]
                         }
@@ -2822,8 +2834,15 @@
                             "texture": "Mine"
                         },
                         {
-                            "position": [-87.7, 82.5, 5.13],
+                            "position": [-87.7, 82.5, 5.25],
                             "scale": [0.1, 10, 0.5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000255,
+                            "active": false,
+                            "position": [-93.5, 93.1, 5.18],
+                            "scale": [2, 32, 0.5],
                             "texture": "Mine"
                         }
                     ],
@@ -2843,7 +2862,15 @@
                         "131186": {
                             "vulnerability": "Phazon"
                         }
-                    }
+                    },
+                    "addConnections": [
+                        {
+                            "senderId": 10000256,
+                            "state": "ARRIVED",
+                            "targetId": 10000255,
+                            "message": "ACTIVATE"
+                        }
+                    ]
                 },
                 "Save Station Magmoor A": {
                     "doors": {
@@ -4674,9 +4701,6 @@
                             "scale": [6.1, 13.2, 50]
                         }
                     ],
-                    "deleteIds": [
-                        611 // cutscene skip
-                    ],
                     "editObjs": {
                         "268": { // camera7
                             "position": [-339.4529, 327.2898, -29.3721]
@@ -4882,9 +4906,51 @@
                             "targetId": 11000004, // hudmemo
                             "message": "SET_TO_ZERO"
                         }
+                    ],
+                    "deleteIds": [
+                        126, // pickup
+                        611  // cutscene skip
                     ]
                 },
-                "Gully": {},
+                "Gully": {
+                    "doors": {
+                        "0": {
+                            "shieldType": "Plasma Beam"
+                        }
+                    },
+                    "pickups": [
+                        {
+                            "type": "Gravity Suit",
+                            "position": [-469, 386.4, -7]
+                        }
+                    ],
+                    "blocks": [
+                        {
+                            "position": [-469.5, 386.57, -4.08],
+                            "scale": [7, 8, 0.5]
+                        },
+                        {
+                            "position": [-466.5, 384.5, -6.78],
+                            "scale": [0.5, 0.5, 5.5]
+                        },
+                        {
+                            "position": [-466.5, 386.0, -6.78],
+                            "scale": [0.5, 0.5, 5.5]
+                        },
+                        {
+                            "position": [-466.5, 387.5, -6.78],
+                            "scale": [0.5, 0.5, 5.5]
+                        },
+                        {
+                            "position": [-466.5, 389.0, -6.78],
+                            "scale": [0.5, 0.5, 5.5]
+                        },
+                        {
+                            "position": [-466.5, 390.5, -6.78],
+                            "scale": [0.5, 0.5, 5.5]
+                        }
+                    ]
+                },
                 "Canyon Cavern": {
                     // layer 1 - qol
                     // layer 2 - qol
@@ -4976,7 +5042,15 @@
                             "speed": 1.1,
                             "health": 2.5,
                             "detectionRange": 2.0
-                        }
+                        },
+                        // Remove beetle effects when layer changes
+                        "131183": {"layer": 3},
+                        "131190": {"layer": 3},
+                        "131197": {"layer": 3},
+                        "131093": {"layer": 3},
+                        "131126": {"layer": 3},
+                        "131096": {"layer": 3},
+                        "131160": {"layer": 3}
                     },
                     "addConnections": [
                         {
@@ -5409,11 +5483,16 @@
                         },
                         "1": {
                             "shieldType": "Blue",
-                            "blastShieldType": "Missile"
+                            "blastShieldType": "None"
                         }
                     }
                 },
                 "Tallon Canyon": {
+                    "doors": {
+                        "2": {
+                            "shieldType": "Plasma Beam"
+                        }
+                    },
                     // layer 1 - qol
                     // layer 2 - qol
                     // layer 3 - beetle battle
@@ -5497,6 +5576,16 @@
                             "id": 10000020,
                             "layer": 3,
                             "maxValue": 2
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 10000248,
+                            "time": 3
+                        },
+                        {
+                            "id": 10000249,
+                            "time": 3
                         }
                     ],
                     "editObjs": {
@@ -5583,12 +5672,37 @@
                         {
                             "senderId": 393297, // beetle
                             "state": "DEAD",
-                            "targetId": 10000020, // counter
-                            "message": "INCREMENT"
+                            "targetId": 10000248, // timer
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 393297, // beetle
+                            "state": "DEACTIVATE_STATE",
+                            "targetId": 10000248, // timer
+                            "message": "RESET_AND_START"
                         },
                         {
                             "senderId": 393315, // beetle
                             "state": "DEAD",
+                            "targetId": 10000249, // timer
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 393315, // beetle
+                            "state": "DEACTIVATE_STATE",
+                            "targetId": 10000249, // timer
+                            "message": "RESET_AND_START"
+                        },
+                        // Use timers for debouncing the signal (beetles be weird like that sometimes)
+                        {
+                            "senderId": 10000248, // timer
+                            "state": "ZERO",
+                            "targetId": 10000020, // counter
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 10000249, // timer
+                            "state": "ZERO",
                             "targetId": 10000020, // counter
                             "message": "INCREMENT"
                         },
@@ -5611,7 +5725,7 @@
                 "Frigate Crash Site": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Energy Tank"
                         }
                     ],
                     "doors": {
@@ -5625,9 +5739,120 @@
                         },
                         "2": {
                             "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "blastShieldType": "Missile"
                         }
-                    }
+                    },
+                    "triggers": [
+                        // Samus went to swim lessons
+                        {
+                            "position": [-138.18, 466.3488, -59.9912],
+                            "scale": [100, 77, 18],
+                            "flags": 90112, // Detect Unmorphed Player | Detect Player Completely | Apply Force
+                            "force": [0, 0, 80]
+                        },
+                        {
+                            "position": [-138.18, 466.3488, -59.9912],
+                            "scale": [100, 77, 19.08],
+                            "flags": 28672, // Detect Morphed Player | Detect Player Completely | Apply Force
+                            "force": [0, 0, 200]
+                        }
+                    ],
+                    "platforms": [
+                        {
+                            "id": 10000250,
+                            "position": [-193.5911, 478.2, -49],
+                            "type": "HalfBlock"
+                        },
+                        {
+                            "id": 10000251,
+                            "position": [-193.5911, 472.3, -49],
+                            "type": "HalfBlock"
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 10000252,
+                            "time": 0.02,
+                            "startImmediately": true
+                        }
+                    ],
+                    // "waypoints": [
+                    //     {
+                    //         "id": 524532, // pirate #1's waypoint
+                    //         "active": false
+                    //     },
+                    //     {
+                    //         "id": 524334, // pirate #2's waypoint
+                    //         "active": false
+                    //     }
+                    // ],
+                    "editObjs": {
+                        "524402": { // TYPE 01 Injured SpacePirate
+                            "position": [-193.5911, 478.7648, -46],
+                            "health": 5
+                        },
+                        "524462": { // TYPE 01 Injured SpacePirate
+                            "position": [-193.5911, 472.9456, -46],
+                            "health": 5
+                        }
+                    },
+                    "addConnections": [
+                        // Re-implement the one-shot flying pirate abscond but with injured pirates
+                        // Injured Pirate #1
+                        {
+                            "senderId": 10000252, // timer
+                            "state": "ZERO",
+                            "targetId": 10000250,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000250, // platform
+                            "state": "PLAY",
+                            "targetId": 524532, // waypoint #1
+                            "message": "FOLLOW"
+                        },
+                        {
+                            "senderId": 524459, // Trigger_for_space_pirates_5/31/02_TG
+                            "state": "ENTERED",
+                            "targetId": 524402, // pirate
+                            "message": "ALERT"
+                        },
+                        {
+                            "senderId": 524459, // Trigger_for_space_pirates_5/31/02_TG
+                            "state": "ENTERED",
+                            "targetId": 10000250, // platform
+                            "message": "ACTIVATE"
+                        },
+                        // Injured Pirate #2
+                        {
+                            "senderId": 10000252, // timer
+                            "state": "ZERO",
+                            "targetId": 10000251,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000251, // platform
+                            "state": "PLAY",
+                            "targetId": 524334, // waypoint #1
+                            "message": "FOLLOW"
+                        },
+                        {
+                            "senderId": 524459, // Trigger_for_space_pirates_5/31/02_TG
+                            "state": "ENTERED",
+                            "targetId": 524462, // pirate
+                            "message": "ALERT"
+                        },
+                        {
+                            "senderId": 524459, // Trigger_for_space_pirates_5/31/02_TG
+                            "state": "ENTERED",
+                            "targetId": 10000251, // platform
+                            "message": "ACTIVATE"
+                        }
+                    ],
+                    "deleteIds": [
+                        524314, 524531, 524548, // no flying pirates
+                        524672, 524552 // don't activate beetles layer
+                    ]
                 },
                 "Transport Tunnel A": {
                     "editObjs": {
@@ -5699,6 +5924,13 @@
                             "position": [-373, 130, -10],
                             "scale": [10, 1, 9.2]
                         }
+                    ],
+                    "extraScans": [
+                        {
+                            "position": [-373.1061, 130.7129, -15.4049],
+                            "isRed": true,
+                            "text": "If Glorgsmire could crawl under here, why can't I?"
+                        }
                     ]
                 },
                 "Frigate Access Tunnel": {
@@ -5711,7 +5943,22 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "blocks": [
+                        {
+                            "layer": 3,
+                            "position": [-60.364, 469.8786, -41],
+                            "scale": [1, 5, 5.5]
+                        }
+                    ],
+                    "extraScans": [
+                        {
+                            "layer": 3,
+                            "isRed": true,
+                            "position": [-61.364, 469.8786, -42.1385],
+                            "text": "The path appears blocked. Perhaps it can be opened from the other side."
+                        }
+                    ]
                 },
                 "Overgrown Cavern": {
                     "pickups": [
@@ -6233,6 +6480,9 @@
                             "layer": 25,
                             "position": [-373.2824, 95.6326, -30.6279],
                             "rotation": [0, 0, 180]
+                        },
+                        "1049641": { // special temple music unreachable unless barrier is down
+                            "position": [-372.8667, 88.8175, -33.4689]
                         }
                     },
                     "addConnections": [
@@ -6532,6 +6782,12 @@
                             "type": "ScriptLayerController",
                             "layerChangeRoomId": 3442151074, // Artifact Temple
                             "layerChangeLayerId": 25
+                        },
+                        {
+                            "id": 10000247,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 486408527, // Frigate Access Tunnel
+                            "layerChangeLayerId": 3
                         }
                     ],
                     "addConnections": [
@@ -6539,6 +6795,12 @@
                             "senderId": 10000154,
                             "state": "ARRIVED",
                             "targetId": 10000155,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000154,
+                            "state": "ARRIVED",
+                            "targetId": 10000247,
                             "message": "DECREMENT"
                         }
                     ]
@@ -7427,6 +7689,20 @@
                         {
                             "type": "Nothing"
                         }
+                    ],
+                    "triggers": [
+                        {
+                            "position": [214.8, -52, 21],
+                            "scale": [50, 1.5, 12],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, 1100, 0]
+                        },
+                        {
+                            "position": [214.8, -53.5, 21],
+                            "scale": [50, 1.5, 12],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, -1100, 0]
+                        }
                     ]
                 },
                 "Ruined Shrine": {
@@ -7682,7 +7958,10 @@
                     }
                 },
                 "Meditation Fountain": {
-
+                    "deleteIds": [
+                        // Magma Pool isn't hot
+                        927614, 927613, 927612, 927609, 927611, 927608, 927615, 927645
+                    ]
                 },
                 "Tower of Light Access": {
                     "doors": {
@@ -7697,15 +7976,58 @@
                     }
                 },
                 "Ruined Nursery": {
-                    "doors": {
-                        "1": {
-                            "shieldType": "Blue",
-                            "blastShieldType": "Missile"
-                        }
-                    },
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!"
+                        }
+                    ],
+                    "triggers": [
+                        {
+                            "position": [-20.5977, 117.5776, 11.8207],
+                            "scale": [3, 4.2, 1],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [-200, 0, 0]
+                        }
+                    ],
+                    "waypoints": [
+                        {
+                            "id": 1048870,
+                            "position": [-24.976, 123.5298, 15.4443]
+                        },
+                        {
+                            "id": 10000253,
+                            "position": [-24.976, 111.8298, 16.0443],
+                            "speed": 4
+                        }
+                    ],
+                    "blocks": [
+                        {
+                            "id": 10000254,
+                            "active": false,
+                            "position": [-19.776, 123.5298, 15.4443],
+                            "scale": [1.8, 1.8, 1.8],
+                            "texture": "Mine"
+                        }
+                    ],
+                    "editObjs": {
+                        "1048665": {
+                            "vulnerability": "Power Bomb"
+                        }
+                    },
+                    "addConnections": [
+                        {
+                            "senderId": 1048870,
+                            "state": "ARRIVED",
+                            "targetId": 10000253,
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 1048870,
+                            "state": "ARRIVED",
+                            "targetId": 10000254,
+                            "message": "ACTIVATE"
                         }
                     ],
                     "deleteIds": [
@@ -7722,8 +8044,7 @@
                     ],
                     "doors": {
                         "0": {
-                            "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "shieldType": "Ice Beam"
                         },
                         "1": {
                             "shieldType": "Blue",
@@ -7756,6 +8077,7 @@
                     "superheated": false,
                     "pickups": [
                         {
+                            // 1310957
                             "type": "Missile",
                             "hudmemoText": "Missile Launcher Acquired!",
                             "scanText": "Missile Launcher"
@@ -7768,6 +8090,14 @@
                             "triggerScale": [22, 70, 8],
                             "cameraPos": [190.53, -180.13, 25.7],
                             "cameraRot": [0, 0, 0]
+                        }
+                    ],
+                    "streamedAudios": [
+                        {
+                            "id": 10000245,
+                            "volume": 90,
+                            "audioFileName": "/audio/gen_puzzleL.dsp|/audio/gen_puzzleR.dsp",
+                            "isMusic": true
                         }
                     ],
                     "blocks": [
@@ -7892,6 +8222,11 @@
                             "id": 16000001,
                             "position": [190.4, -211.1, 18.8908],
                             "scale": [2, 2, 2]
+                        },
+                        {
+                            "id": 10000246,
+                            "position": [181, -220, 21],
+                            "scale": [14, 2, 9]
                         }
                     ],
                     "playerHints": [
@@ -7931,6 +8266,24 @@
                         }
                     },
                     "addConnections": [
+                        {
+                            "senderId": 10000052,
+                            "state": "ENTERED",
+                            "targetId": 10000245,
+                            "message": "PLAY"
+                        },
+                        {
+                            "senderId": 10000246,
+                            "state": "ENTERED",
+                            "targetId": 10000245,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 1310957,
+                            "state": "ARRIVED",
+                            "targetId": 10000245,
+                            "message": "DEACTIVATE"
+                        },
                         {
                             "senderId": 10000051, // timer
                             "state": "ZERO",
@@ -8137,10 +8490,16 @@
                 "Ruined Gallery": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 2
                         },
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 2
                         }
                     ],
                     "doors": {
@@ -8153,10 +8512,19 @@
                             "blastShieldType": "None"
                         },
                         "2": {
-                            "shieldType": "Blue",
+                            "shieldType": "Disabled",
                             "blastShieldType": "None"
                         }
+                    },
+                    "editObjs": {
+                        "1835217": { // Trigger - To mapstation
+                            "position": [5.3, 208.9, 7.6],
+                            "scale": [30, 30, 3]
                     }
+                    },
+                    "deleteIds": [
+                        1835092 // gallery tunnel item
+                    ]
                 },
                 "Sun Tower": {
                     "boundingBoxScale": [1, 1, 1.2],
@@ -8512,7 +8880,32 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "pickups": [
+                        {
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 3,
+                            "position": [-23.6416, 206.895, 6]
+                        }
+                    ],
+                    "triggers": [
+                        {
+                            "id": 2228696,
+                            "position": [-36.2424, 204.53, 8.0165],
+                            "scale": [5, 5, 5],
+                            "flags": 1
+                        }
+                    ],
+                    "repositions": [
+                        {
+                            "triggerPosition": [29.5463, 209.5535, 7.4823],
+                            "triggerScale": [2, 2, 2],
+                            "destinationPosition": [-36.0998, 204.4656, 6.5813],
+                            "destinationRotation": 0
+                        }
+                    ]
                 },
                 "Sun Tower Access": {
                     "layers": {
@@ -10158,7 +10551,7 @@
                 "East Atrium": {
                     "doors": {
                         "1": {
-                            "shieldType": "Blue",
+                            "shieldType": "Plasma Beam",
                             "blastShieldType": "None"
                         }
                     }
@@ -10186,12 +10579,10 @@
                 "Energy Core Access": {
                     "doors": {
                         "0": {
-                            "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "shieldType": "Plasma Beam"
                         },
                         "1": {
-                            "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "shieldType": "Plasma Beam"
                         }
                     }
                 },
@@ -10214,8 +10605,7 @@
                             "blastShieldType": "None"
                         },
                         "2": {
-                            "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "shieldType": "Plasma Beam"
                         }
                     }
                 },
