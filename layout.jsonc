@@ -8055,14 +8055,128 @@
                 "Arboretum": {
                     "doors": {
                         "0": {
-                            "shieldType": "Blue",
+                            "shieldType": "Wave Beam",
                             "blastShieldType": "None"
                         },
                         "2": {
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "blocks": [
+                        {
+                            "position": [346.4217, -102.9985, 23.1235],
+                            "scale": [2, 5.5, 0.5],
+                            "texture": "Sandstone"
+                        }
+                    ],
+                    "editObjs": {
+                        "1245504": { // Platform Gate
+                            "position": [345.6415, -108.0354, 24.1939],
+                            "rotation": [0, 0, 0]
+                        },
+                        "1245472": { // POI_08_Court Top Gate.scan
+                            "position": [344.6702, -103.1, 18.8563]
+                        },
+                        "1245465": { // gate glow 1
+                            "position": [345.4702, -100.9503, 20.7563],
+                            "rotation": [0, 0, 90]
+                        },
+                        "1245464": { // gate glow 2
+                            "position": [345.4702, -100.9503, 17.5563],
+                            "rotation": [0, 0, 90]
+                        },
+                        "1245471": { // gate glow 3
+                            "position": [345.4702, -105.19, 20.7563],
+                            "rotation": [0, 0, 90]
+                        },
+                        "1245470": { // gate glow 4
+                            "position": [345.4702, -105.19, 17.5563],
+                            "rotation": [0, 0, 90]
+                        },
+
+                        "1245443": { // Actor-Scan1
+                            "position": [286.376587, -124.870697, 30.298599],
+                            "rotation": [82.329994, -42.669998, 99.649986]
+                        },
+                        "1245447": { // Actor - Symbol Glow Key 1
+                            "position": [286.376587, -124.870697, 30.298599],
+                            "rotation": [87.209991, -179.839996, 92.539986]
+                        },
+                        "1245484": { // POI_08_Court Symbol 1 Scanned.scan
+                            "position": [286.2, -125.4, 30.1]
+                        },
+
+                        "1245444": { // Actor-Scan2
+                            "position": [324.0558, -137.7547, 23.7689],
+                            "rotation": [-90, 0, 0]
+                        },
+                        "1245446": { // Actor - Symbol Glow Key 2
+                            "position": [324.0558, -137.7547, 23.7689],
+                            "rotation": [90, 0, 180]
+                        },
+                        "1245481": { // POI_08_Court Symbol 2 Scanned.scan
+                            "position": [324.1909, -136.7495, 24.9487]
+                        },
+
+                        "1245445": { // Actor-Scan3
+                            "position": [309.3907, -111.951, 60.7878],
+                            "rotation": [90, -26.46, 0]
+                        },
+                        "1245449": { // Actor - Symbol Glow Key 3
+                            "position": [309.3907, -111.951, 60.8878],
+                            "rotation": [90, 8.14, 0]
+                        },
+                        "1245483": { // POI_08_Court Symbol 3 Scanned.scan
+                            "position": [309.3907, -111.951, 61.5]
+                        },
+
+                        "1245442": { // Actor-Scan4
+                            "position": [288.3808, -56.2547, 63.8189],
+                            "rotation": [0, 0, 0]
+                        },
+                        "1245448": { // Actor - Symbol Glow Key 4
+                            "position": [288.3808, -56.2547, 63.8189],
+                            "rotation": [0, 0, 0]
+                        },
+                        "1245482": { // POI_08_Court Symbol 4 Scanned.scan
+                            "position": [288.3808, -56, 63.8189]
+                        },
+
+                        /* Spanky Bois */
+                        "1245191": {
+                            "position": [270.4905, -71.6247, 37.8991],
+                            "detectionRange": 0.5
+                        },
+                        "1245195": {
+                            "position": [306.6021, -59.631, 56.5499],
+                            "detectionRange": 0.5
+                        },
+                        "1245189": {
+                            "position": [290.490692, -128.838593, 23.2348],
+                            "rotation": [90, 0, 0],
+                            "detectionRange": 0.5,
+                            "speed": 0.025
+                        },
+                        "1245297": {
+                            "position": [269.039307, -103.4546, 50.3355],
+                            "rotation": [0, 0, -90],
+                            "detectionRange": 0.5
+                        }
+                    },
+                    "addConnections": [
+                        {
+                            "senderId": 1245568, // crate
+                            "state": "DEAD",
+                            "targetId": 1245481, // POI_08_Court Symbol 2 Scanned.scan
+                            "message": "ACTIVATE"
+                        }
+                    ],
+                    "deleteIds": [
+                        1245487, // no cutscene
+                        1245502, 1245575, 1245503, // don't hide scan #2
+                        1245398, 1245399 // no sandstone block
+                    ]
                 },
                 "Magma Pool": {
                     "layers": {
@@ -8363,7 +8477,7 @@
                 "Sunchamber Lobby": {
                     "doors": {
                         "0": {
-                            "shieldType": "Blue",
+                            "shieldType": "Wave Beam",
                             "blastShieldType": "None"
                         },
                         "1": {
