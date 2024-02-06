@@ -45,8 +45,9 @@
         "difficultyBehavior": "NormalOnly",
         "shootInGrapple": true,
         "patchWallcrawling": true,
+        "startingRoom": "Tallon Overworld:Landing Site",
         // TODO: Debug
-        // "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
+        "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
         "startingItems": {
             "powerBeam": true,
             "ice": false,
@@ -95,11 +96,11 @@
             2041669472
         ],
         "gameBanner": {
-            "gameName": "April Fools [Untitled]",
-            "gameNameFull": "April Fools [Untitled]",
+            "gameName": "April Fools 2024 v0.2",
+            "gameNameFull": "April Fools 2024 v0.2",
             "description": "Romhack by toasterparty"
         },
-        "mainMenuMessage": "April Fools [Untitled] v0.1",
+        "mainMenuMessage": "April Fools 2024 v0.2",
         "creditsString": "&push;&font=C29C51F1;&main-color=#89D6FF;Major Item Locations&pop;\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Wave Beam&pop;\nPhazon Mines - Metroid Quarantine A\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Ice Beam&pop;\nPhazon Mines - Ventilation Shaft\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Plasma Beam&pop;\nPhazon Mines - Central Dynamo\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Missile Launcher&pop;\nTallon Overworld - Transport Tunnel B\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Grapple Beam&pop;\nTallon Overworld - Landing Site\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Thermal Visor&pop;\nPhendrana Drifts - Ice Ruins East\n\n&push;&font=C29C51F1;&main-color=#33ffd6;X-Ray Visor&pop;\nMagmoor Caverns - Warrior Shrine\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Space Jump Boots&pop;\nTallon Overworld - Frigate Crash Site\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Morph Ball&pop;\nChozo Ruins - Ruined Gallery\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Morph Ball Bomb&pop;\nChozo Ruins - Dynamo\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Boost Ball&pop;\nChozo Ruins - Watery Hall\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Spider Ball&pop;\nChozo Ruins - Ruined Gallery\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Power Bomb&pop;\nMagmoor Caverns - Fiery Shores\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Varia Suit&pop;\nChozo Ruins - Hive Totem\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Gravity Suit&pop;\nChozo Ruins - Ruined Shrine\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Phazon Suit&pop;\nTallon Overworld - Hydro Access Tunnel\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Super Missile&pop;\nPhazon Mines - Phazon Processing Center\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Wavebuster&pop;\nChozo Ruins - Main Plaza\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Ice Spreader&pop;\nChozo Ruins - Tower of Light\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Flamethrower&pop;\nChozo Ruins - Ruined Nursery\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Elder&pop;\nPhendrana Drifts - Research Lab Aether\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Lifegiver&pop;\nMagmoor Caverns - Magmoor Workstation\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Strength&pop;\nChozo Ruins - Crossway\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Truth&pop;\nPhendrana Drifts - Control Tower\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Warrior&pop;\nPhazon Mines - Main Quarry\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Wild&pop;\nPhendrana Drifts - Quarantine Cave",
         "bossSizes": {
             "flaahgra": 1.15
@@ -7928,7 +7929,7 @@
                         "0": {
                             "shieldType": "Blue",
                             "blastShieldType": "None"
-                    }
+                        }
                     },
                     "timers": [
                         {
@@ -8068,6 +8069,11 @@
                             "position": [346.4217, -102.9985, 23.1235],
                             "scale": [2, 5.5, 0.5],
                             "texture": "Sandstone"
+                        },
+                        {
+                            "position": [329.2, -93.2, 13.1],
+                            "scale": [2, 2, 5],
+                            "texture": "Sandstone"
                         }
                     ],
                     "editObjs": {
@@ -8162,6 +8168,14 @@
                             "position": [269.039307, -103.4546, 50.3355],
                             "rotation": [0, 0, -90],
                             "detectionRange": 0.5
+                        },
+                        /* Raise water level */
+                        "1245207": { // poison
+                            "scale": [86.4, 72, 8.5],
+                            "damage": 0.5
+                        },
+                        "1245308": { // clean
+                            "scale": [86.4, 72, 8.5]
                         }
                     },
                     "addConnections": [
@@ -8634,7 +8648,7 @@
                         "1835217": { // Trigger - To mapstation
                             "position": [5.3, 208.9, 7.6],
                             "scale": [30, 30, 3]
-                    }
+                        }
                     },
                     "deleteIds": [
                         1835092 // gallery tunnel item
@@ -8958,7 +8972,10 @@
                 "Gathering Hall": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 2
                         }
                     ],
                     "doors": {
@@ -8973,6 +8990,16 @@
                         "2": {
                             "shieldType": "Blue",
                             "blastShieldType": "None"
+                        }
+                    },
+                    "editObjs": {
+                        /* Raise Water Level */
+                        "2097306": { // poison
+                            "scale": [35, 40, 12.95],
+                            "damage": 0.5
+                        },
+                        "2097266": { // clean
+                            "scale": [35, 40, 12.95]
                         }
                     }
                 },
@@ -10647,7 +10674,10 @@
                 "Watery Hall Access": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 3
                         }
                     ],
                     "doors": {
@@ -10658,6 +10688,40 @@
                         "1": {
                             "shieldType": "Blue",
                             "blastShieldType": "None"
+                        }
+                    },
+                    "blocks": [
+                        {
+                            "position": [405.9, -59.0, 16.7],
+                            "scale": [11, 2, 3],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [411.1, -43.6, 17.7],
+                            "scale": [3, 35, 1],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [407.6, -58.3, 17.7],
+                            "scale": [7, 3.5, 0.9],
+                            "texture": "Sandstone"
+                        }
+                    ],
+                    "editObjs": {
+                        /* Raise water level */
+                        "2490379": { // poison
+                            "position": [408.0748, -23.7232, 14],
+                            "scale": [37, 70.3, 8],
+                            "damage": 0.15
+                        },
+                        "2490393": { // clean
+                            "position": [408.0748, -23.7232, 14],
+                            "scale": [37, 70.3, 8]
+                        },
+                        /* Adjust bat aggro */
+                        "2490475": { // Trigger-activate metarees (north)
+                            "position": [409.4, -43.6, 17.7],
+                            "scale": [3, 35, 2]
                         }
                     }
                 },
@@ -10673,10 +10737,18 @@
                 "Watery Hall": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Health Refill",
+                            "scanText": "Health Refill (100)",
+                            "currIncrease": 100,
+                            "maxIncrease": 0,
+                            "respawn": true
                         },
                         {
-                            "type": "Nothing"
+                            "type": "Health Refill",
+                            "scanText": "Health Refill (100)",
+                            "currIncrease": 100,
+                            "maxIncrease": 0,
+                            "respawn": true
                         }
                     ],
                     "doors": {
@@ -10688,7 +10760,176 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "blocks": [
+                        /* Cover old runes */
+                        {
+                            "position": [412.8, 11.8889, 19.0476],
+                            "scale": [12.5, 1, 13.0],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [460.3587, 41.7298, 35.0476],
+                            "scale": [2, 2, 2],
+                            "texture": "Crater"
+                        },
+                        {
+                            "position": [467.1894, 37.5895, 18],
+                            "scale": [2, 2, 2],
+                            "texture": "Crater"
+                        },
+                        {
+                            "position": [427.2268, 56.2347, 15.8996],
+                            "scale": [2, 2, 2],
+                            "texture": "Crater"
+                        }
+                    ],
+                    "platforms": [
+                        /* Help player escape water */
+                        {
+                            "type": "LongBlock",
+                            "position": [422.4142, 20.8, 14.3],
+                            "rotation": [0, 25, 90]
+                        },
+                        {
+                            "type": "LongBlock",
+                            "position": [427.4078, 17.1724, 16],
+                            "rotation": [0, -45, 90]
+                        },
+                        {
+                            "type": "LongBlock",
+                            "position": [427.4078, 26.8724, 19],
+                            "rotation": [0, -45, 90]
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 10000257,
+                            "time": 0.02,
+                            "startImmediately": true
+                        }
+                    ],
+                    "triggers": [
+                        {
+                            "id": 10000258,
+                            "position": [421.9, 80.8, 17.4],
+                            "scale": [15, 7, 7]
+                        },
+                        { // same as water
+                            "id": 10000259,
+                            "position": [440.487427, 67.915703, 12.3962],
+                            "scale": [83, 111, 16.85],
+                            "flags": 16385 // Detect Player | Only if completely inside
+                        }
+                    ],
+                    "editObjs": {
+                        "2687005": { // default spawn
+                            "position": [457.3335, 58.6024, 29.2676]
+                        },
+                        /* Raise Water Level */
+                        "2687098": { // Poison
+                            "position": [440.487427, 67.915703, 12.3962],
+                            "scale": [83, 111, 16.85],
+                            "damage": 0.15
+                        },
+                        "2686996": { // Clean
+                            "position": [440.487427, 67.915703, 12.3962],
+                            "scale": [83, 111, 16.85]
+                        },
+                        /* Move Scan Runes */
+                        "2687161": { // Actor - Symbol Glow Key 1
+                            "position": [467.6, 2.4, 46.3],
+                            "rotation": [0, 0, 0]
+                        },
+                        "2687039": { // Point Of Interest Symbol 1
+                            "position": [467.6, 5, 45.6]
+                        },
+                        "2687190": { // Actor - Symbol Glow Key 2
+                            "position": [448.1891, 99.1347, 23.5995],
+                            "rotation": [-36.94, 0, 0]
+                        },
+                        "2686984": { // Point Of Interest Symbol 2
+                            "position": [448.1891, 100.0347, 23.2995]
+                        },
+                        "2687207": { // Actor - Symbol Glow Key 3
+                            "position": [424.1, 78.8, 19.4],
+                            "rotation": [-18.69, 0, 20.52]
+                        },
+                        "2687077": { // Point Of Interest Symbol 3
+                            "position": [424.2, 79.1, 19.2]
+                        },
+                        "2687217": { // Actor - Symbol Glow Key 4
+                            "position": [427.8484, 24.6526, 15.9212]
+                        },
+                        "2687150": { // Point Of Interest Symbol 4
+                            "position": [427.8484, 25, 15.9212]
+                        },
+                        /* Spank Dank */
+                        "2687091": {
+                            "position": [518, 54, 34.5],
+                            "scale": [5, 1, 1],
+                            "speed": 0.1,
+                            "damage": 0.5
+                        }
+                    },
+                    "addConnections": [
+                        /* Since the runes in this room are baked into the level geometry, we use the activated symbols isntead */
+                        {
+                            "senderId": 10000257,
+                            "state": "ZERO",
+                            "targetId": 2687161, // Actor - Symbol Glow Key 
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000257,
+                            "state": "ZERO",
+                            "targetId": 2687190, // Actor - Symbol Glow Key 2
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000257,
+                            "state": "ZERO",
+                            "targetId": 2687207, // Actor - Symbol Glow Key 3
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000257,
+                            "state": "ZERO",
+                            "targetId": 2687217, // Actor - Symbol Glow Key 4
+                            "message": "ACTIVATE"
+                        },
+                        /* Rune #3 only visible when you're near it */
+                        {
+                            "senderId": 10000258,
+                            "state": "ENTERED",
+                            "targetId": 2687077, // Point Of Interest Symbol 3
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000258,
+                            "state": "EXITED",
+                            "targetId": 2687077, // Point Of Interest Symbol 3
+                            "message": "DEACTIVATE"
+                        },
+                        /* Rune #4 only visible when you're in the water */
+                        {
+                            "senderId": 10000259,
+                            "state": "ENTERED",
+                            "targetId": 2687150, // Point Of Interest Symbol 4
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000259,
+                            "state": "EXITED",
+                            "targetId": 2687150, // Point Of Interest Symbol 4
+                            "message": "DEACTIVATE"
+                        }
+                    ],
+                    "deleteIds": [
+                        2687038, 2687082, // No bomb wall
+                        2697190, // No pickups
+                        2697006 // floor shrooms don't activate rune #3 poi
+                    ]
                 },
                 "Energy Core Access": {
                     "doors": {
@@ -10726,7 +10967,7 @@
                 "Dynamo": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Morph Ball Bomb"
                         },
                         {
                             "type": "Nothing"
