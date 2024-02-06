@@ -47,7 +47,7 @@
         "patchWallcrawling": true,
         "startingRoom": "Tallon Overworld:Landing Site",
         // TODO: Debug
-        "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
+        // "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
         "startingItems": {
             "powerBeam": true,
             "ice": false,
@@ -2956,6 +2956,7 @@
                         }
                     ],
                     "timers": [
+                        /* Artifact */
                         {
                             "id": 12000048,
                             "time": 0.5,
@@ -2966,9 +2967,27 @@
                             "layer": 5,
                             "time": 0.1,
                             "startImmediately": true
+                        },
+                        /* Platforming */
+                        { // Instant start timer to set things on opposite phase
+                            "id": 10000261,
+                            "startImmediately": true,
+                            "time": 0.1
+                        },
+                        { // Yoku timer, synchronized to the beat of the song
+                            "id": 10000260,
+                            // "time": 0.95238095238,
+                            "time": 1.90476190476,
+                            // "time": 3.80952380952,
+                            "startImmediately": true,
+                            "looping": true
                         }
                     ],
                     "editObjs": {
+                        "393449": { // platform #1
+                            "position": [97, -163.6, 12.2]
+                        },
+                        /* Artifact */
                         "12000045": { // Move return pickup to it's own layer
                             "layer": 4
                         },
@@ -2979,13 +2998,238 @@
                         "393330": { // flying pirate
                             "layer": 5,
                             "vulnerability": "Phazon"
-                        },
-                        "393446": { // TODO: Debug platform
-                            "speed": 10.0,
-                            "position": [76.0138, -140.0701, 42.6285]
                         }
                     },
+                    "lockOnPoints": [
+                        {
+                            "position": [36, -138, 21]
+                        }
+                    ],
+                    "blocks": [
+                        {
+                            "position": [58.2, -127.8, 16.1],
+                            "scale": [15, 6, 1]
+                        }
+                    ],
+                    "platforms": [
+                        {
+                            "id": 10000262, // platform #2
+                            "position": [75.7, -163.9, 12.2]
+                        },
+                        {
+                            "id": 10000263, // platform #3
+                            "position": [64.2, -151.4, 14.4],
+                            "active": false
+                        },
+                        {
+                            "id": 10000264, // platform #4
+                            "position": [36.6, -126.1, 19],
+                            "active": false
+                        },
+                        {
+                            "id": 10000265, // platform #5
+                            "position": [35.9, -138, 21.5],
+                            "type": "HalfBlock"
+                        },
+                        {
+                            "id": 10000266, // platform #6
+                            "position": [36.9, -162.7, 22.6],
+                            "type": "HalfBlock"
+                        },
+                        {
+                            "id": 10000267, // platform #7
+                            "position": [62.8, -179.9, 27.69],
+                            "rotation": [0, -20, 0]
+                        },
+                        {
+                            "id": 10000268, // platform #8
+                            "position": [87.9, -179, 33.6]
+                        },
+                        {
+                            "id": 10000271, // platform #9
+                            "position": [71.1, -149.9, 34.9]
+                        },
+                        {
+                            "id": 10000274, // platform #9
+                            "position": [90.1, -157.1, 38]
+                        }
+                    ],
+                    "waypoints": [
+                        /* Platform #8 */
+                        {
+                            "id": 10000269,
+                            "position": [87.9, -179, 33.6],
+                            "speed": 30
+                        },
+                        {
+                            "id": 10000270,
+                            "position": [66.2, -160.6, 33.6],
+                            "active": false,
+                            "speed": 30
+                        },
+                        /* Platform #9 */
+                        {
+                            "id": 10000272,
+                            "position": [70.1, -148.0, 34.9],
+                            "speed": 30
+                        },
+                        {
+                            "id": 10000273,
+                            "active": false,
+                            "position": [96.6, -166.9, 34.9],
+                            "speed": 30
+                        }
+                    ],
                     "addConnections": [
+                        {
+                            "senderId": 10000260, // Yoku timer
+                            "state": "ZERO",
+                            "targetId": 393521, // missile pickup sound
+                            "message": "PLAY"
+                        },
+                        {
+                            "senderId": 10000260, // Yoku timer
+                            "state": "ZERO",
+                            "targetId": 393445, // Platform - Round-component2
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000261, // Instant-start timer
+                            "state": "ZERO",
+                            "targetId": 393449, // Platform - Round-component2
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000260, // Yoku timer
+                            "state": "ZERO",
+                            "targetId": 393449, // Platform - Round-component2
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000260, // Yoku timer
+                            "state": "ZERO",
+                            "targetId": 393453, // Platform - Round-component2
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000260, // Yoku timer
+                            "state": "ZERO",
+                            "targetId": 10000262,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000260, // Yoku timer
+                            "state": "ZERO",
+                            "targetId": 10000263,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000260, // Yoku timer
+                            "state": "ZERO",
+                            "targetId": 10000264,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000260, // Yoku timer
+                            "state": "ZERO",
+                            "targetId": 10000265,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000260, // Yoku timer
+                            "state": "ZERO",
+                            "targetId": 10000266,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000260, // Yoku timer
+                            "state": "ZERO",
+                            "targetId": 10000267,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        /* Platform #8 */
+                        {
+                            "senderId": 10000260, // Yoku timer
+                            "state": "ZERO",
+                            "targetId": 10000269,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000260, // Yoku timer
+                            "state": "ZERO",
+                            "targetId": 10000270,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000269, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000270, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000270, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000269, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000268, // platform #8
+                            "state": "PLAY",
+                            "targetId": 10000269, // waypoint
+                            "message": "FOLLOW"
+                        },
+                        {
+                            "senderId": 10000268,
+                            "state": "PLAY",
+                            "targetId": 10000270, // waypoint
+                            "message": "FOLLOW"
+                        },
+                        /* Platform 9 */
+                        {
+                            "senderId": 10000260, // Yoku timer
+                            "state": "ZERO",
+                            "targetId": 10000272,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000260, // Yoku timer
+                            "state": "ZERO",
+                            "targetId": 10000273,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000272, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000273, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000273, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000272, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000271, // platform #9
+                            "state": "PLAY",
+                            "targetId": 10000272, // waypoint
+                            "message": "FOLLOW"
+                        },
+                        {
+                            "senderId": 10000271, // platform #9
+                            "state": "PLAY",
+                            "targetId": 10000273, // waypoint
+                            "message": "FOLLOW"
+                        },
+
+                        {
+                            "senderId": 10000260, // Yoku timer
+                            "state": "ZERO",
+                            "targetId": 10000274, // platform #10
+                            "message": "TOGGLE_ACTIVE"
+                        },
+
+                        /* Artifacts */
                         { // Taking the artifact deactivates the totem
                             "senderId": 12000044,
                             "state": "ARRIVED",
@@ -3028,6 +3272,9 @@
                             "targetId": 12000048,
                             "message": "DEACTIVATE"
                         }
+                    ],
+                    "deleteIds": [
+                        393452, 393452, 393454, 393456 // platforms don't move
                     ]
                 },
                 "Monitor Tunnel": {
