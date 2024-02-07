@@ -131,6 +131,9 @@
         // "gunDamage": 100
     },
     "strg": {
+        "2003358163": [
+            "This interface indicates the controls for the door are located elsewhere in this region."
+        ],
         "89302102": [
             "Combat Visor",
             "Scan Visor",
@@ -1350,21 +1353,70 @@
         },
         "Phendrana Drifts": {
             "transports": {
-                "Phendrana Drifts North (Phendrana Shorelines)": "Magmoor Caverns:Monitor Station",
+                "Phendrana Drifts North (Phendrana Shorelines)": "Magmoor Caverns West (Monitor Station)",
                 "Phendrana Drifts South (Quarantine Cave)": "Magmoor Caverns East (Twin Fires)"
             },
             "rooms": {
-                "Transport to Magmoor Caverns West": {},
-                "Shoreline Entrance": {},
-                "Phendrana Shorelines": {
-                    "pickups": [
-                        {
-                            "type": "Nothing"
+                "Transport to Magmoor Caverns West": {
+                    "editObjs": {
+                        "28": { // player actor arriving
+                            "rotation": [0, 0, 0]
                         },
+                        "2": { // spawn point
+                            "rotation": [0, 0, 0]
+                        },
+                        "42": { // spawn point
+                            "rotation": [0, 0, 0]
+                        },
+                        "61": { // player actor leaving
+                            "rotation": [0, 0, 0]
+                        }
+                    },
+                    "extraScans": [
                         {
-                            "type": "Nothing"
+                            "id": 10000275,
+                            "position": [-36.5835, 45.4808, -1.0973],
+                            "rotation": 90,
+                            "text": "Save Game",
+                            "combatVisible": true,
+                            "isRed": true
                         }
                     ],
+                    "timers": [
+                        // Queue the save request with a timer to make it easier on the eyes
+                        {
+                            "id": 10000276,
+                            "time": 0.5
+                        }
+                    ],
+                    "specialFunctions": [
+                        {
+                            "id": 10000277,
+                            "type": "SaveStation"
+                        }
+                    ],
+                    "addConnections": [
+                        // When the player scans the point, start the timer
+                        {
+                            "senderId": 10000275,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000276,
+                            "message": "RESET_AND_START"
+                        },
+                        // When the timer elapses, initiate a save
+                        {
+                            "senderId": 10000276,
+                            "state": "ZERO",
+                            "targetId": 10000277,
+                            "message": "ACTION"
+                        }
+                    ]
+                },
+                "Shoreline Entrance": {},
+                "Phendrana Shorelines": {
+                    "layers": {
+                        "6": false // unlock door
+                    },
                     "doors": {
                         "1": {
                             "destination": {
@@ -1398,7 +1450,57 @@
                                 "dockNum": 1
                             }
                         }
-                    }
+                    },
+                    "pickups": [
+                        {
+                            "type": "Nothing"
+                        },
+                        {
+                            "type": "Nothing"
+                        }
+                    ],
+                    "specialFunctions": [
+                        {
+                            "id": 10000278,
+                            "layer": 6,
+                            "type": "PlayerInAreaRelay"
+                        }
+                    ],
+                    "editObjs": {
+                        /* Deactivate floating platforms to make cheese harder */
+                        "131313": { "layer": 6 },
+                        "131314": { "layer": 6 }
+                    },
+                    "addConnections": [
+                        /* Unlock the door when the player enters the room if the layer is active */
+                        {
+                            "senderId": 10000278, // player in area relay
+                            "state": "ENTERED",
+                            "targetId": 131430, // Relay Disable Lock (To Trigger_Unlock&Key With Decrement)
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000278, // player in area relay
+                            "state": "ENTERED",
+                            "targetId": 131435, // Memory Relay - deactivate timer for locked door
+                            "message": "ACTIVATE"
+                        }
+                    ],
+                    "removeConnections": [
+                        /* POI doesn't unlock door */
+                        {
+                            "senderId": 131431, // POI
+                            "state": "SCAN_DONE",
+                            "targetId": 131430, // Relay Disable Lock (To Trigger_Unlock&Key With Decrement)
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 131431, // POI
+                            "state": "SCAN_DONE",
+                            "targetId": 131435, // Memory Relay - deactivate timer for locked door
+                            "message": "ACTIVATE"
+                        }
+                    ]
                 },
                 "Temple Entryway": {
                     "doors": {
@@ -6024,16 +6126,6 @@
                             "startImmediately": true
                         }
                     ],
-                    // "waypoints": [
-                    //     {
-                    //         "id": 524532, // pirate #1's waypoint
-                    //         "active": false
-                    //     },
-                    //     {
-                    //         "id": 524334, // pirate #2's waypoint
-                    //         "active": false
-                    //     }
-                    // ],
                     "editObjs": {
                         "524402": { // TYPE 01 Injured SpacePirate
                             "position": [-193.5911, 478.7648, -46],
