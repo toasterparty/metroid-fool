@@ -1358,6 +1358,7 @@
             },
             "rooms": {
                 "Transport to Magmoor Caverns West": {
+                    "submerge": true,
                     "editObjs": {
                         "28": { // player actor arriving
                             "rotation": [0, 0, 0]
@@ -1412,7 +1413,9 @@
                         }
                     ]
                 },
-                "Shoreline Entrance": {},
+                "Shoreline Entrance": {
+                    "submerge": true
+                },
                 "Phendrana Shorelines": {
                     "layers": {
                         "6": false // unlock door
@@ -1467,10 +1470,27 @@
                         }
                     ],
                     "editObjs": {
-                        /* Deactivate floating platforms to make cheese harder */
-                        "131313": { "layer": 6 },
-                        "131314": { "layer": 6 }
+                        /* Deactivate/move floating platforms to make cheese harder */
+                        "131313": { 
+                            "position": [-59.509, -192.3388, 16]
+                        },
+                        "131534": { 
+                            "position": [-59.509, -192.3388, 15.3]
+                        },
+                        "131082": { 
+                            "position": [-59.509, -192.3388, 15.3]
+                        },
+                        "131314": { "layer": 6 },
+                        "131093": { "layer": 6 },
+                        "131089": { "layer": 6 }
                     },
+                    "liquids": [
+                        {
+                            "position": [-37.2, -158.8, -4.5],
+                            "scale": [140, 140, 20],
+                            "type": "Water"
+                        }
+                    ],
                     "addConnections": [
                         /* Unlock the door when the player enters the room if the layer is active */
                         {
@@ -1509,7 +1529,7 @@
                             "blastShieldType": "None",
                             "destination": {
                                 "roomName": "Hunter Cave",
-                                "dockNum": 0
+                                "dockNum": 3
                             }
                         },
                         "1": {
@@ -1536,6 +1556,7 @@
                 },
                 "Ruins Entryway": {},
                 "Plaza Walkway": {
+                    "submerge": true,
                     "layers": {
                         "1": true, // drones
                         "4": true // unused animation
@@ -1761,7 +1782,38 @@
                                 "dockNum": 1
                             }
                         }
-                    }
+                    },
+                    "editObjs": {
+                        "600041": { // crate
+                            "position": [-52.3685, -289.7316, 20.404],
+                            "vulnerability": "Super Missile"
+                        },
+                        // zoomers
+                        "599977": { "vulnerability": "Super Missile" },
+                        "599905": { "vulnerability": "Super Missile" },
+                        "599982": { "vulnerability": "Super Missile" },
+                        "599970": { "vulnerability": "Super Missile" },
+                        "599969": { "vulnerability": "Super Missile" },
+                        "600082": { "vulnerability": "Super Missile" },
+                        "599941": { "vulnerability": "Super Missile" }
+                    },
+                    "liquids": [
+                        {
+                            "position": [-49.4, -313, 15.8],
+                            "scale": [120, 100, 18],
+                            "type": "Water"
+                        }
+                    ],
+                    "blocks": [
+                        {
+                            "position": [-64.7, -271.9, 25],
+                            "scale": [5, 2, 0.3],
+                            "texture": "Sandstone"
+                        }
+                    ],
+                    "deleteIds": [
+                        600038
+                    ]
                 },
                 "Ice Ruins East": {
                     "pickups": [
@@ -1785,7 +1837,104 @@
                                 "dockNum": 1
                             }
                         }
-                    }
+                    },
+                    "liquids": [
+                        {
+                            "position": [122, -197.6, 8.3],
+                            "scale": [89.18, 53.88, 10.65],
+                            "type": "Water"
+                        }
+                    ],
+                    "platforms": [
+                        {
+                            "id": 10000279,
+                            "position": [108.8, -197.4, 9],
+                            "type": "Snow"
+                        }
+                    ],
+                    "waypoints": [
+                        {
+                            "id": 10000280,
+                            "position": [108.8, -197.4, 6],
+                            "speed": 1.5
+                        },
+                        {
+                            "id": 10000281,
+                            "active": false,
+                            "position": [108.8, -197.4, 19.4],
+                            "speed": 1.5
+                        }
+                    ],
+                    "triggers": [
+                        {
+                            "id": 10000282,
+                            "position": [108.8, -197.4, 9],
+                            "scale": [5, 5, 3]
+                        }
+                    ],
+                    "blocks": [
+                        {
+                            "position": [132.3, -225.1, 15],
+                            "scale": [40, 1, 15],
+                            "texture": "Snow"
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 10000279, // platform
+                            "state": "PLAY",
+                            "targetId": 10000280, // waypoint
+                            "message": "FOLLOW"
+                        },
+                        {
+                            "senderId": 10000279, // platform
+                            "state": "PLAY",
+                            "targetId": 10000281, // waypoint
+                            "message": "FOLLOW"
+                        },
+                        {
+                            "senderId": 10000279, // platform
+                            "state": "PLAY",
+                            "targetId": 10000282, // trigger
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000280, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000281, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000281, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000280, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000282, // trigger
+                            "state": "ENTERED",
+                            "targetId": 10000280, // waypoint,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000282, // trigger
+                            "state": "ENTERED",
+                            "targetId": 10000281, // waypoint,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000282, // trigger
+                            "state": "EXITED",
+                            "targetId": 10000280, // waypoint,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000282, // trigger
+                            "state": "EXITED",
+                            "targetId": 10000281, // waypoint,
+                            "message": "TOGGLE_ACTIVE"
+                        }
+                    ]
                 },
                 "Chapel Tunnel": {
                     "doors": {
@@ -1835,7 +1984,7 @@
                 "Chapel of the Elders": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Boost Ball"
                         }
                     ],
                     "doors": {
@@ -1884,7 +2033,7 @@
                 "Phendrana Canyon": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Charge Beam"
                         }
                     ],
                     "doors": {
@@ -1917,7 +2066,9 @@
                     }
                 },
                 "Quarantine Access": {
+                    "submerge": true,
                     "layers": {
+                        "1": false, // atomics
                         "2": true // drones
                     },
                     "doors": {
@@ -2230,6 +2381,9 @@
                     }
                 },
                 "Frost Cave Access": {
+                    "layers": {
+                        "1": true // ice burrowers
+                    },
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
@@ -2247,16 +2401,20 @@
                                 "dockNum": 0
                             }
                         }
-                    }
+                    },
+                    "deleteIds": [
+                        2425180, 2425191 // beetles
+                    ]
                 },
                 "Hunter Cave Access": {
+                    "removeWater": true,
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
                             "blastShieldType": "None",
                             "destination": {
                                 "roomName": "Frost Cave",
-                                "dockNum": 1
+                                "dockNum": 0
                             }
                         },
                         "1": {
@@ -2411,16 +2569,16 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None",
                             "destination": {
-                                "roomName": "Lower Edge Tunnel",
-                                "dockNum": 1
+                                "roomName": "Hunter Cave Access",
+                                "dockNum": 0
                             }
                         },
                         "1": {
                             "shieldType": "Blue",
                             "blastShieldType": "None",
                             "destination": {
-                                "roomName": "Hunter Cave Access",
-                                "dockNum": 0
+                                "roomName": "Lower Edge Tunnel",
+                                "dockNum": 1
                             }
                         },
                         "2": {
@@ -2434,12 +2592,16 @@
                     }
                 },
                 "Hunter Cave": {
+                    "layers": {
+                        "1": false // Jellyzap
+                    },
+                    "removeWater": true,
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
                             "blastShieldType": "None",
                             "destination": {
-                                "roomName": "Temple Entryway",
+                                "roomName": "Upper Edge Tunnel",
                                 "dockNum": 0
                             }
                         },
@@ -2463,11 +2625,49 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None",
                             "destination": {
-                                "roomName": "Upper Edge Tunnel",
+                                "roomName": "Temple Entryway",
                                 "dockNum": 0
                             }
                         }
-                    }
+                    },
+                    "pickups": [
+                        {
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 4,
+                            "position": [250.9752, -1214.2894, -6.8]
+                        }
+                    ],
+                    "blocks": [
+                        {
+                            "position": [248, -1231.1, 9.4],
+                            "scale": [1, 80, 50],
+                            "texture": "Snow"
+                        },
+                        {
+                            "position": [256, -1215.1, -9],
+                            "scale": [6, 6, 0.3],
+                            "texture": "Snow"
+                        }
+                    ],
+                    "lockOnPoints": [
+                        {
+                            "position": [226.4, -1254.8, 14.6],
+                            "isGrapple": true
+                        },
+                        {
+                            "position": [237.1, -1215.8, 28.7],
+                            "isGrapple": true
+                        }
+                    ],
+                    "deleteIds": [
+                        // stalactites
+                        2753052, 2753044, 2752648, 2753084, 2753055, 2753085, 2753044, 2753047, 2753043, 2753042,
+                        2752555, 2752649, 2752760, 2752753,
+                        // bubbles
+                        2752764, 2752765, 2752766, 2752767, 2752768
+                    ]
                 },
                 "East Tower": {
                     "doors": {
@@ -2506,6 +2706,7 @@
                     }
                 },
                 "Lower Edge Tunnel": {
+                    "removeWater": true,
                     "doors": {
                         "0": {
                             "blastShieldType": "None",
@@ -2520,7 +2721,7 @@
                             "shieldType": "Blue",
                             "destination": {
                                 "roomName": "Frost Cave",
-                                "dockNum": 0
+                                "dockNum": 1
                             }
                         }
                     }
@@ -2532,7 +2733,7 @@
                             "blastShieldType": "None",
                             "destination": {
                                 "roomName": "Hunter Cave",
-                                "dockNum": 3
+                                "dockNum": 0
                             }
                         },
                         "1": {
@@ -2566,6 +2767,7 @@
                     }
                 },
                 "Lake Tunnel": {
+                    "removeWater": true,
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
@@ -2618,6 +2820,7 @@
                     }
                 },
                 "Phendrana's Edge": {
+                    "removeWater": true,
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
@@ -2686,10 +2889,12 @@
                 "Gravity Chamber": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Nothing",
+                            "model": "Space Jump Boots",
+                            "position": [377.6, -1214.9, -0.6]
                         },
                         {
-                            "type": "Nothing"
+                            "type": "Energy Tank"
                         }
                     ],
                     "doors": {
@@ -2709,7 +2914,29 @@
                                 "dockNum": 1
                             }
                         }
-                    }
+                    },
+                    "blocks": [
+                        {
+                            "position": [352.2, -1234.1, 6],
+                            "scale": [25, 25, 0.5],
+                            "texture": "Snow"
+                        },
+                        {
+                            "position": [384.3, -1215.8, 6],
+                            "scale": [30, 25, 0.5],
+                            "texture": "Snow"
+                        }
+                    ],
+                    "lockOnPoints": [
+                        {
+                            "position": [375.7, -1230.7, 0],
+                            "isGrapple": true
+                        },
+                        {
+                            "position": [369, -1189, 2.5],
+                            "isGrapple": true
+                        }
+                    ]
                 },
                 "Storage Cave": {
                     "doors": {
@@ -2825,6 +3052,7 @@
                 "Security Cave": {
                     "pickups": [
                         {
+                            // id: 3604505
                             "type": "Nothing"
                         }
                     ],
@@ -2835,7 +3063,60 @@
                                 "dockNum": 1
                             }
                         }
-                    }
+                    },
+                    "extraScans": [
+                        {
+                            "id": 10000283,
+                            "combatVisible": true,
+                            "position": [151.2421, -1466.6915, 90.5597],
+                            "rotation": 14,
+                            "text": "A door nearby has been unlocked."
+                        }
+                    ],
+                    "specialFunctions": [
+                        {
+                            "id": 10000284,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 669163189, // shorelines
+                            "layerChangeLayerId": 6
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 10000285,
+                            "time": 1
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 10000283,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000284,
+                            "message": "INCREMENT"
+                        },
+                        // unload to reload
+                        {
+                            "senderId": 10000283,
+                            "state": "SCAN_DONE",
+                            "targetId": 3604481, // dock
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000283,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000285, // timer
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000285, // timer
+                            "state": "ZERO",
+                            "targetId": 3604481, // dock
+                            "message": "SET_TO_MAX"
+                        }
+                    ],
+                    "deleteIds": [
+                        3604505, 3604503
+                    ]
                 }
             }
         },
