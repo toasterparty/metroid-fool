@@ -21,11 +21,15 @@ def grid_to_position(grid):
 
 # Parameters
 
+# First Good Maze
+SEED = 5
+UNIT_SIZE = 5
+COUNT = 1
+
 MAZE_CENTER = (164.5, 21.4, -87.7)
 MAZE_START = (164.7, 21.4, -98.8)
 MAZE_SCALE = (40.0, 70.0, 20.0)
-UNIT_SIZE = 5.5
-WALL_WIDTH = 0.2
+WALL_WIDTH = 1
 
 OBJECT_LIMIT = 1000
 
@@ -122,6 +126,15 @@ class Maze:
                 for z in range(0, len(self.nodes[x][y])):
                     node = self.nodes[x][y][z]
                     fn((x, y, z), node)
+
+    def wall_count(self):
+        count = 0
+        def count_walls(_axis, _pos, wall: MazeWall):
+            nonlocal count
+            if wall.state:
+                count += 1
+        self.walls_iter(count_walls)
+        return count
 
     def place_exterior(self):
         def maybe_place_wall(axis, position, wall: MazeWall):
@@ -232,7 +245,7 @@ class Maze:
             options = list(filter(lambda pos: pos not in history, options))
 
             if len(options) == 0:
-                print(f"Dead End: {current_pos}")
+                # print(f"Dead End: {current_pos}")
                 return
 
             option_pos = self.rng.choice(options)
@@ -288,8 +301,11 @@ class Maze:
 
     def carve_exit(self):
         history = []
-        exit_pos, path_len = self.furthest_exterior_node_from(START, history)
-        
+        exit = self.furthest_exterior_node_from(START, history)
+        if exit is None:
+            raise Exception("Could not find an exit from starting node")
+        exit_pos, path_len = exit
+
         for axis in range(0, 3):
             if axis != 2 and exit_pos[axis] == 0:
                 wall = self.wall_for_position(axis, exit_pos)
@@ -300,9 +316,9 @@ class Maze:
                 wall = self.wall_for_position(axis, wall_pos)
                 wall.state = False
 
-        print(f"EXIT={exit_pos}")
-        print(f"Solution Len: {path_len}")
-        
+        # print(f"EXIT={exit_pos}")
+        return path_len
+
 
     def generate(self):
         self.place_exterior()
@@ -312,33 +328,122 @@ class Maze:
             if not self.node_for_position(node_pos).visited:
                 self.carve_from_node(node_pos)
 
-        self.carve_exit()
+        return self.carve_exit()
 
     def export_walls(self):
         export_data = []
 
-        def export_wall(axis, position, wall: MazeWall):
-            if not wall.state:
-                return
-
-            position = grid_to_position(position)
+        def grid_to_wall_position(axis, node_pos):
+            position = grid_to_position(node_pos)
             position[axis] -= UNIT_SIZE / 2
+            return position
 
-            scale = [UNIT_SIZE for _ in range(0, 3)]
+        def place_wall(axis, start, end):
+            # Calculate the min/max xyz
+            pos_min = grid_to_wall_position(axis, start)
+            pos_max = grid_to_wall_position(axis, end)
+
+            for i in range(0, 3):
+                if i != axis:
+                    pos_min[i] -= UNIT_SIZE / 2
+                    pos_max[i] += UNIT_SIZE / 2
+
+            # Calculate the center
+            pos_center = [
+                pos_min[0] + (pos_max[0] - pos_min[0]) / 2,
+                pos_min[1] + (pos_max[1] - pos_min[1]) / 2,
+                pos_min[2] + (pos_max[2] - pos_min[2]) / 2,
+            ]
+
+            # Calculate the scale
+            scale = [
+                UNIT_SIZE * (1 + end[0] - start[0]),
+                UNIT_SIZE * (1 + end[1] - start[1]),
+                UNIT_SIZE * (1 + end[2] - start[2]),
+            ]
             scale[axis] = WALL_WIDTH
 
             export_data.append(
                 {
-                    "position": position,
+                    "position": pos_center,
                     "scale": scale,
                     "texture": "Mine",
                 }
             )
 
-        self.walls_iter(export_wall)
+        remaining_walls: list[list[tuple[int]]] = []
+
+        for axis in range(0, len(self.walls)):
+            remaining_walls.append([])
+            for x in range(0, len(self.walls[axis])):
+                for y in range(0, len(self.walls[axis][x])):
+                    for z in range(0, len(self.walls[axis][x][y])):
+                        wall: MazeWall = self.walls[axis][x][y][z]
+                        if wall.state:
+                            remaining_walls[axis].append((x, y, z))
+        
+        del wall
+
+        def walls_to_expand(start, end, expand_axis):
+            end = list(end)
+            end[expand_axis] += 1
+
+            min_x, min_y, min_z = start
+            max_x, max_y, max_z = end
+
+            required_walls = []
+            for x in range(min_x, max_x + 1):
+                for y in range(min_y, max_y + 1):
+                    for z in range(min_z, max_z + 1):
+                        required_walls.append((x, y, z))
+
+            return (required_walls, end)
+
+        def has_walls(walls, required_walls, expand_walls):
+            for wall in required_walls:
+                if wall not in walls and wall not in expand_walls:
+                    return False
+
+            return True
+
+        def place_one_wall(axis, walls: list[tuple[int]], start):
+            end = start
+            expanded = True
+            expand_walls = [start]
+            # print(f"remove {start} from {walls}")
+            walls.remove(start)
+            while expanded:
+                expanded = False
+                for expand_axis in range(0, 3):
+                    # Only expand along the current plane
+                    if expand_axis == axis:
+                        continue
+
+                    # What does it take to expand this direction?
+                    required_walls, new_end = walls_to_expand(start, end, expand_axis)
+                    # print(f"{start} -> {new_end} requires {required_walls}")
+
+                    # Check that we have that
+                    if not has_walls(walls, required_walls, expand_walls):
+                        continue
+
+                    # Expand
+                    for wall in required_walls:
+                        if wall not in expand_walls:
+                            expand_walls.append(wall)
+                        if wall in walls:
+                            walls.remove(wall)
+
+                    end = new_end
+                    expanded = True
+
+            place_wall(axis, start, end)
+
+        for axis, walls in enumerate(remaining_walls):
+            while len(walls) > 0:
+                place_one_wall(axis, walls, walls[0])
 
         count = len(export_data)
-        print(f"Wall Count: {count}")
 
         if count > OBJECT_LIMIT:
             raise Exception("Too many objects")
@@ -352,13 +457,22 @@ class Maze:
             }
         }
 
-
 print(f"GRID_SIZE={GRID_SIZE}")
-# print(f"MAZE_ORIGIN={MAZE_ORIGIN}")
 print(f"START={START}")
 
-maze = Maze(12345)
-maze.generate()
-json_data = maze.export_walls()
-with open('maze.json', 'w') as file:
-    file.write(json.dumps(json_data, indent=4))
+seed = SEED-1
+remaining = COUNT
+
+while remaining > 0:
+    try:
+        seed += 1
+        maze = Maze(seed)
+        solution_len = maze.generate()
+        json_data = maze.export_walls()
+        with open('maze.json', 'w') as file:
+            file.write(json.dumps(json_data, indent=4))
+        obj_count = len(json_data["blocks"])
+        print(f"Seed #{seed}:\n    Solution: {solution_len}\n    Objects: {obj_count}")
+        remaining -= 1
+    except:
+        pass
