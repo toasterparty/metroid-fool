@@ -1998,6 +1998,7 @@
                         }
                     },
                     "deleteIds": [
+                        // 917601, 917641, 917644, 917647, // corner platforms
                         917703, 917704 // don't change layers in chozo ice temple
                     ]
                 },
