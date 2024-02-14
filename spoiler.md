@@ -190,9 +190,9 @@ Ruined Courtyard (Labs) -> Specimen Storage
 
 *Quarry Access Ice locked*
 *Required secret boxes*
-Waste Disposal maze (portals)
+*Ultimate Maze*
 **Central Dynamo - Power Bombs**
-*QAA locked by Plasma*
+*MQA locked by Plasma*
 *Phazon Elite is missing. The Artifact sits plainly.*
 **Elite Research - Warrior**
 

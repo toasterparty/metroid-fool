@@ -25,6 +25,7 @@ def grid_to_position(grid):
 SEED = 3924
 MIN_SOLUTION = 40
 COUNT = 1
+# # # # # # # # # 
 
 MAZE_CENTER = (164.5, 30.5, -84.8)
 MAZE_START  = (164.5, 30.5, -98.8)
@@ -41,6 +42,7 @@ UNIT_SIZE   = 4.5
 
 WALL_WIDTH = 1
 OBJECT_LIMIT = 1000
+START_INSTANCE_ID = 9_900_000
 
 # Calculated parameters
 
@@ -83,9 +85,14 @@ class Maze:
     walls: list[list[list[list[MazeWall]]]]
 
     rng: Random
+    next_id: int
+
+    relay_id: int
 
     def __init__(self, seed):
         self.rng = Random(seed)
+        self.next_id = START_INSTANCE_ID
+        self.relay_id = self.id()
 
         self.nodes = []
         for x in range(0, GRID_SIZE[0]):
@@ -116,6 +123,11 @@ class Maze:
 
                     for _ in range(0, z_size):
                         self.walls[axis][x][y].append(MazeWall())
+
+    def id(self):
+        id = self.next_id
+        self.next_id += 1
+        return id
 
     # Where fn:
     #   def fn(axis, (x, y, z), wall)
@@ -403,6 +415,8 @@ class Maze:
 
             export_data.append(
                 {
+                    "id": self.id(),
+                    "active": False,
                     "position": pos_center,
                     "scale": scale,
                     "texture": "Mine",
@@ -486,21 +500,51 @@ class Maze:
         if count > OBJECT_LIMIT:
             raise Exception("Too many objects")
 
+        connections = []
+        for block in export_data:
+            block_id = block["id"]
+            connections.append(
+                {
+                    "senderId": self.relay_id,
+                    "state": "ZERO",
+                    "targetId": block_id,
+                    "message": "TOGGLE_ACTIVE",
+                }
+            )
+
+        trigger_id = self.id()
+        connections.append(
+            {
+                "senderId": self.relay_id,
+                "state": "ZERO",
+                "targetId": trigger_id,
+                "message": "TOGGLE_ACTIVE",
+            }
+        )
+
         return {
             "triggers": [
                 {
+                    "id": trigger_id,
+                    "active": False,
                     "position": MAZE_CENTER,
                     "scale": MAZE_SCALE,
                     "flags": 90112, # Detect Unmorphed Player | Detect Player Completely | Apply Force
                     "force": [0, 0, 66],
                 }
             ],
-            "blocks": export_data,
+            "relays": [
+                {
+                    "id": self.relay_id,
+                }
+            ],
             "editObjs": {
                 "1769482": {
                     "position": grid_to_position(START)
                 }
-            }
+            },
+            "blocks": export_data,
+            "addConnections": connections,
         }
 
 print(f"GRID_SIZE={GRID_SIZE}")
@@ -515,12 +559,19 @@ while remaining > 0:
         maze = Maze(seed)
         solution_len = maze.generate()
         json_data = maze.export_walls()
-        with open('maze.json', 'w') as file:
-            file.write(json.dumps(json_data, indent=4))
         obj_count = len(json_data["blocks"])
+
         if solution_len > MIN_SOLUTION:
             print(f"Seed #{seed}:\n    Solution: {solution_len}\n    Objects: {obj_count}")
             remaining -= 1
+
+            # print(f"{json_data}")
+
+            with open('maze.json', 'w') as file:
+                for key in json_data:
+                    value = json_data[key]
+                    file.write(f'"{key}": {json.dumps(value)},\n')
+
     except KeyboardInterrupt:
         break
     except:
