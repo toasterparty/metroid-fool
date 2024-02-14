@@ -21,16 +21,25 @@ def grid_to_position(grid):
 
 # Parameters
 
-# First Good Maze
-SEED = 5
-UNIT_SIZE = 5
+# THE PERFECT MAZE
+SEED = 3924
+MIN_SOLUTION = 40
 COUNT = 1
 
-MAZE_CENTER = (164.5, 21.4, -87.7)
-MAZE_START = (164.7, 21.4, -98.8)
-MAZE_SCALE = (40.0, 70.0, 20.0)
-WALL_WIDTH = 1
+MAZE_CENTER = (164.5, 30.5, -84.8)
+MAZE_START  = (164.5, 30.5, -98.8)
+MAZE_SCALE  = (40.0, 80.0, 20.0)
+MAZE_EXCLUDE_REGIONS = [
+    ((164.8, 21.5, -84.0), (10, 10, 10)),
+    ((145.4, 51.2, -88.3), (6, 6, 20)),
+    ((145.4, 21.3, -88.3), (6, 6, 20)),
+    ((184.0, 7.6,  -88.3), (6, 6, 20)),
+    ((183.2, 41.9, -88.3), (6, 6, 20)),
+    ((178.7, 6.9,  -86.5), (6, 6, 20)),
+]
+UNIT_SIZE   = 4.5
 
+WALL_WIDTH = 1
 OBJECT_LIMIT = 1000
 
 # Calculated parameters
@@ -109,7 +118,7 @@ class Maze:
                         self.walls[axis][x][y].append(MazeWall())
 
     # Where fn:
-    #   def fn(axis, x, y, z, wall)
+    #   def fn(axis, (x, y, z), wall)
     def walls_iter(self, fn):
         for axis in range(0, len(self.walls)):
             for x in range(0, len(self.walls[axis])):
@@ -142,6 +151,28 @@ class Maze:
                 wall.mutable = False
 
         self.walls_iter(maybe_place_wall)
+
+    def place_excluded(self):
+        def exclude_region(grid, node: MazeNode):
+            pos = grid_to_position(grid)
+            for axis in range(0, 3):
+                if pos[axis] < pos_min[axis] or pos[axis] > pos_max[axis]:
+                    return # don't exclude
+            
+            for wall in self.node_walls(grid):
+                assert wall.state
+                wall.mutable = False
+
+        for position, scale in MAZE_EXCLUDE_REGIONS:
+            pos_min = [
+                position[axis] - (scale[axis]/2) for axis in range(0, 3)
+            ]
+
+            pos_max = [
+                position[axis] + (scale[axis]/2) for axis in range(0, 3)
+            ]
+
+            self.nodes_iter(exclude_region)
 
     def node_for_position(self, position) -> MazeNode:
         x, y, z = position
@@ -183,12 +214,12 @@ class Maze:
         start = self.node_for_position(START)
         start.visited = True
 
-        for position in self.node_neighbors(START):
-            node = self.node_for_position(position)
-            node.visited = True
+        # for position in self.node_neighbors(START):
+        #     node = self.node_for_position(position)
+        #     node.visited = True
 
-        for wall in self.node_walls(START):
-            wall.carve()
+        # for wall in self.node_walls(START):
+        #     wall.carve()
 
     def process_order(self) -> list[tuple]:
         process_order = []
@@ -242,7 +273,13 @@ class Maze:
             if len(options) == 0:
                 raise Exception(f"{current_pos} has no neighbors")
 
-            options = list(filter(lambda pos: pos not in history, options))
+            def valid_option(pos):
+                if pos in history:
+                    return False
+
+                return True
+
+            options = list(filter(lambda pos: valid_option(pos), options))
 
             if len(options) == 0:
                 # print(f"Dead End: {current_pos}")
@@ -322,6 +359,7 @@ class Maze:
 
     def generate(self):
         self.place_exterior()
+        self.place_excluded()
         self.carve_entrance()
         nodes = self.process_order()
         for node_pos in nodes:
@@ -449,6 +487,14 @@ class Maze:
             raise Exception("Too many objects")
 
         return {
+            "triggers": [
+                {
+                    "position": MAZE_CENTER,
+                    "scale": MAZE_SCALE,
+                    "flags": 90112, # Detect Unmorphed Player | Detect Player Completely | Apply Force
+                    "force": [0, 0, 66],
+                }
+            ],
             "blocks": export_data,
             "editObjs": {
                 "1769482": {
@@ -472,7 +518,10 @@ while remaining > 0:
         with open('maze.json', 'w') as file:
             file.write(json.dumps(json_data, indent=4))
         obj_count = len(json_data["blocks"])
-        print(f"Seed #{seed}:\n    Solution: {solution_len}\n    Objects: {obj_count}")
-        remaining -= 1
+        if solution_len > MIN_SOLUTION:
+            print(f"Seed #{seed}:\n    Solution: {solution_len}\n    Objects: {obj_count}")
+            remaining -= 1
+    except KeyboardInterrupt:
+        break
     except:
         pass
