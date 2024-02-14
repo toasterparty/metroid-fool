@@ -3935,6 +3935,67 @@
                             "blastShieldType": "Power Bomb"
                         }
                     },
+                    "pickups": [
+                        {
+                            "id": 10000127,
+                            "type": "Wave Beam",
+                            "position": [388.1364, -811.821, 82.2]
+                        },
+                        {
+                            "id": 10000132,
+                            "type": "Nothing",
+                            "scanText": "Drain Lava",
+                            "hudmemoText": "Lava Drained!",
+                            "position": [434.7, -847.9, 84.0]
+                        }
+                    ],
+                    "playerHints": [
+                        {
+                            "id": 10000140,
+                            "layer": 7,
+                            "disableUnmorph": true
+                        }
+                    ],
+                    "cameraHints": [
+                        {
+                            "layer": 7,
+                            "behavior": 4,
+                            "triggerPos": [385.02, -846.8, 107.9],
+                            "triggerScale": [116.60, 75.15, 50],
+                            "cameraPos": [387.74, -833.06, 102.66],
+                            "cameraRot": [0, 0, 0]
+                        }
+                    ],
+                    "streamedAudios": [
+                        {
+                            "id": 10000142,
+                            "volume": 90,
+                            "audioFileName": "/audio/gen_puzzleL.dsp|/audio/gen_puzzleR.dsp",
+                            "isMusic": true
+                        }
+                    ],
+                    "lockOnPoints": [
+                        {
+                            "id1": 10000134,
+                            "id2": 10000135,
+                            "position": [413.4, -835.4, 82]
+                        },
+                        {
+                            "id1": 10000136,
+                            "id2": 10000137,
+                            "position": [368.9, -836.9, 82],
+                            "isGrapple": true
+                        }
+                    ],
+                    "liquids": [
+                        {
+                            "id": 10000131,
+                            "layer": 7,
+                            "type": "Lava",
+                            "position": [385.92, -847.80, 47.7],
+                            "scale": [99.11, 69.49, 50]
+                        }
+                    ],
                     "blocks": [
                         {
                             "position": [367.6552, -835.0, 44.158],
@@ -3995,20 +4056,21 @@
                             "scale": [60, 5, 0.5]
                         }
                     ],
-                    "liquids": [
-                        {
-                            "id": 10000131,
-                            "layer": 7,
-                            "type": "Lava",
-                            "position": [385.92, -847.80, 47.7],
-                            "scale": [99.11, 69.49, 50]
-                        }
-                    ],
                     "platforms": [
                         {
                             "id": 10000128,
                             "position": [409, -844, 61]
+                        },
+                        /* EXAMPLE CONTRAPTION */
+                        {
+                            "id": 8000001,
+                            "layer": 7,
+                            "active": false,
+                            "type": "LongBlock",
+                            "position": [368.1, -837.7, 91.5],
+                            "rotation": [90, 0, 0]
                         }
+                        /* END EXAMPLE */
                     ],
                     "triggers": [
                         {
@@ -4028,59 +4090,31 @@
                             "position": [367, -813.8, 92],
                             "scale": [10, 10, 5],
                             "deactivateOnEnter": true
-                        }
-                    ],
-                    "playerHints": [
+                        },
+                        /* EXAMPLE CONTRAPTION */
                         {
-                            "id": 10000140,
+                            "id": 8000000,
                             "layer": 7,
-                            "disableUnmorph": true
+                            "position": [368.1, -837.7, 91.5],
+                            "scale": [10, 10, 10]
                         }
+                        /* END EXAMPLE */
                     ],
-                    "cameraHints": [
+                    "waypoints": [
+                        /* EXAMPLE CONTRAPTION */
                         {
+                            "id": 8000002,
                             "layer": 7,
-                            "behavior": 4,
-                            "triggerPos": [385.02, -846.8, 107.9],
-                            "triggerScale": [116.60, 75.15, 50],
-                            "cameraPos": [387.74, -833.06, 102.66],
-                            "cameraRot": [0, 0, 0]
-                        }
-                    ],
-                    "streamedAudios": [
-                        {
-                            "id": 10000142,
-                            "volume": 90,
-                            "audioFileName": "/audio/gen_puzzleL.dsp|/audio/gen_puzzleR.dsp",
-                            "isMusic": true
-                        }
-                    ],
-                    "lockOnPoints": [
-                        {
-                            "id1": 10000134,
-                            "id2": 10000135,
-                            "position": [413.4, -835.4, 82]
+                            "position": [368.1, -837.7, 91.5], // same as platform
+                            "speed": 30 // retreat speed
                         },
                         {
-                            "id1": 10000136,
-                            "id2": 10000137,
-                            "position": [368.9, -836.9, 82],
-                            "isGrapple": true
+                            "id": 8000003,
+                            "layer": 7,
+                            "position": [368.1, -827.5, 91.5], // closer to plasma processing
+                            "speed": 10 // attack speed
                         }
-                    ],
-                    "pickups": [
-                        {
-                            "id": 10000127,
-                            "type": "Wave Beam",
-                            "position": [388.1364, -811.821, 82.2]
-                        },
-                        {
-                            "id": 10000132,
-                            "type": "Nothing",
-                            "scanText": "Drain Lava",
-                            "hudmemoText": "Lava Drained!",
-                            "position": [434.7, -847.9, 84.0]
-                        }
+                        /* END EXAMPLE */
                     ],
                     "editObjs": {
                         // Grapple/Dash Points
@@ -4092,6 +4126,9 @@
                         "10000132": {"layer": 7}
                     },
                     "addConnections": [
+
+                        /* 1st Pass */
+
                         // Platform is just straight up a trap
                         {
                             "senderId": 10000129,
@@ -4138,7 +4175,47 @@
                             "state": "ENTERED",
                             "targetId": 10000142,
                             "message": "PLAY"
+                        },
+
+                        /* 2nd Pass */
+
+                        /* EXAMPLE CONTRAPTION */
+                        // The trigger activates the platform
+                        {
+                            "senderId": 8000000, // trigger
+                            "state": "ENTERED",
+                            "targetId": 8000001, // platform
+                            "message": "ACTIVATE"
+                        },
+                        // The platform will first chase the waypoint by plasma processing
+                        {
+                            "senderId": 8000001, // platform
+                            "state": "ACTIVE",
+                            "targetId": 8000003, // waypoint (by plasma processing)
+                            "message": "FOLLOW"
+                        },
+                        // The platform will then reteat once it reaches the first waypoiint
+                        {
+                            "senderId": 8000003, // waypoint (by plasma processing)
+                            "state": "ARRIVED",
+                            "targetId": 8000002, // waypoint (starting position)
+                            "message": "NEXT"
+                        },
+                        // When the platform is fully reset, hide it
+                        {
+                            "senderId": 8000002, // waypoint (starting position)
+                            "state": "ARRIVED",
+                            "targetId": 8000001,
+                            "message": "DEACTIVATE"
+                        },
+                        // Connect the waypoints in a loop
+                        {
+                            "senderId": 8000002, // waypoint (starting position)
+                            "state": "ARRIVED",
+                            "targetId": 8000003, // waypoint (starting position)
+                            "message": "NEXT"
                         }
+                        /* END EXAMPLE */
                     ],
                     "deleteIds": [
                         1310750, // Remove randomprime cutscene skip
