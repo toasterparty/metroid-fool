@@ -11,143 +11,75 @@
 - Workstation -> Main Quarry
 - GTH -> Reflecting Pool (x2)
 
-## Route
-
-In general:
-- The harder it is to reach a missile, the more rewarding it is
-- Beetles are never encountered *after* the Ruined Shrine fight
-- Ghosts are never encoutnered *before* the Artifact farce is revealed
+## Walkthrough
 
 ### Start
 
 - SJF Jumpscare
 - Tallon -> Chozo
 - Beetle Battles
+- Elevator Save Station
 - **Ruined Shrine - Morph Ball**
 
 ### Explore Early Game
 
 - **Tower Chamber - Lifegiver**
-- Artifact Temple hints are blocked by Glorgie's shield
-- FCS - Energy Tank
-- Water Pool Track
+- Artifact Temple lore established. Hints are blocked by Glorgie's shield.
+- **Frigate Crash Site - Energy Tank**
+- Water Pool morph track
 - **Water Pool - Missile Launcher**
-- Unlock Hive Totem fight (unwinnable without grapple)
-- Root Cave -> Workstation
-    - Magmoor Workstation is too hot
 
 ### Fight Requirements
 
 #### Grapple
 
-- FCS -> Lava Lake
-- Lake Tunnel heat run "against wind"
+- Frigate Crash Site -> Lava Lake
+- Lake Tunnel no-jump heat run
 - **Lake Tunnel - Grapple Beam**
-- Piston Tunnel requires bombs and boost to pass
 - Hive Mecha fight
 - **Hive Totem - Energy Tank**
-- Sun Tower -> PPC
-    - Save station in elevator
-    - PCA blocked by normal bars
-    - Ice Spreader blast shield blocks maintenance tunnel
-
-*Passing through vault requires ???*
 
 #### Bombs
 
 - Arboretum Scan Puzzle
-- Gathering Hall Scan Puzzle
 - Watery Hall Scan Puzzle
 - **Dynamo - Morph Ball Bomb**
-- Energy Core Access - Energy Tank (inside tunnel)
-- Energy Core blocked
 
 ### Flaahgra
 
-- Sun Tower Bomb Jump Puzzle
-- Flaahgra fight
+- Transport Access North Bomb Puzzle
+- Sun Tower Bomb Puzzle
+- Flaahgra+
 - **Sunchamber - Varia Suit**
-- Early Wild
 - **Sunchamber - Wild** (But there are no ghosts)
 
 ### Journey to Phendrana
 
-- FCS -> Lava Lake
+- Frigate Crash Site -> Lava Lake
     - Lava Lake item is "missing"
-    - Storage Cavern blocked by beam combo
-- Triclops Pit climb
+- Triclops Pit Yoku block sequence
 - **Triclops Pit - Nature**
-
-### Early Phen
-
 - Monitor Station -> Phendrana Shorelines
+
+### Phendrana Mashup
+
 - Elevator Save Station
-    - Early phen is all fucked up and confusing full of PoNR and room rando connections. Might even mix some far phen in there if I feel like it
-    - Water level in shorelines is raised to prevent access to any door except for save station
-    - Middle Shorelines Door Lock doesn't release on scan, instead it hints that the scan is found elsewhere
-    - Boost is required to proceed past ruined courtyard (the water levels are reversed, it starts up and goes down when the puzzle is activated)
-
-```
-Elevator -> Shorelines Entrance -> Shorelines (Entrance)
-Shorelines (Lower) -> Quarantine Access -> IRW (North)
-IRW (West) -> Plaza Walkway -> IRE (Lower) -> Ice Ruins Access -> Hunter Cave (Lower)
-Hunter Cave (Lower) -> Upper Edge Tunnel -> Gravity Chamber (Upper) -> Canyon Entryway -> Phendrana's Edge (Tunnel)
-Phendrana's Edge (Bottom) -> Frost Cave Access -> Phendrana Canyon
-```
-
-**Phendrana Canyon - Charge Beam**
-
-```
-Phendrana's Edge (Middle) -> Lake Tunnel -> Hunter Cave (Upper)
-Hunter Cave (Upper) -> Temple Entryway -> Frost Cave (Lower)
-Frost Cave (Save) -> Lower Edge Tunnel -> Chozo Ice Temple (East)
-```
-
-**Chozo Ice Temple - Bomb Slot Activated**
-
-Shortcut Opened:
-
-```
-IRW (South) -> Chapel Tunnel -> Chozo Ice Temple (West) -> Lower Edge Tunnel -> Frost Cave (Save)
-```
-
-```
-Frost Cave (Upper) -> Hunter Cave Access -> Shorelines (Upper)
-Shorelines (Upper) -> Save Station C
-Shorelines (Temple) -> Security Cave
-```
-
-**Security Cave - Shoreline Door Unlocked**
-
-```
-Shorelines (Locked) -> Chamber Access -> North Quarantine Tunnel -> Chapel of the Elders
-```
-
-### Sheegoth Fight 
-    - Force morphed for the whole fight
-    - Sheegoths spawn on pyramid-shaped turrets and you have to climb them to bomb them to death without unmorphing
+- **Phendrana Canyon - Charge Beam**
+- **Chozo Ice Temple - Bomb Slot Activated**
+    - This unlocks a shortcut
+- **Security Cave - Unlock Shoreline Door**
+- Sheegoth Fight+
 - **Chapel of the Elders - Boost Ball**
 
 ### Labs False Start
 
-```
-Phendrana's Edge (Hidden Door) -> Courtyard Entryway -> Ruined Courtyard (Lower)
-```
-
-Ruined Courtyard puzzle but the water levels are inverted and the labs door is unpowered instead of Quarantine Access
-**Ruined Courtyard - E-Tank**
-
-```
-Ruined Courtyard (Quarantine Door) -> Save Station B
-Ruined Courtyard (Labs) -> Specimen Storage
-```
-
-*Need Supers and Wave to proceed into labs*
+- Ruined Courtyard puzzle which hard-requires boost
+- **Ruined Courtyard - E-Tank**
+- *Need Supers and Wave to proceed into labs*
 
 ### Backtrack
 
 - Unlock Geothermal Core ceiling with the help of Grapple. Wave Beam extends out with the piston.
-    - TODO: Grapple Beam R-Tech skill check is needed before this point, otherwise it's too punishing
 - **Geothermal Core - Wave Beam**
 - Reverse Piston Tunnel/Training Chamber
 - **Training Chamber Access - Super Missiles**
@@ -221,7 +153,7 @@ Ruined Courtyard (Labs) -> Specimen Storage
 - Wave Door
 - **Arbor Chamber - Wavebuster**
 - Plasma Door
-- **Burn Dome - Flamethrower**
+- **Burn Dome - Flamethrower** (also unlocks flamethrower door to get PB expansion in storage cavern)
 - Required SJ
 - **Elder Chamber - Spirit**
 - Reflecting Pool -> GTH

@@ -4,13 +4,13 @@
 
 Experience Metroid Prime like never before. The planet of Tallon IV has been pumped full of propostorous puzzles, jovial japes and even a few sacrilegious stinkers. Do you have what it takes to endure them all?
 
-## [Trailer](http://example.com)
+## [🎞️ Trailer](http://example.com)
 
-## [Download](http://example.com)
+## [⬇️ Download](http://example.com)
 
 ## Features
 
-This hack is the first fanhack to explore the new script-editing tools created for the patcher. As such, edits to rooms may produce more *dynamic* interractions with the player. It also makes use of all the "usual" patcher features such as a custom item/elevator/door layout and quality of life improvements. All you need to know is I spent a lot of time trying to make this one impressive and unique.
+This hack is the first fanhack to explore the new script-editing tools created for the patcher. As such, edits to rooms may produce more *"dynamic"* interractions with the player. It also makes use of all the usual patcher features such as a custom item/elevator/door layout, quality of life improvements, etc. All you need to know is I spent a lot of time trying to make this one impressive. I guarantee you have never seen anything like this.
 
 ## Difficulty
 
@@ -24,13 +24,16 @@ Please do not unnesecarily spoil the contents of this hack when discussing in ch
 
 Please note that some unique lore is provided in and around Artifact Temple. No lore text outside of this area has been modified. I'm telling you this so you don't scan everything in fear of missing out.
 
-## [Spoiler](./spoiler.md)
+## [❔ Hints](./hints.md)
+Check here if you're stuck before reading the spoiler log.
+
+## [🙈 Spoiler](./spoiler.md)
 
 ## Credits
 |  |  | 
 -------|------------------
 | **Modding Tools** | *toasterparty* |
-| **Route/Layout** | *toasterparty* |
+| **Route & Layout** | *toasterparty* |
 | **Puzzles** | *toasterparty, UncleReggie* |
 | **Playtesting** | *UncleReggie* |
 
