@@ -3103,7 +3103,232 @@
                                 "dockNum": 0
                             }
                         }
-                    }
+                    },
+                    "editObjs": {
+                        "983045": { // water down
+                            "position": [-4.081318, -470.724823, 32.7016]
+                        },
+                        "983595": { // water up
+                            "position": [2.217131, -470.724823, 17.693943]
+                        },
+
+                        /* Swap which door is locked by the thermal conduit */
+
+                        "983515": {
+                            "position": [-3.2447, -491.8719, 66.6228],
+                            "rotation": [0, 0, 0]
+                        },
+                        "983514": {
+                            "position": [-3.2447, -491.8719, 66.6228],
+                            "rotation": [0, 0, 0]
+                        },
+                        "983555": {
+                            "position": [-2.9548, -510.2265, 61.3259]
+                        }
+                    },
+                    "timers": [
+                        {
+                            "id": 10000297,
+                            "time": 0.02
+                        },
+                        {
+                            "id": 10000298,
+                            "time": 15
+                        }
+                    ],
+                    "relays": [
+                        {
+                            "id": 10000299 // my reactivate relay
+                        }
+                    ],
+                    "addConnections": [
+                        // Instead of turning on the bomb slot, change the water levels
+                        {
+                            "senderId": 983340, // Counter - Activated Spinners
+                            "state": "MAX_REACHED",
+                            "targetId": 983278, // Faulty Relay - [OUT] Destroyed
+                            "message": "SET_TO_ZERO"
+                        },
+                        // Reactivate the spinners on water timeout
+                        {
+                            "senderId": 983090, // Water Go Down Delay
+                            "state": "ZERO",
+                            "targetId": 10000299, // my reactivate relay
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000299, // my reactivate relay
+                            "state": "ZERO",
+                            "targetId": 983340, // Counter - Activated Spinners
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000299, // my reactivate relay
+                            "state": "ZERO",
+                            "targetId": 983317, // Spinner finished
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000299, // my reactivate relay
+                            "state": "ZERO",
+                            "targetId": 983352, // Spinner finished
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000299, // my reactivate relay
+                            "state": "ZERO",
+                            "targetId": 10000297, // one frame delay
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000297, // one frame delay
+                            "state": "ZERO",
+                            "targetId": 983309, // SpinnerController - Platform Animation Controller
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000297, // one frame delay
+                            "state": "ZERO",
+                            "targetId": 983348, // SpinnerController - Platform Animation Controller
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000297, // one frame delay
+                            "state": "ZERO",
+                            "targetId": 10000298, // spinner arm fall delay
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000298, // spinner arm fall delay
+                            "state": "ZERO",
+                            "targetId": 983352, // Spinner finished
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000298, // spinner arm fall delay
+                            "state": "ZERO",
+                            "targetId": 983317, // Spinner finished
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000298, // spinner arm fall delay
+                            "state": "ZERO",
+                            "targetId": 983340, // Counter - Activated Spinners
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000298, // spinner arm fall delay
+                            "state": "ZERO",
+                            "targetId": 983311, // Faulty Relay - [IN] Enable Spinner
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000298, // spinner arm fall delay
+                            "state": "ZERO",
+                            "targetId": 983349, // Faulty Relay - [IN] Enable Spinner
+                            "message": "SET_TO_ZERO"
+                        },
+
+                        /* Swap which door is locked by the thermal conduit */
+
+                        // Relay - [IN] Deactivate Door
+                        {
+                            "senderId": 983510, // Relay - [IN] Deactivate Door
+                            "state": "ZERO",
+                            "targetId": 983088, // Door_Area
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 983510, // Relay - [IN] Deactivate Door
+                            "state": "ZERO",
+                            "targetId": 983076, // Trigger_DoorUnlock
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 983510, // Relay - [IN] Deactivate Door
+                            "state": "ZERO",
+                            "targetId": 983085, // Actor_DoorShield
+                            "message": "DEACTIVATE"
+                        },
+
+                        // Relay - [IN] Activate Door
+                        {
+                            "senderId": 983509, // Relay - [IN] Deactivate Door
+                            "state": "ZERO",
+                            "targetId": 983088, // Door_Area
+                            "message": "SET_TO_MAX"
+                        },
+                        {
+                            "senderId": 983509, // Relay - [IN] Deactivate Door
+                            "state": "ZERO",
+                            "targetId": 983076, // Trigger_DoorUnlock
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 983509, // Relay - [IN] Deactivate Door
+                            "state": "ZERO",
+                            "targetId": 983085, // Actor_DoorShield
+                            "message": "ACTIVATE"
+                        }
+                    ],
+                    "removeConnections": [
+                        // don't remember the spinners being "solved"
+                        {
+                            "senderId": 983340, // counter
+                            "state": "MAX_REACHED",
+                            "targetId": 983362,
+                            "message": "ACTIVATE"
+                        },
+
+                        /* Swap which door is locked by the thermal conduit */
+
+                        // Relay - [IN] Deactivate Door
+                        {
+                            "senderId": 983510, // Relay - [IN] Deactivate Door
+                            "state": "ZERO",
+                            "targetId": 983503, // Door_Area
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 983510, // Relay - [IN] Deactivate Door
+                            "state": "ZERO",
+                            "targetId": 983504, // Trigger_DoorUnlock
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 983510, // Relay - [IN] Deactivate Door
+                            "state": "ZERO",
+                            "targetId": 983506, // Actor_DoorShield
+                            "message": "DEACTIVATE"
+                        },
+
+                        // Relay - [IN] Activate Door
+                        {
+                            "senderId": 983509, // Relay - [IN] Deactivate Door
+                            "state": "ZERO",
+                            "targetId": 983503, // Door_Area
+                            "message": "SET_TO_MAX"
+                        },
+                        {
+                            "senderId": 983509, // Relay - [IN] Deactivate Door
+                            "state": "ZERO",
+                            "targetId": 983504, // Trigger_DoorUnlock
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 983509, // Relay - [IN] Deactivate Door
+                            "state": "ZERO",
+                            "targetId": 983506, // Actor_DoorShield
+                            "message": "ACTIVATE"
+                        }
+                    ],
+                    "deleteIds": [
+                        // Randomprime cutscene skips
+                        983041, 983042, 983047, 983043,
+                        // Bomb slot always inactive
+                        983272, 983409, 983408, 983407, 983273, 983274, 983153,
+                        983364 // Relay - [IN] Start Ball Slot Activate Cinematic
+                    ]
                 },
                 "Phendrana Canyon": {
                     "pickups": [
@@ -3959,6 +4184,9 @@
                             "targetId": 10000055,
                             "message": "DEACTIVATE"
                         }
+                    ],
+                    "deleteIds": [
+                        3408071, 3408113, 3408072 // The PB wall is gone by default
                     ]
                 },
                 "Gravity Chamber": {
