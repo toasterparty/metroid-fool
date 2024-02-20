@@ -144,7 +144,7 @@
             "Wave Beam",
             "Plasma Beam",
             "Phazon Beam",
-            "Energy Low",
+            "E",
             "Warning",
             "Damage",
             "Missiles\nLow",
@@ -160,7 +160,7 @@
             "Yes",
             "No",
             "Quit Game?",
-            "Continue from last save?",
+            "Bunger?",
             "Save your progress to the Memory Card in Slot A? Previous data will be overwritten.",
             "Quit Metroid? Progress since the last save will be lost.",
             "Continue playing?",
@@ -3363,6 +3363,17 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
+                    },
+                    "editObjs": {
+                        "1179716": { // 2nd to last waypoint
+                            "position": [-15.5482, -545.76, 64.0709]
+                        },
+                        "1179717": { // last waypoint
+                            "position": [-2.1722, -554.8615, 59.0461]
+                        },
+                        "1179712": { // pirate
+                            "speed": 1.8
+                        }
                     }
                 },
                 "Quarantine Access": {
@@ -3417,7 +3428,28 @@
                             "time": 0.02
                         }
                     ],
+                    "counters": [
+                        {
+                            "id": 1311304, // Counter-unlock
+                            "maxValue": 7 // increased from 4
+                        }
+                    ],
+                    "specialFunctions": [
+                        {
+                            "id": 10000300,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 351383175, // research entrance
+                            "layerChangeLayerId": 3 // shadow pirates
+                        },
+                        {
+                            "id": 10000301,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 351383175, // research entrance
+                            "layerChangeLayerId": 4 // elite pirate
+                        }
+                    ],
                     "addConnections": [
+                        /* Hide baddies by default */
                         {
                             "senderId": 10000057, // timer
                             "state": "ZERO",
@@ -3442,6 +3474,7 @@
                             "targetId": 1310901, // turret
                             "message": "DEACTIVATE"
                         },
+                        /* Activate when cutscene starts */
                         {
                             "senderId": 1311177, // fight start trigger
                             "state": "ENTERED",
@@ -3465,6 +3498,38 @@
                             "state": "ENTERED",
                             "targetId": 1310901, // turret
                             "message": "ACTIVATE"
+                        },
+                        /* Add more enemies to unlock counter requirement */
+                        {
+                            "senderId": 1311308, // elite pirate
+                            "state": "DEATH_RATTLE",
+                            "targetId": 1311304, // Counter-unlock
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1311605, // Shadow pirates counter
+                            "state": "ZERO",
+                            "targetId": 1311304, // Counter-unlock
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1310903, // turret
+                            "state": "DEAD",
+                            "targetId": 1311304, // Counter-unlock
+                            "message": "INCREMENT"
+                        },
+                        /* Change layers when fight complete */
+                        {
+                            "senderId": 1311304, // Counter-unlock
+                            "state": "MAX_REACHED",
+                            "targetId": 10000300, // layer change sf
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 1311304, // Counter-unlock
+                            "state": "MAX_REACHED",
+                            "targetId": 10000301, // layer change sf
+                            "message": "DECREMENT"
                         }
                     ],
                     "deleteIds": [
@@ -3502,7 +3567,15 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "triggers": [
+                        {
+                            "position": [-12.9066, -713.8476, 74.0571],
+                            "scale": [31.515999, 80.669952, 6.112994],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, 0, 90]
+                        }
+                    ]
                 },
                 "Quarantine Cave": {
                     "pickups": [
@@ -3522,9 +3595,17 @@
                     }
                 },
                 "Research Lab Hydra": {
+                    "layers": {
+                        "2": true, // shadow pirates
+                        "4": true // elite pirates
+                    },
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Tank",
+                            "hudmemoText": "Missile Tank Acquired!",
+                            "maxIncrease": 5,
+                            "currIncrease": 0
                         }
                     ],
                     "doors": {
@@ -3536,7 +3617,1033 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "triggers": [
+                        {
+                            "position": [-8.1587, -791.1531, 86.9735],
+                            "scale": [65.0, 72.360001, 32.23],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, 0, 90]
+                        },
+                        {
+                            "position": [-1.9497, -801.1327, 76.7779],
+                            "scale": [10, 15, 10],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, 0, 90]
+                        },
+                        {
+                            "id": 10000302,
+                            "layer": 4,
+                            "position": [-44.977, -777.4532, 97.766],
+                            "scale": [7, 9, 4],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [2000, 0, 0]
+                        }
+                    ],
+                    "specialFunctions": [
+                        {
+                            "id": 10000304,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 245580074,
+                            "layerChangeLayerId": 4
+                        }
+                    ],
+                    "hudmemos": [
+                        {
+                            "id": 10000305,
+                            "text": "The door has been unlocked",
+                            "messageTime": 8
+                        }
+                    ],
+                    // Generated by hydra.py
+                    "timers": [
+                        {
+                            "id": 10000306,
+                            "layer": 4,
+                            "time": 0.02,
+                            "startImmediately": true
+                        },
+                        {
+                            "id": 10000307,
+                            "layer": 4,
+                            "time": 0.1
+                        }
+                    ],
+                    "counters": [
+                        {
+                            "id": 10000308,
+                            "layer": 4,
+                            "maxValue": 18
+                        }
+                    ],
+                    "editObjs": {
+                        "1639218": {
+                            "layer": 4,
+                            "position": [
+                                -41.931,
+                                -783.3328,
+                                94.201
+                            ],
+                            "rotation": [
+                                0,
+                                0,
+                                0
+                            ]
+                        },
+                        "1638404": {
+                            "layer": 4,
+                            "position": [
+                                -13.729,
+                                -823.2877,
+                                94.9719
+                            ],
+                            "speed": 1.2447565210059186,
+                            "scale": [
+                                1.227551941896418,
+                                1.227551941896418,
+                                1.227551941896418
+                            ]
+                        },
+                        "1638942": {
+                            "layer": 4
+                        },
+                        "1638405": {
+                            "layer": 4,
+                            "position": [
+                                -18.2847,
+                                -771.9351,
+                                70.8779
+                            ],
+                            "speed": 1.7970235153990404,
+                            "scale": [
+                                0.7183670252131509,
+                                0.7183670252131509,
+                                0.7183670252131509
+                            ]
+                        },
+                        "1639459": {
+                            "layer": 4
+                        },
+                        "1638406": {
+                            "layer": 4,
+                            "position": [
+                                -32.33968598952264,
+                                -788.3974611977504,
+                                72.35459999999999
+                            ],
+                            "speed": 1.1367817643337117,
+                            "scale": [
+                                1.2332619071220847,
+                                1.2332619071220847,
+                                1.2332619071220847
+                            ]
+                        },
+                        "1638727": {
+                            "layer": 4
+                        },
+                        "1638413": {
+                            "layer": 4,
+                            "position": [
+                                -31.76116135300818,
+                                -785.2937686826683,
+                                96.79809999999999
+                            ],
+                            "speed": 1.1280742887989486,
+                            "scale": [
+                                1.5230776119330176,
+                                1.5230776119330176,
+                                1.5230776119330176
+                            ]
+                        },
+                        "1639021": {
+                            "layer": 4
+                        },
+                        "1638414": {
+                            "layer": 4,
+                            "position": [
+                                -29.9078,
+                                -772.4063,
+                                70.82
+                            ],
+                            "speed": 2.0391094979002014,
+                            "scale": [
+                                1.5492855735695814,
+                                1.5492855735695814,
+                                1.5492855735695814
+                            ]
+                        },
+                        "1639471": {
+                            "layer": 4
+                        },
+                        "1638416": {
+                            "layer": 4,
+                            "position": [
+                                -17.46520814233212,
+                                -810.7009607073974,
+                                72.3192
+                            ],
+                            "speed": 1.3704894303038844,
+                            "scale": [
+                                1.7664234871942475,
+                                1.7664234871942475,
+                                1.7664234871942475
+                            ]
+                        },
+                        "1638864": {
+                            "layer": 4
+                        },
+                        "1638868": {
+                            "layer": 4,
+                            "position": [
+                                -11.9508,
+                                -816.5155,
+                                90.8369
+                            ],
+                            "speed": 1.496906275809769,
+                            "scale": [
+                                1.0432108804615146,
+                                1.0432108804615146,
+                                1.0432108804615146
+                            ]
+                        },
+                        "1639450": {
+                            "layer": 4
+                        },
+                        "1639436": {
+                            "layer": 4,
+                            "position": [
+                                -10.9677,
+                                -817.3539,
+                                92.9916
+                            ],
+                            "speed": 0.9594266361330974,
+                            "scale": [
+                                1.1678186211692647,
+                                1.1678186211692647,
+                                1.1678186211692647
+                            ]
+                        },
+                        "1639443": {
+                            "layer": 4
+                        },
+                        "1638833": {
+                            "layer": 4,
+                            "position": [
+                                -38.5436,
+                                -789.5445,
+                                95.171
+                            ],
+                            "speed": 2.153898463361055,
+                            "scale": [
+                                1.551120794954734,
+                                1.551120794954734,
+                                1.551120794954734
+                            ]
+                        },
+                        "1638775": {
+                            "layer": 4
+                        },
+                        "1638834": {
+                            "layer": 4,
+                            "position": [
+                                -51.1069,
+                                -798.6355,
+                                70.8664
+                            ],
+                            "speed": 1.8005686546467128,
+                            "scale": [
+                                1.9270595056453692,
+                                1.9270595056453692,
+                                1.9270595056453692
+                            ]
+                        },
+                        "1638694": {
+                            "layer": 4
+                        },
+                        "1638835": {
+                            "layer": 4,
+                            "position": [
+                                -17.0209,
+                                -822.8183,
+                                90.8995
+                            ],
+                            "speed": 2.3515489243913086,
+                            "scale": [
+                                1.7418562880389838,
+                                1.7418562880389838,
+                                1.7418562880389838
+                            ]
+                        },
+                        "1638966": {
+                            "layer": 4
+                        },
+                        "1638994": {
+                            "layer": 4,
+                            "position": [
+                                -35.7989,
+                                -790.2687,
+                                95.163
+                            ],
+                            "speed": 2.346169044295915,
+                            "scale": [
+                                1.8991058226606596,
+                                1.8991058226606596,
+                                1.8991058226606596
+                            ]
+                        },
+                        "1638799": {
+                            "layer": 4
+                        },
+                        "1638995": {
+                            "layer": 4,
+                            "position": [
+                                -27.20010321634836,
+                                -809.0027047111372,
+                                72.3815
+                            ],
+                            "speed": 1.6562740330385974,
+                            "scale": [
+                                1.8386125654597385,
+                                1.8386125654597385,
+                                1.8386125654597385
+                            ]
+                        },
+                        "1638735": {
+                            "layer": 4
+                        },
+                        "1639011": {
+                            "layer": 4,
+                            "position": [
+                                -21.2326,
+                                -771.2648,
+                                70.8779
+                            ],
+                            "speed": 1.2163227045757345,
+                            "scale": [
+                                1.4502176757310676,
+                                1.4502176757310676,
+                                1.4502176757310676
+                            ]
+                        },
+                        "1639462": {
+                            "layer": 4
+                        },
+                        "1639358": {
+                            "layer": 4,
+                            "position": [
+                                -18.43015356359275,
+                                -784.9558595581717,
+                                96.7321
+                            ],
+                            "speed": 2.296134031963705,
+                            "scale": [
+                                0.6345311943459192,
+                                0.6345311943459192,
+                                0.6345311943459192
+                            ]
+                        },
+                        "1638739": {
+                            "layer": 4
+                        },
+                        "1638839": {
+                            "layer": 4,
+                            "position": [
+                                -19.060247316502434,
+                                -784.8305496418324,
+                                76.0681
+                            ],
+                            "speed": 2.0223056713758485,
+                            "scale": [
+                                0.9018269551427736,
+                                0.9018269551427736,
+                                0.9018269551427736
+                            ]
+                        },
+                        "1638731": {
+                            "layer": 4
+                        },
+                        "1638841": {
+                            "layer": 4,
+                            "position": [
+                                -19.060247316502434,
+                                -784.8305496418324,
+                                76.0681
+                            ],
+                            "speed": 1.445671391653756,
+                            "scale": [
+                                0.9018269551427736,
+                                0.9018269551427736,
+                                0.9018269551427736
+                            ]
+                        },
+                        "1639832": {
+                            "layer": 4,
+                            "position": [
+                                -35.7989,
+                                -790.2687,
+                                95.963
+                            ],
+                            "speed": 1.1568049685493593,
+                            "scale": [
+                                0.7071583188773303,
+                                0.7071583188773303,
+                                0.7071583188773303
+                            ]
+                        },
+                        "1639833": {
+                            "layer": 4,
+                            "position": [
+                                -15.6102,
+                                -821.2131,
+                                91.6936
+                            ],
+                            "speed": 1.0875427561178794,
+                            "scale": [
+                                0.7831200001171696,
+                                0.7831200001171696,
+                                0.7831200001171696
+                            ]
+                        },
+                        "1638918": {
+                            "layer": 4
+                        }
+                    },
+                    "removeConnections": [
+                        {
+                            "senderId": 1639019,
+                            "state": "INACTIVE",
+                            "targetId": 1639832,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1639021,
+                            "state": "DEAD",
+                            "targetId": 1639832,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1638860,
+                            "state": "INACTIVE",
+                            "targetId": 1639833,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1638864,
+                            "state": "DEAD",
+                            "targetId": 1639833,
+                            "message": "ACTIVATE"
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 10000308,
+                            "state": "MAX_REACHED",
+                            "targetId": 1639218,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000308,
+                            "state": "MAX_REACHED",
+                            "targetId": 10000302,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000308,
+                            "state": "MAX_REACHED",
+                            "targetId": 10000304,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000308,
+                            "state": "MAX_REACHED",
+                            "targetId": 10000305,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000306,
+                            "state": "ZERO",
+                            "targetId": 1638404,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 1638404,
+                            "state": "DEATH_RATTLE",
+                            "targetId": 10000308,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1638942,
+                            "state": "INACTIVE",
+                            "targetId": 1638404,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1638942,
+                            "state": "INACTIVE",
+                            "targetId": 10000307,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000307,
+                            "state": "ZERO",
+                            "targetId": 1638404,
+                            "message": "ALERT"
+                        },
+                        {
+                            "senderId": 10000306,
+                            "state": "ZERO",
+                            "targetId": 1638405,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 1638405,
+                            "state": "DEATH_RATTLE",
+                            "targetId": 10000308,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1639459,
+                            "state": "INACTIVE",
+                            "targetId": 1638405,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1639459,
+                            "state": "INACTIVE",
+                            "targetId": 10000307,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000307,
+                            "state": "ZERO",
+                            "targetId": 1638405,
+                            "message": "ALERT"
+                        },
+                        {
+                            "senderId": 10000306,
+                            "state": "ZERO",
+                            "targetId": 1638406,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 1638406,
+                            "state": "DEATH_RATTLE",
+                            "targetId": 10000308,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1638727,
+                            "state": "INACTIVE",
+                            "targetId": 1638406,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1638727,
+                            "state": "INACTIVE",
+                            "targetId": 10000307,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000307,
+                            "state": "ZERO",
+                            "targetId": 1638406,
+                            "message": "ALERT"
+                        },
+                        {
+                            "senderId": 10000306,
+                            "state": "ZERO",
+                            "targetId": 1638413,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 1638413,
+                            "state": "DEATH_RATTLE",
+                            "targetId": 10000308,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1639021,
+                            "state": "INACTIVE",
+                            "targetId": 1638413,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1639021,
+                            "state": "INACTIVE",
+                            "targetId": 10000307,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000307,
+                            "state": "ZERO",
+                            "targetId": 1638413,
+                            "message": "ALERT"
+                        },
+                        {
+                            "senderId": 10000306,
+                            "state": "ZERO",
+                            "targetId": 1638414,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 1638414,
+                            "state": "DEATH_RATTLE",
+                            "targetId": 10000308,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1639471,
+                            "state": "INACTIVE",
+                            "targetId": 1638414,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1639471,
+                            "state": "INACTIVE",
+                            "targetId": 10000307,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000307,
+                            "state": "ZERO",
+                            "targetId": 1638414,
+                            "message": "ALERT"
+                        },
+                        {
+                            "senderId": 10000306,
+                            "state": "ZERO",
+                            "targetId": 1638416,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 1638416,
+                            "state": "DEATH_RATTLE",
+                            "targetId": 10000308,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1638864,
+                            "state": "INACTIVE",
+                            "targetId": 1638416,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1638864,
+                            "state": "INACTIVE",
+                            "targetId": 10000307,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000307,
+                            "state": "ZERO",
+                            "targetId": 1638416,
+                            "message": "ALERT"
+                        },
+                        {
+                            "senderId": 10000306,
+                            "state": "ZERO",
+                            "targetId": 1638868,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 1638868,
+                            "state": "DEATH_RATTLE",
+                            "targetId": 10000308,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1639450,
+                            "state": "INACTIVE",
+                            "targetId": 1638868,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1639450,
+                            "state": "INACTIVE",
+                            "targetId": 10000307,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000307,
+                            "state": "ZERO",
+                            "targetId": 1638868,
+                            "message": "ALERT"
+                        },
+                        {
+                            "senderId": 10000306,
+                            "state": "ZERO",
+                            "targetId": 1639436,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 1639436,
+                            "state": "DEATH_RATTLE",
+                            "targetId": 10000308,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1639443,
+                            "state": "INACTIVE",
+                            "targetId": 1639436,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1639443,
+                            "state": "INACTIVE",
+                            "targetId": 10000307,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000307,
+                            "state": "ZERO",
+                            "targetId": 1639436,
+                            "message": "ALERT"
+                        },
+                        {
+                            "senderId": 10000306,
+                            "state": "ZERO",
+                            "targetId": 1638833,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 1638833,
+                            "state": "DEATH_RATTLE",
+                            "targetId": 10000308,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1638775,
+                            "state": "INACTIVE",
+                            "targetId": 1638833,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1638775,
+                            "state": "INACTIVE",
+                            "targetId": 10000307,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000307,
+                            "state": "ZERO",
+                            "targetId": 1638833,
+                            "message": "ALERT"
+                        },
+                        {
+                            "senderId": 10000306,
+                            "state": "ZERO",
+                            "targetId": 1638834,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 1638834,
+                            "state": "DEATH_RATTLE",
+                            "targetId": 10000308,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1638694,
+                            "state": "INACTIVE",
+                            "targetId": 1638834,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1638694,
+                            "state": "INACTIVE",
+                            "targetId": 10000307,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000307,
+                            "state": "ZERO",
+                            "targetId": 1638834,
+                            "message": "ALERT"
+                        },
+                        {
+                            "senderId": 10000306,
+                            "state": "ZERO",
+                            "targetId": 1638835,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 1638835,
+                            "state": "DEATH_RATTLE",
+                            "targetId": 10000308,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1638966,
+                            "state": "INACTIVE",
+                            "targetId": 1638835,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1638966,
+                            "state": "INACTIVE",
+                            "targetId": 10000307,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000307,
+                            "state": "ZERO",
+                            "targetId": 1638835,
+                            "message": "ALERT"
+                        },
+                        {
+                            "senderId": 10000306,
+                            "state": "ZERO",
+                            "targetId": 1638994,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 1638994,
+                            "state": "DEATH_RATTLE",
+                            "targetId": 10000308,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1638799,
+                            "state": "INACTIVE",
+                            "targetId": 1638994,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1638799,
+                            "state": "INACTIVE",
+                            "targetId": 10000307,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000307,
+                            "state": "ZERO",
+                            "targetId": 1638994,
+                            "message": "ALERT"
+                        },
+                        {
+                            "senderId": 10000306,
+                            "state": "ZERO",
+                            "targetId": 1638995,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 1638995,
+                            "state": "DEATH_RATTLE",
+                            "targetId": 10000308,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1638735,
+                            "state": "INACTIVE",
+                            "targetId": 1638995,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1638735,
+                            "state": "INACTIVE",
+                            "targetId": 10000307,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000307,
+                            "state": "ZERO",
+                            "targetId": 1638995,
+                            "message": "ALERT"
+                        },
+                        {
+                            "senderId": 10000306,
+                            "state": "ZERO",
+                            "targetId": 1639011,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 1639011,
+                            "state": "DEATH_RATTLE",
+                            "targetId": 10000308,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1639462,
+                            "state": "INACTIVE",
+                            "targetId": 1639011,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1639462,
+                            "state": "INACTIVE",
+                            "targetId": 10000307,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000307,
+                            "state": "ZERO",
+                            "targetId": 1639011,
+                            "message": "ALERT"
+                        },
+                        {
+                            "senderId": 10000306,
+                            "state": "ZERO",
+                            "targetId": 1639358,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 1639358,
+                            "state": "DEATH_RATTLE",
+                            "targetId": 10000308,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1638739,
+                            "state": "INACTIVE",
+                            "targetId": 1639358,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1638739,
+                            "state": "INACTIVE",
+                            "targetId": 10000307,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000307,
+                            "state": "ZERO",
+                            "targetId": 1639358,
+                            "message": "ALERT"
+                        },
+                        {
+                            "senderId": 10000306,
+                            "state": "ZERO",
+                            "targetId": 1638839,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 1638839,
+                            "state": "DEAD",
+                            "targetId": 10000308,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1638731,
+                            "state": "INACTIVE",
+                            "targetId": 1638839,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1638731,
+                            "state": "INACTIVE",
+                            "targetId": 10000307,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000307,
+                            "state": "ZERO",
+                            "targetId": 1638839,
+                            "message": "ALERT"
+                        },
+                        {
+                            "senderId": 10000306,
+                            "state": "ZERO",
+                            "targetId": 1638841,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 1638841,
+                            "state": "DEAD",
+                            "targetId": 10000308,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1638731,
+                            "state": "INACTIVE",
+                            "targetId": 1638841,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1638731,
+                            "state": "INACTIVE",
+                            "targetId": 10000307,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000307,
+                            "state": "ZERO",
+                            "targetId": 1638841,
+                            "message": "ALERT"
+                        },
+                        {
+                            "senderId": 10000306,
+                            "state": "ZERO",
+                            "targetId": 1639832,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 1639832,
+                            "state": "DEAD",
+                            "targetId": 10000308,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1638799,
+                            "state": "INACTIVE",
+                            "targetId": 1639832,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1638799,
+                            "state": "INACTIVE",
+                            "targetId": 10000307,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000307,
+                            "state": "ZERO",
+                            "targetId": 1639832,
+                            "message": "ALERT"
+                        },
+                        {
+                            "senderId": 10000306,
+                            "state": "ZERO",
+                            "targetId": 1639833,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 1639833,
+                            "state": "DEAD",
+                            "targetId": 10000308,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1638918,
+                            "state": "INACTIVE",
+                            "targetId": 1639833,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1638918,
+                            "state": "INACTIVE",
+                            "targetId": 10000307,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000307,
+                            "state": "ZERO",
+                            "targetId": 1639833,
+                            "message": "ALERT"
+                        }
+                    ],
+                    "deleteIds": [
+                        1639019,
+                        1638860,
+                        1638420,
+                        1639221,
+                        1639352,
+                        1639229,
+                        1639383,
+                        1640043,
+                        1639787,
+                        1640034,
+                        1639707,
+                        1639453
+                    ]
                 },
                 "South Quarantine Tunnel": {
                     "doors": {
