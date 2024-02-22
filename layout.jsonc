@@ -1520,6 +1520,9 @@
                             "targetId": 131435, // Memory Relay - deactivate timer for locked door
                             "message": "ACTIVATE"
                         }
+                    ],
+                    "deleteIds": [
+                        131143 // vanilla water
                     ]
                 },
                 "Temple Entryway": {
@@ -1947,7 +1950,10 @@
                             }
                         }
                         // Vanilla connection to Chozo Ice Temple
-                    }
+                    },
+                    "deleteIds": [
+                        720900 // randomprime music
+                    ]
                 },
                 "Courtyard Entryway": {
                     "doors": {
@@ -3393,9 +3399,12 @@
                             "destination": {
                                 "roomName": "Ice Ruins West",
                                 "dockNum": 0
-                            }
                         }
                     }
+                    },
+                    "deleteIds": [
+                        1245189 // randomprime music
+                    ]
                 },
                 "Research Entrance": {
                     "layers": {
@@ -4723,8 +4732,11 @@
                         "1": {
                             "shieldType": "Blue",
                             "blastShieldType": "None"
-                        }
                     }
+                    },
+                    "deleteIds": [
+                        2031623
+                    ]
                 },
                 "West Tower Entrance": {
                     "doors": {
@@ -4759,9 +4771,12 @@
                             "destination": {
                                 "roomName": "Storage Cave",
                                 "dockNum": 0
-                            }
                         }
                     }
+                    },
+                    "deleteIds": [
+                        2228257
+                    ]
                 },
                 "West Tower": {
                     "doors": {
@@ -4810,7 +4825,8 @@
                         }
                     },
                     "deleteIds": [
-                        2425180, 2425191 // beetles
+                        2425180, 2425191, // beetles
+                        2424834 // randomprime music
                     ]
                 },
                 "Hunter Cave Access": {
@@ -4830,9 +4846,12 @@
                             "destination": {
                                 "roomName": "Phendrana Shorelines",
                                 "dockNum": 4
-                            }
                         }
                     }
+                    },
+                    "deleteIds": [
+                        2490375
+                    ]
                 },
                 "Control Tower": {
                     "doors": {
@@ -4994,9 +5013,12 @@
                             "destination": {
                                 "roomName": "Temple Entryway",
                                 "dockNum": 1
-                            }
                         }
                     }
+                    },
+                    "deleteIds": [
+                        2687007
+                    ]
                 },
                 "Hunter Cave": {
                     "layers": {
@@ -5073,7 +5095,9 @@
                         2753052, 2753044, 2752648, 2753084, 2753055, 2753085, 2753044, 2753047, 2753043, 2753042,
                         2752555, 2752649, 2752760, 2752753,
                         // bubbles
-                        2752764, 2752765, 2752766, 2752767, 2752768
+                        2752764, 2752765, 2752766, 2752767, 2752768,
+                        // randomprime music
+                        2752518
                     ]
                 },
                 "East Tower": {
@@ -5129,9 +5153,12 @@
                             "destination": {
                                 "roomName": "Frost Cave",
                                 "dockNum": 1
-                            }
                         }
                     }
+                    },
+                    "deleteIds": [
+                        3080222
+                    ]
                 },
                 "Upper Edge Tunnel": {
                     "doors": {
@@ -5149,9 +5176,12 @@
                             "destination": {
                                 "roomName": "Gravity Chamber",
                                 "dockNum": 1
-                            }
                         }
                     }
+                    },
+                    "deleteIds": [
+                        3014677, 3014679 // randomprime music
+                    ]
                 },
                 "Chamber Access": {
                     "doors": {
@@ -5169,9 +5199,12 @@
                             "destination": {
                                 "roomName": "Phendrana Shorelines",
                                 "dockNum": 5
-                            }
                         }
                     }
+                    },
+                    "deleteIds": [
+                        3145756
+                    ]
                 },
                 "Lake Tunnel": {
                     "removeWater": true,
@@ -5190,9 +5223,12 @@
                             "destination": {
                                 "roomName": "Hunter Cave",
                                 "dockNum": 2
-                            }
                         }
                     }
+                    },
+                    "deleteIds": [
+                        3211299
+                    ]
                 },
                 "Aether Lab Entryway": {
                     "doors": {
@@ -5293,6 +5329,7 @@
                         }
                     ],
                     "deleteIds": [
+                        3407883, // randomprime music
                         3408071, 3408113, 3408072 // The PB wall is gone by default
                     ]
                 },
@@ -5346,6 +5383,9 @@
                             "position": [369, -1189, 2.5],
                             "isGrapple": true
                         }
+                    ],
+                    "deleteIds": [
+                        3473410
                     ]
                 },
                 "Storage Cave": {
@@ -5525,7 +5565,8 @@
                         }
                     ],
                     "deleteIds": [
-                        3604505, 3604503
+                        3604505, 3604503,
+                        3604486
                     ]
                 }
             }
@@ -5595,9 +5636,32 @@
                         {"id": 65555, "speed": 0.5},
                         {"id": 65553, "speed": 0.5},
                         {"id": 65552, "speed": 0.5}
-                    ]
+                    ],
+                    "editObjs": {
+                        // grizby
+                        "65681": { "vulnerability": "Super Missile" },
+                        // metaree
+                        "65590": { "speed": 0.6, "vulnerability": "Super Missile" },
+                        "65599": { "speed": 1.9, "vulnerability": "Super Missile" },
+                        "65654": { "speed": 0.6, "vulnerability": "Super Missile" },
+                        "65642": { "speed": 1.9, "vulnerability": "Super Missile" },
+                        "65643": { "speed": 0.6, "vulnerability": "Super Missile" },
+                        "65644": { "speed": 1.9, "vulnerability": "Super Missile" },
+                        "65587": { "speed": 0.6, "vulnerability": "Super Missile" },
+                        "65596": { "speed": 1.9, "vulnerability": "Super Missile" },
+                        "65639": { "speed": 0.6, "vulnerability": "Super Missile" },
+                        "65651": { "speed": 1.9, "vulnerability": "Super Missile" },
+                        "65591": { "speed": 0.6, "vulnerability": "Super Missile" },
+                        "65600": { "speed": 1.9, "vulnerability": "Super Missile" },
+                        "65655": { "speed": 0.6, "vulnerability": "Super Missile" },
+                        "65592": { "speed": 1.9, "vulnerability": "Super Missile" },
+                        "65601": { "speed": 0.6, "vulnerability": "Super Missile" },
+                        "65656": { "speed": 1.9, "vulnerability": "Super Missile" }
+                    },
+                    "deleteIds": [65685, 65684, 65657] // dont deactivate any metaree
                 },
                 "Lake Tunnel": {
+                    // layer 1 - grapple beam puzzle
                     "doors": {
                         "1": {
                             "shieldType": "Blue",
@@ -5613,27 +5677,32 @@
                     ],
                     "blocks": [
                         {
+                            "layer": 1,
                             "position": [-97.4, 103.9, 5.13],
                             "scale": [0.1, 10, 0.5],
                             "texture": "Mine"
                         },
                         {
+                            "layer": 1,
                             "position": [-92.6, 97.4, 5.13],
                             "scale": [10, 0.1, 0.5],
                             "texture": "Mine"
                         },
                         {
+                            "layer": 1,
                             "position": [-87.7, 93.2, 5.13],
                             "scale": [0.1, 10, 0.5],
                             "texture": "Mine"
                         },
                         {
+                            "layer": 1,
                             "position": [-87.7, 82.5, 5.25],
                             "scale": [0.1, 10, 0.5],
                             "texture": "Mine"
                         },
                         {
                             "id": 10000255,
+                            "layer": 1,
                             "active": false,
                             "position": [-93.5, 93.1, 5.18],
                             "scale": [2, 32, 0.5],
@@ -5642,19 +5711,30 @@
                     ],
                     "triggers": [
                         {
+                            "layer": 1,
                             "position": [-90.6, 85.5, 10.3],
                             "scale": [40, 71, 20],
                             "flags": 8193, // Detect Player | Apply Force
                             "force": [0, 0, -500]
                         }
                     ],
+                    "specialFunctions": [
+                        {
+                            "id": 10000309,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 2560584058, // lake tunnel
+                            "layerChangeLayerId": 1
+                        }
+                    ],
                     "editObjs": {
                         // grizbies
                         "131185": {
-                            "vulnerability": "Phazon"
+                            "layer": 1,
+                            "vulnerability": "Super Missile"
                         },
                         "131186": {
-                            "vulnerability": "Phazon"
+                            "layer": 1,
+                            "vulnerability": "Super Missile"
                         }
                     },
                     "addConnections": [
@@ -5663,6 +5743,12 @@
                             "state": "ARRIVED",
                             "targetId": 10000255,
                             "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000256,
+                            "state": "ARRIVED",
+                            "targetId": 10000309,
+                            "message": "DECREMENT"
                         }
                     ]
                 },
@@ -6096,6 +6182,9 @@
                     }
                 },
                 "Monitor Station": {
+                    "layers": {
+                        "3": true // magdolite
+                    },
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
@@ -6105,7 +6194,236 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "blocks": [
+                        {
+                            "position": [221.3162, -214.4552, 24.2579],
+                            "scale": [9, 0.1, 8.8],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [221.3162, -214.4552, 24],
+                            "scale": [9, 0.5, 6],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [221.3162, -214.4552, 23],
+                            "scale": [9, 2, 6],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [221.3162, -214.4552, 22],
+                            "scale": [9, 4, 6],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [221.3162, -214.4552, 21],
+                            "scale": [9, 6, 6],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [221.3162, -214.4552, 20],
+                            "scale": [9, 8, 6],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [221.3162, -214.4552, 19],
+                            "scale": [9, 10, 6],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [242.8891, -253.3486, 25.8756],
+                            "scale": [0.7, 0.7, 5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [247.833, -223.4709, 28.2164],
+                            "scale": [10, 8, 1],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [257.633, -248.3709, 26.2164],
+                            "scale": [10, 8, 1],
+                            "texture": "Mine"
+                        }
+                    ],
+                    "liquids": [
+                        {
+                            "id": 10000310,
+                            "position": [211.3382, -272.997, 22],
+                            "scale": [108, 117, 13],
+                            "type": "Lava"
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 10000313,
+                            "time": 0.02,
+                            "startImmediately": true
+                        },
+                        {
+                            "id": 10000311,
+                            "time": 15,
+                            "startImmediately": true
+                        },
+                        {
+                            "id": 10000312,
+                            "time": 15
+                        },
+                        {
+                            "id": 590107, // fire OFF
+                            "time": 4,
+                            "startImmediately": false,
+                            "active": true
+                        },
+                        {
+                            "id": 590112, // fire OFF
+                            "time": 4,
+                            "startImmediately": true,
+                            "active": true
+                        },
+                        {
+                            "id": 590109, // fire ON
+                            "time": 4,
+                            "startImmediately": true,
+                            "active": true
+                        },
+                        {
+                            "id": 590114, // fire ON
+                            "time": 4,
+                            "startImmediately": false,
+                            "active": true
+                        }
+                    ],
+                    "waypoints": [
+                        {
+                            "id": 590104, // waypoint (start)
+                            "position": [230.312, -224.9055, 24.7],
+                            "speed": 0.3
+                        },
+                        {
+                            "id": 590102, // waypoint (end)
+                            "position": [230.312, -224.9055, 29],
+                            "speed": 0.3
+                        }
+                    ],
+                    "editObjs": {
+                        "589854": { // lava
+                            "position": [211.3382, -272.997, 19.8693],
+                            "scale": [107.691025, 115.990021, 9.042]
+                        },
+                        "590101": { // floating platform
+                            "position": [230.312, -224.9055, 24.7]
+                        },
+                        /* Crates */
+                        "590447": { "vulnerability": "Super Missile" },
+                        "590443": { "vulnerability": "Super Missile" },
+                        "590445": { "vulnerability": "Super Missile" },
+                        "590449": { "vulnerability": "Super Missile" },
+                        /* Spinner Bridge */
+                        "589861": {
+                            "position": [180.535, -290.6985, 19.2452],
+                            "rotation": [0, 15.86, 90]
+                        }
+                    },
+                    "fog": {
+                        "color": [
+                            0.875,
+                            0.22,
+                            0.16,
+                            0
+                        ],
+                        "range": [
+                            30,
+                            100
+                        ],
+                        "colorDelta": 0.2,
+                        "rangeDelta": [
+                            200,
+                            100
+                        ]
+                    },
+                    "addConnections": [
+                        {
+                            "senderId": 10000313,
+                            "state": "ZERO",
+                            "targetId": 10000310,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000313,
+                            "state": "ZERO",
+                            "targetId": 589861,
+                            "message": "ACTIVATE"
+                        },
+                        /* Ping-pong timers */
+                        {
+                            "senderId": 10000311,
+                            "state": "ZERO",
+                            "targetId": 10000312,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000312,
+                            "state": "ZERO",
+                            "targetId": 10000311,
+                            "message": "RESET_AND_START"
+                        },
+                        /* Up/Down lava commands */
+                        {
+                            "senderId": 10000311,
+                            "state": "ZERO",
+                            "targetId": 589854,
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000312,
+                            "state": "ZERO",
+                            "targetId": 589854,
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 589854,
+                            "state": "PLAY",
+                            "targetId": 10000310,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000310,
+                            "state": "PLAY",
+                            "targetId": 589854,
+                            "message": "ACTIVATE"
+                        },
+                        /* Up/Down platform commands */
+                        {
+                            "senderId": 10000311,
+                            "state": "ZERO",
+                            "targetId": 590104,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000311,
+                            "state": "ZERO",
+                            "targetId": 590102,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000312,
+                            "state": "ZERO",
+                            "targetId": 590104,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000312,
+                            "state": "ZERO",
+                            "targetId": 590102,
+                            "message": "DEACTIVATE"
+                        }
+                    ],
+                    "deleteIds": [
+                        // platform triggers
+                        590103, 590366
+                    ]
                 },
                 "Transport Tunnel A": {
                     "pickups": [
