@@ -1,6 +1,18 @@
 
 # Hints & Minor Spoilers
 
+
+<details>
+  <summary>I'm having trouble in Phendrana Canyon</summary>
+
+```
+To get to the first floating platform:
+- Dash across the gap where you would normally climb the boxes
+- Jump off the metal pipes by the door to reach the highest ledge
+```
+
+</details>
+
 <details>
   <summary>I'm having trouble in Chapel of the Elders</summary>
 

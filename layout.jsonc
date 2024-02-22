@@ -3349,7 +3349,187 @@
                                 "dockNum": 1
                             }
                         }
-                    }
+                    },
+                    "waypoints": [
+                        /* Platform 1 */
+                        {
+                            "id": 1049060,
+                            "position": [-243.4794, -328.5996, 8],
+                            "speed": 3
+                        },
+                        {
+                            "id": 10000314,
+                            "position": [-247.8794, -320.4996, 27.5],
+                            "speed": 3
+                        },
+                        /* Platform 2 */
+                        {
+                            "id": 1049076,
+                            "position": [-258.31, -330.93, 22],
+                            "speed": 9
+                        },
+                        /* Platform 3 */
+                        {
+                            "id": 1049092,
+                            "position": [-276.4, -334.8, 26.5],
+                            "speed": 8
+                        },
+                        {
+                            "id": 10000318,
+                            "position": [-261.7, -349.8, 26.5],
+                            "speed": 8
+                        },
+                        /* Platform 4 */
+                        {
+                            "id": 1049108,
+                            "position": [-282.8, -351.8, 17],
+                            "speed": 8
+                        },
+                        {
+                            "id": 10000319,
+                            "position": [-295.5, -374.5, 12],
+                            "speed": 8
+                        }
+                    ],
+                    "lockOnPoints": [
+                        {
+                            "position": [-167.6476, -326.6647, 18.9345],
+                            "noLock": true
+                        }
+                    ],
+                    "playerHints": [
+                        {
+                            "id": 10000315,
+                            "disableMorph": true
+                        }
+                    ],
+                    "specialFunctions": [
+                        {
+                            "id": 10000316,
+                            "type": "PlayerInAreaRelay"
+                        }
+                    ],
+                    "actorRotates": [
+                        {
+                            "id": 10000317,
+                            "rotation": [0, 180, 0],
+                            "timeScale": 2,
+                            "updateActive": true,
+                            "updateOnCreation": false,
+                            "updateActors": true
+                        },
+                        {
+                            "id": 10000320,
+                            "rotation": [135, 180, 0],
+                            "timeScale": 2,
+                            "updateActive": true,
+                            "updateOnCreation": false,
+                            "updateActors": true
+                        }
+                    ],
+                    "editObjs": {
+                        /* Platform 1 */
+                        "1049046": {
+                            "position": [-250, -318, 18]
+                        },
+                        "1049047": {
+                            "position": [-250, -318, 19]
+                        }
+                    },
+                    "addConnections": [
+                        /* Disable Morph */
+                        {
+                            "senderId": 10000316,
+                            "state": "ENTERED",
+                            "targetId": 10000315,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 10000316,
+                            "state": "EXITED",
+                            "targetId": 10000315,
+                            "message": "DECREMENT"
+                        },
+                        /* Platform 1 */
+                        {
+                            "senderId": 1049060,
+                            "state": "ARRIVED",
+                            "targetId": 10000314,
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000314,
+                            "state": "ARRIVED",
+                            "targetId": 1049060,
+                            "message": "NEXT"
+                        },
+                        /* Platform 2 */
+                        {
+                            "senderId": 10000317, // actor rotate
+                            "state": "PLAY",
+                            "targetId": 1049062, // platform
+                            "message": "PLAY"
+                        },
+                        {
+                            "senderId": 1049076, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000317, // actor rotate
+                            "message": "ACTION"
+                        },
+                        /* Platform 3 */
+                        {
+                            "senderId": 1049092,
+                            "state": "ARRIVED",
+                            "targetId": 10000318,
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000318,
+                            "state": "ARRIVED",
+                            "targetId": 1049092,
+                            "message": "NEXT"
+                        },
+                        /* Platform 4 */
+                        {
+                            "senderId": 1049108,
+                            "state": "ARRIVED",
+                            "targetId": 10000319,
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000319,
+                            "state": "ARRIVED",
+                            "targetId": 1049108,
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000320, // actor rotate
+                            "state": "PLAY",
+                            "targetId": 1049094, // platform
+                            "message": "PLAY"
+                        },
+                        {
+                            "senderId": 1049108, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000320, // actor rotate
+                            "message": "ACTION"
+                        }
+                    ],
+                    "deleteIds": [
+                        // Rocket exhaust
+                        1049059, 1049075, 1049091, 1049107, 1049123, 1049139,
+
+                        // Enemies
+                        1049265, 1049291, 1049303, 1049304, 1049311, 1049318, 1049325, 1049331,
+
+                        // Crates
+                        1049356, 1049366,
+
+                        // randomprime cutscene skip
+                        1048580,
+
+                        1049110 // 2nd to last platform
+                    ]
                 },
                 "Save Station A": {
                     "doors": {
