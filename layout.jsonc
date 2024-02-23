@@ -6,7 +6,8 @@
         "qolCosmetic": true,
         "qolPickupScans": true,
         "qolGeneral": true,
-        "qolCutscenes": "SkippableCompetitive",
+        // "qolCutscenes": "SkippableCompetitive",
+        "qolCutscenes": "Skippable",
         "mapDefaultState": "Visit",
         "artifactHintBehavior": "All",
         "automaticCrashScreen": true,
@@ -4854,6 +4855,10 @@
                     ]
                 },
                 "Observatory Access": {
+                    "layers": {
+                        "1": false, // turrets
+                        "2": true // drones
+                    },
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
@@ -4863,7 +4868,31 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "specialFunctions": [
+                        {
+                            "id": 10000321,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 2102741926, // observatory access
+                            "layerChangeLayerId": 2 // drones
+                        }
+                    ],
+                    "triggers": [
+                        {
+                            "position": [-60.7248, -802.8118, 106.6901],
+                            "scale": [30.469999, 72.830002, 9.445007],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, 0, 90]
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 1835204, // counter
+                            "state": "MAX_REACHED",
+                            "targetId": 10000321,
+                            "message": "DECREMENT"
+                        }
+                    ]
                 },
                 "Transport to Magmoor Caverns South": {
                     "doors": {
@@ -4878,9 +4907,32 @@
                     }
                 },
                 "Observatory": {
+                    "layers": {
+                        "1": false, // first pass
+                        "2": true // ninjas
+                    },
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Tank",
+                            "hudmemoText": "Missile Tank Acquired!",
+                            "maxIncrease": 5
+                        },
+                        {
+                            "id": 10000322,
+                            "type": "Missile",
+                            "model": "Shiny Missile",
+                            "scanText": "Shiny Missile (1 of 3)",
+                            "hudmemoText": "Shiny Missile Acquired!\n(of 3)",
+                            "maxIncrease": 10,
+                            "position": [-70.607, -897.7503, 111.7]
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 10000323,
+                            "time": 0.5,
+                            "startImmediately": true
                         }
                     ],
                     "doors": {
@@ -4896,7 +4948,35 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "triggers": [
+                        {
+                            "position": [-71, -903, 124.6],
+                            "scale": [80, 130, 100],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, 0, 90]
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 10000323, // instant start timer
+                            "state": "ZERO",
+                            "targetId": 10000322, // pickup
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 1966376, // Memory relay observatory active
+                            "state": "ACTIVE",
+                            "targetId": 10000323, // instant start timer
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 1966811, // stop holo laser timer
+                            "state": "ZERO",
+                            "targetId": 10000322,
+                            "message": "ACTIVATE"
+                        }
+                    ]
                 },
                 "Transport Access": {
                     "pickups": [
@@ -4928,7 +5008,15 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "triggers": [
+                        {
+                            "position": [-58.7, -828.4, 129.24],
+                            "scale": [27.2, 43.2, 6.3],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, 0, 90]
+                        }
+                    ]
                 },
                 "Save Station D": {},
                 "Frozen Pike": {
@@ -4959,6 +5047,9 @@
                     ]
                 },
                 "West Tower": {
+                    "layers": {
+                        "1": true // fog
+                    },
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
@@ -4968,7 +5059,41 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "triggers": [
+                        {
+                            "position": [-49, -784, 145.7],
+                            "scale": [50, 50, 50],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, 0, 90]
+                        }
+                    ],
+                    "blocks": [
+                        {
+                            "texture": "Snow",
+                            "position": [-41, -784.33, 133.5],
+                            "scale": [3, 3, 0.5]
+                        },
+                        {
+                            "texture": "Snow",
+                            "position": [-56.3, -784.33, 141],
+                            "scale": [3, 3, 0.5]
+                        },
+                        {
+                            "texture": "Snow",
+                            "position": [-41, -784.33, 148.5],
+                            "scale": [3, 3, 0.5]
+                        },
+                        {
+                            "texture": "Snow",
+                            "position": [-56.3, -784.33, 156],
+                            "scale": [3, 3, 0.5]
+                        }
+                    ],
+                    "deleteIds": [
+                        // break elevator
+                        2293866, 2293868, 2293849, 2293831, 2293872
+                    ]
                 },
                 "Pike Access": {
                     "doors": {
@@ -5034,6 +5159,8 @@
                     ]
                 },
                 "Control Tower": {
+                    "boundingBoxScale": [2.5, 2.5, 1.8],
+                    "boundingBoxOffset": [0, 0, 20],
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
@@ -5045,6 +5172,8 @@
                         }
                     },
                     "layers": {
+                        "2": false, // flying
+                        "3": true, // elite pirate
                         "8": false, // True if artifact taken
                         "9": false  // True if temple activated
                     },
@@ -5079,6 +5208,16 @@
                             "type": "ScriptLayerController",
                             "layerChangeRoomId": 3858019950, // This room
                             "layerChangeLayerId": 8
+                        },
+                        {
+                            "id": 10000327,
+                            "type": "PlayerInAreaRelay"
+                        }
+                    ],
+                    "playerHints": [
+                        {
+                            "id": 10000326,
+                            "disableMorph": true
                         }
                     ],
                     "timers": [
@@ -5092,11 +5231,72 @@
                             "layer": 9,
                             "time": 0.1,
                             "startImmediately": true
+                        },
+                        {
+                            "id": 10000324,
+                            "time": 0.02,
+                            "startImmediately": true
+                        },
+                        {
+                            "id": 10000329, // void out timer
+                            "time": 0.5
+                        }
+                    ],
+                    "triggers": [
+                        {
+                            "id": 2556394,
+                            "position": [16.9528, -783.6417, 161.4295],
+                            "scale": [2, 6, 14]
+                        },
+                        {
+                            "id": 10000325,
+                            "active": false,
+                            "position": [-5, -783, 168.2],
+                            "scale": [90, 50, 3],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, 0, 155]
+                        },
+                        {
+                            "position": [-5, -783, 171],
+                            "scale": [90, 50, 3.3],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, 0, 115]
+                        },
+                        {
+                            "position": [6.0373, -814.7408, 166],
+                            "scale": [58.147003, 13.302979, 15],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, 0, 125]
+                        },
+                        {
+                            "id": 10000330,
+                            "active": false,
+                            "position": [-5, -783, 212.1],
+                            "scale": [500, 400, 72],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, 0, 120]
+                        },
+                        {
+                            "id": 10000328,
+                            "position": [-5, -783, 269.8],
+                            "scale": [500, 400, 40],
+                            "damageAmount": 0.5,
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, 0, 115]
+                        }
+                    ],
+                    "counters": [
+                        {
+                            "id": 2556289,
+                            "maxValue": 6 // increased from 5
                         }
                     ],
                     "editObjs": {
                         "12000021": { // Move return pickup to it's own layer
                             "layer": 8
+                        },
+                        "2556089": { // fight start trigger
+                            "position": [16.9528, -783.6417, 161.4295]
                         }
                     },
                     "addConnections": [
@@ -5141,10 +5341,96 @@
                             "state": "ZERO",
                             "targetId": 12000024,
                             "message": "DEACTIVATE"
+                        },
+                        /* Fight */
+                        // elite start off
+                        {
+                            "senderId": 10000324,
+                            "state": "ZERO",
+                            "targetId": 2556598,
+                            "message": "DEACTIVATE"
+                        },
+                        // activate elite after ground phase
+                        {
+                            "senderId": 2556496, // flying guy timer #1
+                            "state": "ZERO",
+                            "targetId": 2556598,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 2556736, // flying guy timer #2
+                            "state": "ZERO",
+                            "targetId": 2556598,
+                            "message": "ALERT"
+                        },
+                        // elite contributes to door unlock coutner
+                        {
+                            "senderId": 2556598, // elite pirate
+                            "state": "DEATH_RATTLE",
+                            "targetId": 2556289, // counter
+                            "message": "INCREMENT"
+                        },
+                        // disable morph
+                        {
+                            "senderId": 10000325,
+                            "state": "ENTERED",
+                            "targetId": 10000326,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 10000330,
+                            "state": "EXITED",
+                            "targetId": 10000326,
+                            "message": "DECREMENT"
+                        },
+                        // float away trigger only when in room
+                        {
+                            "senderId": 10000327, // in area relay
+                            "state": "ENTERED",
+                            "targetId": 10000325, // trigger
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000327, // in area relay
+                            "state": "EXITED",
+                            "targetId": 10000325, // trigger
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000327, // in area relay
+                            "state": "ENTERED",
+                            "targetId": 10000330, // trigger
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000327, // in area relay
+                            "state": "EXITED",
+                            "targetId": 10000330, // trigger
+                            "message": "DEACTIVATE"
+                        },
+                        /* Implement void-out */
+                        {
+                            "senderId": 10000328, // void out trigger
+                            "state": "ENTERED",
+                            "targetId": 10000329, // void out timer
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000329,
+                            "state": "ZERO",
+                            "targetId": 2555908,
+                            "message": "SET_TO_ZERO"
                         }
                     ],
                     "deleteIds": [
-                        2556606 // Don't activate flying pirates in triclops pit (that's reserved for artifact farce)
+                        // randomprime cutscene skip
+                        2555909, 2555930, 2555912,
+
+                        2556606, // Don't activate flying pirates in triclops pit (that's reserved for artifact farce)
+                        2557294, 2557295, // auxillary fight start triggers
+
+                        // Free so many fucking debris extended objects from memory
+                        2556452, 2556453, 2556454, 2556455, 2556456, 2556457, 2556458, 2556459, 2556462, 2556463, 2556464, 2556465, 2556466, 2556467, 2556468, 2556469, 2556470, 2556483, 2556484, 2556485, 2556486, 2556487, 2556526, 2556527, 2556528, 2556529, 2556530, 2556531, 2556532, 2556533, 2556536, 2556537, 2556538, 2556539, 2556540, 2556541, 2556542, 2556543, 2556544, 2556993, 2556994, 2556995, 2556996, 2556997, 2556998, 2556999, 2557000, 2557003, 2557004, 2557005, 2557006, 2557007, 2557008, 2557009, 2557010, 2557011, 69665918, 69665919, 69665920, 69665921, 69665922, 69665923, 69665924, 69665925, 69665926, 69665927, 69665928
                     ]
                 },
                 "Research Core": {
@@ -5290,7 +5576,56 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "timers": [
+                        {
+                            "id": 10000303,
+                            "time": 0.1,
+                            "startImmediately": true
+                        }
+                    ],
+                    "blocks": [
+                        {
+                            "texture": "Snow",
+                            "position": [28.2, -784, 133.5],
+                            "scale": [3, 3, 0.5]
+                        },
+                        {
+                            "texture": "Snow",
+                            "position": [44.8, -784, 141],
+                            "scale": [3, 3, 0.5]
+                        },
+                        {
+                            "texture": "Snow",
+                            "position": [28.2, -784, 148.5],
+                            "scale": [3, 3, 0.5]
+                        },
+                        {
+                            "texture": "Snow",
+                            "position": [44.8, -784, 156],
+                            "scale": [3, 3, 0.5]
+                        }
+                    ],
+                    "triggers": [
+                        {
+                            "position": [43.3, -781.1, 145.7],
+                            "scale": [50, 50, 50],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, 0, 90]
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 10000303,
+                            "state": "ZERO",
+                            "targetId": 2818189, // start at bottom relay
+                            "message": "SET_TO_ZERO"
+                        }
+                    ],
+                    "deleteIds": [
+                        // break the elevator
+                        2818188, 2818172, 2818191, 2818159, 2818184, 2818167, 2818175, 2818181, 2818161, 2818124, 2818160
+                    ]
                 },
                 "Research Core Access": {
                     "doors": {
@@ -5411,6 +5746,9 @@
                     ]
                 },
                 "Aether Lab Entryway": {
+                    "layers": {
+                        "1": true
+                    },
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
@@ -5420,15 +5758,29 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "triggers": [
+                        {
+                            "position": [44.5004, -828.5801, 129.1719],
+                            "scale": [35.5, 45.7, 6],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, 0, 90]
+                        }
+                    ]
                 },
                 "Research Lab Aether": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 3
                         },
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 2
                         }
                     ],
                     "doors": {
@@ -5440,7 +5792,77 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "triggers": [
+                        {
+                            "position": [50.5055, -890.836, 121.8492],
+                            "scale": [80, 80, 40],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, 0, 90]
+                        }
+                    ],
+                    "editObjs": {
+                        // This is our new metroid
+                        "3342384": { // SpacePirate-component 5
+                            "position": [59.25, -898.5, 129.6],
+                            "scale": [0.005, 1.8, 0.6],
+                            "detectionRange": 0.0001,
+                            "attackRange": 0.4,
+                            "health": 3,
+                            "speed": 13,
+                            "damage": 0.666
+                        },
+                        "3342473": { // damageableTrigger
+                            "scale": [7, 7, 10],
+                            "vulnerability": "Power Bomb"
+                        },
+                        /* darkness */
+                        "3343096": { "layer": 0 },
+                        "3343097": { "layer": 0 }
+                    },
+                    "addConnections": [
+                        {
+                            "senderId": 3342384, // pirate
+                            "state": "SCAN_DONE",
+                            "targetId": 3342528, // timer breakout
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 3343127, // cinematic trigger
+                            "state": "ENTERED",
+                            "targetId": 3343186, // lock door
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3342384, // pirate
+                            "state": "DEAD",
+                            "targetId": 3342551, // Space Pirate Jump Timer
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 3342384, // pirate
+                            "state": "DEAD",
+                            "targetId": 3343294, // music switch timer
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 3342384, // pirate
+                            "state": "DEAD",
+                            "targetId": 3343408, // SpecialFunction - Ice Research B - decrement 1st metroid encounter
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 3342384, // pirate
+                            "state": "DEAD",
+                            "targetId": 3342429, // wall explode timer
+                            "message": "RESET_AND_START"
+                        }
+                    ],
+                    "deleteIds": [
+                        3342506, 3343253, 3342340, 3343491, // metroid
+                        3342419, 3342398, // pirate waypoints
+                        3342342 // randomprime cutscene skip
+                    ]
                 },
                 "Phendrana's Edge": {
                     "removeWater": true,
@@ -6790,7 +7212,11 @@
                 "Fiery Shores": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 3,
+                            "position": [382.8999, -367.4262, 41.1249]
                         },
                         {
                             "type": "Nothing"
@@ -6802,7 +7228,14 @@
                         }
                     }
                 },
-                "Transport Tunnel B": {},
+                "Transport Tunnel B": {
+                    "blocks": [
+                        {
+                            "position": [347.5228, -481.1585, 31.3377],
+                            "scale": [21, 0.1, 2]
+                        }
+                    ]
+                },
                 "Transport to Tallon Overworld West": {},
                 "Twin Fires Tunnel": {},
                 "Twin Fires": {
@@ -6837,6 +7270,10 @@
                         "8": true // Grapple/Dash Points
                     },
                     "doors": {
+                        "0": {
+                            "shieldType": "Ice Beam",
+                            "blastShieldType": "None"
+                        },
                         "1": {
                             "shieldType": "Power Bomb",
                             "blastShieldType": "Power Bomb"
