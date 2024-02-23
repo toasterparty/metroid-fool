@@ -120,13 +120,14 @@
 
 ### Early Mines
 
-*Quarry Access Ice locked*
-*Required secret boxes*
-*Ultimate Maze*
-**Central Dynamo - Power Bombs**
-*MQA locked by Plasma*
-*Phazon Elite is missing. The Artifact sits plainly.*
-**Elite Research - Warrior**
+- *Quarry Access Ice locked*
+- *Required secret boxes*
+- *Ultimate Maze*
+- **Central Dynamo - Power Bombs**
+- *MQA locked by Plasma*
+- *Phazon Elite is missing. The Artifact sits plainly.*
+- **Elite Research - Warrior**
+- Unlock shortcut: Warrior Shrine -> Fiery Shores [PoNR]
 
 ### Plasma
 
@@ -149,12 +150,13 @@
 
 ### Cleanup
 
-- *Kaizo block makes you have to ride the zoomer again*
-- Wave Door
 - **Arbor Chamber - Wavebuster**
-- Plasma Door
+    - Wave/SJ Locked
+    - *Kaizo block makes you have to ride the zoomer again*
+    - Unlocks shortcut: Frozen Pike <--> Ruined Courtyard
 - **Burn Dome - Flamethrower** (also unlocks flamethrower door to get PB expansion in storage cavern)
-- Required SJ
+    - Plasma locked
+- SJ-required crossway
 - **Elder Chamber - Spirit**
 - Reflecting Pool -> GTH
 - Required Gravity
