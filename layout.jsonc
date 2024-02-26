@@ -5100,6 +5100,73 @@
                         }
                     }
                     },
+                    "pickups": [
+                        {
+                            "type": "Energy Tank",
+                            "position": [168, -973, 58]
+                        }
+                    ],
+                    "blocks": [
+                        {
+                            "position": [173.2, -992.8, 49],
+                            "scale": [1, 60, 90],
+                            "texture": "Snow"
+                        },
+                        {
+                            "position": [171.7, -1000.3, 13.6],
+                            "scale": [3, 0.5, 0.5],
+                            "texture": "Snow"
+                        },
+                        {
+                            "position": [164.9, -988.3, 15.6],
+                            "scale": [0.5, 3, 0.5],
+                            "texture": "Snow"
+                        },
+                        {
+                            "position": [155.9, -982.3, 22.8],
+                            "scale": [3, 3, 0.5],
+                            "texture": "Snow"
+                        },
+                        {
+                            "position": [164.2, -1015.6, 31.3],
+                            "scale": [3, 3, 0.5],
+                            "texture": "Snow"
+                        },
+                        {
+                            "position": [203.2, -993.2, 6.1],
+                            "scale": [10, 16, 1],
+                            "texture": "Snow"
+                        },
+                        {
+                            "position": [180.5, -965.8, 74.5],
+                            "scale": [20, 5, 0.5],
+                            "texture": "Snow"
+                        }
+                    ],
+                    "lockOnPoints": [
+                        {
+                            "position": [169.968, -1011.5297, 58.7044],
+                            "isGrapple": true
+                        },
+                        {
+                            "position": [176, -984.2, 8.22]
+                        },
+                        {
+                            "position": [185.9035, -1004.2284, 37.8149],
+                            "isGrapple": true
+                        },
+                        {
+                            "position": [202.7, -986.1, 85]
+                        }
+                    ],
+                    "editObjs": {
+                        "2228495": { // floating platform
+                            "position": [184.585907, -979.754272, 51.1926]
+                        },
+                        "2228496": {
+                            "position": [184.585907, -979.754272, 50]
+                        }
+                    },
                     "deleteIds": [
                         2228257
                     ]
