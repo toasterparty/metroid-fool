@@ -13106,16 +13106,87 @@
                             "startImmediately": true
                         }
                     ],
+                    "playerHints": [
+                        {
+                            "id": 10000380,
+                            "disableUnmorph": true
+                        }
+                    ],
                     "addConnections": [
-                        { // make ghosts stop making soudn
+                        { // make ghosts stop making sound
                             "senderId": 10000159,
                             "state": "ZERO",
                             "targetId": 786879, // relay ghosts shut up
                             "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 786734,
+                            "state": "ENTERED",
+                            "targetId": 10000380,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 786734,
+                            "state": "EXITED",
+                            "targetId": 10000380,
+                            "message": "DECREMENT"
+                        }
+                    ],
+                    "blocks": [
+                        {
+                            "position": [121.9, -138.10, 16],
+                            "scale": [25, 0.2, 20],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [115, -138.11, 25],
+                            "scale": [25, 0.2, 20],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [121.9, -141.10, 16],
+                            "scale": [25, 0.2, 20],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [128.2, -141.11, 25],
+                            "scale": [25, 0.2, 20],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [121.9, -144.10, 16],
+                            "scale": [25, 0.2, 20],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [115, -144.11, 25],
+                            "scale": [25, 0.2, 20],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [121.9, -147.10, 16],
+                            "scale": [25, 0.2, 20],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [128.2, -147.11, 25],
+                            "scale": [25, 0.2, 20],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [121.9, -150.10, 16],
+                            "scale": [25, 0.2, 20],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [115, -150.11, 25],
+                            "scale": [25, 0.2, 20],
+                            "texture": "Sandstone"
                         }
                     ],
                     "deleteIds": [
-                        786733 // Allow backtrack from the start
+                        786733, // Allow backtrack from the start
+                        786470 // pickup
                     ]
                 },
                 "Arboretum Access": {
@@ -13208,12 +13279,13 @@
                 "Training Chamber Access": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Super Missile"
                         }
                     ],
                     "doors": {
                         "0": {
-                            "shieldType": "Ice Beam"
+                            "shieldType": "Super Missile",
+                            "blastShieldType": "Super Missile"
                         },
                         "1": {
                             "shieldType": "Blue",
@@ -13366,8 +13438,8 @@
                     },
                     "doors": {
                         "0": {
-                            "shieldType": "Ice Spreader",
-                            "blastShieldType": "Ice Spreader"
+                            "shieldType": "Super Missile",
+                            "blastShieldType": "Super Missile"
                         }
                     },
                     "superheated": false,
