@@ -4,9 +4,8 @@
     "preferences": {
         "qolGameBreaking": true,
         "qolCosmetic": true,
-        "qolPickupScans": true,
+        "qolPickupScans": false,
         "qolGeneral": true,
-        // "qolCutscenes": "SkippableCompetitive",
         "qolCutscenes": "Skippable",
         "mapDefaultState": "Visit",
         "artifactHintBehavior": "All",
@@ -18,7 +17,7 @@
     "gameConfig": {
         "mainPlazaDoor": false,
         "backwardsFrigate": true,
-        "backwardsLabs": true,
+        "backwardsLabs": false,
         "backwardsUpperMines": true,
         "backwardsLowerMines": false,
         "phazonEliteWithoutDynamo": true,
@@ -32,17 +31,12 @@
         "heatDamagePerSec": 10.0,
         "autoEnabledElevators": false,
         "missileStationPbRefill": true,
-        "patchPowerConduits": false,
         "phazonDamageModifier": "Default",
         "phazonDamagePerSec": 0.964,
         "powerBombArboretumSandstone": false,
         "requiredArtifactCount": 12,
-        "removeHiveMecha": false,
-        "removeMineSecurityStationLocks": false,
-        "skipRidley": false,
         "warpToStartDelayS": 1,
         "enableIceTraps": true,
-        "escapeSequenceCountsUp": false,
         "difficultyBehavior": "NormalOnly",
         "shootInGrapple": true,
         "patchWallcrawling": true,
@@ -76,9 +70,7 @@
             "energyTanks": 0,
             "wavebuster": false
         },
-        "etankCapacity": 100,
         "itemMaxCapacity": {
-            "Energy Tank": 200,
             "Power Bomb": 99,
             "Missile": 999
         },
@@ -132,6 +124,15 @@
         // "gunDamage": 100
     },
     "strg": {
+        "3415165790": [
+            "Gravity Engine control circuit connection re-established."
+        ],
+        "2481189535": [
+            "Gravity Engine main circuit connection re-established."
+        ],
+        "167875742": [
+            "Gravity Engine auxiliary circuit connection re-established."
+        ],
         "2003358163": [
             "This interface indicates the controls for the door are located elsewhere in this region."
         ],
@@ -3594,8 +3595,9 @@
                 "Research Entrance": {
                     "layers": {
                         "3": true, // Shadow Pirates
-                        "4": true, // Elite Pirates
-                        "5": true // fog
+                        "4": true, // door locks
+                        "5": true, // elite pirate
+                        "6": true // FOG
                     },
                     "doors": {
                         "0": {
@@ -3609,6 +3611,7 @@
                     },
                     "triggers": [
                         {
+                            "layer": 10,
                             "position": [0, -638, 68],
                             "scale": [80, 120, 50],
                             "flags": 8193, // Detect Player | Apply Force
@@ -3752,6 +3755,9 @@
                 },
                 "Map Station": {},
                 "Hydra Lab Entryway": {
+                    "layers": {
+                        "1": true // darkness
+                    },
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
@@ -3764,6 +3770,7 @@
                     },
                     "triggers": [
                         {
+                            "layer": 10,
                             "position": [-12.9066, -713.8476, 74.0571],
                             "scale": [31.515999, 80.669952, 6.112994],
                             "flags": 8193, // Detect Player | Apply Force
@@ -3814,12 +3821,14 @@
                     },
                     "triggers": [
                         {
+                            "layer": 10,
                             "position": [-8.1587, -791.1531, 86.9735],
                             "scale": [65.0, 72.360001, 32.23],
                             "flags": 8193, // Detect Player | Apply Force
                             "force": [0, 0, 90]
                         },
                         {
+                            "layer": 10,
                             "position": [-1.9497, -801.1327, 76.7779],
                             "scale": [10, 15, 10],
                             "flags": 8193, // Detect Player | Apply Force
@@ -3899,7 +3908,7 @@
                             ]
                         },
                         "1638942": {
-                            "layer": 4
+                            "vulnerability": "Blue"
                         },
                         "1638405": {
                             "layer": 4,
@@ -3916,7 +3925,7 @@
                             ]
                         },
                         "1639459": {
-                            "layer": 4
+                            "vulnerability": "Blue"
                         },
                         "1638406": {
                             "layer": 4,
@@ -3933,7 +3942,7 @@
                             ]
                         },
                         "1638727": {
-                            "layer": 4
+                            "vulnerability": "Blue"
                         },
                         "1638413": {
                             "layer": 4,
@@ -3950,7 +3959,7 @@
                             ]
                         },
                         "1639021": {
-                            "layer": 4
+                            "vulnerability": "Blue"
                         },
                         "1638414": {
                             "layer": 4,
@@ -3967,7 +3976,7 @@
                             ]
                         },
                         "1639471": {
-                            "layer": 4
+                            "vulnerability": "Blue"
                         },
                         "1638416": {
                             "layer": 4,
@@ -3984,7 +3993,7 @@
                             ]
                         },
                         "1638864": {
-                            "layer": 4
+                            "vulnerability": "Blue"
                         },
                         "1638868": {
                             "layer": 4,
@@ -4001,7 +4010,7 @@
                             ]
                         },
                         "1639450": {
-                            "layer": 4
+                            "vulnerability": "Blue"
                         },
                         "1639436": {
                             "layer": 4,
@@ -4018,7 +4027,7 @@
                             ]
                         },
                         "1639443": {
-                            "layer": 4
+                            "vulnerability": "Blue"
                         },
                         "1638833": {
                             "layer": 4,
@@ -4035,7 +4044,7 @@
                             ]
                         },
                         "1638775": {
-                            "layer": 4
+                            "vulnerability": "Blue"
                         },
                         "1638834": {
                             "layer": 4,
@@ -4052,7 +4061,7 @@
                             ]
                         },
                         "1638694": {
-                            "layer": 4
+                            "vulnerability": "Blue"
                         },
                         "1638835": {
                             "layer": 4,
@@ -4069,7 +4078,7 @@
                             ]
                         },
                         "1638966": {
-                            "layer": 4
+                            "vulnerability": "Blue"
                         },
                         "1638994": {
                             "layer": 4,
@@ -4086,7 +4095,7 @@
                             ]
                         },
                         "1638799": {
-                            "layer": 4
+                            "vulnerability": "Blue"
                         },
                         "1638995": {
                             "layer": 4,
@@ -4103,7 +4112,7 @@
                             ]
                         },
                         "1638735": {
-                            "layer": 4
+                            "vulnerability": "Blue"
                         },
                         "1639011": {
                             "layer": 4,
@@ -4120,7 +4129,7 @@
                             ]
                         },
                         "1639462": {
-                            "layer": 4
+                            "vulnerability": "Blue"
                         },
                         "1639358": {
                             "layer": 4,
@@ -4137,7 +4146,7 @@
                             ]
                         },
                         "1638739": {
-                            "layer": 4
+                            "vulnerability": "Blue"
                         },
                         "1638839": {
                             "layer": 4,
@@ -4154,7 +4163,7 @@
                             ]
                         },
                         "1638731": {
-                            "layer": 4
+                            "vulnerability": "Blue"
                         },
                         "1638841": {
                             "layer": 4,
@@ -4199,7 +4208,7 @@
                             ]
                         },
                         "1638918": {
-                            "layer": 4
+                            "vulnerability": "Blue"
                         }
                     },
                     "removeConnections": [
@@ -4883,6 +4892,7 @@
                     ],
                     "triggers": [
                         {
+                            "layer": 10,
                             "position": [-60.7248, -802.8118, 106.6901],
                             "scale": [30.469999, 72.830002, 9.445007],
                             "flags": 8193, // Detect Player | Apply Force
@@ -4937,6 +4947,17 @@
                             "id": 10000323,
                             "time": 0.5,
                             "startImmediately": true
+                        },
+                        {
+                            "id": 10000378,
+                            "time": 0.5,
+                            "startImmediately": true
+                        },
+                        {
+                            "id": 10000379,
+                            "layer": 10,
+                            "time": 0.02,
+                            "startImmediately": true
                         }
                     ],
                     "doors": {
@@ -4955,6 +4976,7 @@
                     },
                     "triggers": [
                         {
+                            "layer": 10,
                             "position": [-71, -903, 124.6],
                             "scale": [80, 130, 100],
                             "flags": 8193, // Detect Player | Apply Force
@@ -4962,6 +4984,32 @@
                         }
                     ],
                     "addConnections": [
+                        /* Activate the thing for free */
+                        {
+                            "senderId": 10000378,
+                            "state": "ZERO",
+                            "targetId": 1966789, // actor
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 10000378,
+                            "state": "ZERO",
+                            "targetId": 1966831, // sound
+                            "message": "PLAY"
+                        },
+                        {
+                            "senderId": 10000378,
+                            "state": "ZERO",
+                            "targetId": 1966718, // scan
+                            "message": "ACTIVATE"
+                        },
+                        /* but only if it's not the 1st pass */
+                        {
+                            "senderId": 10000379,
+                            "state": "ZERO",
+                            "targetId": 10000378,
+                            "message": "DEACTIVATE"
+                        },
                         {
                             "senderId": 10000323, // instant start timer
                             "state": "ZERO",
@@ -5015,6 +5063,7 @@
                     },
                     "triggers": [
                         {
+                            "layer": 10,
                             "position": [-58.7, -828.4, 129.24],
                             "scale": [27.2, 43.2, 6.3],
                             "flags": 8193, // Detect Player | Apply Force
@@ -5071,6 +5120,7 @@
                     },
                     "triggers": [
                         {
+                            "layer": 10,
                             "position": [-49, -784, 145.7],
                             "scale": [50, 50, 50],
                             "flags": 8193, // Detect Player | Apply Force
@@ -5181,7 +5231,7 @@
                         }
                     },
                     "layers": {
-                        "2": false, // flying
+                        "2": true, // flying
                         "3": true, // elite pirate
                         "8": false, // True if artifact taken
                         "9": false  // True if temple activated
@@ -5258,6 +5308,7 @@
                             "scale": [2, 6, 14]
                         },
                         {
+                            "layer": 10,
                             "id": 10000325,
                             "active": false,
                             "position": [-5, -783, 168.2],
@@ -5266,18 +5317,21 @@
                             "force": [0, 0, 155]
                         },
                         {
+                            "layer": 10,
                             "position": [-5, -783, 171],
                             "scale": [90, 50, 3.3],
                             "flags": 8193, // Detect Player | Apply Force
                             "force": [0, 0, 115]
                         },
                         {
+                            "layer": 10,
                             "position": [6.0373, -814.7408, 166],
                             "scale": [58.147003, 13.302979, 15],
                             "flags": 8193, // Detect Player | Apply Force
                             "force": [0, 0, 125]
                         },
                         {
+                            "layer": 10,
                             "id": 10000330,
                             "active": false,
                             "position": [-5, -783, 212.1],
@@ -5286,6 +5340,7 @@
                             "force": [0, 0, 120]
                         },
                         {
+                            "layer": 10,
                             "id": 10000328,
                             "position": [-5, -783, 269.8],
                             "scale": [500, 400, 40],
@@ -5297,7 +5352,7 @@
                     "counters": [
                         {
                             "id": 2556289,
-                            "maxValue": 6 // increased from 5
+                            "maxValue": 7 // increased from 5
                         }
                     ],
                     "editObjs": {
@@ -5359,6 +5414,31 @@
                             "targetId": 2556598,
                             "message": "DEACTIVATE"
                         },
+                        // flying pirates start off
+                        {
+                            "senderId": 10000324,
+                            "state": "ZERO",
+                            "targetId": 2556395,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000324,
+                            "state": "ZERO",
+                            "targetId": 2556396,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 2556089, // fight start trigger
+                            "state": "ENTERED",
+                            "targetId": 2556395,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 2556089, // fight start trigger
+                            "state": "ENTERED",
+                            "targetId": 2556396,
+                            "message": "ACTIVATE"
+                        },
                         // activate elite after ground phase
                         {
                             "senderId": 2556496, // flying guy timer #1
@@ -5376,6 +5456,13 @@
                         {
                             "senderId": 2556598, // elite pirate
                             "state": "DEATH_RATTLE",
+                            "targetId": 2556289, // counter
+                            "message": "INCREMENT"
+                        },
+                        // extra flying pirates contribute to unlock counter
+                        {
+                            "senderId": 2557211, // flying pirate counter
+                            "state": "MAX_REACHED",
                             "targetId": 2556289, // counter
                             "message": "INCREMENT"
                         },
@@ -5438,8 +5525,19 @@
                         2556606, // Don't activate flying pirates in triclops pit (that's reserved for artifact farce)
                         2557294, 2557295, // auxillary fight start triggers
 
+                        // don't stop the music early from extra enemies
+                        2557207, 2557209, 2557208, 2557210,
+
                         // Free so many fucking debris extended objects from memory
                         2556452, 2556453, 2556454, 2556455, 2556456, 2556457, 2556458, 2556459, 2556462, 2556463, 2556464, 2556465, 2556466, 2556467, 2556468, 2556469, 2556470, 2556483, 2556484, 2556485, 2556486, 2556487, 2556526, 2556527, 2556528, 2556529, 2556530, 2556531, 2556532, 2556533, 2556536, 2556537, 2556538, 2556539, 2556540, 2556541, 2556542, 2556543, 2556544, 2556993, 2556994, 2556995, 2556996, 2556997, 2556998, 2556999, 2557000, 2557003, 2557004, 2557005, 2557006, 2557007, 2557008, 2557009, 2557010, 2557011, 69665918, 69665919, 69665920, 69665921, 69665922, 69665923, 69665924, 69665925, 69665926, 69665927, 69665928
+                    ],
+                    "removeConnections": [
+                        {
+                            "senderId": 2557211, // counter
+                            "state": "MAX_REACHED",
+                            "targetId": 2557206, // StreamedAudio Pirate Yoin SW
+                            "message": "PLAY"
+                        }
                     ]
                 },
                 "Research Core": {
@@ -5457,7 +5555,675 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "triggers": [
+                        {
+                            "layer": 10,
+                            "id": 10000331,
+                            "position": [54.7639, -995.9327, 83.5377],
+                            "scale": [70, 70, 80],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, 0, 90]
+                        }
+                    ],
+                    "blocks": [
+                        {
+                            "layer": 10,
+                            "id": 10000332,
+                            "position": [86.0, -997.5, 53.2],
+                            "scale": [1, 5.5, 5.5],
+                            "texture": "Snow"
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 10000333,
+                            "time": 0.5,
+                            "startImmediately": true
+                        }
+                    ],
+                    "editObjs": {
+                        "2622579": { "layer": 10 },
+                        "2622580": { "layer": 10 },
+                        "2622092": { "layer": 10 },
+                        "2622093": { "layer": 10 },
+                        "2622095": { "layer": 10 }
+                    },
+                    "deleteIds": [
+                        // Vanilla layer changers
+                        2622635, 2622636, 2622623, 2622719, 2622622, 2622489, 2622488, 2622499, 2622498, 2622306, 2622305, 2622300, 2622309, 2622308, 2622418, 2622417, 2622302, 2622303, 2622128, 2622127, 2622571, 2622497, 2622496, 2622490, 2622424, 2622423, 2622500, 2622632, 2622633, 2622704, 2622634,
+
+                        // randomprime cutscene skip
+                        2621443, 2621446, 2621449, 2621452,
+
+                        // memory relay
+                        2622433
+                    ],
+                    // labs.py
+                    "relays": [
+                        {
+                            "id": 10000334
+                        }
+                    ],
+                    "specialFunctions": [
+                        {
+                            "id": 10000336,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 1690530837,
+                            "layerChangeLayerId": 1
+                        },
+                        {
+                            "id": 10000337,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 351383175,
+                            "layerChangeLayerId": 2
+                        },
+                        {
+                            "id": 10000338,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 351383175,
+                            "layerChangeLayerId": 3
+                        },
+                        {
+                            "id": 10000339,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 351383175,
+                            "layerChangeLayerId": 4
+                        },
+                        {
+                            "id": 10000340,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 351383175,
+                            "layerChangeLayerId": 5
+                        },
+                        {
+                            "id": 10000341,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 351383175,
+                            "layerChangeLayerId": 6
+                        },
+                        {
+                            "id": 10000342,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 351383175,
+                            "layerChangeLayerId": 10
+                        },
+                        {
+                            "id": 10000343,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3056950407,
+                            "layerChangeLayerId": 1
+                        },
+                        {
+                            "id": 10000344,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3056950407,
+                            "layerChangeLayerId": 10
+                        },
+                        {
+                            "id": 10000345,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 245580074,
+                            "layerChangeLayerId": 1
+                        },
+                        {
+                            "id": 10000346,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 245580074,
+                            "layerChangeLayerId": 2
+                        },
+                        {
+                            "id": 10000347,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 245580074,
+                            "layerChangeLayerId": 4
+                        },
+                        {
+                            "id": 10000348,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 245580074,
+                            "layerChangeLayerId": 10
+                        },
+                        {
+                            "id": 10000349,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 2102741926,
+                            "layerChangeLayerId": 1
+                        },
+                        {
+                            "id": 10000350,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 2102741926,
+                            "layerChangeLayerId": 2
+                        },
+                        {
+                            "id": 10000351,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 2102741926,
+                            "layerChangeLayerId": 10
+                        },
+                        {
+                            "id": 10000352,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 2120180247,
+                            "layerChangeLayerId": 1
+                        },
+                        {
+                            "id": 10000353,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 2120180247,
+                            "layerChangeLayerId": 2
+                        },
+                        {
+                            "id": 10000354,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 2120180247,
+                            "layerChangeLayerId": 10
+                        },
+                        {
+                            "id": 10000355,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 1717448744,
+                            "layerChangeLayerId": 1
+                        },
+                        {
+                            "id": 10000356,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 1717448744,
+                            "layerChangeLayerId": 2
+                        },
+                        {
+                            "id": 10000357,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 1717448744,
+                            "layerChangeLayerId": 10
+                        },
+                        {
+                            "id": 10000358,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 2124934084,
+                            "layerChangeLayerId": 1
+                        },
+                        {
+                            "id": 10000359,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 2124934084,
+                            "layerChangeLayerId": 10
+                        },
+                        {
+                            "id": 10000360,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3858019950,
+                            "layerChangeLayerId": 1
+                        },
+                        {
+                            "id": 10000361,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3858019950,
+                            "layerChangeLayerId": 2
+                        },
+                        {
+                            "id": 10000362,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3858019950,
+                            "layerChangeLayerId": 4
+                        },
+                        {
+                            "id": 10000363,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3858019950,
+                            "layerChangeLayerId": 10
+                        },
+                        {
+                            "id": 10000364,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 216672071,
+                            "layerChangeLayerId": 10
+                        },
+                        {
+                            "id": 10000365,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 137821706,
+                            "layerChangeLayerId": 1
+                        },
+                        {
+                            "id": 10000366,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 137821706,
+                            "layerChangeLayerId": 10
+                        },
+                        {
+                            "id": 10000367,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 893946318,
+                            "layerChangeLayerId": 1
+                        },
+                        {
+                            "id": 10000368,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 893946318,
+                            "layerChangeLayerId": 2
+                        },
+                        {
+                            "id": 10000369,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 893946318,
+                            "layerChangeLayerId": 4
+                        },
+                        {
+                            "id": 10000370,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 893946318,
+                            "layerChangeLayerId": 5
+                        },
+                        {
+                            "id": 10000371,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 893946318,
+                            "layerChangeLayerId": 10
+                        },
+                        {
+                            "id": 10000372,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3422621718,
+                            "layerChangeLayerId": 1
+                        },
+                        {
+                            "id": 10000373,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3422621718,
+                            "layerChangeLayerId": 2
+                        },
+                        {
+                            "id": 10000374,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3422621718,
+                            "layerChangeLayerId": 10
+                        },
+                        {
+                            "id": 10000375,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 2007836944,
+                            "layerChangeLayerId": 1
+                        },
+                        {
+                            "id": 10000376,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 2007836944,
+                            "layerChangeLayerId": 2
+                        },
+                        {
+                            "id": 10000377,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 2007836944,
+                            "layerChangeLayerId": 10
+                        }
+                    ],
+                    "hudmemos": [
+                        {
+                            "id": 10000335,
+                            "text": "&just=center;Hooray you fixed it",
+                            "messageTime": 9
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 2622474,
+                            "state": "INACTIVE",
+                            "targetId": 10000334,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000335,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 2622461,
+                            "state": "ZERO",
+                            "targetId": 2622092,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 2622460,
+                            "state": "ZERO",
+                            "targetId": 2622092,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 2622462,
+                            "state": "ZERO",
+                            "targetId": 2622093,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 2622460,
+                            "state": "ZERO",
+                            "targetId": 2622095,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 10000333,
+                            "state": "ZERO",
+                            "targetId": 2621724,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000333,
+                            "state": "ZERO",
+                            "targetId": 2622092,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000333,
+                            "state": "ZERO",
+                            "targetId": 2622093,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000333,
+                            "state": "ZERO",
+                            "targetId": 2622095,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000331,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000332,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 2622579,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000336,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000337,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000338,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000339,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000340,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000341,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000342,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000343,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000344,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000345,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000346,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000347,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000348,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000349,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000350,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000351,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000352,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000353,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000354,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000355,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000356,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000357,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000358,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000359,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000360,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000361,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000362,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000363,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000364,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000365,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000366,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000367,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000368,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000369,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000370,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000371,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000372,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000373,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000374,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000375,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000376,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000334,
+                            "state": "ZERO",
+                            "targetId": 10000377,
+                            "message": "DECREMENT"
+                        }
+                    ],
+                    "removeConnections": [
+                        {
+                            "senderId": 2622461,
+                            "state": "ZERO",
+                            "targetId": 2622092,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 2622460,
+                            "state": "ZERO",
+                            "targetId": 2622092,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 2622462,
+                            "state": "ZERO",
+                            "targetId": 2622093,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 2622460,
+                            "state": "ZERO",
+                            "targetId": 2622095,
+                            "message": "DECREMENT"
+                        }
+                    ]
                 },
                 "Frost Cave": {
                     "pickups": [
@@ -5617,6 +6383,7 @@
                     ],
                     "triggers": [
                         {
+                            "layer": 10,
                             "position": [43.3, -781.1, 145.7],
                             "scale": [50, 50, 50],
                             "flags": 8193, // Detect Player | Apply Force
@@ -5637,6 +6404,10 @@
                     ]
                 },
                 "Research Core Access": {
+                    "layers": {
+                        "1": false, // beetles
+                        "2": true 
+                    },
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
@@ -5646,7 +6417,16 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "triggers": [
+                        {
+                            "layer": 10,
+                            "position": [45.5474, -938.129, 99.6015],
+                            "scale": [24.1, 49.7, 6.2],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, 0, 90]
+                        }
+                    ]
                 },
                 "Save Station C": {
                     "doors": {
@@ -5770,6 +6550,7 @@
                     },
                     "triggers": [
                         {
+                            "layer": 10,
                             "position": [44.5004, -828.5801, 129.1719],
                             "scale": [35.5, 45.7, 6],
                             "flags": 8193, // Detect Player | Apply Force
@@ -5778,6 +6559,9 @@
                     ]
                 },
                 "Research Lab Aether": {
+                    "layers": {
+                        "2": true // dark
+                    },
                     "pickups": [
                         {
                             "type": "Missile",
@@ -5804,6 +6588,7 @@
                     },
                     "triggers": [
                         {
+                            "layer": 10,
                             "position": [50.5055, -890.836, 121.8492],
                             "scale": [80, 80, 40],
                             "flags": 8193, // Detect Player | Apply Force
@@ -5813,7 +6598,7 @@
                     "editObjs": {
                         // This is our new metroid
                         "3342384": { // SpacePirate-component 5
-                            "position": [59.25, -898.5, 129.6],
+                            "position": [58.91, -898.48, 129.6],
                             "scale": [0.005, 1.8, 0.6],
                             "detectionRange": 0.0001,
                             "attackRange": 0.4,
@@ -5825,9 +6610,14 @@
                             "scale": [7, 7, 10],
                             "vulnerability": "Power Bomb"
                         },
+                        // Don't upset anyone early
+                        "3342706": { // trigger
+                            "position": [43.2113, -904.2164, 129.8669],
+                            "scale": [2, 15, 10]
+                        },
                         /* darkness */
-                        "3343096": { "layer": 0 },
-                        "3343097": { "layer": 0 }
+                        "3343096": { "layer": 10 },
+                        "3343097": { "layer": 10 }
                     },
                     "addConnections": [
                         {
@@ -5869,8 +6659,13 @@
                     ],
                     "deleteIds": [
                         3342506, 3343253, 3342340, 3343491, // metroid
-                        3342419, 3342398, // pirate waypoints
-                        3342342 // randomprime cutscene skip
+
+                        3343168,
+                        3342419, 3342424, // pirate patrol waypoints
+                        3342398, // pirate attack waypoint
+                        3342342, // randomprime cutscene skip
+                        3343298, 3343297, // 2nd pass stuff I don't want
+                        3342575, 3342576, 3342590, 3342591, 3342592, 3342589, 3342586, 3342577 // turret in the corner
                     ]
                 },
                 "Phendrana's Edge": {

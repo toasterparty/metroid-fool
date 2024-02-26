@@ -242,7 +242,7 @@ for enemy_id in enemies:
         }
 
         edit_objs[hiding_spot_id] = {
-            "layer": FIGHT_LAYER
+            "vulnerability": "Blue"
         }
 
     if enemy_id == turret:
