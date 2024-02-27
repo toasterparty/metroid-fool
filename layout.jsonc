@@ -13012,10 +13012,36 @@
                             "scanText": "w H a T   i S   t H i S,\nv A n i l L a ??$?!?!?1!"
                         },
                         {
-                            "type": "Nothing"
+                            "type": "Ice Beam",
+                            "position": [-47.9, 24.6424, 19.4]
                         },
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 3
+                        }
+                    ],
+                    "blocks": [
+                        {
+                            "position": [-46.3, 22.55, 20.4],
+                            "scale": [0.2, 0.2, 3],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [-47.3, 22.55, 20.4],
+                            "scale": [0.2, 0.2, 3],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [-48.3, 22.55, 20.4],
+                            "scale": [0.2, 0.2, 3],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [-49.3, 22.55, 20.4],
+                            "scale": [0.2, 0.2, 3],
+                            "texture": "Sandstone"
                         }
                     ],
                     "doors": {
@@ -13199,12 +13225,17 @@
                     "deleteIds": [
                         // Remove beetle teamwork to make things more chaotic
                         590165,
+                        
                         // Remove cutscenes
                         600262,
                         589879,
                         600187,
+
                         // Stop "mini-boss" beetles from regenerating
-                        590125, 589868, 589870, 589866, 589882, 589872, 589884
+                        590125, 589868, 589870, 589866, 589882, 589872, 589884,
+
+                        // Don't enable 2nd pass beetle layer
+                        599922
                     ]
                 },
                 "Eyon Tunnel": {},
