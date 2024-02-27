@@ -8648,14 +8648,54 @@
                 "Workstation Tunnel": {
                     "doors": {
                         "0": {
-                            "shieldType": "Blue",
+                            "shieldType": "Ice Beam",
                             "blastShieldType": "None"
                         },
                         "1": {
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "editObjs": {
+                        "1572909": { // zoomer
+                            "position": [476, -1077, 60]
+                        }
+                    },
+                    "actorRotates": [
+                        {
+                            "id": 10000385,
+                            "rotation": [45, 90, 180],
+                            "timeScale": 1.5,
+                            "updateActive": true,
+                            "updateActors": true,
+                            "updateOnCreation": true
+                        }
+                    ],
+                    "platforms": [
+                        {
+                            "id": 10000386,
+                            "position": [476, -1077, 60],
+                            "type": "Empty"
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 10000385,
+                            "state": "PLAY",
+                            "targetId": 10000386,
+                            "message": "PLAY"
+                        },
+                        {
+                            "senderId": 10000386,
+                            "state": "PLAY",
+                            "targetId": 1572909,
+                            "message": "ACTIVATE"
+                        }
+                    ],
+                    "deleteIds": [
+                        1572889, // zoomer waypoint
+                        1572953, 1572957, 1572956 // debris
+                    ]
                 },
                 "Transport Tunnel C": {
                     "doors": {
@@ -8672,7 +8712,7 @@
                 "Transport to Phazon Mines West": {
                     "doors": {
                         "0": {
-                            "shieldType": "Blue",
+                            "shieldType": "Ice Beam",
                             "blastShieldType": "None"
                         }
                     }
