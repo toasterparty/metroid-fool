@@ -8674,7 +8674,7 @@
                     "platforms": [
                         {
                             "id": 10000386,
-                            "position": [476, -1077, 60],
+                            "position": [476, -1077, 59],
                             "type": "Empty"
                         }
                     ],
@@ -8763,7 +8763,60 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "specialFunctions": [
+                        {
+                            "id": 10000387,
+                            "layer": 2,
+                            "type": "PlayerInAreaRelay"
+                        },
+                        {
+                            "id": 10000389,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 1564594668,
+                            "layerChangeLayerId": 2
+                        }
+                    ],
+                    "spawnPoints": [
+                        {
+                            "id": 10000388,
+                            "layer": 2,
+                            "position": [232.9545, 104.2132, 40.6],
+                            "rotation": [0, 0, 173]
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 10000387,
+                            "state": "ENTERED",
+                            "targetId": 10000388,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000387,
+                            "state": "ENTERED",
+                            "targetId": 10000388,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000387,
+                            "state": "ENTERED",
+                            "targetId": 10000389,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000387,
+                            "state": "EXITED",
+                            "targetId": 10000388,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 65623,
+                            "state": "INACTIVE",
+                            "targetId": 65539,
+                            "message": "SET_TO_ZERO"
+                        }
+                    ]
                 },
                 "Main Quarry": {
                     "pickups": [
