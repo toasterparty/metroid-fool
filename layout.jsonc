@@ -13128,7 +13128,10 @@
                             "maxIncrease": 3
                         },
                         { // Tree
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 2
                         },
                         { // Vault Ledge
                             "type": "Ice Trap",
@@ -13872,7 +13875,7 @@
                     ],
                     "blocks": [
                         {
-                            "position": [121.9, -138.10, 16],
+                            "position": [121.9, -138.10, 15.5],
                             "scale": [25, 0.2, 20],
                             "texture": "Sandstone"
                         },
@@ -13882,7 +13885,7 @@
                             "texture": "Sandstone"
                         },
                         {
-                            "position": [121.9, -141.10, 16],
+                            "position": [121.9, -141.10, 15.5],
                             "scale": [25, 0.2, 20],
                             "texture": "Sandstone"
                         },
@@ -13892,7 +13895,7 @@
                             "texture": "Sandstone"
                         },
                         {
-                            "position": [121.9, -144.10, 16],
+                            "position": [121.9, -144.10, 15.5],
                             "scale": [25, 0.2, 20],
                             "texture": "Sandstone"
                         },
