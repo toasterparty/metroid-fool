@@ -3785,21 +3785,356 @@
                     ]
                 },
                 "Quarantine Cave": {
-                    "pickups": [
-                        {
-                            "type": "Nothing"
-                        }
-                    ],
                     "doors": {
                         "0": {
-                            "shieldType": "Blue",
+                            "shieldType": "Disabled",
                             "blastShieldType": "None"
                         },
                         "1": {
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "pickups": [
+                        {
+                            // id: 1573357
+                            "type": "Spider Ball",
+                            "position": [202.75, -629.31, 52.7]
+                        }
+                    ],
+                    "counters": [
+                        {
+                            "id": 10000391,
+                            "maxValue": 1
+                        },
+                        {
+                            "id": 10000392,
+                            "maxValue": 2
+                        },
+                        {
+                            "id": 10000393,
+                            "maxValue": 3
+                        },
+                        {
+                            "id": 10000394,
+                            "maxValue": 4
+                        }
+                    ],
+                    "relays": [
+                        {
+                            "id": 10000395
+                        }
+                    ],
+                    "bombSlots": [
+                        {
+                            "damageableTriggerId": 10000397,
+                            "activateSlotId": 10000405,
+                            "active": false,
+                            "position": [277.4, -608.6, 69.0],
+                            "rotation": [0, 0, 286]
+                        },
+                        {
+                            "damageableTriggerId": 10000398,
+                            "activateSlotId": 10000406,
+                            "active": false,
+                            "position": [165, -630, 51],
+                            "rotation": [-90, 0, 0]
+                        },
+                        {
+                            "damageableTriggerId": 10000399,
+                            "activateSlotId": 10000407,
+                            "active": false,
+                            "position": [170, -630, 51],
+                            "rotation": [-90, 0, 0]
+                        },
+                        {
+                            "damageableTriggerId": 10000400,
+                            "activateSlotId": 10000408,
+                            "active": false,
+                            "position": [175, -630, 51],
+                            "rotation": [-90, 0, 0]
+                        }
+                    ],
+                    "hudmemos": [
+                        {
+                            "id": 10000401,
+                            "text": "&just=center;Weak Point Destroyed!\n(1 of 4)"
+                        },
+                        {
+                            "id": 10000402,
+                            "text": "&just=center;Weak Point Destroyed!\n(2 of 4)"
+                        },
+                        {
+                            "id": 10000403,
+                            "text": "&just=center;Weak Point Destroyed!\n(3 of 4)"
+                        },
+                        {
+                            "id": 10000404,
+                            "text": "&just=center;Weak Point Destroyed!\n(4 of 4)"
+                        }
+                    ],
+                    "triggers": [
+                        // Prevent boost ball cheese
+                        {
+                            "position": [272.5, -593.7, 62.3],
+                            "scale": [30, 20, 1],
+                            "force": [0, 0, -800],
+                            "flags": 12288 // Detect Morphed Player | Apply Force
+                        }
+                    ],
+                    "platforms": [
+                        {
+                            "id": 10000409,
+                            "active": false,
+                            "position": [247.2, -667.4, 66.0],
+                            "type": "HalfBlock"
+                        },
+                        {
+                            "id": 10000412,
+                            "active": false,
+                            "position": [273.4, -650.6, 65.7],
+                            "type": "Snow"
+                        }
+                    ],
+                    "waypoints": [
+                        {
+                            "id": 10000410,
+                            "position": [247.2, -667.4, 66.0],
+                            "speed": 3
+                        },
+                        {
+                            "id": 10000411,
+                            "position": [257, -682, 66],
+                            "speed": 3
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 1573328, // activate spider pickup
+                            "time": 0.02,
+                            "startImmediately": true
+                        },
+                        {
+                            "id": 10000414,
+                            "time": 4
+                        },
+                        {
+                            "id": 10000413,
+                            "time": 1.5,
+                            "active": false,
+                            "startImmediately": true,
+                            "looping": true
+                        },
+                        {
+                            "id": 1573076, // thardus start timer
+                            "time": 3
+                        }
+                    ],
+                    "editObjs": {
+                        "1572868": { // default spawn
+                            "position": [232, -705, 66]
+                        },
+                        "1572979": { // thardus
+                            "scale": [5, 5, 5],
+                            "speed": 0.5,
+                            "health": 10000000
+                        },
+                        "1572873": { // Thardus rock projectile
+                            "scale": [0.3, 0.3, 0.3]
+                        }
+                    },
+                    "addConnections": [
+                        // wake thardus fight start
+                        {
+                            "senderId": 1573328, // instant timer
+                            "state": "ZERO",
+                            "targetId": 1572979, // thardus
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 1573322, // pickup
+                            "state": "ARRIVED",
+                            "targetId": 1572979, // thardus
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1573322, // pickup
+                            "state": "ARRIVED",
+                            "targetId": 1573076, // thardus awake timer (1 sec)
+                            "message": "RESET_AND_START"
+                        },
+                        // lock doors fight start
+                        {
+                            "senderId": 1573322, // pickup
+                            "state": "ARRIVED",
+                            "targetId": 1573779, // lock door relay
+                            "message": "SET_TO_ZERO"
+                        },
+                        // enable slots fight start
+                        {
+                            "senderId": 1573322, // pickup
+                            "state": "ARRIVED",
+                            "targetId": 10000405, // activate slot relay
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 1573322, // pickup
+                            "state": "ARRIVED",
+                            "targetId": 10000406, // activate slot relay
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 1573322, // pickup
+                            "state": "ARRIVED",
+                            "targetId": 10000407, // activate slot relay
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 1573322, // pickup
+                            "state": "ARRIVED",
+                            "targetId": 10000408, // activate slot relay
+                            "message": "SET_TO_ZERO"
+                        },
+                        // bomb slots
+                        {
+                            "senderId": 10000397, // bomb slot damageable trigger
+                            "state": "DEAD",
+                            "targetId": 10000395, // relay
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000398, // bomb slot damageable trigger
+                            "state": "DEAD",
+                            "targetId": 10000395, // relay
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000399, // bomb slot damageable trigger
+                            "state": "DEAD",
+                            "targetId": 10000395, // relay
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000400, // bomb slot damageable trigger
+                            "state": "DEAD",
+                            "targetId": 10000395, // relay
+                            "message": "SET_TO_ZERO"
+                        },
+                        // bomb slot dead relay
+                        {
+                            "senderId": 10000395,
+                            "state": "ZERO",
+                            "targetId": 10000391, // counter
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 10000395,
+                            "state": "ZERO",
+                            "targetId": 10000392, // counter
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 10000395,
+                            "state": "ZERO",
+                            "targetId": 10000393, // counter
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 10000395,
+                            "state": "ZERO",
+                            "targetId": 10000394, // counter
+                            "message": "INCREMENT"
+                        },
+                        // hudmemos
+                        {
+                            "senderId": 10000391, // counter
+                            "state": "MAX_REACHED",
+                            "targetId": 10000401, // hudmemo
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000392, // counter
+                            "state": "MAX_REACHED",
+                            "targetId": 10000402, // hudmemo
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000393, // counter
+                            "state": "MAX_REACHED",
+                            "targetId": 10000403, // hudmemo
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000394, // counter
+                            "state": "MAX_REACHED",
+                            "targetId": 10000404, // hudmemo
+                            "message": "SET_TO_ZERO"
+                        },
+                        // thardus killshot
+                        {
+                            "senderId": 10000394, // counter
+                            "state": "MAX_REACHED",
+                            "targetId": 1572979, // thardus
+                            "message": "STOP"
+                        },
+                        {
+                            "senderId": 10000394, // counter
+                            "state": "MAX_REACHED",
+                            "targetId": 1573400, // cutscene relay
+                            "message": "SET_TO_ZERO"
+                        },
+                        /* Platforming towards qmon slot */
+                        {
+                            "senderId": 1573322, // pickup
+                            "state": "ARRIVED",
+                            "targetId": 10000409, // moving platform
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1573322, // pickup
+                            "state": "ARRIVED",
+                            "targetId": 10000413, // snow yoku timer
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000409, // platform
+                            "state": "ACTIVE",
+                            "targetId": 10000410, // waypoint
+                            "message": "FOLLOW"
+                        },
+                        {
+                            "senderId": 10000410, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000411, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000411, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000410, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000413, // timer
+                            "state": "ZERO",
+                            "targetId": 10000412, // platform
+                            "message": "TOGGLE_ACTIVE"
+                        }
+                    ],
+                    "removeConnections": [
+                        {
+                            "senderId": 1573543, // timer
+                            "state": "ZERO",
+                            "targetId": 1573541, // music
+                            "message": "INCREMENT"
+                        }
+                    ],
+                    "deleteIds": [
+                        1572980, // cutscene relay
+                        1573330, // activate pickup relay
+                        1573713, 1573712, 1573707, 1573714, // spider ball refill pickups
+                        1573379, 1573378, 1573377, 1573380, 1573381, 1573374, 1573373, 1573372, 1573375, 1573376 // grapple points
+                    ]
                 },
                 "Research Lab Hydra": {
                     "layers": {
@@ -3860,7 +4195,7 @@
                     "hudmemos": [
                         {
                             "id": 10000305,
-                            "text": "The door has been unlocked",
+                            "text": "&just=center;The door has been unlocked",
                             "messageTime": 8
                         }
                     ],
@@ -4861,7 +5196,7 @@
                             "blastShieldType": "None"
                         },
                         "1": {
-                            "shieldType": "Blue",
+                            "shieldType": "Wave Beam",
                             "blastShieldType": "None"
                         }
                     }
@@ -4921,7 +5256,7 @@
                             "blastShieldType": "None"
                         },
                         "1": {
-                            "shieldType": "Blue",
+                            "shieldType": "Wave Beam",
                             "blastShieldType": "None"
                         }
                     },
