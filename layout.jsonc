@@ -5360,9 +5360,27 @@
                         {
                             "id": 10000384,
                             "time": 0.5
+                        },
+                        {
+                            "id": 10000415,
+                            "time": 0.5,
+                            "startImmediately": true
                         }
                     ],
                     "addConnections": [
+                        // Despawn the top platform if the player isn't arriving
+                        {
+                            "senderId": 10000415, // timer
+                            "state": "ZERO",
+                            "targetId": 1900630,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 1900632, // trigger
+                            "state": "ENTERED",
+                            "targetId": 10000415,
+                            "message": "DEACTIVATE"
+                        },
                         // When the player scans the point, start the timer
                         {
                             "senderId": 10000383,
@@ -5402,7 +5420,7 @@
                             "id": 10000322,
                             "type": "Missile",
                             "model": "Shiny Missile",
-                            "scanText": "Shiny Missile (1 of 3)",
+                            "scanText": "Shiny Missile",
                             "hudmemoText": "Shiny Missile Acquired!\n(of 3)",
                             "maxIncrease": 10,
                             "position": [-70.607, -897.7503, 111.7]
@@ -8574,7 +8592,137 @@
                     ]
                 },
                 "Transport to Tallon Overworld West": {},
-                "Twin Fires Tunnel": {},
+                "Twin Fires Tunnel": {
+                    "pickups": [
+                        {
+                            "type": "Missile",
+                            "model": "Shiny Missile",
+                            "scanText": "Shiny Missile",
+                            "hudmemoText": "Shiny Missile Acquired!\n(of 3)",
+                            "maxIncrease": 10,
+                            "position": [362.5477, -585.8875, 28.1276]
+                        }
+                    ],
+                    "blocks": [
+                        {
+                            "position": [360.2, -585.4, 28.7],
+                            "scale": [0.5, 4, 4],
+                            "texture": "Mine"
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 10000418,
+                            "time": 0.02,
+                            "startImmediately": true
+                        },
+                        {
+                            "id": 10000417,
+                            "time": 15,
+                            "startImmediately": true,
+                            "looping": true
+                        }
+                    ],
+                    "liquids": [
+                        {
+                            "id": 10000416,
+                            "position": [337.5994, -608.5179, 24.0737],
+                            "scale": [47.130005, 57.37505, 7.000999],
+                            "type": "Lava"
+                        }
+                    ],
+                    "editObjs": {
+                        "1114117": { // lava
+                            "position": [337.5994, -608.5179, 19.2737],
+                            "scale": [47.130005, 57.37505, 7.000999]
+                        },
+                        // spider waypoints
+                        "1114176": { "position": [335.5224, -619.4476, 44.7569] },
+                        "1114231": { "position": [336.0049, -599.6613, 42.1435] },
+                        "1114126": { "position": [343.1356, -592.5867, 36.7374] },
+                        "1114127": { "position": [342.9356, -593.1867, 30.1257] },
+                        "1114128": { "position": [342.8356, -594.6867, 28.8257] },
+                        // lava gysers
+                        "1114145": { "position": [354.5573, -604.4015, 22.8792] },
+                        "1114141": { "position": [328.5853, -599.6154, 22.9002] },
+                        "1114149": { "position": [337.2604, -618.2208, 22.8912] }
+                    },
+                    "addConnections": [
+                        {
+                            "senderId": 10000418,
+                            "state": "ZERO",
+                            "targetId": 10000416,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000418,
+                            "state": "ZERO",
+                            "targetId": 1114117,
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000417,
+                            "state": "ZERO",
+                            "targetId": 1114117,
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000417,
+                            "state": "ZERO",
+                            "targetId": 10000416,
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 1114117,
+                            "state": "PLAY",
+                            "targetId": 10000416,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000416,
+                            "state": "PLAY",
+                            "targetId": 1114117,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1114117,
+                            "state": "PLAY",
+                            "targetId": 1114145,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1114117,
+                            "state": "PLAY",
+                            "targetId": 1114141,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1114117,
+                            "state": "PLAY",
+                            "targetId": 1114149,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000416,
+                            "state": "PLAY",
+                            "targetId": 1114145,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000416,
+                            "state": "PLAY",
+                            "targetId": 1114141,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000416,
+                            "state": "PLAY",
+                            "targetId": 1114149,
+                            "message": "ACTIVATE"
+                        }
+                    ],
+                    "deleteIds": [1114129, 1114171, 1114172, 1114173, 1114174, 1114175, 1114130, 1114177]
+                },
                 "Twin Fires": {
                     "superheated": true,
                     "doors": {
