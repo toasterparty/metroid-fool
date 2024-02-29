@@ -3802,6 +3802,102 @@
                             "position": [202.75, -629.31, 52.7]
                         }
                     ],
+                    "blocks": [
+                        {
+                            "position": [177, -664.4, 75.6],
+                            "scale": [1, 10, 10],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [221.4, -680.5, 80.7],
+                            "scale": [20, 19, 1],
+                            "texture": "Snow"
+                        },
+                        {
+                            "id": 10000431,
+                            "active": false,
+                            "position": [178.39, -666.5, 72.6],
+                            "scale": [1.8, 1.8, 1.8],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "id": 10000432,
+                            "active": false,
+                            "position": [178.39, -666.5, 70.6],
+                            "scale": [1.8, 1.8, 1.8],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "id": 10000433,
+                            "active": false,
+                            "position": [178.39, -666.5, 68.6],
+                            "scale": [1.8, 1.8, 1.8],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "id": 10000434,
+                            "active": false,
+                            "position": [178.39, -666.5, 66.6],
+                            "scale": [1.8, 1.8, 1.8],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "id": 10000444,
+                            "active": false,
+                            "position": [178.39, -666.5, 64.6],
+                            "scale": [1.8, 1.8, 1.8],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "id": 10000445,
+                            "active": false,
+                            "position": [186.19, -672.2, 75.3],
+                            "scale": [1.8, 1.8, 1.8],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "id": 10000446,
+                            "active": false,
+                            "position": [188.5, -673.8, 75.3],
+                            "scale": [1.8, 1.8, 1.8],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "id": 10000447,
+                            "active": false,
+                            "position": [190.59, -675.3, 75.3],
+                            "scale": [1.8, 1.8, 1.8],
+                            "texture": "Sandstone"
+                        },
+
+                        {
+                            "id": 10000451,
+                            "active": false,
+                            "position": [206.3, -682.9, 75.8],
+                            "scale": [1.8, 1.8, 1.2],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "id": 10000452,
+                            "active": false,
+                            "position": [208.09, -683.4, 75.8],
+                            "scale": [1.8, 1.8, 1.2],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "id": 10000453,
+                            "active": false,
+                            "position": [207.1, -683.1, 72.6],
+                            "scale": [5, 5, 0.2],
+                            "texture": "Sandstone"
+                        },
+
+                        {
+                            "position": [168.4, -632.7, 72.8],
+                            "scale": [2.5, 30, 0.2],
+                            "texture": "Sandstone"
+                        }
+                    ],
                     "counters": [
                         {
                             "id": 10000391,
@@ -3837,22 +3933,22 @@
                             "damageableTriggerId": 10000398,
                             "activateSlotId": 10000406,
                             "active": false,
-                            "position": [165, -630, 51],
-                            "rotation": [-90, 0, 0]
+                            "position": [174.0421, -659.6591, 75.2047],
+                            "rotation": [0, 0, 160]
                         },
                         {
                             "damageableTriggerId": 10000399,
                             "activateSlotId": 10000407,
                             "active": false,
-                            "position": [170, -630, 51],
-                            "rotation": [-90, 0, 0]
+                            "position": [221.337, -677.731, 82],
+                            "rotation": [0, 0, 180]
                         },
                         {
                             "damageableTriggerId": 10000400,
                             "activateSlotId": 10000408,
                             "active": false,
-                            "position": [175, -630, 51],
-                            "rotation": [-90, 0, 0]
+                            "position": [231.9247, -683.6417, 75.1588],
+                            "rotation": [0, 0, -90]
                         }
                     ],
                     "hudmemos": [
@@ -3880,6 +3976,167 @@
                             "scale": [30, 20, 1],
                             "force": [0, 0, -800],
                             "flags": 12288 // Detect Morphed Player | Apply Force
+                        },
+                        // prevent dropdown cheeese
+                        {
+                            "position": [181.8, -591.6, 75.2],
+                            "scale": [10, 10, 3],
+                            "force": [-300, 300, 100],
+                            "flags": 12288 // Detect Morphed Player | Apply Force
+                        },
+                        // prevent grapple cheese
+                        {
+                            "id": 10000429,
+                            "position": [272.57, -612.2785, 65.4934],
+                            "scale": [50, 40, 10]
+                        },
+                        // toggle track down
+                        {
+                            "id": 10000439,
+                            "active": false,
+                            "position": [178.39, -666.5, 72.6],
+                            "scale": [1.6, 1.6, 1.6],
+                            "damageAmount": 0.01
+                        },
+                        {
+                            "id": 10000440,
+                            "active": false,
+                            "position": [178.39, -666.5, 70.6],
+                            "scale": [1.6, 1.6, 1.6],
+                            "damageAmount": 0.01
+                        },
+                        {
+                            "id": 10000441,
+                            "active": false,
+                            "position": [178.39, -666.5, 68.6],
+                            "scale": [1.6, 1.6, 1.6],
+                            "damageAmount": 0.01
+                        },
+                        {
+                            "id": 10000442,
+                            "active": false,
+                            "position": [178.39, -666.5, 66.6],
+                            "scale": [1.6, 1.6, 1.6],
+                            "damageAmount": 0.01
+                        },
+                        {
+                            "id": 10000443,
+                            "active": false,
+                            "position": [178.39, -666.5, 64.6],
+                            "scale": [1.6, 1.6, 1.6],
+                            "damageAmount": 0.01
+                        },
+
+                        // toggle track across
+                        {
+                            "id": 10000448,
+                            "active": false,
+                            "position": [186.19, -672.2, 75.3],
+                            "scale": [1.6, 1.6, 1.6],
+                            "damageAmount": 0.01
+                        },
+                        {
+                            "id": 10000449,
+                            "active": false,
+                            "position": [188.5, -673.8, 75.3],
+                            "scale": [1.6, 1.6, 1.6],
+                            "damageAmount": 0.01
+                        },
+                        {
+                            "id": 10000450,
+                            "active": false,
+                            "position": [190.59, -675.3, 75.3],
+                            "scale": [1.6, 1.6, 1.6],
+                            "damageAmount": 0.01
+                        },
+
+                        {
+                            "id": 10000454,
+                            "active": false,
+                            "position": [206.3, -682.9, 75.8],
+                            "scale": [1.6, 1.6, 0.6],
+                            "damageAmount": 0.01
+                        },
+                        {
+                            "id": 10000455,
+                            "active": false,
+                            "position": [208.09, -683.4, 75.8],
+                            "scale": [1.6, 1.6, 0.6],
+                            "damageAmount": 0.01
+                        },
+
+                        /* Silding Bomb Slot */
+
+                        {
+                            "id": 10000457,
+                            // "active": false,
+                            "position": [227.0, -580.6, 63.0],
+                            "scale": [1.7, 1.7, 1.7],
+                            "damageAmount": 0.01
+                        },
+
+                        // track #2
+                        {
+                            "id": 10000468,
+                            // "active": false,
+                            "position": [219.7, -581.0, 73.3], // id: 10000462
+                            "scale": [2.5, 2.5, 1.8],
+                            "damageAmount": 0.01
+                        },
+                        {
+                            "id": 10000470,
+                            // "active": false,
+                            "position": [200.6, -584.2, 74.6], // id: 10000464
+                            "scale": [2.5, 2.5, 1.8],
+                            "damageAmount": 0.01
+                        },
+
+                        // track #3
+
+                        {
+                            "id": 10000485,
+                            // "active": false,
+                            "position": [170.0879, -648.6955, 75.5767], // id: 10000471
+                            "scale": [1.7, 2.1, 1.8],
+                            "damageAmount": 0.01
+                        },
+                        {
+                            "id": 10000486,
+                            // "active": false,
+                            "position": [167.5879, -648.6955, 75.5767], // id: 10000474
+                            "scale": [1.7, 2.1, 1.8],
+                            "damageAmount": 0.01
+                        },
+
+                        // track #4
+
+                        {
+                            "id": 10000491,
+                            // "active": false,
+                            "position": [170.0879, -648.6955, 73.7766], // id: 10000477
+                            "scale": [1.7, 2.1, 1.8],
+                            "damageAmount": 0.01
+                        },
+                        {
+                            "id": 10000492,
+                            // "active": false,
+                            "position": [167.8668, -616.8223, 73.7766], // id: 10000480
+                            "scale": [1.7, 2.1, 1.8],
+                            "damageAmount": 0.01
+                        },
+
+                        // prevent unmorph cheese
+                        {
+                            "id": 10000487,
+                            "position": [168.4, -632.7, 72.8],
+                            "scale": [10, 40, 5]
+                        }
+
+                    ],
+                    "playerHints": [
+                        {
+                            "id": 10000488,
+                            "disableUnmorph": true
                         }
                     ],
                     "platforms": [
@@ -3894,6 +4151,83 @@
                             "active": false,
                             "position": [273.4, -650.6, 65.7],
                             "type": "Snow"
+                        },
+                        {
+                            "position": [185.7, -595.7, 68.7],
+                            "rotation": [0, 0, 135],
+                            "type": "LongBlock"
+                        },
+                        {
+                            "position": [177.5612, -667.176, 58.0834],
+                            "rotation": [0, 0, 0],
+                            "type": "BombBox"
+                        },
+                        {
+                            "position": [192.1, -677.1, 75.3],
+                            "rotation": [0, 0, 0],
+                            "type": "BombBox"
+                        },
+                        {
+                            "id": 10000456,
+                            // "active": false,
+                            "position": [227.0, -581.0, 63.0],
+                            "type": "Block"
+                        },
+                        {
+                            "id": 10000467,
+                            // "active": false,
+                            "position": [219.7, -581.0, 73.3],
+                            "type": "Block"
+                        },
+                        {
+                            "id": 10000469,
+                            // "active": false,
+                            "position": [200.6, -584.2, 74.6],
+                            "type": "Block"
+                        },
+
+                        // track #3
+                        {
+                            "id": 10000483,
+                            // "active": false,
+                            "position": [170.0879, -648.6955, 75.5767], // id: 10000471
+                            "type": "Block"
+                        },
+                        {
+                            "id": 10000484,
+                            // "active": false,
+                            "position": [167.5879, -648.6955, 75.5767], // id: 10000474
+                            "type": "Block"
+                        },
+
+                        // track #4
+
+                        {
+                            "id": 10000489,
+                            // "active": false,
+                            "position": [170.0879, -648.6955, 73.7766], // id: 10000477
+                            "type": "Block"
+                        },
+                        {
+                            "id": 10000490,
+                            // "active": false,
+                            "position": [167.8668, -616.8223, 73.7766], // id: 10000480
+                            "type": "Block"
+                        }
+                    ],
+                    "lockOnPoints": [
+                        {
+                            "position": [212.3, -602, 89.9],
+                            "isGrapple": true
+                        },
+                        {
+                            "position": [242.4748, -621.2287, 90],
+                            "isGrapple": true,
+                            "id2": 10000430
+                        },
+                        {
+                            "position": [220.9377, -647.8485, 94.8744],
+                            "isGrapple": true
                         }
                     ],
                     "waypoints": [
@@ -3906,6 +4240,116 @@
                             "id": 10000411,
                             "position": [257, -682, 66],
                             "speed": 3
+                        },
+
+                        // track #1
+
+                        {
+                            "id": 10000458,
+                            "position": [227.0, -580.6, 63.0],
+                            "speed": 10
+                        },
+                        {
+                            "id": 10000459,
+                            "position": [213.7, -580.6, 66.0],
+                            "speed": 10
+                        },
+                        {
+                            "id": 10000460,
+                            "position": [227.0, -580.6, 71.0],
+                            "speed": 10
+                        },
+                        {
+                            "id": 10000461,
+                            "position": [213.7, -580.6, 72.0],
+                            "speed": 10
+                        },
+
+                        // track #2
+
+                        {
+                            "id": 10000462,
+                            "position": [219.7, -581.0, 73.3],
+                            "speed": 12
+                        },
+                        {
+                            "id": 10000463,
+                            "position": [219.7, -581.0, 74.6],
+                            "speed": 12
+                        },
+                        {
+                            "id": 10000464,
+                            "position": [200.6, -584.2, 74.6],
+                            "speed": 12
+                        },
+                        {
+                            "id": 10000465,
+                            "position": [200.6, -584.2, 73.3],
+                            "speed": 12
+                        },
+
+                        // track #3
+                        {
+                            "id": 10000471,
+                            "position": [170.0879, -648.6955, 75.5767],
+                            "speed": 8
+                        },
+                        {
+                            "id": 10000472,
+                            "position": [167.0036, -632.694, 75.5241],
+                            "speed": 8
+                        },
+                        {
+                            "id": 10000473,
+                            "position": [170.3668, -616.8223, 75.5372],
+                            "speed": 8
+                        },
+                        {
+                            "id": 10000474,
+                            "position": [167.8668, -616.8223, 75.5372],
+                            "speed": 8
+                        },
+                        {
+                            "id": 10000475,
+                            "position": [164.5037, -632.694, 75.5241],
+                            "speed": 8
+                        },
+                        {
+                            "id": 10000476,
+                            "position": [167.5879, -648.6955, 75.5767],
+                            "speed": 8
+                        },
+
+                        // track #4
+                        {
+                            "id": 10000477,
+                            "position": [170.0879, -648.6955, 73.7766],
+                            "speed": 8
+                        },
+                        {
+                            "id": 10000478,
+                            "position": [167.0036, -632.694, 73.7766],
+                            "speed": 8
+                        },
+                        {
+                            "id": 10000479,
+                            "position": [170.3668, -616.8223, 73.7766],
+                            "speed": 8
+                        },
+                        {
+                            "id": 10000480,
+                            "position": [167.8668, -616.8223, 73.7766],
+                            "speed": 8
+                        },
+                        {
+                            "id": 10000481,
+                            "position": [164.5037, -632.694, 73.7766],
+                            "speed": 8
+                        },
+                        {
+                            "id": 10000482,
+                            "position": [167.5879, -648.6955, 73.7766],
+                            "speed": 8
                         }
                     ],
                     "timers": [
@@ -3928,6 +4372,22 @@
                         {
                             "id": 1573076, // thardus start timer
                             "time": 3
+                        },
+                        {
+                            "id": 10000435,
+                            "time": 0.5
+                        },
+                        {
+                            "id": 10000436,
+                            "time": 0.5
+                        },
+                        {
+                            "id": 10000437,
+                            "time": 0.5
+                        },
+                        {
+                            "id": 10000438,
+                            "time": 0.5
                         }
                     ],
                     "editObjs": {
@@ -3935,8 +4395,9 @@
                             "position": [232, -705, 66]
                         },
                         "1572979": { // thardus
-                            "scale": [5, 5, 5],
-                            "speed": 0.5,
+                            "position": [214.3853, -630.7892, 62],
+                            "scale": [5, 5, 2.5],
+                            "speed": 0.3,
                             "health": 10000000
                         },
                         "1572873": { // Thardus rock projectile
@@ -4119,6 +4580,803 @@
                             "state": "ZERO",
                             "targetId": 10000412, // platform
                             "message": "TOGGLE_ACTIVE"
+                        },
+                        /* grapple bomb slot */
+                        {
+                            "senderId": 10000429,
+                            "state": "ENTERED",
+                            "targetId": 10000430,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000429,
+                            "state": "EXITED",
+                            "targetId": 10000430,
+                            "message": "ACTIVATE"
+                        },
+                        /* Above Exit Bomb Slot */
+                        // timer loop
+                        {
+                            "senderId": 1573322, // pickup
+                            "state": "ARRIVED",
+                            "targetId": 10000435, // timer loop
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000435, // timer
+                            "state": "ZERO",
+                            "targetId": 10000436,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000436, // timer
+                            "state": "ZERO",
+                            "targetId": 10000437,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000437, // timer
+                            "state": "ZERO",
+                            "targetId": 10000438,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000438, // timer
+                            "state": "ZERO",
+                            "targetId": 10000435,
+                            "message": "RESET_AND_START"
+                        },
+
+                        // timer 1
+                        {
+                            "senderId": 10000435, // timer
+                            "state": "ZERO",
+                            "targetId": 10000431,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000435, // timer
+                            "state": "ZERO",
+                            "targetId": 10000432,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000435, // timer
+                            "state": "ZERO",
+                            "targetId": 10000433,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000435, // timer
+                            "state": "ZERO",
+                            "targetId": 10000434,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000435, // timer
+                            "state": "ZERO",
+                            "targetId": 10000444,
+                            "message": "DEACTIVATE"
+                        },
+
+                        {
+                            "senderId": 10000435, // timer
+                            "state": "ZERO",
+                            "targetId": 10000439,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000435, // timer
+                            "state": "ZERO",
+                            "targetId": 10000440,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000435, // timer
+                            "state": "ZERO",
+                            "targetId": 10000441,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000435, // timer
+                            "state": "ZERO",
+                            "targetId": 10000442,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000435, // timer
+                            "state": "ZERO",
+                            "targetId": 10000443,
+                            "message": "DEACTIVATE"
+                        },
+
+                        {
+                            "senderId": 10000435, // timer
+                            "state": "ZERO",
+                            "targetId": 10000445,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000435, // timer
+                            "state": "ZERO",
+                            "targetId": 10000446,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000435, // timer
+                            "state": "ZERO",
+                            "targetId": 10000447,
+                            "message": "ACTIVATE"
+                        },
+
+                        {
+                            "senderId": 10000435, // timer
+                            "state": "ZERO",
+                            "targetId": 10000448,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000435, // timer
+                            "state": "ZERO",
+                            "targetId": 10000449,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000435, // timer
+                            "state": "ZERO",
+                            "targetId": 10000450,
+                            "message": "ACTIVATE"
+                        },
+
+                        {
+                            "senderId": 10000435, // timer
+                            "state": "ZERO",
+                            "targetId": 10000451,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000435, // timer
+                            "state": "ZERO",
+                            "targetId": 10000452,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000435, // timer
+                            "state": "ZERO",
+                            "targetId": 10000453,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+
+                        {
+                            "senderId": 10000435, // timer
+                            "state": "ZERO",
+                            "targetId": 10000454,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000435, // timer
+                            "state": "ZERO",
+                            "targetId": 10000455,
+                            "message": "DEACTIVATE"
+                        },
+
+                        // timer 2
+                        {
+                            "senderId": 10000436, // timer
+                            "state": "ZERO",
+                            "targetId": 10000431,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000436, // timer
+                            "state": "ZERO",
+                            "targetId": 10000432,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000436, // timer
+                            "state": "ZERO",
+                            "targetId": 10000433,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000436, // timer
+                            "state": "ZERO",
+                            "targetId": 10000434,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000436, // timer
+                            "state": "ZERO",
+                            "targetId": 10000444,
+                            "message": "DEACTIVATE"
+                        },
+
+                        {
+                            "senderId": 10000436, // timer
+                            "state": "ZERO",
+                            "targetId": 10000439,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000436, // timer
+                            "state": "ZERO",
+                            "targetId": 10000440,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000436, // timer
+                            "state": "ZERO",
+                            "targetId": 10000441,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000436, // timer
+                            "state": "ZERO",
+                            "targetId": 10000442,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000436, // timer
+                            "state": "ZERO",
+                            "targetId": 10000443,
+                            "message": "DEACTIVATE"
+                        },
+
+                        {
+                            "senderId": 10000436, // timer
+                            "state": "ZERO",
+                            "targetId": 10000445,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000436, // timer
+                            "state": "ZERO",
+                            "targetId": 10000446,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000436, // timer
+                            "state": "ZERO",
+                            "targetId": 10000447,
+                            "message": "DEACTIVATE"
+                        },
+
+                        {
+                            "senderId": 10000436, // timer
+                            "state": "ZERO",
+                            "targetId": 10000448,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000436, // timer
+                            "state": "ZERO",
+                            "targetId": 10000449,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000436, // timer
+                            "state": "ZERO",
+                            "targetId": 10000450,
+                            "message": "DEACTIVATE"
+                        },
+
+                        {
+                            "senderId": 10000436, // timer
+                            "state": "ZERO",
+                            "targetId": 10000451,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000436, // timer
+                            "state": "ZERO",
+                            "targetId": 10000452,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+
+                        {
+                            "senderId": 10000436, // timer
+                            "state": "ZERO",
+                            "targetId": 10000454,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000436, // timer
+                            "state": "ZERO",
+                            "targetId": 10000455,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+
+                        // timer 3
+                        {
+                            "senderId": 10000437, // timer
+                            "state": "ZERO",
+                            "targetId": 10000431,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000437, // timer
+                            "state": "ZERO",
+                            "targetId": 10000432,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000437, // timer
+                            "state": "ZERO",
+                            "targetId": 10000433,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000437, // timer
+                            "state": "ZERO",
+                            "targetId": 10000434,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000437, // timer
+                            "state": "ZERO",
+                            "targetId": 10000444,
+                            "message": "ACTIVATE"
+                        },
+
+                        {
+                            "senderId": 10000437, // timer
+                            "state": "ZERO",
+                            "targetId": 10000439,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000437, // timer
+                            "state": "ZERO",
+                            "targetId": 10000440,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000437, // timer
+                            "state": "ZERO",
+                            "targetId": 10000441,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000437, // timer
+                            "state": "ZERO",
+                            "targetId": 10000442,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000437, // timer
+                            "state": "ZERO",
+                            "targetId": 10000443,
+                            "message": "ACTIVATE"
+                        },
+
+                        {
+                            "senderId": 10000437, // timer
+                            "state": "ZERO",
+                            "targetId": 10000445,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000437, // timer
+                            "state": "ZERO",
+                            "targetId": 10000446,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000437, // timer
+                            "state": "ZERO",
+                            "targetId": 10000447,
+                            "message": "DEACTIVATE"
+                        },
+
+                        {
+                            "senderId": 10000437, // timer
+                            "state": "ZERO",
+                            "targetId": 10000448,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000437, // timer
+                            "state": "ZERO",
+                            "targetId": 10000449,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000437, // timer
+                            "state": "ZERO",
+                            "targetId": 10000450,
+                            "message": "DEACTIVATE"
+                        },
+
+                        {
+                            "senderId": 10000437, // timer
+                            "state": "ZERO",
+                            "targetId": 10000451,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000437, // timer
+                            "state": "ZERO",
+                            "targetId": 10000452,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+
+                        {
+                            "senderId": 10000437, // timer
+                            "state": "ZERO",
+                            "targetId": 10000454,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000437, // timer
+                            "state": "ZERO",
+                            "targetId": 10000455,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+
+                        // timer 4
+                        {
+                            "senderId": 10000438, // timer
+                            "state": "ZERO",
+                            "targetId": 10000431,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000438, // timer
+                            "state": "ZERO",
+                            "targetId": 10000432,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000438, // timer
+                            "state": "ZERO",
+                            "targetId": 10000433,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000438, // timer
+                            "state": "ZERO",
+                            "targetId": 10000434,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000438, // timer
+                            "state": "ZERO",
+                            "targetId": 10000444,
+                            "message": "DEACTIVATE"
+                        },
+
+                        {
+                            "senderId": 10000438, // timer
+                            "state": "ZERO",
+                            "targetId": 10000439,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000438, // timer
+                            "state": "ZERO",
+                            "targetId": 10000440,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000438, // timer
+                            "state": "ZERO",
+                            "targetId": 10000441,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000438, // timer
+                            "state": "ZERO",
+                            "targetId": 10000442,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000438, // timer
+                            "state": "ZERO",
+                            "targetId": 10000443,
+                            "message": "DEACTIVATE"
+                        },
+
+                        {
+                            "senderId": 10000438, // timer
+                            "state": "ZERO",
+                            "targetId": 10000445,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000438, // timer
+                            "state": "ZERO",
+                            "targetId": 10000446,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000438, // timer
+                            "state": "ZERO",
+                            "targetId": 10000447,
+                            "message": "DEACTIVATE"
+                        },
+
+                        {
+                            "senderId": 10000438, // timer
+                            "state": "ZERO",
+                            "targetId": 10000448,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000438, // timer
+                            "state": "ZERO",
+                            "targetId": 10000449,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000438, // timer
+                            "state": "ZERO",
+                            "targetId": 10000450,
+                            "message": "DEACTIVATE"
+                        },
+
+                        {
+                            "senderId": 10000438, // timer
+                            "state": "ZERO",
+                            "targetId": 10000451,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000438, // timer
+                            "state": "ZERO",
+                            "targetId": 10000452,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+
+                        {
+                            "senderId": 10000438, // timer
+                            "state": "ZERO",
+                            "targetId": 10000454,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000438, // timer
+                            "state": "ZERO",
+                            "targetId": 10000455,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+
+                        /* Sliding Bomb Slot */
+
+                        // track #1
+
+                        {
+                            "senderId": 10000456, // platform
+                            "state": "PLAY",
+                            "targetId": 10000457, // damage trigger
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000456, // platform
+                            "state": "ACTIVE",
+                            "targetId": 10000458, // waypoint
+                            "message": "FOLLOW"
+                        },
+                        {
+                            "senderId": 10000458, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000459, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000459, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000460, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000460, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000461, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000461, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000458, // waypoint
+                            "message": "NEXT"
+                        },
+
+                        // track #2
+                        {
+                            "senderId": 10000467, // platform
+                            "state": "PLAY",
+                            "targetId": 10000468, // damage trigger
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000467, // platform
+                            "state": "ACTIVE",
+                            "targetId": 10000462, // waypoint
+                            "message": "FOLLOW"
+                        },
+
+                        {
+                            "senderId": 10000469, // platform
+                            "state": "PLAY",
+                            "targetId": 10000470, // damage trigger
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000469, // platform
+                            "state": "ACTIVE",
+                            "targetId": 10000464, // waypoint
+                            "message": "FOLLOW"
+                        },
+
+
+                        {
+                            "senderId": 10000462, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000463, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000463, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000464, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000464, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000465, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000465, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000462, // waypoint
+                            "message": "NEXT"
+                        },
+
+                        // track #3
+
+                        {
+                            "senderId": 10000483, // platform
+                            "state": "PLAY",
+                            "targetId": 10000485, // damage trigger
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000483, // platform
+                            "state": "ACTIVE",
+                            "targetId": 10000471, // waypoint
+                            "message": "FOLLOW"
+                        },
+
+                        {
+                            "senderId": 10000484, // platform
+                            "state": "PLAY",
+                            "targetId": 10000486, // damage trigger
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000484, // platform
+                            "state": "ACTIVE",
+                            "targetId": 10000474, // waypoint
+                            "message": "FOLLOW"
+                        },
+
+                        {
+                            "senderId": 10000471, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000472, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000472, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000473, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000473, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000474, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000474, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000475, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000475, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000476, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000476, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000471, // waypoint
+                            "message": "NEXT"
+                        },
+
+                        // track #4
+
+                        {
+                            "senderId": 10000489, // platform
+                            "state": "PLAY",
+                            "targetId": 10000491, // damage trigger
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000489, // platform
+                            "state": "ACTIVE",
+                            "targetId": 10000477, // waypoint
+                            "message": "FOLLOW"
+                        },
+
+                        {
+                            "senderId": 10000490, // platform
+                            "state": "PLAY",
+                            "targetId": 10000492, // damage trigger
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000490, // platform
+                            "state": "ACTIVE",
+                            "targetId": 10000480, // waypoint
+                            "message": "FOLLOW"
+                        },
+
+                        {
+                            "senderId": 10000482, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000481, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000481, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000480, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000480, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000479, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000479, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000478, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000478, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000477, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000477, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000482, // waypoint
+                            "message": "NEXT"
+                        },
+
+                        // unmorph cheese
+                        {
+                            "senderId": 10000487, // trigger
+                            "state": "ENTERED",
+                            "targetId": 10000488, // player hint
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 10000487, // trigger
+                            "state": "EXITED",
+                            "targetId": 10000488, // player hint
+                            "message": "DECREMENT"
                         }
                     ],
                     "removeConnections": [
@@ -4133,7 +5391,8 @@
                         1572980, // cutscene relay
                         1573330, // activate pickup relay
                         1573713, 1573712, 1573707, 1573714, // spider ball refill pickups
-                        1573379, 1573378, 1573377, 1573380, 1573381, 1573374, 1573373, 1573372, 1573375, 1573376 // grapple points
+                        1573379, 1573378, 1573377, 1573380, 1573381, 1573374, 1573373, 1573372, 1573375, 1573376, // grapple points
+                        1573287 // thardus camera hint
                     ]
                 },
                 "Research Lab Hydra": {
@@ -9944,8 +11203,8 @@
                             "blastShieldType": "None"
                         },
                         "1": {
-                            "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "shieldType": "Ice Spreader",
+                            "blastShieldType": "Ice Spreader"
                         }
                     }
                 },
