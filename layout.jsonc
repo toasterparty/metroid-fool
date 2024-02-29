@@ -142,118 +142,119 @@
         "2003358163": [
             "This interface indicates the controls for the door are located elsewhere in this region."
         ],
-        "89302102": [
-            "Combat Visor",
-            "Scan Visor",
-            "X-Ray Visor",
-            "Thermal Visor",
-            "Power Beam",
-            "Ice Beam",
-            "Wave Beam",
-            "Plasma Beam",
-            "Phazon Beam",
-            "E",
-            "Warning",
-            "Damage",
-            "Missiles\nLow",
-            "Depleted",
-            "Scanning…",
-            "Scan complete.",
-            "Object out of scanning range.",
-            "Press &image=SI,0.70,0.68,05AF9CAA; to continue.",
-            "&just=center;Thermal Visor overloaded.\nReturn to Combat Visor.",
-            "&just=center;You have been frozen. Tap &image=SI,0.70,0.68,833BEE04; rapidly to break free.",
-            "&just=center;You have been frozen. Drop Bombs to break free.",
-            "&just=center;Hyper-mode",
-            "Yes",
-            "No",
-            "Quit Game?",
-            "Bunger?",
-            "Save your progress to the Memory Card in Slot A? Previous data will be overwritten.",
-            "Quit Metroid? Progress since the last save will be lost.",
-            "Continue playing?",
-            "A new&main-color=#FF3333; [",
-            "] &main-color=#89D6FF;entry has been downloaded to your Log Book.",
-            "Pirate Data",
-            "Chozo Lore",
-            "Creatures",
-            "Research",
-            "Artifacts",
-            "[New Game]",
-            "Metroid Fusion Connection Bonuses",
-            "Erase",
-            "[Samus A]",
-            "[Samus B]",
-            "[Samus C]",
-            "&image=SI,1.0,0.68,6CBE6EF2;\nExit",
-            "&image=SI,1.0,0.68,EA2A1C5C;  Key/Legend",
-            "World \nMap",
-            "Level\nMap",
-            "Rotate     ",
-            "Move      ",
-            " Zoom ",
-            "&line-extra-space=4;&image=SI, 0.6875,0.6875,FE2235F5; - Any Beam\n&image=SI, 0.6875,0.6875,41031B9B; - Wave Beam\n&image=SI, 0.6875,0.6875,40074106; - Ice Beam\n&image=SI, 0.6875,0.6875,A9D17D44; - Plasma Beam\n&image=SI, 0.6875,0.6875,95401DA9; - Missile\n&image=SI, 0.6875,0.6875,81DFB050; - Opened\n&image=SI, 0.6875,0.6875,8A78A5BF; - Elevator\n&image=SI, 0.6875,0.6875,39C0091E; - Missile Recharge\n&image=SI, 0.6875,0.6875,C6FA23D1; - Save Station\n&image=SI, 0.6875,0.6875,CB91BD62; - Hint\n",
-            "Okay to erase?",
-            "    -- -- -- -- -- --",
-            " --:--",
-            " -- -- --",
-            "Elapsed",
-            "Legend",
-            "Browse",
-            "Pan",
-            "Zoom",
-            "Auto",
-            "Reset View",
-            "Exit",
-            "Exit",
-            "Metroid Fusion Suit",
-            "Enabled",
-            "Disabled",
-            "Play NES Metroid",
-            "Start",
-            "Connect the Game Boy Advance to Socket\n2, 3, or 4 on the Nintendo GameCube.",
-            "Data link failed. Retry?",
-            "Data link complete. Please turn off your Game Boy Advance. Do not remove the Memory Card.",
-            "Data link complete. Please turn off\nyour Game Boy Advance.",
-            "Linking...do not touch the Nintendo GameCube Game Boy Advance cable, Memory Card, or POWER Button.",
-            "Insert a Metroid Fusion Game Pak\ninto the Game Boy Advance.",
-            "On the Game Boy Advance, press and hold\nSTART and SELECT then turn the power ON.",
-            "Begin data link to the Game Boy Advance?",
-            "Turn off the Game Boy Advance.",
-            "To play NES Metroid on your\nNintendo GameCube:\n\nComplete Metroid Fusion for the Game Boy® Advance and connect Metroid Fusion to Metroid Prime.",
-            "To enable Samus's Fusion Suit \nin Metroid Prime:\n\nComplete Metroid Prime and connect Metroid Fusion for the Game Boy® Advance to Metroid Prime.",
-            "You have not completed Metroid Fusion. You must complete Metroid Fusion to unlock NES Metroid.",
-            "You have not completed Metroid Prime. You must complete Metroid Prime to unlock Samus's Fusion Suit in Metroid Prime.",
-            "&image=SI,0.70,0.68,05AF9CAA; Okay",
-            "&image=SI,0.70,0.68,833BEE04; Back",
-            "&image=SI,0.70,0.68,05AF9CAA; Proceed",
-            "&image=SI,0.70,0.68,05AF9CAA; Retry",
-            "&image=SI,0.70,0.68,05AF9CAA; Select",
-            "Parasite Queen",
-            "Foie Gras",
-            "Thardus",
-            "Omega Pirate",
-            "Meta Ridley",
-            "Metroid Prime",
-            " ",
-            " ",
-            "Options",
-            "Cancel",
-            "Image Gallery",
-            "MAIN MENU",
-            "MAIN MENU",
-            "OPTIONS",
-            "METROID FUSION CONNECTION BONUSES",
-            "Normal Mode",
-            "Hard Mode",
-            "Press &image=SA,3.0,1.0,1.0,46434ED3,34E79314; to quit.",
-            "&just=center;Use the Morph Ball Boost to get out of the way.",
-            "&just=center;Artifact acquired.",
-            "[Hard A]",
-            "[Hard B]",
-            "[Hard C]",
-            "&just=center;Power Bomb ammunition acquired"
-        ],
+        // Commented out because you get "Invalid" on the title screen
+        // "89302102": [
+        //     "Combat Visor",
+        //     "Scan Visor",
+        //     "X-Ray Visor",
+        //     "Thermal Visor",
+        //     "Power Beam",
+        //     "Ice Beam",
+        //     "Wave Beam",
+        //     "Plasma Beam",
+        //     "Phazon Beam",
+        //     "E",
+        //     "Warning",
+        //     "Damage",
+        //     "Missiles\nLow",
+        //     "Depleted",
+        //     "Scanning…",
+        //     "Scan complete.",
+        //     "Object out of scanning range.",
+        //     "Press &image=SI,0.70,0.68,05AF9CAA; to continue.",
+        //     "&just=center;Thermal Visor overloaded.\nReturn to Combat Visor.",
+        //     "&just=center;You have been frozen. Tap &image=SI,0.70,0.68,833BEE04; rapidly to break free.",
+        //     "&just=center;You have been frozen. Drop Bombs to break free.",
+        //     "&just=center;Hyper-mode",
+        //     "Yes",
+        //     "No",
+        //     "Quit Game?",
+        //     "Bunger?",
+        //     "Save your progress to the Memory Card in Slot A? Previous data will be overwritten.",
+        //     "Quit Metroid? Progress since the last save will be lost.",
+        //     "Continue playing?",
+        //     "A new&main-color=#FF3333; [",
+        //     "] &main-color=#89D6FF;entry has been downloaded to your Log Book.",
+        //     "Pirate Data",
+        //     "Chozo Lore",
+        //     "Creatures",
+        //     "Research",
+        //     "Artifacts",
+        //     "[New Game]",
+        //     "Metroid Fusion Connection Bonuses",
+        //     "Erase",
+        //     "[Samus A]",
+        //     "[Samus B]",
+        //     "[Samus C]",
+        //     "&image=SI,1.0,0.68,6CBE6EF2;\nExit",
+        //     "&image=SI,1.0,0.68,EA2A1C5C;  Key/Legend",
+        //     "World \nMap",
+        //     "Level\nMap",
+        //     "Rotate     ",
+        //     "Move      ",
+        //     " Zoom ",
+        //     "&line-extra-space=4;&image=SI, 0.6875,0.6875,FE2235F5; - Any Beam\n&image=SI, 0.6875,0.6875,41031B9B; - Wave Beam\n&image=SI, 0.6875,0.6875,40074106; - Ice Beam\n&image=SI, 0.6875,0.6875,A9D17D44; - Plasma Beam\n&image=SI, 0.6875,0.6875,95401DA9; - Missile\n&image=SI, 0.6875,0.6875,81DFB050; - Opened\n&image=SI, 0.6875,0.6875,8A78A5BF; - Elevator\n&image=SI, 0.6875,0.6875,39C0091E; - Missile Recharge\n&image=SI, 0.6875,0.6875,C6FA23D1; - Save Station\n&image=SI, 0.6875,0.6875,CB91BD62; - Hint\n",
+        //     "Okay to erase?",
+        //     "    -- -- -- -- -- --",
+        //     " --:--",
+        //     " -- -- --",
+        //     "Elapsed",
+        //     "Legend",
+        //     "Browse",
+        //     "Pan",
+        //     "Zoom",
+        //     "Auto",
+        //     "Reset View",
+        //     "Exit",
+        //     "Exit",
+        //     "Metroid Fusion Suit",
+        //     "Enabled",
+        //     "Disabled",
+        //     "Play NES Metroid",
+        //     "Start",
+        //     "Connect the Game Boy Advance to Socket\n2, 3, or 4 on the Nintendo GameCube.",
+        //     "Data link failed. Retry?",
+        //     "Data link complete. Please turn off your Game Boy Advance. Do not remove the Memory Card.",
+        //     "Data link complete. Please turn off\nyour Game Boy Advance.",
+        //     "Linking...do not touch the Nintendo GameCube Game Boy Advance cable, Memory Card, or POWER Button.",
+        //     "Insert a Metroid Fusion Game Pak\ninto the Game Boy Advance.",
+        //     "On the Game Boy Advance, press and hold\nSTART and SELECT then turn the power ON.",
+        //     "Begin data link to the Game Boy Advance?",
+        //     "Turn off the Game Boy Advance.",
+        //     "To play NES Metroid on your\nNintendo GameCube:\n\nComplete Metroid Fusion for the Game Boy® Advance and connect Metroid Fusion to Metroid Prime.",
+        //     "To enable Samus's Fusion Suit \nin Metroid Prime:\n\nComplete Metroid Prime and connect Metroid Fusion for the Game Boy® Advance to Metroid Prime.",
+        //     "You have not completed Metroid Fusion. You must complete Metroid Fusion to unlock NES Metroid.",
+        //     "You have not completed Metroid Prime. You must complete Metroid Prime to unlock Samus's Fusion Suit in Metroid Prime.",
+        //     "&image=SI,0.70,0.68,05AF9CAA; Okay",
+        //     "&image=SI,0.70,0.68,833BEE04; Back",
+        //     "&image=SI,0.70,0.68,05AF9CAA; Proceed",
+        //     "&image=SI,0.70,0.68,05AF9CAA; Retry",
+        //     "&image=SI,0.70,0.68,05AF9CAA; Select",
+        //     "Parasite Queen",
+        //     "Foie Gras",
+        //     "Thardus",
+        //     "Omega Pirate",
+        //     "Meta Ridley",
+        //     "Metroid Prime",
+        //     " ",
+        //     " ",
+        //     "Options",
+        //     "Cancel",
+        //     "Image Gallery",
+        //     "MAIN MENU",
+        //     "MAIN MENU",
+        //     "OPTIONS",
+        //     "METROID FUSION CONNECTION BONUSES",
+        //     "Normal Mode",
+        //     "Hard Mode",
+        //     "Press &image=SA,3.0,1.0,1.0,46434ED3,34E79314; to quit.",
+        //     "&just=center;Use the Morph Ball Boost to get out of the way.",
+        //     "&just=center;Artifact acquired.",
+        //     "[Hard A]",
+        //     "[Hard B]",
+        //     "[Hard C]",
+        //     "&just=center;Power Bomb ammunition acquired"
+        // ],
         "3230660781": ["Water Pool"],
         "1487098604": [
             "The Artifact of Lifegiver is where it belongs.",
@@ -9039,8 +9040,8 @@
                             "blastShieldType": "None"
                         },
                         "1": {
-                            "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "shieldType": "Flamethrower",
+                            "blastShieldType": "Flamethrower"
                         }
                     },
                     "layers": {
@@ -9422,7 +9423,10 @@
                 "Storage Cavern": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Power Bomb",
+                            "model": "Power Bomb Expansion",
+                            "currIncrease": 1,
+                            "maxIncrease": 0
                         }
                     ],
                     "doors": {
@@ -11396,7 +11400,7 @@
                 "Elite Quarters": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Space Jump Boots"
                         }
                     ],
                     "doors": {
@@ -11414,7 +11418,9 @@
                     "pickups": [
                         {
                             // ID: 1770673
-                            "type": "Power Bomb"
+                            "type": "Power Bomb",
+                            "currIncrease": 1,
+                            "maxIncrease": 4
                         }
                     ],
                     "doors": {
@@ -11776,6 +11782,14 @@
                     }
                 },
                 "Metroid Quarantine A": {
+                    "layers": {
+                        "1": false, // 1st pass
+                        "2": false, // metroid breakout
+                        "3": false, // 3rd pass
+                        "4": false, // cinematic
+                        "5": true, // chubb weed
+                        "6": false // metroid tubes
+                    },
                     "pickups": [
                         {
                             "type": "Nothing"
@@ -11790,7 +11804,27 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "extraScans": [
+                        {
+                            "id": 10000428,
+                            "position": [153.514, 173.4871, -89.8067],
+                            "isRed": true,
+                            "text": "Magic Carpet Operational"
+                        }
+                    ],
+                    // "platforms": [
+                    //     {
+                    //         "id": 10000428,
+                    //         "position": [],
+                    //         "type": "HalfBlock"
+                    //     }
+                    // ],
+                    "deleteIds": [
+                        2097686, 2097839, 2097840, 2098221, 2098250, // metroids
+                        2097564, 2097565, 2099069, 2099068, // walls
+                        2097385, 2097386, 2097387, 2097392 // spider track
+                    ]
                 },
                 "Quarantine Access B": {
                     "doors": {
@@ -13421,6 +13455,11 @@
                 },
                 "Transport to Chozo Ruins West": {},
                 "Root Cave": {
+                    "doors": {
+                        "2": {
+                            "shieldType": "Wave Beam"
+                        }
+                    },
                     "pickups": [
                         // Side A
                         {
@@ -14139,6 +14178,7 @@
                     ]
                 },
                 "Main Ventilation Shaft Section C": {
+                    "removeWater": true,
                     "doors": {
                         "1": {
                             "shieldType": "Blue",
@@ -14176,17 +14216,19 @@
                 "Arbor Chamber": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Wavebuster"
                         }
                     ],
                     "doors": {
                         "0": {
-                            "shieldType": "Blue",
+                            "shieldType": "Wave Beam",
                             "blastShieldType": "None"
                         }
                     }
                 },
-                "Main Ventilation Shaft Section B": {},
+                "Main Ventilation Shaft Section B": {
+                    "removeWater": true
+                },
                 "Transport to Chozo Ruins East": {
                     "doors": {
                         "0": {
@@ -14203,7 +14245,9 @@
                         }
                     }
                 },
-                "Main Ventilation Shaft Section A": {},
+                "Main Ventilation Shaft Section A": {
+                    "removeWater": true
+                },
                 "Reactor Core": {
                     "removeWater": true,
                     "pickups": [
@@ -14245,17 +14289,32 @@
                         }
                     ]
                 },
-                "Reactor Access": {},
+                "Reactor Access": {
+                    "removeWater": true,
+                    "doors": {
+                        "2": {
+                            "shieldType": "Disabled"
+                        }
+                    }
+                },
                 "Cargo Freight Lift to Deck Gamma": {
+                    "removeWater": true,
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Health Refill",
+                            "currIncrease": 50,
+                            "maxIncrease": 0
                         }
                     ]
                 },
-                "Savestation": {},
-                "Deck Beta Transit Hall": {},
+                "Savestation": {
+                    "removeWater": true
+                },
+                "Deck Beta Transit Hall": {
+                    "removeWater": true
+                },
                 "Biohazard Containment": {
+                    "removeWater": true,
                     "pickups": [
                         {
                             "type": "Nothing"
@@ -14269,6 +14328,7 @@
                     }
                 },
                 "Deck Beta Security Hall": {
+                    "removeWater": true,
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
@@ -14281,6 +14341,7 @@
                     }
                 },
                 "Biotech Research Area 1": {
+                    "removeWater": true,
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
@@ -14289,6 +14350,7 @@
                     }
                 },
                 "Deck Beta Conduit Hall": {
+                    "removeWater": true,
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
@@ -14297,14 +14359,29 @@
                     }
                 },
                 "Connection Elevator to Deck Beta": {
+                    "removeWater": true,
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
                             "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Flamethrower",
+                            "blastShieldType": "Flamethrower"
                         }
                     }
                 },
                 "Hydro Access Tunnel": {
+                    "doors": {
+                        "0": {
+                            "shieldType": "Wavebuster",
+                            "blastShieldType": "Wavebuster"
+                        },
+                        "1": {
+                            "shieldType": "Flamethrower",
+                            "blastShieldType": "Flamethrower"
+                        }
+                    },
                     "pickups": [
                         {
                             "type": "Nothing"
@@ -14313,6 +14390,10 @@
                 },
                 "Great Tree Hall": {
                     "doors": {
+                        "0": {
+                            "shieldType": "Wavebuster",
+                            "blastShieldType": "Wavebuster"
+                        },
                         "2": {
                             "shieldType": "Blue",
                             "blastShieldType": "None"
@@ -18501,8 +18582,7 @@
                 "Energy Core": {
                     "doors": {
                         "1": {
-                            "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "shieldType": "Ice Beam"
                         },
                         "2": {
                             "shieldType": "Plasma Beam"
@@ -18525,12 +18605,17 @@
                         }
                     }
                 },
-                "Burn Dome Access": {},
+                "Burn Dome Access": {
+                    "doors": {
+                        "0": {
+                            "shieldType": "Plasma Beam"
+                        }
+                    }
+                },
                 "West Furnace Access": {
                     "doors": {
                         "0": {
-                            "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "shieldType": "Ice Beam"
                         }
                     }
                 },
@@ -18540,9 +18625,14 @@
                             "type": "Nothing"
                         },
                         {
-                            "type": "Nothing"
+                            "type": "Flamethrower"
                         }
-                    ]
+                    ],
+                    "doors": {
+                        "0": {
+                            "shieldType": "Plasma Beam"
+                        }
+                    }
                 },
                 "Furnace": {
                     "pickups": [
@@ -18717,7 +18807,14 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "blocks": [
+                        {
+                            "position": [782.7, -77.6, 47.7],
+                            "scale": [45, 25, 1],
+                            "texture": "Sandstone"
+                        }
+                    ]
                 },
                 "Reflecting Pool Access": {},
                 "Elder Hall Access": {
