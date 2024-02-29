@@ -107,8 +107,7 @@
 
 - *Fight activates after grabbing spider instead of before*
 - **Quarantine Cave - Spider**
-- Thardus fight:
-    - Still brainstorming. I'd like to try putting him in jail and then blocking his weak points with blocks. You'd have to do spider track horse shit to unlock them all. Could even split up the fight into two phases - one with normal tracks and then one with low-grav tracks.
+- Thardus fight
 
 ### Late Magmoor
 
@@ -134,9 +133,7 @@
 - Geothermal Core Spider Track
 - **Plasma Processing - Plasma Beam**
     - Grabbing Plasma changes the Geothermal Core layer and reloads the room
-- Reggie's Geothermal Core morph ball track from hell
-    - Falling back down the room is blocked by a shallow pool of magma. If the player does this, they can hop their way back to the start of the morph track.
-    - Completing the track and collecting a nothing item removes the floor and allows the player to leave
+- Reggie's Geothermal Core Morph track from hell
 - **Gully - Gravity Suit**
 - **Chozo Ice Temple - Sun**
 
@@ -154,8 +151,9 @@
     - Wave/SJ Locked
     - *Kaizo block makes you have to ride the zoomer again*
     - Unlocks shortcut: Frozen Pike <--> Ruined Courtyard
-- **Burn Dome - Flamethrower** (also unlocks flamethrower door to get PB expansion in storage cavern)
+- **Burn Dome - Flamethrower**
     - Plasma locked
+    - Unlocks PB Expansion in Storage Cavern
 - SJ-required crossway
 - **Elder Chamber - Spirit**
 - Reflecting Pool -> GTH
