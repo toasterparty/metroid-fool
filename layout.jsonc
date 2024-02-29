@@ -9304,7 +9304,8 @@
                 "Main Quarry": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Energy Tank",
+                            "position": [170.7, 80.7, 55.5]
                         }
                     ],
                     "doors": {
@@ -9324,7 +9325,243 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "blocks": [
+                        {
+                            "position": [112.5, 92.1, 28.5],
+                            "scale": [35, 10, 1],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [110.7, 87.6, 44.0],
+                            "scale": [40, 1, 30],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [129.9, 91.5, 44.0],
+                            "scale": [1, 8, 30],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [153.8239, 46.7816, 45.5998],
+                            "scale": [3, 3, 0.5],
+                            "texture": "Mine"
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 10000419,
+                            "time": 0.02,
+                            "startImmediately": true
+                        }
+                    ],
+                    "actorRotates": [
+                        {
+                            "id": 10000424,
+                            "rotation": [-6, 18, 0],
+                            "timeScale": 1,
+                            "updateActive": true,
+                            "updateActors": false,
+                            "updateOnCreation": false
+                        },
+                        {
+                            "id": 10000425,
+                            "rotation": [6, -18, 0],
+                            "timeScale": 1,
+                            "updateActive": true,
+                            "updateActors": false,
+                            "updateOnCreation": false
+                        },
+                        {
+                            "id": 10000426,
+                            "rotation": [-0.3, 0, 18],
+                            "timeScale": 1,
+                            "updateActive": true,
+                            "updateActors": false,
+                            "updateOnCreation": false
+                        },
+                        {
+                            "id": 10000427,
+                            "rotation": [0.3, 0, -18],
+                            "timeScale": 1,
+                            "updateActive": true,
+                            "updateActors": false,
+                            "updateOnCreation": false
+                        }
+                    ],
+                    "extraScans": [
+                        {
+                            "id": 10000420,
+                            "position": [105.9359, 38.3106, 34.8583],
+                            "text": "Up",
+                            "isRed": true
+                        },
+                        {
+                            "id": 10000421,
+                            "position": [107.8819, 39.5441, 30.8215],
+                            "text": "Down",
+                            "isRed": true
+                        },
+                        {
+                            "id": 10000422,
+                            "position": [107.496, 36.0626, 31.6294],
+                            "text": "Left",
+                            "isRed": true
+                        },
+                        {
+                            "id": 10000423,
+                            "position": [106.996, 42.3626, 34.5294],
+                            "text": "Right",
+                            "isRed": true
+                        }
+                    ],
+                    "editObjs": {
+                        "131082": { // default spawn
+                            "position": [130.5061, 21.2332, 34.3407]
+                        },
+                        "131100": { // spider waypoint
+                            "position": [155.8233, 49.5977, 47.1606]
+                        },
+                        "131101": { // spider waypoint
+                            "position": [137.5296, 40.1667, 50.6006]
+                        },
+                        "131102": { // spider waypoint
+                            "position": [102.4048, 21.9236, 57.4617]
+                        }
+                    },
+                    "addConnections": [
+                        /* stuff that starts active/inactive */
+                        {
+                            "senderId": 10000419,
+                            "state": "ZERO",
+                            "targetId": 131675, // left crane relay
+                            "message": "SET_TO_ZERO"
+                        },
+                        /* Crane Controls */
+                        {
+                            "senderId": 10000420, // scan point
+                            "state": "SCAN_DONE",
+                            "targetId": 10000424, // actor rotate
+                            "message": "ACTION"
+                        },
+                        {
+                            "senderId": 10000421, // scan point
+                            "state": "SCAN_DONE",
+                            "targetId": 10000425, // actor rotate
+                            "message": "ACTION"
+                        },
+                        {
+                            "senderId": 10000422, // scan point
+                            "state": "SCAN_DONE",
+                            "targetId": 10000426, // actor rotate
+                            "message": "ACTION"
+                        },
+                        {
+                            "senderId": 10000423, // scan point
+                            "state": "SCAN_DONE",
+                            "targetId": 10000427, // actor rotate
+                            "message": "ACTION"
+                        },
+                        /* Crane Movement */
+                        {
+                            "senderId": 10000424, // actor rotate
+                            "state": "PLAY",
+                            "targetId": 131103, // left crane platform
+                            "message": "PLAY"
+                        },
+                        {
+                            "senderId": 10000425, // actor rotate
+                            "state": "PLAY",
+                            "targetId": 131103, // left crane platform
+                            "message": "PLAY"
+                        },
+                        {
+                            "senderId": 10000426, // actor rotate
+                            "state": "PLAY",
+                            "targetId": 131103, // left crane platform
+                            "message": "PLAY"
+                        },
+                        {
+                            "senderId": 10000427, // actor rotate
+                            "state": "PLAY",
+                            "targetId": 131103, // left crane platform
+                            "message": "PLAY"
+                        },
+                        /* Stuff that moves with crane */
+                        {
+                            "senderId": 131103, // crane
+                            "state": "PLAY",
+                            "targetId": 131100, // spider waypoint
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 131103, // crane
+                            "state": "PLAY",
+                            "targetId": 131100, // spider waypoint
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 131103, // crane
+                            "state": "PLAY",
+                            "targetId": 131101, // spider waypoint
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 131103, // crane
+                            "state": "PLAY",
+                            "targetId": 131102, // spider waypoint
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 131103, // crane
+                            "state": "PLAY",
+                            "targetId": 131102, // spider waypoint
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 131103, // crane
+                            "state": "PLAY",
+                            "targetId": 131210, // camera hint trigger
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 131103, // crane
+                            "state": "PLAY",
+                            "targetId": 131214, // camera hint trigger
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 131103, // crane
+                            "state": "PLAY",
+                            "targetId": 131779, // camera hint trigger
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 131103, // crane
+                            "state": "PLAY",
+                            "targetId": 131211, // camera hint
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 131103, // crane
+                            "state": "PLAY",
+                            "targetId": 131215, // camera hint
+                            "message": "ACTIVATE"
+                        }
+                    ],
+                    "removeConnections": [
+                        // Break link from static spider track to dynamic spider track
+                        {
+                            "senderId": 131100,
+                            "state": "ARRIVED",
+                            "targetId": 131099,
+                            "message": "NEXT"
+                        }
+                    ],
+                    "deleteIds": [
+                        // crane doesn't work like it does in vanilla
+                        131091, 131104, 132212, 131660, 132145, 131666, 132508, 132507, 132405, 132401, 132399, 131676, 131780, 131211
+                    ]
                 },
                 "Waste Disposal": {
                     "doors": {
