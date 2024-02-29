@@ -4069,7 +4069,6 @@
 
                         {
                             "id": 10000457,
-                            // "active": false,
                             "position": [227.0, -580.6, 63.0],
                             "scale": [1.7, 1.7, 1.7],
                             "damageAmount": 0.01
@@ -4078,14 +4077,12 @@
                         // track #2
                         {
                             "id": 10000468,
-                            // "active": false,
                             "position": [219.7, -581.0, 73.3], // id: 10000462
                             "scale": [2.5, 2.5, 1.8],
                             "damageAmount": 0.01
                         },
                         {
                             "id": 10000470,
-                            // "active": false,
                             "position": [200.6, -584.2, 74.6], // id: 10000464
                             "scale": [2.5, 2.5, 1.8],
                             "damageAmount": 0.01
@@ -4095,14 +4092,12 @@
 
                         {
                             "id": 10000485,
-                            // "active": false,
                             "position": [170.0879, -648.6955, 75.5767], // id: 10000471
                             "scale": [1.7, 2.1, 1.8],
                             "damageAmount": 0.01
                         },
                         {
                             "id": 10000486,
-                            // "active": false,
                             "position": [167.5879, -648.6955, 75.5767], // id: 10000474
                             "scale": [1.7, 2.1, 1.8],
                             "damageAmount": 0.01
@@ -4112,14 +4107,12 @@
 
                         {
                             "id": 10000491,
-                            // "active": false,
                             "position": [170.0879, -648.6955, 73.7766], // id: 10000477
                             "scale": [1.7, 2.1, 1.8],
                             "damageAmount": 0.01
                         },
                         {
                             "id": 10000492,
-                            // "active": false,
                             "position": [167.8668, -616.8223, 73.7766], // id: 10000480
                             "scale": [1.7, 2.1, 1.8],
                             "damageAmount": 0.01
@@ -4131,7 +4124,6 @@
                             "position": [168.4, -632.7, 72.8],
                             "scale": [10, 40, 5]
                         }
-
                     ],
                     "playerHints": [
                         {
@@ -4169,19 +4161,19 @@
                         },
                         {
                             "id": 10000456,
-                            // "active": false,
+                            "active": false,
                             "position": [227.0, -581.0, 63.0],
                             "type": "Block"
                         },
                         {
                             "id": 10000467,
-                            // "active": false,
+                            "active": false,
                             "position": [219.7, -581.0, 73.3],
                             "type": "Block"
                         },
                         {
                             "id": 10000469,
-                            // "active": false,
+                            "active": false,
                             "position": [200.6, -584.2, 74.6],
                             "type": "Block"
                         },
@@ -4189,13 +4181,13 @@
                         // track #3
                         {
                             "id": 10000483,
-                            // "active": false,
+                            "active": false,
                             "position": [170.0879, -648.6955, 75.5767], // id: 10000471
                             "type": "Block"
                         },
                         {
                             "id": 10000484,
-                            // "active": false,
+                            "active": false,
                             "position": [167.5879, -648.6955, 75.5767], // id: 10000474
                             "type": "Block"
                         },
@@ -4204,13 +4196,13 @@
 
                         {
                             "id": 10000489,
-                            // "active": false,
+                            "active": false,
                             "position": [170.0879, -648.6955, 73.7766], // id: 10000477
                             "type": "Block"
                         },
                         {
                             "id": 10000490,
-                            // "active": false,
+                            "active": false,
                             "position": [167.8668, -616.8223, 73.7766], // id: 10000480
                             "type": "Block"
                         }
@@ -5142,6 +5134,49 @@
                         },
 
                         /* Sliding Bomb Slot */
+
+                        {
+                            "senderId": 1573322, // pickup
+                            "state": "ARRIVED",
+                            "targetId": 10000456, // platform
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1573322, // pickup
+                            "state": "ARRIVED",
+                            "targetId": 10000467, // platform
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1573322, // pickup
+                            "state": "ARRIVED",
+                            "targetId": 10000469, // platform
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1573322, // pickup
+                            "state": "ARRIVED",
+                            "targetId": 10000483, // platform
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1573322, // pickup
+                            "state": "ARRIVED",
+                            "targetId": 10000484, // platform
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1573322, // pickup
+                            "state": "ARRIVED",
+                            "targetId": 10000489, // platform
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1573322, // pickup
+                            "state": "ARRIVED",
+                            "targetId": 10000490, // platform
+                            "message": "ACTIVATE"
+                        },
 
                         // track #1
 
