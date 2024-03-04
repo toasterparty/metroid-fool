@@ -8823,41 +8823,6 @@
                 }
             }
         },
-        "Frigate Orpheon": {
-            "transports": {
-                "Frigate Escape Cutscene": "Tallon Overworld:Landing Site"
-            },
-            "rooms": {
-                "Exterior Docking Hangar": {},
-                "Air Lock": {},
-                "Deck Alpha Access Hall": {},
-                "Deck Alpha Mech Shaft": {},
-                "Emergency Evacuation Area": {},
-                "Connection Elevator to Deck Alpha": {},
-                "Deck Alpha Umbilical Hall": {},
-                "Biotech Research Area 2": {},
-                "Map Facility": {},
-                "Main Ventilation Shaft Section F": {},
-                "Connection Elevator to Deck Beta": {},
-                "Main Ventilation Shaft Section E": {},
-                "Deck Beta Conduit Hall": {},
-                "Main Ventilation Shaft Section D": {},
-                "Biotech Research Area 1": {},
-                "Main Ventilation Shaft Section C": {},
-                "Deck Beta Security Hall": {},
-                "Connection Elevator to Deck Beta (2)": {},
-                "Subventilation Shaft Section A": {},
-                "Main Ventilation Shaft Section B": {},
-                "Biohazard Containment": {},
-                "Deck Gamma Monitor Hall": {},
-                "Subventilation Shaft Section B": {},
-                "Main Ventilation Shaft Section A": {},
-                "Deck Beta Transit Hall": {},
-                "Reactor Core": {},
-                "Cargo Freight Lift to Deck Gamma": {},
-                "Reactor Core Entrance": {}
-            }
-        },
         "Magmoor Caverns": {
             "transports": {
                 "Magmoor Caverns North (Lava Lake)": "Tallon Overworld East (Frigate Crash Site)",
@@ -14507,8 +14472,11 @@
                         "1": {
                             "shieldType": "Blue",
                             "blastShieldType": "None"
-                        }
                     }
+                    },
+                    "deleteIds": [
+                        1114113
+                    ]
                 },
                 "Transport Tunnel C": {
                     "doors": {
@@ -14551,7 +14519,31 @@
                     }
                 },
                 "Main Ventilation Shaft Section B": {
-                    "removeWater": true
+                    "removeWater": true,
+                    "layers": {
+                        "1": false // turrets
+                    },
+                    "deleteIds": [
+                        1396292
+                    ],
+                    "streamedAudios": [
+                        {
+                            "id": 10000524,
+                            "volume": 110,
+                            "audioFileName": "/audio/over-world-daichiL.dsp|/audio/over-world-daichiR.dsp",
+                            "isMusic": true,
+                            "fadeOutTime": 10,
+                            "fadeInTime": 12
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 1376289, // [SpecialFunction] Music Player For Area
+                            "state": "ENTERED",
+                            "targetId": 10000524, // spooky music
+                            "message": "DECREMENT"
+                        }
+                    ]
                 },
                 "Transport to Chozo Ruins East": {
                     "doors": {
@@ -14570,7 +14562,60 @@
                     }
                 },
                 "Main Ventilation Shaft Section A": {
-                    "removeWater": true
+                    "removeWater": true,
+                    "streamedAudios": [
+                        {
+                            "id": 10000521,
+                            "volume": 120,
+                            "audioFileName": "/audio/int_biohazardL.dsp|/audio/int_biohazardR.dsp",
+                            "isMusic": true,
+                            "fadeOutTime": 12,
+                            "fadeInTime": 12
+                        }
+                    ],
+                    "deleteIds": [
+                        1572881
+                    ],
+                    "fog": {
+                        "color": [
+                            0.3999996,
+                            0.4235292,
+                            0.7388232,
+                            0
+                        ],
+                        "colorDelta": 0.2,
+                        "range": [
+                            0.5,
+                            50
+                        ]
+                    },
+                    "worldLightFaders": [
+                        {
+                            "id": 10000544,
+                            "fadedLightLevel": 0.4
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 10000545,
+                            "time": 0.02,
+                            "startImmediately": true
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 1572880, // [SpecialFunction] Music Player For Area
+                            "state": "ENTERED",
+                            "targetId": 10000521, // spooky music
+                            "message": "PLAY"
+                        },
+                        {
+                            "senderId": 10000545,
+                            "state": "ZERO",
+                            "targetId": 10000544,
+                            "message": "ACTION"
+                        }
+                    ]
                 },
                 "Reactor Core": {
                     "layers": {
@@ -14618,18 +14663,14 @@
                         ],
                         "colorDelta": 0.2,
                         "range": [
-                            35,
-                            100
-                        ],
-                        "rangeDelta": [
-                            15,
-                            45
+                            1,
+                            60
                         ]
                     },
                     "worldLightFaders": [
                         {
                             "id": 10000516,
-                            "fadedLightLevel": 0.3
+                            "fadedLightLevel": 0.25
                         }
                     ],
                     "timers": [
@@ -14726,38 +14767,205 @@
                     "doors": {
                         "2": {
                             "shieldType": "Disabled"
-                        }
                     }
-                },
+                    },
+                    "deleteIds": [
+                        1703940,
+                        1704003, 1704004, 1704007, 1704008 // bubbles
+                    ],
+                    "fog": {
+                        "color": [
+                            0.3999996,
+                            0.4235292,
+                            0.7388232,
+                            0
+                        ],
+                        "colorDelta": 0.2,
+                        "range": [
+                            0.5,
+                            40
+                        ]
+                    },
+                    "timers": [
+                        {
+                            "id": 10000542,
+                            "time": 0.02,
+                            "startImmediately": true
+                        }
+                        ],
+                    "worldLightFaders": [
+                        {
+                            "id": 10000543,
+                            "fadedLightLevel": 0.2
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 10000542,
+                            "state": "ZERO",
+                            "targetId": 10000543,
+                            "message": "ACTION"
+                        }
+                    ]
+                    },
                 "Cargo Freight Lift to Deck Gamma": {
+                    "layers": {
+                        "1": false // pirate fall
+                    },
                     "removeWater": true,
                     "pickups": [
                         {
                             "type": "Health Refill",
-                            "currIncrease": 50,
-                            "maxIncrease": 0
+                            "currIncrease": 100,
+                            "maxIncrease": 0,
+                            "respawn": true
+                        }
+                    ],
+                    "deleteIds": [
+                        1769490,
+                        1769658, 1769671 // spanks
+                    ],
+                    "fog": {
+                        "color": [
+                            0.3999996,
+                            0.4235292,
+                            0.7388232,
+                            0
+                        ],
+                        "colorDelta": 0.2,
+                        "range": [
+                            0.5,
+                            55
+                        ]
+                    },
+                    "timers": [
+                        {
+                            "id": 10000540,
+                            "time": 0.02,
+                            "startImmediately": true
+                        }
+                    ],
+                    "worldLightFaders": [
+                        {
+                            "id": 10000541,
+                            "fadedLightLevel": 0.2
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 10000540,
+                            "state": "ZERO",
+                            "targetId": 10000541,
+                            "message": "ACTION"
                         }
                     ]
                 },
                 "Savestation": {
-                    "removeWater": true
+                    "removeWater": true,
+                    "deleteIds": [
+                        1835108 // [StreamedAudio] StreamedAudio Over Crash Ship 3 SW
+                    ]
                 },
                 "Deck Beta Transit Hall": {
-                    "removeWater": true
-                },
+                    "removeWater": true,
+                    "deleteIds": [
+                        1900556
+                    ],
+                    "fog": {
+                        "color": [
+                            0.3999996,
+                            0.4235292,
+                            0.7388232,
+                            0
+                        ],
+                        "colorDelta": 0.2,
+                        "range": [
+                            0.5,
+                            35
+                        ]
+                    },
+                    "timers": [
+                        {
+                            "id": 10000538,
+                            "time": 0.02,
+                            "startImmediately": true
+                        }
+                        ],
+                    "worldLightFaders": [
+                        {
+                            "id": 10000539,
+                            "fadedLightLevel": 0.2
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 10000538,
+                            "state": "ZERO",
+                            "targetId": 10000539,
+                            "message": "ACTION"
+                        }
+                    ]
+                    },
                 "Biohazard Containment": {
+                    "layers": {
+                        "1": false, // drones
+                        "2": true, // parasite
+                        "3": false // spanks
+                    },
                     "removeWater": true,
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Health Refill",
+                            "currIncrease": 100,
+                            "maxIncrease": 0,
+                            "respawn": true
                         }
                     ],
                     "doors": {
                         "1": {
                             "shieldType": "Blue",
                             "blastShieldType": "None"
-                        }
                     }
+                    },
+                    "deleteIds": [
+                        1966110, // [StreamedAudio] StreamedAudio Over Crash Ship 3 SW
+                        1966685, 1966683, 1966666, 1966664, // guns
+                        1966728, 1966754, 1966729, 1966753 // layer changers
+                    ],
+                    "fog": {
+                        "color": [
+                            0.3999996,
+                            0.4235292,
+                            0.7388232,
+                            0
+                        ],
+                        "colorDelta": 0.2,
+                        "range": [
+                            0.5,
+                            50
+                        ]
+                    },
+                    "timers": [
+                        {
+                            "id": 10000536,
+                            "time": 0.02,
+                            "startImmediately": true
+                        }
+                    ],
+                    "worldLightFaders": [
+                        {
+                            "id": 10000537,
+                            "fadedLightLevel": 0.2
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 10000536,
+                            "state": "ZERO",
+                            "targetId": 10000537,
+                            "message": "ACTION"
+                        }
+                    ]
                 },
                 "Deck Beta Security Hall": {
                     "removeWater": true,
@@ -14769,29 +14977,161 @@
                         "1": {
                             "shieldType": "Blue",
                             "blastShieldType": "None"
-                        }
                     }
+                    },
+                    "deleteIds": [
+                        2031629,
+                        2031649, 2031650, 2031651, 2031652, 2031653 // spanks
+                    ],
+                    "fog": {
+                        "color": [
+                            0.3999996,
+                            0.4235292,
+                            0.7388232,
+                            0
+                        ],
+                        "colorDelta": 0.2,
+                        "range": [
+                            0.5,
+                            30
+                        ]
+                    },
+                    "timers": [
+                        {
+                            "id": 10000534,
+                            "time": 0.02,
+                            "startImmediately": true
+                        }
+                    ],
+                    "worldLightFaders": [
+                        {
+                            "id": 10000535,
+                            "fadedLightLevel": 0.3
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 10000534,
+                            "state": "ZERO",
+                            "targetId": 10000535,
+                            "message": "ACTION"
+                        }
+                    ]
                 },
                 "Biotech Research Area 1": {
                     "removeWater": true,
+                    "layers": {
+                        "1": false, // pirates
+                        "2": false, // jelzap
+                        "3": true // drones
+                    },
+                    "fog": {
+                        "color": [
+                            0.3999996,
+                            0.4235292,
+                            0.7388232,
+                            0
+                        ],
+                        "colorDelta": 0.2,
+                        "range": [
+                            0.5,
+                            55
+                        ]
+                    },
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
                             "blastShieldType": "None"
-                        }
                     }
+                    },
+                    "deleteIds": [
+                        2097210,
+                        2097370 // layer changer
+                    ],
+                    "timers": [
+                        {
+                            "id": 10000532,
+                            "time": 0.02,
+                            "startImmediately": true
+                        }
+                    ],
+                    "worldLightFaders": [
+                        {
+                            "id": 10000533,
+                            "fadedLightLevel": 0.3
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 10000532,
+                            "state": "ZERO",
+                            "targetId": 10000533,
+                            "message": "ACTION"
+                        }
+                    ]
                 },
                 "Deck Beta Conduit Hall": {
                     "removeWater": true,
+                    "fog": {
+                        "color": [
+                            0.3999996,
+                            0.4235292,
+                            0.7388232,
+                            0
+                        ],
+                        "colorDelta": 0.2,
+                        "range": [
+                            0.5,
+                            30
+                        ]
+                    },
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
                             "blastShieldType": "None"
-                        }
                     }
+                    },
+                    "deleteIds": [
+                        2228233,
+                        2162766, 2162767, 2162768, 2162769, 2162775, 2162776 // spanks
+                    ],
+                    "timers": [
+                        {
+                            "id": 10000530,
+                            "time": 0.02,
+                            "startImmediately": true
+                        }
+                    ],
+                    "worldLightFaders": [
+                        {
+                            "id": 10000531,
+                            "fadedLightLevel": 0.3
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 10000530,
+                            "state": "ZERO",
+                            "targetId": 10000531,
+                            "message": "ACTION"
+                        }
+                    ]
                 },
                 "Connection Elevator to Deck Beta": {
                     "removeWater": true,
+                    "fog": {
+                        "color": [
+                            0.3999996,
+                            0.4235292,
+                            0.7388232,
+                            0
+                        ],
+                        "colorDelta": 0.2,
+                        "range": [
+                            0.5,
+                            40
+                        ]
+                    },
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
@@ -14801,7 +15141,48 @@
                             "shieldType": "Flamethrower",
                             "blastShieldType": "Flamethrower"
                         }
-                    }
+                    },
+                    "streamedAudios": [
+                        {
+                            "id": 10000520,
+                            "volume": 120,
+                            "audioFileName": "/audio/int_biohazardL.dsp|/audio/int_biohazardR.dsp",
+                            "isMusic": true,
+                            "fadeOutTime": 12,
+                            "fadeInTime": 12
+                        }
+                    ],
+                    "deleteIds": [
+                        2228233,
+                        2228430 // pirate boom
+                    ],
+                    "worldLightFaders": [
+                        {
+                            "id": 10000528,
+                            "fadedLightLevel": 0.3
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 10000529,
+                            "time": 0.02,
+                            "startImmediately": true
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 2228225, // [SpecialFunction] Music Player For Area
+                            "state": "ENTERED",
+                            "targetId": 10000520, // spooky music
+                            "message": "PLAY"
+                        },
+                        {
+                            "senderId": 10000529,
+                            "state": "ZERO",
+                            "targetId": 10000528,
+                            "message": "ACTION"
+                        }
+                    ]
                 },
                 "Hydro Access Tunnel": {
                     "doors": {
@@ -14817,6 +15198,64 @@
                     "pickups": [
                         {
                             "type": "Nothing"
+                        }
+                    ],
+                    "deleteIds": [
+                        2293762
+                    ],
+                    "streamedAudios": [
+                        {
+                            "id": 10000522,
+                            "volume": 100,
+                            "audioFileName": "/audio/over-worldL.dsp|/audio/over-worldR.dsp",
+                            "isMusic": true,
+                            "fadeInTime": 0.1,
+                            "fadeOutTime": 10
+                        }
+                    ],
+                    "extraScans": [
+                        {
+                            "id": 10000527,
+                            "position": [-110.1905, 142.4358, -83.221],
+                            "rotation": 0,
+                            "text": "Save Game",
+                            "combatVisible": true,
+                            "isRed": true
+                        }
+                    ],
+                    "timers": [
+                        // Queue the save request with a timer to make it easier on the eyes
+                        {
+                            "id": 10000525,
+                            "time": 0.5
+                        }
+                    ],
+                    "specialFunctions": [
+                        {
+                            "id": 10000526,
+                            "type": "SaveStation"
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 2293761, // [SpecialFunction] Music Player For Area
+                            "state": "ENTERED",
+                            "targetId": 10000522, // spooky music
+                            "message": "DECREMENT"
+                        },
+                        // When the player scans the point, start the timer
+                        {
+                            "senderId": 10000527,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000525,
+                            "message": "RESET_AND_START"
+                        },
+                        // When the timer elapses, initiate a save
+                        {
+                            "senderId": 10000525,
+                            "state": "ZERO",
+                            "targetId": 10000526,
+                            "message": "ACTION"
                         }
                     ]
                 },
@@ -14838,7 +15277,56 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "blocks": [
+                        {
+                            "position": [-15.7, 129.2, -12.7],
+                            "scale": [2, 3, 0.1]
+                        },
+                        {
+                            "position": [-24.4, 146.6, -5.0],
+                            "scale": [2, 3, 0.1]
+                        },
+                        {
+                            "position": [-20.4, 135.2, 2.9],
+                            "scale": [12, 0.1, 5]
+                        },
+                        {
+                            "position": [-20.4, 136.65, 0.4],
+                            "scale": [12, 3, 0.1]
+                        }
+                    ],
+                    "pickups": [
+                        {
+                            "position": [-20.1031, 137.3769, 1.5],
+                            "type": "Missile",
+                            "model": "Shiny Missile",
+                            "scanText": "Shiny Missile",
+                            "hudmemoText": "Shiny Missile Acquired!\n(of 3)",
+                            "maxIncrease": 15
+                        }
+                    ],
+                    "streamedAudios": [
+                        {
+                            "id": 10000523,
+                            "volume": 100,
+                            "isMusic": true,
+                            "fadeInTime": 1,
+                            "fadeOutTime": 1,
+                            "audioFileName": "/audio/over-worldL.dsp|/audio/over-worldR.dsp"
+                        }
+                    ],
+                    "deleteIds": [
+                        2359323, 2359324
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 2359299, // player in area
+                            "state": "ENTERED",
+                            "targetId": 10000523,
+                            "message": "PLAY"
+                        }
+                    ]
                 },
                 "Great Tree Chamber": {
                     "pickups": [
