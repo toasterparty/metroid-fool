@@ -11792,7 +11792,9 @@
                     },
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            // id: 2098666
+                            "type": "Energy Tank",
+                            "position": [234.3169, 261.0093, -63.0823]
                         }
                     ],
                     "doors": {
@@ -11807,23 +11809,345 @@
                     },
                     "extraScans": [
                         {
-                            "id": 10000428,
+                            "id": 10000494,
                             "position": [153.514, 173.4871, -89.8067],
                             "isRed": true,
                             "text": "Magic Carpet Operational"
                         }
                     ],
-                    // "platforms": [
-                    //     {
-                    //         "id": 10000428,
-                    //         "position": [],
-                    //         "type": "HalfBlock"
-                    //     }
-                    // ],
+                    "blocks": [
+                        {
+                            "position": [178.5, 174.3, -91],
+                            "scale": [0.5, 10, 8],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [195.5, 210.8, -90.2],
+                            "scale": [17, 0.5, 2],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [214.1, 295.3, -75.6],
+                            "scale": [8, 1, 8],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [188.5, 268.3, -68.8],
+                            "scale": [10, 10, 10],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [178.0, 264.2, -73.2],
+                            "scale": [10, 25, 0.5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [180.8, 268.2, -68],
+                            "scale": [10, 7, 6.5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [223.4, 255.2, -80.6],
+                            "scale": [20, 4, 8],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [203.4, 255.2, -80.6],
+                            "scale": [17.8, 4, 8],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [222.7, 235.2, -63.1],
+                            "scale": [40, 20, 15],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [195.2, 247.9, -70.5],
+                            "scale": [10, 15, 0.5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [190.4, 247.8, -68.1],
+                            "scale": [0.5, 15, 5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [197.4, 305.8, -67.7],
+                            "scale": [6, 6, 3],
+                            "texture": "Snow"
+                        },
+                        {
+                            "position": [197.4, 305.8, -61.7],
+                            "scale": [6, 6, 5],
+                            "texture": "Snow"
+                        }
+                    ],
+                    "lockOnPoints": [
+                        {
+                            "position": [201.5039, 229.2118, -66]
+                        }
+                    ],
+                    "platforms": [
+                        {
+                            "id": 10000495,
+                            "position": [139.1, 186.3, -91.5],
+                            "type": "HalfBlock"
+                        },
+                        {
+                            "id": 10000496,
+                            "position": [142.1, 186.3, -91.5],
+                            "type": "HalfBlock"
+                        },
+                        {
+                            "id": 10000497,
+                            "position": [145.1, 186.3, -91.5],
+                            "type": "HalfBlock"
+                        },
+                        {
+                            "id": 10000498,
+                            "position": [148.1, 186.3, -91.5],
+                            "type": "HalfBlock"
+                        },
+                        {
+                            "id": 10000499,
+                            "position": [151.1, 186.3, -91.5],
+                            "type": "HalfBlock"
+                        }
+                    ],
+                    "waypoints": [
+                        // start waypoints
+                        {
+                            "id": 10000500,
+                            "position": [139.1, 186.3, -91.5],
+                            "speed": 1000
+                        },
+                        {
+                            "id": 10000501,
+                            "position": [141.6, 186.3, -91.5],
+                            "speed": 1000
+                        },
+                        {
+                            "id": 10000502,
+                            "position": [144.1, 186.3, -91.5],
+                            "speed": 1000
+                        },
+                        {
+                            "id": 10000503,
+                            "position": [146.6, 186.3, -91.5],
+                            "speed": 1000
+                        },
+                        {
+                            "id": 10000504,
+                            "position": [149.1, 186.3, -91.5],
+                            "speed": 1000
+                        },
+                        // path waypoints
+                        {
+                            "id": 10000505,
+                            "active": false,
+                            "position": [158.2, 186.3, -91.5],
+                            "speed": 8
+                        },
+                        {
+                            "id": 10000515,
+                            "position": [158.2, 170.6, -93.5],
+                            "speed": 3
+                        },
+                        {
+                            "id": 10000506,
+                            "position": [182.0, 170.6, -96.5],
+                            "speed": 8
+                        },
+                        {
+                            "id": 10000507,
+                            "position": [212.9, 257.9, -86.2],
+                            "speed": 8
+                        },
+                        {
+                            "id": 10000508,
+                            "position": [211.2, 259.8, -84.2],
+                            "speed": 8
+                        },
+                        {
+                            "id": 10000509,
+                            "position": [214.3, 292.8, -77.9],
+                            "speed": 8
+                        },
+                        {
+                            "id": 10000510,
+                            "position": [185.8, 287.9, -76.1],
+                            "speed": 8
+                        },
+                        {
+                            "id": 10000511,
+                            "position": [183.5, 226.2, -72.2],
+                            "speed": 8
+                        },
+                        {
+                            "id": 10000512,
+                            "position": [207.6, 228.5, -72.2],
+                            "speed": 8
+                        },
+                        {
+                            "id": 10000513,
+                            "position": [208.4, 295.4, -69.78],
+                            "speed": 8
+                        },
+                        {
+                            "id": 10000514,
+                            "position": [184.4346, 317.6616, -69.78],
+                            "speed": 8
+                        }
+                    ],
+                    "addConnections": [
+                        // initial platform connections
+                        {
+                            "senderId": 10000495,
+                            "state": "PLAY",
+                            "targetId": 10000500,
+                            "message": "FOLLOW"
+                        },
+                        {
+                            "senderId": 10000496,
+                            "state": "PLAY",
+                            "targetId": 10000501,
+                            "message": "FOLLOW"
+                        },
+                        {
+                            "senderId": 10000497,
+                            "state": "PLAY",
+                            "targetId": 10000502,
+                            "message": "FOLLOW"
+                        },
+                        {
+                            "senderId": 10000498,
+                            "state": "PLAY",
+                            "targetId": 10000503,
+                            "message": "FOLLOW"
+                        },
+                        {
+                            "senderId": 10000499,
+                            "state": "PLAY",
+                            "targetId": 10000504,
+                            "message": "FOLLOW"
+                        },
+
+                        // start waypoints --> path waypoint 1
+                        {
+                            "senderId": 10000500,
+                            "state": "ARRIVED",
+                            "targetId": 10000505,
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000501,
+                            "state": "ARRIVED",
+                            "targetId": 10000505,
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000502,
+                            "state": "ARRIVED",
+                            "targetId": 10000505,
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000503,
+                            "state": "ARRIVED",
+                            "targetId": 10000505,
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000504,
+                            "state": "ARRIVED",
+                            "targetId": 10000505,
+                            "message": "NEXT"
+                        },
+
+                        // start train
+                        {
+                            "senderId": 10000494,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000505,
+                            "message": "ACTIVATE"
+                        },
+
+                        // waypoint chain
+                        {
+                            "senderId": 10000505,
+                            "state": "ARRIVED",
+                            "targetId": 10000515,
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000515,
+                            "state": "ARRIVED",
+                            "targetId": 10000506,
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000506,
+                            "state": "ARRIVED",
+                            "targetId": 10000507,
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000507,
+                            "state": "ARRIVED",
+                            "targetId": 10000508,
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000508,
+                            "state": "ARRIVED",
+                            "targetId": 10000509,
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000509,
+                            "state": "ARRIVED",
+                            "targetId": 10000510,
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000510,
+                            "state": "ARRIVED",
+                            "targetId": 10000511,
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000511,
+                            "state": "ARRIVED",
+                            "targetId": 10000512,
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000512,
+                            "state": "ARRIVED",
+                            "targetId": 10000513,
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000513,
+                            "state": "ARRIVED",
+                            "targetId": 10000514,
+                            "message": "NEXT"
+                        },
+
+                        // loop-back
+                        {
+                            "senderId": 10000514,
+                            "state": "ARRIVED",
+                            "targetId": 10000500,
+                            "message": "NEXT"
+                        }
+                    ],
                     "deleteIds": [
                         2097686, 2097839, 2097840, 2098221, 2098250, // metroids
                         2097564, 2097565, 2099069, 2099068, // walls
-                        2097385, 2097386, 2097387, 2097392 // spider track
+                        2097385, 2097386, 2097387, 2097392, // spider track
+                        2098441, 2099064, 2098595, // scan points
+                        2098114, 2097676, 2097675, 2097517 // floating platforms
                     ]
                 },
                 "Quarantine Access B": {
