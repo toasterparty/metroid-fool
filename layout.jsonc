@@ -1480,13 +1480,13 @@
                     ],
                     "editObjs": {
                         /* Deactivate/move floating platforms to make cheese harder */
-                        "131313": { 
+                        "131313": {
                             "position": [-59.509, -192.3388, 16]
                         },
-                        "131534": { 
+                        "131534": {
                             "position": [-59.509, -192.3388, 15.3]
                         },
-                        "131082": { 
+                        "131082": {
                             "position": [-59.509, -192.3388, 15.3]
                         },
                         "131314": { "layer": 6 },
@@ -1737,7 +1737,7 @@
                             "targetId": 12000052,
                             "message": "INCREMENT"
                         },
-                        { // Returning the artifact disables the layer for the return pickup 
+                        { // Returning the artifact disables the layer for the return pickup
                             "senderId": 12000050,
                             "state": "ARRIVED",
                             "targetId": 12000052,
@@ -6603,7 +6603,7 @@
                         "1900639": { "position": [178.7567, -852.0774, 103.5929] },
                         "1900617": { "position": [178.8323, -852.0475, 103.7539] },
                         "1900632": { "position": [178.8323, -852.0475, 103.7539] },
-                        
+
                         /* Spider Track */
                         "1900562": { "position": [180.1292, -867.0985, 75.5638]  },
                         "1900563": { "position": [189.0292, -865.0108, 76.5521]  },
@@ -7228,7 +7228,7 @@
                             "targetId": 12000023,
                             "message": "INCREMENT"
                         },
-                        { // Returning the artifact disables the layer for the return pickup 
+                        { // Returning the artifact disables the layer for the return pickup
                             "senderId": 12000021,
                             "state": "ARRIVED",
                             "targetId": 12000023,
@@ -8252,7 +8252,7 @@
                 "Research Core Access": {
                     "layers": {
                         "1": false, // beetles
-                        "2": true 
+                        "2": true
                     },
                     "doors": {
                         "0": {
@@ -8725,7 +8725,7 @@
                             "targetId": 12000069,
                             "message": "INCREMENT"
                         },
-                        { // Returning the artifact disables the layer for the return pickup 
+                        { // Returning the artifact disables the layer for the return pickup
                             "senderId": 12000067,
                             "state": "ARRIVED",
                             "targetId": 12000069,
@@ -9379,7 +9379,7 @@
                             "targetId": 12000047,
                             "message": "INCREMENT"
                         },
-                        { // Returning the artifact disables the layer for the return pickup 
+                        { // Returning the artifact disables the layer for the return pickup
                             "senderId": 12000045,
                             "state": "ARRIVED",
                             "targetId": 12000047,
@@ -9823,7 +9823,7 @@
                             "targetId": 12000009,
                             "message": "INCREMENT"
                         },
-                        { // Returning the artifact disables the layer for the return pickup 
+                        { // Returning the artifact disables the layer for the return pickup
                             "senderId": 12000007,
                             "state": "ARRIVED",
                             "targetId": 12000009,
@@ -11106,7 +11106,7 @@
                             "targetId": 12000034,
                             "message": "INCREMENT"
                         },
-                        { // Returning the artifact disables the layer for the return pickup 
+                        { // Returning the artifact disables the layer for the return pickup
                             "senderId": 852800,
                             "state": "ARRIVED",
                             "targetId": 12000034,
@@ -11143,7 +11143,7 @@
                             "targetId": 852393,
                             "message": "DEACTIVATE"
                         },
-                        
+
 
                         { // Deactivate the take pickup 0.02s after room load (only if temple activated)
                             "senderId": 12000036,
@@ -11187,7 +11187,7 @@
                         }
                     ],
                     "deleteIds": [
-                        853192, 852459, 852507 // Don't actually play the cutscene for elite pirate breakout, just do it 
+                        853192, 852459, 852507 // Don't actually play the cutscene for elite pirate breakout, just do it
                     ]
                 },
                 "Elevator A": {
@@ -12361,7 +12361,7 @@
                             "targetId": 12000074,
                             "message": "INCREMENT"
                         },
-                        { // Returning the artifact disables the layer for the return pickup 
+                        { // Returning the artifact disables the layer for the return pickup
                             "senderId": 12000072,
                             "state": "ARRIVED",
                             "targetId": 12000074,
@@ -12583,19 +12583,19 @@
                         //     print(adjusted)
                         "314": { // camera path waypoint
                             "position": [-349.4856, 312.49980000000005, -32.4533]
-                        },   
+                        },
                         "315": { // camera path waypoint
                             "position": [-346.1295, 310.5461, -32.5481]
-                        },   
+                        },
                         "316": { // camera path waypoint
                             "position": [-342.3867, 310.4837, -32.6237]
-                        },   
+                        },
                         "317": { // camera path waypoint
                             "position": [-340.1703, 314.3514, -32.5571]
-                        },   
+                        },
                         "319": { // camera path waypoint
                             "position": [-341.4507, 319.9044, -32.074]
-                        },   
+                        },
                         "322": { // camera path waypoint
                             "position": [-347.2093, 319.98479999999995, -30.722900000000003]
                         },
@@ -14128,14 +14128,14 @@
                             "targetId": 10000048, // spawn point
                             "message": "SET_TO_ZERO" // reposition
                         }
-                        
+
                     ],
                     "deleteIds": [
                         // Beetles
                         983127, 983128, 983129, 983130, 983131, 983145, 983199, 983274, 983273,
                         // Bloodflower
                         983474, 983477
-                        
+
                     ]
                 },
                 "Artifact Temple": {
@@ -14233,7 +14233,7 @@
                             "type": "ScriptLayerController",
                             "layerChangeRoomId": 3573019852,  // Hall of the Elders
                             "layerChangeLayerId": 7 // temple activated
-                        }   
+                        }
                     ],
                     "relays": [
                         {
@@ -14885,7 +14885,7 @@
                             "targetId": 12000040,
                             "message": "INCREMENT"
                         },
-                        { // Returning the artifact disables the layer for the return pickup 
+                        { // Returning the artifact disables the layer for the return pickup
                             "senderId": 12000038,
                             "state": "ARRIVED",
                             "targetId": 12000040,
@@ -15274,7 +15274,7 @@
                         {
                             "position": [110.5, 39.3, 5.3],
                             "scale": [11, 0.5, 0.5]
-                        },                        
+                        },
                         // Upper steps blockers
                         {
                             "position": [98.7, 84.1, 21],
@@ -15741,7 +15741,7 @@
                         {
                             "senderId": 10000028, // beetle spam timer
                             "state": "ZERO",
-                            "targetId": 590110, // Beetle Initial VariableTimer05 
+                            "targetId": 590110, // Beetle Initial VariableTimer05
                             "message": "RESET_AND_START"
                         },
                         // End beetle meme by deactivating layers
@@ -15773,7 +15773,7 @@
                     "deleteIds": [
                         // Remove beetle teamwork to make things more chaotic
                         590165,
-                        
+
                         // Remove cutscenes
                         600262,
                         589879,
@@ -16539,7 +16539,7 @@
                             "targetId": 12000002,
                             "message": "INCREMENT"
                         },
-                        { // Returning the artifact disables the layer for the return pickup 
+                        { // Returning the artifact disables the layer for the return pickup
                             "senderId": 12000000,
                             "state": "ARRIVED",
                             "targetId": 12000002,
@@ -17446,7 +17446,7 @@
                             "position": [284.1, 181.9, 71],
                             "type": "Empty"
                         },
-                        
+
                         // Level 3
                         {
                             "id": 10000204,
@@ -17702,7 +17702,7 @@
                     ],
                     "relays": [
                         { // fight start relay (oneshot)
-                            "id": 10000222 
+                            "id": 10000222
                         },
                         { // deactivate mirrors relay
                             "id": 10000223
@@ -18610,7 +18610,7 @@
 
                         // South Tunnel
                         2425087, 2436921, 2425279, 2424918, 2424898, 2425053, 2425077, 2425075, 2424858, 2437289, 2436940, 2424968,
-                        
+
                         // North Tunnel
                         2424896, 2425052, 2425093, 2436922, 2425282, 2436949, 2424974, 2424924, 2425072, 2436942, 2424856, 2437287, 2425080,
 
@@ -18827,7 +18827,7 @@
                         {
                             "senderId": 10000257,
                             "state": "ZERO",
-                            "targetId": 2687161, // Actor - Symbol Glow Key 
+                            "targetId": 2687161, // Actor - Symbol Glow Key
                             "message": "ACTIVATE"
                         },
                         {
@@ -19254,7 +19254,7 @@
                             "targetId": 12000061,
                             "message": "INCREMENT"
                         },
-                        { // Returning the artifact disables the layer for the return pickup 
+                        { // Returning the artifact disables the layer for the return pickup
                             "senderId": 12000055,
                             "state": "ARRIVED",
                             "targetId": 12000057,
@@ -19338,7 +19338,7 @@
         "End Cinema": {
             "rooms": {
                 "End Cinema": {
-                    
+
                 }
             }
         }
