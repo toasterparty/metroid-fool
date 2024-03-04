@@ -13812,6 +13812,12 @@
                         {
                             "position": [-661.6, 327.3, -30.7],
                             "scale": [3, 0.5, 0.5]
+                        },
+                        {
+                            "id": 10000556,
+                            "active": false,
+                            "position": [-671.8369, 333.3923, 37.7287],
+                            "scale": [5.114971, 4.363015, 0.413001]
                         }
                     ],
                     "timers": [
@@ -13944,6 +13950,20 @@
                             "active": false,
                             "position": [-635.8, 356.3, 23.0],
                             "scale": [3, 3, 3],
+                            "deactivateOnEnter": true
+                        },
+                        {
+                            "id": 10000557,
+                            "position": [
+                                -671.8369,
+                                333.3923,
+                                36.7287
+                            ],
+                            "scale": [
+                                5.114971,
+                                4.363015,
+                                0.413001
+                            ],
                             "deactivateOnEnter": true
                         }
                     ],
@@ -14095,15 +14115,24 @@
                             "state": "ENTERED",
                             "targetId": 10000048, // spawn point
                             "message": "SET_TO_ZERO" // reposition
+                        },
+                        // kaizo block
+                        {
+                            "senderId": 10000557,
+                            "state": "ENTERED",
+                            "targetId": 10000556,
+                            "message": "ACTIVATE"
                         }
-
                     ],
                     "deleteIds": [
                         // Beetles
                         983127, 983128, 983129, 983130, 983131, 983145, 983199, 983274, 983273,
                         // Bloodflower
-                        983474, 983477
-
+                        983474, 983477,
+                        // invis platform
+                        983545, 983353, 983077,
+                        // grapple point
+                        983484, 983485, 983483
                     ]
                 },
                 "Artifact Temple": {
