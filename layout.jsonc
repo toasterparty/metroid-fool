@@ -14573,11 +14573,16 @@
                     "removeWater": true
                 },
                 "Reactor Core": {
+                    "layers": {
+                        "1": false, // pirates
+                        "2": false, // spanks
+                        "3": false // test
+                    },
                     "removeWater": true,
                     "pickups": [
                         {
                             "id": 10000154,
-                            "position": [77, 360, -143],
+                            "position": [81.5, 362.5, -143.5],
                             "type": "Nothing",
                             "scanText": "Glorgsmire Gumpybottom's Keyring",
                             "hudmemoText": "Glorgsmire Gumpybottom's Keyring Acquired!",
@@ -14596,9 +14601,59 @@
                             "type": "ScriptLayerController",
                             "layerChangeRoomId": 486408527, // Frigate Access Tunnel
                             "layerChangeLayerId": 3
+                        },
+                        {
+                            "id": 10000518,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 652773303, // Reactor Core
+                            "layerChangeLayerId": 4
+                        }
+                    ],
+                    "fog": {
+                        "color": [
+                            0.3999996,
+                            0.4235292,
+                            0.7388232,
+                            0
+                        ],
+                        "colorDelta": 0.2,
+                        "range": [
+                            35,
+                            100
+                        ],
+                        "rangeDelta": [
+                            15,
+                            45
+                        ]
+                    },
+                    "worldLightFaders": [
+                        {
+                            "id": 10000516,
+                            "fadedLightLevel": 0.3
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 10000517,
+                            "time": 0.02,
+                            "startImmediately": true
+                        },
+                        {
+                            "id": 10000519,
+                            "layer": 4, // key not acquired layer
+                            "time": 0.02,
+                            "startImmediately": true
                         }
                     ],
                     "addConnections": [
+                        /* Fade Light */
+                        {
+                            "senderId": 10000517,
+                            "state": "ZERO",
+                            "targetId": 10000516,
+                            "message": "ACTION"
+                        },
+                        /* Keyring Layer Changes */
                         {
                             "senderId": 10000154,
                             "state": "ARRIVED",
@@ -14610,7 +14665,60 @@
                             "state": "ARRIVED",
                             "targetId": 10000247,
                             "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000154,
+                            "state": "ARRIVED",
+                            "targetId": 10000518,
+                            "message": "DECREMENT"
+                        },
+                        /* Hide Platforms while keyring not acquired */
+                        {
+                            "senderId": 10000519, // instant timer
+                            "state": "ZERO",
+                            "targetId": 1638494,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000154,
+                            "state": "ARRIVED",
+                            "targetId": 1638494,
+                            "message": "ACTIVATE"
                         }
+                    ],
+                    "lockOnPoints": [
+                        {
+                            "position": [68.8136, 373.0645, -88.4967]
+                        }
+                    ],
+                    "editObjs": {
+                        "1638671": { // weeds
+                            "layer": 0
+                        },
+                        // move remaining platforms to be more challenging
+                        "1638494": {
+                            "position": [74.9, 366.1843, -117.0438]
+                        },
+                        "1638495": {
+                            "position": [90.8451, 344.2667, -111.0438],
+                            "rotation": [0, -7, 55]
+                        },
+                        "1638513": {
+                            "position": [91.0747, 376.0838, -98.1503]
+                        },
+                        "1638499": {
+                            "position": [93.926, 341.4601, -91.4819],
+                            "rotation": [10.9, -10.55, -170.4]
+                        },
+                        "1638503": {
+                            "position": [109.5461, 372.7595, -84.4339],
+                            "rotation": [24.3, 1.48, 0.31]
+                        }
+                    },
+                    "deleteIds": [
+                        1638739, 1638405, // old music
+                        // delete a bunch of platforms for fun
+                        1638525, 1638488, 1638487, 1638491, 1638529, 1638415, 1638490, 1638493, 1638492, 1638496, 1638497, 1638509, 1638500, 1638501, 1638510, 1638502, 1638511, 1638512
                     ]
                 },
                 "Reactor Access": {
