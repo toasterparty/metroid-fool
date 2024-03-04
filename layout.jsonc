@@ -390,6 +390,9 @@
                             "targetId": 169, // StreamedAudio General InterWorld Elevator SW
                             "message": "DEACTIVATE"
                         }
+                    ],
+                    "deleteIds": [
+                        173, 169 // music
                     ]
                 },
                 "Crater Tunnel A": {
@@ -14466,30 +14469,6 @@
                         1049765, 1049866, 1049231 // post-ridley death cutscene (ghost sequence)
                     ]
                 },
-                "Main Ventilation Shaft Section C": {
-                    "removeWater": true,
-                    "doors": {
-                        "1": {
-                            "shieldType": "Blue",
-                            "blastShieldType": "None"
-                    }
-                    },
-                    "deleteIds": [
-                        1114113
-                    ]
-                },
-                "Transport Tunnel C": {
-                    "doors": {
-                        "0": {
-                            "shieldType": "Blue",
-                            "blastShieldType": "None"
-                        },
-                        "1": {
-                            "shieldType": "Blue",
-                            "blastShieldType": "None"
-                        }
-                    }
-                },
                 "Transport Tunnel B": {
                     "pickups": [
                         {
@@ -14514,6 +14493,46 @@
                     "doors": {
                         "0": {
                             "shieldType": "Wave Beam",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Transport to Chozo Ruins East": {
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Transport to Magmoor Caverns East": {
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    }
+                },
+                "Main Ventilation Shaft Section C": {
+                    "removeWater": true,
+                    "doors": {
+                        "1": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    },
+                    "deleteIds": [
+                        1114113
+                    ]
+                },
+                "Transport Tunnel C": {
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
                     }
@@ -14544,22 +14563,6 @@
                             "message": "DECREMENT"
                         }
                     ]
-                },
-                "Transport to Chozo Ruins East": {
-                    "doors": {
-                        "0": {
-                            "shieldType": "Blue",
-                            "blastShieldType": "None"
-                        }
-                    }
-                },
-                "Transport to Magmoor Caverns East": {
-                    "doors": {
-                        "0": {
-                            "shieldType": "Blue",
-                            "blastShieldType": "None"
-                        }
-                    }
                 },
                 "Main Ventilation Shaft Section A": {
                     "removeWater": true,
@@ -14602,6 +14605,15 @@
                             "startImmediately": true
                         }
                     ],
+                    "triggers": [
+                        {
+                            "id": 10000547,
+                            "position": [-100, 400, -50],
+                            "scale": [5000, 5000, 1000],
+                            "damageType": "Phazon",
+                            "damageAmount": 0.12
+                        }
+                    ],
                     "addConnections": [
                         {
                             "senderId": 1572880, // [SpecialFunction] Music Player For Area
@@ -14614,6 +14626,18 @@
                             "state": "ZERO",
                             "targetId": 10000544,
                             "message": "ACTION"
+                        },
+                        {
+                            "senderId": 1572880, // player in area
+                            "state": "ENTERED",
+                            "targetId": 10000547, // trigger
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1572880, // player in area
+                            "state": "EXITED",
+                            "targetId": 10000547, // trigger
+                            "message": "DEACTIVATE"
                         }
                     ]
                 },
@@ -14725,6 +14749,28 @@
                             "state": "ARRIVED",
                             "targetId": 1638494,
                             "message": "ACTIVATE"
+                        },
+                        /* Damage */
+                        {
+                            "senderId": 1638405, // player in area
+                            "state": "ENTERED",
+                            "targetId": 10000548, // trigger
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1638405, // player in area
+                            "state": "EXITED",
+                            "targetId": 10000548, // trigger
+                            "message": "DEACTIVATE"
+                        }
+                    ],
+                    "triggers": [
+                        {
+                            "id": 10000548,
+                            "position": [-100, 400, -50],
+                            "scale": [5000, 5000, 1000],
+                            "damageType": "Phazon",
+                            "damageAmount": 0.12
                         }
                     ],
                     "lockOnPoints": [
@@ -14757,7 +14803,7 @@
                         }
                     },
                     "deleteIds": [
-                        1638739, 1638405, // old music
+                        1638739, // old music
                         // delete a bunch of platforms for fun
                         1638525, 1638488, 1638487, 1638491, 1638529, 1638415, 1638490, 1638493, 1638492, 1638496, 1638497, 1638509, 1638500, 1638501, 1638510, 1638502, 1638511, 1638512
                     ]
@@ -14799,12 +14845,33 @@
                             "fadedLightLevel": 0.2
                         }
                     ],
+                    "triggers": [
+                        {
+                            "id": 10000549,
+                            "position": [-100, 400, -50],
+                            "scale": [5000, 5000, 1000],
+                            "damageType": "Phazon",
+                            "damageAmount": 0.12
+                        }
+                    ],
                     "addConnections": [
                         {
                             "senderId": 10000542,
                             "state": "ZERO",
                             "targetId": 10000543,
                             "message": "ACTION"
+                        },
+                        {
+                            "senderId": 1703939, // player in area
+                            "state": "ENTERED",
+                            "targetId": 10000549, // trigger
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1703939, // player in area
+                            "state": "EXITED",
+                            "targetId": 10000549, // trigger
+                            "message": "DEACTIVATE"
                         }
                     ]
                     },
@@ -14816,7 +14883,7 @@
                     "pickups": [
                         {
                             "type": "Health Refill",
-                            "currIncrease": 100,
+                            "currIncrease": 150,
                             "maxIncrease": 0,
                             "respawn": true
                         }
@@ -14851,12 +14918,33 @@
                             "fadedLightLevel": 0.2
                         }
                     ],
+                    "triggers": [
+                        {
+                            "id": 10000550,
+                            "position": [-100, 400, -50],
+                            "scale": [5000, 5000, 1000],
+                            "damageType": "Phazon",
+                            "damageAmount": 0.12
+                        }
+                    ],
                     "addConnections": [
                         {
                             "senderId": 10000540,
                             "state": "ZERO",
                             "targetId": 10000541,
                             "message": "ACTION"
+                        },
+                        {
+                            "senderId": 1769489, // player in area
+                            "state": "ENTERED",
+                            "targetId": 10000550, // trigger
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1769489, // player in area
+                            "state": "EXITED",
+                            "targetId": 10000550, // trigger
+                            "message": "DEACTIVATE"
                         }
                     ]
                 },
@@ -14897,12 +14985,33 @@
                             "fadedLightLevel": 0.2
                         }
                     ],
+                    "triggers": [
+                        {
+                            "id": 10000551,
+                            "position": [-100, 400, -50],
+                            "scale": [5000, 5000, 1000],
+                            "damageType": "Phazon",
+                            "damageAmount": 0.12
+                        }
+                    ],
                     "addConnections": [
                         {
                             "senderId": 10000538,
                             "state": "ZERO",
                             "targetId": 10000539,
                             "message": "ACTION"
+                        },
+                        {
+                            "senderId": 1900555, // player in area
+                            "state": "ENTERED",
+                            "targetId": 10000551, // trigger
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1900555, // player in area
+                            "state": "EXITED",
+                            "targetId": 10000551, // trigger
+                            "message": "DEACTIVATE"
                         }
                     ]
                     },
@@ -14916,7 +15025,7 @@
                     "pickups": [
                         {
                             "type": "Health Refill",
-                            "currIncrease": 100,
+                            "currIncrease": 150,
                             "maxIncrease": 0,
                             "respawn": true
                         }
@@ -14958,12 +15067,33 @@
                             "fadedLightLevel": 0.2
                         }
                     ],
+                    "triggers": [
+                        {
+                            "id": 10000552,
+                            "position": [-100, 400, -50],
+                            "scale": [5000, 5000, 1000],
+                            "damageType": "Phazon",
+                            "damageAmount": 0.12
+                        }
+                    ],
                     "addConnections": [
                         {
                             "senderId": 10000536,
                             "state": "ZERO",
                             "targetId": 10000537,
                             "message": "ACTION"
+                        },
+                        {
+                            "senderId": 1988101, // player in area
+                            "state": "ENTERED",
+                            "targetId": 10000552, // trigger
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1988101, // player in area
+                            "state": "EXITED",
+                            "targetId": 10000552, // trigger
+                            "message": "DEACTIVATE"
                         }
                     ]
                 },
@@ -15009,12 +15139,33 @@
                             "fadedLightLevel": 0.3
                         }
                     ],
+                    "triggers": [
+                        {
+                            "id": 10000553,
+                            "position": [-100, 400, -50],
+                            "scale": [5000, 5000, 1000],
+                            "damageType": "Phazon",
+                            "damageAmount": 0.12
+                        }
+                    ],
                     "addConnections": [
                         {
                             "senderId": 10000534,
                             "state": "ZERO",
                             "targetId": 10000535,
                             "message": "ACTION"
+                        },
+                        {
+                            "senderId": 2031661, // player in area
+                            "state": "ENTERED",
+                            "targetId": 10000553, // trigger
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 2031661, // player in area
+                            "state": "EXITED",
+                            "targetId": 10000553, // trigger
+                            "message": "DEACTIVATE"
                         }
                     ]
                 },
@@ -15061,12 +15212,33 @@
                             "fadedLightLevel": 0.3
                         }
                     ],
+                    "triggers": [
+                        {
+                            "id": 10000554,
+                            "position": [-100, 400, -50],
+                            "scale": [5000, 5000, 1000],
+                            "damageType": "Phazon",
+                            "damageAmount": 0.12
+                        }
+                    ],
                     "addConnections": [
                         {
                             "senderId": 10000532,
                             "state": "ZERO",
                             "targetId": 10000533,
                             "message": "ACTION"
+                        },
+                        {
+                            "senderId": 2097208, // player in area
+                            "state": "ENTERED",
+                            "targetId": 10000554, // trigger
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 2097208, // player in area
+                            "state": "EXITED",
+                            "targetId": 10000554, // trigger
+                            "message": "DEACTIVATE"
                         }
                     ]
                 },
@@ -15108,12 +15280,33 @@
                             "fadedLightLevel": 0.3
                         }
                     ],
+                    "triggers": [
+                        {
+                            "id": 10000555,
+                            "position": [-100, 400, -50],
+                            "scale": [5000, 5000, 1000],
+                            "damageType": "Phazon",
+                            "damageAmount": 0.12
+                        }
+                    ],
                     "addConnections": [
                         {
                             "senderId": 10000530,
                             "state": "ZERO",
                             "targetId": 10000531,
                             "message": "ACTION"
+                        },
+                        {
+                            "senderId": 2228225, // player in area
+                            "state": "ENTERED",
+                            "targetId": 10000555, // trigger
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 2228225, // player in area
+                            "state": "EXITED",
+                            "targetId": 10000555, // trigger
+                            "message": "DEACTIVATE"
                         }
                     ]
                 },
@@ -15169,6 +15362,15 @@
                             "startImmediately": true
                         }
                     ],
+                    "triggers": [
+                        {
+                            "id": 10000546,
+                            "position": [-100, 400, -50],
+                            "scale": [5000, 5000, 1000],
+                            "damageType": "Phazon",
+                            "damageAmount": 0.12
+                        }
+                    ],
                     "addConnections": [
                         {
                             "senderId": 2228225, // [SpecialFunction] Music Player For Area
@@ -15181,6 +15383,18 @@
                             "state": "ZERO",
                             "targetId": 10000528,
                             "message": "ACTION"
+                        },
+                        {
+                            "senderId": 2228225, // player in area
+                            "state": "ENTERED",
+                            "targetId": 10000546, // trigger
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 2228225, // player in area
+                            "state": "EXITED",
+                            "targetId": 10000546, // trigger
+                            "message": "DEACTIVATE"
                         }
                     ]
                 },
