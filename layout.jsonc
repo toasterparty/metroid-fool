@@ -76,14 +76,14 @@
         },
         "disableItemLoss": true,
         "incineratorDroneConfig": {
-            "eyeWaitInitialRandomTime": 0.0,
-            "eyeWaitRandomTime": 0.0,
+            "eyeWaitInitialRandomTime": 4.0,
+            "eyeWaitRandomTime": 4.0,
             "eyeStayUpRandomTime": 0.0,
             "resetContraptionRandomTime": 0.0,
-            "eyeWaitInitialMinimumTime": 8.657428036853762,
-            "eyeWaitMinimumTime": 18.771799326918632,
-            "eyeStayUpMinimumTime": 8.609284192392574,
-            "resetContraptionMinimumTime": 4.299550398757779
+            "eyeWaitInitialMinimumTime": 1,
+            "eyeWaitMinimumTime": 1,
+            "eyeStayUpMinimumTime": 0.5,
+            "resetContraptionMinimumTime": 0.1
         },
         "mazeSeeds": [
             2041669472
@@ -19795,7 +19795,34 @@
                         "0": {
                             "shieldType": "Plasma Beam"
                         }
-                    }
+                    },
+                    "editObjs": {
+                        "3145742": { // zoid
+                            "speed": 10
+                        }
+                    },
+                    "timers": [
+                        {
+                            "id": 3145746, // snap up delay
+                            "time": 0.02
+                        },
+                        {
+                            "id": 3155762, // snap up duration
+                            "time": 0.8
+                        },
+                        {
+                            "id": 3145748, // reset contraption
+                            "time": 0.1
+                        }
+                    ],
+                    "triggers": [
+                        {
+                            "position": [577.0259, -13.7146, 34.5081],
+                            "scale": [2, 2, 8],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, 0, 1000]
+                        }
+                    ]
                 },
                 "Furnace": {
                     "pickups": [
