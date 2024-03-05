@@ -16,27 +16,25 @@
 ### Start
 
 - SJF Jumpscare
-- Tallon -> Chozo
 - Beetle Battles
-- Elevator Save Station
 - **Ruined Shrine - Morph Ball**
 
 ### Explore Early Game
 
 - **Tower Chamber - Lifegiver**
-- Artifact Temple lore established. Hints are blocked by Glorgie's shield.
+- Artifact Temple lore established. Hints are blocked by Glorgie's shield
 - **Frigate Crash Site - Energy Tank**
 - Water Pool morph track
 - **Water Pool - Missile Launcher**
 
-### Fight Requirements
+### Sunchamber Requirements
 
 #### Grapple
 
-- Frigate Crash Site -> Lava Lake
+- NSJ Frigate Crash Site Climb
 - Lake Tunnel no-jump heat run
 - **Lake Tunnel - Grapple Beam**
-- Hive Mecha fight
+- Hive Mecha+
 - **Hive Totem - Energy Tank**
 
 #### Bombs
@@ -45,25 +43,21 @@
 - Watery Hall Scan Puzzle
 - **Dynamo - Morph Ball Bomb**
 
-### Flaahgra
+### Sunchamber
 
-- Transport Access North Bomb Puzzle
-- Sun Tower Bomb Puzzle
+- Transport Access North / Sun Tower Puzzles
 - Flaahgra+
 - **Sunchamber - Varia Suit**
 - **Sunchamber - Wild** (But there are no ghosts)
 
 ### Journey to Phendrana
 
-- Frigate Crash Site -> Lava Lake
-    - Lava Lake item is "missing"
 - Triclops Pit Yoku block sequence
 - **Triclops Pit - Nature**
-- Monitor Station -> Phendrana Shorelines
 
 ### Phendrana Mashup
 
-- Elevator Save Station
+- Navigate complex room-rando maze
 - **Phendrana Canyon - Charge Beam**
 - **Chozo Ice Temple - Bomb Slot Activated**
     - This unlocks a shortcut
@@ -71,126 +65,105 @@
 - Sheegoth Fight+
 - **Chapel of the Elders - Boost Ball**
 
-### Labs False Start
+### Labs Requirements
 
-- Ruined Courtyard puzzle which hard-requires boost
-- **Ruined Courtyard - E-Tank**
-- *Need Supers and Wave to proceed into labs*
+#### Wave Beam
 
-### Backtrack
-
-- Unlock Geothermal Core ceiling with the help of Grapple. Wave Beam extends out with the piston.
+- Unlock Geothermal Core ceiling (requires grapple/boost). Wave Beam extends out with the piston.
 - **Geothermal Core - Wave Beam**
-- Reverse Piston Tunnel/Training Chamber
+
+#### Super Missiles
+
+- Piston Tunnel / Training Chamber (requires requires grapple/boost)
 - **Training Chamber Access - Super Missiles**
 
 ### Labs
 
-- Research Entrance through Research Core has the following:
-    - Vanilla room connections
-    - Low gravity
-    - Increased combat levels
-- Low gravity vertical puzzle in control tower. Must be possible NSJ/low-grav AND SJ/normal-grav
+- Ruined Courtyard puzzle (requires boost)
+- **Ruined Courtyard - E-Tank**
+- Wave + Supers required to enter labs
 - **Control Tower - Elder**
 - *Pike Access requires normal gravity to proceed*
 - **Research Core - Restore Gravity**
 
-### Labs -> Thardus
+### Far Phendrana
 
-- Frozen Pike (Hunter) -> Storage Cave
 - **Storage Cave - Spirit**
-- Frozen Pike (Frost) -> Security Cave
-- Quarantine Cave Elevator - Save Station
 - *Elevator platform goes up instead of down and requires Spider Ball to reach*
 
-### Thardus
+### Quarantine Cave
 
-- *Fight activates after grabbing spider instead of before*
 - **Quarantine Cave - Spider**
-- Thardus fight
+- Thardus+ to escape
 
-### Late Magmoor
+### Ice Beam
 
-- *Early-Magmoor access is blocked*
-- *Pass through one-way ice door when entering Geothermal Core*
-- *Plasma Processing door is Power Bomb locked*
-- *Mines Elevator Ice locked*
+- 1-way Ice Door to return to Late Magmoor
 - **Ruined Shrine (Spider Track) - Ice Beam**
 
 ### Early Mines
 
-- *Quarry Access Ice locked*
-- *Required secret boxes*
-- *Ultimate Maze*
+- Dynamo Maze+
 - **Central Dynamo - Power Bombs**
-- *MQA locked by Plasma*
-- *Phazon Elite is missing. The Artifact sits plainly.*
 - **Elite Research - Warrior**
 - Unlock shortcut: Warrior Shrine -> Fiery Shores [PoNR]
 
-### Plasma
+### Plasma Beam
 
 - Geothermal Core Spider Track
 - **Plasma Processing - Plasma Beam**
-    - Grabbing Plasma changes the Geothermal Core layer and reloads the room
 - Reggie's Geothermal Core Morph track from hell
 - **Gully - Gravity Suit**
 - **Chozo Ice Temple - Sun**
 
 ### Late Mines
 
-- *Everything from QAA to EQA has had all of the enemies removed. Instead of combat, these rooms focus on challenging NSJ platforming sections. The ambient light level has be raised too. Phazon isn't an issue.*
-- Omega Pirate fight
-    - Try goomba stacking again idk?
+- Omega Pirate+
 - **Elite Quarters - Space Jump**
 - **Phazon Mining Tunnel - Newborn**
 
 ### Cleanup
 
 - **Arbor Chamber - Wavebuster**
-    - Wave/SJ Locked
-    - *Kaizo block makes you have to ride the zoomer again*
     - Unlocks shortcut: Frozen Pike <--> Ruined Courtyard
 - **Burn Dome - Flamethrower**
-    - Plasma locked
     - Unlocks PB Expansion in Storage Cavern
-- SJ-required crossway
+- Crossway Puzzle (requires SJ)
 - **Elder Chamber - Spirit**
-- Reflecting Pool -> GTH
-- Required Gravity
+- Great Tree Hall Climb (requires Gravity Suit)
 - **Life Grove - Ice Spreader**
-- **Life Grove - Drain Water**
+- **Life Grove - Unclog Drain**
 - **Life Grove - Chozo**
 
 ### Phazon Frigate
 
-- HAT Wavebuster Shield
-- HAT Flamethrower Shield (drained water only)
-- Crashed Frigate Phazon "heatrun"
+- Hydro Access Tunnel (requires Wavebuster, Flamethrower and "Unclogged Drain")
+- 1-way Phazon hell run
 - **Reactor Core - Glorgsmire Gumpybottom's Keyring**
 
-### Farce Reveal
+### Artifact Return Policy
 
 - **Artifact Temple - Phazon Suit**
-- Gimmick revealed plainly - The player must return any and all artifacts to enter the crater, and the ghosts are angry about it
-    - Chozo: Life Grove ghost fight
-    - Lifegiver: Ruined Shrine ghost fight
-    - World: HoTE ghost fight
-    - Wild: Sunchamber ghost fight
-    - Nature: Invincible flying pirates in Triclops Pit puzzle
-    - Strength: Warrior Shrine but it's up high
-    - Elder: Control Tower puzzle but harder because gravity is turned on
-    - Sun: The sheegoth and bombus are in the artifact room
-    - Spirit: Nothing
-    - Warrior: Phazon Elite active
-    - Newborn: Blocks require power bombs
+- The long-con farce is finally revealed. The player must return any and all artifacts which they have collected to enter the crater, and the ghosts are angry about it. The player must deal with some or all of the following depending on which artifacts they "stole":
+    - **Chozo**: Life Grove ghost fight
+    - **Lifegiver**: Ruined Shrine ghost fight
+    - **World**: HoTE ghost fight
+    - **Wild**: Sunchamber ghost fight
+    - **Nature**: Invincible flying pirates in Triclops Pit puzzle
+    - **Strength**: Warrior Shrine but it's up high
+    - **Elder**: Control Tower but they don't get to enjoy low gravity
+    - **Sun**: The sheegoth and bombus are crowded in the artifact cubby
+    - **Spirit**: It's an annoying room to reach
+    - **Warrior**: Phazon Elite active
+    - **Newborn**: Blocks require power bombs
 
 ### Bosses
 
+- Player can enter Impact Crater freely once they posses no artifacts
 - **Phazon Core - Thermal Visor**
 - **Phazon Core - X-Ray Visor**
 - Exo
 - Essence
-- Escape Sequence
+- Impact Crater Escape Sequence
 - Ridley
 - Credits
