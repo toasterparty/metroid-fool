@@ -20088,12 +20088,12 @@
                 "Crossway Access South": {
                     "doors": {
                         "0": {
-                            "shieldType": "Ice Spreader",
-                            "blastShieldType": "Ice Spreader"
-                        },
-                        "1": {
                             "shieldType": "Blue",
                             "blastShieldType": "None"
+                        },
+                        "1": {
+                            "shieldType": "Ice Spreader",
+                            "blastShieldType": "Ice Spreader"
                         }
                     },
                     "pickups": [
