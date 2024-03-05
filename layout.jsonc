@@ -19869,7 +19869,11 @@
                     },
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            // id: 3408606
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 2
                         }
                     ],
                     "doors": {
@@ -19882,8 +19886,8 @@
                             "blastShieldType": "None"
                         },
                         "3": {
-                            "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "shieldType": "Ice Spreader",
+                            "blastShieldType": "Ice Spreader"
                         },
                         "4": {
                             "shieldType": "Blue",
@@ -19979,13 +19983,27 @@
                             "state": "MAX_REACHED",
                             "targetId": 12000066, // block
                             "message": "DEACTIVATE"
+                        },
+                        // Missile Meme
+                        {
+                            "senderId": 3408606, // pickup
+                            "state": "ARRIVED",
+                            "targetId": 3408495, // missile station spawn point
+                            "message": "SET_TO_ZERO"
+
                         }
                     ]
                 },
                 "Crossway": {
+                    "layers": {
+                        "2": false // piston on
+                    },
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 2
                         }
                     ],
                     "doors": {
@@ -20003,7 +20021,59 @@
                             "position": [782.7, -77.6, 47.7],
                             "scale": [45, 25, 1],
                             "texture": "Sandstone"
+                        },
+                        {
+                            "position": [795.35, -66.98, 63.33],
+                            "scale": [18.05, 1.05, 20.05],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [804.55, -78, 63.33],
+                            "scale": [1.05, 23, 20.05],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [782.2, -91.1, 75.6],
+                            "scale": [5, 5.2, 5],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [762.4, -90.7, 69.4],
+                            "scale": [8, 3, 1],
+                            "texture": "Sandstone"
                         }
+                    ],
+                    "timers": [
+                        {
+                            "id": 10000558,
+                            "layer": 2,
+                            "time": 1,
+                            "startImmediately": true
+                        }
+                    ],
+                    "addConnections": [
+                        /* Activate piston without cutscene or timer */
+                        {
+                            "senderId": 10000558,
+                            "state": "ZERO",
+                            "targetId": 3474223, // move piston down timer
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 3474090, // waypoint (top)
+                            "state": "ARRIVED",
+                            "targetId": 10000558,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 3474091, // waypoint (bottom)
+                            "state": "ARRIVED",
+                            "targetId": 3474217, // move piston trigger
+                            "message": "ACTIVATE"
+                        }
+                    ],
+                    "deleteIds": [
+                        3474212 // player hint (no unmorph)
                     ]
                 },
                 "Reflecting Pool Access": {},
@@ -20018,14 +20088,45 @@
                 "Crossway Access South": {
                     "doors": {
                         "0": {
-                            "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "shieldType": "Ice Spreader",
+                            "blastShieldType": "Ice Spreader"
                         },
                         "1": {
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "pickups": [
+                        {
+                            "id": 10000560,
+                            "position": [772.006, -108.8304, 50.16],
+                            "type": "Nothing",
+                            "hudmemoText": "I just wanted to make you go in the tunnel"
+                        }
+                    ],
+                    "blocks": [
+                        {
+                            "position": [777.659973, -108.8498, 50.397518],
+                            "scale": [2.618042, 2.319, 2.331001],
+                            "texture": "Sandstone"
+                        }
+                    ],
+                    "specialFunctions": [
+                        {
+                            "id": 10000559,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 680609473, // crossway
+                            "layerChangeLayerId": 2
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 10000560,
+                            "state": "ARRIVED",
+                            "targetId": 10000559,
+                            "message": "INCREMENT"
+                        }
+                    ]
                 },
                 "Elder Chamber": {
                     "doors": {
