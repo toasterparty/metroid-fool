@@ -10,7 +10,7 @@ Experience Metroid Prime like never before. The planet of Tallon IV has been stu
 
 ## Features
 
-This hack is the first to explore the new script-editing tools created for the randomprime patcher. As a result, edits to rooms provide much more *"dynamic" 😏* interactions with the player than in any previously released mod. It also makes use of all the usual patcher features (e.g. shuffled items/elevators/doors, quality of life improvements etc...) seen previously. This description of features is intentionally vague; All you need to know is I spent a *lot* of time trying to make this one interesting and memorable. While the initial idea for this fanhack was more or less of a shitpost, this may very well be my magnum opus.
+This hack is the first to explore the new script-editing tools created for the randomprime patcher. As a result, edits to rooms provide much more *"dynamic" 😏* interactions with the player than in any previously released mod. It also makes use of all the usual patcher features (e.g. shuffled items/elevators/doors, quality of life improvements etc...) seen previously. This description of features is intentionally vague; All you need to know is I spent a *lot* of time trying to make this one interesting and memorable. While the initial idea for this fanhack was more or less a shitpost, this may very well be my magnum opus.
 
 ## Difficulty
 
