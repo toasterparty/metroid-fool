@@ -25,16 +25,19 @@ Please do not unnesecarily spoil the contents of this hack when discussing in ch
 Please note that some unique lore is provided in and around Artifact Temple. No lore text outside of this area has been modified. I'm telling you this so you don't scan everything in fear of missing out.
 
 ## [❔ Hints](./hints.md)
-Check here if you're stuck before reading the spoiler log.
+
+Check here first if you're stuck in a specific room.
 
 ## [🙈 Spoiler](./spoiler.md)
 
+View this only if you are compeltely lost or have already finished the game.
+
 ## Credits
-|  |  | 
+|  |  |
 -------|------------------
 | **Modding Tools** | *toasterparty* |
 | **Route & Layout** | *toasterparty* |
 | **Puzzles** | *toasterparty, UncleReggie* |
 | **Playtesting** | *UncleReggie* |
 
-*From the bottom of my chrome breadcrum filled heart: thanks for playing.*
+*From the bottom of my breadcrum filled chrome coated heart: Thanks for Playing!*

@@ -17,7 +17,7 @@ To get to the first floating platform:
   <summary>I'm having trouble in Chapel of the Elders</summary>
 
 ```
-Scan momma sheegoth to change the lock-on target to her head and use charged power beam shots.
+Scan the Adult Sheegoth to change the lock-on target to its head and use charged Power Beam shots.
 ```
 
 </details>
