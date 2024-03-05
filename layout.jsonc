@@ -12388,8 +12388,8 @@
                 "Artifact Temple": "Crater Entry Point",
                 "Tallon Overworld East (Frigate Crash Site)": "Magmoor Caverns North (Lava Lake)",
                 "Tallon Overworld West (Root Cave)": "Magmoor Caverns South (Magmoor Workstation, Save Station)",
-                "Tallon Overworld South (Great Tree Hall, Upper)": "Chozo Ruins East (Reflecting Pool, Save Station)",
-                "Tallon Overworld South (Great Tree Hall, Lower)": "Chozo Ruins South (Reflecting Pool, Far End)"
+                "Tallon Overworld South (Great Tree Hall, Upper)": "Chozo Ruins South (Reflecting Pool, Far End)",
+                "Tallon Overworld South (Great Tree Hall, Lower)": "Chozo Ruins East (Reflecting Pool, Save Station)"
             },
             "rooms": {
                 "Landing Site": {
@@ -14640,7 +14640,8 @@
                             "position": [-100, 400, -50],
                             "scale": [5000, 5000, 1000],
                             "damageType": "Phazon",
-                            "damageAmount": 0.12
+                            "damageAmount": 0.12,
+                            "active": false
                         }
                     ],
                     "addConnections": [
@@ -14799,7 +14800,8 @@
                             "position": [-100, 400, -50],
                             "scale": [5000, 5000, 1000],
                             "damageType": "Phazon",
-                            "damageAmount": 0.12
+                            "damageAmount": 0.12,
+                            "active": false
                         }
                     ],
                     "lockOnPoints": [
@@ -14880,7 +14882,8 @@
                             "position": [-100, 400, -50],
                             "scale": [5000, 5000, 1000],
                             "damageType": "Phazon",
-                            "damageAmount": 0.12
+                            "damageAmount": 0.12,
+                            "active": false
                         }
                     ],
                     "addConnections": [
@@ -14953,7 +14956,8 @@
                             "position": [-100, 400, -50],
                             "scale": [5000, 5000, 1000],
                             "damageType": "Phazon",
-                            "damageAmount": 0.12
+                            "damageAmount": 0.12,
+                            "active": false
                         }
                     ],
                     "addConnections": [
@@ -15020,7 +15024,8 @@
                             "position": [-100, 400, -50],
                             "scale": [5000, 5000, 1000],
                             "damageType": "Phazon",
-                            "damageAmount": 0.12
+                            "damageAmount": 0.12,
+                            "active": false
                         }
                     ],
                     "addConnections": [
@@ -15068,7 +15073,9 @@
                     "deleteIds": [
                         1966110, // [StreamedAudio] StreamedAudio Over Crash Ship 3 SW
                         1966685, 1966683, 1966666, 1966664, // guns
-                        1966728, 1966754, 1966729, 1966753 // layer changers
+                        1966728, 1966754, 1966729, 1966753, // layer changers
+                        // debris to prevent crash
+                        1966669, 1966670, 1966671, 1966672, 1966688, 1966689, 1966690, 1966691, 1966842, 1966843, 1966844, 1966845, 1966846, 1966847, 1966848, 1966849, 1966851, 1966852, 1966853, 1966854, 1966855, 1966856, 1966857, 1966858, 1966859, 69075854, 69075856, 69075857, 69075858, 69075859, 69075860, 69075861, 69075862, 136183843, 136183846, 136183848, 136183849, 136183850, 136183852, 136183853, 136183855, 136183858, 136183860, 136183845, 136183847, 136183854, 136183857, 136183864, 136183877, 136183953, 136183954, 136183955, 136183956, 136183957, 136183958, 136183887, 136183898, 136183900, 136183901, 136183903, 136183904, 136183906, 136183910, 136183912, 136183913, 136183924, 136183925, 136183926, 136183927, 136183928, 136183929, 136183965, 136183966, 136183967, 136183968, 136183969, 136183970, 136183971, 136183972, 136183973, 136183974, 136183983, 136183984, 136183985, 136183986, 136183987, 136183988, 136183989, 136183990, 136183991, 136183992, 136184022, 136184023, 136184024, 136184025, 136184026, 136184027, 136184033, 136184034, 136184035, 136184036, 136184037, 136184038, 136184039, 136184040, 136184041, 136184042, 136184043, 136184044, 136184051, 136184052, 136184053, 136184054, 136184055, 136184056, 136184057, 136184058, 136184059, 136184060, 136184069, 136184070, 136184071, 136184072, 136184073, 136184074, 136184080, 136184081, 136184082, 136184083, 136184084, 136184085, 136184086, 136184087, 136184088, 136184089, 136184000, 136184001, 136184002, 136184003, 136184004, 136184005, 136184006, 136184007, 136184008, 136184009, 136184122, 136184123, 136184124, 136184125, 136184126, 136184127, 136184105, 136184107, 136184108, 136184109, 136184110, 136184111, 136184112, 136184113, 136184139, 136184141, 136184142, 136184143, 136184145, 136184146, 136184147, 136184148, 136184100, 136184103, 136184104, 136184114, 136184115, 136184116, 136184117, 136184118, 136184159, 136184161, 136184162, 136184163, 136184164, 136184165, 136184166, 136184167, 136184173, 136184175, 136184176, 136184177, 136184178, 136184181, 136184182, 136184183, 136184186, 136184188, 136184189, 136184190, 136184191, 136184192, 136184193, 136184194, 136184197, 136184199, 136184200, 136184201, 136184202, 136184203, 136184204, 136184205, 136183829, 136183935, 136183947, 136183948, 136183949, 136183950, 136183951, 136184096, 136184099, 136184144, 136184151, 136184158, 136184170, 136184171, 136184172, 136184207, 203293352, 203293353, 203293354, 203293355, 203293356, 203293357, 203293358, 203293359, 203293362, 203293363, 203293364, 203293365, 203293366, 203293367, 203293368, 203293369, 203293370
                     ],
                     "fog": {
                         "color": [
@@ -15102,7 +15109,8 @@
                             "position": [-100, 400, -50],
                             "scale": [5000, 5000, 1000],
                             "damageType": "Phazon",
-                            "damageAmount": 0.12
+                            "damageAmount": 0.12,
+                            "active": false
                         }
                     ],
                     "addConnections": [
@@ -15174,7 +15182,8 @@
                             "position": [-100, 400, -50],
                             "scale": [5000, 5000, 1000],
                             "damageType": "Phazon",
-                            "damageAmount": 0.12
+                            "damageAmount": 0.12,
+                            "active": false
                         }
                     ],
                     "addConnections": [
@@ -15247,7 +15256,8 @@
                             "position": [-100, 400, -50],
                             "scale": [5000, 5000, 1000],
                             "damageType": "Phazon",
-                            "damageAmount": 0.12
+                            "damageAmount": 0.12,
+                            "active": false
                         }
                     ],
                     "addConnections": [
@@ -15315,7 +15325,8 @@
                             "position": [-100, 400, -50],
                             "scale": [5000, 5000, 1000],
                             "damageType": "Phazon",
-                            "damageAmount": 0.12
+                            "damageAmount": 0.12,
+                            "active": false
                         }
                     ],
                     "addConnections": [
@@ -15367,7 +15378,7 @@
                     "streamedAudios": [
                         {
                             "id": 10000520,
-                            "volume": 120,
+                            "volume": 127,
                             "audioFileName": "/audio/int_biohazardL.dsp|/audio/int_biohazardR.dsp",
                             "isMusic": true,
                             "fadeOutTime": 12,
@@ -15397,7 +15408,8 @@
                             "position": [-100, 400, -50],
                             "scale": [5000, 5000, 1000],
                             "damageType": "Phazon",
-                            "damageAmount": 0.12
+                            "damageAmount": 0.12,
+                            "active": false
                         }
                     ],
                     "addConnections": [
@@ -15440,7 +15452,32 @@
                     },
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 2
+                        }
+                    ],
+                    "blocks": [
+                        {
+                            "position": [-57.4, 137.38, -80.1],
+                            "scale": [1.1, 2.5, 0.1],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [-57.4, 137.38, -71.6],
+                            "scale": [1.1, 2.5, 0.1],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [-70.3, 137.38, -79.3],
+                            "scale": [1.1, 2.5, 0.1],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [-79.4, 137.38, -79.3],
+                            "scale": [1.1, 2.5, 0.1],
+                            "texture": "Mine"
                         }
                     ],
                     "deleteIds": [
@@ -15471,6 +15508,27 @@
                         {
                             "id": 10000525,
                             "time": 0.5
+                        },
+                        {
+                            "id": 10000572,
+                            "layer": 1,
+                            "startImmediately": true,
+                            "time": 0.02
+                        }
+                    ],
+                    "triggers": [
+                        {
+                            "id": 10000574,
+                            "deactivateOnEnter": true,
+                            "position": [-106.1145, 139.8884, -83.921],
+                            "scale": [10, 20, 4]
+                        }
+                    ],
+                    "hudmemos": [
+                        {
+                            "id": 10000573,
+                            "text": "&just=center;&main-color=#FF3333;Intense radiation detected.&main-color=#89D6FF;",
+                            "messageTime": 8
                         }
                     ],
                     "specialFunctions": [
@@ -15479,7 +15537,51 @@
                             "type": "SaveStation"
                         }
                     ],
+                    "editObjs": {
+                        "2293770": { "layer": 1 },
+                        "2293771": { "layer": 1 },
+                        "2293772": { "layer": 1 },
+                        "2293773": { "layer": 1 },
+                        "2293774": { "layer": 1 },
+                        "2293775": { "layer": 1 },
+                        "2293781": { "layer": 1 },
+                        "2293783": { "layer": 1 },
+                        "2293785": { "layer": 1 },
+                        "2293787": { "layer": 1 },
+                        "2293788": { "layer": 1 },
+                        "2293790": { "layer": 1 },
+                        "2293867": { "layer": 1 },
+                        "2293869": { "layer": 1 },
+                        "2293870": { "layer": 1 },
+                        "2293872": { "layer": 1 },
+                        "2293873": { "layer": 1 },
+                        "2293875": { "layer": 1 },
+                        "2293876": { "layer": 1 },
+                        "2293878": { "layer": 1 },
+                        "2293782": { "layer": 1 },
+                        "2293786": { "layer": 1 },
+                        "2293789": { "layer": 1 },
+                        "2293868": { "layer": 1 },
+                        "2293871": { "layer": 1 },
+                        "2293874": { "layer": 1 },
+                        "2293877": { "layer": 1 },
+                        "2293862": { "layer": 1 }
+                    },
                     "addConnections": [
+                        /* Danger hudmemo */
+                        {
+                            "senderId": 10000572, // timer
+                            "state": "ZERO",
+                            "targetId": 10000574, // trigger
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000574, // trigger
+                            "state": "ENTERED",
+                            "targetId": 10000573, // hudmemo
+                            "message": "SET_TO_ZERO"
+                        },
+
                         {
                             "senderId": 2293761, // [SpecialFunction] Music Player For Area
                             "state": "ENTERED",
@@ -15500,6 +15602,15 @@
                             "targetId": 10000526,
                             "message": "ACTION"
                         }
+                    ],
+                    "liquids": [
+                        {
+                            "id": 2293765,
+                            "layer": 1,
+                            "position": [-69.374084, 134.942719, -69.136787],
+                            "scale": [92.858002, 30.000008, 40.0],
+                            "type": "Water"
+                        }
                     ]
                 },
                 "Great Tree Hall": {
@@ -15509,8 +15620,8 @@
                             "blastShieldType": "Wavebuster"
                         },
                         "2": {
-                            "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "shieldType": "Ice Spreader",
+                            "blastShieldType": "Ice Spreader"
                         },
                         "3": {
                             "shieldType": "Blue",
@@ -15559,8 +15670,17 @@
                             "audioFileName": "/audio/over-worldL.dsp|/audio/over-worldR.dsp"
                         }
                     ],
+                    "removeWater": true,
                     "deleteIds": [
                         2359323, 2359324
+                    ],
+                    "liquids": [
+                        {
+                            "type": "Water",
+                            "layer": 3,
+                            "position": [10.6, 148.2, -12.6],
+                            "scale": [70, 65, 120]
+                        }
                     ],
                     "addConnections": [
                         {
@@ -15574,7 +15694,18 @@
                 "Great Tree Chamber": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 2
+                        }
+                    ],
+                    "liquids": [
+                        {
+                            "layer": 1,
+                            "type": "Water",
+                            "position": [73.2, 148.4, 11.2],
+                            "scale": [60, 45, 30]
                         }
                     ]
                 },
@@ -15585,8 +15716,8 @@
                             "blastShieldType": "None"
                         },
                         "1": {
-                            "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "shieldType": "Ice Spreader",
+                            "blastShieldType": "Ice Spreader"
                         }
                     }
                 },
@@ -15601,7 +15732,15 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "liquids": [
+                        {
+                            "layer": 2,
+                            "type": "Water",
+                            "position": [17.6, 85.7, 17.5],
+                            "scale": [50, 67.45, 35.13]
+                        }
+                    ]
                 },
                 "Transport Tunnel E": {
                     "doors": {
@@ -15613,7 +15752,18 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "liquids": [
+                        {
+                            "layer": 1,
+                            "type": "Water",
+                            "position": [10.2, 68.01, -49.6],
+                            "scale": [36.38, 96, 20]
+                        }
+                    ],
+                    "deleteIds": [
+                        2621467, 2621596 // no spooky mines music or red hudmemo
+                    ]
                 },
                 "Transport to Chozo Ruins South": {
                     "doors": {
@@ -15650,7 +15800,56 @@
                             "respawn": true
                         }
                     ],
+                    "relays": [
+                        {
+                            "id": 10000563
+                        }
+                    ],
                     "specialFunctions": [
+                        /* Drain water in tallon */
+                        {
+                            "id": 10000564,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 2532353806, // great tree hall
+                            "layerChangeLayerId": 3
+                        },
+                        {
+                            "id": 10000565,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3748365169, // life grove
+                            "layerChangeLayerId": 5
+                        },
+                        {
+                            "id": 10000566,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 8495756, // life grove tunnel
+                            "layerChangeLayerId": 2
+                        },
+                        {
+                            "id": 10000567,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 2416516239, // hydro access tunnel
+                            "layerChangeLayerId": 1
+                        },
+                        {
+                            "id": 10000568,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 4289720017, // grea tree chamber
+                            "layerChangeLayerId": 1
+                        },
+                        {
+                            "id": 10000569,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3035931545, // transport tunnel e
+                            "layerChangeLayerId": 1
+                        },
+                        {
+                            "id": 10000570,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3156907596, // elevator (ttpme)
+                            "layerChangeLayerId": 1
+                        },
+                        /* Artifact */
                         {
                             "id": 12000039,
                             "type": "ScriptLayerController",
@@ -15675,6 +15874,17 @@
                             "layer": 4,
                             "time": 0.1,
                             "startImmediately": true
+                        },
+                        {
+                            "id": 2752985, // Timer - Delay Extend Pillar Cinematic
+                            "time": 4
+                        }
+                    ],
+                    "hudmemos": [
+                        {
+                            "id": 10000571,
+                            "messageTime": 12,
+                            "text": "&just=center;Wow! You unclogged the entire region."
                         }
                     ],
                     "blocks": [
@@ -15697,9 +15907,99 @@
                         /* Make the ghosts annoying */
                         "2752706": {"speed": 1.2},
                         "2752722": {"speed": 1.6},
-                        "2752729": {"speed": 2.0}
+                        "2752729": {"speed": 2.0},
+                        /* Slower Water Drain */
+                        "10000561": { "speed": 9 },
+                        "10000562": { "speed": 9 }
                     },
+                    "liquids": [
+                        // up position
+                        {
+                            "id": 10000561,
+                            "layer": 5,
+                            "type": "Water",
+                            "position": [21.1, -15.4, 21.3],
+                            "scale": [100, 140, 40]
+                        },
+                        // down position
+                        {
+                            "id": 10000562,
+                            "layer": 5,
+                            "type": "Water",
+                            "position": [21.1, -15.4, -5.3],
+                            "scale": [100, 140, 10]
+                        }
+                    ],
                     "addConnections": [
+                        /* Drain Water */
+                        {
+                            "senderId": 2752984,
+                            "state": "ZERO",
+                            "targetId": 10000563,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 2752985, // timer
+                            "state": "ZERO",
+                            "targetId": 10000571, // hudmemo
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000561,
+                            "state": "PLAY",
+                            "targetId": 10000562,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 2752984,
+                            "state": "ZERO",
+                            "targetId": 10000561,
+                            "message": "NEXT"
+                        },
+                        /* Layer Changes */
+                        {
+                            "senderId": 10000563,
+                            "state": "ZERO",
+                            "targetId": 10000564,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000563,
+                            "state": "ZERO",
+                            "targetId": 10000565,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000563,
+                            "state": "ZERO",
+                            "targetId": 10000566,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000563,
+                            "state": "ZERO",
+                            "targetId": 10000567,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000563,
+                            "state": "ZERO",
+                            "targetId": 10000568,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000563,
+                            "state": "ZERO",
+                            "targetId": 10000569,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000563,
+                            "state": "ZERO",
+                            "targetId": 10000570,
+                            "message": "DECREMENT"
+                        },
+                        /* Artifact */
                         { // Taking the artifact deactivates the totem
                             "senderId": 2753076,
                             "state": "ARRIVED",
@@ -15776,7 +16076,8 @@
                     "deleteIds": [
                         2753267, // remove extra ghost trigger
                         2752841, 2753268, // remove ghost cutscene reposition
-                        2752526, 2752529 // remove randomprime cutscene skips for ghosts
+                        2752526, 2752529, // remove randomprime cutscene skips for ghosts
+                        2752518 // water
                     ]
                 },
                 "Transport to Phazon Mines East": {
@@ -15785,7 +16086,15 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "liquids": [
+                        {
+                            "layer": 1,
+                            "type": "Water",
+                            "position": [-29.9, 27, -54.1],
+                            "scale": [43.7, 38.88, 55.96]
+                        }
+                    ]
                 }
             }
         },
@@ -20092,8 +20401,8 @@
                             "blastShieldType": "None"
                         },
                         "1": {
-                            "shieldType": "Ice Spreader",
-                            "blastShieldType": "Ice Spreader"
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
                         }
                     },
                     "pickups": [
