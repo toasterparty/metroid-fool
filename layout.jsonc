@@ -12474,6 +12474,10 @@
                     ]
                 },
                 "Fungal Hall A": {
+                    "ambientLightingScale": 1.3,
+                    "layers": {
+                        "1": true // respawning metroids
+                    },
                     "doors": {
                         "0": {
                             "shieldType": "Blue",
@@ -12483,7 +12487,74 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "timers": [
+                        {
+                            "id": 2687681, // Timer_RESPAWN_METROID
+                            "time": 5
+                        },
+                        {
+                            "id": 2687682, // Timer_RESPAWN_METROID
+                            "time": 15
+                        }
+                    ],
+                    "triggers": [
+                        {
+                            "id": 10000580,
+                            "position": [128.4432, 272.5624, -153.5113],
+                            "scale": [35, 1, 50],
+                            "deactivateOnEnter": true
+                        }
+                    ],
+                    "editObjs": {
+                        /* Metroids */
+                        "2687679": {
+                            "detectionRange": 5,
+                            "attackRange": 1.5,
+                            "speed": 0.4
+                        },
+                        "2687680": {
+                            "detectionRange": 5,
+                            "speed": 0.9
+                        },
+                        /* Metroid Spawn Points */
+                        "2687665": {
+                            "position": [132.5934, 234.1794, -172.0342]
+                        },
+                        "2687667": {
+                            "position": [132.5934, 234.1794, -172.0342]
+                        },
+                        "2687666": {
+                            "position": [132.5934, 234.1794, -172.0342]
+                        },
+                        "2687660": {
+                            "position": [129.8368, 284.0064, -172.3703]
+                        },
+                        "2687661": {
+                            "position": [129.8368, 284.0064, -172.3703]
+                        },
+                        "2687662": {
+                            "position": [129.8368, 284.0064, -172.3703]
+                        }
+                    },
+                    "addConnections": [
+                        {
+                            "senderId": 10000580,
+                            "state": "ENTERED",
+                            "targetId": 2687681,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000580,
+                            "state": "ENTERED",
+                            "targetId": 2687682,
+                            "message": "RESET_AND_START"
+                        }
+                    ],
+                    "deleteIds": [
+                        2687010, // ripper
+                        2687058, 2687061 // small/large health
+                    ]
                 }
             }
         },
