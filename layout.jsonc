@@ -1833,7 +1833,10 @@
                 "Ice Ruins East": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "X-Ray Visor",
+                            "model": "Space Jump Boots",
+                            "scanText": "Space Jump Boots (for real this time)",
+                            "hudmemoText": "Just kidding, it was X-Ray"
                         },
                         {
                             "type": "Nothing"
@@ -1891,6 +1894,11 @@
                         {
                             "position": [132.3, -225.1, 15],
                             "scale": [40, 1, 15],
+                            "texture": "Snow"
+                        },
+                        {
+                            "position": [100.6, -225.1, 11.8],
+                            "scale": [10, 1.1, 4],
                             "texture": "Snow"
                         }
                     ],

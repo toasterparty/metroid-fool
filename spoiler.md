@@ -114,6 +114,7 @@
 - **Plasma Processing - Plasma Beam**
 - Reggie's Geothermal Core Morph track from hell
 - **Gully - Gravity Suit**
+- **Ice Ruins East - X-Ray** (Disguised as Space Jump Boots)
 - **Chozo Ice Temple - Sun**
 
 ### Late Mines
@@ -160,8 +161,7 @@
 ### Bosses
 
 - Player can enter Impact Crater freely once they posses no artifacts
-- **Phazon Core - Thermal Visor**
-- **Phazon Core - X-Ray Visor**
+- **Phazon Core - Thermal Visor** (optional)
 - Exo
 - Essence
 - Impact Crater Escape Sequence
