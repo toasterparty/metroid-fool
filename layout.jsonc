@@ -12181,7 +12181,89 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "blocks": [
+                        {
+                            "position": [163.7, 397.85, -73.4],
+                            "scale": [5, 0.2, 3],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [163.6799, 407.6037, -148.7993],
+                            "scale": [1.5, 1.5, 2],
+                            "texture": "Snow"
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 10000576,
+                            "startImmediately": true,
+                            "time": 0.02
+                        }
+                    ],
+                    "triggers": [
+                        {
+                            "id": 10000575,
+                            "position": [164.6799, 406.6037, -150.1761],
+                            "scale": [25, 25, 1]
+                        },
+                        {
+                            "id": 10000577,
+                            "position": [164.6799, 410.8037, -104.9041],
+                            "scale": [25, 25, 70]
+                        }
+                    ],
+                    "cameraHints": [
+                        {
+                            "behavior": 4,
+                            "cameraId": 10000578,
+                            "cameraPos": [163.7097, 413.007, -68.94],
+                            "cameraRot": [-70, 0, 180],
+                            "triggerId": 10000579,
+                            "triggerPos": [164.6799, 410.8037, -108.3041],
+                            "triggerScale": [25, 25, 65]
+                        }
+                    ],
+                    "extraScans": [
+                        {
+                            "position": [167.5062, 393, -72.2333],
+                            "rotation": 270,
+                            "isRed": true,
+                            "text": "Land on the bullseye",
+                            "combatVisible": true
+                        }
+                    ],
+                    "addConnections": [
+                        /* Reposition */
+                        {
+                            "senderId": 10000575,
+                            "state": "ENTERED",
+                            "targetId": 2424858,
+                            "message": "SET_TO_ZERO"
+                        },
+                        /* Camera Work */
+                        {
+                            "senderId": 10000579,
+                            "state": "EXITED",
+                            "targetId": 10000578,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000575,
+                            "state": "ENTERED",
+                            "targetId": 10000578,
+                            "message": "ACTIVATE"
+                        }
+                    ],
+                    "editObjs": {
+                        "2424862": { // Effect Elevator Light (fun fact, this is the same ID as flaahgra)
+                            "position": [163.69, 407.5789, -145.5]
+                        }
+                    },
+                    "deleteIds": [
+                        // delete elevator
+                        2424936, 2424916, 2424922, 2424930, 2424932, 2424931, 2424860, 2424947, 2424861, 2424907, 2424906, 2424935, 2424927, 2424943, 2424914
+                    ]
                 },
                 "Missile Station Mines": {
                     "doors": {
@@ -12362,6 +12444,10 @@
                         }
                     ],
                     "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
                         "1": {
                             "shieldType": "Blue",
                             "blastShieldType": "None"
