@@ -12448,6 +12448,7 @@
                 "Fungal Hall Access": {
                     "pickups": [
                         {
+                            // id: 2621698
                             "type": "Nothing"
                         }
                     ],
@@ -12460,7 +12461,17 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "blocks": [
+                        {
+                            "position": [157.9073, 355.4135, -165.5227],
+                            "scale": [50, 40, 1],
+                            "texture": "Mine"
+                        }
+                    ],
+                    "deleteIds": [
+                        2621469, 2621471, 2621698
+                    ]
                 },
                 "Fungal Hall A": {
                     "doors": {
