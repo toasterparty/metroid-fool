@@ -12159,6 +12159,9 @@
                     }
                 },
                 "Fungal Hall B": {
+                    "layers": {
+                        "1": true // respawning metroids
+                    },
                     "pickups": [
                         {
                             "type": "Nothing"
@@ -12177,7 +12180,198 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "triggers": [
+                        {
+                            "id": 10000581,
+                            "position": [139, 33.1, -160.4],
+                            "scale": [80, 150, 1]
+                        },
+                        {
+                            "id": 10000582,
+                            "position": [145.3, 50.1, -141.6],
+                            "scale": [80, 180, 50],
+                            "flags": 4 // detect projectiles
+                        }
+                    ],
+                    "blocks": [
+                        {
+                            "id": 10000584,
+                            "active": true,
+                            "position": [155.6, 103.6, -156],
+                            "scale": [3, 3, 1],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000585,
+                            "active": false,
+                            "position": [154.4, 75.9, -156.5],
+                            "scale": [3, 3, 1],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000586,
+                            "active": true,
+                            "position": [136.7, 64.7, -151],
+                            "scale": [3, 3, 1],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000587,
+                            "active": false,
+                            "position": [126.3, 34.3, -151.4],
+                            "scale": [3, 3, 1],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000588,
+                            "active": true,
+                            "position": [162.2, 7, -148.1],
+                            "scale": [5, 20, 1],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000590,
+                            "active": false,
+                            "position": [138.7655, -9.6714, -137.0829],
+                            "scale": [3, 3, 1],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000591,
+                            "active": true,
+                            "position": [145.0081, -3.9914, -135.5379],
+                            "scale": [3, 3, 1],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000592,
+                            "active": false,
+                            "position": [139.082, 6.6779, -135.3316],
+                            "scale": [3, 3, 1],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000593,
+                            "active": true,
+                            "position": [131.7235, 10.015, -133.5186],
+                            "scale": [3, 3, 1],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000594,
+                            "active": true,
+                            "position": [119.3868, 12.8301, -136.0914],
+                            "scale": [3, 3, 1],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [129.3, -12.5, -131.2],
+                            "scale": [4, 40, 30],
+                            "texture": "Mine"
+                        }
+                    ],
+                    "relays": [
+                        {
+                            "id": 10000583 // toggle platforms
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 2359724, // metroid respawn
+                            "startImmediately": true,
+                            "time": 10
+                        },
+                        {
+                            "id": 2359718,
+                            "startImmediately": true,
+                            "time": 30
+                        }
+                    ],
+                    "editObjs": {
+                        /* respawning metroids */
+                        "2359719": { "speed": 0.5, "detectionRange": 5 },
+                        "2359725": { "speed": 0.7, "detectionRange": 5 }
+                    },
+                    "addConnections": [
+                        {
+                            "senderId": 10000581,
+                            "state": "ENTERED",
+                            "targetId": 2359300, // spawn point
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000582, // trigger
+                            "state": "ENTERED",
+                            "targetId": 10000583, // relay
+                            "message": "SET_TO_ZERO"
+                        },
+                        // toggle blocks
+                        {
+                            "senderId": 10000583, // relay
+                            "state": "ZERO",
+                            "targetId": 10000584, // platform/block
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000583, // relay
+                            "state": "ZERO",
+                            "targetId": 10000585, // platform/block
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000583, // relay
+                            "state": "ZERO",
+                            "targetId": 10000586, // platform/block
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000583, // relay
+                            "state": "ZERO",
+                            "targetId": 10000587, // platform/block
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000583, // relay
+                            "state": "ZERO",
+                            "targetId": 10000588, // platform/block
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000583, // relay
+                            "state": "ZERO",
+                            "targetId": 10000590, // platform/block
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000583, // relay
+                            "state": "ZERO",
+                            "targetId": 10000591, // platform/block
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000583, // relay
+                            "state": "ZERO",
+                            "targetId": 10000592, // platform/block
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000583, // relay
+                            "state": "ZERO",
+                            "targetId": 10000593, // platform/block
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000583, // relay
+                            "state": "ZERO",
+                            "targetId": 10000594, // platform/block
+                            "message": "TOGGLE_ACTIVE"
+                        }
+                    ],
+                    "deleteIds": [
+                        2359387, 2359390, // small and large health drops
+                        2359609, 2359436 // ripper
+                    ]
                 },
                 "Elevator B": {
                     "doors": {
@@ -12279,7 +12473,13 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
+                    },
+                    "pickups": [
+                        {
+                            "type": "Thermal Visor",
+                            "position": [217.52, 3.26, -132]
                     }
+                    ]
                 },
                 "Phazon Mining Tunnel": {
                     "doors": {
