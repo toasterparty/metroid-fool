@@ -11259,7 +11259,25 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "blocks": [
+                        {
+                            "position": [-55.3556, 114.2601, -50.5359],
+                            "scale": [90, 50, 0.8],
+                            "texture": "Mine"
+                        }
+                    ],
+                    "editObjs": {
+                        "1246978": { // lowest floating platform
+                            "position": [-93.2684, 132.4473, -96.575]
+                        },
+                        "1246979": { // 2nd lowest
+                            "position": [-85.2264, 121.7634, -90.075]
+                        }
+                    },
+                    "deleteIds": [
+                        1247044, 1247043 // effect
+                    ]
                 },
                 "Omega Research": {
                     "doors": {
@@ -11388,7 +11406,15 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
+                    },
+                    "editObjs": {
+                        "1704624": { // fight trigger
+                            "position": [-154.4828, 14.7227, -136.3076]
                     }
+                    },
+                    "deleteIds": [
+                        1704921 // elevator barrier
+                    ]
                 },
                 "Central Dynamo": {
                     "pickups": [
