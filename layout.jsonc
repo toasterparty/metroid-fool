@@ -11713,8 +11713,11 @@
                         "1": {
                             "shieldType": "Blue",
                             "blastShieldType": "None"
-                        }
                     }
+                    },
+                    "deleteIds": [
+                        1835070, 1835257 // no plasma guy
+                    ]
                 },
                 "Quarantine Access A": {
                     "doors": {
@@ -11737,9 +11740,20 @@
                     }
                 },
                 "Metroid Quarantine B": {
+                    "layers": {
+                        "1": true, // 3rd pass metroids
+                        "2": true, // 1st pass troopers without the troopers
+                        "3": true, // 2nd pass metroids
+                        "4": false, // dont load
+                        "5": true // bust-out
+                    },
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            // id: 2032133
+                            "type": "Nothing",
+                            "scanText": "Barrier Key",
+                            "hudmemoText": "Barrier Unlocked!",
+                            "position": [47.5124, -83.3896, -126.3]
                         }
                     ],
                     "doors": {
@@ -11755,7 +11769,145 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "blocks": [
+                        {
+                            "position": [-17.7, -85.3, -167.7],
+                            "scale": [56, 59, 6]
+                        }
+                    ],
+                    "platforms": [
+                        {
+                            "position": [47.5124, -83.3896, -127.5]
+                        }
+                    ],
+                    "extraScans": [
+                        {
+                            "position": [-46.1419, -92.6115, -152.6459],
+                            "isRed": true,
+                            "text": "Shield generator controls are located elsewhere in this room"
+                        }
+                    ],
+                    "triggers": [
+                        {
+                            "id": 2032359, // metroid bustout trigger
+                            "active": false,
+                            "position": [-77, -85, -150],
+                            "scale": [28, 62, 15]
+                        },
+                        {
+                            "id": 2032360, // dim lights trigger
+                            "active": false,
+                            "position": [-77, -85, -150],
+                            "scale": [28, 62, 15]
+                        }
+                    ],
+                    "editObjs": {
+                        // spider track waypoints
+                        "2031628": {
+                            "position": [17.7014, -91.3948, -136.4904]
+                        },
+                        "2031627": {
+                            "position": [17.1573, -90.1179, -134.0236]
+                        },
+                        "2031626": {
+                            "position": [15.2698, -89.2948, -134.0955]
+                        },
+                        /* Bustout Metroids */
+                        "2032371": {
+                            "scale": [0.5, 0.5, 0.5],
+                            "speed": 3.3,
+                            "health": 0.5
+                        },
+                        "2032372": {
+                            "scale": [0.5, 0.5, 0.5],
+                            "speed": 3.3,
+                            "health": 0.5
+                        }
+                    },
+                    "addConnections": [
+                        // connect two spider tracks
+                        {
+                            "senderId": 2031628,
+                            "state": "ARRIVED",
+                            "targetId": 2031625,
+                            "message": "NEXT"
+                        },
+                        // re-implement forcefield deactivation
+                        {
+                            "senderId": 2032133, // pickup
+                            "state": "ARRIVED",
+                            "targetId": 2031640, // actor
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 2032133, // pickup
+                            "state": "ARRIVED",
+                            "targetId": 2031639, // trigger
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 2032133, // pickup
+                            "state": "ARRIVED",
+                            "targetId": 2031641, // color modulate
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 2032133, // pickup
+                            "state": "ARRIVED",
+                            "targetId": 2031633, // platform
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 2032133, // pickup
+                            "state": "ARRIVED",
+                            "targetId": 2032228, // platform
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 2032133, // pickup
+                            "state": "ARRIVED",
+                            "targetId": 2032330, // one shot relay
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 2032133, // pickup
+                            "state": "ARRIVED",
+                            "targetId": 2032366, // power down sound
+                            "message": "PLAY"
+                        },
+                        {
+                            "senderId": 2032133, // pickup
+                            "state": "ARRIVED",
+                            "targetId": 2032477, // memory relay
+                            "message":  "ACTIVATE"
+                        },
+                        /* Super Missile tube is bait */
+                        {
+                            "senderId": 2032121,
+                            "state": "DEAD",
+                            "targetId": 2032359,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 2032121,
+                            "state": "DEAD",
+                            "targetId": 2032360,
+                            "message": "ACTIVATE"
+                        },
+                        // also make the crates explode because why not
+                        {
+                            "senderId": 2032121,
+                            "state": "DEAD",
+                            "targetId": 2031806,
+                            "message": "SET_TO_ZERO"
+                        }
+                    ],
+                    "deleteIds": [
+                        2032112, // forcefield scan
+                        2032302, 2032303, 2032310, 2032312, 2032328, 2032334, 2032335, // pirates
+                        2031629, 2031630, 2031631 // extra spider waypoints
+                    ]
                 },
                 "Metroid Quarantine A": {
                     "layers": {
@@ -12144,7 +12296,16 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "extraScans": [
+                        {
+                            "position": [-77.9183, -163.2853, -150.9688],
+                            "isRed": false,
+                            "combatVisible": true,
+                            "rotation": 100,
+                            "text": "If you don't have what you need, you can sneak out the back of Elite Quarters.\n(I won't tell mom)"
+                        }
+                    ]
                 },
                 "Elevator Access B": {
                     "doors": {
