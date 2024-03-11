@@ -41,7 +41,7 @@
         "shootInGrapple": true,
         "patchWallcrawling": true,
         // TODO: Debug
-        "startingRoom": "Phazon Mines:Elite Quarters",
+        "startingRoom": "Impact Crater:Phazon Infusion Chamber",
         // "startingRoom": "Tallon Overworld:Landing Site",
         // "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
         "startingItems": {
@@ -347,7 +347,7 @@
                         {
                             "id": 10000103,
                             "layer": 1,
-                            "time": 0.02,
+                            "time": 0.1,
                             "startImmediately": true
                         }
                     ],
@@ -379,18 +379,6 @@
                             "state": "ZERO",
                             "targetId": 10000104,
                             "message": "ACTION"
-                        },
-                        {
-                            "senderId": 10000103,
-                            "state": "ZERO",
-                            "targetId": 173, // StreamedAudio - Crater Main SW
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 10000103,
-                            "state": "ZERO",
-                            "targetId": 169, // StreamedAudio General InterWorld Elevator SW
-                            "message": "DEACTIVATE"
                         }
                     ],
                     "deleteIds": [
@@ -645,7 +633,7 @@
                 },
                 "Phazon Infusion Chamber": {
                     "layers": {
-                        "1": false, // TODO: Debug
+                        // "1": false, // TODO: Debug
                         "2": false
                     },
                     "distanceFogs": [
@@ -681,16 +669,21 @@
                 },
                 "Subchamber One": {
                     "layers": {
-                        "1": false, // TODO: Debug
+                        // "1": false, // TODO: Debug
                         "2": false
                     },
+                    "timers": [
+                        {
+                            "id": 10000645,
+                            "layer": 2,
+                            "time": 0.02,
+                            "startImmediately": true
+                        }
+                    ],
                     "distanceFogs": [
                         {
-                            "id": 458755,
-                            "layer": 1
-                        },
-                        {
                             "layer": 2,
+                            "explicit": true,
                             "color": [
                                 0.333333,
                                 0.352941,
@@ -718,6 +711,12 @@
                     ],
                     "addConnections": [
                         {
+                            "senderId": 10000645, // timer
+                            "state": "ZERO",
+                            "targetId": 393238, // vanilla distance fog
+                            "message": "DEACTIVATE"
+                        },
+                        {
                             "senderId": 10000077,
                             "state": "INSIDE",
                             "targetId": 393236, // dock
@@ -727,14 +726,18 @@
                 },
                 "Subchamber Two": {
                     "layers": {
-                        "1": false, // TODO: Debug
+                        // "1": false, // TODO: Debug
                         "3": false
                     },
-                    "distanceFogs": [
+                    "timers": [
                         {
-                            "id": 589866,
-                            "layer": 1
-                        },
+                            "id": 10000646,
+                            "layer": 3,
+                            "time": 0.02,
+                            "startImmediately": true
+                        }
+                    ],
+                    "distanceFogs": [
                         {
                             "layer": 3,
                             "color": [
@@ -764,6 +767,12 @@
                     ],
                     "addConnections": [
                         {
+                            "senderId": 10000646, // timer
+                            "state": "ZERO",
+                            "targetId": 458755, // vanilla distance fog
+                            "message": "DEACTIVATE"
+                        },
+                        {
                             "senderId": 10000076,
                             "state": "INSIDE",
                             "targetId": 458753, // dock
@@ -773,14 +782,18 @@
                 },
                 "Subchamber Three": {
                     "layers": {
-                        "1": false, // TODO: Debug
+                        // "1": false, // TODO: Debug
                         "2": false
                     },
-                    "distanceFogs": [
+                    "timers": [
                         {
-                            "id": 524292,
-                            "layer": 1
-                        },
+                            "id": 10000647,
+                            "layer": 2,
+                            "time": 0.02,
+                            "startImmediately": true
+                        }
+                    ],
+                    "distanceFogs": [
                         {
                             "layer": 2,
                             "color": [
@@ -810,6 +823,12 @@
                     ],
                     "addConnections": [
                         {
+                            "senderId": 10000647, // timer
+                            "state": "ZERO",
+                            "targetId": 524292, // vanilla distance fog
+                            "message": "DEACTIVATE"
+                        },
+                        {
                             "senderId": 10000075,
                             "state": "INSIDE",
                             "targetId": 524290, // dock
@@ -819,9 +838,17 @@
                 },
                 "Subchamber Four": {
                     "layers": {
-                        "1": false, // TODO: Debug
+                        // "1": false, // TODO: Debug
                         "2": false
                     },
+                    "timers": [
+                        {
+                            "id": 10000648,
+                            "layer": 2,
+                            "time": 0.02,
+                            "startImmediately": true
+                        }
+                    ],
                     "blocks": [
                         /* Patch the SW */
                         {
@@ -845,10 +872,6 @@
                     ],
                     "distanceFogs": [
                         {
-                            "id": 589866,
-                            "layer": 1
-                        },
-                        {
                             "layer": 2,
                             "color": [
                                 0.333333,
@@ -868,6 +891,12 @@
                         }
                     ],
                     "addConnections": [
+                        {
+                            "senderId": 10000648, // timer
+                            "state": "ZERO",
+                            "targetId": 589866, // vanilla distance fog
+                            "message": "DEACTIVATE"
+                        },
                         {
                             "senderId": 10000074,
                             "state": "INSIDE",
@@ -934,6 +963,12 @@
                         }
                     ],
                     "addConnections": [
+                        {
+                            "senderId": 10000064, // timer
+                            "state": "ZERO",
+                            "targetId": 655398, // vanilla distance fog
+                            "message": "DEACTIVATE"
+                        },
                         // When this room loads after essence is dead, warp the player to the bottom
                         // to bypass the invisible ceiling
                         {
@@ -15444,6 +15479,16 @@
                             "destination": "End Cinema:End Cinema"
                         }
                     ],
+                    "blocks": [
+                        {
+                            "id": 10000649,
+                            "active": false,
+                            "layer": 24,
+                            "position": [-373.8, 93.8, -30.4],
+                            "scale": [15, 5, 20],
+                            "texture": "Sandstone"
+                        }
+                    ],
                     "specialFunctions": [
                         {
                             "id": 12000005,
@@ -15764,6 +15809,13 @@
                             "state": "ZERO",
                             "targetId": 1049644, // teleport music change
                             "message": "DEACTIVATE"
+                        },
+                        // when that timer expires, also lock them into the arena
+                        {
+                            "senderId": 11000080,
+                            "state": "ZERO",
+                            "targetId": 10000649, // blocker
+                            "message": "ACTIVATE"
                         },
                         // when that timer expires, also trigger the now complete ridley cutscene
                         {
