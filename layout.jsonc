@@ -120,10 +120,10 @@
         }
     },
     "tweaks": {
+        // "gunDamage": 100,
         "grappleBeamSpeed": 1.2,
         "iceBreakTimeout": 999,
         "iceBreakJumpCount": 20
-        // "gunDamage": 100
     },
     "strg": {
         "1842069621": [
@@ -11623,6 +11623,26 @@
                             "position": [-177.5, -30, -140],
                             "scale": [5, 5, 5],
                             "texture": "Mine"
+                        },
+                        {
+                            "id": 10000642,
+                            "position": [-171.2443, 12.1911, -104],
+                            "scale": [10, 10, 1],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000643,
+                            "active": false,
+                            "position": [-181.7, -2.7, -103.1],
+                            "scale": [30, 1, 10],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000644,
+                            "active": false,
+                            "position": [-167.3, 8, -103.1],
+                            "scale": [1, 30, 10],
+                            "texture": "Mine"
                         }
                     ],
                     "relays": [
@@ -11634,18 +11654,6 @@
                         },
                         {
                             "id": 10000597 // toggle group #3
-                        },
-                        {
-                            "id": 10000608, // toggle group #1
-                            "active": false
-                        },
-                        {
-                            "id": 10000609, // toggle group #2
-                            "active": false
-                        },
-                        {
-                            "id": 10000610, // toggle group #3
-                            "active": false
                         }
                     ],
                     "triggers": [
@@ -11662,6 +11670,21 @@
                             "id": 10000598,
                             "time": 0.02,
                             "startImmediately": true
+                        },
+                        {
+                            "id": 10000608, // toggle group #1
+                            "time": 0.1,
+                            "active": false
+                        },
+                        {
+                            "id": 10000609, // toggle group #2
+                            "time": 0.1,
+                            "active": false
+                        },
+                        {
+                            "id": 10000610, // toggle group #3
+                            "time": 0.1,
+                            "active": false
                         }
                     ],
                     "liquids": [
@@ -11694,7 +11717,9 @@
                             "speed": 4
                         },
                         "1704230": { // Omega Pirate
-                            "speed": 2.5
+                            "speed": 1.9,
+                            "attackRange": 1.2,
+                            "position": [-171.2443, 12.1911, -103]
                         }
                     },
                     "addConnections": [
@@ -11786,19 +11811,19 @@
                             "senderId": 10000602, // trigger
                             "state": "ENTERED",
                             "targetId": 10000608,
-                            "message": "SET_TO_ZERO"
+                            "message": "RESET_AND_START"
                         },
                         {
                             "senderId": 10000602, // trigger
                             "state": "ENTERED",
                             "targetId": 10000609,
-                            "message": "SET_TO_ZERO"
+                            "message": "RESET_AND_START"
                         },
                         {
                             "senderId": 10000602, // trigger
                             "state": "ENTERED",
                             "targetId": 10000610,
-                            "message": "SET_TO_ZERO"
+                            "message": "RESET_AND_START"
                         },
                         /* Cycle through all 3 obstacle toggles as the player fires their weapon */
                         {
@@ -11851,6 +11876,24 @@
                             "message": "ACTIVATE"
                         },
 
+                        {
+                            "senderId": 10000610, // relay (group #3)
+                            "state": "ZERO",
+                            "targetId": 10000642, // ceiling ambush block
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000610, // relay (group #3)
+                            "state": "ZERO",
+                            "targetId": 10000643, // ceiling ambush block
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000610, // relay (group #3)
+                            "state": "ZERO",
+                            "targetId": 10000644, // ceiling ambush block
+                            "message": "ACTIVATE"
+                        },
                         {
                             "senderId": 10000610, // relay (group #3)
                             "state": "ZERO",
