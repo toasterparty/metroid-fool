@@ -1,6 +1,6 @@
 {
     "$schema": "https://randovania.org/randomprime/randomprime.schema.json",
-    "outputIso": "metroid-fool-v0.4.iso",
+    "outputIso": "metroid-fool-v0.5.iso",
     "preferences": {
         "qolGameBreaking": true,
         "qolCosmetic": true,
@@ -23,7 +23,7 @@
         "phazonEliteWithoutDynamo": true,
         "removeVanillaBlastShields": true,
         "doorOpenMode": "PrimaryBlastShield",
-        "resultsString": "Metroid Fool v0.4",
+        "resultsString": "Metroid Fool v0.5",
         "warpToStart": false,
         "springBall": false,
         "nonvariaHeatDamage": true,
@@ -41,7 +41,7 @@
         "shootInGrapple": true,
         "patchWallcrawling": true,
         // TODO: Debug
-        "startingRoom": "Impact Crater:Crater Entry Point",
+        "startingRoom": "Phazon Mines:Elite Quarters",
         // "startingRoom": "Tallon Overworld:Landing Site",
         // "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
         "startingItems": {
@@ -90,14 +90,15 @@
             2041669472
         ],
         "gameBanner": {
-            "gameName": "Metroid Fool v0.4",
-            "gameNameFull": "Metroid Fool v0.4",
+            "gameName": "Metroid Fool v0.5",
+            "gameNameFull": "Metroid Fool v0.5",
             "description": "Romhack by toasterparty"
         },
-        "mainMenuMessage": "Metroid Fool v0.4",
+        "mainMenuMessage": "Metroid Fool v0.5",
         "creditsString": "&push;&font=C29C51F1;&main-color=#89D6FF;Major Item Locations&pop;\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Wave Beam&pop;\nPhazon Mines - Metroid Quarantine A\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Ice Beam&pop;\nPhazon Mines - Ventilation Shaft\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Plasma Beam&pop;\nPhazon Mines - Central Dynamo\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Missile Launcher&pop;\nTallon Overworld - Transport Tunnel B\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Grapple Beam&pop;\nTallon Overworld - Landing Site\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Thermal Visor&pop;\nPhendrana Drifts - Ice Ruins East\n\n&push;&font=C29C51F1;&main-color=#33ffd6;X-Ray Visor&pop;\nMagmoor Caverns - Warrior Shrine\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Space Jump Boots&pop;\nTallon Overworld - Frigate Crash Site\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Morph Ball&pop;\nChozo Ruins - Ruined Gallery\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Morph Ball Bomb&pop;\nChozo Ruins - Dynamo\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Boost Ball&pop;\nChozo Ruins - Watery Hall\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Spider Ball&pop;\nChozo Ruins - Ruined Gallery\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Power Bomb&pop;\nMagmoor Caverns - Fiery Shores\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Varia Suit&pop;\nChozo Ruins - Hive Totem\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Gravity Suit&pop;\nChozo Ruins - Ruined Shrine\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Phazon Suit&pop;\nTallon Overworld - Hydro Access Tunnel\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Super Missile&pop;\nPhazon Mines - Phazon Processing Center\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Wavebuster&pop;\nChozo Ruins - Main Plaza\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Ice Spreader&pop;\nChozo Ruins - Tower of Light\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Flamethrower&pop;\nChozo Ruins - Ruined Nursery\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Elder&pop;\nPhendrana Drifts - Research Lab Aether\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Lifegiver&pop;\nMagmoor Caverns - Magmoor Workstation\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Strength&pop;\nChozo Ruins - Crossway\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Truth&pop;\nPhendrana Drifts - Control Tower\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Warrior&pop;\nPhazon Mines - Main Quarry\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Wild&pop;\nPhendrana Drifts - Quarantine Cave",
         "bossSizes": {
-            "flaahgra": 1.15
+            "flaahgra": 1.15,
+            "omegaPirate": 0.666
         },
         "hallOfTheEldersBombSlotCovers": {
             "ice": "Ice",
@@ -11408,12 +11409,696 @@
                             "blastShieldType": "None"
                         }
                     },
+                    "blocks": [
+                        {
+                            "id": 10000601,
+                            "active": false,
+                            "position": [-107, -6.3, -138.4],
+                            "scale": [0.2, 5, 5],
+                            "texture": "Mine"
+                        },
+                        /* Group #1 */
+                        {
+                            "id": 10000605,
+                            "position": [-153, 39.4, -131.9],
+                            "scale": [15, 15, 20],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000618,
+                            "position": [-140.0, -35, -140],
+                            "scale": [5, 5, 5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000619,
+                            "position": [-140.0, -25, -140],
+                            "scale": [5, 5, 5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000620,
+                            "position": [-165.0, -15, -140],
+                            "scale": [5, 5, 5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000621,
+                            "position": [-165.0, -5, -140],
+                            "scale": [5, 5, 5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000622,
+                            "position": [-152.5, 0, -140],
+                            "scale": [5, 5, 5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000623,
+                            "position": [-152.5, 10, -140],
+                            "scale": [5, 5, 5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000624,
+                            "position": [-140.0, 25, -140],
+                            "scale": [5, 5, 5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000638,
+                            "position": [-127.5, 30, -140],
+                            "scale": [5, 5, 5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000639,
+                            "position": [-127.5, 20, -140],
+                            "scale": [5, 5, 5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000640,
+                            "position": [-177.5, 10, -140],
+                            "scale": [5, 5, 5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000641,
+                            "position": [-177.5, 0, -140],
+                            "scale": [5, 5, 5],
+                            "texture": "Mine"
+                        },
+                        /* Group #2 */
+                        {
+                            "id": 10000606,
+                            "position": [-123.5, -14.8, -131.9],
+                            "scale": [15, 15, 20],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000611,
+                            "position": [-152.5, -40, -140],
+                            "scale": [5, 5, 5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000612,
+                            "position": [-152.5, -30, -140],
+                            "scale": [5, 5, 5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000613,
+                            "position": [-140.0, -15, -140],
+                            "scale": [5, 5, 5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000614,
+                            "position": [-140.0, -5, -140],
+                            "scale": [5, 5, 5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000615,
+                            "position": [-165.0, -5, -140],
+                            "scale": [5, 5, 5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000616,
+                            "position": [-165.0, 15, -140],
+                            "scale": [5, 5, 5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000617,
+                            "position": [-152.5, 20, -140],
+                            "scale": [5, 5, 5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000634,
+                            "position": [-177.5, 30, -140],
+                            "scale": [5, 5, 5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000635,
+                            "position": [-177.5, 20, -140],
+                            "scale": [5, 5, 5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000636,
+                            "position": [-127.5, 10, -140],
+                            "scale": [5, 5, 5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000637,
+                            "position": [-127.5, 0, -140],
+                            "scale": [5, 5, 5],
+                            "texture": "Mine"
+                        },
+                        /* Group #3 */
+                        {
+                            "id": 10000607,
+                            "position": [-182.0, -14.0, -131.9],
+                            "scale": [15, 15, 20],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000625,
+                            "position": [-165.0, -35, -140],
+                            "scale": [5, 5, 5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000626,
+                            "position": [-165.0, -25, -140],
+                            "scale": [5, 5, 5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000627,
+                            "position": [-152.5, -20, -140],
+                            "scale": [5, 5, 5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000628,
+                            "position": [-152.5, -10, -140],
+                            "scale": [5, 5, 5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000629,
+                            "position": [-140.0, -5, -140],
+                            "scale": [5, 5, 5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000630,
+                            "position": [-140.0, 15, -140],
+                            "scale": [5, 5, 5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000631,
+                            "position": [-165.0, 25, -140],
+                            "scale": [5, 5, 5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000632,
+                            "position": [-127.5, -30, -140],
+                            "scale": [5, 5, 5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "id": 10000633,
+                            "position": [-177.5, -30, -140],
+                            "scale": [5, 5, 5],
+                            "texture": "Mine"
+                        }
+                    ],
+                    "relays": [
+                        {
+                            "id": 10000595 // toggle group #1
+                        },
+                        {
+                            "id": 10000596 // toggle group #2
+                        },
+                        {
+                            "id": 10000597 // toggle group #3
+                        },
+                        {
+                            "id": 10000608, // toggle group #1
+                            "active": false
+                        },
+                        {
+                            "id": 10000609, // toggle group #2
+                            "active": false
+                        },
+                        {
+                            "id": 10000610, // toggle group #3
+                            "active": false
+                        }
+                    ],
+                    "triggers": [
+                        {
+                            "id": 10000602,
+                            "active": false,
+                            "position": [-150, 8.6, -119],
+                            "scale": [120, 130, 70],
+                            "flags": 4 // detect projectiles
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 10000598,
+                            "time": 0.02,
+                            "startImmediately": true
+                        }
+                    ],
+                    "liquids": [
+                        // up
+                        {
+                            "id": 10000599,
+                            "type": "Lava",
+                            "position": [-157.0, 8.7, -141],
+                            "scale": [100, 130, 5]
+                        },
+                        // down
+                        {
+                            "id": 10000600,
+                            "type": "Lava",
+                            "position": [-157.0, 8.7, -145.0],
+                            "scale": [100, 130, 5]
+                        }
+                    ],
                     "editObjs": {
                         "1704624": { // fight trigger
                             "position": [-154.4828, 14.7227, -136.3076]
-                    }
+                        },
+                        "1704630": { // fight start spawn point
+                            "position": [-150.9309, -18.8929, -140.6362]
+                        },
+                        "10000599": {
+                            "speed": 4
+                        },
+                        "10000600": {
+                            "speed": 4
+                        },
+                        "1704230": { // Omega Pirate
+                            "speed": 2.5
+                        }
                     },
+                    "addConnections": [
+                        /* When the room loads, deactivate all obstacles */
+                        {
+                            "senderId": 10000598,
+                            "state": "ZERO",
+                            "targetId": 10000595,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000598,
+                            "state": "ZERO",
+                            "targetId": 10000596,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000598,
+                            "state": "ZERO",
+                            "targetId": 10000597,
+                            "message": "SET_TO_ZERO"
+                        },
+                        /* When the fight starts, activate 2/3rds of the obstacles */
+                        {
+                            "senderId": 1704577, // battle start relay
+                            "state": "ZERO",
+                            "targetId": 10000595,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 1704577, // battle start relay
+                            "state": "ZERO",
+                            "targetId": 10000596,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 1704577, // battle start relay
+                            "state": "ZERO",
+                            "targetId": 10000602, // projectile trigger
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1704577, // battle start relay
+                            "state": "ZERO",
+                            "targetId": 10000610, // relay (Group #3)
+                            "message": "ACTIVATE"
+                        },
+                        /* When the fight starts, always repositions the player */
+                        {
+                            "senderId": 1704577, // battle start relay
+                            "state": "ZERO",
+                            "targetId": 1704630, // spawn point
+                            "message": "SET_TO_ZERO"
+                        },
+                        /* When the fight starts, raise lava into the arena */
+                        {
+                            "senderId": 10000598, // instant timer
+                            "state": "ZERO",
+                            "targetId": 10000599, // up position lava
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000600, // down position lava
+                            "state": "PLAY",
+                            "targetId": 10000599, // up position lava
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000599, // up position lava
+                            "state": "PLAY",
+                            "targetId": 10000600, // down position lava
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1704577, // battle start relay
+                            "state": "ZERO",
+                            "targetId": 10000600,
+                            "message": "NEXT"
+                        },
+                        /* When the fight starts, block the elevator */
+                        {
+                            "senderId": 1704577, // battle start relay
+                            "state": "ZERO",
+                            "targetId": 10000601, // block
+                            "message": "ACTIVATE"
+                        },
+                        /* Connect trigger to all 3 groups */
+                        {
+                            "senderId": 10000602, // trigger
+                            "state": "ENTERED",
+                            "targetId": 10000608,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000602, // trigger
+                            "state": "ENTERED",
+                            "targetId": 10000609,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000602, // trigger
+                            "state": "ENTERED",
+                            "targetId": 10000610,
+                            "message": "SET_TO_ZERO"
+                        },
+                        /* Cycle through all 3 obstacle toggles as the player fires their weapon */
+                        {
+                            "senderId": 10000608, // relay (group #1)
+                            "state": "ZERO",
+                            "targetId": 10000595, // Previous group (clear)
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000608, // relay (group #1)
+                            "state": "ZERO",
+                            "targetId": 10000596, // Next group (set)
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000608, // relay (group #1)
+                            "state": "ZERO",
+                            "targetId": 10000608, // relay (group #1)
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000608, // relay (group #1)
+                            "state": "ZERO",
+                            "targetId": 10000609, // relay (group #2)
+                            "message": "ACTIVATE"
+                        },
+
+                        {
+                            "senderId": 10000609, // relay (group #2)
+                            "state": "ZERO",
+                            "targetId": 10000596, // Previous group (clear)
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000609, // relay (group #2)
+                            "state": "ZERO",
+                            "targetId": 10000597, // Next group (set)
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000609, // relay (group #2)
+                            "state": "ZERO",
+                            "targetId": 10000609, // relay (group #2)
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000609, // relay (group #2)
+                            "state": "ZERO",
+                            "targetId": 10000610, // relay (group #3)
+                            "message": "ACTIVATE"
+                        },
+
+                        {
+                            "senderId": 10000610, // relay (group #3)
+                            "state": "ZERO",
+                            "targetId": 10000597, // Previous group (clear)
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000610, // relay (group #3)
+                            "state": "ZERO",
+                            "targetId": 10000595, // Next group (set)
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000610, // relay (group #3)
+                            "state": "ZERO",
+                            "targetId": 10000610, // relay (group #3)
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000610, // relay (group #3)
+                            "state": "ZERO",
+                            "targetId": 10000608, // relay (group #1)
+                            "message": "ACTIVATE"
+                        },
+                        /* When the fight is over, lower the lava */
+                        {
+                            "senderId": 1704744, // battle end relay
+                            "state": "ZERO",
+                            "targetId": 10000600, // lava
+                            "message": "NEXT"
+                        },
+                        /* When the fight is over, unblock the elevator */
+                        {
+                            "senderId": 1704744, // battle end relay
+                            "state": "ZERO",
+                            "targetId": 10000601, // block
+                            "message": "DEACTIVATE"
+                        },
+                        /* Platforming Group #1 */
+                        {
+                            "senderId": 10000595,
+                            "state": "ZERO",
+                            "targetId": 10000605,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000595,
+                            "state": "ZERO",
+                            "targetId": 10000618,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000595,
+                            "state": "ZERO",
+                            "targetId": 10000619,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000595,
+                            "state": "ZERO",
+                            "targetId": 10000620,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000595,
+                            "state": "ZERO",
+                            "targetId": 10000621,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000595,
+                            "state": "ZERO",
+                            "targetId": 10000622,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000595,
+                            "state": "ZERO",
+                            "targetId": 10000623,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000595,
+                            "state": "ZERO",
+                            "targetId": 10000624,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000595,
+                            "state": "ZERO",
+                            "targetId": 10000638,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000595,
+                            "state": "ZERO",
+                            "targetId": 10000639,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000595,
+                            "state": "ZERO",
+                            "targetId": 10000640,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000595,
+                            "state": "ZERO",
+                            "targetId": 10000641,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        /* Platforming Group #2 */
+                        {
+                            "senderId": 10000596,
+                            "state": "ZERO",
+                            "targetId": 10000606,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000596,
+                            "state": "ZERO",
+                            "targetId": 10000611,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000596,
+                            "state": "ZERO",
+                            "targetId": 10000612,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000596,
+                            "state": "ZERO",
+                            "targetId": 10000613,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000596,
+                            "state": "ZERO",
+                            "targetId": 10000614,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000596,
+                            "state": "ZERO",
+                            "targetId": 10000615,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000596,
+                            "state": "ZERO",
+                            "targetId": 10000616,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000596,
+                            "state": "ZERO",
+                            "targetId": 10000617,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000596,
+                            "state": "ZERO",
+                            "targetId": 10000634,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000596,
+                            "state": "ZERO",
+                            "targetId": 10000635,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000596,
+                            "state": "ZERO",
+                            "targetId": 10000636,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000596,
+                            "state": "ZERO",
+                            "targetId": 10000637,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        /* Platforming Group #3 */
+                        {
+                            "senderId": 10000597,
+                            "state": "ZERO",
+                            "targetId": 10000607,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000597,
+                            "state": "ZERO",
+                            "targetId": 10000625,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000597,
+                            "state": "ZERO",
+                            "targetId": 10000626,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000597,
+                            "state": "ZERO",
+                            "targetId": 10000627,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000597,
+                            "state": "ZERO",
+                            "targetId": 10000628,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000597,
+                            "state": "ZERO",
+                            "targetId": 10000629,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000597,
+                            "state": "ZERO",
+                            "targetId": 10000630,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000597,
+                            "state": "ZERO",
+                            "targetId": 10000631,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000597,
+                            "state": "ZERO",
+                            "targetId": 10000632,
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000597,
+                            "state": "ZERO",
+                            "targetId": 10000633,
+                            "message": "TOGGLE_ACTIVE"
+                        }
+                    ],
                     "deleteIds": [
+                        1703937, // randomprime cutscene skips
                         1704921 // elevator barrier
                     ]
                 },
