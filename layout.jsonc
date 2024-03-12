@@ -41,7 +41,7 @@
         "shootInGrapple": true,
         "patchWallcrawling": true,
         // TODO: Debug
-        "startingRoom": "Impact Crater:Phazon Infusion Chamber",
+        "startingRoom": "Chozo Ruins:Tower of Light",
         // "startingRoom": "Tallon Overworld:Landing Site",
         // "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
         "startingItems": {
@@ -15567,6 +15567,12 @@
                             "type": "ScriptLayerController",
                             "layerChangeRoomId": 3573019852,  // Hall of the Elders
                             "layerChangeLayerId": 7 // temple activated
+                        },
+                        {
+                            "id": 10000650,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 2712546051,  // Tower of Light
+                            "layerChangeLayerId": 1 // puddle splores
                         }
                     ],
                     "relays": [
@@ -15707,6 +15713,12 @@
                             "senderId": 1049044,
                             "state": "ARRIVED",
                             "targetId": 10000125,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1049044,
+                            "state": "ARRIVED",
+                            "targetId": 10000650,
                             "message": "INCREMENT"
                         },
                         // When the fake-out cutscene ends, remove black bars
@@ -15860,7 +15872,7 @@
                 "Arbor Chamber": {
                     "pickups": [
                         {
-                            "type": "Wavebuster"
+                            "type": "Energy Tank"
                         }
                     ],
                     "doors": {
@@ -18897,9 +18909,11 @@
                     ]
                 },
                 "Tower of Light": {
+                    "boundingBoxScale": [1, 1, 1.3],
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Wavebuster",
+                            "position": [-156.26, -36.36, 123.45]
                         }
                     ],
                     "doors": {
@@ -18911,7 +18925,113 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "timers": [
+                        {
+                            "id": 10000651,
+                            "layer": 1,
+                            "time": 0.02,
+                            "startImmediately": true
+                        }
+                    ],
+                    "liquids": [
+                        {
+                            "layer": 1,
+                            "type": "Lava",
+                            "position": [-144.663834, -73.385406, 8.767398],
+                            "scale": [15, 25, 10]
+                        },
+                        {
+                            "layer": 1,
+                            "type": "Lava",
+                            "position": [-143.400833, -38.385406, 10.433397],
+                            "scale": [50, 45, 15]
+                        }
+                    ],
+                    "triggers": [
+                        {
+                            "id": 10000652,
+                            "position": [-143.400833, -38.385406, 52.8334],
+                            "scale": [50, 45, 15],
+                            "deactivateOnEnter": true
+                        }
+                    ],
+                    "worldLightFaders": [
+                        {
+                            "id": 10000653,
+                            "fadedLightLevel": 0.0000000000001,
+                            "fadeSpeed": 0.3
+                        }
+                    ],
+                    "actorRotates": [
+                        {
+                            "id": 10000654,
+                            "rotation": [0, 0, 180],
+                            "timeScale": 3,
+                            "updateActive": true,
+                            "updateActors": true,
+                            "updateOnCreation": false
+                        }
+                    ],
+                    "editObjs": {
+                        "1376271": { // ring1
+                            "position": [-142.0478, -38.3854, 7.1134],
+                            "rotation": [0, 7, 225]
+                        },
+                        "1376260": { // ring2
+                            "position": [-142.0478, -38.3854, 6.1134]
+                        },
+                        "1376288": { // ring3
+                            "position": [-223.5478, -11.3854, 80.3134],
+                            "rotation": [71.479958, -8.699998, 76.649933]
+                        }
+                    },
+                    "removeConnections": [
+                        {
+                            "senderId": 1376260, // ring2
+                            "state": "PLAY",
+                            "targetId": 1376288, // ring3
+                            "message": "ACTIVATE"
+                        }
+                    ],
+                    "addConnections": [
+                        // swap water for lava
+                        {
+                            "senderId": 10000651, // layer 1 instant start
+                            "state": "ZERO",
+                            "targetId": 1376293,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000651, // layer 1 instant start
+                            "state": "ZERO",
+                            "targetId": 1376403,
+                            "message": "DEACTIVATE"
+                        },
+                        // make it dark hahaha
+                        {
+                            "senderId": 10000652,
+                            "state": "ENTERED",
+                            "targetId": 10000653,
+                            "message": "ACTION"
+                        },
+                        // start spinny
+                        {
+                            "senderId": 10000652,
+                            "state": "ENTERED",
+                            "targetId": 10000654,
+                            "message": "ACTION"
+                        },
+                        {
+                            "senderId": 10000654,
+                            "state": "PLAY",
+                            "targetId": 1376260, // ring2
+                            "message": "PLAY"
+                        }
+                    ],
+                    "deleteIds": [
+                        1376270 // disable falling mechanic
+                    ]
                 },
                 "Save Station 1": {
                     "doors": {
