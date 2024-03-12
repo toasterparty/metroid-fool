@@ -41,7 +41,7 @@
         "shootInGrapple": true,
         "patchWallcrawling": true,
         // TODO: Debug
-        "startingRoom": "Chozo Ruins:Tower of Light",
+        "startingRoom": "Chozo Ruins:Watery Hall",
         // "startingRoom": "Tallon Overworld:Landing Site",
         // "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
         "startingItems": {
@@ -98,7 +98,8 @@
         "creditsString": "&push;&font=C29C51F1;&main-color=#89D6FF;Major Item Locations&pop;\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Wave Beam&pop;\nPhazon Mines - Metroid Quarantine A\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Ice Beam&pop;\nPhazon Mines - Ventilation Shaft\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Plasma Beam&pop;\nPhazon Mines - Central Dynamo\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Missile Launcher&pop;\nTallon Overworld - Transport Tunnel B\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Grapple Beam&pop;\nTallon Overworld - Landing Site\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Thermal Visor&pop;\nPhendrana Drifts - Ice Ruins East\n\n&push;&font=C29C51F1;&main-color=#33ffd6;X-Ray Visor&pop;\nMagmoor Caverns - Warrior Shrine\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Space Jump Boots&pop;\nTallon Overworld - Frigate Crash Site\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Morph Ball&pop;\nChozo Ruins - Ruined Gallery\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Morph Ball Bomb&pop;\nChozo Ruins - Dynamo\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Boost Ball&pop;\nChozo Ruins - Watery Hall\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Spider Ball&pop;\nChozo Ruins - Ruined Gallery\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Power Bomb&pop;\nMagmoor Caverns - Fiery Shores\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Varia Suit&pop;\nChozo Ruins - Hive Totem\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Gravity Suit&pop;\nChozo Ruins - Ruined Shrine\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Phazon Suit&pop;\nTallon Overworld - Hydro Access Tunnel\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Super Missile&pop;\nPhazon Mines - Phazon Processing Center\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Wavebuster&pop;\nChozo Ruins - Main Plaza\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Ice Spreader&pop;\nChozo Ruins - Tower of Light\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Flamethrower&pop;\nChozo Ruins - Ruined Nursery\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Elder&pop;\nPhendrana Drifts - Research Lab Aether\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Lifegiver&pop;\nMagmoor Caverns - Magmoor Workstation\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Strength&pop;\nChozo Ruins - Crossway\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Truth&pop;\nPhendrana Drifts - Control Tower\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Warrior&pop;\nPhazon Mines - Main Quarry\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Wild&pop;\nPhendrana Drifts - Quarantine Cave",
         "bossSizes": {
             "flaahgra": 1.15,
-            "omegaPirate": 0.666
+            "omegaPirate": 0.666,
+            "parasiteQueen": 2.7
         },
         "hallOfTheEldersBombSlotCovers": {
             "ice": "Ice",
@@ -327,6 +328,70 @@
         ]
     },
     "levelData": {
+        "Frigate Orpheon": {
+            "rooms": {
+                "Reactor Core": {
+                    "doors": {
+                        "1": {
+                            "blastShieldType": "None",
+                            "shieldType": "Disabled"
+                        }
+                    },
+                    "pickups": [
+                        {
+                            "type": "Energy Tank",
+                            "position": [146.3105, -315.704, -98.0233],
+                            "destination": "Phazon Mines:Map Station Mines"
+                        }
+                    ],
+                    "editObjs": {
+                        "1638572": { // spawn point
+                            "position": [184.252, -285.4762, -86.7165]
+                        },
+                        "1638404": { // parasite queen
+                            "health": 10,
+                            "speed": 8,
+                            "position": [184.9449, -337.8062, -135]
+                        },
+                        "1638508": { // parasite queen dummy
+                            "position": [184.9449, -337.8062, -135]
+                        }
+                    },
+                    "fog": {
+                        "color": [
+                            0.3,
+                            0.82,
+                            0.16,
+                            0
+                        ],
+                        "range": [
+                            0.5,
+                            90
+                        ],
+                        "colorDelta": 0.2
+                    },
+                    "worldLightFaders": [
+                        {
+                            "id": 10000657,
+                            "fadedLightLevel": 0.5,
+                            "fadeSpeed": 0.4
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 1638535, // camera 5
+                            "state": "INACTIVE",
+                            "targetId": 10000657,
+                            "message": "ACTION"
+                        }
+                    ],
+                    "deleteIds": [
+                        1638420, // escape sequence
+                        1638699 // cutscene skip
+                    ]
+                }
+            }
+        },
         "Impact Crater": {
             "transports": {
                 "Crater Entry Point": "Artifact Temple",
@@ -1809,7 +1874,8 @@
                     },
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Energy Tank",
+                            "position": [-54.8688, -343.0805, 48.3]
                         }
                     ],
                     "doors": {
@@ -9513,6 +9579,37 @@
                             "position": [257.633, -248.3709, 26.2164],
                             "scale": [10, 8, 1],
                             "texture": "Mine"
+                        },
+                        {
+                            "position": [202.2, -262.7, 70.95],
+                            "scale": [17, 22, 0.5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [206.2, -195.9, 72.7],
+                            "scale": [5, 10, 15],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [266.7, -206.2, 77.1],
+                            "scale": [0.5, 10, 15],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [264.1, -204.8, 75.6],
+                            "scale": [5, 7, 0.5],
+                            "texture": "Mine"
+                        }
+                    ],
+                    "pickups": [
+                        {
+                            "type": "Energy Tank",
+                            "position": [265.23, -209.29, 87]
+                        }
+                    ],
+                    "lockOnPoints": [
+                        {
+                            "position": [166, -249, 80]
                         }
                     ],
                     "liquids": [
@@ -9602,14 +9699,10 @@
                             0
                         ],
                         "range": [
-                            30,
-                            100
+                            0.5,
+                            80
                         ],
-                        "colorDelta": 0.2,
-                        "rangeDelta": [
-                            200,
-                            100
-                        ]
+                        "colorDelta": 0.2
                     },
                     "addConnections": [
                         {
@@ -10425,7 +10518,7 @@
                     "superheated": true,
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Energy Tank"
                         }
                     ],
                     "doors": {
@@ -10437,7 +10530,21 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "editObjs": {
+                        // triclops
+                        "1507507": { "vulnerability": "Super Missile", "speed": 1.2, "scale": [1.15, 1.15, 1.15] },
+                        "1507550": { "vulnerability": "Super Missile", "speed": 1.2, "scale": [1.15, 1.15, 1.15] }
+                    },
+                    "timers": [
+                        // Non-urgent timers (vanilla 25s)
+                        { "id": 1507615, "time": 3 },
+                        { "id": 1507624, "time": 3 },
+
+                        // Urgent timers (vanilla 5s)
+                        { "id": 1507616, "time": 2 },
+                        { "id": 1507625, "time": 2 }
+                    ]
                 },
                 "Workstation Tunnel": {
                     "doors": {
@@ -11318,6 +11425,10 @@
                 },
                 "Omega Research": {
                     "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        },
                         "1": {
                             "shieldType": "Blue",
                             "blastShieldType": "None"
@@ -11326,7 +11437,27 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "blocks": [
+                        {
+                            "texture": "Mine",
+                            "position": [46.2, -40.5, -41.9],
+                            "scale": [1, 17, 30]
+                        },
+                        {
+                            "texture": "Mine",
+                            "position": [30.5, -35.2, -41.9],
+                            "scale": [27, 1, 30]
+                        },
+                        {
+                            "texture": "Mine",
+                            "position": [33.8, -35.3, -38.9],
+                            "scale": [27, 1, 30]
+                        }
+                    ],
+                    "deleteIds": [
+                        1311692, 1312273, 1311599 // ez platform
+                    ]
                 },
                 "Transport Access": {
                     "doors": {
@@ -11357,7 +11488,60 @@
                         }
                     }
                 },
-                "Map Station Mines": {},
+                "Map Station Mines": {
+                    "doors": {
+                        "0": {
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
+                        }
+                    },
+                    // don't ever give controls back
+                    "removeConnections": [
+                        {
+                            "senderId": 1507506, // timer
+                            "state": "ZERO",
+                            "targetId": 1507541, // player hint
+                            "message": "DECREMENT"
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 10000656,
+                            "startImmediately": true,
+                            "time": 0.02
+                        }
+                    ],
+                    "pickups": [
+                        {
+                            "id": 10000655,
+                            "position": [28.9814, -65.2152, -57.0693],
+                            "type": "Power Bomb",
+                            "model": "Power Bomb Refill",
+                            "destination": "Frigate Orpheon:Reactor Core",
+                            "hudmemoText": "",
+                            "respawn": true,
+                            "maxIncrease": 0,
+                            "currIncrease": 99
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 10000656,
+                            "state": "ZERO",
+                            "targetId": 10000655,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 1507506, // timer
+                            "state": "ZERO",
+                            "targetId": 10000655,
+                            "message": "ACTIVATE"
+                        }
+                    ],
+                    "deleteIds": [
+                        1507545
+                    ]
+                },
                 "Dynamo Access": {
                     "doors": {
                         "0": {
@@ -14829,6 +15013,11 @@
                     "pickups": [
                         {
                             "type": "Energy Tank"
+                        },
+                        {
+                            "type": "Energy Tank",
+                            "scanText": "This tech is called \"Grapple Space Jump (GSJ)\" and it's kinda whack",
+                            "position": [-125, 502.24, 12]
                         }
                     ],
                     "doors": {
@@ -14845,6 +15034,12 @@
                             "blastShieldType": "Missile"
                         }
                     },
+                    "lockOnPoints": [
+                        {
+                            "position": [-99.5, 494, 7.8],
+                            "isGrapple": true
+                        }
+                    ],
                     "triggers": [
                         // Samus went to swim lessons
                         {
@@ -17014,6 +17209,10 @@
                             "scanText": "Shiny Missile",
                             "hudmemoText": "Shiny Missile Acquired!\n(of 3)",
                             "maxIncrease": 15
+                        },
+                        {
+                            "position": [20.34, 162.81, 31.5],
+                            "type": "Energy Tank"
                         }
                     ],
                     "streamedAudios": [
@@ -21306,11 +21505,8 @@
                             "respawn": true
                         },
                         {
-                            "type": "Health Refill",
-                            "scanText": "Health Refill (100)",
-                            "currIncrease": 100,
-                            "maxIncrease": 0,
-                            "respawn": true
+                            "type": "Energy Tank",
+                            "position": [459.5987, 31.8145, 42.1]
                         }
                     ],
                     "doors": {
@@ -21489,7 +21685,6 @@
                     ],
                     "deleteIds": [
                         2687038, 2687082, // No bomb wall
-                        2697190, // No pickups
                         2697006 // floor shrooms don't activate rune #3 poi
                     ]
                 },

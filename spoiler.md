@@ -125,7 +125,7 @@
 
 ### Cleanup
 
-- **Arbor Chamber - Wavebuster**
+- **Tower of Light - Wavebuster**
     - Unlocks shortcut: Frozen Pike <--> Ruined Courtyard
 - **Burn Dome - Flamethrower**
     - Unlocks PB Expansion in Storage Cavern
