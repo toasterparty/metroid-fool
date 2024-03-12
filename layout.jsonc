@@ -772,8 +772,12 @@
                         {
                             "id": 10000077,
                             "layer": 2,
-                            "position": [8.1286, -363.8917, 12.2105],
-                            "scale": [120, 50, 25]
+                            "position": [8.1286, -363.8917, 22.2105],
+                            "scale": [120, 50, 100],
+
+                            // TODO: debug
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, 0, 200]
                         }
                     ],
                     "addConnections": [
@@ -828,8 +832,12 @@
                         {
                             "id": 10000076,
                             "layer": 3,
-                            "position": [-24.9486, -331.137, -37.1033],
-                            "scale": [50, 120, 25]
+                            "position": [-24.9486, -331.137, -27.1033],
+                            "scale": [50, 120, 100],
+
+                            // TODO: debug
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, 0, 200]
                         }
                     ],
                     "addConnections": [
@@ -884,8 +892,12 @@
                         {
                             "id": 10000075,
                             "layer": 2,
-                            "position": [-24.3403, -275.2496, -83.7856],
-                            "scale": [50, 120, 25]
+                            "position": [-24.3403, -275.2496, -73.7856],
+                            "scale": [50, 120, 100],
+
+                            // TODO: debug
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, 0, 200]
                         }
                     ],
                     "addConnections": [
@@ -933,8 +945,12 @@
                         {
                             "id": 10000074,
                             "layer": 2,
-                            "position": [-1.0318, -227.7997, -133.6265],
-                            "scale": [120, 50, 25]
+                            "position": [-1.0318, -227.7997, -123.6265],
+                            "scale": [120, 50, 100],
+
+                            // TODO: debug
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, 0, 200]
                         }
                     ],
                     "distanceFogs": [
@@ -1018,6 +1034,8 @@
                             "layer": 2,
                             "position": [43, -287, -192.6],
                             "scale": [45, 45, 110],
+
+                            // TODO: debug
                             "flags": 8193, // Detect Player | Apply Force
                             "force": [0, 0, 200]
                         }
@@ -1090,7 +1108,7 @@
                         {
                             "id": 10000060,
                             "text": "&just=center;&main-color=#FF3333;Crater collapse imminent.\nEvacuate immediately!",
-                            "messageTime": 15
+                            "messageTime": 10
                         }
                     ],
                     "specialFunctions": [
