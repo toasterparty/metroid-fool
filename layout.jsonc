@@ -3737,6 +3737,10 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         },
+                        "1": {
+                            "shieldType": "Power Bomb",
+                            "blastShieldType": "Power Bomb"
+                        },
                         "2": {
                             "shieldType": "Blue",
                             "blastShieldType": "None"
@@ -3886,7 +3890,19 @@
                         }
                     }
                 },
-                "Map Station": {},
+                "Map Station": {
+                    "pickups": [
+                        {
+                            "type": "Power Bomb",
+                            "model": "Power Bomb Expansion",
+                            "scanText": "Power Bomb Expansion",
+                            "hudmemoText": "Power Bomb Expansion Acquired!",
+                            "maxIncrease": 1,
+                            "currIncrease": 0,
+                            "position": [-62.6387, -653.5296, 62.5]
+                        }
+                    ]
+                },
                 "Hydra Lab Entryway": {
                     "layers": {
                         "1": true // darkness
@@ -9529,8 +9545,10 @@
                         {
                             "type": "Power Bomb",
                             "model": "Power Bomb Expansion",
-                            "currIncrease": 1,
-                            "maxIncrease": 0
+                            "scanText": "Power Bomb Expansion",
+                            "hudmemoText": "Power Bomb Expansion Acquired!",
+                            "maxIncrease": 1,
+                            "currIncrease": 0
                         }
                     ],
                     "doors": {
@@ -11528,10 +11546,12 @@
                 "Processing Center Access": {
                     "pickups": [
                         {
-                            "type": "Missile",
-                            "scanText": "Missile Expansion",
-                            "hudmemoText": "Missile Expansion Acquired!",
-                            "maxIncrease": 5
+                            "type": "Power Bomb",
+                            "model": "Power Bomb Expansion",
+                            "scanText": "Power Bomb Expansion",
+                            "hudmemoText": "Power Bomb Expansion Acquired!",
+                            "maxIncrease": 1,
+                            "currIncrease": 0
                         }
                     ],
                     "doors": {

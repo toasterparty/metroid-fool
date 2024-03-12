@@ -11,32 +11,6 @@
 - Workstation -> Main Quarry
 - GTH -> Reflecting Pool (x2)
 
-## Missiles
-
-- The highest possible Missile capacity is 188. In general, the harder a Missile is to acquire, the more capacity it provides.
-- No one will actually finish with this missile count because of Root Cave
-
-## Etanks
-
-| Room | Intended Collection |
-| --- | --- |
-| Frigate Crash Site | 2nd Pass Grapple dunk |
-| Hive Mecha | 1st Pass |
-| Magmoor Workstation | 2nd Pass needs boost |
-| Frozen Pike | 1st Pass DBJ or 2nd Pass SJ |
-| Gravity Chamber | 2nd Pass after Plasma and/or SJ |
-| Main Quarry | 1st Pass crane meme |
-| Metroid Quarantine A | 1st Pass hidden wall |
-| Map Station Mines (Parasite Queen) | 2nd Pass SJ or 1st Pass UBJ |
-| Monitor Station | 2nd Pass SJ |
-| Frigate Crash Site | 3rd Pass GSJ |
-| Arbor Chamber | 2nd Pass SJ |
-| Great Tree Hall | 1st Pass spider track trick |
-| Ice Ruins West | 2nd Pass SW |
-| Watery Hall SW | 2nd Pass SJ |
-
-**Personal Best**: 1130 damge taken (11 of 14 Etanks needed)
-
 ## Walkthrough
 
 ### Start
@@ -193,3 +167,38 @@
 - Impact Crater Escape Sequence
 - Ridley
 - Credits
+
+## Missiles
+
+- The highest possible Missile capacity is 183. In general, the harder a Missile is to acquire, the more capacity it provides.
+- No one will actually finish with this missile count because of Root Cave
+
+## Etanks
+
+| Room | Intended Collection |
+| --- | --- |
+| Frigate Crash Site | 2nd Pass Grapple dunk |
+| Hive Mecha | 1st Pass |
+| Magmoor Workstation | 2nd Pass needs boost |
+| Frozen Pike | 1st Pass DBJ or 2nd Pass SJ |
+| Gravity Chamber | 2nd Pass after Plasma and/or SJ |
+| Main Quarry | 1st Pass crane meme |
+| Metroid Quarantine A | 1st Pass hidden wall |
+| Map Station Mines (Parasite Queen) | 2nd Pass SJ or 1st Pass UBJ |
+| Monitor Station | 2nd Pass SJ |
+| Frigate Crash Site | 3rd Pass GSJ |
+| Arbor Chamber | 2nd Pass SJ |
+| Great Tree Hall | 1st Pass spider track trick |
+| Ice Ruins West | 2nd Pass SW |
+| Watery Hall SW | 2nd Pass SJ |
+
+**Personal Best**: 1130 damge taken (11 of 14 Etanks needed)
+
+## Power Bomb Expansions
+
+| Region | Room |
+| --- | --- |
+| Magmoor Caverns | Storage Cavern |
+| Phendrana Drifts | Map Station |
+| Phazon Mines | Storage Depot A |
+| Phazon Mines | Processing Center Access |
