@@ -1,6 +1,6 @@
 {
     "$schema": "https://randovania.org/randomprime/randomprime.schema.json",
-    "outputIso": "metroid-fool-v0.5.iso",
+    "outputIso": "metroid-fool-v0.6.iso",
     "preferences": {
         "qolGameBreaking": true,
         "qolCosmetic": true,
@@ -23,7 +23,7 @@
         "phazonEliteWithoutDynamo": true,
         "removeVanillaBlastShields": true,
         "doorOpenMode": "PrimaryBlastShield",
-        "resultsString": "Metroid Fool v0.5",
+        "resultsString": "Metroid Fool v0.6",
         "warpToStart": false,
         "springBall": false,
         "nonvariaHeatDamage": true,
@@ -41,9 +41,9 @@
         "shootInGrapple": true,
         "patchWallcrawling": true,
         // TODO: Debug
-        // "startingRoom": "Impact Crater:Phazon Infusion Chamber",
-        "startingRoom": "Tallon Overworld:Landing Site",
-        "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
+        "startingRoom": "Impact Crater:Phazon Infusion Chamber",
+        // "startingRoom": "Tallon Overworld:Landing Site",
+        // "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
         "startingItems": {
             "powerBeam": true,
             "ice": false,
@@ -90,11 +90,11 @@
             2041669472
         ],
         "gameBanner": {
-            "gameName": "Metroid Fool v0.5",
-            "gameNameFull": "Metroid Fool v0.5",
+            "gameName": "Metroid Fool v0.6",
+            "gameNameFull": "Metroid Fool v0.6",
             "description": "Romhack by toasterparty"
         },
-        "mainMenuMessage": "Metroid Fool v0.5",
+        "mainMenuMessage": "Metroid Fool v0.6",
         "creditsString": "&push;&font=C29C51F1;&main-color=#89D6FF;Major Item Locations&pop;\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Wave Beam&pop;\nPhazon Mines - Metroid Quarantine A\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Ice Beam&pop;\nPhazon Mines - Ventilation Shaft\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Plasma Beam&pop;\nPhazon Mines - Central Dynamo\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Missile Launcher&pop;\nTallon Overworld - Transport Tunnel B\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Grapple Beam&pop;\nTallon Overworld - Landing Site\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Thermal Visor&pop;\nPhendrana Drifts - Ice Ruins East\n\n&push;&font=C29C51F1;&main-color=#33ffd6;X-Ray Visor&pop;\nMagmoor Caverns - Warrior Shrine\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Space Jump Boots&pop;\nTallon Overworld - Frigate Crash Site\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Morph Ball&pop;\nChozo Ruins - Ruined Gallery\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Morph Ball Bomb&pop;\nChozo Ruins - Dynamo\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Boost Ball&pop;\nChozo Ruins - Watery Hall\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Spider Ball&pop;\nChozo Ruins - Ruined Gallery\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Power Bomb&pop;\nMagmoor Caverns - Fiery Shores\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Varia Suit&pop;\nChozo Ruins - Hive Totem\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Gravity Suit&pop;\nChozo Ruins - Ruined Shrine\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Phazon Suit&pop;\nTallon Overworld - Hydro Access Tunnel\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Super Missile&pop;\nPhazon Mines - Phazon Processing Center\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Wavebuster&pop;\nChozo Ruins - Main Plaza\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Ice Spreader&pop;\nChozo Ruins - Tower of Light\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Flamethrower&pop;\nChozo Ruins - Ruined Nursery\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Elder&pop;\nPhendrana Drifts - Research Lab Aether\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Lifegiver&pop;\nMagmoor Caverns - Magmoor Workstation\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Strength&pop;\nChozo Ruins - Crossway\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Truth&pop;\nPhendrana Drifts - Control Tower\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Warrior&pop;\nPhazon Mines - Main Quarry\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Wild&pop;\nPhendrana Drifts - Quarantine Cave",
         "bossSizes": {
             "flaahgra": 1.15,
