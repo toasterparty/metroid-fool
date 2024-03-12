@@ -1570,10 +1570,16 @@
                     },
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 3
                         },
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 3
                         }
                     ],
                     "specialFunctions": [
@@ -1942,7 +1948,10 @@
                             "hudmemoText": "Just kidding, it was X-Ray"
                         },
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 2
                         }
                     ],
                     "doors": {
@@ -3208,7 +3217,10 @@
                 "Ruined Courtyard": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 3
                         }
                     ],
                     "doors": {
@@ -6613,7 +6625,10 @@
                 "Quarantine Monitor": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 3
                         }
                     ]
                 },
@@ -6823,7 +6838,8 @@
                             "type": "Missile",
                             "scanText": "Missile Tank",
                             "hudmemoText": "Missile Tank Acquired!",
-                            "maxIncrease": 5
+                            "maxIncrease": 5,
+                            "currIncrease": 0
                         },
                         {
                             "id": 10000322,
@@ -6926,7 +6942,10 @@
                 "Transport Access": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 3
                         }
                     ],
                     "doors": {
@@ -8188,7 +8207,10 @@
                 "Frost Cave": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 4
                         }
                     ],
                     "doors": {
@@ -9130,7 +9152,10 @@
                     },
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 3
                         },
                         { // Take Pickup
                             "id": 12000044,
@@ -9789,7 +9814,10 @@
                 "Transport Tunnel A": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 2
                         }
                     ]
                 },
@@ -9958,7 +9986,10 @@
                 "Shore Tunnel": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 3
                         }
                     ],
                     "doors": {
@@ -9978,7 +10009,10 @@
                             "position": [382.8999, -367.4262, 41.1249]
                         },
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 5
                         }
                     ],
                     "doors": {
@@ -11004,7 +11038,10 @@
                 "Security Access A": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 2
                         }
                     ],
                     "doors": {
@@ -11069,7 +11106,10 @@
                 "Storage Depot B": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 2
                         }
                     ],
                     "doors": {
@@ -11106,7 +11146,12 @@
                 "Storage Depot A": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Power Bomb",
+                            "model": "Power Bomb Expansion",
+                            "scanText": "Power Bomb Expansion",
+                            "hudmemoText": "Power Bomb Expansion Acquired!",
+                            "maxIncrease": 1,
+                            "currIncrease": 0
                         }
                     ],
                     "doors": {
@@ -11325,7 +11370,10 @@
                 "Elite Control Access": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 2
                         }
                     ],
                     "doors": {
@@ -11370,7 +11418,10 @@
                 "Ventilation Shaft": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 2
                         }
                     ],
                     "doors": {
@@ -11387,7 +11438,10 @@
                 "Phazon Processing Center": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 3
                         }
                     ],
                     "doors": {
@@ -11474,7 +11528,10 @@
                 "Processing Center Access": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 5
                         }
                     ],
                     "doors": {
@@ -13299,7 +13356,10 @@
                     },
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 2
                         }
                     ],
                     "doors": {
@@ -17279,7 +17339,10 @@
                 "Life Grove Tunnel": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 2
                         }
                     ],
                     "doors": {
@@ -18238,7 +18301,10 @@
                 "Ruined Fountain": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 4
                         }
                     ],
                     "triggers": [
@@ -18493,7 +18559,10 @@
                 "Vault": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 2
                         }
                     ]
                 },
@@ -21726,7 +21795,10 @@
                             "type": "Morph Ball Bomb"
                         },
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 4
                         }
                     ],
                     "doors": {
@@ -21753,7 +21825,10 @@
                 "Burn Dome": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 2
                         },
                         {
                             "type": "Flamethrower"
@@ -21795,10 +21870,16 @@
                 "Furnace": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 4
                         },
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 2
                         }
                     ],
                     "doors": {
@@ -22256,7 +22337,10 @@
                 "Antechamber": {
                     "pickups": [
                         {
-                            "type": "Nothing"
+                            "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 2
                         }
                     ],
                     "doors": {
