@@ -41,7 +41,7 @@
         "shootInGrapple": true,
         "patchWallcrawling": true,
         // TODO: Debug
-        "startingRoom": "Chozo Ruins:Watery Hall",
+        "startingRoom": "Impact Crater:Subchamber Five",
         // "startingRoom": "Tallon Overworld:Landing Site",
         // "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
         "startingItems": {
@@ -99,7 +99,8 @@
         "bossSizes": {
             "flaahgra": 1.15,
             "omegaPirate": 0.666,
-            "parasiteQueen": 2.7
+            "parasiteQueen": 2.7,
+            "essence": 0.2
         },
         "hallOfTheEldersBombSlotCovers": {
             "ice": "Ice",
@@ -1088,7 +1089,7 @@
                         {
                             "id": 10000060,
                             "text": "&just=center;&main-color=#FF3333;Crater collapse imminent.\nEvacuate immediately!",
-                            "messageTime": 10
+                            "messageTime": 15
                         }
                     ],
                     "specialFunctions": [
@@ -1235,14 +1236,28 @@
                         }
                     ],
                     "liquids": [
-                        { // TODO: remove debug
-                            "position": [44, -266, -375],
-                            "scale": [1, 1, 1],
+                        {
+                            "position": [43.2, -291.3, -377.1],
+                            "scale": [100, 110, 5],
                             "type": "Phazon"
                         }
                     ],
+                    "relays": [
+                        // this relay actives all escape platforming
+                        {
+                            "id": 10000658
+                        }
+                    ],
+                    "editObjs": {
+                        "721026": { // essence
+                            "health": 2,
+                            "speed": 4
+                        }
+                    },
                     "blocks": [
-                        { // TODO: remove debug
+                        {
+                            "id": 10000659,
+                            "active": false,
                             "position": [47, -288, -374],
                             "scale": [5, 5, 2],
                             "texture": "Crater"
@@ -1250,8 +1265,9 @@
                         {
                             // Block randomprime's essence teleporter
                             "id": 10000089,
-                            "position": [52.0, -298.0, -373.0],
-                            "scale": [3.5, 3.5, 6.5]
+                            "active": false,
+                            "position": [52.0, -298.0, -373.0], // you cannot move this
+                            "scale": [3.5, 3.5, 6.5] // or rescale
                         }
                     ],
                     "addConnections": [
@@ -1430,16 +1446,35 @@
                             "message": "SET_TO_ZERO"
                         },
                         {
-                            "senderId": 10000102, // relay - start escape sequence
+                            "senderId": 10000102, // timer - start escape sequence
                             "state": "ZERO",
                             "targetId": 10000061, // escape sequence
                             "message": "ACTION"
                         },
                         {
-                            "senderId": 10000102, // relay - start escape sequence
+                            "senderId": 10000102, // timer - start escape sequence
                             "state": "ZERO",
                             "targetId": 10000062, // Music
                             "message": "PLAY"
+                        },
+                        {
+                            "senderId": 10000102, // timer - start escape sequence
+                            "state": "ZERO",
+                            "targetId": 10000658, // relay - activate escape blocks
+                            "message": "SET_TO_ZERO"
+                        },
+                        /* Implement relay which activates escape platforming */
+                        {
+                            "senderId": 10000658, // relay - activate escape blocks
+                            "state": "ZERO",
+                            "targetId": 10000089, // essence dead teleporter blocker
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000658, // relay - activate escape blocks
+                            "state": "ZERO",
+                            "targetId": 10000659, // platforming piece
+                            "message": "ACTIVATE"
                         },
                         /* When the player reaches the top of Lair, load sunchamber 5 and stop the special subchamber 5 cutscene from playing */
                         {
@@ -1460,7 +1495,8 @@
                         721369, // "nothingness" camera
                         721238, 721240, // white screen fade-out
                         720903, // disable cutscene skip (end only)
-                        720915 // Anti-softlock reposition trigger
+                        720915, // Anti-softlock reposition trigger
+                        721379, 720965, 721375, 720960, 721382, 720969, 721377, 720963 // non-ultra drops
                     ]
                 }
             }
@@ -10082,6 +10118,7 @@
                     "liquids": [
                         {
                             "id": 10000416,
+                            "active": false,
                             "position": [337.5994, -608.5179, 24.0737],
                             "scale": [47.130005, 57.37505, 7.000999],
                             "type": "Lava"
@@ -10104,12 +10141,6 @@
                         "1114149": { "position": [337.2604, -618.2208, 22.8912] }
                     },
                     "addConnections": [
-                        {
-                            "senderId": 10000418,
-                            "state": "ZERO",
-                            "targetId": 10000416,
-                            "message": "DEACTIVATE"
-                        },
                         {
                             "senderId": 10000418,
                             "state": "ZERO",
