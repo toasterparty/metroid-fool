@@ -41,7 +41,7 @@
         "shootInGrapple": true,
         "patchWallcrawling": true,
         // TODO: Debug
-        "startingRoom": "Impact Crater:Subchamber Five",
+        "startingRoom": "Impact Crater:Phazon Infusion Chamber",
         // "startingRoom": "Tallon Overworld:Landing Site",
         // "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
         "startingItems": {
@@ -100,7 +100,8 @@
             "flaahgra": 1.15,
             "omegaPirate": 0.666,
             "parasiteQueen": 2.7,
-            "essence": 0.2
+            "essence": 0.2,
+            "exo": 1.8
         },
         "hallOfTheEldersBombSlotCovers": {
             "ice": "Ice",

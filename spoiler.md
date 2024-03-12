@@ -163,9 +163,9 @@
 - Player can enter Impact Crater freely once they posses no artifacts
 - **Phazon Core - Thermal Visor** (optional)
 - Exo
-- Essence
-- Impact Crater Escape Sequence
-- Ridley
+- Essence+
+- Crater Escape Sequence
+- Ridley+
 - Credits
 
 ## Missiles
