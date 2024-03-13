@@ -41,7 +41,7 @@
         "shootInGrapple": true,
         "patchWallcrawling": true,
         // TODO: Debug
-        "startingRoom": "Phendrana Drifts:Hunter Cave",
+        "startingRoom": "Phendrana Drifts:Chozo Ice Temple",
         // "startingRoom": "Tallon Overworld:Landing Site",
         // "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
         "startingItems": {
@@ -2036,6 +2036,27 @@
                         }
                         // Vanilla connection to Chozo Ice Temple
                     },
+                    "triggers": [
+                        {
+                            "id": 10000674,
+                            "position": [-297.4333, -172.4709, 40.1732],
+                            "scale": [6, 6, 10]
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 10000674,
+                            "state": "ENTERED",
+                            "targetId": 720898, // dock
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000674,
+                            "state": "ENTERED",
+                            "targetId": 720897, // dock
+                            "message": "SET_TO_ZERO"
+                        }
+                    ],
                     "deleteIds": [
                         720900 // randomprime music
                     ]
