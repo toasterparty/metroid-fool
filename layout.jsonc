@@ -41,7 +41,7 @@
         "shootInGrapple": true,
         "patchWallcrawling": true,
         // TODO: Debug
-        "startingRoom": "Phendrana Drifts:Chamber Access",
+        "startingRoom": "Phendrana Drifts:Hunter Cave",
         // "startingRoom": "Tallon Overworld:Landing Site",
         // "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
         "startingItems": {
@@ -81,9 +81,9 @@
             "eyeWaitRandomTime": 4.0,
             "eyeStayUpRandomTime": 0.0,
             "resetContraptionRandomTime": 0.0,
-            "eyeWaitInitialMinimumTime": 1,
-            "eyeWaitMinimumTime": 1,
-            "eyeStayUpMinimumTime": 0.5,
+            "eyeWaitInitialMinimumTime": 0.5,
+            "eyeWaitMinimumTime": 0.5,
+            "eyeStayUpMinimumTime": 0.8,
             "resetContraptionMinimumTime": 0.1
         },
         "mazeSeeds": [
@@ -1509,6 +1509,18 @@
                             }
                         }
                     },
+                    "lockOnPoints": [
+                        {
+                            "position": [-91.9638, -188.9441, 23.4071]
+                        }
+                    ],
+                    "blocks": [
+                        {
+                            "position": [-59.4, -202.5, 6],
+                            "scale": [2, 10, 8],
+                            "texture": "Snow"
+                        }
+                    ],
                     "pickups": [
                         {
                             "type": "Missile",
@@ -3591,6 +3603,31 @@
                             "position": [-250, -318, 19]
                         }
                     },
+                    "triggers": [
+                        // Increase trigger sizes to account for jank
+                        { "id": 1049047, "scale": [8.5, 8.5, 6] },
+                        { "id": 1049063, "scale": [8.5, 8.5, 6] },
+                        { "id": 1049079, "scale": [8.5, 8.5, 6] },
+                        { "id": 1049095, "scale": [8.5, 8.5, 6] },
+                        { "id": 1049111, "scale": [8.5, 8.5, 6] },
+                        { "id": 1049127, "scale": [8.5, 8.5, 6] }
+                    ],
+                    "timers": [
+                        // Increase shake delay from 1s
+                        { "id": 1049048, "time": 1.666 },
+                        { "id": 1049064, "time": 1.666 },
+                        { "id": 1049080, "time": 1.666 },
+                        { "id": 1049096, "time": 1.666 },
+                        { "id": 1049112, "time": 1.666 },
+                        { "id": 1049128, "time": 1.666 },
+                        // Increase fall delay from 1.5s after shake delay
+                        { "id": 1049050, "time": 2.5 },
+                        { "id": 1049066, "time": 2.5 },
+                        { "id": 1049082, "time": 2.5 },
+                        { "id": 1049098, "time": 2.5 },
+                        { "id": 1049114, "time": 2.5 },
+                        { "id": 1049130, "time": 2.5 }
+                    ],
                     "addConnections": [
                         /* Disable Morph */
                         {
@@ -3680,10 +3717,10 @@
                         // Crates
                         1049356, 1049366,
 
-                        // randomprime cutscene skip
-                        1048580,
+                        1049110, // 2nd to last platform
 
-                        1049110 // 2nd to last platform
+                        // no ridley flyover
+                        1049581
                     ]
                 },
                 "Save Station A": {
@@ -8342,11 +8379,11 @@
                     ],
                     "lockOnPoints": [
                         {
-                            "position": [226.4, -1254.8, 14.6],
+                            "position": [202.2, -1234.4, 15.6],
                             "isGrapple": true
                         },
                         {
-                            "position": [237.1, -1215.8, 28.7],
+                            "position": [217.3, -1214.7, 29.2],
                             "isGrapple": true
                         }
                     ],
@@ -8476,9 +8513,31 @@
                             "destination": {
                                 "roomName": "Frost Cave",
                                 "dockNum": 1
+                            }
                         }
-                    }
                     },
+                    "specialFunctions": [
+                        {
+                            "id": 10000663,
+                            "type": "PlayerInAreaRelay"
+                        }
+                    ],
+                    "streamedAudios": [
+                        {
+                            "id": 10000664,
+                            "volume": 90,
+                            "audioFileName": "/audio/ice_worldmainL.dsp|/audio/ice_worldmainR.dsp",
+                            "isMusic": true
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 10000663,
+                            "state": "ENTERED",
+                            "targetId": 10000664,
+                            "message": "PLAY"
+                        }
+                    ],
                     "deleteIds": [
                         3080222
                     ]
@@ -8939,6 +8998,15 @@
                             }
                         }
                     },
+                    "triggers": [
+                        {
+                            "id": 10000662,
+                            "position": [161.6, -1438.9, 85.1],
+                            "scale": [10, 15, 5],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, -300, 0]
+                        }
+                    ],
                     "extraScans": [
                         {
                             "id": 10000283,
@@ -8968,6 +9036,12 @@
                             "state": "SCAN_DONE",
                             "targetId": 10000284,
                             "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 10000283,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000662,
+                            "message": "DEACTIVATE"
                         },
                         // unload to reload
                         {
@@ -10261,6 +10335,14 @@
                             "position": [434.7, -847.9, 84.0]
                         }
                     ],
+                    "specialFunctions": [
+                        {
+                            "id": 10000666,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 1498886242, // geothermal core
+                            "layerChangeLayerId": 7 // morph ball escape puzzle
+                        }
+                    ],
                     "playerHints": [
                         {
                             "id": 10000140,
@@ -10467,6 +10549,12 @@
                             "state": "ARRIVED",
                             "targetId": 10000131,
                             "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000132,
+                            "state": "ARRIVED",
+                            "targetId": 10000666,
+                            "message": "DECREMENT"
                         },
                         // Disable Unmorph for Puzzle
                         {
@@ -10765,6 +10853,11 @@
                             "rotation": [0, 0, 173]
                         }
                     ],
+                    "editObjs": {
+                        "65539": { // default spawn
+                            "layer": 2
+                        }
+                    },
                     "addConnections": [
                         {
                             "senderId": 10000387,
@@ -11162,7 +11255,10 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "deleteIds": [
+                        589916, 589915, 589843 // puddle spores are needed for the NSJ climb
+                    ]
                 },
                 "Elevator Access A": {
                     "doors": {
@@ -11455,8 +11551,8 @@
                             "blastShieldType": "None"
                         },
                         "1": {
-                            "shieldType": "Ice Spreader",
-                            "blastShieldType": "Ice Spreader"
+                            "shieldType": "Flamethrower",
+                            "blastShieldType": "Flamethrower"
                         }
                     }
                 },
@@ -11495,8 +11591,8 @@
                             "blastShieldType": "None"
                         },
                         "1": {
-                            "shieldType": "Ice Spreader",
-                            "blastShieldType": "Ice Spreader"
+                            "shieldType": "Flamethrower",
+                            "blastShieldType": "Flamethrower"
                         },
                         "2": {
                             "shieldType": "Blue",
@@ -11507,6 +11603,21 @@
                         {
                             "position": [-55.3556, 114.2601, -50.5359],
                             "scale": [90, 50, 0.8],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [-107.5, 112.3, -83.3],
+                            "scale": [3, 3, 0.5],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [-45.98, 96.7, -39.2],
+                            "scale": [5, 5, 0.8],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [-30.78, 109.5, -35.5],
+                            "scale": [5, 5, 0.8],
                             "texture": "Mine"
                         }
                     ],
@@ -11568,7 +11679,29 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "specialFunctions": [
+                        {
+                            "id": 10000667,
+                            "type": "PlayerInAreaRelay"
+                        }
+                    ],
+                    "streamedAudios": [
+                        {
+                            "id": 10000668,
+                            "volume": 90,
+                            "audioFileName": "/audio/ice_worldmainL.dsp|/audio/ice_worldmainR.dsp",
+                            "isMusic": true
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 10000667,
+                            "state": "ENTERED",
+                            "targetId": 10000668,
+                            "message": "PLAY"
+                        }
+                    ]
                 },
                 "Processing Center Access": {
                     "pickups": [
@@ -14080,22 +14213,9 @@
                             "layer": 3
                         },
                         {
-                            "id": 11000006,
-                            "time": 0.02,
-                            "startImmediately": true,
-                            "layer": 3
-                        },
-                        {
                             "id": 11000011,
                             "time": 0.02,
                             "startImmediately": true
-                        }
-                    ],
-                    "hudmemos": [
-                        {
-                            "id": 11000004,
-                            "text": "Shit.",
-                            "messageTime": 12
                         }
                     ],
                     "liquids": [
@@ -14298,18 +14418,6 @@
                             "state": "ENTERED",
                             "targetId": 557, // StreamedAudio FadeIn/Out Long
                             "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 11000006, // auto-start layer 3 timer
-                            "state": "ZERO",
-                            "targetId": 11000004, // hudmemo
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 98, // alcove load trigger
-                            "state": "ENTERED",
-                            "targetId": 11000004, // hudmemo
-                            "message": "SET_TO_ZERO"
                         }
                     ],
                     "deleteIds": [
@@ -14644,6 +14752,7 @@
                     ]
                 },
                 "Alcove": {
+                    // layer 3: "shit." hudmemo
                     "pickups": [
                         {
                             "type": "Space Jump Boots"
@@ -14660,6 +14769,15 @@
                             "volume": 100
                         }
                     ],
+                    "hudmemos": [
+                        {
+                            "id": 11000004,
+                            "layer": 3,
+                            "active": false,
+                            "text": "Shit.",
+                            "messageTime": 12
+                        }
+                    ],
                     "triggers": [
                         {
                             "id": 11000002,
@@ -14674,6 +14792,17 @@
                             "type": "ScriptLayerController",
                             "layerChangeRoomId":  2414967056,
                             "layerChangeLayerId": 3
+                        },
+                        {
+                            "id": 11000021,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId":  3890503670, // alcove
+                            "layerChangeLayerId": 3
+                        },
+                        {
+                            "id": 11000020,
+                            "layer": 3,
+                            "type": "PlayerInAreaRelay"
                         }
                     ],
                     "blocks": [
@@ -14770,6 +14899,24 @@
                         }
                     ],
                     "addConnections": [
+                        {
+                            "senderId": 11000002, // trigger
+                            "state": "ENTERED",
+                            "targetId": 11000021, // layer changer
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 11000002, // trigger
+                            "state": "ENTERED",
+                            "targetId": 11000004, // hudmemo
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 11000020, // player in area
+                            "state": "EXITED",
+                            "targetId": 11000004, // hudmemo
+                            "message": "SET_TO_ZERO"
+                        },
                         {
                             "senderId": 11000002, // trigger
                             "state": "ENTERED",
@@ -15888,6 +16035,30 @@
                             "type": "ScriptLayerController",
                             "layerChangeRoomId": 2712546051,  // Tower of Light
                             "layerChangeLayerId": 1 // puddle splores
+                        },
+                        {
+                            "id": 10000661,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 665041921, // Sun Tower Access
+                            "layerChangeLayerId": 1 // ghost
+                        },
+                        {
+                            "id": 10000669,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 1499017783, // ruined shrine
+                            "layerChangeLayerId": 3 // ghosts
+                        },
+                        {
+                            "id": 10000670,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 4071089586, // furnace
+                            "layerChangeLayerId": 2 // ghosts
+                        },
+                        {
+                            "id": 10000671,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 699387078, // arboretum
+                            "layerChangeLayerId": 2 // ghosts
                         }
                     ],
                     "relays": [
@@ -16034,6 +16205,30 @@
                             "senderId": 1049044,
                             "state": "ARRIVED",
                             "targetId": 10000650,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1049044,
+                            "state": "ARRIVED",
+                            "targetId": 10000661,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1049044,
+                            "state": "ARRIVED",
+                            "targetId": 10000669,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1049044,
+                            "state": "ARRIVED",
+                            "targetId": 10000670,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1049044,
+                            "state": "ARRIVED",
+                            "targetId": 10000671,
                             "message": "INCREMENT"
                         },
                         // When the fake-out cutscene ends, remove black bars
@@ -18422,6 +18617,23 @@
                             "position": [-49.3, 22.55, 20.4],
                             "scale": [0.2, 0.2, 3],
                             "texture": "Sandstone"
+                        },
+                        /* 2nd pass */
+                        {
+                            "id": 10000672,
+                            "layer": 3,
+                            "active": false,
+                            "position": [-22.8122, 2.6533, 2.1904],
+                            "scale": [1, 6, 5],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "id": 10000673,
+                            "layer": 3,
+                            "active": false,
+                            "position": [-96.8954, 2.0645, 19.5503],
+                            "scale": [4.716003, 10.514001, 8.0],
+                            "texture": "Sandstone"
                         }
                     ],
                     "doors": {
@@ -18526,6 +18738,15 @@
                             "detectionRange": 2,
                             "attackRange": 0.01,
                             "health": 0.4
+                        },
+                        // ghosts
+                        "600167": {
+                            "health": 0.2,
+                            "speed": 5
+                        },
+                        "600168": {
+                            "health": 0.1,
+                            "speed": 8
                         }
                     },
                     "specialFunctions": [
@@ -18600,6 +18821,33 @@
                             "state": "ARRIVED",
                             "targetId": 10000033,
                             "message": "DECREMENT"
+                        },
+                        /* ghosts */
+                        // lock doors
+                        {
+                            "senderId": 600139,
+                            "state": "ENTERED",
+                            "targetId": 10000672,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 600139,
+                            "state": "ENTERED",
+                            "targetId": 10000673,
+                            "message": "ACTIVATE"
+                        },
+                        // unlock doors
+                        {
+                            "senderId": 600142,
+                            "state": "MAX_REACHED",
+                            "targetId": 10000672,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 600142,
+                            "state": "MAX_REACHED",
+                            "targetId": 10000673,
+                            "message": "DEACTIVATE"
                         }
                     ],
                     "deleteIds": [
@@ -19778,6 +20026,7 @@
                     ],
                     "deleteIds": [
                         1900617, // Remove Wasp Trigger
+                        1900896, // don't make ghosts appear in sun tower access
                         1900813, 1900749, 1900856, 1900863, 1900861, 1900862, 1900792, 1900801, 1900864, 1900844, 1900849, 1900865, 1900818, 1900789, 1900877 // clean up spider track
                     ]
                 },
@@ -21934,6 +22183,9 @@
                     ]
                 },
                 "Furnace": {
+                    "layers": {
+                        "1": false // beetles
+                    },
                     "pickups": [
                         {
                             "type": "Missile",
@@ -21958,8 +22210,8 @@
                 "East Furnace Access": {
                     "doors": {
                         "0": {
-                            "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "shieldType": "Ice Spreader",
+                            "blastShieldType": "Ice Spreader"
                         },
                         "1": {
                             "shieldType": "Blue",
@@ -21976,6 +22228,7 @@
                     }
                 },
                 "Hall of the Elders": {
+                    "boundingBoxScale": [1, 1, 1.5],
                     "layers": {
                         "1": true, // Pre-enable the tripple-ghost fight, just missing the fight trigger
                         "2": false, // delete the single-ghost fight
@@ -21997,8 +22250,8 @@
                             "blastShieldType": "None"
                         },
                         "2": {
-                            "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "shieldType": "Ice Spreader",
+                            "blastShieldType": "Ice Spreader"
                         },
                         "3": {
                             "shieldType": "Ice Spreader",
@@ -22016,6 +22269,11 @@
                             "active": false,
                             "position": [777.825134, -183.715729, 62.534618],
                             "scale": [25.779053, 67.408012, 29.385002]
+                        },
+                        {
+                            "id": 10000665,
+                            "position": [781, -158, 28],
+                            "scale": [50, 50, 1]
                         }
                     ],
                     "relays": [
@@ -22105,7 +22363,12 @@
                             "state": "ARRIVED",
                             "targetId": 3408495, // missile station spawn point
                             "message": "SET_TO_ZERO"
-
+                        },
+                        {
+                            "senderId": 10000665, // saftey oob trigger
+                            "state": "ENTERED",
+                            "targetId": 3408495, // missile station spawn point
+                            "message": "SET_TO_ZERO"
                         }
                     ]
                 },
@@ -22207,8 +22470,8 @@
                             "blastShieldType": "None"
                         },
                         "1": {
-                            "shieldType": "Blue",
-                            "blastShieldType": "None"
+                            "shieldType": "Ice Spreader",
+                            "blastShieldType": "Ice Spreader"
                         }
                     },
                     "pickups": [
