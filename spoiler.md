@@ -168,16 +168,16 @@
 - Ridley+
 - Credits
 
-## Missiles
+## Missile Expansions
 
-- The highest possible Missile capacity is 183. In general, the harder a Missile is to acquire, the more capacity it provides.
+- The highest possible Missile capacity is 170. In general, the harder a Missile is to acquire, the more capacity it provides.
 - No one will actually finish with this missile count because of Root Cave
 
-## Etanks
+## Energy Tanks
 
 | Room | Intended Collection |
 | --- | --- |
-| Frigate Crash Site | 2nd Pass Grapple dunk |
+| Frigate Crash Site | 1st Pass |
 | Hive Mecha | 1st Pass |
 | Magmoor Workstation | 2nd Pass needs boost |
 | Frozen Pike | 1st Pass DBJ or 2nd Pass SJ |

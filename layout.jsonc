@@ -326,7 +326,7 @@
         "3012146902": [
             "Space Pirate encrypted data decoded.\n",
             "Artifact Site",
-            "Log 20X4.04.01\n\nDear diary,\n\nToday the commander ordered me to hike all the way out to the middle of f'ing nowhere to secure an objective. It was a pain in the ass to carry all my equipment underneath that gap in the rock just ahead. I completed the task by installing a FD39 MKII Laser Defense Matrix and calling it a day.\n\nIt's very peaceful out here compared to the mines. I think I'll camp out here tonight and leave in the morning. Hopefully a Zebian-class research facility doesn't crash on my head on the journey back.\n\nLove,\n\nSpace Private Glorgsmire Gumpybottom First Class"
+            "Log 20X4.04.01\n\nDear diary,\n\nToday the commander ordered me to hike all the way out to the middle of f'ing nowhere to secure an objective. It was a pain in the ass to carry all my equipment underneath that gap in the rock just ahead. I completed the task by installing a FD39 MKII Laser Defense Matrix and calling it a day.\n\nIt's very peaceful out here compared to the mines. I think I'll camp out here tonight and leave in the morning.\n\nHopefully a Zebian-class research facility doesn't crash on my head on the journey back.\n\nLove,\n\nSpace Private Glorgsmire Gumpybottom First Class"
         ]
     },
     "levelData": {
@@ -4548,12 +4548,8 @@
                             "startImmediately": true
                         },
                         {
-                            "id": 10000414,
-                            "time": 4
-                        },
-                        {
                             "id": 10000413,
-                            "time": 1.5,
+                            "time": 2.5,
                             "active": false,
                             "startImmediately": true,
                             "looping": true
@@ -9194,7 +9190,11 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "deleteIds": [
+                        // the artifact is "moved" out of this room
+                        262272, 272508
+                    ]
                 },
                 "Pit Tunnel": {
                     "doors": {
@@ -9678,8 +9678,8 @@
                             "texture": "Mine"
                         },
                         {
-                            "position": [202.2, -262.7, 70.95],
-                            "scale": [17, 22, 0.5],
+                            "position": [202.2, -262.7, 70.9],
+                            "scale": [17, 22, 0.1],
                             "texture": "Mine"
                         },
                         {
@@ -10058,17 +10058,21 @@
                 "Shore Tunnel": {
                     "pickups": [
                         {
-                            "type": "Missile",
-                            "scanText": "Missile Expansion",
-                            "hudmemoText": "Missile Expansion Acquired!",
-                            "maxIncrease": 3
+                            "type": "Health Refill",
+                            "scanText": "Health Refill (100)",
+                            "currIncrease": 100,
+                            "maxIncrease": 0,
+                            "respawn": true
                         }
                     ],
                     "doors": {
                         "1": {
                             "shieldType": "Disabled"
                         }
-                    }
+                    },
+                    "deleteIds": [
+                        786439 // power-bomb debris
+                    ]
                 },
                 "Transport to Phendrana Drifts North": {},
                 "Fiery Shores": {
@@ -10277,7 +10281,10 @@
                         },
                         {
                             "id": 10000132,
-                            "type": "Nothing",
+                            "type": "Health Refill",
+                            "model": "Nothing",
+                            "maxIncrease": 0,
+                            "currIncrease": 400,
                             "scanText": "Drain Lava",
                             "hudmemoText": "Lava Drained!",
                             "position": [434.7, -847.9, 84.0]
@@ -11771,67 +11778,67 @@
                         },
                         {
                             "id": 10000618,
-                            "position": [-140.0, -35, -140],
+                            "position": [-140.0, -35, -142],
                             "scale": [5, 5, 5],
                             "texture": "Mine"
                         },
                         {
                             "id": 10000619,
-                            "position": [-140.0, -25, -140],
+                            "position": [-140.0, -25, -142],
                             "scale": [5, 5, 5],
                             "texture": "Mine"
                         },
                         {
                             "id": 10000620,
-                            "position": [-165.0, -15, -140],
+                            "position": [-165.0, -15, -142],
                             "scale": [5, 5, 5],
                             "texture": "Mine"
                         },
                         {
                             "id": 10000621,
-                            "position": [-165.0, -5, -140],
+                            "position": [-165.0, -5, -142],
                             "scale": [5, 5, 5],
                             "texture": "Mine"
                         },
                         {
                             "id": 10000622,
-                            "position": [-152.5, 0, -140],
+                            "position": [-152.5, 0, -142],
                             "scale": [5, 5, 5],
                             "texture": "Mine"
                         },
                         {
                             "id": 10000623,
-                            "position": [-152.5, 10, -140],
+                            "position": [-152.5, 10, -142],
                             "scale": [5, 5, 5],
                             "texture": "Mine"
                         },
                         {
                             "id": 10000624,
-                            "position": [-140.0, 25, -140],
+                            "position": [-140.0, 25, -142],
                             "scale": [5, 5, 5],
                             "texture": "Mine"
                         },
                         {
                             "id": 10000638,
-                            "position": [-127.5, 30, -140],
+                            "position": [-127.5, 30, -142],
                             "scale": [5, 5, 5],
                             "texture": "Mine"
                         },
                         {
                             "id": 10000639,
-                            "position": [-127.5, 20, -140],
+                            "position": [-127.5, 20, -142],
                             "scale": [5, 5, 5],
                             "texture": "Mine"
                         },
                         {
                             "id": 10000640,
-                            "position": [-177.5, 10, -140],
+                            "position": [-177.5, 10, -142],
                             "scale": [5, 5, 5],
                             "texture": "Mine"
                         },
                         {
                             "id": 10000641,
-                            "position": [-177.5, 0, -140],
+                            "position": [-177.5, 0, -142],
                             "scale": [5, 5, 5],
                             "texture": "Mine"
                         },
@@ -11844,67 +11851,67 @@
                         },
                         {
                             "id": 10000611,
-                            "position": [-152.5, -40, -140],
+                            "position": [-152.5, -40, -142],
                             "scale": [5, 5, 5],
                             "texture": "Mine"
                         },
                         {
                             "id": 10000612,
-                            "position": [-152.5, -30, -140],
+                            "position": [-152.5, -30, -142],
                             "scale": [5, 5, 5],
                             "texture": "Mine"
                         },
                         {
                             "id": 10000613,
-                            "position": [-140.0, -15, -140],
+                            "position": [-140.0, -15, -142],
                             "scale": [5, 5, 5],
                             "texture": "Mine"
                         },
                         {
                             "id": 10000614,
-                            "position": [-140.0, -5, -140],
+                            "position": [-140.0, -5, -142],
                             "scale": [5, 5, 5],
                             "texture": "Mine"
                         },
                         {
                             "id": 10000615,
-                            "position": [-165.0, -5, -140],
+                            "position": [-165.0, -5, -142],
                             "scale": [5, 5, 5],
                             "texture": "Mine"
                         },
                         {
                             "id": 10000616,
-                            "position": [-165.0, 15, -140],
+                            "position": [-165.0, 15, -142],
                             "scale": [5, 5, 5],
                             "texture": "Mine"
                         },
                         {
                             "id": 10000617,
-                            "position": [-152.5, 20, -140],
+                            "position": [-152.5, 20, -142],
                             "scale": [5, 5, 5],
                             "texture": "Mine"
                         },
                         {
                             "id": 10000634,
-                            "position": [-177.5, 30, -140],
+                            "position": [-177.5, 30, -142],
                             "scale": [5, 5, 5],
                             "texture": "Mine"
                         },
                         {
                             "id": 10000635,
-                            "position": [-177.5, 20, -140],
+                            "position": [-177.5, 20, -142],
                             "scale": [5, 5, 5],
                             "texture": "Mine"
                         },
                         {
                             "id": 10000636,
-                            "position": [-127.5, 10, -140],
+                            "position": [-127.5, 10, -142],
                             "scale": [5, 5, 5],
                             "texture": "Mine"
                         },
                         {
                             "id": 10000637,
-                            "position": [-127.5, 0, -140],
+                            "position": [-127.5, 0, -142],
                             "scale": [5, 5, 5],
                             "texture": "Mine"
                         },
@@ -11917,61 +11924,61 @@
                         },
                         {
                             "id": 10000625,
-                            "position": [-165.0, -35, -140],
+                            "position": [-165.0, -35, -142],
                             "scale": [5, 5, 5],
                             "texture": "Mine"
                         },
                         {
                             "id": 10000626,
-                            "position": [-165.0, -25, -140],
+                            "position": [-165.0, -25, -142],
                             "scale": [5, 5, 5],
                             "texture": "Mine"
                         },
                         {
                             "id": 10000627,
-                            "position": [-152.5, -20, -140],
+                            "position": [-152.5, -20, -142],
                             "scale": [5, 5, 5],
                             "texture": "Mine"
                         },
                         {
                             "id": 10000628,
-                            "position": [-152.5, -10, -140],
+                            "position": [-152.5, -10, -142],
                             "scale": [5, 5, 5],
                             "texture": "Mine"
                         },
                         {
                             "id": 10000629,
-                            "position": [-140.0, -5, -140],
+                            "position": [-140.0, -5, -142],
                             "scale": [5, 5, 5],
                             "texture": "Mine"
                         },
                         {
                             "id": 10000630,
-                            "position": [-140.0, 15, -140],
+                            "position": [-140.0, 15, -142],
                             "scale": [5, 5, 5],
                             "texture": "Mine"
                         },
                         {
                             "id": 10000631,
-                            "position": [-165.0, 25, -140],
+                            "position": [-165.0, 25, -142],
                             "scale": [5, 5, 5],
                             "texture": "Mine"
                         },
                         {
                             "id": 10000632,
-                            "position": [-127.5, -30, -140],
+                            "position": [-127.5, -30, -142],
                             "scale": [5, 5, 5],
                             "texture": "Mine"
                         },
                         {
                             "id": 10000633,
-                            "position": [-177.5, -30, -140],
+                            "position": [-177.5, -30, -142],
                             "scale": [5, 5, 5],
                             "texture": "Mine"
                         },
                         {
                             "id": 10000642,
-                            "position": [-171.2443, 12.1911, -104],
+                            "position": [-171.2443, 12.1911, -105],
                             "scale": [10, 10, 1],
                             "texture": "Mine"
                         },
@@ -12037,7 +12044,7 @@
                         {
                             "id": 10000599,
                             "type": "Lava",
-                            "position": [-157.0, 8.7, -141],
+                            "position": [-157.0, 8.7, -142.5],
                             "scale": [100, 130, 5]
                         },
                         // down
@@ -12056,16 +12063,27 @@
                             "position": [-150.9309, -18.8929, -140.6362]
                         },
                         "10000599": {
+                            "damage": 0.9,
                             "speed": 4
                         },
                         "10000600": {
+                            "damage": 0.9,
                             "speed": 4
                         },
                         "1704230": { // Omega Pirate
-                            "speed": 1.9,
-                            "attackRange": 1.2,
-                            "position": [-171.2443, 12.1911, -103]
-                        }
+                            "speed": 1.7,
+                            "health": 0.666,
+                            "position": [-171.2443, 12.1911, -104]
+                        },
+                        // troopers
+                        "1705060": { "speed": 0.3, "health": 0.3, "scale": [3, 3, 3] },
+                        "1704563": { "speed": 0.3, "health": 0.3, "scale": [3, 3, 3] },
+                        "1705061": { "speed": 0.3, "health": 0.3, "scale": [3, 3, 3] },
+                        "1704564": { "speed": 0.3, "health": 0.3, "scale": [3, 3, 3] },
+                        "1705059": { "speed": 0.3, "health": 0.3, "scale": [3, 3, 3] },
+                        "1705032": { "speed": 0.3, "health": 0.3, "scale": [3, 3, 3] },
+                        "1705062": { "speed": 0.3, "health": 0.3, "scale": [3, 3, 3] },
+                        "1704702": { "speed": 0.3, "health": 0.3, "scale": [3, 3, 3] }
                     },
                     "addConnections": [
                         /* When the room loads, deactivate all obstacles */
@@ -15382,7 +15400,8 @@
                         {
                             "type": "Missile",
                             "scanText": "Missile Expansion",
-                            "hudmemoText": "Missile Expansion Acquired!"
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 2
                         }
                     ],
                     "doors": {
@@ -15432,6 +15451,7 @@
                             "type": "Missile",
                             "scanText": "Missile Expansion",
                             "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 2,
                             "position": [-681.6, 326.2, 14.1]
                         }
                     ],
@@ -16183,7 +16203,8 @@
                         {
                             "type": "Missile",
                             "scanText": "Missile Expansion",
-                            "hudmemoText": "Missile Expansion Acquired!"
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 2
                         }
                     ],
                     "doors": {
@@ -18272,7 +18293,9 @@
                         // Delete the beetles' AI manager so they are more aggressive
                         131387,
                         // Upper Beetle Battle always active
-                        131397, 131398
+                        131397, 131398,
+                        // 2nd pass plated beetle
+                        131199
                     ]
                 },
                 "Ruined Fountain Access": {
@@ -18621,7 +18644,7 @@
                         590125, 589868, 589870, 589866, 589882, 589872, 589884,
 
                         // Don't enable 2nd pass beetle layer
-                        599922
+                        599922, 600326
                     ]
                 },
                 "Eyon Tunnel": {},
@@ -18771,7 +18794,8 @@
                         {
                             "type": "Missile",
                             "scanText": "Missile Expansion",
-                            "hudmemoText": "Missile Expansion Acquired!"
+                            "hudmemoText": "Missile Expansion Acquired!",
+                            "maxIncrease": 4
                         }
                     ],
                     "triggers": [
@@ -19790,6 +19814,8 @@
                     "pickups": [
                         {
                             "type": "Missile",
+                            "scanText": "Missile Expansion",
+                            "hudmemoText": "Missile Expansion Acquired!",
                             "maxIncrease": 3,
                             "position": [136.5, 345.34, 0.14]
                         }
