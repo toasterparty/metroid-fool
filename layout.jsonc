@@ -41,7 +41,7 @@
         "shootInGrapple": true,
         "patchWallcrawling": true,
         // TODO: Debug
-        "startingRoom": "Impact Crater:Phazon Infusion Chamber",
+        "startingRoom": "Phendrana Drifts:Chamber Access",
         // "startingRoom": "Tallon Overworld:Landing Site",
         // "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
         "startingItems": {
@@ -147,119 +147,6 @@
         "2003358163": [
             "This interface indicates the controls for the door are located elsewhere in this region."
         ],
-        // Commented out because you get "Invalid" on the title screen
-        // "89302102": [
-        //     "Combat Visor",
-        //     "Scan Visor",
-        //     "X-Ray Visor",
-        //     "Thermal Visor",
-        //     "Power Beam",
-        //     "Ice Beam",
-        //     "Wave Beam",
-        //     "Plasma Beam",
-        //     "Phazon Beam",
-        //     "E",
-        //     "Warning",
-        //     "Damage",
-        //     "Missiles\nLow",
-        //     "Depleted",
-        //     "Scanning…",
-        //     "Scan complete.",
-        //     "Object out of scanning range.",
-        //     "Press &image=SI,0.70,0.68,05AF9CAA; to continue.",
-        //     "&just=center;Thermal Visor overloaded.\nReturn to Combat Visor.",
-        //     "&just=center;You have been frozen. Tap &image=SI,0.70,0.68,833BEE04; rapidly to break free.",
-        //     "&just=center;You have been frozen. Drop Bombs to break free.",
-        //     "&just=center;Hyper-mode",
-        //     "Yes",
-        //     "No",
-        //     "Quit Game?",
-        //     "Bunger?",
-        //     "Save your progress to the Memory Card in Slot A? Previous data will be overwritten.",
-        //     "Quit Metroid? Progress since the last save will be lost.",
-        //     "Continue playing?",
-        //     "A new&main-color=#FF3333; [",
-        //     "] &main-color=#89D6FF;entry has been downloaded to your Log Book.",
-        //     "Pirate Data",
-        //     "Chozo Lore",
-        //     "Creatures",
-        //     "Research",
-        //     "Artifacts",
-        //     "[New Game]",
-        //     "Metroid Fusion Connection Bonuses",
-        //     "Erase",
-        //     "[Samus A]",
-        //     "[Samus B]",
-        //     "[Samus C]",
-        //     "&image=SI,1.0,0.68,6CBE6EF2;\nExit",
-        //     "&image=SI,1.0,0.68,EA2A1C5C;  Key/Legend",
-        //     "World \nMap",
-        //     "Level\nMap",
-        //     "Rotate     ",
-        //     "Move      ",
-        //     " Zoom ",
-        //     "&line-extra-space=4;&image=SI, 0.6875,0.6875,FE2235F5; - Any Beam\n&image=SI, 0.6875,0.6875,41031B9B; - Wave Beam\n&image=SI, 0.6875,0.6875,40074106; - Ice Beam\n&image=SI, 0.6875,0.6875,A9D17D44; - Plasma Beam\n&image=SI, 0.6875,0.6875,95401DA9; - Missile\n&image=SI, 0.6875,0.6875,81DFB050; - Opened\n&image=SI, 0.6875,0.6875,8A78A5BF; - Elevator\n&image=SI, 0.6875,0.6875,39C0091E; - Missile Recharge\n&image=SI, 0.6875,0.6875,C6FA23D1; - Save Station\n&image=SI, 0.6875,0.6875,CB91BD62; - Hint\n",
-        //     "Okay to erase?",
-        //     "    -- -- -- -- -- --",
-        //     " --:--",
-        //     " -- -- --",
-        //     "Elapsed",
-        //     "Legend",
-        //     "Browse",
-        //     "Pan",
-        //     "Zoom",
-        //     "Auto",
-        //     "Reset View",
-        //     "Exit",
-        //     "Exit",
-        //     "Metroid Fusion Suit",
-        //     "Enabled",
-        //     "Disabled",
-        //     "Play NES Metroid",
-        //     "Start",
-        //     "Connect the Game Boy Advance to Socket\n2, 3, or 4 on the Nintendo GameCube.",
-        //     "Data link failed. Retry?",
-        //     "Data link complete. Please turn off your Game Boy Advance. Do not remove the Memory Card.",
-        //     "Data link complete. Please turn off\nyour Game Boy Advance.",
-        //     "Linking...do not touch the Nintendo GameCube Game Boy Advance cable, Memory Card, or POWER Button.",
-        //     "Insert a Metroid Fusion Game Pak\ninto the Game Boy Advance.",
-        //     "On the Game Boy Advance, press and hold\nSTART and SELECT then turn the power ON.",
-        //     "Begin data link to the Game Boy Advance?",
-        //     "Turn off the Game Boy Advance.",
-        //     "To play NES Metroid on your\nNintendo GameCube:\n\nComplete Metroid Fusion for the Game Boy® Advance and connect Metroid Fusion to Metroid Prime.",
-        //     "To enable Samus's Fusion Suit \nin Metroid Prime:\n\nComplete Metroid Prime and connect Metroid Fusion for the Game Boy® Advance to Metroid Prime.",
-        //     "You have not completed Metroid Fusion. You must complete Metroid Fusion to unlock NES Metroid.",
-        //     "You have not completed Metroid Prime. You must complete Metroid Prime to unlock Samus's Fusion Suit in Metroid Prime.",
-        //     "&image=SI,0.70,0.68,05AF9CAA; Okay",
-        //     "&image=SI,0.70,0.68,833BEE04; Back",
-        //     "&image=SI,0.70,0.68,05AF9CAA; Proceed",
-        //     "&image=SI,0.70,0.68,05AF9CAA; Retry",
-        //     "&image=SI,0.70,0.68,05AF9CAA; Select",
-        //     "Parasite Queen",
-        //     "Foie Gras",
-        //     "Thardus",
-        //     "Omega Pirate",
-        //     "Meta Ridley",
-        //     "Metroid Prime",
-        //     " ",
-        //     " ",
-        //     "Options",
-        //     "Cancel",
-        //     "Image Gallery",
-        //     "MAIN MENU",
-        //     "MAIN MENU",
-        //     "OPTIONS",
-        //     "METROID FUSION CONNECTION BONUSES",
-        //     "Normal Mode",
-        //     "Hard Mode",
-        //     "Press &image=SA,3.0,1.0,1.0,46434ED3,34E79314; to quit.",
-        //     "&just=center;Use the Morph Ball Boost to get out of the way.",
-        //     "&just=center;Artifact acquired.",
-        //     "[Hard A]",
-        //     "[Hard B]",
-        //     "[Hard C]",
-        //     "&just=center;Power Bomb ammunition acquired"
-        // ],
         "3230660781": ["Water Pool"],
         "1487098604": [
             "The Artifact of Lifegiver is where it belongs.",
@@ -2174,7 +2061,6 @@
                     }
                 },
                 "Chapel of the Elders": {
-                    // Uses chapel.py
                     "pickups": [
                         {
                             "type": "Boost Ball"
@@ -2190,9 +2076,33 @@
                             }
                         }
                     },
-                    "waypoints": [
+                    "specialFunctions": [
+                        {
+                            "id": 10000660,
+                            "type": "PlayerInAreaRelay"
+                        }
+                    ],
+                    "deleteIds": [
+                        917589, // Counter for momma release
+                        917601, 917641, 917644, 917647, // corner platforms
+                        928130, 917511, 917514, // randomprime cutscene skips
+                        917703, 917704 // don't change layers in chozo ice temple
+                    ],
+                    // Uses chapel.py
+                    "timers": [
+                        {
+                            "id": 917591,
+                            "time": 15
+                        },
                         {
                             "id": 9800000,
+                            "time": 0.02,
+                            "startImmediately": true
+                        }
+                    ],
+                    "waypoints": [
+                        {
+                            "id": 9800001,
                             "position": [
                                 -380.65807641050264,
                                 -191.84169828846422,
@@ -2201,7 +2111,7 @@
                             "speed": 2.084805895616872
                         },
                         {
-                            "id": 9800001,
+                            "id": 9800002,
                             "position": [
                                 -387.43939617281643,
                                 -176.92044927574625,
@@ -2210,7 +2120,7 @@
                             "speed": 6.60316646047066
                         },
                         {
-                            "id": 9800002,
+                            "id": 9800003,
                             "position": [
                                 -359.4934958997825,
                                 -185.9035912154841,
@@ -2219,7 +2129,7 @@
                             "speed": 2.9367785040901513
                         },
                         {
-                            "id": 9800003,
+                            "id": 9800004,
                             "position": [
                                 -383.19341882858527,
                                 -191.6908353784235,
@@ -2228,7 +2138,7 @@
                             "speed": 7.492329419996423
                         },
                         {
-                            "id": 9800004,
+                            "id": 9800005,
                             "position": [
                                 -356.9431980488632,
                                 -156.66738266488383,
@@ -2237,7 +2147,7 @@
                             "speed": 2.35404932613468
                         },
                         {
-                            "id": 9800005,
+                            "id": 9800006,
                             "position": [
                                 -377.7060017080186,
                                 -165.6512198793435,
@@ -2246,7 +2156,7 @@
                             "speed": 6.982538505939431
                         },
                         {
-                            "id": 9800006,
+                            "id": 9800007,
                             "position": [
                                 -354.89796994555206,
                                 -192.66408736825392,
@@ -2255,7 +2165,7 @@
                             "speed": 5.701910195615313
                         },
                         {
-                            "id": 9800007,
+                            "id": 9800008,
                             "position": [
                                 -369.8618489715834,
                                 -188.11049128796077,
@@ -2264,7 +2174,7 @@
                             "speed": 1.6254234508577323
                         },
                         {
-                            "id": 9800008,
+                            "id": 9800009,
                             "position": [
                                 -352.7164654440037,
                                 -153.72579149074585,
@@ -2273,7 +2183,7 @@
                             "speed": 3.1017201770132727
                         },
                         {
-                            "id": 9800009,
+                            "id": 9800010,
                             "position": [
                                 -353.74518842341257,
                                 -168.38165991570543,
@@ -2282,7 +2192,7 @@
                             "speed": 6.936308617565443
                         },
                         {
-                            "id": 9800010,
+                            "id": 9800011,
                             "position": [
                                 -369.76510498668995,
                                 -176.3026978434134,
@@ -2291,7 +2201,7 @@
                             "speed": 4.0173011210531495
                         },
                         {
-                            "id": 9800011,
+                            "id": 9800012,
                             "position": [
                                 -383.64717575513566,
                                 -181.74442017836304,
@@ -2300,7 +2210,7 @@
                             "speed": 1.3026692835057394
                         },
                         {
-                            "id": 9800012,
+                            "id": 9800013,
                             "position": [
                                 -388.2471200398595,
                                 -165.68246272300482,
@@ -2309,7 +2219,7 @@
                             "speed": 4.742352564155955
                         },
                         {
-                            "id": 9800013,
+                            "id": 9800014,
                             "position": [
                                 -371.2503965554003,
                                 -179.8578367288922,
@@ -2318,7 +2228,7 @@
                             "speed": 2.369014460333208
                         },
                         {
-                            "id": 9800014,
+                            "id": 9800015,
                             "position": [
                                 -373.588213743707,
                                 -186.8664691913802,
@@ -2327,7 +2237,7 @@
                             "speed": 2.934133844717782
                         },
                         {
-                            "id": 9800015,
+                            "id": 9800016,
                             "position": [
                                 -375.86676981570594,
                                 -159.65286595047687,
@@ -2336,7 +2246,7 @@
                             "speed": 4.909702885083744
                         },
                         {
-                            "id": 9800016,
+                            "id": 9800017,
                             "position": [
                                 -353.9273959387737,
                                 -191.95102806410702,
@@ -2345,7 +2255,7 @@
                             "speed": 2.602086081671353
                         },
                         {
-                            "id": 9800017,
+                            "id": 9800018,
                             "position": [
                                 -359.493510346949,
                                 -166.22839624356516,
@@ -2354,7 +2264,7 @@
                             "speed": 3.3174689676021427
                         },
                         {
-                            "id": 9800018,
+                            "id": 9800019,
                             "position": [
                                 -382.99841226013774,
                                 -174.04906239149122,
@@ -2363,7 +2273,7 @@
                             "speed": 5.881043170230629
                         },
                         {
-                            "id": 9800019,
+                            "id": 9800020,
                             "position": [
                                 -354.2628888355271,
                                 -149.26312008288275,
@@ -2372,7 +2282,7 @@
                             "speed": 7.719073141290657
                         },
                         {
-                            "id": 9800020,
+                            "id": 9800021,
                             "position": [
                                 -389.37249898826775,
                                 -182.55017660495784,
@@ -2381,7 +2291,7 @@
                             "speed": 6.4266760465760395
                         },
                         {
-                            "id": 9800021,
+                            "id": 9800022,
                             "position": [
                                 -373.682892757245,
                                 -149.83458163235093,
@@ -2390,7 +2300,7 @@
                             "speed": 6.725494604887769
                         },
                         {
-                            "id": 9800022,
+                            "id": 9800023,
                             "position": [
                                 -378.363589853725,
                                 -187.42923975956305,
@@ -2399,7 +2309,7 @@
                             "speed": 1.9550633858914046
                         },
                         {
-                            "id": 9800023,
+                            "id": 9800024,
                             "position": [
                                 -374.8346146110268,
                                 -148.90931887965476,
@@ -2408,7 +2318,7 @@
                             "speed": 1.0657752643769522
                         },
                         {
-                            "id": 9800024,
+                            "id": 9800025,
                             "position": [
                                 -388.308112283115,
                                 -188.52164780900225,
@@ -2417,7 +2327,7 @@
                             "speed": 3.5390698684774105
                         },
                         {
-                            "id": 9800025,
+                            "id": 9800026,
                             "position": [
                                 -378.4866305436326,
                                 -192.14488934005544,
@@ -2426,7 +2336,7 @@
                             "speed": 3.967667634902214
                         },
                         {
-                            "id": 9800026,
+                            "id": 9800027,
                             "position": [
                                 -381.7833263297027,
                                 -194.0330238110538,
@@ -2435,7 +2345,7 @@
                             "speed": 2.1806918991263498
                         },
                         {
-                            "id": 9800027,
+                            "id": 9800028,
                             "position": [
                                 -363.0269152967278,
                                 -189.51797325666342,
@@ -2444,7 +2354,7 @@
                             "speed": 4.434673309912201
                         },
                         {
-                            "id": 9800028,
+                            "id": 9800029,
                             "position": [
                                 -380.1376539464495,
                                 -147.11817364559548,
@@ -2453,7 +2363,7 @@
                             "speed": 4.704691104966043
                         },
                         {
-                            "id": 9800029,
+                            "id": 9800030,
                             "position": [
                                 -359.1483149895353,
                                 -176.53393844827556,
@@ -2462,7 +2372,7 @@
                             "speed": 4.344333741161295
                         },
                         {
-                            "id": 9800030,
+                            "id": 9800031,
                             "position": [
                                 -380.425513351317,
                                 -176.4688755676379,
@@ -2471,7 +2381,7 @@
                             "speed": 3.9485467307605946
                         },
                         {
-                            "id": 9800031,
+                            "id": 9800032,
                             "position": [
                                 -380.15656103866235,
                                 -152.53497916913147,
@@ -2480,7 +2390,7 @@
                             "speed": 4.490058036997695
                         },
                         {
-                            "id": 9800032,
+                            "id": 9800033,
                             "position": [
                                 -388.833985711096,
                                 -184.28031692900234,
@@ -2489,7 +2399,7 @@
                             "speed": 2.456458452390202
                         },
                         {
-                            "id": 9800033,
+                            "id": 9800034,
                             "position": [
                                 -380.841333837171,
                                 -153.51452419844,
@@ -2498,7 +2408,7 @@
                             "speed": 1.3589160758046686
                         },
                         {
-                            "id": 9800034,
+                            "id": 9800035,
                             "position": [
                                 -352.9786729828964,
                                 -168.7327899795562,
@@ -2507,7 +2417,7 @@
                             "speed": 3.8207344616896393
                         },
                         {
-                            "id": 9800035,
+                            "id": 9800036,
                             "position": [
                                 -354.0619136890866,
                                 -164.30132666569273,
@@ -2516,7 +2426,7 @@
                             "speed": 6.2130839994812215
                         },
                         {
-                            "id": 9800036,
+                            "id": 9800037,
                             "position": [
                                 -370.3284790910862,
                                 -192.35456917058394,
@@ -2525,7 +2435,7 @@
                             "speed": 7.116643592760964
                         },
                         {
-                            "id": 9800037,
+                            "id": 9800038,
                             "position": [
                                 -354.10952579255735,
                                 -150.7711314240636,
@@ -2534,7 +2444,7 @@
                             "speed": 5.598362999399031
                         },
                         {
-                            "id": 9800038,
+                            "id": 9800039,
                             "position": [
                                 -358.11981362679677,
                                 -164.87530395573484,
@@ -2543,7 +2453,7 @@
                             "speed": 4.696167249282196
                         },
                         {
-                            "id": 9800039,
+                            "id": 9800040,
                             "position": [
                                 -363.9107124562868,
                                 -162.70200741249906,
@@ -2552,7 +2462,7 @@
                             "speed": 7.459599738905377
                         },
                         {
-                            "id": 9800040,
+                            "id": 9800041,
                             "position": [
                                 -351.8488376807003,
                                 -193.28097159467282,
@@ -2561,7 +2471,7 @@
                             "speed": 7.732416722141407
                         },
                         {
-                            "id": 9800041,
+                            "id": 9800042,
                             "position": [
                                 -363.3659246947594,
                                 -194.77280152037747,
@@ -2570,7 +2480,7 @@
                             "speed": 1.8934295130352816
                         },
                         {
-                            "id": 9800042,
+                            "id": 9800043,
                             "position": [
                                 -351.3586014659877,
                                 -163.6405041306045,
@@ -2579,7 +2489,7 @@
                             "speed": 2.1708592982215364
                         },
                         {
-                            "id": 9800043,
+                            "id": 9800044,
                             "position": [
                                 -364.69240839941017,
                                 -168.53970320813983,
@@ -2588,7 +2498,7 @@
                             "speed": 7.492366624870121
                         },
                         {
-                            "id": 9800044,
+                            "id": 9800045,
                             "position": [
                                 -381.35834143220984,
                                 -196.83634866357028,
@@ -2597,7 +2507,7 @@
                             "speed": 1.0917719399188681
                         },
                         {
-                            "id": 9800045,
+                            "id": 9800046,
                             "position": [
                                 -355.0430566259208,
                                 -191.20550152816506,
@@ -2606,7 +2516,7 @@
                             "speed": 6.480788116660657
                         },
                         {
-                            "id": 9800046,
+                            "id": 9800047,
                             "position": [
                                 -354.98488518526096,
                                 -169.46958015359908,
@@ -2615,7 +2525,7 @@
                             "speed": 2.4116861383118504
                         },
                         {
-                            "id": 9800047,
+                            "id": 9800048,
                             "position": [
                                 -363.2407282923824,
                                 -180.4678441962491,
@@ -2624,7 +2534,7 @@
                             "speed": 6.415017012434913
                         },
                         {
-                            "id": 9800048,
+                            "id": 9800049,
                             "position": [
                                 -371.23959523581425,
                                 -170.6795677096984,
@@ -2633,7 +2543,7 @@
                             "speed": 1.2392820482551217
                         },
                         {
-                            "id": 9800049,
+                            "id": 9800050,
                             "position": [
                                 -366.3205263635765,
                                 -172.55843868821626,
@@ -2644,8 +2554,7 @@
                     ],
                     "platforms": [
                         {
-                            "id": 9800050,
-                            "active": false,
+                            "id": 9800051,
                             "position": [
                                 -352.7164654440037,
                                 -153.72579149074585,
@@ -2654,8 +2563,7 @@
                             "type": "Empty"
                         },
                         {
-                            "id": 9800052,
-                            "active": false,
+                            "id": 9800053,
                             "position": [
                                 -352.9786729828964,
                                 -168.7327899795562,
@@ -2664,8 +2572,7 @@
                             "type": "Empty"
                         },
                         {
-                            "id": 9800054,
-                            "active": false,
+                            "id": 9800055,
                             "position": [
                                 -356.9431980488632,
                                 -156.66738266488383,
@@ -2674,8 +2581,7 @@
                             "type": "Empty"
                         },
                         {
-                            "id": 9800056,
-                            "active": false,
+                            "id": 9800057,
                             "position": [
                                 -356.9431980488632,
                                 -156.66738266488383,
@@ -2684,8 +2590,7 @@
                             "type": "Empty"
                         },
                         {
-                            "id": 9800058,
-                            "active": false,
+                            "id": 9800059,
                             "position": [
                                 -374.8346146110268,
                                 -148.90931887965476,
@@ -2696,7 +2601,7 @@
                     ],
                     "actorRotates": [
                         {
-                            "id": 9800051,
+                            "id": 9800052,
                             "rotation": [
                                 325.81284823863547,
                                 106.89784125661868,
@@ -2704,11 +2609,11 @@
                             ],
                             "timeScale": 0.4661999003379861,
                             "updateActive": true,
-                            "updateOnCreation": true,
+                            "updateOnCreation": false,
                             "updateActors": true
                         },
                         {
-                            "id": 9800053,
+                            "id": 9800054,
                             "rotation": [
                                 139.90702423551838,
                                 273.13620101805566,
@@ -2716,11 +2621,11 @@
                             ],
                             "timeScale": 2.060284027204561,
                             "updateActive": true,
-                            "updateOnCreation": true,
+                            "updateOnCreation": false,
                             "updateActors": true
                         },
                         {
-                            "id": 9800055,
+                            "id": 9800056,
                             "rotation": [
                                 184.4908735144944,
                                 156.22317038268898,
@@ -2728,11 +2633,11 @@
                             ],
                             "timeScale": 3.905272565609015,
                             "updateActive": true,
-                            "updateOnCreation": true,
+                            "updateOnCreation": false,
                             "updateActors": true
                         },
                         {
-                            "id": 9800057,
+                            "id": 9800058,
                             "rotation": [
                                 334.70990137099557,
                                 172.32396686142087,
@@ -2740,11 +2645,11 @@
                             ],
                             "timeScale": 2.8356266880046364,
                             "updateActive": true,
-                            "updateOnCreation": true,
+                            "updateOnCreation": false,
                             "updateActors": true
                         },
                         {
-                            "id": 9800059,
+                            "id": 9800060,
                             "rotation": [
                                 177.93188236307876,
                                 121.89056734070171,
@@ -2752,7 +2657,7 @@
                             ],
                             "timeScale": 4.529954450755622,
                             "updateActive": true,
-                            "updateOnCreation": true,
+                            "updateOnCreation": false,
                             "updateActors": true
                         }
                     ],
@@ -2763,9 +2668,10 @@
                                 -158.76951247214294,
                                 47.26816554368921
                             ],
-                            "speed": 2
+                            "speed": 2,
+                            "vulnerability": "Blue"
                         },
-                        "9800050": {
+                        "9800051": {
                             "speed": 1
                         },
                         "917568": {
@@ -2774,9 +2680,10 @@
                                 -172.2685574941974,
                                 54.19622857824154
                             ],
-                            "speed": 2
+                            "speed": 2,
+                            "vulnerability": "Blue"
                         },
-                        "9800052": {
+                        "9800053": {
                             "speed": 1
                         },
                         "917553": {
@@ -2785,9 +2692,10 @@
                                 -155.2158418849636,
                                 50.62993659617983
                             ],
-                            "speed": 2
+                            "speed": 2,
+                            "vulnerability": "Blue"
                         },
-                        "9800054": {
+                        "9800055": {
                             "speed": 1
                         },
                         "917544": {
@@ -2796,9 +2704,10 @@
                                 -151.37879263339238,
                                 47.64906512171318
                             ],
-                            "speed": 2
+                            "speed": 2,
+                            "vulnerability": "Blue"
                         },
-                        "9800056": {
+                        "9800057": {
                             "speed": 1
                         },
                         "917520": {
@@ -2807,21 +2716,14 @@
                                 -152.7931075809454,
                                 35.698677533632726
                             ],
-                            "speed": 1,
-                            "health": 1.5,
+                            "speed": 2,
                             "vulnerability": "Blue"
                         },
-                        "9800058": {
+                        "9800059": {
                             "speed": 1
                         }
                     },
                     "addConnections": [
-                        {
-                            "senderId": 9800000,
-                            "state": "ARRIVED",
-                            "targetId": 9800001,
-                            "message": "NEXT"
-                        },
                         {
                             "senderId": 9800001,
                             "state": "ARRIVED",
@@ -3113,127 +3015,193 @@
                         {
                             "senderId": 9800049,
                             "state": "ARRIVED",
-                            "targetId": 9800000,
+                            "targetId": 9800050,
                             "message": "NEXT"
+                        },
+                        {
+                            "senderId": 9800050,
+                            "state": "ARRIVED",
+                            "targetId": 9800001,
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 9800000,
+                            "state": "ZERO",
+                            "targetId": 9800051,
+                            "message": "STOP"
                         },
                         {
                             "senderId": 917562,
                             "state": "ACTIVE",
-                            "targetId": 9800050,
-                            "message": "ACTIVATE"
+                            "targetId": 9800051,
+                            "message": "START"
                         },
                         {
-                            "senderId": 9800050,
+                            "senderId": 917562,
                             "state": "ACTIVE",
-                            "targetId": 9800008,
+                            "targetId": 9800052,
+                            "message": "ACTION"
+                        },
+                        {
+                            "senderId": 9800051,
+                            "state": "ACTIVE",
+                            "targetId": 9800009,
                             "message": "FOLLOW"
                         },
                         {
-                            "senderId": 9800050,
+                            "senderId": 9800051,
                             "state": "PLAY",
                             "targetId": 917562,
                             "message": "ACTIVATE"
                         },
                         {
-                            "senderId": 9800051,
+                            "senderId": 9800052,
                             "state": "PLAY",
-                            "targetId": 9800050,
+                            "targetId": 9800051,
                             "message": "PLAY"
+                        },
+                        {
+                            "senderId": 9800000,
+                            "state": "ZERO",
+                            "targetId": 9800053,
+                            "message": "STOP"
                         },
                         {
                             "senderId": 917568,
                             "state": "ACTIVE",
-                            "targetId": 9800052,
-                            "message": "ACTIVATE"
+                            "targetId": 9800053,
+                            "message": "START"
                         },
                         {
-                            "senderId": 9800052,
+                            "senderId": 917568,
                             "state": "ACTIVE",
-                            "targetId": 9800034,
+                            "targetId": 9800054,
+                            "message": "ACTION"
+                        },
+                        {
+                            "senderId": 9800053,
+                            "state": "ACTIVE",
+                            "targetId": 9800035,
                             "message": "FOLLOW"
                         },
                         {
-                            "senderId": 9800052,
+                            "senderId": 9800053,
                             "state": "PLAY",
                             "targetId": 917568,
                             "message": "ACTIVATE"
                         },
                         {
-                            "senderId": 9800053,
+                            "senderId": 9800054,
                             "state": "PLAY",
-                            "targetId": 9800052,
+                            "targetId": 9800053,
                             "message": "PLAY"
+                        },
+                        {
+                            "senderId": 9800000,
+                            "state": "ZERO",
+                            "targetId": 9800055,
+                            "message": "STOP"
                         },
                         {
                             "senderId": 917553,
                             "state": "ACTIVE",
-                            "targetId": 9800054,
-                            "message": "ACTIVATE"
+                            "targetId": 9800055,
+                            "message": "START"
                         },
                         {
-                            "senderId": 9800054,
+                            "senderId": 917553,
                             "state": "ACTIVE",
-                            "targetId": 9800004,
+                            "targetId": 9800056,
+                            "message": "ACTION"
+                        },
+                        {
+                            "senderId": 9800055,
+                            "state": "ACTIVE",
+                            "targetId": 9800005,
                             "message": "FOLLOW"
                         },
                         {
-                            "senderId": 9800054,
+                            "senderId": 9800055,
                             "state": "PLAY",
                             "targetId": 917553,
                             "message": "ACTIVATE"
                         },
                         {
-                            "senderId": 9800055,
+                            "senderId": 9800056,
                             "state": "PLAY",
-                            "targetId": 9800054,
+                            "targetId": 9800055,
                             "message": "PLAY"
+                        },
+                        {
+                            "senderId": 9800000,
+                            "state": "ZERO",
+                            "targetId": 9800057,
+                            "message": "STOP"
                         },
                         {
                             "senderId": 917544,
                             "state": "ACTIVE",
-                            "targetId": 9800056,
-                            "message": "ACTIVATE"
+                            "targetId": 9800057,
+                            "message": "START"
                         },
                         {
-                            "senderId": 9800056,
+                            "senderId": 917544,
                             "state": "ACTIVE",
-                            "targetId": 9800004,
+                            "targetId": 9800058,
+                            "message": "ACTION"
+                        },
+                        {
+                            "senderId": 9800057,
+                            "state": "ACTIVE",
+                            "targetId": 9800005,
                             "message": "FOLLOW"
                         },
                         {
-                            "senderId": 9800056,
+                            "senderId": 9800057,
                             "state": "PLAY",
                             "targetId": 917544,
                             "message": "ACTIVATE"
                         },
                         {
-                            "senderId": 9800057,
+                            "senderId": 9800058,
                             "state": "PLAY",
-                            "targetId": 9800056,
+                            "targetId": 9800057,
                             "message": "PLAY"
+                        },
+                        {
+                            "senderId": 9800000,
+                            "state": "ZERO",
+                            "targetId": 9800059,
+                            "message": "STOP"
                         },
                         {
                             "senderId": 917520,
                             "state": "ACTIVE",
-                            "targetId": 9800058,
-                            "message": "ACTIVATE"
+                            "targetId": 9800059,
+                            "message": "START"
                         },
                         {
-                            "senderId": 9800058,
+                            "senderId": 917520,
                             "state": "ACTIVE",
-                            "targetId": 9800023,
+                            "targetId": 9800060,
+                            "message": "ACTION"
+                        },
+                        {
+                            "senderId": 9800059,
+                            "state": "ACTIVE",
+                            "targetId": 9800024,
                             "message": "FOLLOW"
                         },
                         {
-                            "senderId": 9800058,
+                            "senderId": 9800059,
                             "state": "PLAY",
                             "targetId": 917520,
                             "message": "ACTIVATE"
                         },
                         {
-                            "senderId": 9800059,
+                            "senderId": 9800060,
                             "state": "PLAY",
-                            "targetId": 9800058,
+                            "targetId": 9800059,
                             "message": "PLAY"
                         },
                         {
@@ -3253,19 +3221,13 @@
                             "state": "ARRIVED",
                             "targetId": 917591,
                             "message": "RESET_AND_START"
-                        }
-                    ],
-                    "timers": [
+                        },
                         {
-                            "id": 917591,
-                            "time": 15
+                            "senderId": 10000660,
+                            "state": "ENTERED",
+                            "targetId": 917665,
+                            "message": "SET_TO_ZERO"
                         }
-                    ],
-                    "deleteIds": [
-                        917589, // Counter for momma release
-                        917601, 917641, 917644, 917647, // corner platforms
-                        928130, 917511, 917514, // randomprime cutscene skips
-                        917703, 917704 // don't change layers in chozo ice temple
                     ]
                 },
                 "Ruined Courtyard": {
@@ -3935,14 +3897,23 @@
                             }
                         },
                         "1": {
-                            "shieldType": "Blue",
+                            "shieldType": "Disabled",
                             "blastShieldType": "None",
                             "destination": {
                                 "roomName": "Chapel of the Elders",
                                 "dockNum": 0
                             }
                         }
-                    }
+                    },
+                    "pickups": [
+                        {
+                            "type": "Nothing",
+                            "scanText": "Warp to Chapel of the Elders",
+                            "hudmemoText": "Warping...",
+                            "destination": "Phendrana Drifts:Chapel of the Elders",
+                            "position": [84.03, -521.25, 62]
+                        }
+                    ]
                 },
                 "Map Station": {
                     "pickups": [

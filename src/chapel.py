@@ -36,7 +36,11 @@ def id():
 def randrange(min_val, max_val):
     return min_val + rng.random()*(max_val-min_val)
 
+timer_id = id()
+
 data = {}
+
+data["timers"] = []
 data["waypoints"] = []
 data["platforms"] = []
 data["actorRotates"] = []
@@ -83,12 +87,12 @@ for sheegoth_id in SHEEGOTHS:
     data["editObjs"][sheegoth_id] = {
         "position": sheegoth_position,
         "speed": 2,
+        "vulnerability": "Blue",
     }
 
     data["platforms"].append(
         {
             "id": platform_id,
-            "active": False,
             "position": starting_position,
             "type": "Empty",
         }
@@ -106,7 +110,7 @@ for sheegoth_id in SHEEGOTHS:
             ],
             "timeScale": randrange(0.1, 5),
             "updateActive": True,
-            "updateOnCreation": True,
+            "updateOnCreation": False,
             "updateActors": True,
         }
     )
@@ -114,10 +118,22 @@ for sheegoth_id in SHEEGOTHS:
     data["addConnections"].extend(
         [
             {
+                "senderId": timer_id,
+                "state": "ZERO",
+                "targetId": platform_id,
+                "message": "STOP",
+            },
+            {
                 "senderId": sheegoth_id,
                 "state": "ACTIVE",
                 "targetId": platform_id,
-                "message": "ACTIVATE",
+                "message": "START",
+            },
+            {
+                "senderId": sheegoth_id,
+                "state": "ACTIVE",
+                "targetId": actor_rotate_id,
+                "message": "ACTION",
             },
             {
                 "senderId": platform_id,
@@ -154,6 +170,11 @@ data["timers"] = [
     {
         "id": 917591,
         "time": 15
+    },
+    {
+        "id": timer_id,
+        "time": 0.02,
+        "startImmediately": True,
     }
 ]
 
@@ -166,5 +187,15 @@ data["addConnections"].append(
     }
 )
 
+data["addConnections"].append(
+    {
+        "senderId": 10000660, # player in area
+        "state": "ENTERED",
+        "targetId": 917665, # lock door relay
+        "message": "SET_TO_ZERO",
+    }
+)
+
 import json
-print(json.dumps(data, indent=4))
+with open('chapel.json', 'w') as file:
+    file.write(json.dumps(data, indent=4))
