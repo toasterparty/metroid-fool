@@ -41,7 +41,7 @@
         "shootInGrapple": true,
         "patchWallcrawling": true,
         // TODO: Debug
-        "startingRoom": "Chozo Ruins:Reflecting Pool",
+        "startingRoom": "Impact Crater:Phazon Core",
         // "startingRoom": "Tallon Overworld:Landing Site",
         // "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
         "startingItems": {
@@ -443,16 +443,97 @@
                             ]
                         }
                     ],
+                    "deleteIds": [
+                        131300, 131078, 131089, 131083, 131301, 131084, 131085, 131086, 131087, // platforms
+                        131079 // no qol music
+                    ],
+                    "waypoints": [
+                        {
+                            "id": 10000675,
+                            "position": [-12.9, -69.6, 76.0],
+                            "speed": 3
+                        },
+                        {
+                            "id": 10000676,
+                            "position": [20.8, -70.2, 71.9],
+                            "speed": 3
+                        }
+                    ],
+                    "blocks": [
+                        {
+                            "id": 10000677,
+                            "active": false,
+                            "position": [46.5, -165.6, 55.7],
+                            "scale": [10, 10, 10],
+                            "texture": "Crater"
+                        }
+                    ],
+                    "editObjs": {
+                        // metroids
+                        "131184": { "speed": 0.333 },
+                        "131217": { "speed": 0.333 },
+                        "131276": { "speed": 0.333 },
+                        "131327": { "speed": 0.333 },
+                        // platform
+                        "131088": {
+                            "position": [-12.9, -69.6, 76.0]
+                        }
+                    },
+                    "pickups": [
+                        {
+                            "id": 10000678,
+                            "position": [-18.1783791, -84.1309967, 83.5],
+                            "type": "Nothing",
+                            "scanText": "Unlock Door",
+                            "hudmemoText": "Door Unlocked!",
+                            "respawn": true
+                        }
+                    ],
+                    "triggers": [
+                        {
+                            "position": [-2.4394, -58.1797, 17.7315],
+                            "scale": [40, 15, 15],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, -300, 100]
+                        }
+                    ],
                     "addConnections": [
+                        {
+                            "senderId": 131282,
+                            "state": "ENTERED",
+                            "targetId": 10000677,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000678,
+                            "state": "ARRIVED",
+                            "targetId": 10000677,
+                            "message": "DEACTIVATE"
+                        },
                         {
                             "senderId": 10000107,
                             "state": "ZERO",
                             "targetId": 10000108,
                             "message": "ACTION"
+                        },
+                        {
+                            "senderId": 10000675,
+                            "state": "ARRIVED",
+                            "targetId": 10000676,
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000676,
+                            "state": "ARRIVED",
+                            "targetId": 10000675,
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 131088,
+                            "state": "ACTIVE",
+                            "targetId": 10000675,
+                            "message": "FOLLOW"
                         }
-                    ],
-                    "deleteIds": [
-                        131079 // no qol music
                     ]
                 },
                 "Crater Missile Station": {
