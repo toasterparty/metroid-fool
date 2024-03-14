@@ -41,7 +41,7 @@
         "shootInGrapple": true,
         "patchWallcrawling": true,
         // TODO: Debug
-        "startingRoom": "Phendrana Drifts:Chozo Ice Temple",
+        "startingRoom": "Chozo Ruins:Reflecting Pool",
         // "startingRoom": "Tallon Overworld:Landing Site",
         // "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
         "startingItems": {
@@ -22666,7 +22666,76 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "blocks": [
+                        {
+                            "position": [759.5, -272.8, 75.6],
+                            "scale": [10, 1, 15],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [787.7, -272.8, 75.6],
+                            "scale": [10, 1, 15],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [773.1, -297.9, 69],
+                            "scale": [30, 80, 1],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [773.45, -308.4, 67.4],
+                            "scale": [18.88, 10, 20],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [783.4671, -299.0479, 75.4485],
+                            "scale": [1, 54, 30],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [763.2671, -299.0479, 75.4485],
+                            "scale": [1, 54, 30],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [779.5, -325.3, 87.3],
+                            "scale": [30, 1, 10],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [773.8, -272.8, 87.3],
+                            "scale": [19.8, 1, 10],
+                            "texture": "Sandstone"
+                        }
+                    ],
+                    "extraScans": [
+                        {
+                            "isRed": true,
+                            "position": [773.3962, -269.398, 71.6149],
+                            "text": "I was gonna make you do this really awful R-Jump to proceed but check out the funny shit that happens when               you morph along the left wall."
+                        }
+                    ],
+                    "editObjs": {
+                        // toads
+                        "3801337": {
+                            "position": [786.6, -285.0, 70],
+                            "rotation": [15, 0, 0],
+                            "vulnerability": "Phazon"
+                        },
+                        "3801184": {
+                            "position": [786.6, -285.0, 75],
+                            "rotation": [0, 0, 0],
+                            "vulnerability": "Phazon"
+                        },
+                        "3801156": {
+                            "position": [786.6, -285.0, 80],
+                            "rotation": [-15, 0, 0]
+                        }
+                    },
+                    "deleteIds": [
+                        3801310, 3801456 // scans
+                    ]
                 },
                 "Save Station 3": {
                     "doors": {
