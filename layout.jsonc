@@ -41,9 +41,9 @@
         "shootInGrapple": true,
         "patchWallcrawling": true,
         // TODO: Debug
-        "startingRoom": "Impact Crater:Phazon Infusion Chamber",
-        // "startingRoom": "Tallon Overworld:Landing Site",
-        // "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
+        // "startingRoom": "Impact Crater:Phazon Infusion Chamber",
+        "startingRoom": "Tallon Overworld:Landing Site",
+        "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
         "startingItems": {
             "powerBeam": true,
             "ice": false,
