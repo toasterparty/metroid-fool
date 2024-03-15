@@ -1,0 +1,43 @@
+{
+    "bombSlots": [
+        {
+            "damageableTriggerId": SLOT_ID,
+            "activateSlotId": ACTIVATE_ID,
+            "position": [POSITION],
+            "rotation": [-90, 0, 0], // straight up
+            "releaseBallDelayS": 2
+        }
+    ],
+    "addConnections": [
+        { // Start a timer when the bomb slot is activated
+            "senderId": SLOT_ID,
+            "state": "DEAD",
+            "targetId": 10000692,
+            "message": "RESET_AND_START"
+        },
+        { // ...and enable the force trigger
+            "senderId": SLOT_ID,
+            "state": "DEAD",
+            "targetId": 10000700, // incorrect
+            "message": "ACTIVATE"
+        },
+        { // When the timer elapses, re-enable the bomb slot
+            "senderId": 10000692,
+            "state": "ZERO",
+            "targetId": ACTIVATE_ID,
+            "message": "SET_TO_ZERO"
+        },
+        { // ...and disable the force trigger
+            "senderId": 10000692,
+            "state": "ZERO",
+            "targetId": 10000701,
+            "message": "DEACTIVATE"
+        },
+        { // ...and disable the force trigger
+            "senderId": 10000692,
+            "state": "ZERO",
+            "targetId": 10000700,
+            "message": "DEACTIVATE"
+        }
+    ]
+}
