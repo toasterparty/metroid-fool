@@ -23,7 +23,6 @@
 
 - **Tower Chamber - Lifegiver**
 - Artifact Temple lore established. Hints are blocked by Glorgie's shield
-- **Frigate Crash Site - Energy Tank**
 - Water Pool morph track
 - **Water Pool - Missile Launcher**
 
@@ -35,7 +34,6 @@
 - Lake Tunnel no-jump heat run
 - **Lake Tunnel - Grapple Beam**
 - Hive Mecha+
-- **Hive Totem - Energy Tank**
 
 #### Bombs
 
@@ -80,7 +78,6 @@
 ### Labs
 
 - Ruined Courtyard puzzle (requires boost)
-- **Ruined Courtyard - E-Tank**
 - Wave + Supers required to enter labs
 - **Control Tower - Elder**
 - *Pike Access requires normal gravity to proceed*
