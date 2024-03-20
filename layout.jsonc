@@ -41,7 +41,7 @@
         "shootInGrapple": true,
         "patchWallcrawling": true,
         // TODO: Debug
-        "startingRoom": "Impact Crater:Subchamber Two",
+        "startingRoom": "Impact Crater:Subchamber One",
         // "startingRoom": "Tallon Overworld:Landing Site",
         // "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
         "startingItems": {
@@ -668,7 +668,10 @@
                 },
                 "Phazon Infusion Chamber": {
                     "layers": {
-                        // "1": false, // TODO: Debug
+                        // uncomment for debug
+                        // "1": false,
+                        // "2": false
+
                         "2": false
                     },
                     "distanceFogs": [
@@ -704,9 +707,32 @@
                 },
                 "Subchamber One": {
                     "layers": {
-                        // "1": false, // TODO: Debug
+                        // uncomment for debug
+                        // "1": false,
+                        // "2": true
+
                         "2": false
                     },
+                    "platforms": [
+                        {
+                            "layer": 2,
+                            "position": [-24, -366, 27]
+                        }
+                    ],
+                    "lockOnPoints": [
+                        {
+                            "layer": 2,
+                            "position": [-19, -345.5, 37]
+                        },
+                        {
+                            "layer": 2,
+                            "isGrapple": true,
+                            "position": [46, -359, 52]
+                        }
+                    ],
+                    "blocks": [
+
+                    ],
                     "timers": [
                         {
                             "id": 10000645,
@@ -741,11 +767,7 @@
                             "id": 10000077,
                             "layer": 2,
                             "position": [8.1286, -363.8917, 22.2105],
-                            "scale": [120, 50, 100],
-
-                            // TODO: debug
-                            "flags": 8193, // Detect Player | Apply Force
-                            "force": [0, 0, 200]
+                            "scale": [120, 50, 100]
                         }
                     ],
                     "addConnections": [
@@ -765,11 +787,11 @@
                 },
                 "Subchamber Two": {
                     "layers": {
-                        // TODO: uncomment for debug
-                        "1": false,
-                        "3": true
+                        // uncomment for debug
+                        // "1": false,
+                        // "3": true
 
-                        // "3": false
+                        "3": false
                     },
                     "timers": [
                         {
@@ -863,11 +885,11 @@
                 },
                 "Subchamber Three": {
                     "layers": {
-                        // TODO: uncomment for debug
-                        "1": false,
-                        "2": true
+                        // uncomment for debug
+                        // "1": false,
+                        // "2": true
 
-                        // "2": false
+                        "2": false
                     },
                     "timers": [
                         {
@@ -954,11 +976,11 @@
                 },
                 "Subchamber Four": {
                     "layers": {
-                        // TODO: uncomment for debug
-                        "1": false,
-                        "2": true
+                        // uncomment for debug
+                        // "1": false,
+                        // "2": true
 
-                        // "2": false
+                        "2": false
                     },
                     "timers": [
                         {
@@ -1161,9 +1183,8 @@
                 },
                 "Subchamber Five": {
                     "layers": {
-                        // TODO: uncomment for debug, delete when done
-                        // "1": true, // cutscene
-
+                        // uncomment for debug, delete when done
+                        "1": true, // cutscene
                         "2": false // escape sequence
                     },
                     "distanceFogs": [
@@ -1657,7 +1678,7 @@
                         }
                     ],
                     "deleteIds": [
-                        // TODO: commented for debug
+                        // TODO: comment for debug
                         // 655396 // disable cutscene skip
                     ]
                 },
@@ -11201,6 +11222,7 @@
                     "layers": {
                         // "3": false, // TODO: remove this debug
                         // "4": true,  // TODO: remove this debug
+
                         "6": false, // Unused puffers
                         "7": false, // Morph Ball Escape Puzzle
                         "8": true // Grapple/Dash Points
