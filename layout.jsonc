@@ -41,7 +41,7 @@
         "shootInGrapple": true,
         "patchWallcrawling": true,
         // TODO: Debug
-        "startingRoom": "Impact Crater:Subchamber Three",
+        "startingRoom": "Impact Crater:Subchamber Two",
         // "startingRoom": "Tallon Overworld:Landing Site",
         // "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
         "startingItems": {
@@ -765,8 +765,11 @@
                 },
                 "Subchamber Two": {
                     "layers": {
-                        // "1": false, // TODO: Debug
-                        "3": false
+                        // TODO: uncomment for debug
+                        "1": false,
+                        "3": true
+
+                        // "3": false
                     },
                     "timers": [
                         {
@@ -801,11 +804,46 @@
                             "id": 10000076,
                             "layer": 3,
                             "position": [-24.9486, -331.137, -27.1033],
-                            "scale": [50, 120, 100],
-
-                            // TODO: debug
-                            "flags": 8193, // Detect Player | Apply Force
-                            "force": [0, 0, 200]
+                            "scale": [50, 120, 100]
+                        }
+                    ],
+                    "blocks": [
+                        {
+                            "layer": 3,
+                            "position": [-41.8, -353.9, -16.3],
+                            "scale": [5, 15, 1],
+                            "texture": "Crater"
+                        },
+                        {
+                            "layer": 3,
+                            "position": [-8.3, -353.5, -10.4],
+                            "scale": [8, 30, 1],
+                            "texture": "Crater"
+                        },
+                        {
+                            "layer": 3,
+                            "position": [-8.3, -377, -2],
+                            "scale": [8, 10, 0.5],
+                            "texture": "Crater"
+                        }
+                    ],
+                    "platforms": [
+                        {
+                            "layer": 3,
+                            "type": "Snow",
+                            "position": [-11.18, -283.5, -32.1]
+                        },
+                        {
+                            "layer": 3,
+                            "type": "Metal",
+                            "position": [-8.28, -333.5, -24.9],
+                            "rotation": [-25, 0, 0]
+                        }
+                    ],
+                    "lockOnPoints": [
+                        {
+                            "layer": 3,
+                            "position": [-46.7, -290, -28]
                         }
                     ],
                     "addConnections": [
