@@ -41,7 +41,7 @@
         "shootInGrapple": true,
         "patchWallcrawling": true,
         // TODO: Debug
-        "startingRoom": "Impact Crater:Subchamber Four",
+        "startingRoom": "Impact Crater:Subchamber Three",
         // "startingRoom": "Tallon Overworld:Landing Site",
         // "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
         "startingItems": {
@@ -825,8 +825,11 @@
                 },
                 "Subchamber Three": {
                     "layers": {
-                        // "1": false, // TODO: Debug
-                        "2": false
+                        // TODO: uncomment for debug
+                        "1": false,
+                        "2": true
+
+                        // "2": false
                     },
                     "timers": [
                         {
@@ -861,11 +864,39 @@
                             "id": 10000075,
                             "layer": 2,
                             "position": [-24.3403, -275.2496, -73.7856],
-                            "scale": [50, 120, 100],
-
-                            // TODO: debug
-                            "flags": 8193, // Detect Player | Apply Force
-                            "force": [0, 0, 200]
+                            "scale": [50, 120, 100]
+                        }
+                    ],
+                    "platforms": [
+                        {
+                            "layer": 2,
+                            "type": "Snow",
+                            "position": [-36.3, -209.9, -81.5]
+                        },
+                        {
+                            "layer": 2,
+                            "type": "Snow",
+                            "position": [-14, -208.4, -74]
+                        },
+                        {
+                            "layer": 2,
+                            "type": "Snow",
+                            "position": [-32, -242.7, -72.3]
+                        },
+                        {
+                            "layer": 2,
+                            "type": "Snow",
+                            "position": [-9.74, -259.2, -65.5]
+                        },
+                        {
+                            "layer": 2,
+                            "type": "Snow",
+                            "position": [-25.8, -284.6, -59]
+                        },
+                        {
+                            "layer": 2,
+                            "type": "Snow",
+                            "position": [-33.4, -303.3, -51]
                         }
                     ],
                     "addConnections": [
@@ -1691,13 +1722,6 @@
                     ],
                     "pickups": [
                         {
-                            "id": 10000100,
-                            "type": "Boost Ball",
-                            "hudmemoText": "",
-                            "position": [47.79, -248.01, -375],
-                            "maxIncrease": -1
-                        },
-                        {
                             "id": 10000101,
                             "type": "Phazon Suit",
                             "hudmemoText": "",
@@ -1883,12 +1907,6 @@
                         {
                             "senderId": 10000088, // timer
                             "state": "ZERO",
-                            "targetId": 10000100, // anti-boost ball
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 10000088, // timer
-                            "state": "ZERO",
                             "targetId": 10000101, // anti-phazon suit
                             "message": "DEACTIVATE"
                         },
@@ -1986,12 +2004,6 @@
                             "state": "ZERO",
                             "targetId": 721370, // Spawn Point
                             "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 721132, // Relay-start of cinema
-                            "state": "ZERO",
-                            "targetId": 10000100, // anti-boost ball
-                            "message": "ACTIVATE"
                         },
                         {
                             "senderId": 721132, // Relay-start of cinema
@@ -16786,6 +16798,14 @@
                             "type": "Nothing",
                             "position": [300, 0, -500],
                             "destination": "End Cinema:End Cinema"
+                        },
+                        {
+                            "id": 10000100,
+                            "type": "Boost Ball",
+                            "hudmemoText": "",
+                            "position": [-373.2762, 47.0785, -38.9564],
+                            "maxIncrease": -1,
+                            "respawn": true
                         }
                     ],
                     "blocks": [
@@ -16949,6 +16969,9 @@
                         },
                         /* Move credits pickup to Layer 24 */
                         "11000082": {
+                            "layer": 24
+                        },
+                        "10000100": { // anti-boost
                             "layer": 24
                         },
                         /* Move forcefield to Layer 25 */
