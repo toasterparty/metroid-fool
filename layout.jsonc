@@ -41,7 +41,7 @@
         "shootInGrapple": true,
         "patchWallcrawling": true,
         // TODO: Debug
-        "startingRoom": "Impact Crater:Phazon Infusion Chamber",
+        "startingRoom": "Impact Crater:Subchamber Five",
         // "startingRoom": "Tallon Overworld:Landing Site",
         // "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
         "startingItems": {
@@ -1469,7 +1469,7 @@
                         }
                     ],
                     "deleteIds": [
-                        // TODO: debug
+                        // TODO: commented for debug
                         // 655396 // disable cutscene skip
                     ]
                 },
@@ -1636,6 +1636,18 @@
                             "scale": [5, 5, 17],
                             "flags": 8193, // Detect Player | Apply Force
                             "force": [0, 0, 1800]
+                        },
+                        // kaizo block
+                        {
+                            "id": 10000716,
+                            "position": [52.6, -276.8, -341.9],
+                            "scale": [5, 5, 1]
+                        },
+                        // sneaky platform
+                        {
+                            "id": 10000720,
+                            "position": [22, -268.35, -317.5],
+                            "scale": [14, 14, 10]
                         }
                     ],
                     "liquids": [
@@ -1670,9 +1682,30 @@
                             "id": 10000089,
                             "active": false,
                             "position": [52.0, -298.0, -373.0], // you cannot move this
-                            "scale": [3.5, 3.5, 6.5] // or rescale
-                        }
+                            "scale": [3.5, 3.5, 6.5], // or rescale
+                            "texture": "Crater"
+                        },
                         /* escape platforming */
+                        // kaizo block
+                        {
+                            "id": 10000717,
+                            "active": false,
+                            "position": [52.6, -276.8, -341.9],
+                            "scale": [5, 5, 0.5],
+                            "texture": "Crater"
+                        }
+                    ],
+                    "waypoints": [
+                        {
+                            "id": 10000718,
+                            "position": [22, -268.35, -317.5]
+                        },
+                        {
+                            "id": 10000719,
+                            "active": false,
+                            "position": [16, -275, -327],
+                            "speed": 15
+                        }
                     ],
                     "platforms": [
                         /* escape platforming */
@@ -2029,6 +2062,44 @@
                             "state": "ZERO",
                             "targetId": 10000690,
                             "message": "DEACTIVATE"
+                        },
+                        // kaizo block //
+                        {
+                            "senderId": 10000716, // trigger
+                            "state": "ENTERED",
+                            "targetId": 10000717, // block
+                            "message": "ACTIVATE"
+                        },
+                        // Sneaky Platform //
+                        {
+                            "senderId": 10000686, // platform
+                            "state": "ACTIVE",
+                            "targetId": 10000718, // waypoint
+                            "message": "FOLLOW"
+                        },
+                        {
+                            "senderId": 10000718, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000719, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000719, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000718, // waypoint
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 10000718, // waypoint
+                            "state": "ARRIVED",
+                            "targetId": 10000719, // waypoint
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000720, // trigger
+                            "state": "ENTERED",
+                            "targetId": 10000719, // waypoint
+                            "message": "ACTIVATE"
                         }
                     ],
                     "deleteIds": [
