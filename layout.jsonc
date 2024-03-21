@@ -41,36 +41,63 @@
         "shootInGrapple": true,
         "patchWallcrawling": true,
         // TODO: Debug
-        "startingRoom": "Impact Crater:Subchamber Four",
-        // "startingRoom": "Tallon Overworld:Landing Site",
-        // "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
+        "startingRoom": "Magmoor Caverns:Geothermal Core",
         "startingItems": {
             "powerBeam": true,
             "ice": false,
-            "wave": false,
+            "wave": true,
             "plasma": false,
-            "missiles": 0,
+            "missiles": 50,
             "scanVisor": true,
-            "bombs": false,
-            "powerBombs": 0,
+            "bombs": true,
+            "powerBombs": 8,
             "flamethrower": false,
             "thermalVisor": false,
-            "charge": false,
-            "superMissile": false,
-            "grapple": false,
+            "charge": true,
+            "superMissile": true,
+            "grapple": true,
             "xray": false,
             "iceSpreader": false,
             "spaceJump": false,
-            "morphBall": false,
+            "morphBall": true,
             "combatVisor": true,
-            "boostBall": false,
-            "spiderBall": false,
+            "boostBall": true,
+            "spiderBall": true,
             "gravitySuit": false,
-            "variaSuit": false,
+            "variaSuit": true,
             "phazonSuit": false,
-            "energyTanks": 0,
+            "energyTanks": 4,
             "wavebuster": false
         },
+        // "startingRoom": "Tallon Overworld:Landing Site",
+        // "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
+        // "startingItems": {
+        //     "powerBeam": true,
+        //     "ice": false,
+        //     "wave": false,
+        //     "plasma": false,
+        //     "missiles": 0,
+        //     "scanVisor": true,
+        //     "bombs": false,
+        //     "powerBombs": 0,
+        //     "flamethrower": false,
+        //     "thermalVisor": false,
+        //     "charge": false,
+        //     "superMissile": false,
+        //     "grapple": false,
+        //     "xray": false,
+        //     "iceSpreader": false,
+        //     "spaceJump": false,
+        //     "morphBall": false,
+        //     "combatVisor": true,
+        //     "boostBall": false,
+        //     "spiderBall": false,
+        //     "gravitySuit": false,
+        //     "variaSuit": false,
+        //     "phazonSuit": false,
+        //     "energyTanks": 0,
+        //     "wavebuster": false
+        // },
         "itemMaxCapacity": {
             "Power Bomb": 99,
             "Missile": 999
@@ -11226,12 +11253,27 @@
                 "Geothermal Core": {
                     "superheated": true,
                     "layers": {
-                        // "3": false, // TODO: remove this debug
-                        // "4": true,  // TODO: remove this debug
+                        // TIP: In Visual Studio Code, you can press "CTRL + SHIFT + C" to comment/uncomment multiple lines at once
 
-                        "6": false, // Unused puffers
-                        "7": false, // Morph Ball Escape Puzzle
-                        "8": true // Grapple/Dash Points
+                        /* These layers never change */
+                        "1": true,  // lava hamburgers
+                        "2": true,  // puzzle enemies
+                        "6": false, // Unused puffers (unless you want them)
+
+                        /* Uncomment this section to test 1st pass (a.k.a final release) */
+                        "3": true,  // Unsolved Puzzle
+                        "4": false, // Solved Puzzle
+                        "7": false  // Morph Ball Escape Puzzle
+
+                        /* Uncomment this section to test 2nd pass */
+                        // "3": false, // Unsolved Puzzle
+                        // "4": true,  // Solved Puzzle
+                        // "7": false  // Morph Ball Escape Puzzle
+
+                        /* Uncomment this section to test 3rd pass */
+                        // "3": false, // Unsolved Puzzle
+                        // "4": true,  // Solved Puzzle
+                        // "7": true   // Morph Ball Escape Puzzle
                     },
                     "doors": {
                         "0": {
@@ -11295,13 +11337,11 @@
                     ],
                     "lockOnPoints": [
                         {
-                            "id1": 10000134,
-                            "id2": 10000135,
+                            "layer": 3, // "Puzzle Unsolved"
                             "position": [413.4, -835.4, 82]
                         },
                         {
-                            "id1": 10000136,
-                            "id2": 10000137,
+                            "layer": 3, // "Puzzle Unsolved"
                             "position": [368.9, -836.9, 82],
                             "isGrapple": true
                         }
@@ -11378,6 +11418,7 @@
                     "platforms": [
                         {
                             "id": 10000128,
+                            "layer": 3, // "Puzzle Unsolved"
                             "position": [409, -844, 61]
                         },
                         /* EXAMPLE CONTRAPTION */
@@ -11436,17 +11477,16 @@
                         /* END EXAMPLE */
                     ],
                     "editObjs": {
-                        // Grapple/Dash Points
-                        "10000134": {"layer": 8},
-                        "10000135": {"layer": 8},
-                        "10000136": {"layer": 8},
-                        "10000137": {"layer": 8},
                         // Unlock Floor Pickup
-                        "10000132": {"layer": 7}
+                        "10000132": {"layer": 7},
+
+                        // move some spawn points for testing
+                        "1310735":  {"layer": 3},
+                        "1311291":  {"layer": 4}
                     },
                     "addConnections": [
 
-                        /* 1st Pass */
+                        /* 1st Pass (No Spider) */
 
                         // Platform is just straight up a trap
                         {
@@ -11462,6 +11502,24 @@
                             "targetId": 10000127,
                             "message": "ACTIVATE"
                         },
+                        // Wave Beam changes the layer to remember the roof raised, not the bomb slot
+                        {
+                            "senderId": 10000127, // wave beam
+                            "state": "ARRIVED",
+                            "targetId": 1311297, // puzzle unsolved layer changer
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000127, // wave beam
+                            "state": "ARRIVED",
+                            "targetId": 1311296, // puzzle solved layer changer
+                            "message": "INCREMENT"
+                        },
+
+                        /* 2nd Pass (Spider and PBs) */
+
+                        /* 3rd Pass (Just trying to leave) */
+
                         // Key unlocks floor
                         {
                             "senderId": 10000132,
@@ -11502,8 +11560,6 @@
                             "message": "PLAY"
                         },
 
-                        /* 2nd Pass */
-
                         /* EXAMPLE CONTRAPTION */
                         // The trigger activates the platform
                         {
@@ -11542,6 +11598,21 @@
                         }
                         /* END EXAMPLE */
                     ],
+                    "removeConnections": [
+                        /* Don't change layer when the puzzle is solved (wave beam pickup instead) */
+                        {
+                            "senderId": 1311295, // puzzle solved relay
+                            "state": "ZERO",
+                            "targetId": 1311297, // puzzle unsolved layer changer
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 1311295, // puzzle solved relay
+                            "state": "ZERO",
+                            "targetId": 1311296, // puzzle solved layer changer
+                            "message": "INCREMENT"
+                        }
+                    ],
                     "deleteIds": [
                         1310750, // Remove randomprime cutscene skip
                         1310783, // remove randomprime music qol
@@ -11556,6 +11627,16 @@
                             "type": "Plasma Beam"
                         }
                     ],
+                    "timers": [
+                        {
+                            "id": 10000726,
+                            "time": 1.5
+                        },
+                        {
+                            "id": 10000727,
+                            "time": 0.1
+                        }
+                    ],
                     "specialFunctions": [
                         {
                             "id": 10000133,
@@ -11568,6 +11649,10 @@
                             "type": "ScriptLayerController",
                             "layerChangeRoomId": 1498886242,
                             "layerChangeLayerId": 8
+                        },
+                        {
+                            "id": 10000725,
+                            "type": "SaveStation"
                         }
                     ],
                     "addConnections": [
@@ -11590,6 +11675,32 @@
                             "state": "ARRIVED",
                             "targetId": 1376257,
                             "message": "SET_TO_ZERO"
+                        },
+                        // save the game
+                        {
+                            "senderId": 1376287,
+                            "state": "ARRIVED",
+                            "targetId": 10000726,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000726,
+                            "state": "ZERO",
+                            "targetId": 10000725,
+                            "message": "ACTION"
+                        },
+                        // try again if they refuse
+                        {
+                            "senderId": 10000725,
+                            "state": "ZERO",
+                            "targetId": 10000727,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000727,
+                            "state": "ZERO",
+                            "targetId": 10000725,
+                            "message": "ACTION"
                         }
                     ]
                 },
