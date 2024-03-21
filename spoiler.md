@@ -167,7 +167,7 @@
 
 ## Missile Expansions
 
-- The highest possible Missile capacity is 170. In general, the harder a Missile is to acquire, the more capacity it provides.
+- The highest possible Missile capacity is 172. In general, the harder a Missile is to acquire, the more capacity it provides.
 - No one will actually finish with this missile count because of Root Cave
 
 ## Energy Tanks
