@@ -521,7 +521,7 @@
                             "position": [-2.4394, -58.1797, 17.7315],
                             "scale": [40, 15, 15],
                             "flags": 8193, // Detect Player | Apply Force
-                            "force": [0, -300, 100]
+                            "force": [0, -600, -100]
                         }
                     ],
                     "addConnections": [
@@ -4511,8 +4511,8 @@
                     ],
                     "lockOnPoints": [
                         {
-                            "position": [-167.6476, -326.6647, 18.9345],
-                            "noLock": true
+                            "active2": false,
+                            "position": [-167.6476, -326.6647, 18.9345]
                         }
                     ],
                     "playerHints": [
@@ -11644,12 +11644,12 @@
                             "layerChangeRoomId": 1498886242,
                             "layerChangeLayerId": 7
                         },
-                        {
-                            "id": 10000138,
-                            "type": "ScriptLayerController",
-                            "layerChangeRoomId": 1498886242,
-                            "layerChangeLayerId": 8
-                        },
+                        // {
+                        //     "id": 10000138,
+                        //     "type": "ScriptLayerController",
+                        //     "layerChangeRoomId": 1498886242,
+                        //     "layerChangeLayerId": 2
+                        // },
                         {
                             "id": 10000725,
                             "type": "SaveStation"
@@ -11663,12 +11663,12 @@
                             "targetId": 10000133,
                             "message": "INCREMENT"
                         },
-                        {
-                            "senderId": 1376287,
-                            "state": "ARRIVED",
-                            "targetId": 10000138,
-                            "message": "DECREMENT"
-                        },
+                        // {
+                        //     "senderId": 1376287,
+                        //     "state": "ARRIVED",
+                        //     "targetId": 10000138,
+                        //     "message": "DECREMENT"
+                        // },
                         // Reload Geothermal Core
                         {
                             "senderId": 1376287,
@@ -19333,15 +19333,11 @@
                         },
                         // Half-pipe steps blockers
                         {
-                            "position": [110.5, 39.3, 9.8],
+                            "position": [110.5, 39.3, 8.85],
                             "scale": [11, 0.5, 0.5]
                         },
                         {
-                            "position": [110.5, 39.3, 7.55],
-                            "scale": [11, 0.5, 0.5]
-                        },
-                        {
-                            "position": [110.5, 39.3, 5.3],
+                            "position": [110.5, 39.3, 6.5],
                             "scale": [11, 0.5, 0.5]
                         },
                         // Upper steps blockers
@@ -19477,6 +19473,27 @@
                             "id": 10000035,
                             "time": 1.1,
                             "startImmediately": true
+                        },
+                        // Increase delay before beetles jump out
+                        {
+                            "id": 131395,
+                            "time": 1
+                        },
+                        {
+                            "id": 131405,
+                            "time": 1
+                        },
+                        {
+                            "id": 131133,
+                            "time": 1
+                        },
+                        {
+                            "id": 131400,
+                            "time": 1
+                        },
+                        {
+                            "id": 131110,
+                            "time": 1
                         }
                     ],
                     "addConnections": [
