@@ -41,7 +41,7 @@
         "shootInGrapple": true,
         "patchWallcrawling": true,
         // TODO: Debug
-        "startingRoom": "Impact Crater:Subchamber One",
+        "startingRoom": "Impact Crater:Subchamber Four",
         // "startingRoom": "Tallon Overworld:Landing Site",
         // "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
         "startingItems": {
@@ -1132,6 +1132,12 @@
                         {
                             "id": 10000715,
                             "type": "PlayerInAreaRelay"
+                        },
+                        {
+                            "id": 10000722,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3309590160, // Subchamber Five
+                            "layerChangeLayerId": 2 // escape sequence
                         }
                     ],
                     "distanceFogs": [
@@ -1170,8 +1176,8 @@
                         {
                             "senderId": 10000715,
                             "state": "ENTERED",
-                            "targetId": 589829, // dock (backtrack)
-                            "message": "DEACTIVATE"
+                            "targetId": 10000722, // subchamber five escape layer with repo
+                            "message": "DECREMENT"
                         },
                         {
                             "senderId": 10000715,
@@ -1184,7 +1190,7 @@
                 "Subchamber Five": {
                     "layers": {
                         // uncomment for debug, delete when done
-                        "1": true, // cutscene
+                        // "1": true, // cutscene
                         "2": false // escape sequence
                     },
                     "distanceFogs": [
@@ -1694,7 +1700,7 @@
                         {
                             "id": 10000061,
                             "type": "EscapeSequence",
-                            "unknown2": 600 // Time (Seconds)
+                            "unknown2": 300 // Time (Seconds)
                         },
                         {
                             "id": 10000066,
