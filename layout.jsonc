@@ -41,7 +41,7 @@
         "shootInGrapple": true,
         "patchWallcrawling": true,
         // TODO: Debug
-        "startingRoom": "Chozo Ruins:Watery Hall",
+        "startingRoom": "Impact Crater:Subchamber Five",
         "startingItems": {
             "powerBeam": true,
             "ice": false,
@@ -1852,6 +1852,10 @@
                         {
                             "id": 10000689,
                             "time": 4.5
+                        },
+                        {
+                            "id": 10000729,
+                            "time": 0.1
                         }
                     ],
                     "streamedAudios": [
@@ -2134,6 +2138,19 @@
                         {
                             "senderId": 721283, // End of cutscene timer
                             "state": "ZERO",
+                            "targetId": 10000087, // save station
+                            "message": "ACTION"
+                        },
+                        /* ...and really force them to save */
+                        {
+                            "senderId": 10000087, // save station
+                            "state": "ZERO", // "No"
+                            "targetId": 10000729, // timer
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000729, // timer
+                            "state": "ZERO", // "No"
                             "targetId": 10000087, // save station
                             "message": "ACTION"
                         },
