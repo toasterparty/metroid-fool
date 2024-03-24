@@ -116,6 +116,7 @@
 
 ### Late Mines
 
+- **Missile Station Mines - Thermal Visor**
 - Omega Pirate+
 - **Elite Quarters - Space Jump**
 - **Phazon Mining Tunnel - Newborn**
@@ -158,7 +159,6 @@
 ### Bosses
 
 - Player can enter Impact Crater freely once they posses no artifacts
-- **Phazon Core - Thermal Visor** (optional)
 - Exo
 - Essence+
 - Crater Escape Sequence

@@ -41,7 +41,7 @@
         "shootInGrapple": true,
         "patchWallcrawling": true,
         // TODO: Debug
-        "startingRoom": "Chozo Ruins:Main Plaza",
+        "startingRoom": "Tallon Overworld:Life Grove",
         "startingItems": {
             "powerBeam": true,
             "ice": false,
@@ -18980,15 +18980,8 @@
                             "startImmediately": true
                         },
                         {
-                            "id": 2752985, // Timer - Delay Extend Pillar Cinematic
-                            "time": 4
-                        }
-                    ],
-                    "hudmemos": [
-                        {
-                            "id": 10000571,
-                            "messageTime": 12,
-                            "text": "&just=center;Wow! You unclogged the entire region."
+                            "id": 2752979, // Timer - Delay Extend Pillar Cinematic
+                            "time": 37
                         }
                     ],
                     "blocks": [
@@ -19013,9 +19006,25 @@
                         "2752722": {"speed": 1.6},
                         "2752729": {"speed": 2.0},
                         /* Slower Water Drain */
-                        "10000561": { "speed": 9 },
-                        "10000562": { "speed": 9 }
+                        "10000561": { "speed": 8 },
+                        "10000562": { "speed": 8 },
+                        /* Plug */
+                        "2752974": {
+                            "position": [19.0213, 28.9158, 6.5055]
+                        }
                     },
+                    "extraScans": [
+                        {
+                            "position": [17.6406, -49.2814, 3.3901],
+                            "isRed": true,
+                            "text": "There is too much water for the post to extend. Readings indicate a drain is nearby, perhaps you should check it for clogging."
+                        },
+                        {
+                            "position": [19.0213, 28.9158, 7.4055],
+                            "isRed": true,
+                            "text": "The drain appears to be blocked."
+                        }
+                    ],
                     "liquids": [
                         // up position
                         {
@@ -19037,15 +19046,9 @@
                     "addConnections": [
                         /* Drain Water */
                         {
-                            "senderId": 2752984,
+                            "senderId": 2752975,
                             "state": "ZERO",
                             "targetId": 10000563,
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 2752985, // timer
-                            "state": "ZERO",
-                            "targetId": 10000571, // hudmemo
                             "message": "SET_TO_ZERO"
                         },
                         {
@@ -19055,7 +19058,7 @@
                             "message": "ACTIVATE"
                         },
                         {
-                            "senderId": 2752984,
+                            "senderId": 2752975,
                             "state": "ZERO",
                             "targetId": 10000561,
                             "message": "NEXT"
