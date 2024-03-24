@@ -41,7 +41,7 @@
         "shootInGrapple": true,
         "patchWallcrawling": true,
         // TODO: Debug
-        "startingRoom": "Tallon Overworld:Life Grove",
+        "startingRoom": "Phazon Mines:Omega Research",
         "startingItems": {
             "powerBeam": true,
             "ice": false,
@@ -12828,6 +12828,8 @@
                         }
                     ],
                     "deleteIds": [
+                        1312258, 1311622, 1311189, 1311633, // barrier
+                        1311627, 1311624, 1311626, // barrier scan
                         1311692, 1312273, 1311599 // ez platform
                     ]
                 },
