@@ -41,7 +41,7 @@
         "shootInGrapple": true,
         "patchWallcrawling": true,
         // TODO: Debug
-        "startingRoom": "Impact Crater:Subchamber Five",
+        "startingRoom": "Chozo Ruins:Main Plaza",
         "startingItems": {
             "powerBeam": true,
             "ice": false,
@@ -124,7 +124,7 @@
         "mainMenuMessage": "Metroid Fool v0.7",
         "creditsString": "&push;&font=C29C51F1;&main-color=#89D6FF;Major Item Locations&pop;\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Wave Beam&pop;\nPhazon Mines - Metroid Quarantine A\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Ice Beam&pop;\nPhazon Mines - Ventilation Shaft\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Plasma Beam&pop;\nPhazon Mines - Central Dynamo\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Missile Launcher&pop;\nTallon Overworld - Transport Tunnel B\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Grapple Beam&pop;\nTallon Overworld - Landing Site\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Thermal Visor&pop;\nPhendrana Drifts - Ice Ruins East\n\n&push;&font=C29C51F1;&main-color=#33ffd6;X-Ray Visor&pop;\nMagmoor Caverns - Warrior Shrine\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Space Jump Boots&pop;\nTallon Overworld - Frigate Crash Site\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Morph Ball&pop;\nChozo Ruins - Ruined Gallery\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Morph Ball Bomb&pop;\nChozo Ruins - Dynamo\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Boost Ball&pop;\nChozo Ruins - Watery Hall\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Spider Ball&pop;\nChozo Ruins - Ruined Gallery\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Power Bomb&pop;\nMagmoor Caverns - Fiery Shores\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Varia Suit&pop;\nChozo Ruins - Hive Totem\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Gravity Suit&pop;\nChozo Ruins - Ruined Shrine\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Phazon Suit&pop;\nTallon Overworld - Hydro Access Tunnel\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Super Missile&pop;\nPhazon Mines - Phazon Processing Center\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Wavebuster&pop;\nChozo Ruins - Main Plaza\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Ice Spreader&pop;\nChozo Ruins - Tower of Light\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Flamethrower&pop;\nChozo Ruins - Ruined Nursery\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Elder&pop;\nPhendrana Drifts - Research Lab Aether\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Lifegiver&pop;\nMagmoor Caverns - Magmoor Workstation\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Strength&pop;\nChozo Ruins - Crossway\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Truth&pop;\nPhendrana Drifts - Control Tower\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Warrior&pop;\nPhazon Mines - Main Quarry\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Wild&pop;\nPhendrana Drifts - Quarantine Cave",
         "bossSizes": {
-            "flaahgra": 1.15,
+            "flaahgra": 1.08,
             "omegaPirate": 0.666,
             "parasiteQueen": 2.7,
             "essence": 0.2,
@@ -156,6 +156,11 @@
         "iceBreakJumpCount": 20
     },
     "strg": {
+        "2094006101": [
+            "Morphology: Thardus\nOne angry motherfuggin rock.",
+            "Thardus",
+            "Analysis indicates this creature is not affected by conventional weaponry. Seek an alternate combat strategy."
+        ],
         "1842069621": [
             "Gravity Core Access"
         ],
@@ -2668,6 +2673,10 @@
                             "type": "ScriptLayerController",
                             "layerChangeRoomId": 3408755424, // This room
                             "layerChangeLayerId": 4
+                        },
+                        {
+                            "id": 10000732,
+                            "type": "SaveStation"
                         }
                     ],
                     "timers": [
@@ -2681,6 +2690,11 @@
                             "layer": 5,
                             "time": 0.1,
                             "startImmediately": true
+                        },
+                        // Queue the save request with a timer to make it easier on the eyes
+                        {
+                            "id": 10000731,
+                            "time": 0.5
                         }
                     ],
                     "waypoints": [
@@ -2704,6 +2718,16 @@
                             "id": 524717,
                             "pause": 9999999999,
                             "position": [-239.8068, -201.2301, 44.0458]
+                        }
+                    ],
+                    "extraScans": [
+                        {
+                            "id": 10000730,
+                            "position": [-232.3037, -99.8028, 11.277],
+                            "rotation": 90,
+                            "text": "Save Game",
+                            "combatVisible": true,
+                            "isRed": true
                         }
                     ],
                     "editObjs": {
@@ -2778,6 +2802,20 @@
                             "state": "ZERO",
                             "targetId": 12000053,
                             "message": "DEACTIVATE"
+                        },
+                        // When the player scans the point, start the timer
+                        {
+                            "senderId": 10000730,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000731,
+                            "message": "RESET_AND_START"
+                        },
+                        // When the timer elapses, initiate a save
+                        {
+                            "senderId": 10000731,
+                            "state": "ZERO",
+                            "targetId": 10000732,
+                            "message": "ACTION"
                         }
                     ]
                 },
@@ -2826,7 +2864,24 @@
                         "599970": { "vulnerability": "Super Missile" },
                         "599969": { "vulnerability": "Super Missile" },
                         "600082": { "vulnerability": "Super Missile" },
-                        "599941": { "vulnerability": "Super Missile" }
+                        "599941": { "vulnerability": "Super Missile" },
+                        // Sheegoth
+                        "600025": {
+                            "vulnerability": "Blue",
+                            "scale": [0.8, 0.8, 0.8],
+                            "speed": 0.8,
+                            "health": 0.5
+                        },
+                        "589945": {
+                            "vulnerability": "Blue",
+                            "speed": 0.8,
+                            "scale": [0.9, 0.9, 0.9]
+                        },
+                        "589992": {
+                            "vulnerability": "Blue",
+                            "speed": 0.8,
+                            "scale": [0.9, 0.9, 0.9]
+                        }
                     },
                     "liquids": [
                         {
@@ -2893,15 +2948,30 @@
                         {
                             "id": 10000280,
                             "position": [108.8, -197.4, 6],
-                            "speed": 1.5
+                            "speed": 2.5
                         },
                         {
                             "id": 10000281,
                             "active": false,
                             "position": [108.8, -197.4, 19.4],
-                            "speed": 1.5
+                            "speed": 2.5
                         }
                     ],
+                    "editObjs": {
+                        // move crates to show cool platform
+                        "655579": {
+                            "position": [108.9713, -198.8452, 7.3604],
+                            "rotation": [0, -24.4, 2.66]
+                        },
+                        "655576": {
+                            "position": [108.6962, -197.1425, 7.5556],
+                            "rotation": [-1.53, -5.29, 7.796]
+                        },
+                        "655582": {
+                            "position": [110.1609, -197.6483, 7.2147],
+                            "rotation": [-6.15, 19.52, 30.79]
+                        }
+                    },
                     "triggers": [
                         {
                             "id": 10000282,
@@ -4282,6 +4352,10 @@
                         {
                             "id": 10000298,
                             "time": 15
+                        },
+                        {
+                            "id": 983090,
+                            "time": 12
                         }
                     ],
                     "relays": [
@@ -4513,12 +4587,12 @@
                         /* Platform 3 */
                         {
                             "id": 1049092,
-                            "position": [-276.4, -334.8, 26.5],
+                            "position": [-278.4, -337.8, 19],
                             "speed": 8
                         },
                         {
                             "id": 10000318,
-                            "position": [-261.7, -349.8, 26.5],
+                            "position": [-261.7, -349.8, 24],
                             "speed": 8
                         },
                         /* Platform 4 */
@@ -4555,14 +4629,14 @@
                         {
                             "id": 10000317,
                             "rotation": [0, 180, 0],
-                            "timeScale": 2,
+                            "timeScale": 3.5,
                             "updateActive": true,
                             "updateOnCreation": false,
                             "updateActors": true
                         },
                         {
                             "id": 10000320,
-                            "rotation": [135, 180, 0],
+                            "rotation": [0, 0, 180],
                             "timeScale": 2,
                             "updateActive": true,
                             "updateOnCreation": false,
@@ -5076,6 +5150,23 @@
                             "position": [168.4, -632.7, 72.8],
                             "scale": [2.5, 30, 0.2],
                             "texture": "Sandstone"
+                        },
+
+                        {
+                            "position": [232.8, -676.7, 52.6],
+                            "scale": [2, 10, 0.6]
+                        },
+                        {
+                            "position": [228.6, -679.4, 55.7],
+                            "scale": [2, 10, 0.6]
+                        },
+                        {
+                            "position": [226.4, -681.6, 58.0],
+                            "scale": [5, 5, 0.6]
+                        },
+                        {
+                            "position": [220.5, -687.2, 61.0],
+                            "scale": [5, 5, 0.6]
                         }
                     ],
                     "counters": [
@@ -5325,9 +5416,9 @@
                             "type": "Snow"
                         },
                         {
-                            "position": [185.7, -595.7, 68.7],
-                            "rotation": [0, 0, 135],
-                            "type": "LongBlock"
+                            "position": [187.4187, -597.3966, 67.6],
+                            "rotation": [0, 0, 22.5],
+                            "type": "Snow"
                         },
                         {
                             "position": [177.5612, -667.176, 58.0834],
@@ -6611,6 +6702,12 @@
                         "2": true, // shadow pirates
                         "4": true // elite pirates
                     },
+                    "worldLightFaders": [
+                        {
+                            "id": 1639517,
+                            "fadedLightLevel": 0.5
+                        }
+                    ],
                     "pickups": [
                         {
                             "type": "Missile",
@@ -9350,6 +9447,11 @@
                             "position": [256, -1215.1, -9],
                             "scale": [6, 6, 0.3],
                             "texture": "Snow"
+                        },
+                        {
+                            "position": [212.6, -1221.8, 13.8],
+                            "scale": [10, 1, 6],
+                            "texture": "Snow"
                         }
                     ],
                     "lockOnPoints": [
@@ -10804,8 +10906,8 @@
                         "590449": { "vulnerability": "Super Missile" },
                         /* Spinner Bridge */
                         "589861": {
-                            "position": [180.535, -290.6985, 19.2452],
-                            "rotation": [0, 15.86, 90]
+                            "position": [189.735, -291.0985, 18.1452],
+                            "rotation": [0, 20, 70]
                         }
                     },
                     "fog": {
@@ -14924,7 +15026,7 @@
                         {
                             "type": "Thermal Visor",
                             "position": [217.52, 3.26, -132]
-                    }
+                        }
                     ]
                 },
                 "Phazon Mining Tunnel": {
@@ -16631,7 +16733,7 @@
                 "Root Cave": {
                     "doors": {
                         "2": {
-                            "shieldType": "Wave Beam"
+                            "shieldType": "Ice Beam"
                         }
                     },
                     "pickups": [
@@ -17516,7 +17618,7 @@
                     ],
                     "doors": {
                         "0": {
-                            "shieldType": "Wave Beam",
+                            "shieldType": "Ice Beam",
                             "blastShieldType": "None"
                         }
                     }
@@ -19241,7 +19343,7 @@
                         },
                         { // Grapple Ledge
                             "type": "Missile",
-                            "position": [120.6297, -34.3086, 21.643],
+                            "position": [99.4, -34.2, 19.9],
                             "scanText": "Missile Expansion",
                             "hudmemoText": "Missile Expansion Acquired!",
                             "maxIncrease": 3
@@ -19404,6 +19506,12 @@
                         "131118": {"position": [100, 57.5, 9.9]}
                     },
                     "blocks": [
+                        // Grapple ledge beam
+                        {
+                            "position": [99.4, -34.2, 19.1],
+                            "scale": [48, 0.5, 0.5],
+                            "texture": "Sandstone"
+                        },
                         // Ruined Shrine Blocker
                         {
                             "id": 10000027,
@@ -19761,6 +19869,11 @@
                         {
                             "position": [-49.3, 22.55, 20.4],
                             "scale": [0.2, 0.2, 3],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "position": [-43.4, -8.3, 18.5],
+                            "scale": [10, 10, 1],
                             "texture": "Sandstone"
                         },
                         /* 2nd pass */
@@ -20774,7 +20887,14 @@
                         }
                     }
                 },
-                "Transport to Magmoor Caverns North": {},
+                "Transport to Magmoor Caverns North": {
+                    "editObjs": {
+                        // rotate elevator facing
+                        "1572868": { "rotation": [0, 0, 90] },
+                        "1572886": { "rotation": [0, 0, 90] },
+                        "1572900": { "rotation": [0, 0, -90] }
+                    }
+                },
                 "Sunchamber Lobby": {
                     "doors": {
                         "0": {
@@ -20961,7 +21081,7 @@
                         },
                         {
                             "position": [248.1, 345.4, 54.4],
-                            "scale": [4, 15, 0.5],
+                            "scale": [8, 15, 0.5],
                             "texture": "Sandstone"
                         },
                         {
@@ -20988,7 +21108,7 @@
                         {
                             "damageableTriggerId": 10000167,
                             "activateSlotId": 10000168,
-                            "position": [233.0, 342.9, 42],
+                            "position": [232, 342.9, 41],
                             "rotation": [-45, 0, 120],
                             "releaseBallDelayS": 2
                         },
@@ -21031,7 +21151,7 @@
                             "position": [231.0, 345.5, 62.7],
                             "scale": [3, 3, 8],
                             "flags": 8193, // Detect Player | Apply Force
-                            "force": [300, 0, 2500]
+                            "force": [400, 0, 2500]
                         }
                     ],
                     "spawnPoints": [
@@ -22060,7 +22180,8 @@
                             "rotation": [0, 0, 180]
                         },
                         "2424862": { // Flaahgra
-                            "speed": 0.9
+                            "speed": 0.4,
+                            "damage": 0.7
                         },
                         "2425129": { // Clean water
                             "scale": [120, 120, 16]
@@ -22994,12 +23115,12 @@
                         },
                         {
                             "position": [411.1, -43.6, 17.7],
-                            "scale": [3, 35, 1],
+                            "scale": [6, 35, 1],
                             "texture": "Sandstone"
                         },
                         {
                             "position": [407.6, -58.3, 17.7],
-                            "scale": [7, 3.5, 0.9],
+                            "scale": [7, 6.5, 0.9],
                             "texture": "Sandstone"
                         }
                     ],
@@ -23008,7 +23129,7 @@
                         "2490379": { // poison
                             "position": [408.0748, -23.7232, 14],
                             "scale": [37, 70.3, 8],
-                            "damage": 0.15
+                            "damage": 0.11
                         },
                         "2490393": { // clean
                             "position": [408.0748, -23.7232, 14],

@@ -1,4 +1,23 @@
 {
+    /* Place once */
+    "timers": [
+        {
+            "id": TIMER_ID,
+            "time": 2.5
+        }
+    ],
+
+    /* Place once for every bomb cannon */
+    "triggers": [
+        {
+            "id": FORCE_TRIGGER_ID,
+            "active": false,
+            "position": [POSITION],
+            "scale": [3, 3, 8],
+            "flags": 8193, // Detect Player | Apply Force
+            "force": [0, 0, 1650] // straight up
+        }
+    ],
     "bombSlots": [
         {
             "damageableTriggerId": SLOT_ID,
@@ -12,31 +31,25 @@
         { // Start a timer when the bomb slot is activated
             "senderId": SLOT_ID,
             "state": "DEAD",
-            "targetId": 10000692,
+            "targetId": TIMER_ID,
             "message": "RESET_AND_START"
         },
         { // ...and enable the force trigger
             "senderId": SLOT_ID,
             "state": "DEAD",
-            "targetId": 10000700, // incorrect
+            "targetId": FORCE_TRIGGER_ID,
             "message": "ACTIVATE"
         },
         { // When the timer elapses, re-enable the bomb slot
-            "senderId": 10000692,
+            "senderId": TIMER_ID,
             "state": "ZERO",
             "targetId": ACTIVATE_ID,
             "message": "SET_TO_ZERO"
         },
         { // ...and disable the force trigger
-            "senderId": 10000692,
+            "senderId": TIMER_ID,
             "state": "ZERO",
-            "targetId": 10000701,
-            "message": "DEACTIVATE"
-        },
-        { // ...and disable the force trigger
-            "senderId": 10000692,
-            "state": "ZERO",
-            "targetId": 10000700,
+            "targetId": FORCE_TRIGGER_ID,
             "message": "DEACTIVATE"
         }
     ]
