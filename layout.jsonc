@@ -1,6 +1,6 @@
 {
     "$schema": "https://randovania.org/randomprime/randomprime.schema.json",
-    "outputIso": "metroid-fool-v0.7.iso",
+    "outputIso": "metroid-fool-v0.8.iso",
     "preferences": {
         "qolGameBreaking": true,
         "qolCosmetic": true,
@@ -12,7 +12,7 @@
         "automaticCrashScreen": true,
         "forceFusion": true,
         "doorDestinationScans": false,
-        "skipSplashScreens": true // TODO: Just for testing
+        "skipSplashScreens": true
     },
     "gameConfig": {
         "mainPlazaDoor": false,
@@ -23,7 +23,7 @@
         "phazonEliteWithoutDynamo": true,
         "removeVanillaBlastShields": true,
         "doorOpenMode": "PrimaryBlastShield",
-        "resultsString": "Metroid Fool v0.7",
+        "resultsString": "Metroid Fool v0.8",
         "warpToStart": false,
         "springBall": false,
         "nonvariaHeatDamage": true,
@@ -41,7 +41,7 @@
         "shootInGrapple": true,
         "patchWallcrawling": true,
         // TODO: Debug
-        "startingRoom": "Phazon Mines:Omega Research",
+        "startingRoom": "Tallon Overworld:Temple Hall",
         "startingItems": {
             "powerBeam": true,
             "ice": false,
@@ -50,7 +50,7 @@
             "missiles": 50,
             "scanVisor": true,
             "bombs": true,
-            "powerBombs": 8,
+            "powerBombs": 0,
             "flamethrower": false,
             "thermalVisor": false,
             "charge": true,
@@ -117,11 +117,11 @@
             2041669472
         ],
         "gameBanner": {
-            "gameName": "Metroid Fool v0.7",
-            "gameNameFull": "Metroid Fool v0.7",
+            "gameName": "Metroid Fool v0.8",
+            "gameNameFull": "Metroid Fool v0.8",
             "description": "Romhack by toasterparty"
         },
-        "mainMenuMessage": "Metroid Fool v0.7",
+        "mainMenuMessage": "Metroid Fool v0.8",
         "creditsString": "&push;&font=C29C51F1;&main-color=#89D6FF;Major Item Locations&pop;\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Wave Beam&pop;\nPhazon Mines - Metroid Quarantine A\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Ice Beam&pop;\nPhazon Mines - Ventilation Shaft\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Plasma Beam&pop;\nPhazon Mines - Central Dynamo\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Missile Launcher&pop;\nTallon Overworld - Transport Tunnel B\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Grapple Beam&pop;\nTallon Overworld - Landing Site\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Thermal Visor&pop;\nPhendrana Drifts - Ice Ruins East\n\n&push;&font=C29C51F1;&main-color=#33ffd6;X-Ray Visor&pop;\nMagmoor Caverns - Warrior Shrine\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Space Jump Boots&pop;\nTallon Overworld - Frigate Crash Site\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Morph Ball&pop;\nChozo Ruins - Ruined Gallery\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Morph Ball Bomb&pop;\nChozo Ruins - Dynamo\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Boost Ball&pop;\nChozo Ruins - Watery Hall\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Spider Ball&pop;\nChozo Ruins - Ruined Gallery\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Power Bomb&pop;\nMagmoor Caverns - Fiery Shores\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Varia Suit&pop;\nChozo Ruins - Hive Totem\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Gravity Suit&pop;\nChozo Ruins - Ruined Shrine\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Phazon Suit&pop;\nTallon Overworld - Hydro Access Tunnel\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Super Missile&pop;\nPhazon Mines - Phazon Processing Center\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Wavebuster&pop;\nChozo Ruins - Main Plaza\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Ice Spreader&pop;\nChozo Ruins - Tower of Light\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Flamethrower&pop;\nChozo Ruins - Ruined Nursery\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Elder&pop;\nPhendrana Drifts - Research Lab Aether\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Lifegiver&pop;\nMagmoor Caverns - Magmoor Workstation\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Strength&pop;\nChozo Ruins - Crossway\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Truth&pop;\nPhendrana Drifts - Control Tower\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Warrior&pop;\nPhazon Mines - Main Quarry\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Artifact of Wild&pop;\nPhendrana Drifts - Quarantine Cave",
         "bossSizes": {
             "flaahgra": 1.08,
@@ -1724,7 +1724,7 @@
                     ],
                     "deleteIds": [
                         // TODO: comment for debug
-                        // 655396 // disable cutscene skip
+                        655396 // disable cutscene skip
                     ]
                 },
                 "Metroid Prime Lair": {
@@ -2916,6 +2916,12 @@
                             "maxIncrease": 2
                         }
                     ],
+                    "lockOnPoints": [
+                        {
+                            "position": [104.2708, -197.1955, 28.6984],
+                            "isGrapple": true
+                        }
+                    ],
                     "doors": {
                         "0": {
                             "destination": {
@@ -2988,6 +2994,11 @@
                         {
                             "position": [100.6, -225.1, 11.8],
                             "scale": [10, 1.1, 4],
+                            "texture": "Snow"
+                        },
+                        {
+                            "position": [108.6, -193.4, 17.6],
+                            "scale": [3, 3, 0.2],
                             "texture": "Snow"
                         }
                     ],
@@ -4302,8 +4313,8 @@
                             "blastShieldType": "None"
                         },
                         "1": {
-                            "shieldType": "Wavebuster",
-                            "blastShieldType": "Wavebuster",
+                            "shieldType": "Ice Beam",
+                            "blastShieldType": "None",
                             "destination": {
                                 "roomName": "Frozen Pike",
                                 "dockNum": 2
@@ -8142,8 +8153,8 @@
                             "blastShieldType": "None"
                         },
                         "2": {
-                            "shieldType": "Wavebuster",
-                            "blastShieldType": "Wavebuster",
+                            "shieldType": "Ice Beam",
+                            "blastShieldType": "None",
                             "destination": {
                                 "roomName": "Ruined Courtyard",
                                 "dockNum": 1
@@ -10420,11 +10431,14 @@
                         },
                         "393329": { // flying pirate
                             "layer": 5,
-                            "vulnerability": "Phazon"
+                            "vulnerability": "Phazon",
+                            "speed": 0.9,
+                            "scale": [0.8, 0.8, 0.8]
                         },
                         "393330": { // flying pirate
                             "layer": 5,
-                            "vulnerability": "Phazon"
+                            "vulnerability": "Phazon",
+                            "speed": 0.8
                         }
                     },
                     "lockOnPoints": [
@@ -10918,8 +10932,8 @@
                             0
                         ],
                         "range": [
-                            0.5,
-                            80
+                            5,
+                            95
                         ],
                         "colorDelta": 0.2
                     },
@@ -11215,7 +11229,8 @@
                     ],
                     "doors": {
                         "0": {
-                            "shieldType": "Disabled"
+                            "shieldType": "Plasma Beam",
+                            "blastShieldType": "None"
                         }
                     }
                 },
@@ -15421,8 +15436,6 @@
                         "291": { // camera10's end position
                             "position": [-325.7564, 328.4657, -33.7432]
                         },
-                        // snap zoom cut
-                        // "position": [-322.3564, 327.1657, -33.4432]
                         "300": { // target
                             "position": [-322.3564, 327.1657, -33.4432]
                         },
@@ -15449,25 +15462,11 @@
                         },
                         // circle pan
                         "318": { // target
-                            // "position": [-344.0256, 315.5706, -37.5105]
                             "position": [-342.6856, 311.9993, -36.5549]
                         },
                         "338": { // target
-                            // "position": [-344.0256, 315.5706, -33.8105]
                             "position": [-343.3856, 320.5993, -34.1549]
                         },
-                        // a = [
-                        //     [-374.0199, 377.0998, -21.4233],
-                        //     [-370.6638, 375.1461, -21.5181],
-                        //     [-366.921, 375.0837, -21.5937],
-                        //     [-364.7046, 378.9514, -21.5271],
-                        //     [-365.985, 384.5044, -21.044],
-                        //     [-371.7436, 384.5848, -19.6929],
-                        // ]
-                        // offset = [24.5343, -64.6, -11.03]
-                        // for x in a:
-                        //     adjusted = [x[0]+offset[0], x[1]+offset[1], x[2]+offset[2]]
-                        //     print(adjusted)
                         "314": { // camera path waypoint
                             "position": [-349.4856, 312.49980000000005, -32.4533]
                         },
@@ -16463,7 +16462,33 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "addConnections": [
+                        {
+                            "senderId": 458855,
+                            "state": "ENTERED",
+                            "targetId": 458770,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 458855,
+                            "state": "ENTERED",
+                            "targetId": 458832,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 458768,
+                            "state": "SCAN_DONE",
+                            "targetId": 458770,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 458768,
+                            "state": "SCAN_DONE",
+                            "targetId": 458832,
+                            "message": "ACTIVATE"
+                        }
+                    ]
                 },
                 "Frigate Crash Site": {
                     "pickups": [
@@ -16472,8 +16497,15 @@
                         },
                         {
                             "type": "Energy Tank",
-                            "scanText": "This tech is called \"Grapple Space Jump (GSJ)\" and it's kinda whack",
                             "position": [-125, 502.24, 12]
+                        }
+                    ],
+                    "extraScans": [
+                        {
+                            "combatVisible": true,
+                            "position": [-107.1, 470.6, 7.7],
+                            "rotation": 54,
+                            "text": "This tech is called \"Grapple Space Jump (GSJ)\" and it's kinda whack"
                         }
                     ],
                     "doors": {
@@ -16493,6 +16525,14 @@
                     "lockOnPoints": [
                         {
                             "position": [-99.5, 494, 7.8],
+                            "isGrapple": true
+                        },
+                        {
+                            "position": [-110.6009, 475.2756, -22.9389],
+                            "isGrapple": true
+                        },
+                        {
+                            "position": [-82.5009, 495.6756, -15.7389],
                             "isGrapple": true
                         }
                     ],
@@ -18014,7 +18054,7 @@
                     "pickups": [
                         {
                             "type": "Health Refill",
-                            "currIncrease": 150,
+                            "currIncrease": 235,
                             "maxIncrease": 0,
                             "respawn": true
                         }
@@ -18151,14 +18191,14 @@
                 "Biohazard Containment": {
                     "layers": {
                         "1": false, // drones
-                        "2": true, // parasite
-                        "3": false // spanks
+                        "2": true,  // parasite
+                        "3": false  // spanks
                     },
                     "removeWater": true,
                     "pickups": [
                         {
                             "type": "Health Refill",
-                            "currIncrease": 150,
+                            "currIncrease": 235,
                             "maxIncrease": 0,
                             "respawn": true
                         }

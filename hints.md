@@ -1,14 +1,11 @@
 
 # Hints & Minor Spoilers
 
-
 <details>
-  <summary>I'm having trouble in Phendrana Canyon</summary>
+  <summary>I'm having trouble in Hunter Cave</summary>
 
 ```
-To get to the first floating platform:
-- Dash across the gap where you would normally climb the boxes
-- Jump off the metal pipes by the door to reach the highest ledge
+Dash off the lower grapple point towards the higher one using the "starting to grapple" animation instead of scan dashing. Once in the air, look up as quickly as possible to grab onto the 2nd grapple point.
 ```
 
 </details>
@@ -23,9 +20,27 @@ Scan the Adult Sheegoth to change the lock-on target to its head and use charged
 </details>
 
 <details>
-  <summary>I'm having trouble getting Power Bombs</summary>
+  <summary>I don't know how to proceed beyond Ruined Courtyard</summary>
 
 ```
+To progress beyond Ruined Courtyard you need:
+- Boost Ball
+- Super Missiles
+- Wave Beam
+
+Boost Ball can be found in Phendrana
+Super Missiles can be found in a room with pistons
+Wave Beam can be found in a room with spinners
+```
+
+</details>
+
+<details>
+  <summary>I'm having trouble getting main Power Bombs</summary>
+
+```
+Main Power Bombs are discovered when entering Phazon Mines from the front
+
 Use charged Power Beam to help light up the maze if you are having trouble seeing.
 
 The exit is towards the Save Station, try to keep track of your orientation as you work your way in that direction.
@@ -34,5 +49,27 @@ If you simply give up, a video of the solution is provided below.
 ```
 
 [Video](https://www.youtube.com/watch?v=KVf3A9Q5MSU)
+
+</details>
+
+<details>
+  <summary>I need more Energy Tanks, but don't know where to start looking</summary>
+
+| Region | Room |
+| --- | --- |
+| Tallon Overworld | Frigate Crash Site (Lower) |
+| Tallon Overworld | Frigate Crash Site (Upper) |
+| Tallon Overworld | Arbor Chamber |
+| Tallon Overworld | Great Tree Hall |
+| Chozo Ruins | Hive Mecha |
+| Chozo Ruins | Watery Hall |
+| Magmoor Caverns | Magmoor Workstation |
+| Magmoor Caverns | Monitor Station |
+| Phendrana Drifts | Frozen Pike |
+| Phendrana Drifts | Gravity Chamber |
+| Phendrana Drifts | Ice Ruins West |
+| Phazon Mines | Main Quarry |
+| Phazon Mines | Metroid Quarantine A |
+| Phazon Mines | Map Station Mines |
 
 </details>

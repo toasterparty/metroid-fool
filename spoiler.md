@@ -100,9 +100,9 @@
 
 ### Early Mines
 
+- **Elite Research - Warrior**
 - Dynamo Maze+
 - **Central Dynamo - Power Bombs**
-- **Elite Research - Warrior**
 - Unlock shortcut: Warrior Shrine -> Fiery Shores [PoNR]
 
 ### Plasma Beam
