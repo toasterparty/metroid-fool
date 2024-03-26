@@ -41,7 +41,7 @@
         "shootInGrapple": true,
         "patchWallcrawling": true,
         // TODO: Debug
-        "startingRoom": "Tallon Overworld:Temple Hall",
+        "startingRoom": "Tallon Overworld:Landing Site",
         "startingItems": {
             "powerBeam": true,
             "ice": false,
@@ -15333,10 +15333,239 @@
                 "Tallon Overworld South (Great Tree Hall, Lower)": "Chozo Ruins East (Reflecting Pool, Save Station)"
             },
             "rooms": {
+                // uses landing_site.py
                 "Landing Site": {
                     "pickups": [
                         {
                             "type": "Nothing"
+                        },
+                        {
+                            "id": 10000765,
+                            "position": [
+                                -369.6044,
+                                380.5261,
+                                -24.3
+                            ],
+                            "type": "Nothing",
+                            "hudmemoText": "",
+                            "respawn": true,
+                            "destination": "Tallon Overworld North (Tallon Canyon)"
+                        },
+                        {
+                            "id": 10000767,
+                            "position": [
+                                -369.6044,
+                                380.5261,
+                                -24.3
+                            ],
+                            "type": "Nothing",
+                            "hudmemoText": "",
+                            "respawn": true,
+                            "destination": "Tallon Overworld West (Root Cave)"
+                        },
+                        {
+                            "id": 10000769,
+                            "position": [
+                                -369.6044,
+                                380.5261,
+                                -24.3
+                            ],
+                            "type": "Nothing",
+                            "hudmemoText": "",
+                            "respawn": true,
+                            "destination": "Tallon Overworld East (Frigate Crash Site)"
+                        },
+                        {
+                            "id": 10000771,
+                            "position": [
+                                -369.6044,
+                                380.5261,
+                                -24.3
+                            ],
+                            "type": "Nothing",
+                            "hudmemoText": "",
+                            "respawn": true,
+                            "destination": "Tallon Overworld South (Great Tree Hall, Upper)"
+                        },
+                        {
+                            "id": 10000773,
+                            "position": [
+                                -369.6044,
+                                380.5261,
+                                -24.3
+                            ],
+                            "type": "Nothing",
+                            "hudmemoText": "",
+                            "respawn": true,
+                            "destination": "Tallon Overworld South (Great Tree Hall, Lower)"
+                        },
+                        {
+                            "id": 10000775,
+                            "position": [
+                                -369.6044,
+                                380.5261,
+                                -24.3
+                            ],
+                            "type": "Nothing",
+                            "hudmemoText": "",
+                            "respawn": true,
+                            "destination": "Artifact Temple"
+                        },
+                        {
+                            "id": 10000778,
+                            "position": [
+                                -369.6044,
+                                380.5261,
+                                -24.3
+                            ],
+                            "type": "Nothing",
+                            "hudmemoText": "",
+                            "respawn": true,
+                            "destination": "Chozo Ruins West (Main Plaza)"
+                        },
+                        {
+                            "id": 10000780,
+                            "position": [
+                                -369.6044,
+                                380.5261,
+                                -24.3
+                            ],
+                            "type": "Nothing",
+                            "hudmemoText": "",
+                            "respawn": true,
+                            "destination": "Chozo Ruins North (Sun Tower)"
+                        },
+                        {
+                            "id": 10000782,
+                            "position": [
+                                -369.6044,
+                                380.5261,
+                                -24.3
+                            ],
+                            "type": "Nothing",
+                            "hudmemoText": "",
+                            "respawn": true,
+                            "destination": "Chozo Ruins East (Reflecting Pool, Save Station)"
+                        },
+                        {
+                            "id": 10000784,
+                            "position": [
+                                -369.6044,
+                                380.5261,
+                                -24.3
+                            ],
+                            "type": "Nothing",
+                            "hudmemoText": "",
+                            "respawn": true,
+                            "destination": "Chozo Ruins South (Reflecting Pool, Far End)"
+                        },
+                        {
+                            "id": 10000787,
+                            "position": [
+                                -369.6044,
+                                380.5261,
+                                -24.3
+                            ],
+                            "type": "Nothing",
+                            "hudmemoText": "",
+                            "respawn": true,
+                            "destination": "Magmoor Caverns North (Lava Lake)"
+                        },
+                        {
+                            "id": 10000789,
+                            "position": [
+                                -369.6044,
+                                380.5261,
+                                -24.3
+                            ],
+                            "type": "Nothing",
+                            "hudmemoText": "",
+                            "respawn": true,
+                            "destination": "Magmoor Caverns West (Monitor Station)"
+                        },
+                        {
+                            "id": 10000791,
+                            "position": [
+                                -369.6044,
+                                380.5261,
+                                -24.3
+                            ],
+                            "type": "Nothing",
+                            "hudmemoText": "",
+                            "respawn": true,
+                            "destination": "Magmoor Caverns East (Twin Fires)"
+                        },
+                        {
+                            "id": 10000793,
+                            "position": [
+                                -369.6044,
+                                380.5261,
+                                -24.3
+                            ],
+                            "type": "Nothing",
+                            "hudmemoText": "",
+                            "respawn": true,
+                            "destination": "Magmoor Caverns South (Magmoor Workstation, Save Station)"
+                        },
+                        {
+                            "id": 10000795,
+                            "position": [
+                                -369.6044,
+                                380.5261,
+                                -24.3
+                            ],
+                            "type": "Nothing",
+                            "hudmemoText": "",
+                            "respawn": true,
+                            "destination": "Magmoor Caverns South (Magmoor Workstation, Debris)"
+                        },
+                        {
+                            "id": 10000798,
+                            "position": [
+                                -369.6044,
+                                380.5261,
+                                -24.3
+                            ],
+                            "type": "Nothing",
+                            "hudmemoText": "",
+                            "respawn": true,
+                            "destination": "Phendrana Drifts North (Phendrana Shorelines)"
+                        },
+                        {
+                            "id": 10000800,
+                            "position": [
+                                -369.6044,
+                                380.5261,
+                                -24.3
+                            ],
+                            "type": "Nothing",
+                            "hudmemoText": "",
+                            "respawn": true,
+                            "destination": "Phendrana Drifts South (Quarantine Cave)"
+                        },
+                        {
+                            "id": 10000803,
+                            "position": [
+                                -369.6044,
+                                380.5261,
+                                -24.3
+                            ],
+                            "type": "Nothing",
+                            "hudmemoText": "",
+                            "respawn": true,
+                            "destination": "Phazon Mines East (Main Quarry)"
+                        },
+                        {
+                            "id": 10000805,
+                            "position": [
+                                -369.6044,
+                                380.5261,
+                                -24.3
+                            ],
+                            "type": "Nothing",
+                            "hudmemoText": "",
+                            "respawn": true,
+                            "destination": "Phazon Mines West (Phazon Processing Center)"
                         }
                     ],
                     "doors": {
@@ -15353,23 +15582,363 @@
                             "blastShieldType": "None"
                         }
                     },
+                    "relays": [
+                        {
+                            "id": 10000758,
+                            "layer": 11
+                        },
+                        {
+                            "id": 10000759
+                        },
+                        {
+                            "id": 10000760,
+                            "layer": 11
+                        },
+                        {
+                            "id": 10000761,
+                            "layer": 11
+                        }
+                    ],
                     "extraScans": [
                         {
-                            "position": [-322.4694, 327.2704, -33.3408],
+                            "position": [
+                                -322.4694,
+                                327.2704,
+                                -33.3408
+                            ],
                             "text": "What a lovely lil' plant. Maybe I'll take a trimming back with me when I'm done here."
+                        },
+                        {
+                            "id": 10000734,
+                            "layer": 11,
+                            "position": [
+                                -364.5902,
+                                366.032,
+                                -18.6673
+                            ],
+                            "rotation": 115,
+                            "isRed": true,
+                            "text": "Tallon Overworld",
+                            "combatVisible": true
+                        },
+                        {
+                            "id": 10000735,
+                            "layer": 11,
+                            "position": [
+                                -374.5902,
+                                366.032,
+                                -18.6673
+                            ],
+                            "rotation": 65,
+                            "isRed": true,
+                            "text": "Tallon Overworld North\n(Tallon Canyon)",
+                            "combatVisible": true
+                        },
+                        {
+                            "id": 10000736,
+                            "layer": 11,
+                            "position": [
+                                -374.5902,
+                                366.032,
+                                -18.6673
+                            ],
+                            "rotation": 65,
+                            "isRed": true,
+                            "text": "Tallon Overworld West\n(Root Cave)"
+                        },
+                        {
+                            "id": 10000737,
+                            "layer": 11,
+                            "position": [
+                                -374.5902,
+                                366.032,
+                                -18.6673
+                            ],
+                            "rotation": 65,
+                            "isRed": true,
+                            "text": "Tallon Overworld East\n(Frigate Crash Site)"
+                        },
+                        {
+                            "id": 10000738,
+                            "layer": 11,
+                            "position": [
+                                -374.5902,
+                                366.032,
+                                -18.6673
+                            ],
+                            "rotation": 65,
+                            "isRed": true,
+                            "text": "Tallon Overworld South\n(Great Tree Hall, Upper)"
+                        },
+                        {
+                            "id": 10000739,
+                            "layer": 11,
+                            "position": [
+                                -374.5902,
+                                366.032,
+                                -18.6673
+                            ],
+                            "rotation": 65,
+                            "isRed": true,
+                            "text": "Tallon Overworld South\n(Great Tree Hall, Lower)"
+                        },
+                        {
+                            "id": 10000740,
+                            "layer": 11,
+                            "position": [
+                                -374.5902,
+                                366.032,
+                                -18.6673
+                            ],
+                            "rotation": 65,
+                            "isRed": true,
+                            "text": "Artifact Temple"
+                        },
+                        {
+                            "id": 10000741,
+                            "layer": 11,
+                            "position": [
+                                -364.5902,
+                                366.032,
+                                -18.6673
+                            ],
+                            "rotation": 115,
+                            "isRed": true,
+                            "text": "Chozo Ruins"
+                        },
+                        {
+                            "id": 10000742,
+                            "layer": 11,
+                            "position": [
+                                -374.5902,
+                                366.032,
+                                -18.6673
+                            ],
+                            "rotation": 65,
+                            "isRed": true,
+                            "text": "Chozo Ruins West\n(Main Plaza)"
+                        },
+                        {
+                            "id": 10000743,
+                            "layer": 11,
+                            "position": [
+                                -374.5902,
+                                366.032,
+                                -18.6673
+                            ],
+                            "rotation": 65,
+                            "isRed": true,
+                            "text": "Chozo Ruins North\n(Sun Tower)"
+                        },
+                        {
+                            "id": 10000744,
+                            "layer": 11,
+                            "position": [
+                                -374.5902,
+                                366.032,
+                                -18.6673
+                            ],
+                            "rotation": 65,
+                            "isRed": true,
+                            "text": "Chozo Ruins East\n(Reflecting Pool, Save Station)"
+                        },
+                        {
+                            "id": 10000745,
+                            "layer": 11,
+                            "position": [
+                                -374.5902,
+                                366.032,
+                                -18.6673
+                            ],
+                            "rotation": 65,
+                            "isRed": true,
+                            "text": "Chozo Ruins South\n(Reflecting Pool, Far End)"
+                        },
+                        {
+                            "id": 10000746,
+                            "layer": 11,
+                            "position": [
+                                -364.5902,
+                                366.032,
+                                -18.6673
+                            ],
+                            "rotation": 115,
+                            "isRed": true,
+                            "text": "Magmoor Caverns"
+                        },
+                        {
+                            "id": 10000747,
+                            "layer": 11,
+                            "position": [
+                                -374.5902,
+                                366.032,
+                                -18.6673
+                            ],
+                            "rotation": 65,
+                            "isRed": true,
+                            "text": "Magmoor Caverns North\n(Lava Lake)"
+                        },
+                        {
+                            "id": 10000748,
+                            "layer": 11,
+                            "position": [
+                                -374.5902,
+                                366.032,
+                                -18.6673
+                            ],
+                            "rotation": 65,
+                            "isRed": true,
+                            "text": "Magmoor Caverns West\n(Monitor Station)"
+                        },
+                        {
+                            "id": 10000749,
+                            "layer": 11,
+                            "position": [
+                                -374.5902,
+                                366.032,
+                                -18.6673
+                            ],
+                            "rotation": 65,
+                            "isRed": true,
+                            "text": "Magmoor Caverns East\n(Twin Fires)"
+                        },
+                        {
+                            "id": 10000750,
+                            "layer": 11,
+                            "position": [
+                                -374.5902,
+                                366.032,
+                                -18.6673
+                            ],
+                            "rotation": 65,
+                            "isRed": true,
+                            "text": "Magmoor Caverns South\n(Magmoor Workstation, Save Station)"
+                        },
+                        {
+                            "id": 10000751,
+                            "layer": 11,
+                            "position": [
+                                -374.5902,
+                                366.032,
+                                -18.6673
+                            ],
+                            "rotation": 65,
+                            "isRed": true,
+                            "text": "Magmoor Caverns South\n(Magmoor Workstation, Debris)"
+                        },
+                        {
+                            "id": 10000752,
+                            "layer": 11,
+                            "position": [
+                                -364.5902,
+                                366.032,
+                                -18.6673
+                            ],
+                            "rotation": 115,
+                            "isRed": true,
+                            "text": "Phendrana Drifts"
+                        },
+                        {
+                            "id": 10000753,
+                            "layer": 11,
+                            "position": [
+                                -374.5902,
+                                366.032,
+                                -18.6673
+                            ],
+                            "rotation": 65,
+                            "isRed": true,
+                            "text": "Phendrana Drifts North\n(Phendrana Shorelines)"
+                        },
+                        {
+                            "id": 10000754,
+                            "layer": 11,
+                            "position": [
+                                -374.5902,
+                                366.032,
+                                -18.6673
+                            ],
+                            "rotation": 65,
+                            "isRed": true,
+                            "text": "Phendrana Drifts South\n(Quarantine Cave)"
+                        },
+                        {
+                            "id": 10000755,
+                            "layer": 11,
+                            "position": [
+                                -364.5902,
+                                366.032,
+                                -18.6673
+                            ],
+                            "rotation": 115,
+                            "isRed": true,
+                            "text": "Phazon Mines"
+                        },
+                        {
+                            "id": 10000756,
+                            "layer": 11,
+                            "position": [
+                                -374.5902,
+                                366.032,
+                                -18.6673
+                            ],
+                            "rotation": 65,
+                            "isRed": true,
+                            "text": "Phazon Mines East\n(Main Quarry)"
+                        },
+                        {
+                            "id": 10000757,
+                            "layer": 11,
+                            "position": [
+                                -374.5902,
+                                366.032,
+                                -18.6673
+                            ],
+                            "rotation": 65,
+                            "isRed": true,
+                            "text": "Phazon Mines West\n(Phazon Processing Center)"
+                        }
+                    ],
+                    "spawnPoints": [
+                        {
+                            "id": 10000733,
+                            "layer": 11,
+                            "active": false,
+                            "position": [
+                                -369.6044,
+                                380.5261,
+                                -24.3
+                            ],
+                            "morphed": true
                         }
                     ],
                     "triggers": [
                         {
                             "id": 11000000,
-                            "position": [-399.861, 393.6213, -17.2384],
-                            "scale": [13, 10, 5],
+                            "position": [
+                                -399.861,
+                                393.6213,
+                                -17.2384
+                            ],
+                            "scale": [
+                                13,
+                                10,
+                                5
+                            ],
                             "deactivateOnEnter": true,
                             "layer": 3
                         },
                         {
-                            "position": [-369.128387, 404.473297, -8.2],
-                            "scale": [13.5, 13.0, 8.5],
+                            "position": [
+                                -369.128387,
+                                404.473297,
+                                -8.2
+                            ],
+                            "scale": [
+                                13.5,
+                                13.0,
+                                8.5
+                            ],
                             "force": [
                                 0,
                                 -400.0,
@@ -15380,15 +15949,31 @@
                         },
                         {
                             "id": 11000005,
-                            "position": [-336.9284, 404.1733, -12.6547],
-                            "scale": [18, 9, 9],
+                            "position": [
+                                -336.9284,
+                                404.1733,
+                                -12.6547
+                            ],
+                            "scale": [
+                                18,
+                                9,
+                                9
+                            ],
                             "deactivateOnEnter": true,
                             "layer": 3
                         },
                         {
-                            "id": 11000010, // water trigger
-                            "position": [-334.8394, 309.9352, -8.6111],
-                            "scale": [6.1, 13.2, 50]
+                            "id": 11000010,
+                            "position": [
+                                -334.8394,
+                                309.9352,
+                                -8.6111
+                            ],
+                            "scale": [
+                                6.1,
+                                13.2,
+                                50
+                            ]
                         }
                     ],
                     "timers": [
@@ -15401,198 +15986,1562 @@
                             "id": 11000011,
                             "time": 0.02,
                             "startImmediately": true
+                        },
+                        {
+                            "id": 10000762,
+                            "time": 0.02,
+                            "startImmediately": true
+                        },
+                        {
+                            "id": 10000763,
+                            "layer": 11,
+                            "time": 0.04,
+                            "startImmediately": true
+                        },
+                        {
+                            "id": 10000764,
+                            "layer": 11,
+                            "time": 0.04
+                        },
+                        {
+                            "id": 10000766,
+                            "layer": 11,
+                            "time": 0.04
+                        },
+                        {
+                            "id": 10000768,
+                            "layer": 11,
+                            "time": 0.04
+                        },
+                        {
+                            "id": 10000770,
+                            "layer": 11,
+                            "time": 0.04
+                        },
+                        {
+                            "id": 10000772,
+                            "layer": 11,
+                            "time": 0.04
+                        },
+                        {
+                            "id": 10000774,
+                            "layer": 11,
+                            "time": 0.04
+                        },
+                        {
+                            "id": 10000776,
+                            "layer": 11,
+                            "time": 0.04
+                        },
+                        {
+                            "id": 10000777,
+                            "layer": 11,
+                            "time": 0.04
+                        },
+                        {
+                            "id": 10000779,
+                            "layer": 11,
+                            "time": 0.04
+                        },
+                        {
+                            "id": 10000781,
+                            "layer": 11,
+                            "time": 0.04
+                        },
+                        {
+                            "id": 10000783,
+                            "layer": 11,
+                            "time": 0.04
+                        },
+                        {
+                            "id": 10000785,
+                            "layer": 11,
+                            "time": 0.04
+                        },
+                        {
+                            "id": 10000786,
+                            "layer": 11,
+                            "time": 0.04
+                        },
+                        {
+                            "id": 10000788,
+                            "layer": 11,
+                            "time": 0.04
+                        },
+                        {
+                            "id": 10000790,
+                            "layer": 11,
+                            "time": 0.04
+                        },
+                        {
+                            "id": 10000792,
+                            "layer": 11,
+                            "time": 0.04
+                        },
+                        {
+                            "id": 10000794,
+                            "layer": 11,
+                            "time": 0.04
+                        },
+                        {
+                            "id": 10000796,
+                            "layer": 11,
+                            "time": 0.04
+                        },
+                        {
+                            "id": 10000797,
+                            "layer": 11,
+                            "time": 0.04
+                        },
+                        {
+                            "id": 10000799,
+                            "layer": 11,
+                            "time": 0.04
+                        },
+                        {
+                            "id": 10000801,
+                            "layer": 11,
+                            "time": 0.04
+                        },
+                        {
+                            "id": 10000802,
+                            "layer": 11,
+                            "time": 0.04
+                        },
+                        {
+                            "id": 10000804,
+                            "layer": 11,
+                            "time": 0.04
+                        },
+                        {
+                            "id": 10000806,
+                            "layer": 11,
+                            "time": 0.04
                         }
                     ],
                     "liquids": [
                         {
                             "id": 11000009,
                             "type": "Water",
-                            "position": [-334.8394, 309.9352, -8.6111],
-                            "scale": [6.1, 13.2, 50]
+                            "position": [
+                                -334.8394,
+                                309.9352,
+                                -8.6111
+                            ],
+                            "scale": [
+                                6.1,
+                                13.2,
+                                50
+                            ]
+                        }
+                    ],
+                    "blocks": [
+                        {
+                            "layer": 3,
+                            "position": [
+                                -384.2,
+                                303.02,
+                                -14.0
+                            ],
+                            "scale": [
+                                6,
+                                1,
+                                6
+                            ]
+                        },
+                        {
+                            "layer": 11,
+                            "position": [
+                                -407.5,
+                                367.02,
+                                -21.3
+                            ],
+                            "scale": [
+                                1,
+                                6,
+                                6
+                            ]
+                        },
+                        {
+                            "layer": 11,
+                            "position": [
+                                -295.5,
+                                396.42,
+                                -38.4
+                            ],
+                            "scale": [
+                                1,
+                                6,
+                                6
+                            ]
                         }
                     ],
                     "editObjs": {
-                        "268": { // camera7
-                            "position": [-339.4529, 327.2898, -29.3721]
+                        "268": {
+                            "position": [
+                                -339.4529,
+                                327.2898,
+                                -29.3721
+                            ]
                         },
-                        "273": { // camera7's target
-                            "position": [-343.1256, 319.2706, -34.2105]
+                        "273": {
+                            "position": [
+                                -343.1256,
+                                319.2706,
+                                -34.2105
+                            ]
                         },
-                        "272": { // camera7's target
-                            "position": [-341.5256, 313.5706, -34.9105]
+                        "272": {
+                            "position": [
+                                -341.5256,
+                                313.5706,
+                                -34.9105
+                            ]
                         },
-                        "271": { // camera7's path waypoint
-                            "position": [-339.4529, 327.2898, -29.3721]
+                        "271": {
+                            "position": [
+                                -339.4529,
+                                327.2898,
+                                -29.3721
+                            ]
                         },
-                        "293": { // camera10's target
-                            "position": [-321.190186, 319.832001, -34.167301]
+                        "293": {
+                            "position": [
+                                -321.190186,
+                                319.832001,
+                                -34.167301
+                            ]
                         },
-                        "294": { // camera10's target
-                            "position": [-321.190186, 319.832001, -34.167301]
+                        "294": {
+                            "position": [
+                                -321.190186,
+                                319.832001,
+                                -34.167301
+                            ]
                         },
-                        "292": { // camera10's start position
-                            "position": [-331.0564, 319.9657, -30.7432]
+                        "292": {
+                            "position": [
+                                -331.0564,
+                                319.9657,
+                                -30.7432
+                            ]
                         },
-                        "291": { // camera10's end position
-                            "position": [-325.7564, 328.4657, -33.7432]
+                        "291": {
+                            "position": [
+                                -325.7564,
+                                328.4657,
+                                -33.7432
+                            ]
                         },
-                        "300": { // target
-                            "position": [-322.3564, 327.1657, -33.4432]
+                        "300": {
+                            "position": [
+                                -322.3564,
+                                327.1657,
+                                -33.4432
+                            ]
                         },
-                        "301": { // target
-                            "position": [-322.3564, 327.1657, -33.4432]
+                        "301": {
+                            "position": [
+                                -322.3564,
+                                327.1657,
+                                -33.4432
+                            ]
                         },
-                        "305": { // target
-                            "position": [-322.3564, 327.1657, -33.4432]
+                        "305": {
+                            "position": [
+                                -322.3564,
+                                327.1657,
+                                -33.4432
+                            ]
                         },
-                        "303": { // target
-                            "position": [-322.3564, 327.1657, -33.4432]
+                        "303": {
+                            "position": [
+                                -322.3564,
+                                327.1657,
+                                -33.4432
+                            ]
                         },
-                        "298": { // path
-                            "position": [-324.0, 349.0, -28.0]
+                        "298": {
+                            "position": [
+                                -324.0,
+                                349.0,
+                                -28.0
+                            ]
                         },
-                        "307": { // path
-                            "position": [-324.0, 341.4461, -29.9394]
+                        "307": {
+                            "position": [
+                                -324.0,
+                                341.4461,
+                                -29.9394
+                            ]
                         },
-                        "299": { // path
-                            "position": [-324.0, 333.8922, -31.8788]
+                        "299": {
+                            "position": [
+                                -324.0,
+                                333.8922,
+                                -31.8788
+                            ]
                         },
-                        "306": { // path
-                            "position": [-324.0, 333.8922, -32.8788]
+                        "306": {
+                            "position": [
+                                -324.0,
+                                333.8922,
+                                -32.8788
+                            ]
                         },
-                        // circle pan
-                        "318": { // target
-                            "position": [-342.6856, 311.9993, -36.5549]
+                        "318": {
+                            "position": [
+                                -342.6856,
+                                311.9993,
+                                -36.5549
+                            ]
                         },
-                        "338": { // target
-                            "position": [-343.3856, 320.5993, -34.1549]
+                        "338": {
+                            "position": [
+                                -343.3856,
+                                320.5993,
+                                -34.1549
+                            ]
                         },
-                        "314": { // camera path waypoint
-                            "position": [-349.4856, 312.49980000000005, -32.4533]
+                        "314": {
+                            "position": [
+                                -349.4856,
+                                312.49980000000005,
+                                -32.4533
+                            ]
                         },
-                        "315": { // camera path waypoint
-                            "position": [-346.1295, 310.5461, -32.5481]
+                        "315": {
+                            "position": [
+                                -346.1295,
+                                310.5461,
+                                -32.5481
+                            ]
                         },
-                        "316": { // camera path waypoint
-                            "position": [-342.3867, 310.4837, -32.6237]
+                        "316": {
+                            "position": [
+                                -342.3867,
+                                310.4837,
+                                -32.6237
+                            ]
                         },
-                        "317": { // camera path waypoint
-                            "position": [-340.1703, 314.3514, -32.5571]
+                        "317": {
+                            "position": [
+                                -340.1703,
+                                314.3514,
+                                -32.5571
+                            ]
                         },
-                        "319": { // camera path waypoint
-                            "position": [-341.4507, 319.9044, -32.074]
+                        "319": {
+                            "position": [
+                                -341.4507,
+                                319.9044,
+                                -32.074
+                            ]
                         },
-                        "322": { // camera path waypoint
-                            "position": [-347.2093, 319.98479999999995, -30.722900000000003]
+                        "322": {
+                            "position": [
+                                -347.2093,
+                                319.98479999999995,
+                                -30.722900000000003
+                            ]
                         },
-                        "424": { // SJF scan
-                            "position": [-390.9964, 307.4193, -5.3191]
+                        "424": {
+                            "position": [
+                                -390.9964,
+                                307.4193,
+                                -5.3191
+                            ]
                         },
-                        "425": { // blue patch scan
-                            "position": [-377.8229, 348.7109, -13.5328],
-                            "layer": 3
+                        "425": {
+                            "position": [
+                                -377.8229,
+                                348.7109,
+                                -13.5328
+                            ],
+                            "layer": 4
                         },
-                        "467": { // save station trigger
-                            "scale": [5.0, 5.0, 5.0],
-                            "layer": 3
+                        "467": {
+                            "scale": [
+                                5.0,
+                                5.0,
+                                5.0
+                            ],
+                            "layer": 4
                         },
-                        "321": { // ship
-                            "layer": 3
+                        "321": {
+                            "layer": 4
                         },
-                        "463": { // save station beam
-                            "layer": 3
+                        "463": {
+                            "layer": 4
                         },
-                        "498": { // back from load trigger
-                            "layer": 3
+                        "498": {
+                            "layer": 4
                         },
-                        "579": { // trigger push up
-                            "layer": 3
+                        "579": {
+                            "layer": 4
                         },
-                        "464": { // save station energy
-                            "layer": 3
+                        "464": {
+                            "layer": 4
                         },
-                        "484": { // save station base lights
-                            "layer": 3
+                        "484": {
+                            "layer": 4
                         },
-                        "489": { // savestation hum
-                            "layer": 3
+                        "489": {
+                            "layer": 4
                         },
-                        "91": { // ship sound
-                            "layer": 3
+                        "91": {
+                            "layer": 4
                         },
-                        "573": { // ship sound
-                            "layer": 3
+                        "573": {
+                            "layer": 4
                         },
-                        "466": { // map station sound
-                            "layer": 3
+                        "466": {
+                            "layer": 4
                         },
-                        "88": { // ambience left
-                            "layer": 3
+                        "88": {
+                            "layer": 4
                         },
-                        "557": { // audio fade out
-                            "layer": 3
+                        "557": {
+                            "layer": 4
                         }
                     },
                     "addConnections": [
                         {
-                            "senderId": 11000010, // water trigger
+                            "senderId": 471,
+                            "state": "ZERO",
+                            "targetId": 10000733,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 11000010,
                             "state": "ENTERED",
-                            "targetId": 11000009, // water
+                            "targetId": 11000009,
                             "message": "ACTIVATE"
                         },
                         {
-                            "senderId": 11000010, // water trigger
+                            "senderId": 11000010,
                             "state": "EXITED",
-                            "targetId": 11000009, // water
+                            "targetId": 11000009,
                             "message": "DEACTIVATE"
                         },
                         {
-                            "senderId": 11000011, // auto-start timer
+                            "senderId": 11000011,
                             "state": "ZERO",
-                            "targetId": 11000009, // water
+                            "targetId": 11000009,
                             "message": "DEACTIVATE"
                         },
                         {
                             "senderId": 425,
                             "state": "SCAN_DONE",
-                            "targetId": 468, // save station spawn point
+                            "targetId": 468,
                             "message": "SET_TO_ZERO"
                         },
                         {
                             "senderId": 425,
                             "state": "SCAN_DONE",
-                            "targetId": 467, // save station trigger
+                            "targetId": 467,
                             "message": "DEACTIVATE"
                         },
                         {
                             "senderId": 425,
                             "state": "SCAN_DONE",
-                            "targetId": 11000001, // custom timer
+                            "targetId": 11000001,
                             "message": "RESET_AND_START"
                         },
                         {
-                            "senderId": 11000001, // custom timer
+                            "senderId": 11000001,
                             "state": "ZERO",
                             "targetId": 467,
                             "message": "ACTIVATE"
                         },
                         {
-                            "senderId": 11000000, // trigger near SJF
+                            "senderId": 11000000,
                             "state": "ENTERED",
-                            "targetId": 468, // save station spawn point
+                            "targetId": 468,
                             "message": "SET_TO_ZERO"
                         },
                         {
-                            "senderId": 11000005, // trigger near alcove
+                            "senderId": 11000005,
                             "state": "ENTERED",
-                            "targetId": 557, // StreamedAudio FadeIn/Out Long
+                            "targetId": 557,
                             "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000762,
+                            "state": "ZERO",
+                            "targetId": 10000759,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000762,
+                            "state": "ZERO",
+                            "targetId": 10000760,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000762,
+                            "state": "ZERO",
+                            "targetId": 10000761,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000763,
+                            "state": "ZERO",
+                            "targetId": 10000758,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000763,
+                            "state": "ZERO",
+                            "targetId": 10000734,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000735,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000733,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000742,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000733,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000747,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000733,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000753,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000733,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000756,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000733,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000760,
+                            "state": "ZERO",
+                            "targetId": 10000734,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000734,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000759,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000734,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000760,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000734,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000761,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000734,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000764,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000764,
+                            "state": "ZERO",
+                            "targetId": 10000741,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000764,
+                            "state": "ZERO",
+                            "targetId": 10000735,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000761,
+                            "state": "ZERO",
+                            "targetId": 10000735,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000759,
+                            "state": "ZERO",
+                            "targetId": 10000765,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000735,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000759,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000735,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000761,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000735,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000766,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000766,
+                            "state": "ZERO",
+                            "targetId": 10000736,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000766,
+                            "state": "ZERO",
+                            "targetId": 10000765,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000761,
+                            "state": "ZERO",
+                            "targetId": 10000736,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000759,
+                            "state": "ZERO",
+                            "targetId": 10000767,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000736,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000759,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000736,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000761,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000736,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000768,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000768,
+                            "state": "ZERO",
+                            "targetId": 10000737,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000768,
+                            "state": "ZERO",
+                            "targetId": 10000767,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000761,
+                            "state": "ZERO",
+                            "targetId": 10000737,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000759,
+                            "state": "ZERO",
+                            "targetId": 10000769,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000737,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000759,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000737,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000761,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000737,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000770,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000770,
+                            "state": "ZERO",
+                            "targetId": 10000738,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000770,
+                            "state": "ZERO",
+                            "targetId": 10000769,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000761,
+                            "state": "ZERO",
+                            "targetId": 10000738,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000759,
+                            "state": "ZERO",
+                            "targetId": 10000771,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000738,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000759,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000738,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000761,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000738,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000772,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000772,
+                            "state": "ZERO",
+                            "targetId": 10000739,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000772,
+                            "state": "ZERO",
+                            "targetId": 10000771,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000761,
+                            "state": "ZERO",
+                            "targetId": 10000739,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000759,
+                            "state": "ZERO",
+                            "targetId": 10000773,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000739,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000759,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000739,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000761,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000739,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000774,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000774,
+                            "state": "ZERO",
+                            "targetId": 10000740,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000774,
+                            "state": "ZERO",
+                            "targetId": 10000773,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000761,
+                            "state": "ZERO",
+                            "targetId": 10000740,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000759,
+                            "state": "ZERO",
+                            "targetId": 10000775,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000740,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000759,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000740,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000761,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000740,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000776,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000776,
+                            "state": "ZERO",
+                            "targetId": 10000735,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000776,
+                            "state": "ZERO",
+                            "targetId": 10000775,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000760,
+                            "state": "ZERO",
+                            "targetId": 10000741,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000741,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000759,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000741,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000760,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000741,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000761,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000741,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000777,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000777,
+                            "state": "ZERO",
+                            "targetId": 10000746,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000777,
+                            "state": "ZERO",
+                            "targetId": 10000742,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000761,
+                            "state": "ZERO",
+                            "targetId": 10000742,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000759,
+                            "state": "ZERO",
+                            "targetId": 10000778,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000742,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000759,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000742,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000761,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000742,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000779,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000779,
+                            "state": "ZERO",
+                            "targetId": 10000743,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000779,
+                            "state": "ZERO",
+                            "targetId": 10000778,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000761,
+                            "state": "ZERO",
+                            "targetId": 10000743,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000759,
+                            "state": "ZERO",
+                            "targetId": 10000780,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000743,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000759,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000743,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000761,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000743,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000781,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000781,
+                            "state": "ZERO",
+                            "targetId": 10000744,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000781,
+                            "state": "ZERO",
+                            "targetId": 10000780,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000761,
+                            "state": "ZERO",
+                            "targetId": 10000744,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000759,
+                            "state": "ZERO",
+                            "targetId": 10000782,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000744,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000759,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000744,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000761,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000744,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000783,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000783,
+                            "state": "ZERO",
+                            "targetId": 10000745,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000783,
+                            "state": "ZERO",
+                            "targetId": 10000782,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000761,
+                            "state": "ZERO",
+                            "targetId": 10000745,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000759,
+                            "state": "ZERO",
+                            "targetId": 10000784,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000745,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000759,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000745,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000761,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000745,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000785,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000785,
+                            "state": "ZERO",
+                            "targetId": 10000742,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000785,
+                            "state": "ZERO",
+                            "targetId": 10000784,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000760,
+                            "state": "ZERO",
+                            "targetId": 10000746,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000746,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000759,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000746,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000760,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000746,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000761,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000746,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000786,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000786,
+                            "state": "ZERO",
+                            "targetId": 10000752,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000786,
+                            "state": "ZERO",
+                            "targetId": 10000747,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000761,
+                            "state": "ZERO",
+                            "targetId": 10000747,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000759,
+                            "state": "ZERO",
+                            "targetId": 10000787,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000747,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000759,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000747,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000761,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000747,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000788,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000788,
+                            "state": "ZERO",
+                            "targetId": 10000748,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000788,
+                            "state": "ZERO",
+                            "targetId": 10000787,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000761,
+                            "state": "ZERO",
+                            "targetId": 10000748,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000759,
+                            "state": "ZERO",
+                            "targetId": 10000789,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000748,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000759,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000748,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000761,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000748,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000790,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000790,
+                            "state": "ZERO",
+                            "targetId": 10000749,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000790,
+                            "state": "ZERO",
+                            "targetId": 10000789,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000761,
+                            "state": "ZERO",
+                            "targetId": 10000749,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000759,
+                            "state": "ZERO",
+                            "targetId": 10000791,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000749,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000759,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000749,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000761,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000749,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000792,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000792,
+                            "state": "ZERO",
+                            "targetId": 10000750,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000792,
+                            "state": "ZERO",
+                            "targetId": 10000791,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000761,
+                            "state": "ZERO",
+                            "targetId": 10000750,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000759,
+                            "state": "ZERO",
+                            "targetId": 10000793,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000750,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000759,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000750,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000761,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000750,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000794,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000794,
+                            "state": "ZERO",
+                            "targetId": 10000751,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000794,
+                            "state": "ZERO",
+                            "targetId": 10000793,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000761,
+                            "state": "ZERO",
+                            "targetId": 10000751,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000759,
+                            "state": "ZERO",
+                            "targetId": 10000795,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000751,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000759,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000751,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000761,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000751,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000796,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000796,
+                            "state": "ZERO",
+                            "targetId": 10000747,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000796,
+                            "state": "ZERO",
+                            "targetId": 10000795,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000760,
+                            "state": "ZERO",
+                            "targetId": 10000752,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000752,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000759,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000752,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000760,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000752,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000761,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000752,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000797,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000797,
+                            "state": "ZERO",
+                            "targetId": 10000755,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000797,
+                            "state": "ZERO",
+                            "targetId": 10000753,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000761,
+                            "state": "ZERO",
+                            "targetId": 10000753,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000759,
+                            "state": "ZERO",
+                            "targetId": 10000798,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000753,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000759,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000753,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000761,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000753,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000799,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000799,
+                            "state": "ZERO",
+                            "targetId": 10000754,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000799,
+                            "state": "ZERO",
+                            "targetId": 10000798,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000761,
+                            "state": "ZERO",
+                            "targetId": 10000754,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000759,
+                            "state": "ZERO",
+                            "targetId": 10000800,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000754,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000759,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000754,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000761,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000754,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000801,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000801,
+                            "state": "ZERO",
+                            "targetId": 10000753,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000801,
+                            "state": "ZERO",
+                            "targetId": 10000800,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000760,
+                            "state": "ZERO",
+                            "targetId": 10000755,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000755,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000759,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000755,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000760,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000755,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000761,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000755,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000802,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000802,
+                            "state": "ZERO",
+                            "targetId": 10000734,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000802,
+                            "state": "ZERO",
+                            "targetId": 10000756,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000761,
+                            "state": "ZERO",
+                            "targetId": 10000756,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000759,
+                            "state": "ZERO",
+                            "targetId": 10000803,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000756,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000759,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000756,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000761,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000756,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000804,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000804,
+                            "state": "ZERO",
+                            "targetId": 10000757,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000804,
+                            "state": "ZERO",
+                            "targetId": 10000803,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000761,
+                            "state": "ZERO",
+                            "targetId": 10000757,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000759,
+                            "state": "ZERO",
+                            "targetId": 10000805,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000757,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000759,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000757,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000761,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000757,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000806,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000806,
+                            "state": "ZERO",
+                            "targetId": 10000756,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000806,
+                            "state": "ZERO",
+                            "targetId": 10000805,
+                            "message": "ACTIVATE"
                         }
                     ],
                     "deleteIds": [
-                        126, // pickup
-                        611  // cutscene skip
-                    ]
+                        126,
+                        611
+                    ],
+                    "layers": {
+                        "11": false
+                    }
                 },
                 "Gully": {
                     "doors": {
@@ -15942,7 +17891,7 @@
                     ]
                 },
                 "Alcove": {
-                    // layer 3: "shit." hudmemo
+                    // layer 3: jumpscare
                     "pickups": [
                         {
                             "type": "Space Jump Boots"
@@ -15951,6 +17900,7 @@
                     "streamedAudios": [
                         {
                             "id": 10000000,
+                            "layer": 3,
                             "audioFileName": "/audio/rid_r_death_01.dsp|/audio/rid_r_death_01.dsp",
                             "isMusic": false,
                             "fadeInTime": 0.02,
@@ -15971,6 +17921,7 @@
                     "triggers": [
                         {
                             "id": 11000002,
+                            "layer": 3,
                             "position": [-331.938507, 451.499695, -19.828421],
                             "scale": [9.0, 10.0, 9.9],
                             "deactivateOnEnter": true
@@ -15980,8 +17931,14 @@
                         {
                             "id": 11000003,
                             "type": "ScriptLayerController",
-                            "layerChangeRoomId":  2414967056,
-                            "layerChangeLayerId": 3
+                            "layerChangeRoomId":  2414967056, // landing site
+                            "layerChangeLayerId": 3 // 1st pass foolery
+                        },
+                        {
+                            "id": 11000022,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId":  2414967056, // landing site
+                            "layerChangeLayerId": 4 // ship
                         },
                         {
                             "id": 11000021,
@@ -16088,6 +18045,11 @@
                             "scale": [0.34072, 0.204192, 0.51096]
                         }
                     ],
+                    "editObjs": {
+                        "262151": { // pickup
+                            "layer": 3
+                        }
+                    },
                     "addConnections": [
                         {
                             "senderId": 11000002, // trigger
@@ -16116,7 +18078,13 @@
                         {
                             "senderId": 11000002, // trigger
                             "state": "ENTERED",
-                            "targetId": 11000003, // jumpscare audio
+                            "targetId": 11000003,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 11000002, // trigger
+                            "state": "ENTERED",
+                            "targetId": 11000022,
                             "message": "DECREMENT"
                         },
                         {
@@ -17312,6 +19280,18 @@
                             "type": "ScriptLayerController",
                             "layerChangeRoomId": 699387078, // arboretum
                             "layerChangeLayerId": 2 // ghosts
+                        },
+                        {
+                            "id": 11000023,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 2414967056, // landing site
+                            "layerChangeLayerId": 4 // ship
+                        },
+                        {
+                            "id": 11000024,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 2414967056, // landing site
+                            "layerChangeLayerId": 11 // flyable ship
                         }
                     ],
                     "relays": [
@@ -17485,6 +19465,18 @@
                             "senderId": 1049044,
                             "state": "ARRIVED",
                             "targetId": 10000671,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1049044,
+                            "state": "ARRIVED",
+                            "targetId": 11000023,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1049044,
+                            "state": "ARRIVED",
+                            "targetId": 11000024,
                             "message": "INCREMENT"
                         },
                         // When the fake-out cutscene ends, remove black bars
