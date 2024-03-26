@@ -40,6 +40,7 @@ data = {
         }
     },
     "relays": [],
+    "specialFunctions": [],
     "extraScans": [
         {
             "position": [-322.4694, 327.2704, -33.3408],
@@ -317,7 +318,24 @@ data = {
 }
 
 ROOM_IDS = [
-
+    3689744570,
+    925831207,
+    3339035544,
+    603152353,
+    3001573804,
+    835750603,
+    1876146603,
+    2965866933,
+    1829788744,
+    87039645,
+    3156907596,
+    717679670,
+    2445362367,
+    2109790043,
+    1125708118,
+    3004337398,
+    2451570395,
+    3223329329,
 ]
 
 # (region, rooms)
@@ -373,8 +391,10 @@ REGIONS = [
     ),
 ]
 
+assert len(ROOM_IDS) == sum(len(ROOMS) for _, _, ROOMS in REGIONS)
+
 data['layers'] = {
-    # TODO: True for debug
+    # True for debug
     layer: False,
 }
 
