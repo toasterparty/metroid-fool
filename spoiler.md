@@ -103,7 +103,7 @@
 - **Elite Research - Warrior**
 - Dynamo Maze+
 - **Central Dynamo - Power Bombs**
-- Unlock shortcut: Warrior Shrine -> Fiery Shores [PoNR]
+    - Unlock shortcut: Warrior Shrine <-> Fiery Shores
 
 ### Plasma Beam
 
@@ -124,7 +124,6 @@
 ### Cleanup
 
 - **Tower of Light - Wavebuster**
-    - Unlocks shortcut: Frozen Pike <--> Ruined Courtyard
 - **Burn Dome - Flamethrower**
     - Unlocks PB Expansion in Storage Cavern
 - Crossway Puzzle (requires SJ)
