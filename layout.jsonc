@@ -41,7 +41,7 @@
         "shootInGrapple": true,
         "patchWallcrawling": true,
         // TODO: Debug
-        "startingRoom": "Tallon Overworld:Alcove",
+        "startingRoom": "Tallon Overworld:Landing Site",
         "startingItems": {
             "powerBeam": true,
             "ice": false,
@@ -18736,7 +18736,12 @@
                             "targetId": 458832,
                             "message": "ACTIVATE"
                         }
-                    ]
+                    ],
+                    "editObjs": {
+                        "458855": {
+                            "position": [-382.9742, 209.5879, -13.028]
+                        }
+                    }
                 },
                 "Frigate Crash Site": {
                     "pickups": [
