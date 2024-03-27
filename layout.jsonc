@@ -41,7 +41,7 @@
         "shootInGrapple": true,
         "patchWallcrawling": true,
         // TODO: Debug
-        "startingRoom": "Tallon Overworld:Alcove",
+        "startingRoom": "Phazon Mines:Metroid Quarantine A",
         "startingItems": {
             "powerBeam": true,
             "ice": true,
@@ -14549,9 +14549,16 @@
                             "texture": "Snow"
                         },
                         {
-                            "position": [197.4, 305.8, -61.7],
+                            "position": [197.4, 305.8, -61.2],
                             "scale": [6, 6, 5],
                             "texture": "Snow"
+                        },
+
+                        // Train synchronizer
+                        {
+                            "id": 11000049,
+                            "position": [153.424, 307.6434, -71.776],
+                            "scale": [10, 1, 10]
                         }
                     ],
                     "lockOnPoints": [
@@ -14643,32 +14650,63 @@
                         {
                             "id": 10000509,
                             "position": [214.3, 292.8, -77.9],
-                            "speed": 8
+                            "speed": 7
                         },
                         {
                             "id": 10000510,
                             "position": [185.8, 287.9, -76.1],
-                            "speed": 8
+                            "speed": 7
                         },
                         {
                             "id": 10000511,
                             "position": [183.5, 226.2, -72.2],
-                            "speed": 8
+                            "speed": 7
                         },
                         {
                             "id": 10000512,
                             "position": [207.6, 228.5, -72.2],
-                            "speed": 8
+                            "speed": 6
                         },
                         {
                             "id": 10000513,
                             "position": [208.4, 295.4, -69.78],
-                            "speed": 8
+                            "speed": 5
                         },
                         {
                             "id": 10000514,
                             "position": [184.4346, 317.6616, -69.78],
+                            "speed": 5
+                        },
+                        {
+                            "id": 11000048,
+                            "position": [153.424, 317.3434, -69.976],
                             "speed": 8
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 11000050, // timer 1
+                            "time": 3
+                        },
+                        {
+                            "id": 11000051, // timer 2
+                            "time": 0.2
+                        },
+                        {
+                            "id": 11000052, // timer 3
+                            "time": 0.2
+                        },
+                        {
+                            "id": 11000053, // timer 4
+                            "time": 0.2
+                        },
+                        {
+                            "id": 11000054, // timer 5
+                            "time": 0.2
+                        },
+                        {
+                            "id": 11000055, // timer 6
+                            "time": 0.2
                         }
                     ],
                     "addConnections": [
@@ -14805,13 +14843,139 @@
                             "targetId": 10000514,
                             "message": "NEXT"
                         },
-
-                        // loop-back
                         {
                             "senderId": 10000514,
                             "state": "ARRIVED",
+                            "targetId": 11000048,
+                            "message": "NEXT"
+                        },
+
+                        // loop-back
+                        {
+                            "senderId": 11000048,
+                            "state": "ARRIVED",
                             "targetId": 10000500,
                             "message": "NEXT"
+                        },
+
+                        // When the train reaches the end of the track, spawn a block
+                        {
+                            "senderId": 11000048,
+                            "state": "ARRIVED",
+                            "targetId": 11000049, // blocker
+                            "message": "ACTIVATE"
+                        },
+
+                        // When the train reaches the end of the track, start a sequence of timers
+                        {
+                            "senderId": 11000048,
+                            "state": "ARRIVED",
+                            "targetId": 11000050, // timer
+                            "message": "RESET_AND_START"
+                        },
+
+                        // first stop all the platforms
+                        {
+                            "senderId": 11000050, // timer 1
+                            "state": "ZERO",
+                            "targetId": 10000495, // platform
+                            "message": "STOP"
+                        },
+                        {
+                            "senderId": 11000050, // timer 1
+                            "state": "ZERO",
+                            "targetId": 10000496, // platform
+                            "message": "STOP"
+                        },
+                        {
+                            "senderId": 11000050, // timer 1
+                            "state": "ZERO",
+                            "targetId": 10000497, // platform
+                            "message": "STOP"
+                        },
+                        {
+                            "senderId": 11000050, // timer 1
+                            "state": "ZERO",
+                            "targetId": 10000498, // platform
+                            "message": "STOP"
+                        },
+                        {
+                            "senderId": 11000050, // timer 1
+                            "state": "ZERO",
+                            "targetId": 10000499, // platform
+                            "message": "STOP"
+                        },
+                        {
+                            "senderId": 11000050, // timer 1
+                            "state": "ZERO",
+                            "targetId": 11000051, // timer 2
+                            "message": "RESET_AND_START"
+                        },
+
+                        // start each platform after an increasingly longer delay
+                        {
+                            "senderId": 11000051, // timer 2
+                            "state": "ZERO",
+                            "targetId": 11000049, // blocker
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 11000051, // timer 2
+                            "state": "ZERO",
+                            "targetId": 10000495, // platform 1
+                            "message": "START"
+                        },
+                        {
+                            "senderId": 11000051, // timer 2
+                            "state": "ZERO",
+                            "targetId": 11000052, // timer 3
+                            "message": "RESET_AND_START"
+                        },
+                        
+                        {
+                            "senderId": 11000052, // timer 3
+                            "state": "ZERO",
+                            "targetId": 10000496, // platform 2
+                            "message": "START"
+                        },
+                        {
+                            "senderId": 11000052, // timer 3
+                            "state": "ZERO",
+                            "targetId": 11000053, // timer 4
+                            "message": "RESET_AND_START"
+                        },
+                        
+                        {
+                            "senderId": 11000053, // timer 4
+                            "state": "ZERO",
+                            "targetId": 10000497, // platform 3
+                            "message": "START"
+                        },
+                        {
+                            "senderId": 11000053, // timer 4
+                            "state": "ZERO",
+                            "targetId": 11000054, // timer 5
+                            "message": "RESET_AND_START"
+                        },
+                        
+                        {
+                            "senderId": 11000054, // timer 5
+                            "state": "ZERO",
+                            "targetId": 10000498, // platform 4
+                            "message": "START"
+                        },
+                        {
+                            "senderId": 11000054, // timer 5
+                            "state": "ZERO",
+                            "targetId": 11000055, // timer 6
+                            "message": "RESET_AND_START"
+                        },
+                        
+                        {
+                            "senderId": 11000055, // timer 6
+                            "state": "ZERO",
+                            "targetId": 10000499, // platform 5
+                            "message": "START"
                         }
                     ],
                     "deleteIds": [
@@ -18744,9 +18908,9 @@
                         {
                             "id": 11000045,
                             "position": [
-                                -376.1673,
-                                210.7061,
-                                -13.9633
+                                -380.7694,
+                                197.9592,
+                                -14
                             ],
                             "type": "Nothing",
                             "hudmemoText": " ",
