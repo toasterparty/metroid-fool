@@ -16,6 +16,12 @@ Dash off the lower grapple point towards the higher one using the "starting to g
 ```
 Scan the Adult Sheegoth to change the lock-on target to its head and use charged Power Beam shots.
 ```
+</details>
+
+<details>
+  <summary>I'm having trouble reaching the bomb slot in Geothermal Core</summary>
+
+[Video](https://youtu.be/jFT7EnUKWmQ)
 
 </details>
 
