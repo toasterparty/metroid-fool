@@ -41,7 +41,7 @@
         "shootInGrapple": true,
         "patchWallcrawling": true,
         // TODO: Debug
-        "startingRoom": "Phazon Mines:Metroid Quarantine A",
+        "startingRoom": "Tallon Overworld:Temple Lobby",
         "startingItems": {
             "powerBeam": true,
             "ice": true,
@@ -145,7 +145,7 @@
             "Artifact of Strength": "I would not put a theif in my mouth to steal my &push;&main-color=#43CD80;Artifact of Strength&pop;\n - William Shakespeare",
             "Artifact of Sun": "We aren't on speaking terms right now. Not until you return the &push;&main-color=#43CD80;Artifact of Sun&pop; to where you stole it.",
             "Artifact of Warrior": "What kind of person even steals something like &push;&main-color=#43CD80;Artifact of Warrior&pop;? Was it fun? I hope you die.",
-            "Artifact of Wild": "Descrated this sacred place with your sticky hands. &push;&main-color=#43CD80;Artifact of Wild&pop; must find peace for cradle unfurl.",
+            "Artifact of Wild": "Descrated this sacred place with your sticky hands. &push;&main-color=#43CD80;Artifact of Wild&pop; must be restored to keep peace.",
             "Artifact of World": "Return the &push;&main-color=#43CD80;Artifact of World&pop;, then eat a bag of dicks."
         }
     },
@@ -156,6 +156,16 @@
         "iceBreakJumpCount": 20
     },
     "strg": {
+        "1979224398": [
+            "Chozo script translated.",
+            "Statuary",
+            "A statue is a free-standing sculpture in which the realistic, full-length figures of persons or animals are carved or cast in a durable material such as wood, metal or stone. Typical statues are life-sized or close to life-size; a sculpture that represents persons or animals in full figure but that is small enough to lift and carry is a statuette or figurine, whilst one more than twice life-size is a colossal statue.[1]\n\nStatues have been produced in many cultures from prehistory to the present; the oldest-known statue dating to about 30,000 years ago. Statues represent many different people and animals, real and mythical. Many statues are placed in public places as public art. The world's tallest statue, Statue of Unity, is 182 metres (597 ft) tall and is located near the Narmada dam in Gujarat, India.\n\nFor other uses, see Statue (disambiguation).\nNot to be confused with statute."
+        ],
+        "2745266771": [
+            "Chozo script translated.",
+            "Binding",
+            "The congregation of Artifacts that hold the Great Poison at bay still hold strong. Agnostic to the potential within the Artifact Temple, the unincorporated freelance work group known as the Space Pirates haven't given it much special attention. Regardless, we scattered the Artifacts across the planet for the protection of any who visit this sacred planet. Those who fail to understand them will seek to unmake. Great power sleeps inside them. Prophecy calls for union, but only through the eradication of that unholy Worm. We can only hope the Artifacts are not displaced, for then it would be, like, really inconvenient. So, we do what we can to preserve the Artifacts, and to guide The Baby away from them. Time wanes with our souls. It also wanes with direct to television movies."
+        ],
         "2094006101": [
             "Morphology: Thardus\nOne angry motherfuggin rock.",
             "Thardus",
