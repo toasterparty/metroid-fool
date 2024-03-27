@@ -41,33 +41,33 @@
         "shootInGrapple": true,
         "patchWallcrawling": true,
         // TODO: Debug
-        "startingRoom": "Tallon Overworld:Landing Site",
+        "startingRoom": "Tallon Overworld:Artifact Temple",
         "startingItems": {
             "powerBeam": true,
-            "ice": false,
+            "ice": true,
             "wave": true,
-            "plasma": false,
-            "missiles": 50,
+            "plasma": true,
+            "missiles": 70,
             "scanVisor": true,
             "bombs": true,
-            "powerBombs": 0,
-            "flamethrower": false,
-            "thermalVisor": false,
+            "powerBombs": 8,
+            "flamethrower": true,
+            "thermalVisor": true,
             "charge": true,
             "superMissile": true,
             "grapple": true,
-            "xray": false,
-            "iceSpreader": false,
-            "spaceJump": false,
+            "xray": true,
+            "iceSpreader": true,
+            "spaceJump": true,
             "morphBall": true,
             "combatVisor": true,
             "boostBall": true,
             "spiderBall": true,
-            "gravitySuit": false,
+            "gravitySuit": true,
             "variaSuit": true,
-            "phazonSuit": false,
-            "energyTanks": 4,
-            "wavebuster": false
+            "phazonSuit": true,
+            "energyTanks": 14,
+            "wavebuster": true
         },
         // "startingRoom": "Tallon Overworld:Landing Site",
         // "startingMemo": "         ',               \n      .-`-,\\__            \n        .\"`   `,          \n      .'_.  ._  `;.       \n  __ / `      `  `.\\ .--. \n /--,| 0)   0)     )`_.-,)\n|    ;.-----.__ _-');   / \n '--./         `.`/  `\"`  \n    :   '`      |.        \n    | \\     /  //         \n     \\ '---'  /'          \n      `------' \\          \n       _/       `--...    \n",
@@ -1286,7 +1286,7 @@
                             "position": [43, -287, -192.6],
                             "scale": [45, 45, 110],
                             "flags": 8193, // Detect Player | Apply Force
-                            "force": [0, 0, 1100]
+                            "force": [0, 0, 1250]
                         },
                         // final correct answer
                         {
@@ -1318,14 +1318,14 @@
                         {
                             "layer": 2,
                             "position": [43, -286.6, -216],
-                            "scale": [50, 8.5, 0.5],
-                            "texture": "Crater"
+                            "scale": [50, 7.2, 0.2],
+                            "texture": "Snow"
                         },
                         {
                             "layer": 2,
                             "position": [43, -286.6, -190],
-                            "scale": [50, 8.5, 0.5],
-                            "texture": "Crater"
+                            "scale": [50, 7.2, 0.2],
+                            "texture": "Snow"
                         }
                     ],
                     "bombSlots": [
@@ -1739,7 +1739,7 @@
                         {
                             "id": 10000061,
                             "type": "EscapeSequence",
-                            "unknown2": 300 // Time (Seconds)
+                            "unknown2": 360 // Time (Seconds)
                         },
                         {
                             "id": 10000066,
@@ -1904,7 +1904,7 @@
                     "liquids": [
                         {
                             "position": [43.2, -291.3, -377.1],
-                            "scale": [100, 110, 5],
+                            "scale": [100, 110, 6.5],
                             "type": "Phazon"
                         }
                     ],
@@ -1917,7 +1917,8 @@
                     "editObjs": {
                         "721026": { // essence
                             "health": 2,
-                            "speed": 4
+                            "speed": 4,
+                            "damage": 0.7
                         }
                     },
                     "blocks": [
@@ -14924,9 +14925,9 @@
                         {
                             "id": 10000588,
                             "active": true,
-                            "position": [162.2, 7, -148.1],
-                            "scale": [5, 20, 1],
-                            "texture": "Mine"
+                            "position": [162.2, 7, -149.5],
+                            "scale": [7.5, 20, 1],
+                            "texture": "Snow"
                         },
                         {
                             "id": 10000590,
@@ -14966,6 +14967,11 @@
                         {
                             "position": [129.3, -12.5, -131.2],
                             "scale": [4, 40, 30],
+                            "texture": "Mine"
+                        },
+                        {
+                            "position": [110.8, -26.8, -153.0],
+                            "scale": [15, 25, 1],
                             "texture": "Mine"
                         }
                     ],
@@ -20156,6 +20162,15 @@
                             "modalHudmemo": true
                         }
                     ],
+                    "blocks": [
+                        {
+                            "id": 10000825,
+                            "active": false,
+                            "position": [31.4928, 360.14621, -110.228294],
+                            "scale": [1.5, 18, 13],
+                            "texture": "Crater"
+                        }
+                    ],
                     "specialFunctions": [
                         {
                             "id": 10000155,
@@ -20209,6 +20224,13 @@
                         }
                     ],
                     "addConnections": [
+                        /* Block backtrack but only once */
+                        {
+                            "senderId": 10000154,
+                            "state": "ARRIVED",
+                            "targetId": 10000825,
+                            "message": "ACTIVATE"
+                        },
                         /* Fade Light */
                         {
                             "senderId": 10000517,
@@ -20383,7 +20405,7 @@
                     "pickups": [
                         {
                             "type": "Health Refill",
-                            "currIncrease": 235,
+                            "currIncrease": 225,
                             "maxIncrease": 0,
                             "respawn": true
                         }
@@ -20527,7 +20549,7 @@
                     "pickups": [
                         {
                             "type": "Health Refill",
-                            "currIncrease": 235,
+                            "currIncrease": 225,
                             "maxIncrease": 0,
                             "respawn": true
                         }
@@ -21161,7 +21183,12 @@
                             "targetId": 10000523,
                             "message": "PLAY"
                         }
-                    ]
+                    ],
+                    "editObjs": {
+                        "2359779": { // final spider waypoint
+                            "position": [16.2391, 124.1915, 33.6745]
+                        }
+                    }
                 },
                 "Great Tree Chamber": {
                     "pickups": [
@@ -23080,7 +23107,7 @@
                     ],
                     "editObjs": {
                         "1310724": { // poison water
-                            "damage": 0.25
+                            "damage": 0.125
                         },
                         "1310800": {
                             "speed": 3
@@ -25696,11 +25723,11 @@
                             "position": [467.6, 5, 45.6]
                         },
                         "2687190": { // Actor - Symbol Glow Key 2
-                            "position": [448.1891, 99.1347, 23.5995],
-                            "rotation": [-36.94, 0, 0]
+                            "position": [448.0, 95.6, 21.1],
+                            "rotation": [-60.44, 0, 0]
                         },
                         "2686984": { // Point Of Interest Symbol 2
-                            "position": [448.1891, 100.0347, 23.2995]
+                            "position": [448.0, 96.2, 20.8]
                         },
                         "2687207": { // Actor - Symbol Glow Key 3
                             "position": [424.1, 78.8, 19.4],
@@ -26128,6 +26155,13 @@
                             "position": [762.4, -90.7, 69.4],
                             "scale": [8, 3, 1],
                             "texture": "Sandstone"
+                        },
+                        {
+                            "id": 10000823,
+                            "active": false,
+                            "position": [751.5, -80.4, 50.7],
+                            "scale": [1, 5, 5],
+                            "texture": "Sandstone"
                         }
                     ],
                     "timers": [
@@ -26136,9 +26170,46 @@
                             "layer": 2,
                             "time": 1,
                             "startImmediately": true
+                        },
+                        {
+                            "id": 10000824,
+                            "layer": 2,
+                            "time": 0.5,
+                            "startImmediately": true,
+                            "looping": true
+                        }
+                    ],
+                    "specialFunctions": [
+                        {
+                            "id": 10000822,
+                            "type": "PlayerInAreaRelay"
+                        }
+                    ],
+                    "lockOnPoints": [
+                        {
+                            "position": [762.2847, -68.3511, 73.058]
                         }
                     ],
                     "addConnections": [
+                        /* Lock the player in until they figure it out */
+                        {
+                            "senderId": 10000822,
+                            "state": "ENTERED",
+                            "targetId": 10000823,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000824,
+                            "state": "ZERO",
+                            "targetId": 10000822,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000824,
+                            "state": "ZERO",
+                            "targetId": 10000823,
+                            "message": "DEACTIVATE"
+                        },
                         /* Activate piston without cutscene or timer */
                         {
                             "senderId": 10000558,
@@ -26160,6 +26231,7 @@
                         }
                     ],
                     "deleteIds": [
+                        3474035, 3474360, 3474036, 3474034, 3474037, // bomb slot
                         3474212 // player hint (no unmorph)
                     ]
                 },
