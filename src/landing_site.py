@@ -396,6 +396,23 @@ assert len(ROOM_IDS) == sum(len(ROOMS) for _, _, ROOMS in REGIONS)
 data['layers'] = {
     # True for debug
     layer: False,
+    12: False, # ridley dead
+}
+
+pickup_id = 11000046
+data['pickups'].append(
+    {
+        'id': pickup_id,
+        'position': [-392.5887, 395.6094, -14.59],
+        'type': 'Nothing',
+        'hudmemoText': '',
+        'scanText': 'Warp to Escape Sequence',
+        'respawn': True,
+        'destination': 'Impact Crater:Metroid Prime Lair',
+    }
+)
+data['editObjs'][pickup_id] = {
+    "layer": 12
 }
 
 # Create helper relays

@@ -41,7 +41,7 @@
         "shootInGrapple": true,
         "patchWallcrawling": true,
         // TODO: Debug
-        "startingRoom": "credits",
+        "startingRoom": "Tallon Overworld:Alcove",
         "startingItems": {
             "powerBeam": true,
             "ice": true,
@@ -15488,6 +15488,19 @@
                             "type": "Nothing"
                         },
                         {
+                            "id": 11000046,
+                            "position": [
+                                -392.5887,
+                                395.6094,
+                                -14.59
+                            ],
+                            "type": "Nothing",
+                            "hudmemoText": "",
+                            "scanText": "Warp to Escape Sequence",
+                            "respawn": true,
+                            "destination": "Impact Crater:Metroid Prime Lair"
+                        },
+                        {
                             "id": 10000782,
                             "position": [
                                 -369.6044,
@@ -16632,6 +16645,9 @@
                         },
                         "557": {
                             "layer": 4
+                        },
+                        "11000046": {
+                            "layer": 12
                         }
                     },
                     "addConnections": [
@@ -17835,7 +17851,8 @@
                         611
                     ],
                     "layers": {
-                        "11": false
+                        "11": false,
+                        "12": false
                     }
                 },
                 "Gully": {
@@ -18720,6 +18737,24 @@
                     ]
                 },
                 "Temple Security Station": {
+                    "layers": {
+                        "12": false
+                    },
+                    "pickups": [
+                        {
+                            "id": 11000045,
+                            "position": [
+                                -376.1673,
+                                210.7061,
+                                -13.9633
+                            ],
+                            "type": "Nothing",
+                            "hudmemoText": " ",
+                            "scanText": "Warp to End Sequence",
+                            "respawn": true,
+                            "destination": "End Cinema:End Cinema"
+                        }
+                    ],
                     "doors": {
                         "1": {
                             "shieldType": "Blue",
@@ -18753,6 +18788,9 @@
                         }
                     ],
                     "editObjs": {
+                        "11000045": {
+                            "layer": 12
+                        },
                         "458855": {
                             "position": [-382.9742, 209.5879, -13.028]
                         }
@@ -19610,6 +19648,24 @@
                             "type": "ScriptLayerController",
                             "layerChangeRoomId": 2414967056, // landing site
                             "layerChangeLayerId": 11 // flyable ship
+                        },
+                        {
+                            "id": 11000042,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 2414967056, // landing site
+                            "layerChangeLayerId": 12 // ridley dead
+                        },
+                        {
+                            "id": 11000047,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 1715121879, // temple security station
+                            "layerChangeLayerId": 12 // ridley dead
+                        },
+                        {
+                            "id": 11000044,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3442151074, // artifact temple
+                            "layerChangeLayerId": 24 // ridley
                         }
                     ],
                     "relays": [
@@ -19918,6 +19974,25 @@
                             "state": "INACTIVE",
                             "targetId": 11000081, // spawn point
                             "message": "SET_TO_ZERO"
+                        },
+                        // When ridley falls into the crater, change a few more layers
+                        {
+                            "senderId": 1049922, // camera 12
+                            "state": "INACTIVE",
+                            "targetId": 11000042,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1049922, // camera 12
+                            "state": "INACTIVE",
+                            "targetId": 11000047,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1049922, // camera 12
+                            "state": "INACTIVE",
+                            "targetId": 11000044,
+                            "message": "DECREMENT"
                         }
                     ],
                     "deleteIds": [
@@ -26581,7 +26656,68 @@
         "End Cinema": {
             "rooms": {
                 "End Cinema": {
-
+                    "triggers": [
+                        {
+                            "id": 1103,
+                            "active": false,
+                            "scale": [80, 80, 80]
+                        }
+                    ],
+                    "pickups": [
+                        {
+                            "type": "Nothing",
+                            "position": [0.0284, 30.833, 15.4761],
+                            "destination": "Tallon Overworld:Landing Site",
+                            "scanText": "I want to hunt for shinies, improve my escape sequence time or improve my phazon frigate hell-run",
+                            "hudmemoText": " ",
+                            "respawn": true
+                        },
+                        {
+                            "id": 10000826,
+                            "type": "Nothing",
+                            "position": [1.74, -52.2064, -6.5828],
+                            "scanText": "I want to get off this god forsaken planet already",
+                            "hudmemoText": " ",
+                            "respawn": true
+                        },
+                        {
+                            "type": "Boost Ball",
+                            "position": [-30.6577, -39.195, -7.0863]
+                        }
+                    ],
+                    "specialFunctions": [
+                        {
+                            "id": 10000827,
+                            "type": "SaveStation"
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 10000828,
+                            "time": 0.1,
+                            "startImmediately": true
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 10000826,
+                            "state": "ARRIVED",
+                            "targetId": 1103,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000828, // timer
+                            "state": "ZERO",
+                            "targetId": 10000827, // save station
+                            "message": "ACTION"
+                        },
+                        {
+                            "senderId": 10000827, // save station
+                            "state": "ZERO", // "No"
+                            "targetId": 10000828, // timer
+                            "message": "RESET_AND_START"
+                        }
+                    ]
                 }
             }
         }
