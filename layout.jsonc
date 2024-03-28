@@ -41,7 +41,7 @@
         "shootInGrapple": true,
         "patchWallcrawling": true,
         // TODO: Debug
-        "startingRoom": "Tallon Overworld:Temple Lobby",
+        "startingRoom": "Chozo Ruins:Training Chamber Access",
         "startingItems": {
             "powerBeam": true,
             "ice": true,
@@ -156,6 +156,9 @@
         "iceBreakJumpCount": 20
     },
     "strg": {
+        "3396914304": [
+            "Tower of Darkness"
+        ],
         "1979224398": [
             "Chozo script translated.",
             "Statuary",
@@ -9512,6 +9515,11 @@
                         {
                             "position": [212.6, -1221.8, 13.8],
                             "scale": [10, 1, 6],
+                            "texture": "Snow"
+                        },
+                        {
+                            "position": [257, -1220.9, 15.2],
+                            "scale": [8, 5, 1],
                             "texture": "Snow"
                         }
                     ],
@@ -22081,6 +22089,20 @@
                             "blastShieldType": "Missile"
                         }
                     },
+                    "removeConnections": [
+                        {
+                            "senderId": 132062, // grapple trigger
+                            "state": "EXITED",
+                            "targetId": 132057, // grapple point
+                            "message": "DEACTIVATE"
+                        }
+                    ],
+                    "specialFunctions": [
+                        {
+                            "id": 10000831,
+                            "type": "PlayerInAreaRelay"
+                        }
+                    ],
                     "editObjs": {
                         "131877": { // door open trigger
                             "scale": [25, 15, 10]
@@ -22394,6 +22416,13 @@
                         }
                     ],
                     "addConnections": [
+                        // activate grapple
+                        {
+                            "senderId": 10000831,
+                            "state": "ENTERED",
+                            "targetId": 132057,
+                            "message": "ACTIVATE"
+                        },
                         // Unblock ruined shrine
                         {
                             "senderId": 131742, // Half-Pipe Pickup Relay
@@ -23039,24 +23068,95 @@
                 "Training Chamber Access": {
                     "pickups": [
                         {
-                            "type": "Super Missile"
+                            "type": "Super Missile",
+                            "position": [121.7557, -186.08, 18.8]
+                        }
+                    ],
+                    "liquids": [
+                        {
+                            "id": 10000829,
+                            "type": "Lava",
+                            "position": [95.549, -187.9928, 21.69],
+                            "scale": [8.325989, 10.515991, 7.493999]
+                        }
+                    ],
+                    "editObjs": {
+                        "10000829": {
+                            "damage": 0.5
+                        }
+                    },
+                    "specialFunctions": [
+                        {
+                            "id": 10000830,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 1737159259, // training chamber access
+                            "layerChangeLayerId": 2 // jail bars
                         }
                     ],
                     "doors": {
                         "0": {
-                            "shieldType": "Super Missile",
-                            "blastShieldType": "Super Missile"
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
                         },
                         "1": {
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    }
+                    },
+                    "blocks": [
+                        {
+                            "id": 10000832,
+                            "layer": 2,
+                            "position": [120.5, -192.1, 20.7],
+                            "scale": [0.5, 0.5, 10],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "id": 10000833,
+                            "layer": 2,
+                            "position": [122.0, -192.1, 20.7],
+                            "scale": [0.5, 0.5, 10],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "id": 10000834,
+                            "layer": 2,
+                            "position": [123.5, -192.1, 20.7],
+                            "scale": [0.5, 0.5, 10],
+                            "texture": "Sandstone"
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 1179651,
+                            "state": "ARRIVED",
+                            "targetId": 10000830,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 1179651,
+                            "state": "ARRIVED",
+                            "targetId": 10000832,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 1179651,
+                            "state": "ARRIVED",
+                            "targetId": 10000833,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 1179651,
+                            "state": "ARRIVED",
+                            "targetId": 10000834,
+                            "message": "DECREMENT"
+                        }
+                    ]
                 },
                 "Arboretum": {
                     "doors": {
                         "0": {
-                            "shieldType": "Wave Beam",
+                            "shieldType": "Ice Beam",
                             "blastShieldType": "None"
                         },
                         "2": {
@@ -23198,8 +23298,8 @@
                     },
                     "doors": {
                         "0": {
-                            "shieldType": "Super Missile",
-                            "blastShieldType": "Super Missile"
+                            "shieldType": "Blue",
+                            "blastShieldType": "None"
                         }
                     },
                     "superheated": false,
@@ -23530,7 +23630,12 @@
                         "1376288": { // ring3
                             "position": [-223.5478, -11.3854, 80.3134],
                             "rotation": [71.479958, -8.699998, 76.649933]
-                        }
+                        },
+                        // damageable triggers
+                        "1376262": { "vulnerability": "Phazon" },
+                        "1376281": { "vulnerability": "Phazon" },
+                        "1376291": { "vulnerability": "Phazon" },
+                        "1376302": { "vulnerability": "Phazon" }
                     },
                     "removeConnections": [
                         {
@@ -23621,7 +23726,7 @@
                 "Sunchamber Lobby": {
                     "doors": {
                         "0": {
-                            "shieldType": "Wave Beam",
+                            "shieldType": "Ice Beam",
                             "blastShieldType": "None"
                         },
                         "1": {
