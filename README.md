@@ -4,6 +4,12 @@
 
 Experience Metroid Prime like never before by subjecting yourself to my creation centered around one brutally honest pillar - ***Subverted Expectations***. Re-discover Tallon IV as it has been stuffed with perplexing puzzles, jovial japes and even a few sacrilegious stinkers. Do you have what it takes to endure them all?
 
+## Changelog
+
+### v1.0
+
+- Initial release
+
 ## [🎞️ Trailer](http://example.com)
 
 ## [⬇️ Download](http://example.com)
@@ -40,6 +46,6 @@ View this only if you are compeltely lost or have already finished the game.
 | **Fanhack Tool Development** | *toasterparty and [contributors](https://github.com/randovania/randomprime/graphs/contributors)* |
 | **Fanhack Author** | *toasterparty* |
 | **Puzzle Assistant** | *UncleReggie* |
-| **Playtester** | *UncleReggie* |
+| **Playtester** | *UncleReggie BajaBlood Lokir* |
 
 *From the bottom of my breadcrumb filled chrome coated heart: Thanks for Playing!*
