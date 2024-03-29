@@ -15,7 +15,7 @@
 
 ### Start
 
-- SJF Jumpscare
+- SJF Jumpscare to unlock Artifact Temple
 - Beetle Battles
 - **Ruined Shrine - Morph Ball**
 
@@ -28,6 +28,12 @@
 
 ### Sunchamber Requirements
 
+#### Bombs
+
+- Arboretum Scan Puzzle
+- Watery Hall Scan Puzzle
+- **Dynamo - Morph Ball Bomb**
+
 #### Grapple
 
 - NSJ Frigate Crash Site Climb
@@ -35,18 +41,12 @@
 - **Lake Tunnel - Grapple Beam**
 - Hive Mecha+
 
-#### Bombs
-
-- Arboretum Scan Puzzle
-- Watery Hall Scan Puzzle
-- **Dynamo - Morph Ball Bomb**
-
 ### Sunchamber
 
 - Transport Access North / Sun Tower Puzzles
 - Flaahgra+
 - **Sunchamber - Varia Suit**
-- **Sunchamber - Wild** (But there are no ghosts)
+- **Sunchamber - Wild**
 
 ### Journey to Phendrana
 
@@ -55,38 +55,38 @@
 
 ### Phendrana Mashup
 
-- Navigate complex room-rando maze
+- Early/Late phen room-rando labyrinth
 - **Phendrana Canyon - Charge Beam**
 - **Chozo Ice Temple - Bomb Slot Activated**
     - This unlocks a shortcut
 - **Security Cave - Unlock Shoreline Door**
-- Sheegoth Fight+
+- Chapel Fight+
 - **Chapel of the Elders - Boost Ball**
 
 ### Labs Requirements
 
 #### Wave Beam
 
-- Unlock Geothermal Core ceiling (requires grapple/boost). Wave Beam extends out with the piston.
+- Activate Geothermal Core bomb slot
 - **Geothermal Core - Wave Beam**
 
-#### Super Missiles
+#### Super Missile
 
-- Piston Tunnel / Training Chamber (requires requires grapple/boost)
-- **Training Chamber Access - Super Missiles**
+- Piston Tunnel -> Training Chamber
+- **Training Chamber Access - Super Missile**
 
 ### Labs
 
-- Ruined Courtyard puzzle (requires boost)
-- Wave + Supers required to enter labs
+- Reverse Ruined Courtyard puzzle
+- Power Specimen Storage Door
+- Dark Labs+
 - **Control Tower - Elder**
-- *Pike Access requires normal gravity to proceed*
 - **Research Core - Restore Gravity**
 
 ### Far Phendrana
 
 - **Storage Cave - Spirit**
-- *Elevator platform goes up instead of down and requires Spider Ball to reach*
+- *PoNR into Quarantine Cave Elevator (need spider to leave either direction)*
 
 ### Quarantine Cave
 
@@ -97,28 +97,30 @@
 
 - 1-way Ice Door to return to Late Magmoor
 - **Ruined Shrine (Spider Track) - Ice Beam**
+    - *Opens shortcut to bypass labs*
 
 ### Early Mines
 
 - **Elite Research - Warrior**
 - Dynamo Maze+
-- **Central Dynamo - Power Bombs**
-    - Unlock shortcut: Warrior Shrine <-> Fiery Shores
+- **Central Dynamo - Power Bomb**
+    - Unlock shortcut: Warrior Shrine -> Fiery Shores
 
 ### Plasma Beam
 
 - Geothermal Core Spider Track
 - **Plasma Processing - Plasma Beam**
-- Reggie's Geothermal Core Morph track from hell
+    - Unlock shortcut: Fiery Shores -> Warrior Shrine
+- Geothermal Core Morph Track
 - **Gully - Gravity Suit**
-- **Ice Ruins East - X-Ray** (Disguised as Space Jump Boots)
+- **Ice Ruins East - X-Ray Visor** (Disguised as Space Jump Boots)
 - **Chozo Ice Temple - Sun**
 
 ### Late Mines
 
 - **Missile Station Mines - Thermal Visor**
 - Omega Pirate+
-- **Elite Quarters - Space Jump**
+- **Elite Quarters - Space Jump Boots**
 - **Phazon Mining Tunnel - Newborn**
 
 ### Cleanup
@@ -126,9 +128,9 @@
 - **Tower of Light - Wavebuster**
 - **Burn Dome - Flamethrower**
     - Unlocks PB Expansion in Storage Cavern
-- Crossway Puzzle (requires SJ)
+- Crossway Puzzle/Dash (Requires SJ)
 - **Elder Chamber - Spirit**
-- Great Tree Hall Climb (requires Gravity Suit)
+- Great Tree Hall Climb (Requires Gravity Suit)
 - **Life Grove - Ice Spreader**
 - **Life Grove - Unclog Drain**
 - **Life Grove - Chozo**
@@ -136,7 +138,7 @@
 ### Phazon Frigate
 
 - Hydro Access Tunnel (requires Wavebuster, Flamethrower and "Unclogged Drain")
-- 1-way Phazon hell run
+- Phazon Hell Run
 - **Reactor Core - Glorgsmire Gumpybottom's Keyring**
 
 ### Artifact Return Policy
@@ -154,6 +156,7 @@
     - **Spirit**: It's an annoying room to reach
     - **Warrior**: Phazon Elite active
     - **Newborn**: Blocks require power bombs
+- I like to give players a lollipop after punching them in the face so you can have your Ship back and I upgraded it so it can fly to/from any elevator in any region
 
 ### Bosses
 

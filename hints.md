@@ -5,7 +5,7 @@
   <summary>I'm having trouble in Hunter Cave</summary>
 
 ```
-Dash off the lower grapple point towards the higher one using the "starting to grapple" animation instead of scan dashing. Once in the air, look up as quickly as possible to grab onto the 2nd grapple point.
+Dash off the lower grapple point towards the higher one using the "starting to grapple" animation instead of scan dashing. Once in the air, look up as quickly as possible to grab onto the 2nd grapple point. This is called "Grapple Dashing"
 ```
 
 </details>
@@ -34,9 +34,9 @@ To progress beyond Ruined Courtyard you need:
 - Super Missiles
 - Wave Beam
 
-Boost Ball can be found in Phendrana
-Super Missiles can be found in a room with pistons
-Wave Beam can be found in a room with spinners
+Boost Ball can be found in Phendrana Drifts
+Super Missiles can be found in Chozo Ruins
+Wave Beam can be found in Magmoor Caverns
 ```
 
 </details>

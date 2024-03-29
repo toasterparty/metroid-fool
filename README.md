@@ -10,7 +10,7 @@ Experience Metroid Prime like never before by subjecting yourself to my creation
 
 - Initial release
 
-## [🎞️ Trailer](http://example.com)
+## [🎞️ Trailer](https://youtu.be/gRhfCjEgMKI)
 
 ## [⬇️ Download](http://example.com)
 
@@ -46,6 +46,6 @@ View this only if you are compeltely lost or have already finished the game.
 | **Fanhack Tool Development** | *toasterparty and [contributors](https://github.com/randovania/randomprime/graphs/contributors)* |
 | **Fanhack Author** | *toasterparty* |
 | **Puzzle Assistant** | *UncleReggie* |
-| **Playtester** | *UncleReggie BajaBlood Lokir* |
+| **Playtester** | *BajaBlood Lokir UncleReggie* |
 
 *From the bottom of my breadcrumb filled chrome coated heart: Thanks for Playing!*
