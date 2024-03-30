@@ -41,7 +41,7 @@
         "shootInGrapple": true,
         "patchWallcrawling": true,
         // TODO: Debug
-        "startingRoom": "Phendrana Drifts:Transport Access",
+        "startingRoom": "Magmoor Caverns:Geothermal Core",
         "startingItems": {
             "powerBeam": true,
             "ice": true,
@@ -63,7 +63,7 @@
             "combatVisor": true,
             "boostBall": true,
             "spiderBall": true,
-            "gravitySuit": true,
+            "gravitySuit": false,
             "variaSuit": true,
             "phazonSuit": true,
             "energyTanks": 14,
@@ -11528,26 +11528,30 @@
                     "superheated": true,
                     "layers": {
                         // TIP: In Visual Studio Code, you can press "CTRL + SHIFT + C" to comment/uncomment multiple lines at once
-
                         /* These layers never change */
-                        "1": true,  // lava hamburgers
-                        "2": true,  // puzzle enemies
-                        "6": false, // Unused puffers (unless you want them)
+                        "1": true, // lava hamburgers
+                        "2": true, // puzzle enemies
 
                         /* Uncomment this section to test 1st pass (a.k.a final release) */
                         "3": true,  // Unsolved Puzzle
                         "4": false, // Solved Puzzle
-                        "7": false  // Morph Ball Escape Puzzle
+                        "6": false, // Unused puffers
+                        "7": false, // Morph Ball Escape Puzzle
+                        "20": true  // Spider Track Stuff
 
                         /* Uncomment this section to test 2nd pass */
                         // "3": false, // Unsolved Puzzle
                         // "4": true,  // Solved Puzzle
-                        // "7": false  // Morph Ball Escape Puzzle
+                        // "6": false, // Unused puffers
+                        // "7": false, // Morph Ball Escape Puzzle
+                        // "20": true  // Spider Track Stuff
 
                         /* Uncomment this section to test 3rd pass */
                         // "3": false, // Unsolved Puzzle
                         // "4": true,  // Solved Puzzle
-                        // "7": true   // Morph Ball Escape Puzzle
+                        // "6": true,  // Unused puffers
+                        // "7": true,  // Escape Puzzle
+                        // "20": false // Spider Track Stuff
                     },
                     "doors": {
                         "0": {
@@ -11563,7 +11567,11 @@
                         {
                             "id": 10000127,
                             "type": "Wave Beam",
-                            "position": [388.1364, -811.821, 82.2]
+                            "position": [
+                                388.1364,
+                                -811.821,
+                                82.2
+                            ]
                         },
                         {
                             "id": 10000132,
@@ -11573,7 +11581,11 @@
                             "currIncrease": 400,
                             "scanText": "Drain Lava",
                             "hudmemoText": "Lava Drained!",
-                            "position": [434.7, -847.9, 84.0]
+                            "position": [
+                                434.7,
+                                -847.9,
+                                84.0
+                            ]
                         }
                     ],
                     "specialFunctions": [
@@ -11592,13 +11604,29 @@
                         }
                     ],
                     "cameraHints": [
-                        {
+                        { //big puzzle, needs to cover whole uppser section of the room!! Start back here
                             "layer": 7,
                             "behavior": 4,
-                            "triggerPos": [385.02, -846.8, 107.9],
-                            "triggerScale": [116.60, 75.15, 50],
-                            "cameraPos": [387.74, -833.06, 102.66],
-                            "cameraRot": [0, 0, 0]
+                            "triggerPos": [
+                                381.2,
+                                -842.4,
+                                101.3
+                            ],
+                            "triggerScale": [
+                                125,
+                                100,
+                                100
+                            ],
+                            "cameraPos": [
+                                387.74,
+                                -833.06,
+                                102.66
+                            ],
+                            "cameraRot": [
+                                0,
+                                0,
+                                0
+                            ]
                         }
                     ],
                     "streamedAudios": [
@@ -11612,11 +11640,19 @@
                     "lockOnPoints": [
                         {
                             "layer": 3, // "Puzzle Unsolved"
-                            "position": [413.4, -835.4, 82]
+                            "position": [
+                                413.4,
+                                -835.4,
+                                82
+                            ]
                         },
                         {
                             "layer": 3, // "Puzzle Unsolved"
-                            "position": [368.9, -836.9, 82],
+                            "position": [
+                                368.9,
+                                -836.9,
+                                82
+                            ],
                             "isGrapple": true
                         }
                     ],
@@ -11625,143 +11661,1239 @@
                             "id": 10000131,
                             "layer": 7,
                             "type": "Lava",
-                            "position": [385.92, -847.80, 47.7],
-                            "scale": [99.11, 69.49, 50]
+                            "position": [
+                                385.92,
+                                -847.80,
+                                47.7
+                            ],
+                            "scale": [
+                                99.11,
+                                69.49,
+                                50
+                            ]
+                        },
+                        {
+                            "layer": 7,
+                            "type": "Lava",
+                            "position": [377.4, -884.5, 85.6],
+                            "scale": [2, 3, 8.5]
                         }
                     ],
                     "blocks": [
+                        { // my work: boxes bar
+                            "position": [
+                                344.5,
+                                -822.5,
+                                97.9
+                            ],
+                            "scale": [
+                                5,
+                                0.2,
+                                0.2
+                            ],
+                            "texture": "Mine",
+                            "layer": 7
+                        },
+                        { // item shell 1
+                            "position": [
+                                437.3,
+                                -846.5,
+                                90
+                            ],
+                            "scale": [
+                                18,
+                                13,
+                                1
+                            ],
+                            "texture": "Mine",
+                            "layer": 7
+                        },
+                        { // item shell 2
+                            "position": [
+                                437.3,
+                                -851.9,
+                                92.6
+                            ],
+                            "scale": [
+                                18,
+                                1,
+                                22.5
+                            ],
+                            "texture": "Mine",
+                            "layer": 7
+                        },
+                        { // Wave bar 1
+                            "position": [
+                                394.8,
+                                -809.7,
+                                87.8
+                            ],
+                            "scale": [
+                                0.2,
+                                5,
+                                0.2
+                            ],
+                            "texture": "Mine",
+                            "layer": 7
+                        },
+                        { // Wave bar 2
+                            "position": [
+                                394.8,
+                                -809.7,
+                                88.3
+                            ],
+                            "scale": [
+                                0.2,
+                                5,
+                                0.2
+                            ],
+                            "texture": "Mine",
+                            "layer": 7
+                        },
+                        { // Wave bar 3
+                            "position": [
+                                394.8,
+                                -809.7,
+                                88.8
+                            ],
+                            "scale": [
+                                0.2,
+                                5,
+                                0.2
+                            ],
+                            "texture": "Mine",
+                            "layer": 7
+                        },
+                        { // Catch plat
+                            "position": [
+                                343,
+                                -869.5,
+                                97.5
+                            ],
+                            "scale": [
+                                3,
+                                3,
+                                0.2
+                            ],
+                            "texture": "Mine",
+                            "layer": 7
+                        },
+                        { // Catch plat rim
+                            "position": [
+                                343,
+                                -868.6,
+                                97.7
+                            ],
+                            "scale": [
+                                3,
+                                0.2,
+                                0.2
+                            ],
+                            "texture": "Mine",
+                            "layer": 7
+                        },
+                        { // ramp dont fall through crack
+                            "position": [
+                                412.3,
+                                -881.7,
+                                88
+                            ],
+                            "scale": [
+                                0.8,
+                                0.8,
+                                5
+                            ],
+                            "texture": "Mine",
+                            "layer": 7
+                        },
+                        // yoku bounding wall 
                         {
-                            "position": [367.6552, -835.0, 44.158],
-                            "scale": [5, 5, 0.5],
+                            "layer": 7,
+                            "position": [361.7, -881.5, 93.7],
+                            "scale": [1, 5, 20],
+                            "texture": "Mine"
+                        },
+                        // yoku walls
+                        {
+                            "id": 10001083,
+                            "active": false,
+                            "layer": 7,
+                            "position": [357.3, -877.4, 96.5],
+                            "scale": [6, 6, 0.7],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "id": 10001084,
+                            "active": true,
+                            "layer": 7,
+                            "position": [357.3, -877.4, 94.2],
+                            "scale": [6, 6, 0.7],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "id": 10001085,
+                            "active": false,
+                            "layer": 7,
+                            "position": [357.3, -877.4, 91.9],
+                            "scale": [6, 6, 0.7],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "id": 10001086,
+                            "active": true,
+                            "layer": 7,
+                            "position": [357.3, -877.4, 89.9],
+                            "scale": [6, 6, 0.7],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "id": 10001087,
+                            "active": false,
+                            "layer": 7,
+                            "position": [357.3, -877.4, 87.7],
+                            "scale": [6, 6, 0.7],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "id": 10001088,
+                            "active": true,
+                            "layer": 7,
+                            "position": [357.3, -877.4, 85.3],
+                            "scale": [6, 6, 0.7],
+                            "texture": "Sandstone"
+                        },
+
+                        { // maze start
+                            "position": [
+                                429.2,
+                                -855.3,
+                                81.1
+                            ],
+                            "scale": [
+                                15,
+                                2.5,
+                                0.5
+                            ],
+                            "texture": "Mine",
+                            "layer": 7
+                        },
+                        { // maze 2
+                            "position": [
+                                422.7,
+                                -852.2,
+                                81.0
+                            ],
+                            "scale": [
+                                2,
+                                8,
+                                0.5
+                            ],
+                            "texture": "Mine",
+                            "layer": 7
+                        },
+                        { // maze 3
+                            "position": [
+                                418.7,
+                                -849.1,
+                                80.9
+                            ],
+                            "scale": [
+                                10,
+                                1.8,
+                                0.5
+                            ],
+                            "texture": "Mine",
+                            "layer": 7
+                        },
+                        { // maze 4
+                            "position": [
+                                414.6,
+                                -852.6,
+                                83.9
+                            ],
+                            "scale": [
+                                1.8,
+                                5,
+                                0.5
+                            ],
+                            "texture": "Mine",
+                            "layer": 7
+                        },
+                        { // maze 4.1
+                            "id": 8000018,
+                            "position": [
+                                414.6,
+                                -845.6,
+                                83.9
+                            ],
+                            "scale": [
+                                1.8,
+                                5,
+                                0.5
+                            ],
+                            "texture": "Mine",
+                            "layer": 7
+                        },
+                        { // maze 5
+                            "position": [
+                                413.1,
+                                -854.2,
+                                83.8
+                            ],
+                            "scale": [
+                                5,
+                                1.8,
+                                0.5
+                            ],
+                            "texture": "Mine",
+                            "layer": 7,
+                            "id": 15900500
+                        },
+                        { // maze 5.1
+                            "position": [
+                                413.1,
+                                -844.3,
+                                83.8
+                            ],
+                            "scale": [
+                                5,
+                                1.8,
+                                0.5
+                            ],
+                            "texture": "Mine",
+                            "layer": 7
+                        },
+                        { // maze 6
+                            "position": [
+                                398,
+                                -849.1,
+                                83.7
+                            ],
+                            "scale": [
+                                25,
+                                12,
+                                0.5
+                            ],
+                            "texture": "Mine",
+                            "layer": 7
+                        },
+                        { // toaster's
+                            "position": [
+                                367.6552,
+                                -835.0,
+                                44.158
+                            ],
+                            "scale": [
+                                5,
+                                5,
+                                0.5
+                            ],
                             "texture": "Mine"
                         },
                         {
-                            "position": [369.7552, -832.6, 45.858],
-                            "scale": [0.5, 0.5, 4],
+                            "position": [
+                                369.7552,
+                                -832.6,
+                                45.858
+                            ],
+                            "scale": [
+                                0.5,
+                                0.5,
+                                4
+                            ],
                             "texture": "Snow"
                         },
                         {
-                            "position": [382.2552, -845.9, 50.458],
-                            "scale": [0.5, 0.5, 0.5],
+                            "position": [
+                                382.2552,
+                                -845.9,
+                                50.458
+                            ],
+                            "scale": [
+                                0.5,
+                                0.5,
+                                0.5
+                            ],
                             "texture": "Snow"
                         },
                         // Block final spinner
                         {
-                            "position": [407.2, -866.3, 60.6],
-                            "scale": [3, 3, 3],
+                            "position": [
+                                407.2,
+                                -866.3,
+                                60.6
+                            ],
+                            "scale": [
+                                3,
+                                3,
+                                3
+                            ],
                             "texture": "Mine"
                         },
                         // Steps back up to start platform
                         {
-                            "layer": 7,
-                            "position": [380.4, -811.9, 83.0],
-                            "scale": [4, 4, 1],
+                            "position": [
+                                380.4,
+                                -811.9,
+                                84
+                            ],
+                            "scale": [
+                                4,
+                                4,
+                                1
+                            ],
                             "texture": "Snow"
                         },
                         {
-                            "layer": 7,
-                            "position": [374.7, -811.0, 86.7],
-                            "scale": [4, 4, 1],
+                            "position": [
+                                374.7,
+                                -811.0,
+                                86.7
+                            ],
+                            "scale": [
+                                4,
+                                4,
+                                1
+                            ],
                             "texture": "Snow"
                         },
                         // Floor cover
                         {
                             "layer": 7,
                             "id": 10000130,
-                            "position": [385.92, -847.80, 72],
-                            "scale": [99.11, 69.49, 0.7]
-                        },
-                        // Unmorph Check
-                        {
-                            "layer": 7,
-                            "position": [367.7, -817, 95.1],
-                            "scale": [20, 0.5, 5]
-                        },
-                        // TODO: MORPH BALL MAZE
-                        {
-                            "layer": 7,
-                            "position": [367.6, -831.8, 89.77],
-                            "scale": [5, 35, 0.5]
-                        },
-                        {
-                            "layer": 7,
-                            "position": [394.2, -847.1, 89.76],
-                            "scale": [60, 5, 0.5]
+                            "position": [
+                                385.92,
+                                -847.80,
+                                72
+                            ],
+                            "scale": [
+                                99.11,
+                                69.49,
+                                0.7
+                            ]
                         }
                     ],
                     "platforms": [
                         {
                             "id": 10000128,
                             "layer": 3, // "Puzzle Unsolved"
-                            "position": [409, -844, 61]
+                            "position": [
+                                409,
+                                -844,
+                                61
+                            ]
                         },
                         /* EXAMPLE CONTRAPTION */
                         {
                             "id": 8000001,
                             "layer": 7,
-                            "active": false,
+                            // "active": false,
                             "type": "LongBlock",
-                            "position": [368.1, -837.7, 91.5],
-                            "rotation": [90, 0, 0]
-                        }
+                            "position": [
+                                405.1,
+                                -842.9,
+                                85
+                            ],
+                            "rotation": [
+                                90,
+                                0,
+                                0
+                            ]
+                        },
+                        {
+                            "id": 8000009,
+                            "layer": 7,
+                            "type": "LongBlock",
+                            "position": [
+                                389.8,
+                                -842.9,
+                                85
+                            ],
+                            "rotation": [
+                                90,
+                                0,
+                                0
+                            ]
+                        },
                         /* END EXAMPLE */
+                        {
+                            "id": 8000016,
+                            "type": "Block",
+                            "position": [381.8, -848.6, 86]
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 15900000, // Cannon timer
+                            "layer": 7,
+                            "time": 2.5 // hi dad
+                        },
+                        // yoku
+                        {
+                            "id": 10001095,
+                            "layer": 7,
+                            "time": 0.5
+                        },
+                        {
+                            "id": 10001096,
+                            "layer": 7,
+                            "time": 0.5
+                        },
+                        {
+                            "id": 10001097,
+                            "layer": 7,
+                            "time": 0.5
+                        },
+                        {
+                            "id": 10001098,
+                            "layer": 7,
+                            "time": 0.5
+                        },
+                        // ambush platforms
+                        {
+                            "id": 8000004,
+                            "layer": 7,
+                            "time": 0.2,
+                            "looping": true
+                        },
+                        {
+                            "id": 8000005,
+                            "layer": 7,
+                            "time": 0.2,
+                            "looping": true
+                        },
+                        {
+                            "id": 8000015,
+                            "time": 0.02,
+                            "startImmediately": true,
+                            "layer": 7
+                        },
+                        {
+                            "id": 8000019,
+                            "time": 0.02,
+                            "layer": 7
+                        }
+                    ],
+                    "bombSlots": [
+                        { // final slot
+                            "damageableTriggerId": 8000010,
+                            "actorId": 8000011,
+                            "ballTriggerId": 8000012,
+                            "platformId": 8000013,
+
+                            "layer": 7,
+                            "position": [383.5, -848.6, 85],
+                            "rotation": [-90, 0, 0],
+                            "releaseBallDelayS": 10
+                        },
+                        {
+                            "damageableTriggerId": 15900100, // Slot by PP door
+                            "layer": 7,
+                            "activateSlotId": 15900200,
+                            "position": [
+                                370.7,
+                                -811.0,
+                                90.2
+                            ],
+                            "rotation": [
+                                -90,
+                                0,
+                                0
+                            ], // Straight up
+                            "releaseBallDelayS": 2
+                        },
+                        {
+                            "damageableTriggerId": 15900101, // Slot by big spider box
+                            "layer": 7,
+                            "activateSlotId": 15900201,
+                            "position": [
+                                342.8,
+                                -827.1,
+                                80.0
+                            ],
+                            "rotation": [
+                                -90,
+                                0,
+                                0
+                            ], // Straight up
+                            "releaseBallDelayS": 2
+                        },
+                        {
+                            "damageableTriggerId": 15900102, // Slot by tall rectangle bottom
+                            "layer": 7,
+                            "activateSlotId": 15900202,
+                            "position": [
+                                350.1,
+                                -868.5,
+                                80.0
+                            ],
+                            "rotation": [
+                                -61.8,
+                                57.1,
+                                70.2
+                            ], // cross shot
+                            "releaseBallDelayS": 2
+                        },
+                        {
+                            "damageableTriggerId": 15900103, // Slot by Wave 1
+                            "layer": 7,
+                            "activateSlotId": 15900203,
+                            "position": [
+                                395.9,
+                                -811.2,
+                                90.8
+                            ],
+                            "rotation": [
+                                118.2,
+                                237.1,
+                                250.2
+                            ], // cross shot
+                            "releaseBallDelayS": 2
+                        },
+                        {
+                            "damageableTriggerId": 15900104, // Slot by Wave 2
+                            "layer": 7,
+                            "activateSlotId": 15900204,
+                            "position": [
+                                398.1,
+                                -811.2,
+                                90.8
+                            ],
+                            "rotation": [
+                                118.2,
+                                237.1,
+                                250.2
+                            ], // cross shot
+                            "releaseBallDelayS": 2
+                        },
+                        {
+                            "damageableTriggerId": 15900105, // Slot by ramp
+                            "layer": 7,
+                            "activateSlotId": 15900205,
+                            "position": [
+                                411.7,
+                                -880,
+                                85.6
+                            ],
+                            "rotation": [
+                                -41.8,
+                                77.1,
+                                90.2
+                            ], // cross shot
+                            "releaseBallDelayS": 2
+                        }
                     ],
                     "triggers": [
+                        // anti-cheese (start)
+                        {
+                            "id": 10001099,
+                            "layer": 7,
+                            "position": [361.5524, -812.155, 98.4615],
+                            "scale": [100, 100, 4.553001],
+                            "damageAmount": 0.001
+                        },
+                        // anti-cheese (start dash)
+                        {
+                            "layer": 7,
+                            "flags": 8193, // Detect Player | Apply Force
+                            "position": [
+                                387.5,
+                                -833.0,
+                                92.9
+                            ],
+                            "scale": [
+                                30,
+                                1,
+                                10
+                            ],
+                            "force": [0, 1000, -1000]
+                        },
+                        // yoku
+                        {
+                            "id": 10001089,
+                            "active": false,
+                            "layer": 7,
+                            "position": [357.3, -877.4, 96.5],
+                            "scale": [6, 6, 1.1],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [500, 500, -100],
+                            "damageAmount": 0.001
+                        },
+                        {
+                            "id": 10001090,
+                            "active": true,
+                            "layer": 7,
+                            "position": [357.3, -877.4, 94.2],
+                            "scale": [6, 6, 1.1],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [500, 500, -100],
+                            "damageAmount": 0.001
+                        },
+                        {
+                            "id": 10001091,
+                            "active": false,
+                            "layer": 7,
+                            "position": [357.3, -877.4, 91.9],
+                            "scale": [6, 6, 1.1],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [500, 500, -100],
+                            "damageAmount": 0.001
+                        },
+                        {
+                            "id": 10001092,
+                            "active": true,
+                            "layer": 7,
+                            "position": [357.3, -877.4, 89.9],
+                            "scale": [6, 6, 1.1],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [500, 500, -100],
+                            "damageAmount": 0.001
+                        },
+                        {
+                            "id": 10001093,
+                            "active": false,
+                            "layer": 7,
+                            "position": [357.3, -877.4, 87.7],
+                            "scale": [6, 6, 1.1],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [500, 500, -100],
+                            "damageAmount": 0.001
+                        },
+                        {
+                            "id": 10001094,
+                            "active": true,
+                            "layer": 7,
+                            "position": [357.3, -877.4, 85.3],
+                            "scale": [6, 6, 1.1],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [500, 500, -100],
+                            "damageAmount": 0.001
+                        },
+
+                        // anti-cheese
+                        {
+                            "layer": 7,
+                            "flags": 8193, // Detect Player | Apply Force
+                            "position": [
+                                434.5985,
+                                -852.3781,
+                                77.8959
+                            ],
+                            "scale": [
+                                13,
+                                16,
+                                6
+                            ],
+                            "force": [
+                                0,
+                                0,
+                                -500
+                            ]
+                        },
+                        // anti-cheese
+                        {
+                            "layer": 7,
+                            "flags": 8193, // Detect Player | Apply Force
+                            "position": [
+                                435.5,
+                                -841.9,
+                                85.0
+                            ],
+                            "scale": [
+                                7,
+                                1,
+                                5
+                            ],
+                            "force": [
+                                0,
+                                500,
+                                0
+                            ]
+                        },
+                        // anti-cheese
+                        {
+                            "layer": 7,
+                            "flags": 8193, // Detect Player | Apply Force
+                            "position": [
+                                435.3706,
+                                -884.9015,
+                                78.3931
+                            ],
+                            "scale": [
+                                150,
+                                50,
+                                3
+                            ],
+                            "force": [0, 0, -1000]
+                        },
+                        // anti-cheese
+                        {
+                            "layer": 7,
+                            "flags": 8193, // Detect Player | Apply Force
+                            "position": [
+                                387.7706,
+                                -838.2015,
+                                80.4931
+                            ],
+                            "scale": [
+                                15,
+                                7,
+                                3
+                            ],
+                            "force": [
+                                0,
+                                0,
+                                -500
+                            ]
+                        },
+
+                        // reggie stuff
+                        {
+                            "id": 15900001, // Straight up 
+                            "layer": 7,
+                            "active": false,
+                            "position": [
+                                370.7,
+                                -811.0,
+                                90.2
+                            ],
+                            "scale": [
+                                3,
+                                3,
+                                8
+                            ],
+                            "flags": 8193,
+                            "force": [
+                                0,
+                                0,
+                                1650
+                            ]
+                        },
+                        {
+                            "id": 15900002, // Straight up 
+                            "layer": 7,
+                            "active": false,
+                            "position": [
+                                342.8,
+                                -827.1,
+                                80.0
+                            ],
+                            "scale": [
+                                3,
+                                3,
+                                8
+                            ],
+                            "flags": 8193,
+                            "force": [
+                                0,
+                                0,
+                                1650
+                            ]
+                        },
+                        {
+                            "id": 15900003, // Across room 1
+                            "layer": 7,
+                            "active": false,
+                            "position": [
+                                350.1,
+                                -868.5,
+                                80.0
+                            ],
+                            "scale": [
+                                24,
+                                24,
+                                16
+                            ],
+                            "flags": 8193,
+                            "force": [
+                                2650,
+                                1250,
+                                1250
+                            ]
+                        },
+                        {
+                            "id": 15900004, // Across room 2
+                            "layer": 7,
+                            "active": false,
+                            "position": [
+                                395.9,
+                                -811.2,
+                                90.8
+                            ],
+                            "scale": [
+                                24,
+                                24,
+                                16
+                            ],
+                            "flags": 8193,
+                            "force": [
+                                -1650,
+                                -1250,
+                                250
+                            ]
+                        },
+                        {
+                            "id": 15900005, // Across room 3
+                            "layer": 7,
+                            "active": false,
+                            "position": [
+                                398.1,
+                                -811.2,
+                                90.8
+                            ],
+                            "scale": [
+                                24,
+                                24,
+                                16
+                            ],
+                            "flags": 8193,
+                            "force": [
+                                -1450,
+                                -1450,
+                                700
+                            ]
+                        },
+                        {
+                            // 413, 879, 86
+                            "id": 15900006, // Up ramp
+                            "layer": 7,
+                            "active": false,
+                            "position": [
+                                411.7,
+                                -880,
+                                85.6
+                            ],
+                            "scale": [
+                                24,
+                                24,
+                                16
+                            ],
+                            "flags": 8193,
+                            "force": [
+                                1450,
+                                750,
+                                245
+                            ]
+                        },
+                        {
+                            "id": 15900501, // byebye
+                            "position": [
+                                412.1,
+                                -854.2,
+                                83.8
+                            ],
+                            "scale": [
+                                0.5,
+                                1.8,
+                                2
+                            ]
+                        },
                         {
                             "id": 10000129,
-                            "position": [409, -844, 61],
-                            "scale": [6, 6, 2]
+                            "position": [
+                                409,
+                                -844,
+                                61
+                            ],
+                            "scale": [
+                                6,
+                                6,
+                                2
+                            ]
                         },
                         {
                             "id": 10000139,
                             "layer": 7,
-                            "position": [385, -849, 100],
-                            "scale": [109, 73.1, 29.85]
+                            "position": [
+                                385,
+                                -849,
+                                100
+                            ],
+                            "scale": [
+                                109,
+                                73.1,
+                                33.7
+                            ]
                         },
                         {
                             "id": 10000141,
                             "layer": 7,
-                            "position": [367, -813.8, 92],
-                            "scale": [10, 10, 5],
+                            "position": [
+                                367,
+                                -813.8,
+                                92
+                            ],
+                            "scale": [
+                                10,
+                                10,
+                                5
+                            ],
                             "deactivateOnEnter": true
                         },
                         /* EXAMPLE CONTRAPTION */
                         {
                             "id": 8000000,
                             "layer": 7,
-                            "position": [368.1, -837.7, 91.5],
-                            "scale": [10, 10, 10]
+                            "position": [
+                                403.5,
+                                -849.3,
+                                85
+                            ],
+                            "scale": [
+                                10,
+                                12,
+                                3
+                            ]
+                        },
+                        {
+                            "id": 8000006,
+                            "layer": 7,
+                            "position": [
+                                389,
+                                -849.3,
+                                85
+                            ],
+                            "scale": [
+                                3,
+                                12,
+                                3
+                            ]
                         }
                         /* END EXAMPLE */
                     ],
                     "waypoints": [
+                        // end of puzzle
+                        {
+                            "id": 8000014,
+                            "layer": 7,
+                            "speed": 2,
+                            "position": [434.7, -847.9, 84.0]
+                        },
+                        {
+                            "id": 8000017,
+                            "layer": 7,
+                            "speed": 2,
+                            "position": [381.8, -848.6, 86]
+                        },
                         /* EXAMPLE CONTRAPTION */
                         {
                             "id": 8000002,
                             "layer": 7,
-                            "position": [368.1, -837.7, 91.5], // same as platform
-                            "speed": 30 // retreat speed
+                            "position": [
+                                405.1,
+                                -842.9,
+                                85
+                            ], // same as platform
+                            "speed": 50 // retreat speed
                         },
                         {
                             "id": 8000003,
                             "layer": 7,
-                            "position": [368.1, -827.5, 91.5], // closer to plasma processing
-                            "speed": 10 // attack speed
+                            "position": [
+                                400.2,
+                                -854.4,
+                                85
+                            ], // closer to plasma processing
+                            "speed": 30 // attack speed
+                        },
+
+                        {
+                            "id": 8000007,
+                            "layer": 7,
+                            "position": [
+                                389.8,
+                                -854.4,
+                                85
+                            ], // same as platform
+                            "speed": 50 // retreat speed
+                        },
+                        {
+                            "id": 8000008,
+                            "layer": 7,
+                            "position": [
+                                389.8,
+                                -842.9,
+                                85
+                            ], // closer to plasma processing
+                            "speed": 30 // attack speed
                         }
                         /* END EXAMPLE */
                     ],
                     "editObjs": {
+                        /* Lower lava level */
+                        "1310817": {
+                            "position": [389.8779, -847.3734, 26.85]
+                        },
                         // Unlock Floor Pickup
-                        "10000132": {"layer": 7},
-
+                        "10000132": {
+                            "layer": 7
+                        },
                         // move some spawn points for testing
-                        "1310735":  {"layer": 3},
-                        "1311291":  {"layer": 4}
+                        "1310735": {
+                            "layer": 3
+                        },
+                        "1311291": {
+                            "layer": 4
+                        },
+                        "1311566": { // parasite memory relay
+                            "layer": 7
+                        },
+                        "1311413": { "layer": 20 }, // Player Hint - stay in morphball
+                        // camera hints
+                        "1310855": {
+                            "layer": 20
+                        },
+                        "1311607": {
+                            "layer": 20
+                        },
+                        "1311420": {
+                            "layer": 20
+                        },
+                        "1311429": {
+                            "layer": 20
+                        },
+                        "1311422": {
+                            "layer": 20
+                        },
+                        "1311427": {
+                            "layer": 20
+                        },
+                        "1310849": {
+                            "layer": 20
+                        },
+                        "1310851": {
+                            "layer": 20
+                        },
+                        "1311206": {
+                            "layer": 20
+                        },
+                        "1311417": {
+                            "layer": 20
+                        },
+                        "1311156": {
+                            "layer": 20
+                        },
+                        "1310845": {
+                            "layer": 20
+                        },
+                        "1310854": {
+                            "layer": 20
+                        },
+                        "1311453": {
+                            "layer": 20
+                        },
+                        "1311456": {
+                            "layer": 20
+                        },
+                        "1311458": {
+                            "layer": 20
+                        },
+                        "1310857": {
+                            "layer": 20
+                        },
+                        "1311418": {
+                            "layer": 20
+                        },
+                        "1311154": {
+                            "layer": 20
+                        },
+                        "1311208": {
+                            "layer": 20
+                        },
+                        "1311209": {
+                            "layer": 20
+                        },
+                        // parasites
+                        "1311481": {
+                            "vulnerability": "Phazon",
+                            "speed": 1.8,
+                            "scale": [1.6, 1.6, 1.6]
+                        },
+                        "1311482": {
+                            "vulnerability": "Phazon",
+                            "speed": 1.8,
+                            "scale": [1.6, 1.6, 1.6]
+                        },
+                        "1311483": {
+                            "vulnerability": "Phazon",
+                            "speed": 1.8,
+                            "scale": [1.6, 1.6, 1.6]
+                        },
+                        "1311484": {
+                            "vulnerability": "Phazon",
+                            "speed": 1.8,
+                            "scale": [1.6, 1.6, 1.6]
+                        },
+                        "1311485": {
+                            "vulnerability": "Phazon",
+                            "speed": 1.8,
+                            "scale": [1.6, 1.6, 1.6]
+                        },
+                        "1311503": {
+                            "vulnerability": "Phazon",
+                            "speed": 1.8,
+                            "scale": [1.6, 1.6, 1.6]
+                        },
+                        "1311506": {
+                            "vulnerability": "Phazon",
+                            "speed": 1.8,
+                            "scale": [1.6, 1.6, 1.6]
+                        },
+                        "1311509": {
+                            "vulnerability": "Phazon",
+                            "speed": 1.8,
+                            "scale": [1.6, 1.6, 1.6]
+                        },
+                        "1311512": {
+                            "vulnerability": "Phazon",
+                            "speed": 1.8,
+                            "scale": [1.6, 1.6, 1.6]
+                        },
+                        // parasite waypoints
+                        "1311267": {
+                            "position": [339.2731, -830.7281, 93.0049]
+                        },
+                        "1311261": {
+                            "position": [336.169, -839.6172, 99.6831]
+                        },
+                        "1311265": {
+                            "position": [335.9715, -839.9254, 94.0001]
+                        },
+                        "1311263": {
+                            "position": [338.7774, -831.7152, 82.448]
+                        },
+                        // puffers
+                        "1311448": {
+                            "position": [0, 0, 0],
+                            "scale": [1, 1, 1],
+                            "speed": 1,
+                            "vulnerability": "Phazon"
+                        },
+                        "1311449": {
+                            "position": [438, -856.4248, 96.5561],
+                            "scale": [2, 2, 2],
+                            "speed": 10,
+                            "vulnerability": "Phazon"
+                        },
+                        "1311452": {
+                            "position": [438, -863.7248, 89.9561],
+                            "scale": [2, 2, 2],
+                            "speed": 10,
+                            "vulnerability": "Phazon"
+                        },
+                        // puffer waypoints for 1311452 (0x001402DC)
+                        // adding puffer 1311449 (0x001402D9)
+                        "1311287": {
+                            "position": [438, -856.4248, 96.5561],
+                            "speed": 10
+                        },
+                        "1311282": {
+                            "position": [438, -863.7248, 89.9561],
+                            "speed": 10
+                        }
                     },
                     "addConnections": [
-
                         /* 1st Pass (No Spider) */
-
                         // Platform is just straight up a trap
                         {
                             "senderId": 10000129,
@@ -11789,11 +12921,109 @@
                             "targetId": 1311296, // puzzle solved layer changer
                             "message": "INCREMENT"
                         },
-
                         /* 2nd Pass (Spider and PBs) */
-
                         /* 3rd Pass (Just trying to leave) */
+                        
+                        /* EXAMPLE CONTRAPTION */
+                        // The trigger activates the platform
+                        {
+                            "senderId": 8000000, // trigger
+                            "state": "INSIDE",
+                            "targetId": 8000004, // timer
+                            "message": "START"
+                        },
+                        // reset contraption when the player fails
+                        {
+                            "senderId": 10000139, // trigger
+                            "state": "EXITED",
+                            "targetId": 8000004,
+                            "message": "STOP_AND_RESET"
+                        },
+                        {
+                            "senderId": 8000004, // timer
+                            "state": "ZERO",
+                            "targetId": 8000001, // platform
+                            "message": "ACTIVATE"
+                        },
+                        // The platform will first chase the waypoint by plasma processing
+                        {
+                            "senderId": 8000001, // platform
+                            "state": "ACTIVE",
+                            "targetId": 8000003, // waypoint (by plasma processing)
+                            "message": "FOLLOW"
+                        },
+                        // The platform will then reteat once it reaches the first waypoiint
+                        {
+                            "senderId": 8000003, // waypoint (by plasma processing)
+                            "state": "ARRIVED",
+                            "targetId": 8000002, // waypoint (starting position)
+                            "message": "NEXT"
+                        },
+                        // When the platform is fully reset, hide it
+                        {
+                            "senderId": 8000002, // waypoint (starting position)
+                            "state": "ARRIVED",
+                            "targetId": 8000001,
+                            "message": "DEACTIVATE"
+                        },
+                        // Connect the waypoints in a loop
+                        {
+                            "senderId": 8000002, // waypoint (starting position)
+                            "state": "ARRIVED",
+                            "targetId": 8000003, // waypoint (starting position)
+                            "message": "NEXT"
+                        },
 
+                        // The trigger activates the platform
+                        {
+                            "senderId": 8000006, // trigger
+                            "state": "INSIDE",
+                            "targetId": 8000005, // timer
+                            "message": "START"
+                        },
+                        // reset contraption when the player fails
+                        {
+                            "senderId": 10000139, // trigger
+                            "state": "EXITED",
+                            "targetId": 8000005,
+                            "message": "STOP_AND_RESET"
+                        },
+                        {
+                            "senderId": 8000005, // timer
+                            "state": "ZERO",
+                            "targetId": 8000009, // platform
+                            "message": "ACTIVATE"
+                        },
+                        // The platform will first chase the waypoint by plasma processing
+                        {
+                            "senderId": 8000009, // platform
+                            "state": "ACTIVE",
+                            "targetId": 8000007, // waypoint (by plasma processing)
+                            "message": "FOLLOW"
+                        },
+                        // The platform will then reteat once it reaches the first waypoiint
+                        {
+                            "senderId": 8000007, // waypoint (by plasma processing)
+                            "state": "ARRIVED",
+                            "targetId": 8000008, // waypoint (starting position)
+                            "message": "NEXT"
+                        },
+                        // When the platform is fully reset, hide it
+                        {
+                            "senderId": 8000008, // waypoint (starting position)
+                            "state": "ARRIVED",
+                            "targetId": 8000009,
+                            "message": "DEACTIVATE"
+                        },
+                        // Connect the waypoints in a loop
+                        {
+                            "senderId": 8000008, // waypoint (starting position)
+                            "state": "ARRIVED",
+                            "targetId": 8000007, // waypoint (starting position)
+                            "message": "NEXT"
+                        },
+
+                        /* END EXAMPLE */
                         // Key unlocks floor
                         {
                             "senderId": 10000132,
@@ -11833,44 +13063,632 @@
                             "targetId": 10000142,
                             "message": "PLAY"
                         },
-
-                        /* EXAMPLE CONTRAPTION */
-                        // The trigger activates the platform
+                        // Spawn parasites
                         {
-                            "senderId": 8000000, // trigger
-                            "state": "ENTERED",
-                            "targetId": 8000001, // platform
+                            "senderId": 15900100,
+                            "state": "DEAD",
+                            "targetId": 1311566, // parasite memory relay
                             "message": "ACTIVATE"
                         },
-                        // The platform will first chase the waypoint by plasma processing
+                        // start yoku timers
                         {
-                            "senderId": 8000001, // platform
-                            "state": "ACTIVE",
-                            "targetId": 8000003, // waypoint (by plasma processing)
-                            "message": "FOLLOW"
+                            "senderId": 15900100,
+                            "state": "DEAD",
+                            "targetId": 10001095, // yoku timer sequence
+                            "message": "RESET_AND_START"
                         },
-                        // The platform will then reteat once it reaches the first waypoiint
+                        // deactivate anti-cheese
                         {
-                            "senderId": 8000003, // waypoint (by plasma processing)
-                            "state": "ARRIVED",
-                            "targetId": 8000002, // waypoint (starting position)
-                            "message": "NEXT"
-                        },
-                        // When the platform is fully reset, hide it
-                        {
-                            "senderId": 8000002, // waypoint (starting position)
-                            "state": "ARRIVED",
-                            "targetId": 8000001,
+                            "senderId": 15900100,
+                            "state": "DEAD",
+                            "targetId": 10001099,
                             "message": "DEACTIVATE"
                         },
-                        // Connect the waypoints in a loop
+                        // bomb slots
+                        { // Start a timer when the bomb slot is activated
+                            "senderId": 15900100,
+                            "state": "DEAD",
+                            "targetId": 15900000,
+                            "message": "RESET_AND_START"
+                        },
+                        { // ...and enable the force trigger
+                            "senderId": 15900100,
+                            "state": "DEAD",
+                            "targetId": 15900001,
+                            "message": "ACTIVATE"
+                        },
+                        { // When the timer elapses, re-enable the bomb slot
+                            "senderId": 15900000,
+                            "state": "ZERO",
+                            "targetId": 15900200,
+                            "message": "SET_TO_ZERO"
+                        },
+                        { // ...and disable the force trigger
+                            "senderId": 15900000,
+                            "state": "ZERO",
+                            "targetId": 15900001,
+                            "message": "DEACTIVATE"
+                        },
+                        { // Start a timer when the bomb slot is activated
+                            "senderId": 15900101,
+                            "state": "DEAD",
+                            "targetId": 15900000,
+                            "message": "RESET_AND_START"
+                        },
+                        { // ...and enable the force trigger
+                            "senderId": 15900101,
+                            "state": "DEAD",
+                            "targetId": 15900002,
+                            "message": "ACTIVATE"
+                        },
+                        { // When the timer elapses, re-enable the bomb slot
+                            "senderId": 15900000,
+                            "state": "ZERO",
+                            "targetId": 15900201,
+                            "message": "SET_TO_ZERO"
+                        },
+                        { // ...and disable the force trigger
+                            "senderId": 15900000,
+                            "state": "ZERO",
+                            "targetId": 15900002,
+                            "message": "DEACTIVATE"
+                        },
+                        { // Start a timer when the bomb slot is activated
+                            "senderId": 15900102,
+                            "state": "DEAD",
+                            "targetId": 15900000,
+                            "message": "RESET_AND_START"
+                        },
+                        { // ...and enable the force trigger
+                            "senderId": 15900102,
+                            "state": "DEAD",
+                            "targetId": 15900003,
+                            "message": "ACTIVATE"
+                        },
+                        { // When the timer elapses, re-enable the bomb slot
+                            "senderId": 15900000,
+                            "state": "ZERO",
+                            "targetId": 15900202,
+                            "message": "SET_TO_ZERO"
+                        },
+                        { // ...and disable the force trigger
+                            "senderId": 15900000,
+                            "state": "ZERO",
+                            "targetId": 15900003,
+                            "message": "DEACTIVATE"
+                        },
+                        { // Start a timer when the bomb slot is activated
+                            "senderId": 15900103,
+                            "state": "DEAD",
+                            "targetId": 15900000,
+                            "message": "RESET_AND_START"
+                        },
+                        { // ...and enable the force trigger
+                            "senderId": 15900103,
+                            "state": "DEAD",
+                            "targetId": 15900004,
+                            "message": "ACTIVATE"
+                        },
+                        { // When the timer elapses, re-enable the bomb slot
+                            "senderId": 15900000,
+                            "state": "ZERO",
+                            "targetId": 15900203,
+                            "message": "SET_TO_ZERO"
+                        },
+                        { // ...and disable the force trigger
+                            "senderId": 15900000,
+                            "state": "ZERO",
+                            "targetId": 15900004,
+                            "message": "DEACTIVATE"
+                        },
+                        { // Start a timer when the bomb slot is activated
+                            "senderId": 15900104,
+                            "state": "DEAD",
+                            "targetId": 15900000,
+                            "message": "RESET_AND_START"
+                        },
+                        { // ...and enable the force trigger
+                            "senderId": 15900104,
+                            "state": "DEAD",
+                            "targetId": 15900005,
+                            "message": "ACTIVATE"
+                        },
+                        { // When the timer elapses, re-enable the bomb slot
+                            "senderId": 15900000,
+                            "state": "ZERO",
+                            "targetId": 15900204,
+                            "message": "SET_TO_ZERO"
+                        },
+                        { // ...and disable the force trigger
+                            "senderId": 15900000,
+                            "state": "ZERO",
+                            "targetId": 15900005,
+                            "message": "DEACTIVATE"
+                        },
+                        { // Start a timer when the bomb slot is activated
+                            "senderId": 15900105,
+                            "state": "DEAD",
+                            "targetId": 15900000,
+                            "message": "RESET_AND_START"
+                        },
+                        { // ...and enable the force trigger
+                            "senderId": 15900105,
+                            "state": "DEAD",
+                            "targetId": 15900006,
+                            "message": "ACTIVATE"
+                        },
+                        { // When the timer elapses, re-enable the bomb slot
+                            "senderId": 15900000,
+                            "state": "ZERO",
+                            "targetId": 15900205,
+                            "message": "SET_TO_ZERO"
+                        },
+                        { // ...and disable the force trigger
+                            "senderId": 15900000,
+                            "state": "ZERO",
+                            "targetId": 15900006,
+                            "message": "DEACTIVATE"
+                        },
                         {
-                            "senderId": 8000002, // waypoint (starting position)
+                            "senderId": 15900501,
+                            "state": "ENTERED",
+                            "targetId": 15900500,
+                            "message": "DEACTIVATE"
+                        },
+                        /* Edit puffer waypoints */
+                        {
+                            "senderId": 1311282,
                             "state": "ARRIVED",
-                            "targetId": 8000003, // waypoint (starting position)
+                            "targetId": 1311287,
                             "message": "NEXT"
+                        },
+                        {
+                            "senderId": 1311449,
+                            "state": "PATROL",
+                            "targetId": 1311282,
+                            "message": "FOLLOW"
+                        },
+                        /* Yoku Section */
+
+                        // timers
+                        {
+                            "senderId": 10001095,
+                            "state": "ZERO",
+                            "targetId": 10001096,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10001096,
+                            "state": "ZERO",
+                            "targetId": 10001097,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10001097,
+                            "state": "ZERO",
+                            "targetId": 10001098,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10001098,
+                            "state": "ZERO",
+                            "targetId": 10001095,
+                            "message": "RESET_AND_START"
+                        },
+
+                        // phase 1 blocks
+                        {
+                            "senderId": 10001095,
+                            "state": "ZERO",
+                            "targetId": 10001083,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001095,
+                            "state": "ZERO",
+                            "targetId": 10001084,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10001095,
+                            "state": "ZERO",
+                            "targetId": 10001085,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001095,
+                            "state": "ZERO",
+                            "targetId": 10001086,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10001095,
+                            "state": "ZERO",
+                            "targetId": 10001087,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001095,
+                            "state": "ZERO",
+                            "targetId": 10001088,
+                            "message": "ACTIVATE"
+                        },
+                        // phase 1 triggers
+                        {
+                            "senderId": 10001095,
+                            "state": "ZERO",
+                            "targetId": 10001089,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001095,
+                            "state": "ZERO",
+                            "targetId": 10001090,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10001095,
+                            "state": "ZERO",
+                            "targetId": 10001091,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001095,
+                            "state": "ZERO",
+                            "targetId": 10001092,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10001095,
+                            "state": "ZERO",
+                            "targetId": 10001093,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001095,
+                            "state": "ZERO",
+                            "targetId": 10001094,
+                            "message": "ACTIVATE"
+                        },
+
+                        // phase 2 blocks
+                        {
+                            "senderId": 10001096,
+                            "state": "ZERO",
+                            "targetId": 10001083,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001096,
+                            "state": "ZERO",
+                            "targetId": 10001084,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001096,
+                            "state": "ZERO",
+                            "targetId": 10001085,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001096,
+                            "state": "ZERO",
+                            "targetId": 10001086,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001096,
+                            "state": "ZERO",
+                            "targetId": 10001087,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001096,
+                            "state": "ZERO",
+                            "targetId": 10001088,
+                            "message": "DEACTIVATE"
+                        },
+                        // phase 2 triggers
+                        {
+                            "senderId": 10001096,
+                            "state": "ZERO",
+                            "targetId": 10001089,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001096,
+                            "state": "ZERO",
+                            "targetId": 10001090,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001096,
+                            "state": "ZERO",
+                            "targetId": 10001091,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001096,
+                            "state": "ZERO",
+                            "targetId": 10001092,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001096,
+                            "state": "ZERO",
+                            "targetId": 10001093,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001096,
+                            "state": "ZERO",
+                            "targetId": 10001094,
+                            "message": "DEACTIVATE"
+                        },
+
+                        // phase 3 blocks
+                        {
+                            "senderId": 10001097,
+                            "state": "ZERO",
+                            "targetId": 10001083,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10001097,
+                            "state": "ZERO",
+                            "targetId": 10001084,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001097,
+                            "state": "ZERO",
+                            "targetId": 10001085,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10001097,
+                            "state": "ZERO",
+                            "targetId": 10001086,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001097,
+                            "state": "ZERO",
+                            "targetId": 10001087,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10001097,
+                            "state": "ZERO",
+                            "targetId": 10001088,
+                            "message": "DEACTIVATE"
+                        },
+                        // phase 3 triggers
+                        {
+                            "senderId": 10001097,
+                            "state": "ZERO",
+                            "targetId": 10001089,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10001097,
+                            "state": "ZERO",
+                            "targetId": 10001090,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001097,
+                            "state": "ZERO",
+                            "targetId": 10001091,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10001097,
+                            "state": "ZERO",
+                            "targetId": 10001092,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001097,
+                            "state": "ZERO",
+                            "targetId": 10001093,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10001097,
+                            "state": "ZERO",
+                            "targetId": 10001094,
+                            "message": "DEACTIVATE"
+                        },
+
+                        // phase 4 blocks
+                        {
+                            "senderId": 10001098,
+                            "state": "ZERO",
+                            "targetId": 10001083,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001098,
+                            "state": "ZERO",
+                            "targetId": 10001084,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001098,
+                            "state": "ZERO",
+                            "targetId": 10001085,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001098,
+                            "state": "ZERO",
+                            "targetId": 10001086,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001098,
+                            "state": "ZERO",
+                            "targetId": 10001087,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001098,
+                            "state": "ZERO",
+                            "targetId": 10001088,
+                            "message": "DEACTIVATE"
+                        },
+                        // phase 4 triggers
+                        {
+                            "senderId": 10001098,
+                            "state": "ZERO",
+                            "targetId": 10001089,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001098,
+                            "state": "ZERO",
+                            "targetId": 10001090,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001098,
+                            "state": "ZERO",
+                            "targetId": 10001091,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001098,
+                            "state": "ZERO",
+                            "targetId": 10001092,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001098,
+                            "state": "ZERO",
+                            "targetId": 10001093,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001098,
+                            "state": "ZERO",
+                            "targetId": 10001094,
+                            "message": "DEACTIVATE"
+                        },
+
+                        // final bomb slot
+                        {
+                            "senderId": 8000015,
+                            "state": "ZERO",
+                            "targetId": 8000013,
+                            "message": "STOP"
+                        },
+                        {
+                            "senderId": 8000015,
+                            "state": "ZERO",
+                            "targetId": 8000012,
+                            "message": "STOP"
+                        },
+                        {
+                            "senderId": 8000015,
+                            "state": "ZERO",
+                            "targetId": 8000011,
+                            "message": "STOP"
+                        },
+                        {
+                            "senderId": 8000015,
+                            "state": "ZERO",
+                            "targetId": 8000010,
+                            "message": "STOP"
+                        },
+                        {
+                            "senderId": 8000015,
+                            "state": "ZERO",
+                            "targetId": 8000016,
+                            "message": "STOP"
+                        },
+
+                        {
+                            "senderId": 8000010,
+                            "state": "DEAD",
+                            "targetId": 8000013,
+                            "message": "START"
+                        },
+                        {
+                            "senderId": 8000010,
+                            "state": "DEAD",
+                            "targetId": 8000012,
+                            "message": "START"
+                        },
+                        {
+                            "senderId": 8000010,
+                            "state": "DEAD",
+                            "targetId": 8000011,
+                            "message": "START"
+                        },
+                        {
+                            "senderId": 8000010,
+                            "state": "DEAD",
+                            "targetId": 8000010,
+                            "message": "START"
+                        },
+                        {
+                            "senderId": 8000010,
+                            "state": "DEAD",
+                            "targetId": 8000016,
+                            "message": "START"
+                        },
+
+                        {
+                            "senderId": 8000010,
+                            "state": "DEAD",
+                            "targetId": 8000018, // block that is in the way
+                            "message": "DEACTIVATE"
+                        },
+
+                        {
+                            "senderId": 8000014,
+                            "state": "ARRIVED",
+                            "targetId": 8000017, 
+                            "message": "NEXT"
+                        },
+                        {
+                            "senderId": 8000017,
+                            "state": "ARRIVED",
+                            "targetId": 8000014, 
+                            "message": "NEXT"
+                        },
+
+                        {
+                            "senderId": 8000010,
+                            "state": "ACTIVE",
+                            "targetId": 8000014, // waypoint
+                            "message": "FOLLOW"
+                        },
+                        {
+                            "senderId": 8000011,
+                            "state": "ACTIVE",
+                            "targetId": 8000014, // waypoint
+                            "message": "FOLLOW"
+                        },
+                        {
+                            "senderId": 8000012,
+                            "state": "ACTIVE",
+                            "targetId": 8000014, // waypoint
+                            "message": "FOLLOW"
+                        },
+                        {
+                            "senderId": 8000013,
+                            "state": "ACTIVE",
+                            "targetId": 8000014, // waypoint
+                            "message": "FOLLOW"
+                        },
+                        {
+                            "senderId": 8000016,
+                            "state": "ACTIVE",
+                            "targetId": 8000014, // waypoint
+                            "message": "FOLLOW"
                         }
-                        /* END EXAMPLE */
                     ],
                     "removeConnections": [
                         /* Don't change layer when the puzzle is solved (wave beam pickup instead) */
@@ -11885,12 +13703,25 @@
                             "state": "ZERO",
                             "targetId": 1311296, // puzzle solved layer changer
                             "message": "INCREMENT"
+                        },
+                        /* Don't activate parasites until later */
+                        {
+                            "senderId": 1311191, // camera
+                            "state": "ACTIVE",
+                            "targetId": 1311566, // memory relay
+                            "message": "ACTIVATE"
                         }
                     ],
                     "deleteIds": [
                         1310750, // Remove randomprime cutscene skip
                         1310783, // remove randomprime music qol
-                        1310737, 1311294 // Remove 2nd to last platform
+                        1310737,
+                        1311294, // Remove 2nd to last platform
+                        1311300,
+                        1310782, // Remove extendoplatform
+                        // puffer waypoints
+                        1311283, 1311279,
+                        1311067, 1311068, 1311069, 1311070, 1311071, 1311072 // track piece (boost)
                     ]
                 },
                 "Plasma Processing": {
@@ -11918,12 +13749,24 @@
                             "layerChangeRoomId": 1498886242,
                             "layerChangeLayerId": 7
                         },
-                        // {
-                        //     "id": 10000138,
-                        //     "type": "ScriptLayerController",
-                        //     "layerChangeRoomId": 1498886242,
-                        //     "layerChangeLayerId": 2
-                        // },
+                        {
+                            "id": 10000138,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 1498886242, // geothermal core
+                            "layerChangeLayerId": 20 // spider track shit
+                        },
+                        {
+                            "id": 10001080,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 1498886242, // geothermal core
+                            "layerChangeLayerId": 2 // parasites
+                        },
+                        {
+                            "id": 10001081,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 1498886242, // geothermal core
+                            "layerChangeLayerId": 6 // puffers
+                        },
                         {
                             "id": 10000725,
                             "type": "SaveStation"
@@ -11937,12 +13780,24 @@
                             "targetId": 10000133,
                             "message": "INCREMENT"
                         },
-                        // {
-                        //     "senderId": 1376287,
-                        //     "state": "ARRIVED",
-                        //     "targetId": 10000138,
-                        //     "message": "DECREMENT"
-                        // },
+                        {
+                            "senderId": 1376287,
+                            "state": "ARRIVED",
+                            "targetId": 10000138,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 1376287,
+                            "state": "ARRIVED",
+                            "targetId": 10001080,
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1376287,
+                            "state": "ARRIVED",
+                            "targetId": 10001081,
+                            "message": "INCREMENT"
+                        },
                         // Reload Geothermal Core
                         {
                             "senderId": 1376287,
