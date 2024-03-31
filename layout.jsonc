@@ -12,7 +12,7 @@
         "automaticCrashScreen": true,
         "forceFusion": true,
         "doorDestinationScans": false,
-        "skipSplashScreens": true
+        "skipSplashScreens": false
     },
     "gameConfig": {
         "mainPlazaDoor": false,
@@ -11596,6 +11596,14 @@
                             "layerChangeLayerId": 7 // morph ball escape puzzle
                         }
                     ],
+                    "relays": [
+                        {
+                            "id": 10001110
+                        },
+                        {
+                            "id": 10001111
+                        }
+                    ],
                     "playerHints": [
                         {
                             "id": 10000140,
@@ -12909,6 +12917,44 @@
                         }
                     },
                     "addConnections": [
+                        {
+                            "senderId": 15900100,
+                            "state": "DEAD",
+                            "targetId": 10001110,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10001110,
+                            "state": "ZERO",
+                            "targetId": 10001111,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10001111,
+                            "state": "ZERO",
+                            "targetId": 10001110,
+                            "message": "DEACTIVATE"
+                        },
+                        
+                        {
+                            "senderId": 10001111,
+                            "state": "ZERO",
+                            "targetId": 1311566, // parasite memory relay
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10001111,
+                            "state": "ZERO",
+                            "targetId": 10001095, // yoku timer sequence
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10001111,
+                            "state": "ZERO",
+                            "targetId": 10001099, // anti-chese
+                            "message": "DEACTIVATE"
+                        },
+
                         /* 1st Pass (No Spider) */
                         // anti-cheese (grapple)
                         {
@@ -13091,27 +13137,6 @@
                             "state": "ENTERED",
                             "targetId": 10000142,
                             "message": "PLAY"
-                        },
-                        // Spawn parasites
-                        {
-                            "senderId": 15900100,
-                            "state": "DEAD",
-                            "targetId": 1311566, // parasite memory relay
-                            "message": "ACTIVATE"
-                        },
-                        // start yoku timers
-                        {
-                            "senderId": 15900100,
-                            "state": "DEAD",
-                            "targetId": 10001095, // yoku timer sequence
-                            "message": "RESET_AND_START"
-                        },
-                        // deactivate anti-cheese
-                        {
-                            "senderId": 15900100,
-                            "state": "DEAD",
-                            "targetId": 10001099,
-                            "message": "DEACTIVATE"
                         },
                         // bomb slots
                         { // Start a timer when the bomb slot is activated
