@@ -58,14 +58,14 @@
             "grapple": true,
             "xray": true,
             "iceSpreader": true,
-            "spaceJump": true,
+            "spaceJump": false,
             "morphBall": true,
             "combatVisor": true,
             "boostBall": true,
             "spiderBall": true,
-            "gravitySuit": false,
             "variaSuit": true,
-            "phazonSuit": true,
+            "gravitySuit": false,
+            "phazonSuit": false,
             "energyTanks": 14,
             "wavebuster": true
         },
@@ -11647,11 +11647,12 @@
                             ]
                         },
                         {
+                            "id2": 10001102,
                             "layer": 3, // "Puzzle Unsolved"
                             "position": [
-                                368.9,
-                                -836.9,
-                                82
+                                366.7,
+                                -838.5,
+                                79.8
                             ],
                             "isGrapple": true
                         }
@@ -12118,6 +12119,7 @@
                         /* END EXAMPLE */
                         {
                             "id": 8000016,
+                            "layer": 7,
                             "type": "Block",
                             "position": [381.8, -848.6, 86]
                         }
@@ -12284,6 +12286,20 @@
                         }
                     ],
                     "triggers": [
+                        // anti-cheese (1st/2nd pass)
+                        {
+                            "id": 10001100,
+                            "layer": 3, // "Puzzle Unsolved"
+                            "position": [375.8, -861.5, 54.4],
+                            "scale": [13, 13, 10]
+                        },
+                        {
+                            "id": 10001101,
+                            "layer": 3, // "Puzzle Unsolved"
+                            "position": [406.8, -864.1, 64.6],
+                            "scale": [15, 15, 10]
+                        },
+
                         // anti-cheese (start)
                         {
                             "id": 10001099,
@@ -12894,6 +12910,19 @@
                     },
                     "addConnections": [
                         /* 1st Pass (No Spider) */
+                        // anti-cheese (grapple)
+                        {
+                            "senderId": 10001100,
+                            "state": "ENTERED",
+                            "targetId": 10001102, // grapple point
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001101,
+                            "state": "ENTERED",
+                            "targetId": 10001102, // grapple point
+                            "message": "ACTIVATE"
+                        },
                         // Platform is just straight up a trap
                         {
                             "senderId": 10000129,
