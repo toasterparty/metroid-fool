@@ -17029,6 +17029,19 @@
                             "position": [145.3, 50.1, -141.6],
                             "scale": [80, 180, 50],
                             "flags": 4 // detect projectiles
+                        },
+                        {
+                            "id": 10001180,
+                            "position": [177.4291, 6.7417, -139.0308],
+                            "scale": [20, 15, 5]
+                        }
+                    ],
+                    "spawnPoints": [
+                        {
+                            "id": 10001181,
+                            "active": false,
+                            "position": [175.1291, 6.3417, -141.3308],
+                            "rotation": [0, 0, 90]
                         }
                     ],
                     "blocks": [
@@ -17142,6 +17155,26 @@
                             "targetId": 2359300, // spawn point
                             "message": "SET_TO_ZERO"
                         },
+                        {
+                            "senderId": 10000581,
+                            "state": "ENTERED",
+                            "targetId": 10001181, // spawn point
+                            "message": "SET_TO_ZERO"
+                        },
+
+                        {
+                            "senderId": 10001180,
+                            "state": "ENTERED",
+                            "targetId": 2359300, // spawn point
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001180,
+                            "state": "ENTERED",
+                            "targetId": 10001181, // spawn point
+                            "message": "ACTIVATE"
+                        },
+
                         {
                             "senderId": 10000582, // trigger
                             "state": "ENTERED",
@@ -17549,6 +17582,12 @@
                         }
                     ],
                     "editObjs": {
+                        /* Ripper */
+                        "2687010": {
+                            "position": [115.1, 202, -152.9],
+                            "rotation": [10, 0, 103],
+                            "speed": 0.0000001
+                        },
                         /* Metroids */
                         "2687679": {
                             "detectionRange": 5,
@@ -17594,7 +17633,7 @@
                         }
                     ],
                     "deleteIds": [
-                        2687010, // ripper
+                        2687009, // ripper waypoint
                         2687058, 2687061 // small/large health
                     ]
                 }
