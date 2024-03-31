@@ -2943,8 +2943,8 @@
                     "pickups": [
                         {
                             "type": "X-Ray Visor",
-                            "model": "Space Jump Boots",
-                            "scanText": "Space Jump Boots (for real this time)",
+                            "model": "Ice Spreader",
+                            "scanText": "Ice Spreder",
                             "hudmemoText": "Just kidding, it was X-Ray"
                         },
                         {
