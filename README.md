@@ -2,17 +2,11 @@
 
 > *Dedicated to each and every person who has ever taken this game a bit too seriously*
 
-Experience Metroid Prime like never before by subjecting yourself to my creation centered around one brutally honest pillar - ***Subverted Expectations***. Re-discover Tallon IV as it has been stuffed with perplexing puzzles, jovial japes and even a few sacrilegious stinkers. Do you have what it takes to endure them all?
-
-## Changelog
-
-### v1.0
-
-- Initial release
+Re-discover Tallon IV now that most of it's rooms have been filled with perplexing puzzles, jovial japes and even a few sacrilegious stinkers. Do you have what it takes to endure them all?
 
 ## [🎞️ Trailer](https://youtu.be/gRhfCjEgMKI)
 
-## [⬇️ Download](http://example.com)
+## [⬇️ Download](https://github.com/toasterparty/metroid-fool/releases)
 
 ## Features
 
@@ -31,6 +25,16 @@ This hack is intended for players who have spent a non-trivial amount of time le
 Please do not unnecessarily spoil the contents of this hack when discussing in chat rooms or voice channels. If you are on the fence between playing this or watching someone else play, I would highly recommend you play it first as this hack includes some surprises which can only be experienced once.
 
 Also, please note that some unique lore is provided in and around Artifact Temple. No lore text outside of this area has been modified. I'm telling you this so you don't scan everything in fear of missing out.
+
+## How to Play (Windows)
+
+1. Download the release .zip attached to the [latest release](https://github.com/toasterparty/metroid-fool/releases)
+
+2. Extract the contents into a folder
+
+3. Double click `patch.bat` and select your Gamecube Metroid Prime ISO when prompted. If successful, a file called `metroid-fool-vX.Y.iso` will be created in the same folder
+
+4. Drag and drop that ISO into Dolphin's main window, or load onto storage media and open with Nintendont
 
 ## [❔ Hints](./hints.md)
 
