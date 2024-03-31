@@ -59,6 +59,15 @@ If you simply give up, a video of the solution is provided below.
 </details>
 
 <details>
+  <summary>Where's X-Ray Visor?</summary>
+
+```
+In Phendrana locked behind Plasma Beam
+```
+
+</details>
+
+<details>
   <summary>I need more Energy Tanks, but don't know where to start looking</summary>
 
 | Region | Room |
