@@ -11689,6 +11689,12 @@
                         }
                     ],
                     "blocks": [
+                        {
+                            "layer": 7,
+                            "position": [377.4, -884.5, 85.6],
+                            "scale": [1.5, 2.5, 8],
+                            "texture": "Mine"
+                        },
                         { // my work: boxes bar
                             "position": [
                                 344.5,
@@ -12744,6 +12750,9 @@
                         /* END EXAMPLE */
                     ],
                     "editObjs": {
+                        "10000131": {
+                            "damage": 0.5
+                        },
                         /* Lower lava level */
                         "1310817": {
                             "position": [389.8779, -847.3734, 26.85]
@@ -15369,7 +15378,7 @@
                         },
                         {
                             "id": 10000642,
-                            "position": [-171.2443, 12.1911, -105],
+                            "position": [-171.2443, 12.1911, -106],
                             "scale": [10, 10, 1],
                             "texture": "Mine"
                         },
@@ -15464,7 +15473,7 @@
                         "1704230": { // Omega Pirate
                             "speed": 1.7,
                             "health": 0.666,
-                            "position": [-171.2443, 12.1911, -104]
+                            "position": [-171.2443, 12.1911, -105]
                         },
                         // troopers
                         "1705060": { "speed": 0.3, "health": 0.3, "scale": [3, 3, 3] },
