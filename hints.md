@@ -2,6 +2,15 @@
 # Hints & Minor Spoilers
 
 <details>
+  <summary>How do I get the most distance out of my grapple swings?</summary>
+
+```
+Hold R before releasing the swing. After release, continue to hold R and turn as though you are doing an R-Jump
+```
+
+</details>
+
+<details>
   <summary>I'm having trouble in Hunter Cave</summary>
 
 ```
