@@ -42,7 +42,7 @@ Check here first if you're stuck in a specific room.
 
 ## [🙈 Spoiler](./spoiler.md)
 
-View this only if you are compeltely lost or have already finished the game.
+View this only if you are completely lost or have already finished the game.
 
 ## Credits
 |  |  |
