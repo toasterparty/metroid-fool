@@ -191,7 +191,7 @@
 | Ice Ruins West | 2nd Pass SW |
 | Watery Hall SW | 2nd Pass SJ |
 
-**Personal Best**: 1130 damge taken (11 of 14 Etanks needed)
+**Personal Best**: 1130 damage taken (10 of 14 Etanks needed)
 
 ## Power Bomb Expansions
 
