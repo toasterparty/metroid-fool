@@ -49,7 +49,7 @@ View this only if you are completely lost or have already finished the game.
 -------|------------------
 | **Fanhack Tool Development** | *toasterparty and [contributors](https://github.com/randovania/randomprime/graphs/contributors)* |
 | **Fanhack Author** | *toasterparty* |
-| **Puzzle Assistant** | *UncleReggie* |
+| **Puzzle Assistant** (2 rooms) | *UncleReggie* |
 | **Playtester** | *BajaBlood Lokir UncleReggie* |
 
 *From the bottom of my breadcrumb filled chrome coated heart: Thanks for Playing!*
