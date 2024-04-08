@@ -56,6 +56,9 @@
 ### Phendrana Mashup
 
 - Early/Late phen room-rando labyrinth
+
+![Phendrana Map](./img/phendrana.png)
+
 - **Phendrana Canyon - Charge Beam**
 - **Chozo Ice Temple - Bomb Slot Activated**
     - This unlocks a shortcut
