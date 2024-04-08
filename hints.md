@@ -2,6 +2,29 @@
 # Hints & Minor Spoilers
 
 <details>
+  <summary>I'm having trouble in Arboretum</summary>
+
+*The scan points have been relocated. Here are hints for each of them:*
+1. *Can be seen while standing near the water's edge*
+2. *Can be revealed via destroying something*
+3. *Can be seen up high in an inaccessible location*
+4. *Can be accessed thanks to something removed*
+
+</details>
+
+<details>
+  <summary>I'm having trouble in Watery Hall</summary>
+
+*The scan points have been relocated. Here are hints for each of them:*
+1. *This one is under the ramp you can't miss it*
+2. *A dirty trick required were this an item not a scan*
+3. *Submerged in poison this rune can be found reverse of an otherwise uninteresting text*
+4. *An impassible obstacle does not always necessitate privacy*
+
+</details>
+
+
+<details>
   <summary>How do I get the most distance out of my grapple swings?</summary>
 
 *Hold R before releasing the swing. After release, continue to hold R and turn as though you are doing an R-Jump*
