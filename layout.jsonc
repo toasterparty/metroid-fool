@@ -1,6 +1,6 @@
 {
     "$schema": "https://randovania.org/randomprime/randomprime.schema.json",
-    "outputIso": "metroid-fool-v1.0.iso",
+    "outputIso": "metroid-fool-v1.1.iso",
     "preferences": {
         "qolGameBreaking": true,
         "qolCosmetic": true,
@@ -15,7 +15,7 @@
         "skipSplashScreens": false
     },
     "gameConfig": {
-        "mainPlazaDoor": false,
+        "mainPlazaDoor": true,
         "backwardsFrigate": true,
         "backwardsLabs": false,
         "backwardsUpperMines": true,
@@ -23,12 +23,12 @@
         "phazonEliteWithoutDynamo": true,
         "removeVanillaBlastShields": true,
         "doorOpenMode": "PrimaryBlastShield",
-        "resultsString": "Metroid Fool v1.0",
+        "resultsString": "Metroid Fool v1.1",
         "warpToStart": false,
         "springBall": false,
         "nonvariaHeatDamage": true,
         "staggeredSuitDamage": true,
-        "heatDamagePerSec": 10.0,
+        "heatDamagePerSec": 7.0,
         "autoEnabledElevators": false,
         "missileStationPbRefill": true,
         "phazonDamageModifier": "Default",
@@ -88,12 +88,12 @@
             2041669472
         ],
         "gameBanner": {
-            "gameName": "Metroid Fool v1.0",
-            "gameNameFull": "Metroid Fool v1.0",
+            "gameName": "Metroid Fool v1.1",
+            "gameNameFull": "Metroid Fool v1.1",
             "description": "Romhack by toasterparty"
         },
-        "mainMenuMessage": "Metroid Fool v1.0",
-        "creditsString": "\n&push;&font=C29C51F1;&main-color=#89D6FF;Item Progression&pop;\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Morph Ball&pop;\nChozo Ruins - Ruined Shrine (Beetle Battle)\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Missile Launcher&pop;\nChozo Ruins - Water Pool\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Morph Ball Bomb&pop;\nChozo Ruins - Dynamo (Lower)\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Varia Suit&pop;\nChozo Ruins - Sunchamber\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Charge Beam&pop;\nPhendrana Drifts - Phendrana Canyon\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Boost Ball&pop;\nPhendrana Drifts - Chapel of the Elders\n\n&push;&font=C29C51F1;&main-color=#33ffd6;WAVE BEAM!&pop;\nMagmoor Caverns - Geothermal Core\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Super Missiles&pop;\nChozo Ruins - Training Chamber Access\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Spider Ball&pop;\nPhendrana Drifts - Quarantine Cave\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Ice Beam&pop;\nChozo Ruins - Ruined Shrine (Spider Track)\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Power Bomb&pop;\nPhazon Mines - Central Dynamo\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Plasma Beam&pop;\nMagmoor Caverns - Plasma Processing\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Flamethrower&pop;\nChozo Ruins - Burn Dome\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Gravity Suit&pop;\nTallon Overworld - Gully\n\n&push;&font=C29C51F1;&main-color=#33ffd6;X-Ray Visor&pop;\nPhendrana Drifts - Ice Ruins East\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Space Jump Boots&pop;\nPhazon Mines - Elite Quarters\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Wavebuster&pop;\nChozo Ruins - Tower of Light\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Ice Spreader&pop;\nTallon Overworld - Life Grove\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Glorgie's Keyring&pop;\nTallon Overworld - Reactor Core\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Phazon Suit&pop;\nTallon Overworld - Artifact Temple\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Chozo Artifacts&pop;\nThe real Artifacts were the friends we made along the way\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Energy Tanks&pop;\n       Location           Intended Collection    \n   Frigate Crash Site         1st Pass           \n       Hive Mecha             1st Pass           \n Magmoor Workstation    2nd Pass needs boost     \n       Frozen Pike           1st Pass DBJ        \n    Gravity Chamber        2nd Pass Plasma       \n       Main Quarry        1st Pass Crane Meme    \nMetroid Quarantine A     1st Pass Hidden Wall    \n    Parasite Queen    2nd Pass SJ/1st Pass UBJ   \n    Monitor Station         2nd Pass SJ          \n   Frigate Crash Site       3rd Pass GSJ         \n     Arbor Chamber          2nd Pass SJ          \n   Great Tree Hall    1st Pass From Spider Track \n     Ice Ruins West         2nd Pass SW          \n     Watery Hall SW         2nd Pass SJ          \n\n&push;&font=C29C51F1;&main-color=#33ffd6;Missile Expansions&pop;\nYou could have had 172, but you chose to support diversity and local buisness instead\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Shiny Missiles&pop;\nT#3lo! Ov*!?$r)d - ???\nMa)*2or C^v3!rs - ???\nPh8!d@an(>a $r1f7s - ???\n\n&push;&font=C29C51F1;&main-color=#89D6FF;Fanhack Credits&pop;\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Fanhack Tool Development&pop;\ntoasterparty\nrandomprime contributors\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Route&pop;\ntoasterparty\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Level Design&pop;\ntoasterparty\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Level Implementation&pop;\ntoasterparty\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Water Pool Morph Ball Track&pop;\nUncleReggie\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Geothermal Core Morph Ball Track&pop;\nUncleReggie\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Playtesters&pop;\nBajaBlood\nLokir\nUncleReggie\n\n&push;&font=C29C51F1;&main-color=#89D6FF;Fun Facts&pop;\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Inspiration&pop;\nMario Maker troll level community\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Development Time&pop;\n5 months\n\n&push;&font=C29C51F1;&main-color=#33ffd6;toaster's Personal Bests&pop;\nany% - 7:11 IGT\nPhazon Frigate - 9 Energy Tanks\nEscape Sequence - 3:00 remaining\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(this page is intentionally left blank)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThanks for Playing!\n",
+        "mainMenuMessage": "Metroid Fool v1.1",
+        "creditsString": "\n&push;&font=C29C51F1;&main-color=#89D6FF;Item Progression&pop;\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Morph Ball&pop;\nChozo Ruins - Ruined Shrine (Beetle Battle)\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Missile Launcher&pop;\nChozo Ruins - Water Pool\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Morph Ball Bomb&pop;\nChozo Ruins - Dynamo (Lower)\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Varia Suit&pop;\nChozo Ruins - Sunchamber\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Charge Beam&pop;\nPhendrana Drifts - Phendrana Canyon\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Boost Ball&pop;\nPhendrana Drifts - Chapel of the Elders\n\n&push;&font=C29C51F1;&main-color=#33ffd6;WAVE BEAM!&pop;\nMagmoor Caverns - Geothermal Core\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Super Missiles&pop;\nChozo Ruins - Training Chamber Access\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Spider Ball&pop;\nPhendrana Drifts - Quarantine Cave\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Ice Beam&pop;\nChozo Ruins - Ruined Shrine (Spider Track)\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Power Bomb&pop;\nPhazon Mines - Central Dynamo\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Plasma Beam&pop;\nMagmoor Caverns - Plasma Processing\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Flamethrower&pop;\nChozo Ruins - Burn Dome\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Gravity Suit&pop;\nTallon Overworld - Gully\n\n&push;&font=C29C51F1;&main-color=#33ffd6;X-Ray Visor&pop;\nPhendrana Drifts - Ice Ruins East\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Thermal Visor&pop;\nPhazon Mines - Missile Station Mines\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Space Jump Boots&pop;\nPhazon Mines - Elite Quarters\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Wavebuster&pop;\nChozo Ruins - Tower of Light\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Ice Spreader&pop;\nTallon Overworld - Life Grove\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Glorgie's Keyring&pop;\nTallon Overworld - Reactor Core\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Phazon Suit&pop;\nTallon Overworld - Artifact Temple\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Chozo Artifacts&pop;\nThe real Artifacts were the friends we made along the way\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Energy Tanks&pop;\n       Location           Intended Collection    \n   Frigate Crash Site         1st Pass           \n       Hive Mecha             1st Pass           \n Magmoor Workstation    2nd Pass needs boost     \n       Frozen Pike           1st Pass DBJ        \n    Gravity Chamber        2nd Pass Plasma       \n       Main Quarry        1st Pass Crane Meme    \nMetroid Quarantine A     1st Pass Hidden Wall    \n    Parasite Queen    2nd Pass SJ/1st Pass UBJ   \n    Monitor Station         2nd Pass SJ          \n   Frigate Crash Site       3rd Pass GSJ         \n     Arbor Chamber          2nd Pass SJ          \n   Great Tree Hall    1st Pass From Spider Track \n     Ice Ruins West         2nd Pass SW          \n     Watery Hall SW         2nd Pass SJ          \n\n&push;&font=C29C51F1;&main-color=#33ffd6;Missile Expansions&pop;\nYou could have had 172, but you chose to support diversity and local buisness instead\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Shiny Missiles&pop;\nT#3lo! Ov*!?$r)d - ???\nMa)*2or C^v3!rs - ???\nPh8!d@an(>a $r1f7s - ???\n\n&push;&font=C29C51F1;&main-color=#89D6FF;Fanhack Credits&pop;\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Fanhack Tool Development&pop;\ntoasterparty\nrandomprime contributors\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Route&pop;\ntoasterparty\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Level Design&pop;\ntoasterparty\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Level Implementation&pop;\ntoasterparty\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Water Pool Morph Ball Track&pop;\nUncleReggie\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Geothermal Core Morph Ball Track&pop;\nUncleReggie\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Playtesters&pop;\nBajaBlood\nLokir\nUncleReggie\n\n&push;&font=C29C51F1;&main-color=#89D6FF;Fun Facts&pop;\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Inspiration&pop;\nMario Maker troll level community\n\n&push;&font=C29C51F1;&main-color=#33ffd6;Development Time&pop;\n5 months\n\n&push;&font=C29C51F1;&main-color=#33ffd6;toaster's Personal Bests&pop;\nany% - 7:11 IGT\nPhazon Frigate - 9 Energy Tanks\nEscape Sequence - 3:00 remaining\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWikipedia contributors. (2024, March 17). Statue. Wikipedia. https://en.wikipedia.org/wiki/Statue\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(this page is intentionally left blank)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThanks for Playing!\n",
         "bossSizes": {
             "flaahgra": 1.08,
             "omegaPirate": 0.666,
@@ -107,16 +107,16 @@
             "wave": "Wave"
         },
         "artifactHints": {
-            "Artifact of Chozo": "Illegal possesion of &push;&main-color=#43CD80;Artifact of Chozo&pop; detected. You must return this item or suffer consequences.",
+            "Artifact of Chozo": "Illegal possession of &push;&main-color=#43CD80;Artifact of Chozo&pop; detected. You must return this item or suffer consequences.",
             "Artifact of Elder": "Didn't your mother teach you better than to steal things like the &push;&main-color=#43CD80;Artifact of Elder&pop;? Put it back and I *might* forgive you.",
             "Artifact of Lifegiver": "Return the &push;&main-color=#43CD80;Artifact of Lifegiver&pop; and I won't key your truck.",
-            "Artifact of Nature": "The &push;&main-color=#43CD80;Artifact of Nature&pop; was a vitally important spiritual conduit of the populations indiginous to Magmoor...\nuntil you took it. Please return it immediately to BEGIN to reconcile this cultural atrocity.",
+            "Artifact of Nature": "The &push;&main-color=#43CD80;Artifact of Nature&pop; was a vitally important spiritual conduit of the populations indigenous to Magmoor...\nuntil you took it. Please return it immediately to BEGIN to reconcile this cultural atrocity.",
             "Artifact of Newborn": "You won't like me when I'm angry. Put the &push;&main-color=#43CD80;Artifact of Newborn&pop; back where you found it now.",
             "Artifact of Spirit": "grrr arrrr grrrrrrrrawrrrr. &push;&main-color=#43CD80;Artifact of Spirit&pop; stolen make me ANGRY",
-            "Artifact of Strength": "I would not put a theif in my mouth to steal my &push;&main-color=#43CD80;Artifact of Strength&pop;\n - William Shakespeare",
+            "Artifact of Strength": "I would not put a thief in my mouth to steal my &push;&main-color=#43CD80;Artifact of Strength&pop;\n - William Shakespeare",
             "Artifact of Sun": "We aren't on speaking terms right now. Not until you return the &push;&main-color=#43CD80;Artifact of Sun&pop; to where you stole it.",
             "Artifact of Warrior": "What kind of person even steals something like &push;&main-color=#43CD80;Artifact of Warrior&pop;? Was it fun? I hope you die.",
-            "Artifact of Wild": "Descrated this sacred place with your sticky hands. &push;&main-color=#43CD80;Artifact of Wild&pop; must be restored to keep peace.",
+            "Artifact of Wild": "Desecrated this sacred place with your sticky hands. &push;&main-color=#43CD80;Artifact of Wild&pop; must be restored to keep peace.",
             "Artifact of World": "Return the &push;&main-color=#43CD80;Artifact of World&pop;, then eat a bag of dicks."
         }
     },
@@ -127,6 +127,14 @@
         "iceBreakJumpCount": 20
     },
     "strg": {
+        "3902238256": [
+            "FEEEED MEEEEEEEE",
+            "Parasite Queen",
+            "I CRAVE POWER FEED MEEEEEEEEE\nFREEE MY SOUL IT BURNS"
+        ],
+        "431082505": [
+            "Space Jump boots"
+        ],
         "3396914304": [
             "Tower of Darkness"
         ],
@@ -10246,14 +10254,24 @@
                         }
                     },
                     "waypoints": [
-                        {"id": 65562, "speed": 0.5},
-                        {"id": 65561, "speed": 0.5},
-                        {"id": 65559, "speed": 0.5},
-                        {"id": 65558, "speed": 0.5},
-                        {"id": 65556, "speed": 0.5},
-                        {"id": 65555, "speed": 0.5},
-                        {"id": 65553, "speed": 0.5},
-                        {"id": 65552, "speed": 0.5}
+                        {"id": 65562, "speed": 0.65},
+                        {"id": 65561, "speed": 0.65},
+                        {"id": 65559, "speed": 0.65},
+                        {"id": 65558, "speed": 0.65},
+                        {"id": 65556, "speed": 8},
+                        {"id": 65555, "speed": 8},
+                        {"id": 65553, "speed": 8},
+                        {"id": 65552, "speed": 8}
+                    ],
+                    "timers": [
+                        { "id": 65694, "time": 0.02 },
+                        { "id": 65695, "time": 0.02 },
+                        { "id": 65696, "time": 0.02 },
+                        { "id": 65697, "time": 0.02 },
+                        { "id": 65700, "time": 0.02 },
+                        { "id": 65699, "time": 0.02 },
+                        { "id": 65701, "time": 0.02 },
+                        { "id": 65698, "time": 0.02 }
                     ],
                     "editObjs": {
                         // grizby
@@ -10334,6 +10352,12 @@
                             "scale": [40, 71, 20],
                             "flags": 8193, // Detect Player | Apply Force
                             "force": [0, 0, -500]
+                        },
+                        {
+                            "id": 10001205,
+                            "layer": 1,
+                            "position": [-95.1, 93.4, 3.4],
+                            "scale": [25, 30, 1]
                         }
                     ],
                     "specialFunctions": [
@@ -10348,14 +10372,22 @@
                         // grizbies
                         "131185": {
                             "layer": 1,
-                            "vulnerability": "Super Missile"
+                            "vulnerability": "Super Missile",
+                            "speed": 1.6
                         },
                         "131186": {
                             "layer": 1,
-                            "vulnerability": "Super Missile"
+                            "vulnerability": "Super Missile",
+                            "speed": 1.6
                         }
                     },
                     "addConnections": [
+                        {
+                            "senderId": 10001205,
+                            "state": "ENTERED",
+                            "targetId": 131097,
+                            "message": "SET_TO_ZERO"
+                        },
                         {
                             "senderId": 10000256,
                             "state": "ARRIVED",
@@ -14930,29 +14962,7 @@
                             "shieldType": "Blue",
                             "blastShieldType": "None"
                         }
-                    },
-                    "specialFunctions": [
-                        {
-                            "id": 10000667,
-                            "type": "PlayerInAreaRelay"
-                        }
-                    ],
-                    "streamedAudios": [
-                        {
-                            "id": 10000668,
-                            "volume": 90,
-                            "audioFileName": "/audio/ice_worldmainL.dsp|/audio/ice_worldmainR.dsp",
-                            "isMusic": true
-                        }
-                    ],
-                    "addConnections": [
-                        {
-                            "senderId": 10000667,
-                            "state": "ENTERED",
-                            "targetId": 10000668,
-                            "message": "PLAY"
-                        }
-                    ]
+                    }
                 },
                 "Processing Center Access": {
                     "pickups": [
@@ -20021,23 +20031,23 @@
                         },
                         {
                             "position": [-466.5, 384.5, -6.78],
-                            "scale": [0.5, 0.5, 5.5]
+                            "scale": [0.55, 0.55, 5.5]
                         },
                         {
                             "position": [-466.5, 386.0, -6.78],
-                            "scale": [0.5, 0.5, 5.5]
+                            "scale": [0.55, 0.55, 5.5]
                         },
                         {
                             "position": [-466.5, 387.5, -6.78],
-                            "scale": [0.5, 0.5, 5.5]
+                            "scale": [0.55, 0.55, 5.5]
                         },
                         {
                             "position": [-466.5, 389.0, -6.78],
-                            "scale": [0.5, 0.5, 5.5]
+                            "scale": [0.55, 0.55, 5.5]
                         },
                         {
                             "position": [-466.5, 390.5, -6.78],
-                            "scale": [0.5, 0.5, 5.5]
+                            "scale": [0.55, 0.55, 5.5]
                         }
                     ]
                 },
@@ -24201,6 +24211,15 @@
                         "131118": {"position": [100, 57.5, 9.9]}
                     },
                     "blocks": [
+                        // lock main plaza door
+                        {
+                            "id": 10001200,
+                            "layer": 7,
+                            "active": false,
+                            "position": [98.7, -55.2, 7.5],
+                            "scale": [6, 1, 6],
+                            "texture": "Sandstone"
+                        },
                         // Grapple ledge beam
                         {
                             "position": [99.4, -34.2, 19.1],
@@ -24218,24 +24237,36 @@
                         // Half-pipe steps blockers
                         {
                             "position": [110.5, 39.3, 8.85],
-                            "scale": [11, 0.5, 0.5]
+                            "scale": [11, 0.5, 0.5],
+                            "texture": "Sandstone"
                         },
                         {
                             "position": [110.5, 39.3, 6.5],
-                            "scale": [11, 0.5, 0.5]
+                            "scale": [11, 0.5, 0.5],
+                            "texture": "Sandstone"
+                        },
+                        {
+                            "id": 10001201,
+                            "active": false,
+                            "position": [110.5, 39.3, 4.15],
+                            "scale": [11, 0.5, 0.5],
+                            "texture": "Snow"
                         },
                         // Upper steps blockers
                         {
                             "position": [98.7, 84.1, 21],
-                            "scale": [0.5, 15, 0.5]
+                            "scale": [0.5, 15, 0.5],
+                            "texture": "Sandstone"
                         },
                         {
                             "position": [98.7, 84.1, 23.5],
-                            "scale": [0.5, 15, 0.5]
+                            "scale": [0.5, 15, 0.5],
+                            "texture": "Sandstone"
                         },
                         {
                             "position": [98.7, 84.1, 26],
-                            "scale": [0.5, 15, 0.5]
+                            "scale": [0.5, 15, 0.5],
+                            "texture": "Sandstone"
                         },
                         // Floor posts
                         {
@@ -24381,6 +24412,19 @@
                         }
                     ],
                     "addConnections": [
+                        // prevent backtrack 1st pass
+                        {
+                            "senderId": 131466, // cutscene trigger
+                            "state": "ENTERED",
+                            "targetId": 10001200, // backtrack blocker
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 131466, // cutscene trigger
+                            "state": "ENTERED",
+                            "targetId": 10001201, // upper beetle -> lower blocker
+                            "message": "ACTIVATE"
+                        },
                         // activate grapple
                         {
                             "senderId": 10000831,
@@ -24433,6 +24477,10 @@
                 },
                 "Piston Tunnel": {
                     "editObjs": {
+                        /* Main Plaza Load Trigger */
+                        "458845": {
+                          "position": [124.1229, -69.9897, 26.7302]  
+                        },
                         /* Piston #1 */
                         "458833": { // waypoint (upper)
                             "speed": 0.05
@@ -25073,21 +25121,21 @@
                             "id": 10000832,
                             "layer": 2,
                             "position": [120.5, -192.1, 20.7],
-                            "scale": [0.5, 0.5, 10],
+                            "scale": [0.55, 0.55, 10],
                             "texture": "Sandstone"
                         },
                         {
                             "id": 10000833,
                             "layer": 2,
                             "position": [122.0, -192.1, 20.7],
-                            "scale": [0.5, 0.5, 10],
+                            "scale": [0.55, 0.55, 10],
                             "texture": "Sandstone"
                         },
                         {
                             "id": 10000834,
                             "layer": 2,
                             "position": [123.5, -192.1, 20.7],
-                            "scale": [0.5, 0.5, 10],
+                            "scale": [0.55, 0.55, 10],
                             "texture": "Sandstone"
                         }
                     ],
@@ -29410,7 +29458,46 @@
                         "1572868": { "rotation": [0, 0, 90] },
                         "1572886": { "rotation": [0, 0, 90] },
                         "1572900": { "rotation": [0, 0, -90] }
-                    }
+                    },
+                    "extraScans": [
+                        {
+                            "id": 10001202,
+                            "position": [202.071, 345.4004, 13.5854],
+                            "rotation": 0,
+                            "text": "Save Game",
+                            "combatVisible": true,
+                            "isRed": true
+                        }
+                    ],
+                    "timers": [
+                        // Queue the save request with a timer to make it easier on the eyes
+                        {
+                            "id": 10001203,
+                            "time": 0.5
+                        }
+                    ],
+                    "specialFunctions": [
+                        {
+                            "id": 10001204,
+                            "type": "SaveStation"
+                        }
+                    ],
+                    "addConnections": [
+                        // When the player scans the point, start the timer
+                        {
+                            "senderId": 10001202,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001203,
+                            "message": "RESET_AND_START"
+                        },
+                        // When the timer elapses, initiate a save
+                        {
+                            "senderId": 10001203,
+                            "state": "ZERO",
+                            "targetId": 10001204,
+                            "message": "ACTION"
+                        }
+                    ]
                 },
                 "Sunchamber Lobby": {
                     "doors": {
@@ -30050,6 +30137,11 @@
                             "active": false,
                             "position": [107, 297.1, 10],
                             "scale": [8, 1, 10]
+                        },
+                        { // swimming helper
+                            "position": [94.5, 271.3, -1.7],
+                            "scale": [10, 4, 2],
+                            "texture": "Sandstone"
                         }
                     ],
                     "timers": [
@@ -30064,7 +30156,15 @@
                         },
                         {
                             "id": 10000148, // Loiter punish timer
-                            "time": 10
+                            "time": 12
+                        },
+                        {
+                            "id": 2359943, // cutscene timer
+                            "time": 9.5
+                        },
+                        {
+                            "id": 2359361, // lower totem delay
+                            "time": 25
                         }
                     ],
                     "triggers": [
@@ -30080,12 +30180,45 @@
                             "position": [94.7, 278.2, 3.3],
                             "scale": [18, 21, 7],
                             "damageType": "PoisonWater",
-                            "damageAmount": 0.11
+                            "damageAmount": 1.2,
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, 10000, 500]
                         },
                         {
                             "id": 10000151,
                             "position": [113, 282, 0.5],
                             "scale": [35, 40, 25]
+                        },
+
+                        // anti-cheese
+                        {
+                            "position": [110.2347, 303.366, 3.2312],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, -1000, 0]
+                        },
+                        {
+                            "position": [79.6347, 303.366, 3.2312],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, -1000, 0]
+                        },
+                        {
+                            "position": [127.5347, 298.466, 3.2312],
+                            "flags": 8193, // Detect Player | Apply Force
+                            "force": [0, -1000, 0]
+                        },
+
+                        // "swimming" triggers
+                        {
+                            "position": [85.6195, 282.3981, -11.6],
+                            "scale": [88.800003, 91.803589, 28],
+                            "flags": 90112, // Detect Unmorphed Player | Detect Player Completely | Apply Force
+                            "force": [0, 0, 85]
+                        },
+                        {
+                            "position": [85.6195, 282.3981, -11.6],
+                            "scale": [88.800003, 91.803589, 26],
+                            "flags": 28672, // Detect Morphed Player | Detect Player Completely | Apply Force
+                            "force": [0, 0, 210]
                         }
                     ],
                     "relays": [
@@ -30116,19 +30249,19 @@
                         },
                         // Wasps
                         "2359356": {
-                            "speed": 0.25
+                            "speed": 0.1
                         },
                         "2359322": {
-                            "speed": 0.25
+                            "speed": 0.1
                         },
                         "2359358": {
-                            "speed": 0.25
+                            "speed": 0.1
                         },
                         "2359591": {
-                            "speed": 0.25
+                            "speed": 0.1
                         },
                         "2359594": {
-                            "speed": 0.25
+                            "speed": 0.1
                         }
                     },
                     "addConnections": [
@@ -30160,8 +30293,8 @@
                         },
                         // Do the same for an anit-cheese damage trigger
                         {
-                            "senderId": 2359639, // Last camera
-                            "state": "INACTIVE",
+                            "senderId": 2359411, // start water morph timer
+                            "state": "ZERO",
                             "targetId": 10000146, // trigger
                             "message": "ACTIVATE"
                         },
@@ -30270,13 +30403,27 @@
                             "state": "ZERO",
                             "targetId": 10000145,
                             "message": "ACTIVATE"
+                        },
+
+                        // repair the scripting to cope with the missing camera
+                        {
+                            "senderId": 2359615, // begin cinema
+                            "state": "ZERO",
+                            "targetId": 2359943, // Timer - Delay End of Water Sequence
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 2359615, // begin cinema
+                            "state": "ZERO",
+                            "targetId": 2359348, // spawn point
+                            "message": "SET_TO_ZERO"
                         }
                     ],
                     "deleteIds": [
                         // delete scans and stuff so the average rando player gets slowed down
                         2359371, 2359480, 2359481, 2359646,
 
-                        2359300 // randomprime cutscene skip
+                        2359300, 2359625, 2359349, 2359331 // cutscene
                     ]
                 },
                 "Sunchamber": {
@@ -30692,6 +30839,9 @@
                         }
                     ],
                     "editObjs": {
+                        "2437056": { // death cine spawn point
+                            "position": [284.5679, 172.1001, 66.4592]
+                        },
                         "2424843": { // spawn point
                             "position": [284.1292, 204.553, 76.0172],
                             "rotation": [0, 0, 180]
@@ -31580,7 +31730,7 @@
                     ],
                     "deleteIds": [
                         2434899, // Camera Hint
-                        2437056, // Death cutscene spawn point
+                        // 2437056, // Death cutscene spawn point
                         // 2424851, // Varia suit raised platform
 
                         // Randomprime skippable cutscenes

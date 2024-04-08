@@ -46,6 +46,9 @@ Tallon Overworld - Gully
 &push;&font=C29C51F1;&main-color=#33ffd6;X-Ray Visor&pop;
 Phendrana Drifts - Ice Ruins East
 
+&push;&font=C29C51F1;&main-color=#33ffd6;Thermal Visor&pop;
+Phazon Mines - Missile Station Mines
+
 &push;&font=C29C51F1;&main-color=#33ffd6;Space Jump Boots&pop;
 Phazon Mines - Elite Quarters
 
@@ -127,6 +130,31 @@ Mario Maker troll level community
 any% - 7:11 IGT
 Phazon Frigate - 9 Energy Tanks
 Escape Sequence - 3:00 remaining
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Wikipedia contributors. (2024, March 17). Statue. Wikipedia. https://en.wikipedia.org/wiki/Statue
+
+
 
 
 
