@@ -19,6 +19,13 @@ For a spoiler-free description of what has changed in each version, please see [
 - Added scan for barrier
 - Fix spelling mistakes in Artifact Hints
 
+#### Landing Site
+
+- Add an upgraded ship tutorial scan and require the player to read it before using the ship
+- Unblock Canyon Cavern/Waterfall Cavern once the player has read the tutorial
+- Fix camera jank when ferrying
+- Fix ferrying when denying save
+
 ### Chozo Ruins
 
 #### Main Plaza

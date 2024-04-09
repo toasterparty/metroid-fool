@@ -18,6 +18,9 @@ def id():
     return id
 
 spawn_point_id = id()
+tutorial_scan_id = 10001206
+tutorial_lock_block1 = 10001207
+tutorial_lock_block2 = 10001208
 
 data = {
     "pickups": [
@@ -117,11 +120,13 @@ data = {
         },
         # ship blockers
         {
+            "id": tutorial_lock_block1,
             "layer": layer,
             "position": [-407.5, 367.02, -21.3],
             "scale": [1, 6, 6],
         },
         {
+            "id": tutorial_lock_block2,
             "layer": layer,
             "position": [-295.5, 396.42, -38.4],
             "scale": [1, 6, 6],
@@ -206,7 +211,7 @@ data = {
         },
         "425": { # blue patch scan
             "position": [-377.8229, 348.7109, -13.5328],
-            "layer": 4
+            "layer": 3
         },
         "467": { # save station trigger
             "scale": [5.0, 5.0, 5.0],
@@ -251,7 +256,13 @@ data = {
     },
     "addConnections": [
         {
-            "senderId": 0x000001D7, # relay - end of into save cutscene
+            "senderId": 0x00000212, # Timer Save Out of Ship Delay
+            "state": "ZERO",
+            "targetId": spawn_point_id,
+            "message": "SET_TO_ZERO"
+        },
+        {
+            "senderId": 0x00000206, # Relay-cinema-not saving
             "state": "ZERO",
             "targetId": spawn_point_id,
             "message": "SET_TO_ZERO"
@@ -477,19 +488,25 @@ data['addConnections'].extend([
         'targetId': clear_room_scans_relay_id,
         'message': 'SET_TO_ZERO',
     },
-    # Propogate layer changes when this room loads
+    # Propogate layer changes when room loads
     {
         'senderId': auto_start_timer,
         'state': 'ZERO',
         'targetId': change_layers_relay_id,
         'message': 'SET_TO_ZERO',
     },
-    # Activate the first region scan
+    # Disable cutscene skips for saving when room loads
     {
         'senderId': auto_start_timer,
         'state': 'ZERO',
-        'targetId': REGIONS[0][0],
-        'message': 'ACTIVATE',
+        'targetId': 627,
+        'message': 'DEACTIVATE',
+    },
+    {
+        'senderId': auto_start_timer,
+        'state': 'ZERO',
+        'targetId': 4,
+        'message': 'DEACTIVATE',
     },
 ])
 
@@ -510,6 +527,64 @@ for room_id in ROOM_IDS:
             'message': 'INCREMENT',
         }
     )
+
+data['extraScans'].append(
+    {
+        'id': tutorial_scan_id,
+        'layer': layer,
+        'position': [-369.6, 372.332, -24.4673],
+        'rotation': -90,
+        'isRed': True,
+        'combatVisible': True,
+        'text': "Whoever took your ship appears to have upgraded it and returned it. Through use of your &push;&main-color=#43CD80;Scan Visor&pop; you can toggle the terminals above to select your desired destination.Additionally, you can recall each of these ingress points.",
+    }
+)
+
+# Activate the first region scan when the player reads the tutorial
+data['addConnections'].append({
+        'senderId': tutorial_scan_id,
+        'state': 'SCAN_DONE',
+        'targetId': REGIONS[0][0],
+        'message': 'ACTIVATE',
+    }
+)
+data['addConnections'].append({
+        'senderId': tutorial_scan_id,
+        'state': 'SCAN_DONE',
+        'targetId': tutorial_lock_block1,
+        'message': 'DEACTIVATE',
+    }
+)
+data['addConnections'].append({
+        'senderId': tutorial_scan_id,
+        'state': 'SCAN_DONE',
+        'targetId': tutorial_lock_block2,
+        'message': 'DEACTIVATE',
+    }
+)
+
+# ... or when they come back from warp/load
+data['addConnections'].append({
+        'senderId': 0x000001FD, # Relay-cinema loading
+        'state': 'ZERO',
+        'targetId': REGIONS[0][0],
+        'message': 'ACTIVATE',
+    }
+)
+data['addConnections'].append({
+        'senderId': 0x000001FD,
+        'state': 'ZERO',
+        'targetId': tutorial_lock_block1,
+        'message': 'DEACTIVATE',
+    }
+)
+data['addConnections'].append({
+        'senderId': 0x000001FD,
+        'state': 'ZERO',
+        'targetId': tutorial_lock_block2,
+        'message': 'DEACTIVATE',
+    }
+)
 
 # Activate the spawn point once we've actually started picking out destinations
 for _, _, ROOMS in REGIONS:
@@ -654,6 +729,11 @@ for region_idx, region_data in enumerate(REGIONS):
             }
         )
 
+        # Move warp pickup to upgraded ship layer
+        data['editObjs'][pickup_id] = {
+            'layer': layer,
+        }
+
         # When scanned, clear everything but the region
         data['addConnections'].extend([
             {
@@ -706,6 +786,16 @@ for region_idx, region_data in enumerate(REGIONS):
                 'state': 'ZERO',
                 'targetId': pickup_id,
                 'message': 'ACTIVATE',
+            }
+        )
+
+        # When the timer elapses, deactivate the standard reposition
+        data['addConnections'].append(
+            {
+                'senderId': timer_id,
+                'state': 'ZERO',
+                'targetId': 0x000001D4, # save spawn point
+                'message': 'DEACTIVATE',
             }
         )
 

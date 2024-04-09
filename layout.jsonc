@@ -18047,6 +18047,19 @@
                             "text": "What a lovely lil' plant. Maybe I'll take a trimming back with me when I'm done here."
                         },
                         {
+                            "id": 10001206,
+                            "layer": 11,
+                            "position": [
+                                -369.6,
+                                372.332,
+                                -24.4673
+                            ],
+                            "rotation": 270,
+                            "isRed": true,
+                            "combatVisible": true,
+                            "text": "Whoever took your ship appears to have upgraded it and returned it. Through repeated use of your &push;&main-color=#43CD80;Scan Visor&pop; you can toggle the terminals above to select your desired destination. Additionally, you can recall your ship from each of these ingress points."
+                        },
+                        {
                             "id": 10000734,
                             "layer": 11,
                             "position": [
@@ -18571,6 +18584,7 @@
                             ]
                         },
                         {
+                            "id": 10001207,
                             "layer": 11,
                             "position": [
                                 -407.5,
@@ -18584,6 +18598,7 @@
                             ]
                         },
                         {
+                            "id": 10001208,
                             "layer": 11,
                             "position": [
                                 -295.5,
@@ -18779,7 +18794,7 @@
                                 348.7109,
                                 -13.5328
                             ],
-                            "layer": 4
+                            "layer": 3
                         },
                         "467": {
                             "scale": [
@@ -18827,11 +18842,71 @@
                         },
                         "11000046": {
                             "layer": 12
+                        },
+                        "10000782": {
+                            "layer": 11
+                        },
+                        "10000784": {
+                            "layer": 11
+                        },
+                        "10000786": {
+                            "layer": 11
+                        },
+                        "10000788": {
+                            "layer": 11
+                        },
+                        "10000790": {
+                            "layer": 11
+                        },
+                        "10000793": {
+                            "layer": 11
+                        },
+                        "10000795": {
+                            "layer": 11
+                        },
+                        "10000797": {
+                            "layer": 11
+                        },
+                        "10000799": {
+                            "layer": 11
+                        },
+                        "10000802": {
+                            "layer": 11
+                        },
+                        "10000804": {
+                            "layer": 11
+                        },
+                        "10000806": {
+                            "layer": 11
+                        },
+                        "10000808": {
+                            "layer": 11
+                        },
+                        "10000810": {
+                            "layer": 11
+                        },
+                        "10000813": {
+                            "layer": 11
+                        },
+                        "10000815": {
+                            "layer": 11
+                        },
+                        "10000818": {
+                            "layer": 11
+                        },
+                        "10000820": {
+                            "layer": 11
                         }
                     },
                     "addConnections": [
                         {
-                            "senderId": 471,
+                            "senderId": 530,
+                            "state": "ZERO",
+                            "targetId": 10000733,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 518,
                             "state": "ZERO",
                             "targetId": 10000733,
                             "message": "SET_TO_ZERO"
@@ -18917,8 +18992,14 @@
                         {
                             "senderId": 10000762,
                             "state": "ZERO",
-                            "targetId": 10000734,
-                            "message": "ACTIVATE"
+                            "targetId": 627,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000762,
+                            "state": "ZERO",
+                            "targetId": 4,
+                            "message": "DEACTIVATE"
                         },
                         {
                             "senderId": 10000757,
@@ -19027,6 +19108,42 @@
                             "state": "ZERO",
                             "targetId": 10000780,
                             "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 10001206,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000734,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10001206,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001207,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001206,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001208,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 509,
+                            "state": "ZERO",
+                            "targetId": 10000734,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 509,
+                            "state": "ZERO",
+                            "targetId": 10001207,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 509,
+                            "state": "ZERO",
+                            "targetId": 10001208,
+                            "message": "DEACTIVATE"
                         },
                         {
                             "senderId": 10000735,
@@ -19143,6 +19260,12 @@
                             "message": "ACTIVATE"
                         },
                         {
+                            "senderId": 10000783,
+                            "state": "ZERO",
+                            "targetId": 468,
+                            "message": "DEACTIVATE"
+                        },
+                        {
                             "senderId": 10000760,
                             "state": "ZERO",
                             "targetId": 10000736,
@@ -19183,6 +19306,12 @@
                             "state": "ZERO",
                             "targetId": 10000784,
                             "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000785,
+                            "state": "ZERO",
+                            "targetId": 468,
+                            "message": "DEACTIVATE"
                         },
                         {
                             "senderId": 10000760,
@@ -19227,6 +19356,12 @@
                             "message": "ACTIVATE"
                         },
                         {
+                            "senderId": 10000787,
+                            "state": "ZERO",
+                            "targetId": 468,
+                            "message": "DEACTIVATE"
+                        },
+                        {
                             "senderId": 10000760,
                             "state": "ZERO",
                             "targetId": 10000738,
@@ -19269,6 +19404,12 @@
                             "message": "ACTIVATE"
                         },
                         {
+                            "senderId": 10000789,
+                            "state": "ZERO",
+                            "targetId": 468,
+                            "message": "DEACTIVATE"
+                        },
+                        {
                             "senderId": 10000760,
                             "state": "ZERO",
                             "targetId": 10000739,
@@ -19309,6 +19450,12 @@
                             "state": "ZERO",
                             "targetId": 10000790,
                             "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000791,
+                            "state": "ZERO",
+                            "targetId": 468,
+                            "message": "DEACTIVATE"
                         },
                         {
                             "senderId": 10000759,
@@ -19395,6 +19542,12 @@
                             "message": "ACTIVATE"
                         },
                         {
+                            "senderId": 10000794,
+                            "state": "ZERO",
+                            "targetId": 468,
+                            "message": "DEACTIVATE"
+                        },
+                        {
                             "senderId": 10000760,
                             "state": "ZERO",
                             "targetId": 10000742,
@@ -19435,6 +19588,12 @@
                             "state": "ZERO",
                             "targetId": 10000795,
                             "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000796,
+                            "state": "ZERO",
+                            "targetId": 468,
+                            "message": "DEACTIVATE"
                         },
                         {
                             "senderId": 10000760,
@@ -19479,6 +19638,12 @@
                             "message": "ACTIVATE"
                         },
                         {
+                            "senderId": 10000798,
+                            "state": "ZERO",
+                            "targetId": 468,
+                            "message": "DEACTIVATE"
+                        },
+                        {
                             "senderId": 10000760,
                             "state": "ZERO",
                             "targetId": 10000744,
@@ -19519,6 +19684,12 @@
                             "state": "ZERO",
                             "targetId": 10000799,
                             "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000800,
+                            "state": "ZERO",
+                            "targetId": 468,
+                            "message": "DEACTIVATE"
                         },
                         {
                             "senderId": 10000759,
@@ -19605,6 +19776,12 @@
                             "message": "ACTIVATE"
                         },
                         {
+                            "senderId": 10000803,
+                            "state": "ZERO",
+                            "targetId": 468,
+                            "message": "DEACTIVATE"
+                        },
+                        {
                             "senderId": 10000760,
                             "state": "ZERO",
                             "targetId": 10000747,
@@ -19645,6 +19822,12 @@
                             "state": "ZERO",
                             "targetId": 10000804,
                             "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000805,
+                            "state": "ZERO",
+                            "targetId": 468,
+                            "message": "DEACTIVATE"
                         },
                         {
                             "senderId": 10000760,
@@ -19689,6 +19872,12 @@
                             "message": "ACTIVATE"
                         },
                         {
+                            "senderId": 10000807,
+                            "state": "ZERO",
+                            "targetId": 468,
+                            "message": "DEACTIVATE"
+                        },
+                        {
                             "senderId": 10000760,
                             "state": "ZERO",
                             "targetId": 10000749,
@@ -19731,6 +19920,12 @@
                             "message": "ACTIVATE"
                         },
                         {
+                            "senderId": 10000809,
+                            "state": "ZERO",
+                            "targetId": 468,
+                            "message": "DEACTIVATE"
+                        },
+                        {
                             "senderId": 10000760,
                             "state": "ZERO",
                             "targetId": 10000750,
@@ -19771,6 +19966,12 @@
                             "state": "ZERO",
                             "targetId": 10000810,
                             "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000811,
+                            "state": "ZERO",
+                            "targetId": 468,
+                            "message": "DEACTIVATE"
                         },
                         {
                             "senderId": 10000759,
@@ -19857,6 +20058,12 @@
                             "message": "ACTIVATE"
                         },
                         {
+                            "senderId": 10000814,
+                            "state": "ZERO",
+                            "targetId": 468,
+                            "message": "DEACTIVATE"
+                        },
+                        {
                             "senderId": 10000760,
                             "state": "ZERO",
                             "targetId": 10000753,
@@ -19897,6 +20104,12 @@
                             "state": "ZERO",
                             "targetId": 10000815,
                             "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000816,
+                            "state": "ZERO",
+                            "targetId": 468,
+                            "message": "DEACTIVATE"
                         },
                         {
                             "senderId": 10000759,
@@ -19983,6 +20196,12 @@
                             "message": "ACTIVATE"
                         },
                         {
+                            "senderId": 10000819,
+                            "state": "ZERO",
+                            "targetId": 468,
+                            "message": "DEACTIVATE"
+                        },
+                        {
                             "senderId": 10000760,
                             "state": "ZERO",
                             "targetId": 10000756,
@@ -20023,6 +20242,12 @@
                             "state": "ZERO",
                             "targetId": 10000820,
                             "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000821,
+                            "state": "ZERO",
+                            "targetId": 468,
+                            "message": "DEACTIVATE"
                         }
                     ],
                     "deleteIds": [
