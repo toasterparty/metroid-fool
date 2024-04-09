@@ -1,7 +1,7 @@
 import json
 
 layer = 11
-next_id = 10000733
+next_id = 10001210
 
 # x=-369.5902 +/- 5
 region_scan_pos = [-364.5902, 366.032, -18.6673]
@@ -18,9 +18,9 @@ def id():
     return id
 
 spawn_point_id = id()
-tutorial_scan_id = 10001206
-tutorial_lock_block1 = 10001207
-tutorial_lock_block2 = 10001208
+tutorial_scan_id = id()
+tutorial_lock_block1 = id()
+tutorial_lock_block2 = id()
 
 data = {
     "pickups": [
@@ -410,13 +410,62 @@ data['layers'] = {
     12: False, # ridley dead
 }
 
-pickup_id = 11000046
+unused_layers = [
+    # 12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+]
+auto_start_timer_bugfix_id = id()
+data['timers'].append(
+    {
+        'id': auto_start_timer_bugfix_id,
+        'time': 0.02,
+        'startImmediately': True,
+    }
+)
+data['editObjs'][auto_start_timer_bugfix_id] = { 'layer': 29 }
+
+# Disable a bunch of unused layers to fix the lag
+for unused_layer in unused_layers:
+    layer_changer_id = id()
+    data['specialFunctions'].append({
+            'id': layer_changer_id,
+            'type': 'ScriptLayerController',
+            'layerChangeRoomId':  2414967056, # landing site
+            'layerChangeLayerId': unused_layer,
+        }
+    )
+    data['addConnections'].append({
+            'senderId': auto_start_timer_bugfix_id,
+            'state': 'ZERO',
+            'targetId': layer_changer_id,
+            'message': 'DECREMENT',
+        }
+    )
+
+pickup_id = id()
 data['pickups'].append(
     {
         'id': pickup_id,
         'position': [-392.5887, 395.6094, -14.59],
         'type': 'Nothing',
-        'hudmemoText': '',
         'scanText': 'Warp to Escape Sequence',
         'respawn': True,
         'destination': 'Impact Crater:Metroid Prime Lair',
@@ -533,10 +582,10 @@ data['extraScans'].append(
         'id': tutorial_scan_id,
         'layer': layer,
         'position': [-369.6, 372.332, -24.4673],
-        'rotation': -90,
+        'rotation': 270,
         'isRed': True,
         'combatVisible': True,
-        'text': "Whoever took your ship appears to have upgraded it and returned it. Through use of your &push;&main-color=#43CD80;Scan Visor&pop; you can toggle the terminals above to select your desired destination.Additionally, you can recall each of these ingress points.",
+        'text': "Whoever took your ship appears to have upgraded it and returned it. Use &push;&main-color=#43CD80;Scan Visor&pop; to toggle the above terminals to select your desired destination. Additionally, you can recall at each of these ingress points.",
     }
 )
 
@@ -715,7 +764,6 @@ for region_idx, region_data in enumerate(REGIONS):
                 # DEFAULT LAYER
                 'position': pickup_pos,
                 'type': 'Nothing',
-                'hudmemoText': '',
                 'respawn': True,
                 'destination': room,
             }
