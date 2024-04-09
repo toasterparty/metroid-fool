@@ -18141,19 +18141,19 @@
                             ],
                             "text": "What a lovely lil' plant. Maybe I'll take a trimming back with me when I'm done here."
                         },
-                        {
-                            "id": 10001211,
-                            "layer": 11,
-                            "position": [
-                                -369.6,
-                                372.332,
-                                -24.4673
-                            ],
-                            "rotation": 270,
-                            "isRed": true,
-                            "combatVisible": true,
-                            "text": "Whoever took your ship appears to have upgraded it and returned it. Use &push;&main-color=#43CD80;Scan Visor&pop; to toggle the above terminals to select your desired destination. Additionally, you can recall at each of these ingress points."
-                        },
+                        // {
+                        //     "id": 10001211,
+                        //     "layer": 11,
+                        //     "position": [
+                        //         -369.6,
+                        //         372.332,
+                        //         -24.4673
+                        //     ],
+                        //     "rotation": 270,
+                        //     "isRed": true,
+                        //     "combatVisible": true,
+                        //     "text": "Whoever took your ship appears to have upgraded it and returned it. Use &push;&main-color=#43CD80;Scan Visor&pop; to toggle the above terminals to select your desired destination. Additionally, you can recall at each of these ingress points."
+                        // },
                         {
                             "id": 10001214,
                             "layer": 11,
@@ -19326,24 +19326,24 @@
                             "targetId": 10001281,
                             "message": "INCREMENT"
                         },
-                        {
-                            "senderId": 10001211,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001214,
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 10001211,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001212,
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 10001211,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001213,
-                            "message": "DEACTIVATE"
-                        },
+                        // {
+                        //     "senderId": 10001211,
+                        //     "state": "SCAN_DONE",
+                        //     "targetId": 10001214,
+                        //     "message": "ACTIVATE"
+                        // },
+                        // {
+                        //     "senderId": 10001211,
+                        //     "state": "SCAN_DONE",
+                        //     "targetId": 10001212,
+                        //     "message": "DEACTIVATE"
+                        // },
+                        // {
+                        //     "senderId": 10001211,
+                        //     "state": "SCAN_DONE",
+                        //     "targetId": 10001213,
+                        //     "message": "DEACTIVATE"
+                        // },
                         {
                             "senderId": 509,
                             "state": "ZERO",
@@ -22119,14 +22119,14 @@
                         "24": false, // ridley
                         "25": true // Gumpybottom's Keyring
                     },
-                    "extraScans": [
-                        {
-                            "position": [-373.1844, 100.5585, -31],
-                            "isRed": true,
-                            "layer": 25,
-                            "text": "This appears to be the defense matrix Glorgsmire was referring to in their diary."
-                        }
-                    ],
+                    // "extraScans": [
+                    //     {
+                    //         "position": [-373.1844, 100.5585, -31],
+                    //         "isRed": true,
+                    //         "layer": 25,
+                    //         "text": "This appears to be the defense matrix Glorgsmire was referring to in their diary."
+                    //     }
+                    // ],
                     "pickups": [
                         {
                             // id: 1049044
@@ -29930,46 +29930,46 @@
                         "1572868": { "rotation": [0, 0, 90] },
                         "1572886": { "rotation": [0, 0, 90] },
                         "1572900": { "rotation": [0, 0, -90] }
-                    },
-                    "extraScans": [
-                        {
-                            "id": 10001202,
-                            "position": [202.071, 345.4004, 13.5854],
-                            "rotation": 0,
-                            "text": "Save Game",
-                            "combatVisible": true,
-                            "isRed": true
-                        }
-                    ],
-                    "timers": [
-                        // Queue the save request with a timer to make it easier on the eyes
-                        {
-                            "id": 10001203,
-                            "time": 0.5
-                        }
-                    ],
-                    "specialFunctions": [
-                        {
-                            "id": 10001204,
-                            "type": "SaveStation"
-                        }
-                    ],
-                    "addConnections": [
-                        // When the player scans the point, start the timer
-                        {
-                            "senderId": 10001202,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001203,
-                            "message": "RESET_AND_START"
-                        },
-                        // When the timer elapses, initiate a save
-                        {
-                            "senderId": 10001203,
-                            "state": "ZERO",
-                            "targetId": 10001204,
-                            "message": "ACTION"
-                        }
-                    ]
+                    }
+                    // "extraScans": [
+                    //     {
+                    //         "id": 10001202,
+                    //         "position": [202.071, 345.4004, 13.5854],
+                    //         "rotation": 0,
+                    //         "text": "Save Game",
+                    //         "combatVisible": true,
+                    //         "isRed": true
+                    //     }
+                    // ],
+                    // "timers": [
+                    //     // Queue the save request with a timer to make it easier on the eyes
+                    //     {
+                    //         "id": 10001203,
+                    //         "time": 0.5
+                    //     }
+                    // ],
+                    // "specialFunctions": [
+                    //     {
+                    //         "id": 10001204,
+                    //         "type": "SaveStation"
+                    //     }
+                    // ],
+                    // "addConnections": [
+                    //     // When the player scans the point, start the timer
+                    //     {
+                    //         "senderId": 10001202,
+                    //         "state": "SCAN_DONE",
+                    //         "targetId": 10001203,
+                    //         "message": "RESET_AND_START"
+                    //     },
+                    //     // When the timer elapses, initiate a save
+                    //     {
+                    //         "senderId": 10001203,
+                    //         "state": "ZERO",
+                    //         "targetId": 10001204,
+                    //         "message": "ACTION"
+                    //     }
+                    // ]
                 },
                 "Sunchamber Lobby": {
                     "doors": {
