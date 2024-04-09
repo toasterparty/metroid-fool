@@ -17667,7 +17667,7 @@
                             "type": "Nothing"
                         },
                         {
-                            "id": 10001257,
+                            "id": 10001237,
                             "position": [
                                 -392.5887,
                                 395.6094,
@@ -17679,7 +17679,7 @@
                             "destination": "Impact Crater:Metroid Prime Lair"
                         },
                         {
-                            "id": 10001283,
+                            "id": 10001263,
                             "position": [
                                 -369.6044,
                                 380.5261,
@@ -17690,7 +17690,7 @@
                             "destination": "Tallon Overworld North (Tallon Canyon)"
                         },
                         {
-                            "id": 10001285,
+                            "id": 10001265,
                             "position": [
                                 -369.6044,
                                 380.5261,
@@ -17701,7 +17701,7 @@
                             "destination": "Tallon Overworld West (Root Cave)"
                         },
                         {
-                            "id": 10001287,
+                            "id": 10001267,
                             "position": [
                                 -369.6044,
                                 380.5261,
@@ -17712,7 +17712,7 @@
                             "destination": "Tallon Overworld East (Frigate Crash Site)"
                         },
                         {
-                            "id": 10001289,
+                            "id": 10001269,
                             "position": [
                                 -369.6044,
                                 380.5261,
@@ -17723,7 +17723,7 @@
                             "destination": "Tallon Overworld South (Great Tree Hall, Upper)"
                         },
                         {
-                            "id": 10001291,
+                            "id": 10001271,
                             "position": [
                                 -369.6044,
                                 380.5261,
@@ -17734,7 +17734,7 @@
                             "destination": "Tallon Overworld South (Great Tree Hall, Lower)"
                         },
                         {
-                            "id": 10001294,
+                            "id": 10001274,
                             "position": [
                                 -369.6044,
                                 380.5261,
@@ -17745,7 +17745,7 @@
                             "destination": "Chozo Ruins West (Main Plaza)"
                         },
                         {
-                            "id": 10001296,
+                            "id": 10001276,
                             "position": [
                                 -369.6044,
                                 380.5261,
@@ -17756,7 +17756,7 @@
                             "destination": "Chozo Ruins North (Sun Tower)"
                         },
                         {
-                            "id": 10001298,
+                            "id": 10001278,
                             "position": [
                                 -369.6044,
                                 380.5261,
@@ -17767,7 +17767,7 @@
                             "destination": "Chozo Ruins East (Reflecting Pool, Save Station)"
                         },
                         {
-                            "id": 10001300,
+                            "id": 10001280,
                             "position": [
                                 -369.6044,
                                 380.5261,
@@ -17778,7 +17778,7 @@
                             "destination": "Chozo Ruins South (Reflecting Pool, Far End)"
                         },
                         {
-                            "id": 10001303,
+                            "id": 10001283,
                             "position": [
                                 -369.6044,
                                 380.5261,
@@ -17789,7 +17789,7 @@
                             "destination": "Magmoor Caverns North (Lava Lake)"
                         },
                         {
-                            "id": 10001305,
+                            "id": 10001285,
                             "position": [
                                 -369.6044,
                                 380.5261,
@@ -17800,7 +17800,7 @@
                             "destination": "Magmoor Caverns West (Monitor Station)"
                         },
                         {
-                            "id": 10001307,
+                            "id": 10001287,
                             "position": [
                                 -369.6044,
                                 380.5261,
@@ -17811,7 +17811,7 @@
                             "destination": "Magmoor Caverns East (Twin Fires)"
                         },
                         {
-                            "id": 10001309,
+                            "id": 10001289,
                             "position": [
                                 -369.6044,
                                 380.5261,
@@ -17822,7 +17822,7 @@
                             "destination": "Magmoor Caverns South (Magmoor Workstation, Save Station)"
                         },
                         {
-                            "id": 10001311,
+                            "id": 10001291,
                             "position": [
                                 -369.6044,
                                 380.5261,
@@ -17833,7 +17833,7 @@
                             "destination": "Magmoor Caverns South (Magmoor Workstation, Debris)"
                         },
                         {
-                            "id": 10001314,
+                            "id": 10001294,
                             "position": [
                                 -369.6044,
                                 380.5261,
@@ -17844,7 +17844,7 @@
                             "destination": "Phendrana Drifts North (Phendrana Shorelines)"
                         },
                         {
-                            "id": 10001316,
+                            "id": 10001296,
                             "position": [
                                 -369.6044,
                                 380.5261,
@@ -17855,7 +17855,7 @@
                             "destination": "Phendrana Drifts South (Quarantine Cave)"
                         },
                         {
-                            "id": 10001319,
+                            "id": 10001299,
                             "position": [
                                 -369.6044,
                                 380.5261,
@@ -17866,7 +17866,7 @@
                             "destination": "Phazon Mines East (Main Quarry)"
                         },
                         {
-                            "id": 10001321,
+                            "id": 10001301,
                             "position": [
                                 -369.6044,
                                 380.5261,
@@ -17893,240 +17893,126 @@
                     },
                     "relays": [
                         {
-                            "id": 10001258,
+                            "id": 10001238,
                             "layer": 11
                         },
                         {
-                            "id": 10001259
+                            "id": 10001239
                         },
                         {
-                            "id": 10001260,
+                            "id": 10001240,
                             "layer": 11
                         },
                         {
-                            "id": 10001261,
+                            "id": 10001241,
                             "layer": 11
                         }
                     ],
                     "specialFunctions": [
                         {
-                            "id": 10001238,
-                            "type": "ScriptLayerController",
-                            "layerChangeRoomId": 2414967056,
-                            "layerChangeLayerId": 13
-                        },
-                        {
-                            "id": 10001239,
-                            "type": "ScriptLayerController",
-                            "layerChangeRoomId": 2414967056,
-                            "layerChangeLayerId": 14
-                        },
-                        {
-                            "id": 10001240,
-                            "type": "ScriptLayerController",
-                            "layerChangeRoomId": 2414967056,
-                            "layerChangeLayerId": 15
-                        },
-                        {
-                            "id": 10001241,
-                            "type": "ScriptLayerController",
-                            "layerChangeRoomId": 2414967056,
-                            "layerChangeLayerId": 16
-                        },
-                        {
-                            "id": 10001242,
-                            "type": "ScriptLayerController",
-                            "layerChangeRoomId": 2414967056,
-                            "layerChangeLayerId": 17
-                        },
-                        {
-                            "id": 10001243,
-                            "type": "ScriptLayerController",
-                            "layerChangeRoomId": 2414967056,
-                            "layerChangeLayerId": 18
-                        },
-                        {
                             "id": 10001244,
-                            "type": "ScriptLayerController",
-                            "layerChangeRoomId": 2414967056,
-                            "layerChangeLayerId": 19
-                        },
-                        {
-                            "id": 10001245,
-                            "type": "ScriptLayerController",
-                            "layerChangeRoomId": 2414967056,
-                            "layerChangeLayerId": 20
-                        },
-                        {
-                            "id": 10001246,
-                            "type": "ScriptLayerController",
-                            "layerChangeRoomId": 2414967056,
-                            "layerChangeLayerId": 21
-                        },
-                        {
-                            "id": 10001247,
-                            "type": "ScriptLayerController",
-                            "layerChangeRoomId": 2414967056,
-                            "layerChangeLayerId": 22
-                        },
-                        {
-                            "id": 10001248,
-                            "type": "ScriptLayerController",
-                            "layerChangeRoomId": 2414967056,
-                            "layerChangeLayerId": 23
-                        },
-                        {
-                            "id": 10001249,
-                            "type": "ScriptLayerController",
-                            "layerChangeRoomId": 2414967056,
-                            "layerChangeLayerId": 24
-                        },
-                        {
-                            "id": 10001250,
-                            "type": "ScriptLayerController",
-                            "layerChangeRoomId": 2414967056,
-                            "layerChangeLayerId": 25
-                        },
-                        {
-                            "id": 10001251,
-                            "type": "ScriptLayerController",
-                            "layerChangeRoomId": 2414967056,
-                            "layerChangeLayerId": 26
-                        },
-                        {
-                            "id": 10001252,
-                            "type": "ScriptLayerController",
-                            "layerChangeRoomId": 2414967056,
-                            "layerChangeLayerId": 27
-                        },
-                        {
-                            "id": 10001253,
-                            "type": "ScriptLayerController",
-                            "layerChangeRoomId": 2414967056,
-                            "layerChangeLayerId": 28
-                        },
-                        {
-                            "id": 10001254,
-                            "type": "ScriptLayerController",
-                            "layerChangeRoomId": 2414967056,
-                            "layerChangeLayerId": 29
-                        },
-                        {
-                            "id": 10001255,
-                            "type": "ScriptLayerController",
-                            "layerChangeRoomId": 2414967056,
-                            "layerChangeLayerId": 30
-                        },
-                        {
-                            "id": 10001256,
-                            "type": "ScriptLayerController",
-                            "layerChangeRoomId": 2414967056,
-                            "layerChangeLayerId": 31
-                        },
-                        {
-                            "id": 10001264,
                             "type": "ScriptLayerController",
                             "layerChangeRoomId": 3689744570,
                             "layerChangeLayerId": 11
                         },
                         {
-                            "id": 10001265,
+                            "id": 10001245,
                             "type": "ScriptLayerController",
                             "layerChangeRoomId": 925831207,
                             "layerChangeLayerId": 11
                         },
                         {
-                            "id": 10001266,
+                            "id": 10001246,
                             "type": "ScriptLayerController",
                             "layerChangeRoomId": 3339035544,
                             "layerChangeLayerId": 11
                         },
                         {
-                            "id": 10001267,
+                            "id": 10001247,
                             "type": "ScriptLayerController",
                             "layerChangeRoomId": 603152353,
                             "layerChangeLayerId": 11
                         },
                         {
-                            "id": 10001268,
+                            "id": 10001248,
                             "type": "ScriptLayerController",
                             "layerChangeRoomId": 3001573804,
                             "layerChangeLayerId": 11
                         },
                         {
-                            "id": 10001269,
+                            "id": 10001249,
                             "type": "ScriptLayerController",
                             "layerChangeRoomId": 835750603,
                             "layerChangeLayerId": 11
                         },
                         {
-                            "id": 10001270,
+                            "id": 10001250,
                             "type": "ScriptLayerController",
                             "layerChangeRoomId": 1876146603,
                             "layerChangeLayerId": 11
                         },
                         {
-                            "id": 10001271,
+                            "id": 10001251,
                             "type": "ScriptLayerController",
                             "layerChangeRoomId": 2965866933,
                             "layerChangeLayerId": 11
                         },
                         {
-                            "id": 10001272,
+                            "id": 10001252,
                             "type": "ScriptLayerController",
                             "layerChangeRoomId": 1829788744,
                             "layerChangeLayerId": 11
                         },
                         {
-                            "id": 10001273,
+                            "id": 10001253,
                             "type": "ScriptLayerController",
                             "layerChangeRoomId": 87039645,
                             "layerChangeLayerId": 11
                         },
                         {
-                            "id": 10001274,
+                            "id": 10001254,
                             "type": "ScriptLayerController",
                             "layerChangeRoomId": 3156907596,
                             "layerChangeLayerId": 11
                         },
                         {
-                            "id": 10001275,
+                            "id": 10001255,
                             "type": "ScriptLayerController",
                             "layerChangeRoomId": 717679670,
                             "layerChangeLayerId": 11
                         },
                         {
-                            "id": 10001276,
+                            "id": 10001256,
                             "type": "ScriptLayerController",
                             "layerChangeRoomId": 2445362367,
                             "layerChangeLayerId": 11
                         },
                         {
-                            "id": 10001277,
+                            "id": 10001257,
                             "type": "ScriptLayerController",
                             "layerChangeRoomId": 2109790043,
                             "layerChangeLayerId": 11
                         },
                         {
-                            "id": 10001278,
+                            "id": 10001258,
                             "type": "ScriptLayerController",
                             "layerChangeRoomId": 1125708118,
                             "layerChangeLayerId": 11
                         },
                         {
-                            "id": 10001279,
+                            "id": 10001259,
                             "type": "ScriptLayerController",
                             "layerChangeRoomId": 3004337398,
                             "layerChangeLayerId": 11
                         },
                         {
-                            "id": 10001280,
+                            "id": 10001260,
                             "type": "ScriptLayerController",
                             "layerChangeRoomId": 2451570395,
                             "layerChangeLayerId": 11
                         },
                         {
-                            "id": 10001281,
+                            "id": 10001261,
                             "type": "ScriptLayerController",
                             "layerChangeRoomId": 3223329329,
                             "layerChangeLayerId": 11
@@ -18141,19 +18027,6 @@
                             ],
                             "text": "What a lovely lil' plant. Maybe I'll take a trimming back with me when I'm done here."
                         },
-                        // {
-                        //     "id": 10001211,
-                        //     "layer": 11,
-                        //     "position": [
-                        //         -369.6,
-                        //         372.332,
-                        //         -24.4673
-                        //     ],
-                        //     "rotation": 270,
-                        //     "isRed": true,
-                        //     "combatVisible": true,
-                        //     "text": "Whoever took your ship appears to have upgraded it and returned it. Use &push;&main-color=#43CD80;Scan Visor&pop; to toggle the above terminals to select your desired destination. Additionally, you can recall at each of these ingress points."
-                        // },
                         {
                             "id": 10001214,
                             "layer": 11,
@@ -18522,20 +18395,70 @@
                             "startImmediately": true
                         },
                         {
-                            "id": 10001237,
+                            "id": 10001242,
                             "time": 0.02,
+                            "startImmediately": true
+                        },
+                        {
+                            "id": 10001243,
+                            "layer": 11,
+                            "time": 0.04,
                             "startImmediately": true
                         },
                         {
                             "id": 10001262,
-                            "time": 0.02,
-                            "startImmediately": true
+                            "layer": 11,
+                            "time": 0.04
                         },
                         {
-                            "id": 10001263,
+                            "id": 10001264,
                             "layer": 11,
-                            "time": 0.04,
-                            "startImmediately": true
+                            "time": 0.04
+                        },
+                        {
+                            "id": 10001266,
+                            "layer": 11,
+                            "time": 0.04
+                        },
+                        {
+                            "id": 10001268,
+                            "layer": 11,
+                            "time": 0.04
+                        },
+                        {
+                            "id": 10001270,
+                            "layer": 11,
+                            "time": 0.04
+                        },
+                        {
+                            "id": 10001272,
+                            "layer": 11,
+                            "time": 0.04
+                        },
+                        {
+                            "id": 10001273,
+                            "layer": 11,
+                            "time": 0.04
+                        },
+                        {
+                            "id": 10001275,
+                            "layer": 11,
+                            "time": 0.04
+                        },
+                        {
+                            "id": 10001277,
+                            "layer": 11,
+                            "time": 0.04
+                        },
+                        {
+                            "id": 10001279,
+                            "layer": 11,
+                            "time": 0.04
+                        },
+                        {
+                            "id": 10001281,
+                            "layer": 11,
+                            "time": 0.04
                         },
                         {
                             "id": 10001282,
@@ -18583,72 +18506,17 @@
                             "time": 0.04
                         },
                         {
-                            "id": 10001299,
+                            "id": 10001298,
                             "layer": 11,
                             "time": 0.04
                         },
                         {
-                            "id": 10001301,
+                            "id": 10001300,
                             "layer": 11,
                             "time": 0.04
                         },
                         {
                             "id": 10001302,
-                            "layer": 11,
-                            "time": 0.04
-                        },
-                        {
-                            "id": 10001304,
-                            "layer": 11,
-                            "time": 0.04
-                        },
-                        {
-                            "id": 10001306,
-                            "layer": 11,
-                            "time": 0.04
-                        },
-                        {
-                            "id": 10001308,
-                            "layer": 11,
-                            "time": 0.04
-                        },
-                        {
-                            "id": 10001310,
-                            "layer": 11,
-                            "time": 0.04
-                        },
-                        {
-                            "id": 10001312,
-                            "layer": 11,
-                            "time": 0.04
-                        },
-                        {
-                            "id": 10001313,
-                            "layer": 11,
-                            "time": 0.04
-                        },
-                        {
-                            "id": 10001315,
-                            "layer": 11,
-                            "time": 0.04
-                        },
-                        {
-                            "id": 10001317,
-                            "layer": 11,
-                            "time": 0.04
-                        },
-                        {
-                            "id": 10001318,
-                            "layer": 11,
-                            "time": 0.04
-                        },
-                        {
-                            "id": 10001320,
-                            "layer": 11,
-                            "time": 0.04
-                        },
-                        {
-                            "id": 10001322,
                             "layer": 11,
                             "time": 0.04
                         }
@@ -18941,10 +18809,34 @@
                             "layer": 4
                         },
                         "10001237": {
-                            "layer": 29
-                        },
-                        "10001257": {
                             "layer": 12
+                        },
+                        "10001263": {
+                            "layer": 11
+                        },
+                        "10001265": {
+                            "layer": 11
+                        },
+                        "10001267": {
+                            "layer": 11
+                        },
+                        "10001269": {
+                            "layer": 11
+                        },
+                        "10001271": {
+                            "layer": 11
+                        },
+                        "10001274": {
+                            "layer": 11
+                        },
+                        "10001276": {
+                            "layer": 11
+                        },
+                        "10001278": {
+                            "layer": 11
+                        },
+                        "10001280": {
+                            "layer": 11
                         },
                         "10001283": {
                             "layer": 11
@@ -18967,37 +18859,10 @@
                         "10001296": {
                             "layer": 11
                         },
-                        "10001298": {
+                        "10001299": {
                             "layer": 11
                         },
-                        "10001300": {
-                            "layer": 11
-                        },
-                        "10001303": {
-                            "layer": 11
-                        },
-                        "10001305": {
-                            "layer": 11
-                        },
-                        "10001307": {
-                            "layer": 11
-                        },
-                        "10001309": {
-                            "layer": 11
-                        },
-                        "10001311": {
-                            "layer": 11
-                        },
-                        "10001314": {
-                            "layer": 11
-                        },
-                        "10001316": {
-                            "layer": 11
-                        },
-                        "10001319": {
-                            "layer": 11
-                        },
-                        "10001321": {
+                        "10001301": {
                             "layer": 11
                         }
                     },
@@ -19069,295 +18934,163 @@
                             "message": "DECREMENT"
                         },
                         {
-                            "senderId": 10001237,
-                            "state": "ZERO",
-                            "targetId": 10001238,
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 10001237,
+                            "senderId": 10001242,
                             "state": "ZERO",
                             "targetId": 10001239,
-                            "message": "DECREMENT"
+                            "message": "SET_TO_ZERO"
                         },
                         {
-                            "senderId": 10001237,
+                            "senderId": 10001242,
                             "state": "ZERO",
                             "targetId": 10001240,
-                            "message": "DECREMENT"
+                            "message": "SET_TO_ZERO"
                         },
                         {
-                            "senderId": 10001237,
+                            "senderId": 10001242,
                             "state": "ZERO",
                             "targetId": 10001241,
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 10001237,
-                            "state": "ZERO",
-                            "targetId": 10001242,
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 10001237,
-                            "state": "ZERO",
-                            "targetId": 10001243,
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 10001237,
-                            "state": "ZERO",
-                            "targetId": 10001244,
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 10001237,
-                            "state": "ZERO",
-                            "targetId": 10001245,
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 10001237,
-                            "state": "ZERO",
-                            "targetId": 10001246,
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 10001237,
-                            "state": "ZERO",
-                            "targetId": 10001247,
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 10001237,
-                            "state": "ZERO",
-                            "targetId": 10001248,
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 10001237,
-                            "state": "ZERO",
-                            "targetId": 10001249,
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 10001237,
-                            "state": "ZERO",
-                            "targetId": 10001250,
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 10001237,
-                            "state": "ZERO",
-                            "targetId": 10001251,
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 10001237,
-                            "state": "ZERO",
-                            "targetId": 10001252,
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 10001237,
-                            "state": "ZERO",
-                            "targetId": 10001253,
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 10001237,
-                            "state": "ZERO",
-                            "targetId": 10001254,
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 10001237,
-                            "state": "ZERO",
-                            "targetId": 10001255,
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 10001237,
-                            "state": "ZERO",
-                            "targetId": 10001256,
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 10001262,
-                            "state": "ZERO",
-                            "targetId": 10001259,
                             "message": "SET_TO_ZERO"
                         },
                         {
-                            "senderId": 10001262,
+                            "senderId": 10001243,
                             "state": "ZERO",
-                            "targetId": 10001260,
+                            "targetId": 10001238,
                             "message": "SET_TO_ZERO"
                         },
                         {
-                            "senderId": 10001262,
-                            "state": "ZERO",
-                            "targetId": 10001261,
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 10001263,
-                            "state": "ZERO",
-                            "targetId": 10001258,
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 10001263,
+                            "senderId": 10001243,
                             "state": "ZERO",
                             "targetId": 627,
                             "message": "DEACTIVATE"
                         },
                         {
-                            "senderId": 10001263,
+                            "senderId": 10001243,
                             "state": "ZERO",
                             "targetId": 4,
                             "message": "DEACTIVATE"
                         },
                         {
-                            "senderId": 10001258,
+                            "senderId": 10001238,
                             "state": "ZERO",
-                            "targetId": 10001264,
+                            "targetId": 10001244,
                             "message": "INCREMENT"
                         },
                         {
-                            "senderId": 10001258,
+                            "senderId": 10001238,
                             "state": "ZERO",
-                            "targetId": 10001265,
+                            "targetId": 10001245,
                             "message": "INCREMENT"
                         },
                         {
-                            "senderId": 10001258,
+                            "senderId": 10001238,
                             "state": "ZERO",
-                            "targetId": 10001266,
+                            "targetId": 10001246,
                             "message": "INCREMENT"
                         },
                         {
-                            "senderId": 10001258,
+                            "senderId": 10001238,
                             "state": "ZERO",
-                            "targetId": 10001267,
+                            "targetId": 10001247,
                             "message": "INCREMENT"
                         },
                         {
-                            "senderId": 10001258,
+                            "senderId": 10001238,
                             "state": "ZERO",
-                            "targetId": 10001268,
+                            "targetId": 10001248,
                             "message": "INCREMENT"
                         },
                         {
-                            "senderId": 10001258,
+                            "senderId": 10001238,
                             "state": "ZERO",
-                            "targetId": 10001269,
+                            "targetId": 10001249,
                             "message": "INCREMENT"
                         },
                         {
-                            "senderId": 10001258,
+                            "senderId": 10001238,
                             "state": "ZERO",
-                            "targetId": 10001270,
+                            "targetId": 10001250,
                             "message": "INCREMENT"
                         },
                         {
-                            "senderId": 10001258,
+                            "senderId": 10001238,
                             "state": "ZERO",
-                            "targetId": 10001271,
+                            "targetId": 10001251,
                             "message": "INCREMENT"
                         },
                         {
-                            "senderId": 10001258,
+                            "senderId": 10001238,
                             "state": "ZERO",
-                            "targetId": 10001272,
+                            "targetId": 10001252,
                             "message": "INCREMENT"
                         },
                         {
-                            "senderId": 10001258,
+                            "senderId": 10001238,
                             "state": "ZERO",
-                            "targetId": 10001273,
+                            "targetId": 10001253,
                             "message": "INCREMENT"
                         },
                         {
-                            "senderId": 10001258,
+                            "senderId": 10001238,
                             "state": "ZERO",
-                            "targetId": 10001274,
+                            "targetId": 10001254,
                             "message": "INCREMENT"
                         },
                         {
-                            "senderId": 10001258,
+                            "senderId": 10001238,
                             "state": "ZERO",
-                            "targetId": 10001275,
+                            "targetId": 10001255,
                             "message": "INCREMENT"
                         },
                         {
-                            "senderId": 10001258,
+                            "senderId": 10001238,
                             "state": "ZERO",
-                            "targetId": 10001276,
+                            "targetId": 10001256,
                             "message": "INCREMENT"
                         },
                         {
-                            "senderId": 10001258,
+                            "senderId": 10001238,
                             "state": "ZERO",
-                            "targetId": 10001277,
+                            "targetId": 10001257,
                             "message": "INCREMENT"
                         },
                         {
-                            "senderId": 10001258,
+                            "senderId": 10001238,
                             "state": "ZERO",
-                            "targetId": 10001278,
+                            "targetId": 10001258,
                             "message": "INCREMENT"
                         },
                         {
-                            "senderId": 10001258,
+                            "senderId": 10001238,
                             "state": "ZERO",
-                            "targetId": 10001279,
+                            "targetId": 10001259,
                             "message": "INCREMENT"
                         },
                         {
-                            "senderId": 10001258,
+                            "senderId": 10001238,
                             "state": "ZERO",
-                            "targetId": 10001280,
+                            "targetId": 10001260,
                             "message": "INCREMENT"
                         },
                         {
-                            "senderId": 10001258,
+                            "senderId": 10001238,
                             "state": "ZERO",
-                            "targetId": 10001281,
+                            "targetId": 10001261,
                             "message": "INCREMENT"
                         },
-                        // {
-                        //     "senderId": 10001211,
-                        //     "state": "SCAN_DONE",
-                        //     "targetId": 10001214,
-                        //     "message": "ACTIVATE"
-                        // },
-                        // {
-                        //     "senderId": 10001211,
-                        //     "state": "SCAN_DONE",
-                        //     "targetId": 10001212,
-                        //     "message": "DEACTIVATE"
-                        // },
-                        // {
-                        //     "senderId": 10001211,
-                        //     "state": "SCAN_DONE",
-                        //     "targetId": 10001213,
-                        //     "message": "DEACTIVATE"
-                        // },
                         {
-                            "senderId": 509,
+                            "senderId": 10001243,
                             "state": "ZERO",
                             "targetId": 10001214,
                             "message": "ACTIVATE"
                         },
                         {
-                            "senderId": 509,
+                            "senderId": 10001243,
                             "state": "ZERO",
                             "targetId": 10001212,
                             "message": "DEACTIVATE"
                         },
                         {
-                            "senderId": 509,
+                            "senderId": 10001243,
                             "state": "ZERO",
                             "targetId": 10001213,
                             "message": "DEACTIVATE"
@@ -19393,7 +19126,7 @@
                             "message": "ACTIVATE"
                         },
                         {
-                            "senderId": 10001260,
+                            "senderId": 10001240,
                             "state": "ZERO",
                             "targetId": 10001214,
                             "message": "DEACTIVATE"
@@ -19401,23 +19134,539 @@
                         {
                             "senderId": 10001214,
                             "state": "SCAN_DONE",
-                            "targetId": 10001259,
+                            "targetId": 10001239,
                             "message": "SET_TO_ZERO"
                         },
                         {
                             "senderId": 10001214,
                             "state": "SCAN_DONE",
-                            "targetId": 10001260,
+                            "targetId": 10001240,
                             "message": "SET_TO_ZERO"
                         },
                         {
                             "senderId": 10001214,
                             "state": "SCAN_DONE",
-                            "targetId": 10001261,
+                            "targetId": 10001241,
                             "message": "SET_TO_ZERO"
                         },
                         {
                             "senderId": 10001214,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001262,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10001262,
+                            "state": "ZERO",
+                            "targetId": 10001220,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10001262,
+                            "state": "ZERO",
+                            "targetId": 10001215,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10001241,
+                            "state": "ZERO",
+                            "targetId": 10001215,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001239,
+                            "state": "ZERO",
+                            "targetId": 10001263,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001215,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001239,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10001215,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001241,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10001215,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001264,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10001264,
+                            "state": "ZERO",
+                            "targetId": 10001216,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10001264,
+                            "state": "ZERO",
+                            "targetId": 10001263,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10001264,
+                            "state": "ZERO",
+                            "targetId": 468,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001241,
+                            "state": "ZERO",
+                            "targetId": 10001216,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001239,
+                            "state": "ZERO",
+                            "targetId": 10001265,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001216,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001239,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10001216,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001241,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10001216,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001266,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10001266,
+                            "state": "ZERO",
+                            "targetId": 10001217,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10001266,
+                            "state": "ZERO",
+                            "targetId": 10001265,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10001266,
+                            "state": "ZERO",
+                            "targetId": 468,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001241,
+                            "state": "ZERO",
+                            "targetId": 10001217,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001239,
+                            "state": "ZERO",
+                            "targetId": 10001267,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001217,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001239,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10001217,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001241,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10001217,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001268,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10001268,
+                            "state": "ZERO",
+                            "targetId": 10001218,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10001268,
+                            "state": "ZERO",
+                            "targetId": 10001267,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10001268,
+                            "state": "ZERO",
+                            "targetId": 468,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001241,
+                            "state": "ZERO",
+                            "targetId": 10001218,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001239,
+                            "state": "ZERO",
+                            "targetId": 10001269,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001218,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001239,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10001218,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001241,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10001218,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001270,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10001270,
+                            "state": "ZERO",
+                            "targetId": 10001219,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10001270,
+                            "state": "ZERO",
+                            "targetId": 10001269,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10001270,
+                            "state": "ZERO",
+                            "targetId": 468,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001241,
+                            "state": "ZERO",
+                            "targetId": 10001219,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001239,
+                            "state": "ZERO",
+                            "targetId": 10001271,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001219,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001239,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10001219,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001241,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10001219,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001272,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10001272,
+                            "state": "ZERO",
+                            "targetId": 10001215,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10001272,
+                            "state": "ZERO",
+                            "targetId": 10001271,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10001272,
+                            "state": "ZERO",
+                            "targetId": 468,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001240,
+                            "state": "ZERO",
+                            "targetId": 10001220,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001220,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001239,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10001220,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001240,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10001220,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001241,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10001220,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001273,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10001273,
+                            "state": "ZERO",
+                            "targetId": 10001225,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10001273,
+                            "state": "ZERO",
+                            "targetId": 10001221,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10001241,
+                            "state": "ZERO",
+                            "targetId": 10001221,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001239,
+                            "state": "ZERO",
+                            "targetId": 10001274,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001221,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001239,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10001221,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001241,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10001221,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001275,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10001275,
+                            "state": "ZERO",
+                            "targetId": 10001222,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10001275,
+                            "state": "ZERO",
+                            "targetId": 10001274,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10001275,
+                            "state": "ZERO",
+                            "targetId": 468,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001241,
+                            "state": "ZERO",
+                            "targetId": 10001222,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001239,
+                            "state": "ZERO",
+                            "targetId": 10001276,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001222,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001239,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10001222,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001241,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10001222,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001277,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10001277,
+                            "state": "ZERO",
+                            "targetId": 10001223,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10001277,
+                            "state": "ZERO",
+                            "targetId": 10001276,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10001277,
+                            "state": "ZERO",
+                            "targetId": 468,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001241,
+                            "state": "ZERO",
+                            "targetId": 10001223,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001239,
+                            "state": "ZERO",
+                            "targetId": 10001278,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001223,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001239,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10001223,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001241,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10001223,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001279,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10001279,
+                            "state": "ZERO",
+                            "targetId": 10001224,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10001279,
+                            "state": "ZERO",
+                            "targetId": 10001278,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10001279,
+                            "state": "ZERO",
+                            "targetId": 468,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001241,
+                            "state": "ZERO",
+                            "targetId": 10001224,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001239,
+                            "state": "ZERO",
+                            "targetId": 10001280,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001224,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001239,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10001224,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001241,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10001224,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001281,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10001281,
+                            "state": "ZERO",
+                            "targetId": 10001221,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10001281,
+                            "state": "ZERO",
+                            "targetId": 10001280,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10001281,
+                            "state": "ZERO",
+                            "targetId": 468,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001240,
+                            "state": "ZERO",
+                            "targetId": 10001225,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001225,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001239,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10001225,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001240,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10001225,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001241,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10001225,
                             "state": "SCAN_DONE",
                             "targetId": 10001282,
                             "message": "RESET_AND_START"
@@ -19425,41 +19674,41 @@
                         {
                             "senderId": 10001282,
                             "state": "ZERO",
-                            "targetId": 10001220,
+                            "targetId": 10001231,
                             "message": "ACTIVATE"
                         },
                         {
                             "senderId": 10001282,
                             "state": "ZERO",
-                            "targetId": 10001215,
+                            "targetId": 10001226,
                             "message": "ACTIVATE"
                         },
                         {
-                            "senderId": 10001261,
+                            "senderId": 10001241,
                             "state": "ZERO",
-                            "targetId": 10001215,
+                            "targetId": 10001226,
                             "message": "DEACTIVATE"
                         },
                         {
-                            "senderId": 10001259,
+                            "senderId": 10001239,
                             "state": "ZERO",
                             "targetId": 10001283,
                             "message": "DEACTIVATE"
                         },
                         {
-                            "senderId": 10001215,
+                            "senderId": 10001226,
                             "state": "SCAN_DONE",
-                            "targetId": 10001259,
+                            "targetId": 10001239,
                             "message": "SET_TO_ZERO"
                         },
                         {
-                            "senderId": 10001215,
+                            "senderId": 10001226,
                             "state": "SCAN_DONE",
-                            "targetId": 10001261,
+                            "targetId": 10001241,
                             "message": "SET_TO_ZERO"
                         },
                         {
-                            "senderId": 10001215,
+                            "senderId": 10001226,
                             "state": "SCAN_DONE",
                             "targetId": 10001284,
                             "message": "RESET_AND_START"
@@ -19467,7 +19716,7 @@
                         {
                             "senderId": 10001284,
                             "state": "ZERO",
-                            "targetId": 10001216,
+                            "targetId": 10001227,
                             "message": "ACTIVATE"
                         },
                         {
@@ -19483,31 +19732,31 @@
                             "message": "DEACTIVATE"
                         },
                         {
-                            "senderId": 10001261,
+                            "senderId": 10001241,
                             "state": "ZERO",
-                            "targetId": 10001216,
+                            "targetId": 10001227,
                             "message": "DEACTIVATE"
                         },
                         {
-                            "senderId": 10001259,
+                            "senderId": 10001239,
                             "state": "ZERO",
                             "targetId": 10001285,
                             "message": "DEACTIVATE"
                         },
                         {
-                            "senderId": 10001216,
+                            "senderId": 10001227,
                             "state": "SCAN_DONE",
-                            "targetId": 10001259,
+                            "targetId": 10001239,
                             "message": "SET_TO_ZERO"
                         },
                         {
-                            "senderId": 10001216,
+                            "senderId": 10001227,
                             "state": "SCAN_DONE",
-                            "targetId": 10001261,
+                            "targetId": 10001241,
                             "message": "SET_TO_ZERO"
                         },
                         {
-                            "senderId": 10001216,
+                            "senderId": 10001227,
                             "state": "SCAN_DONE",
                             "targetId": 10001286,
                             "message": "RESET_AND_START"
@@ -19515,7 +19764,7 @@
                         {
                             "senderId": 10001286,
                             "state": "ZERO",
-                            "targetId": 10001217,
+                            "targetId": 10001228,
                             "message": "ACTIVATE"
                         },
                         {
@@ -19531,31 +19780,31 @@
                             "message": "DEACTIVATE"
                         },
                         {
-                            "senderId": 10001261,
+                            "senderId": 10001241,
                             "state": "ZERO",
-                            "targetId": 10001217,
+                            "targetId": 10001228,
                             "message": "DEACTIVATE"
                         },
                         {
-                            "senderId": 10001259,
+                            "senderId": 10001239,
                             "state": "ZERO",
                             "targetId": 10001287,
                             "message": "DEACTIVATE"
                         },
                         {
-                            "senderId": 10001217,
+                            "senderId": 10001228,
                             "state": "SCAN_DONE",
-                            "targetId": 10001259,
+                            "targetId": 10001239,
                             "message": "SET_TO_ZERO"
                         },
                         {
-                            "senderId": 10001217,
+                            "senderId": 10001228,
                             "state": "SCAN_DONE",
-                            "targetId": 10001261,
+                            "targetId": 10001241,
                             "message": "SET_TO_ZERO"
                         },
                         {
-                            "senderId": 10001217,
+                            "senderId": 10001228,
                             "state": "SCAN_DONE",
                             "targetId": 10001288,
                             "message": "RESET_AND_START"
@@ -19563,7 +19812,7 @@
                         {
                             "senderId": 10001288,
                             "state": "ZERO",
-                            "targetId": 10001218,
+                            "targetId": 10001229,
                             "message": "ACTIVATE"
                         },
                         {
@@ -19579,31 +19828,31 @@
                             "message": "DEACTIVATE"
                         },
                         {
-                            "senderId": 10001261,
+                            "senderId": 10001241,
                             "state": "ZERO",
-                            "targetId": 10001218,
+                            "targetId": 10001229,
                             "message": "DEACTIVATE"
                         },
                         {
-                            "senderId": 10001259,
+                            "senderId": 10001239,
                             "state": "ZERO",
                             "targetId": 10001289,
                             "message": "DEACTIVATE"
                         },
                         {
-                            "senderId": 10001218,
+                            "senderId": 10001229,
                             "state": "SCAN_DONE",
-                            "targetId": 10001259,
+                            "targetId": 10001239,
                             "message": "SET_TO_ZERO"
                         },
                         {
-                            "senderId": 10001218,
+                            "senderId": 10001229,
                             "state": "SCAN_DONE",
-                            "targetId": 10001261,
+                            "targetId": 10001241,
                             "message": "SET_TO_ZERO"
                         },
                         {
-                            "senderId": 10001218,
+                            "senderId": 10001229,
                             "state": "SCAN_DONE",
                             "targetId": 10001290,
                             "message": "RESET_AND_START"
@@ -19611,7 +19860,7 @@
                         {
                             "senderId": 10001290,
                             "state": "ZERO",
-                            "targetId": 10001219,
+                            "targetId": 10001230,
                             "message": "ACTIVATE"
                         },
                         {
@@ -19627,31 +19876,31 @@
                             "message": "DEACTIVATE"
                         },
                         {
-                            "senderId": 10001261,
+                            "senderId": 10001241,
                             "state": "ZERO",
-                            "targetId": 10001219,
+                            "targetId": 10001230,
                             "message": "DEACTIVATE"
                         },
                         {
-                            "senderId": 10001259,
+                            "senderId": 10001239,
                             "state": "ZERO",
                             "targetId": 10001291,
                             "message": "DEACTIVATE"
                         },
                         {
-                            "senderId": 10001219,
+                            "senderId": 10001230,
                             "state": "SCAN_DONE",
-                            "targetId": 10001259,
+                            "targetId": 10001239,
                             "message": "SET_TO_ZERO"
                         },
                         {
-                            "senderId": 10001219,
+                            "senderId": 10001230,
                             "state": "SCAN_DONE",
-                            "targetId": 10001261,
+                            "targetId": 10001241,
                             "message": "SET_TO_ZERO"
                         },
                         {
-                            "senderId": 10001219,
+                            "senderId": 10001230,
                             "state": "SCAN_DONE",
                             "targetId": 10001292,
                             "message": "RESET_AND_START"
@@ -19659,7 +19908,7 @@
                         {
                             "senderId": 10001292,
                             "state": "ZERO",
-                            "targetId": 10001215,
+                            "targetId": 10001226,
                             "message": "ACTIVATE"
                         },
                         {
@@ -19675,31 +19924,31 @@
                             "message": "DEACTIVATE"
                         },
                         {
-                            "senderId": 10001260,
+                            "senderId": 10001240,
                             "state": "ZERO",
-                            "targetId": 10001220,
+                            "targetId": 10001231,
                             "message": "DEACTIVATE"
                         },
                         {
-                            "senderId": 10001220,
+                            "senderId": 10001231,
                             "state": "SCAN_DONE",
-                            "targetId": 10001259,
+                            "targetId": 10001239,
                             "message": "SET_TO_ZERO"
                         },
                         {
-                            "senderId": 10001220,
+                            "senderId": 10001231,
                             "state": "SCAN_DONE",
-                            "targetId": 10001260,
+                            "targetId": 10001240,
                             "message": "SET_TO_ZERO"
                         },
                         {
-                            "senderId": 10001220,
+                            "senderId": 10001231,
                             "state": "SCAN_DONE",
-                            "targetId": 10001261,
+                            "targetId": 10001241,
                             "message": "SET_TO_ZERO"
                         },
                         {
-                            "senderId": 10001220,
+                            "senderId": 10001231,
                             "state": "SCAN_DONE",
                             "targetId": 10001293,
                             "message": "RESET_AND_START"
@@ -19707,41 +19956,41 @@
                         {
                             "senderId": 10001293,
                             "state": "ZERO",
-                            "targetId": 10001225,
+                            "targetId": 10001234,
                             "message": "ACTIVATE"
                         },
                         {
                             "senderId": 10001293,
                             "state": "ZERO",
-                            "targetId": 10001221,
+                            "targetId": 10001232,
                             "message": "ACTIVATE"
                         },
                         {
-                            "senderId": 10001261,
+                            "senderId": 10001241,
                             "state": "ZERO",
-                            "targetId": 10001221,
+                            "targetId": 10001232,
                             "message": "DEACTIVATE"
                         },
                         {
-                            "senderId": 10001259,
+                            "senderId": 10001239,
                             "state": "ZERO",
                             "targetId": 10001294,
                             "message": "DEACTIVATE"
                         },
                         {
-                            "senderId": 10001221,
+                            "senderId": 10001232,
                             "state": "SCAN_DONE",
-                            "targetId": 10001259,
+                            "targetId": 10001239,
                             "message": "SET_TO_ZERO"
                         },
                         {
-                            "senderId": 10001221,
+                            "senderId": 10001232,
                             "state": "SCAN_DONE",
-                            "targetId": 10001261,
+                            "targetId": 10001241,
                             "message": "SET_TO_ZERO"
                         },
                         {
-                            "senderId": 10001221,
+                            "senderId": 10001232,
                             "state": "SCAN_DONE",
                             "targetId": 10001295,
                             "message": "RESET_AND_START"
@@ -19749,7 +19998,7 @@
                         {
                             "senderId": 10001295,
                             "state": "ZERO",
-                            "targetId": 10001222,
+                            "targetId": 10001233,
                             "message": "ACTIVATE"
                         },
                         {
@@ -19765,31 +20014,31 @@
                             "message": "DEACTIVATE"
                         },
                         {
-                            "senderId": 10001261,
+                            "senderId": 10001241,
                             "state": "ZERO",
-                            "targetId": 10001222,
+                            "targetId": 10001233,
                             "message": "DEACTIVATE"
                         },
                         {
-                            "senderId": 10001259,
+                            "senderId": 10001239,
                             "state": "ZERO",
                             "targetId": 10001296,
                             "message": "DEACTIVATE"
                         },
                         {
-                            "senderId": 10001222,
+                            "senderId": 10001233,
                             "state": "SCAN_DONE",
-                            "targetId": 10001259,
+                            "targetId": 10001239,
                             "message": "SET_TO_ZERO"
                         },
                         {
-                            "senderId": 10001222,
+                            "senderId": 10001233,
                             "state": "SCAN_DONE",
-                            "targetId": 10001261,
+                            "targetId": 10001241,
                             "message": "SET_TO_ZERO"
                         },
                         {
-                            "senderId": 10001222,
+                            "senderId": 10001233,
                             "state": "SCAN_DONE",
                             "targetId": 10001297,
                             "message": "RESET_AND_START"
@@ -19797,7 +20046,7 @@
                         {
                             "senderId": 10001297,
                             "state": "ZERO",
-                            "targetId": 10001223,
+                            "targetId": 10001232,
                             "message": "ACTIVATE"
                         },
                         {
@@ -19813,127 +20062,121 @@
                             "message": "DEACTIVATE"
                         },
                         {
-                            "senderId": 10001261,
+                            "senderId": 10001240,
                             "state": "ZERO",
-                            "targetId": 10001223,
+                            "targetId": 10001234,
                             "message": "DEACTIVATE"
                         },
                         {
-                            "senderId": 10001259,
-                            "state": "ZERO",
+                            "senderId": 10001234,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001239,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10001234,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001240,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10001234,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001241,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10001234,
+                            "state": "SCAN_DONE",
                             "targetId": 10001298,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10001298,
+                            "state": "ZERO",
+                            "targetId": 10001214,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10001298,
+                            "state": "ZERO",
+                            "targetId": 10001235,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10001241,
+                            "state": "ZERO",
+                            "targetId": 10001235,
                             "message": "DEACTIVATE"
                         },
                         {
-                            "senderId": 10001223,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001259,
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 10001223,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001261,
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 10001223,
-                            "state": "SCAN_DONE",
+                            "senderId": 10001239,
+                            "state": "ZERO",
                             "targetId": 10001299,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10001235,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001239,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10001235,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001241,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10001235,
+                            "state": "SCAN_DONE",
+                            "targetId": 10001300,
                             "message": "RESET_AND_START"
                         },
                         {
-                            "senderId": 10001299,
+                            "senderId": 10001300,
                             "state": "ZERO",
-                            "targetId": 10001224,
+                            "targetId": 10001236,
                             "message": "ACTIVATE"
                         },
                         {
-                            "senderId": 10001299,
+                            "senderId": 10001300,
                             "state": "ZERO",
-                            "targetId": 10001298,
+                            "targetId": 10001299,
                             "message": "ACTIVATE"
                         },
                         {
-                            "senderId": 10001299,
+                            "senderId": 10001300,
                             "state": "ZERO",
                             "targetId": 468,
                             "message": "DEACTIVATE"
                         },
                         {
-                            "senderId": 10001261,
+                            "senderId": 10001241,
                             "state": "ZERO",
-                            "targetId": 10001224,
+                            "targetId": 10001236,
                             "message": "DEACTIVATE"
                         },
                         {
-                            "senderId": 10001259,
+                            "senderId": 10001239,
                             "state": "ZERO",
-                            "targetId": 10001300,
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 10001224,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001259,
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 10001224,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001261,
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 10001224,
-                            "state": "SCAN_DONE",
                             "targetId": 10001301,
-                            "message": "RESET_AND_START"
-                        },
-                        {
-                            "senderId": 10001301,
-                            "state": "ZERO",
-                            "targetId": 10001221,
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 10001301,
-                            "state": "ZERO",
-                            "targetId": 10001300,
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 10001301,
-                            "state": "ZERO",
-                            "targetId": 468,
                             "message": "DEACTIVATE"
                         },
                         {
-                            "senderId": 10001260,
-                            "state": "ZERO",
-                            "targetId": 10001225,
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 10001225,
+                            "senderId": 10001236,
                             "state": "SCAN_DONE",
-                            "targetId": 10001259,
+                            "targetId": 10001239,
                             "message": "SET_TO_ZERO"
                         },
                         {
-                            "senderId": 10001225,
+                            "senderId": 10001236,
                             "state": "SCAN_DONE",
-                            "targetId": 10001260,
+                            "targetId": 10001241,
                             "message": "SET_TO_ZERO"
                         },
                         {
-                            "senderId": 10001225,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001261,
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 10001225,
+                            "senderId": 10001236,
                             "state": "SCAN_DONE",
                             "targetId": 10001302,
                             "message": "RESET_AND_START"
@@ -19941,527 +20184,17 @@
                         {
                             "senderId": 10001302,
                             "state": "ZERO",
-                            "targetId": 10001231,
+                            "targetId": 10001235,
                             "message": "ACTIVATE"
                         },
                         {
                             "senderId": 10001302,
                             "state": "ZERO",
-                            "targetId": 10001226,
+                            "targetId": 10001301,
                             "message": "ACTIVATE"
                         },
                         {
-                            "senderId": 10001261,
-                            "state": "ZERO",
-                            "targetId": 10001226,
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 10001259,
-                            "state": "ZERO",
-                            "targetId": 10001303,
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 10001226,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001259,
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 10001226,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001261,
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 10001226,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001304,
-                            "message": "RESET_AND_START"
-                        },
-                        {
-                            "senderId": 10001304,
-                            "state": "ZERO",
-                            "targetId": 10001227,
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 10001304,
-                            "state": "ZERO",
-                            "targetId": 10001303,
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 10001304,
-                            "state": "ZERO",
-                            "targetId": 468,
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 10001261,
-                            "state": "ZERO",
-                            "targetId": 10001227,
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 10001259,
-                            "state": "ZERO",
-                            "targetId": 10001305,
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 10001227,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001259,
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 10001227,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001261,
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 10001227,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001306,
-                            "message": "RESET_AND_START"
-                        },
-                        {
-                            "senderId": 10001306,
-                            "state": "ZERO",
-                            "targetId": 10001228,
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 10001306,
-                            "state": "ZERO",
-                            "targetId": 10001305,
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 10001306,
-                            "state": "ZERO",
-                            "targetId": 468,
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 10001261,
-                            "state": "ZERO",
-                            "targetId": 10001228,
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 10001259,
-                            "state": "ZERO",
-                            "targetId": 10001307,
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 10001228,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001259,
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 10001228,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001261,
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 10001228,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001308,
-                            "message": "RESET_AND_START"
-                        },
-                        {
-                            "senderId": 10001308,
-                            "state": "ZERO",
-                            "targetId": 10001229,
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 10001308,
-                            "state": "ZERO",
-                            "targetId": 10001307,
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 10001308,
-                            "state": "ZERO",
-                            "targetId": 468,
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 10001261,
-                            "state": "ZERO",
-                            "targetId": 10001229,
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 10001259,
-                            "state": "ZERO",
-                            "targetId": 10001309,
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 10001229,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001259,
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 10001229,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001261,
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 10001229,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001310,
-                            "message": "RESET_AND_START"
-                        },
-                        {
-                            "senderId": 10001310,
-                            "state": "ZERO",
-                            "targetId": 10001230,
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 10001310,
-                            "state": "ZERO",
-                            "targetId": 10001309,
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 10001310,
-                            "state": "ZERO",
-                            "targetId": 468,
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 10001261,
-                            "state": "ZERO",
-                            "targetId": 10001230,
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 10001259,
-                            "state": "ZERO",
-                            "targetId": 10001311,
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 10001230,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001259,
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 10001230,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001261,
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 10001230,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001312,
-                            "message": "RESET_AND_START"
-                        },
-                        {
-                            "senderId": 10001312,
-                            "state": "ZERO",
-                            "targetId": 10001226,
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 10001312,
-                            "state": "ZERO",
-                            "targetId": 10001311,
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 10001312,
-                            "state": "ZERO",
-                            "targetId": 468,
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 10001260,
-                            "state": "ZERO",
-                            "targetId": 10001231,
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 10001231,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001259,
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 10001231,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001260,
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 10001231,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001261,
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 10001231,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001313,
-                            "message": "RESET_AND_START"
-                        },
-                        {
-                            "senderId": 10001313,
-                            "state": "ZERO",
-                            "targetId": 10001234,
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 10001313,
-                            "state": "ZERO",
-                            "targetId": 10001232,
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 10001261,
-                            "state": "ZERO",
-                            "targetId": 10001232,
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 10001259,
-                            "state": "ZERO",
-                            "targetId": 10001314,
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 10001232,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001259,
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 10001232,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001261,
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 10001232,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001315,
-                            "message": "RESET_AND_START"
-                        },
-                        {
-                            "senderId": 10001315,
-                            "state": "ZERO",
-                            "targetId": 10001233,
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 10001315,
-                            "state": "ZERO",
-                            "targetId": 10001314,
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 10001315,
-                            "state": "ZERO",
-                            "targetId": 468,
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 10001261,
-                            "state": "ZERO",
-                            "targetId": 10001233,
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 10001259,
-                            "state": "ZERO",
-                            "targetId": 10001316,
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 10001233,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001259,
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 10001233,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001261,
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 10001233,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001317,
-                            "message": "RESET_AND_START"
-                        },
-                        {
-                            "senderId": 10001317,
-                            "state": "ZERO",
-                            "targetId": 10001232,
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 10001317,
-                            "state": "ZERO",
-                            "targetId": 10001316,
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 10001317,
-                            "state": "ZERO",
-                            "targetId": 468,
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 10001260,
-                            "state": "ZERO",
-                            "targetId": 10001234,
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 10001234,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001259,
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 10001234,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001260,
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 10001234,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001261,
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 10001234,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001318,
-                            "message": "RESET_AND_START"
-                        },
-                        {
-                            "senderId": 10001318,
-                            "state": "ZERO",
-                            "targetId": 10001214,
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 10001318,
-                            "state": "ZERO",
-                            "targetId": 10001235,
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 10001261,
-                            "state": "ZERO",
-                            "targetId": 10001235,
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 10001259,
-                            "state": "ZERO",
-                            "targetId": 10001319,
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 10001235,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001259,
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 10001235,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001261,
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 10001235,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001320,
-                            "message": "RESET_AND_START"
-                        },
-                        {
-                            "senderId": 10001320,
-                            "state": "ZERO",
-                            "targetId": 10001236,
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 10001320,
-                            "state": "ZERO",
-                            "targetId": 10001319,
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 10001320,
-                            "state": "ZERO",
-                            "targetId": 468,
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 10001261,
-                            "state": "ZERO",
-                            "targetId": 10001236,
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 10001259,
-                            "state": "ZERO",
-                            "targetId": 10001321,
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 10001236,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001259,
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 10001236,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001261,
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 10001236,
-                            "state": "SCAN_DONE",
-                            "targetId": 10001322,
-                            "message": "RESET_AND_START"
-                        },
-                        {
-                            "senderId": 10001322,
-                            "state": "ZERO",
-                            "targetId": 10001235,
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 10001322,
-                            "state": "ZERO",
-                            "targetId": 10001321,
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 10001322,
+                            "senderId": 10001302,
                             "state": "ZERO",
                             "targetId": 468,
                             "message": "DEACTIVATE"

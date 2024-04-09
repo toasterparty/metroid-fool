@@ -4,46 +4,53 @@
 
 For a spoiler-free description of what has changed in each version, please see [releases](https://github.com/toasterparty/metroid-fool/releases)
 
+# **v1.1.0**
+
+*Compatabile with saves started on `v1.1.X`.*
+
+### Artifact Temple
+
+- Added scan for barrier
+
+### Sun Tower Elevator
+
+- Added Save Station
+
 # **v1.0.1**
 
 *Compatabile with saves started on `v1.0.X`.*
 
-### Tallon Overworld
-
-#### Gully
+### Gully
 
 - Fixed an easy sequence break
 
-#### Artifact Temple
+### Artifact Temple
 
-- Added scan for barrier
 - Fix spelling mistakes in Artifact Hints
 
-#### Landing Site
+### Landing Site
 
 - Add an upgraded ship tutorial scan and require the player to read it before using the ship
 - Unblock Canyon Cavern/Waterfall Cavern once the player has read the tutorial
 - Fix camera jank when ferrying
 - Fix ferrying when denying save
 
-### Chozo Ruins
-
-#### Main Plaza
+### Main Plaza
 
 - Prevent players from reloading the room after collecting the key to Ruined Shrine (so they aren't made to re-solve)
 - Enable Vault ledge door
 - Modify Vault ledge item scan text
 - Fix upper beetles following the player to the lower section
 
-#### Training Chamber Access
+### Training Chamber Access
 
 - Fixed an easy sequence break
 
-#### Piston Tunnel
+### Piston Tunnel
 
 - Adjust Main Plaza load trigger so it can't be avoided
 
-#### Hive Totem
+### Hive Totem
 
 - Slower wasps (but healthier)
 - Better grapple point positions
@@ -52,36 +59,26 @@ For a spoiler-free description of what has changed in each version, please see [
 - Anti-cheese fixes
 - Boyant poison water
 
-#### Sun Tower Elevator
-
-- Added Save Station
-
-#### Sunchamber
+### Sunchamber
 
 - Fix death cutscene softlock
 - Fix premature ghost fight trigger by vines
 
-### Magmoor Caverns
-
-#### Burning Trail
+### Burning Trail
 
 - Highest 2 platforms are very fast instead of very slow
 
-#### Lake Tunnel
+### Lake Tunnel
 
 - Reduced Grizy size and increased speed
 - Reduced punishment for (respawn instead of insta-die)
 - Reduced heat damage to 7/sec
 
-### Phazon Mines
-
-#### Transport Access
+### Transport Access
 
 - Fixed incorrect music
 
-### Impact Crater
-
-#### Subchamber Four
+### Subchamber Four
 
 - Increased blocker wall size
 

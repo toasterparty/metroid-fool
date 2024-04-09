@@ -410,56 +410,6 @@ data['layers'] = {
     12: False, # ridley dead
 }
 
-unused_layers = [
-    # 12,
-    13,
-    14,
-    15,
-    16,
-    17,
-    18,
-    19,
-    20,
-    21,
-    22,
-    23,
-    24,
-    25,
-    26,
-    27,
-    28,
-    29,
-    30,
-    31,
-]
-auto_start_timer_bugfix_id = id()
-data['timers'].append(
-    {
-        'id': auto_start_timer_bugfix_id,
-        'time': 0.02,
-        'startImmediately': True,
-    }
-)
-data['editObjs'][auto_start_timer_bugfix_id] = { 'layer': 29 }
-
-# Disable a bunch of unused layers to fix the lag
-for unused_layer in unused_layers:
-    layer_changer_id = id()
-    data['specialFunctions'].append({
-            'id': layer_changer_id,
-            'type': 'ScriptLayerController',
-            'layerChangeRoomId':  2414967056, # landing site
-            'layerChangeLayerId': unused_layer,
-        }
-    )
-    data['addConnections'].append({
-            'senderId': auto_start_timer_bugfix_id,
-            'state': 'ZERO',
-            'targetId': layer_changer_id,
-            'message': 'DECREMENT',
-        }
-    )
-
 pickup_id = id()
 data['pickups'].append(
     {
@@ -577,63 +527,87 @@ for room_id in ROOM_IDS:
         }
     )
 
-data['extraScans'].append(
-    {
-        'id': tutorial_scan_id,
-        'layer': layer,
-        'position': [-369.6, 372.332, -24.4673],
-        'rotation': 270,
-        'isRed': True,
-        'combatVisible': True,
-        'text': "Whoever took your ship appears to have upgraded it and returned it. Use &push;&main-color=#43CD80;Scan Visor&pop; to toggle the above terminals to select your desired destination. Additionally, you can recall at each of these ingress points.",
-    }
-)
-
-# Activate the first region scan when the player reads the tutorial
+# temp fix for v1.0.1
 data['addConnections'].append({
-        'senderId': tutorial_scan_id,
-        'state': 'SCAN_DONE',
-        'targetId': REGIONS[0][0],
-        'message': 'ACTIVATE',
-    }
-)
-data['addConnections'].append({
-        'senderId': tutorial_scan_id,
-        'state': 'SCAN_DONE',
-        'targetId': tutorial_lock_block1,
-        'message': 'DEACTIVATE',
-    }
-)
-data['addConnections'].append({
-        'senderId': tutorial_scan_id,
-        'state': 'SCAN_DONE',
-        'targetId': tutorial_lock_block2,
-        'message': 'DEACTIVATE',
-    }
-)
-
-# ... or when they come back from warp/load
-data['addConnections'].append({
-        'senderId': 0x000001FD, # Relay-cinema loading
+        'senderId': auto_start_timer,
         'state': 'ZERO',
         'targetId': REGIONS[0][0],
         'message': 'ACTIVATE',
     }
 )
 data['addConnections'].append({
-        'senderId': 0x000001FD,
+        'senderId': auto_start_timer,
         'state': 'ZERO',
         'targetId': tutorial_lock_block1,
         'message': 'DEACTIVATE',
     }
 )
 data['addConnections'].append({
-        'senderId': 0x000001FD,
+        'senderId': auto_start_timer,
         'state': 'ZERO',
         'targetId': tutorial_lock_block2,
         'message': 'DEACTIVATE',
     }
 )
+
+# # Add tutorial scan
+# data['extraScans'].append(
+#     {
+#         'id': tutorial_scan_id,
+#         'layer': layer,
+#         'position': [-369.6, 372.332, -24.4673],
+#         'rotation': 270,
+#         'isRed': True,
+#         'combatVisible': True,
+#         'text': "Whoever took your ship appears to have upgraded it and returned it. Use &push;&main-color=#43CD80;Scan Visor&pop; to toggle the above terminals to select your desired destination. Additionally, you can recall at each of these ingress points.",
+#     }
+# )
+
+# # Activate the first region scan when the player reads the tutorial
+# data['addConnections'].append({
+#         'senderId': tutorial_scan_id,
+#         'state': 'SCAN_DONE',
+#         'targetId': REGIONS[0][0],
+#         'message': 'ACTIVATE',
+#     }
+# )
+# data['addConnections'].append({
+#         'senderId': tutorial_scan_id,
+#         'state': 'SCAN_DONE',
+#         'targetId': tutorial_lock_block1,
+#         'message': 'DEACTIVATE',
+#     }
+# )
+# data['addConnections'].append({
+#         'senderId': tutorial_scan_id,
+#         'state': 'SCAN_DONE',
+#         'targetId': tutorial_lock_block2,
+#         'message': 'DEACTIVATE',
+#     }
+# )
+
+# # ... or when they come back from warp/load
+# data['addConnections'].append({
+#         'senderId': 0x000001FD, # Relay-cinema loading
+#         'state': 'ZERO',
+#         'targetId': REGIONS[0][0],
+#         'message': 'ACTIVATE',
+#     }
+# )
+# data['addConnections'].append({
+#         'senderId': 0x000001FD,
+#         'state': 'ZERO',
+#         'targetId': tutorial_lock_block1,
+#         'message': 'DEACTIVATE',
+#     }
+# )
+# data['addConnections'].append({
+#         'senderId': 0x000001FD,
+#         'state': 'ZERO',
+#         'targetId': tutorial_lock_block2,
+#         'message': 'DEACTIVATE',
+#     }
+# )
 
 # Activate the spawn point once we've actually started picking out destinations
 for _, _, ROOMS in REGIONS:
