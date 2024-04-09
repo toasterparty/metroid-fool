@@ -16,7 +16,8 @@ For a spoiler-free description of what has changed in each version, please see [
 
 #### Artifact Temple
 
-- Fix spelling mistakes
+- Added scan for barrier
+- Fix spelling mistakes in Artifact Hints
 
 ### Chozo Ruins
 
@@ -37,10 +38,11 @@ For a spoiler-free description of what has changed in each version, please see [
 
 #### Hive Totem
 
-- Slower wasps
+- Slower wasps (but healthier)
+- Better grapple point positions
 - Longer fight start delay
 - No start cutscene
-- Better anti-cheese
+- Anti-cheese fixes
 - Boyant poison water
 
 #### Sun Tower Elevator
@@ -50,6 +52,7 @@ For a spoiler-free description of what has changed in each version, please see [
 #### Sunchamber
 
 - Fix death cutscene softlock
+- Fix premature ghost fight trigger by vines
 
 ### Magmoor Caverns
 
@@ -69,10 +72,16 @@ For a spoiler-free description of what has changed in each version, please see [
 
 - Fixed incorrect music
 
+### Impact Crater
+
+#### Subchamber Four
+
+- Increased blocker wall size
+
 ### Credits
 
 - Added missing entry for Thermal Visor
-- Attribution for Wikipedia "Statue" article
+- Proper Wikipedia attribution
 
 # **v1.0.0**
 

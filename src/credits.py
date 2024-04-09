@@ -153,6 +153,9 @@ Escape Sequence - 3:00 remaining
 
 
 Wikipedia contributors. (2024, March 17). Statue. Wikipedia. https://en.wikipedia.org/wiki/Statue
+Text is available under the Creative Commons Attribution-ShareAlike License
+(CC BY-SA 4.0 GFDL) https://creativecommons.org/licenses/by-nc-nd/4.0/
+additional terms may apply
 
 
 
