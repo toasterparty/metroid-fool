@@ -23,6 +23,10 @@ Includes all the fixes introduced in `v1.0.1` in addition to...
 
 - Added Save Station
 
+### Metroid Quarantine A
+
+- Add convenient way to reload room
+
 # **v1.0.1**
 
 *Compatible with saves started on `v1.0.X`*

@@ -16507,6 +16507,14 @@
                             // id: 2098666
                             "type": "Energy Tank",
                             "position": [234.3169, 261.0093, -63.0823]
+                        },
+                        {
+                            "type": "Nothing",
+                            "position": [153.2403, 179.7596, -90.9045],
+                            "respawn": true,
+                            "scanText": "Reload Room",
+                            "hudmemoText": "Reloading...",
+                            "destination": "Phazon Mines:Metroid Quarantine A"
                         }
                     ],
                     "doors": {
@@ -16749,6 +16757,12 @@
                             "time": 0.2
                         }
                     ],
+                    "editObjs": {
+                        "2097339": { // default spawn
+                            "position": [142.5777, 168.4356, -91.9622],
+                            "rotation": [0, 0, -45]
+                        }
+                    },
                     "addConnections": [
                         // initial platform connections
                         {
