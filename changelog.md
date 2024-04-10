@@ -6,7 +6,7 @@ For a spoiler-free description of what has changed in each version, please see [
 
 # **v1.1.0**
 
-*Compatabile with saves started on `v1.1.X`.*
+*Compatible with saves started on `v1.1.X`*
 
 ### Artifact Temple
 
@@ -18,7 +18,7 @@ For a spoiler-free description of what has changed in each version, please see [
 
 # **v1.0.1**
 
-*Compatabile with saves started on `v1.0.X`.*
+*Compatible with saves started on `v1.0.X`*
 
 ### Gully
 
@@ -57,7 +57,7 @@ For a spoiler-free description of what has changed in each version, please see [
 - Longer fight start delay
 - No start cutscene
 - Anti-cheese fixes
-- Boyant poison water
+- Buoyant poison water
 
 ### Sunchamber
 
@@ -74,7 +74,7 @@ For a spoiler-free description of what has changed in each version, please see [
 
 ### Lake Tunnel
 
-- Reduced Grizy size and increased speed
+- Reduced Grizby size and increased speed
 - Reduced punishment for (respawn instead of insta-die)
 - Reduced heat damage to 7/sec
 
