@@ -10,6 +10,10 @@ For a spoiler-free description of what has changed in each version, please see [
 
 Includes all the fixes introduced in `v1.0.1` in addition to...
 
+### Main Plaza
+
+- Remember Ruined Shrine unlocked if room reloaded prior to Ruined Shrine fight
+
 ### Artifact Temple
 
 - Added scan for barrier

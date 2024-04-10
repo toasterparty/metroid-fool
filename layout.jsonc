@@ -24384,15 +24384,10 @@
                     // layer 5 - qol
                     // layer 6 - qol
                     // layer 7 - beetles
+                    // layer 8 - ruined shrine key
                     "pickups": [
                         { // Half-Pipe
-                            "type": "Nothing",
-                            "model": "Nothing",
-                            "scanText": "Key to Ruined Shrine\n\nSeismic activity detected",
-                            "hudmemoText": "The path Ruined Shrine has been opened",
-                            "position": [115.3, 65.7, 11.3],
-                            "respawn": true
-                            // on layer 5, but removed by a timer
+                            "type": "Nothing"
                         },
                         { // Grapple Ledge
                             "type": "Missile",
@@ -24412,6 +24407,15 @@
                             "model": "Space Jump Boots",
                             "scanText": "Space Jump boots",
                             "hudmemoText": "Goteeeem"
+                        },
+                        { // ruined shrine key (layer 8)
+                            "id": 11001204,
+                            "type": "Nothing",
+                            "model": "Nothing",
+                            "scanText": "Key to Ruined Shrine\n\nSeismic activity detected",
+                            "hudmemoText": "The path Ruined Shrine has been opened",
+                            "position": [115.3, 65.7, 11.3],
+                            "respawn": true
                         }
                     ],
                     "doors": {
@@ -24438,6 +24442,12 @@
                         {
                             "id": 10000831,
                             "type": "PlayerInAreaRelay"
+                        },
+                        {
+                            "id": 11001203,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 1716955838,
+                            "layerChangeLayerId": 8 // shrine key
                         }
                     ],
                     "editObjs": {
@@ -24446,6 +24456,9 @@
                         },
                         "131208": { // ruined shrine load
                             "scale": [40, 35, 30]
+                        },
+                        "11001204": { // ruined shrine key
+                            "layer": 8
                         },
                         /* Lower Beetles */
                         // Beetles
@@ -24573,15 +24586,6 @@
                         "131118": {"position": [100, 57.5, 9.9]}
                     },
                     "blocks": [
-                        // lock main plaza door
-                        {
-                            "id": 10001200,
-                            "layer": 7,
-                            "active": false,
-                            "position": [98.7, -55.2, 7.5],
-                            "scale": [6, 1, 6],
-                            "texture": "Sandstone"
-                        },
                         // Grapple ledge beam
                         {
                             "position": [99.4, -34.2, 19.1],
@@ -24591,7 +24595,7 @@
                         // Ruined Shrine Blocker
                         {
                             "id": 10000027,
-                            "layer": 7,
+                            "layer": 8,
                             "position": [74.9579, 2.4026, 2.505],
                             "scale": [1, 6, 5],
                             "texture": "Sandstone"
@@ -24609,7 +24613,7 @@
                         },
                         {
                             "id": 10001201,
-                            "active": false,
+                            "layer": 8, // ruined shrine key
                             "position": [110.5, 39.3, 4.15],
                             "scale": [11, 0.5, 0.5],
                             "texture": "Snow"
@@ -24739,18 +24743,6 @@
                         }
                     ],
                     "timers": [
-                        // For removing pickup when layer 5 is deactivated
-                        {
-                            "id": 10000034,
-                            "layer": 7,
-                            "time": 1,
-                            "startImmediately": true
-                        },
-                        {
-                            "id": 10000035,
-                            "time": 1.1,
-                            "startImmediately": true
-                        },
                         // Increase delay before beetles jump out
                         {
                             "id": 131395,
@@ -24774,19 +24766,6 @@
                         }
                     ],
                     "addConnections": [
-                        // prevent backtrack 1st pass
-                        {
-                            "senderId": 131466, // cutscene trigger
-                            "state": "ENTERED",
-                            "targetId": 10001200, // backtrack blocker
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 131466, // cutscene trigger
-                            "state": "ENTERED",
-                            "targetId": 10001201, // upper beetle -> lower blocker
-                            "message": "ACTIVATE"
-                        },
                         // activate grapple
                         {
                             "senderId": 10000831,
@@ -24796,24 +24775,16 @@
                         },
                         // Unblock ruined shrine
                         {
-                            "senderId": 131742, // Half-Pipe Pickup Relay
-                            "state": "ZERO",
+                            "senderId": 11001204, // ruined shrine key
+                            "state": "ARRIVED",
                             "targetId": 10000027, // Ruined Shrine Blocker
                             "message": "DEACTIVATE"
                         },
-                        // Auto-despawn pickup after 1.1s
                         {
-                            "senderId": 10000035, // timer
-                            "state": "ZERO",
-                            "targetId": 131372, // half-pipe pickup
-                            "message": "DEACTIVATE"
-                        },
-                        // Cancel auto-despawn after 1.0s if layer 5 is active
-                        {
-                            "senderId": 10000034, // timer
-                            "state": "ZERO",
-                            "targetId": 10000035, // timer
-                            "message": "DEACTIVATE"
+                            "senderId": 11001204, // ruined shrine key
+                            "state": "ARRIVED",
+                            "targetId": 11001203, // layer changer
+                            "message": "DECREMENT"
                         }
                     ],
                     "deleteIds": [
@@ -24822,7 +24793,9 @@
                         // Upper Beetle Battle always active
                         131397, 131398,
                         // 2nd pass plated beetle
-                        131199
+                        131199,
+                        // half pipe pickup
+                        131372
                     ]
                 },
                 "Ruined Fountain Access": {
