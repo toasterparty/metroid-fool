@@ -27,6 +27,10 @@ Includes all the fixes introduced in `v1.0.1` in addition to...
 
 - Add convenient way to reload room
 
+### Post-Credits
+
+- Change layer in Reactor Core so that players can speedrun getting the key again
+
 # **v1.0.1**
 
 *Compatible with saves started on `v1.0.X`*

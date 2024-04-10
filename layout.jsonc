@@ -22141,6 +22141,12 @@
                             "type": "ScriptLayerController",
                             "layerChangeRoomId": 3442151074, // artifact temple
                             "layerChangeLayerId": 24 // ridley
+                        },
+                        {
+                            "id": 11001200,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 652773303, // reactor core
+                            "layerChangeLayerId": 12 // ridley dead
                         }
                     ],
                     "relays": [
@@ -22468,6 +22474,12 @@
                             "state": "INACTIVE",
                             "targetId": 11000044,
                             "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 1049922, // camera 12
+                            "state": "INACTIVE",
+                            "targetId": 11001200,
+                            "message": "INCREMENT"
                         }
                     ],
                     "deleteIds": [
@@ -22708,7 +22720,9 @@
                     "layers": {
                         "1": false, // pirates
                         "2": false, // spanks
-                        "3": false // test
+                        "3": false, // test
+                        "4": true, // keyring
+                        "12": false // ridley dead
                     },
                     "removeWater": true,
                     "pickups": [
@@ -22719,6 +22733,14 @@
                             "scanText": "Glorgsmire Gumpybottom's Keyring",
                             "hudmemoText": "Glorgsmire Gumpybottom's Keyring Acquired!",
                             "modalHudmemo": true
+                        },
+                        {
+                            "id": 11001201,
+                            "position": [81.5, 362.5, -143.5],
+                            "type": "Nothing",
+                            "scanText": "Placeholder Key",
+                            "hudmemoText": "Placeholder Key Acquired",
+                            "respawn": true
                         }
                     ],
                     "blocks": [
@@ -22780,6 +22802,12 @@
                             "layer": 4, // key not acquired layer
                             "time": 0.02,
                             "startImmediately": true
+                        },
+                        {
+                            "id": 11001202,
+                            "layer": 12, // ridley dead
+                            "time": 0.02,
+                            "startImmediately": true
                         }
                     ],
                     "addConnections": [
@@ -22824,7 +22852,20 @@
                             "message": "DEACTIVATE"
                         },
                         {
-                            "senderId": 10000154,
+                            "senderId": 10000154, // real key
+                            "state": "ARRIVED",
+                            "targetId": 1638494,
+                            "message": "ACTIVATE"
+                        },
+                        /* Hide platforms while placeholder key not acquired */
+                        {
+                            "senderId": 11001202, // instant timer
+                            "state": "ZERO",
+                            "targetId": 1638494,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 11001201, // placeholder key
                             "state": "ARRIVED",
                             "targetId": 1638494,
                             "message": "ACTIVATE"
@@ -22861,6 +22902,9 @@
                     "editObjs": {
                         "1638671": { // weeds
                             "layer": 0
+                        },
+                        "11001201": { // placeholder key
+                            "layer": 12 // ridley dead
                         },
                         // move remaining platforms to be more challenging
                         "1638494": {
