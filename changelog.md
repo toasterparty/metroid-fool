@@ -4,6 +4,24 @@
 
 For a spoiler-free description of what has changed in each version, please see [releases](https://github.com/toasterparty/metroid-fool/releases)
 
+# **v1.1.0**
+
+*Compatible with saves started on `v1.1.X`*
+
+Includes all the fixes introduced in `v1.0.1` in addition to...
+
+### Artifact Temple
+
+- Added scan for barrier
+
+### Landing Site
+
+- Add an upgraded ship tutorial scan and require the player to read it before using the ship or walking out of the room
+
+### Sun Tower Elevator
+
+- Added Save Station
+
 # **v1.0.1**
 
 *Compatible with saves started on `v1.0.X`*
