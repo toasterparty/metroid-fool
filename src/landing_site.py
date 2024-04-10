@@ -800,5 +800,12 @@ for region_idx, region_data in enumerate(REGIONS):
 
     first_region = False
 
+data['relays'].append(
+    {
+        'id': id(),
+        'layer': 12,
+    }
+)
+
 with open('landing_site.json', 'w') as file:
     file.write(json.dumps(data, indent=4))

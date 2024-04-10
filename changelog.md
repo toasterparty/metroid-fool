@@ -16,6 +16,7 @@ Includes all the fixes introduced in `v1.0.1` in addition to...
 
 ### Landing Site
 
+- Fix stutter when loading
 - Add an upgraded ship tutorial scan and require the player to read it before using the ship or walking out of the room
 
 ### Sun Tower Elevator
