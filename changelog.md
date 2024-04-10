@@ -64,6 +64,10 @@ For a spoiler-free description of what has changed in each version, please see [
 - Fix death cutscene softlock
 - Fix premature ghost fight trigger by vines
 
+### Tower of Light
+
+- Add additional platforms near the top
+
 ### Burning Trail
 
 - Highest 2 platforms are very fast instead of very slow
@@ -74,9 +78,24 @@ For a spoiler-free description of what has changed in each version, please see [
 - Reduced punishment for (respawn instead of insta-die)
 - Reduced heat damage to 7/sec
 
+### Geothermal Core
+
+- Fixed several ways to bypass puzzle entirely
+- Removed/altered some frustrating sections
+
 ### Transport Access
 
 - Fixed incorrect music
+
+### Research Entrance
+
+- Fix turret active on 2nd pass
+
+### Quarantine Cave
+
+- Fix softlock
+- Changed Thardus's attributes to be in the player's way less often
+- Remove anti-cheese for alternate path to start of grapple course
 
 ### Subchamber Four
 

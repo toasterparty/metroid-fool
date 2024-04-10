@@ -71,7 +71,7 @@
 
 *Main Power Bombs are discovered when entering Phazon Mines from the front.*
 
-*Use charged Power Beam to help light up the maze if you are having trouble seeing.*
+*Use charged Wave Beam to help light up the maze if you are having trouble seeing.*
 
 *The exit is towards the Save Station, try to keep track of your orientation as you work your way in that direction.*
 
