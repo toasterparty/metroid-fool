@@ -85,7 +85,7 @@ Metroid Quarantine A     1st Pass Hidden Wall
      Watery Hall SW         2nd Pass SJ          
 
 &push;&font=C29C51F1;&main-color=#33ffd6;Missile Expansions&pop;
-You could have had 172, but you chose to support diversity and local buisness instead
+You could have had 172, but you chose to support diversity and local business instead
 
 &push;&font=C29C51F1;&main-color=#33ffd6;Shiny Missiles&pop;
 T#3lo! Ov*!?$r)d - ???
