@@ -4,18 +4,6 @@
 
 For a spoiler-free description of what has changed in each version, please see [releases](https://github.com/toasterparty/metroid-fool/releases)
 
-# **v1.1.0**
-
-*Compatible with saves started on `v1.1.X`*
-
-### Artifact Temple
-
-- Added scan for barrier
-
-### Sun Tower Elevator
-
-- Added Save Station
-
 # **v1.0.1**
 
 *Compatible with saves started on `v1.0.X`*
@@ -30,8 +18,7 @@ For a spoiler-free description of what has changed in each version, please see [
 
 ### Landing Site
 
-- Add an upgraded ship tutorial scan and require the player to read it before using the ship
-- Unblock Canyon Cavern/Waterfall Cavern once the player has read the tutorial
+- Allow the player to walk out of landing site with the upgraded ship
 - Fix camera jank when ferrying
 - Fix ferrying when denying save
 
