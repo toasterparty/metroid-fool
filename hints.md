@@ -67,7 +67,7 @@
 </details>
 
 <details>
-  <summary>I'm having trouble getting main Power Bombs</summary>
+  <summary>I'm having trouble in Central Dynamo</summary>
 
 *Main Power Bombs are discovered when entering Phazon Mines from the front.*
 
@@ -78,6 +78,13 @@
 *If you simply give up, a video of the solution is provided below:*
 
 *[Video](https://www.youtube.com/watch?v=KVf3A9Q5MSU)*
+
+</details>
+
+<details>
+  <summary>I'm having trouble after Plasma Processing</summary>
+
+*[Video](https://youtu.be/D1GzCuJC1CM)*
 
 </details>
 
