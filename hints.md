@@ -27,7 +27,9 @@
 <details>
   <summary>How do I get the most distance out of my grapple swings?</summary>
 
-*Hold R before releasing the swing. After release, continue to hold R and turn as though you are doing an R-Jump*
+*Hold R before releasing the swing. After release, continue to hold R and turn as though you are doing an R-Jump. Alternatively, you can try morphing after detaching from grapple to reduce your vertical speed.*
+
+[Video](https://cdn.discordapp.com/attachments/1196262796518768751/1229858760982270042/2024-04-16_11-15-54.mp4?ex=6631363a&is=661ec13a&hm=f968cfe58e49acacd3f85b9b29aa355f0d3973045e7eb16c71bdb214c3786684&)
 
 </details>
 
