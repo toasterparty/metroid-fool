@@ -16,7 +16,7 @@ This description of features is intentionally vague; All you need to know is I s
 
 ## Difficulty
 
-This hack is hard. It is intended for players who have spent a non-trivial amount of time learning the likes of the speedrun, the randomizer and other sequence-breaking runs. If you do not feel like you have a strong foundation for the techniques required by those types of rus, this hack may not be fore you.
+This hack is hard. It is intended for players who have spent a non-trivial amount of time learning the likes of the speedrun, the randomizer and other sequence-breaking runs. If you do not feel like you have a strong foundation for the techniques required by those types of runs, this hack may not be for you.
 
 **Example**: 5-bomb jumps (e.g. UBJ) and wallcrawling are not required, but NSJ Frigate Crash Site climb is
 
